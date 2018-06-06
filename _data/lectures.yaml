@@ -1,0 +1,160 @@
+-
+  date: 2018-08-28
+  slides: 
+  title: Introduction
+  readings:   
+-
+  date: 2018-08-30
+  slides: 
+  title:  Uninformed Search
+  readings: 
+-
+  date: 2018-09-04
+  slides: 
+  title:  Informed Search
+  readings: 
+-
+  date: 2018-09-06
+  slides: 
+  title:  Constraint Satifaction Problems 
+  readings: 
+-
+  date: 2018-09-11
+  slides: 
+  title:  Constraint Satifaction Problems - part 2
+  readings: 
+-
+  date: 2018-09-13
+  slides: 
+  title:  Game Trees&colon; Minimax
+  readings: 
+-
+  date: 2018-09-17
+  title: Course Selection Period Ends
+  type: no_lecture
+-
+  date: 2018-09-18
+  slides: 
+  title:  Game Trees&colon; Expectimax and Utilities
+  readings: 
+-
+  date: 2018-09-20
+  slides: 
+  title:  Markov Decision Processes
+  readings: 
+-
+  date: 2018-09-25
+  slides: 
+  title:  Markov Decision Processes - part 2
+  readings: 
+-
+  date: 2018-09-27
+  slides: 
+  title:  Catch up time
+  readings: 
+-
+  date: 2018-10-02
+  title:  Midterm exam 1 (date is provisional)
+  readings: 
+  type: exam
+-
+  date: 2018-10-04
+  title:  Fall Term Break (no classes)
+  type: no_lecture
+-
+  date: 2018-10-08
+  title: Drop Period Ends
+  type: no_lecture
+-
+  date: 2018-10-09
+  slides: 
+  title:  Reinforcement Learning
+  readings: 
+-
+  date: 2018-10-11
+  slides: 
+  title:  Reinforcement Learning - part 2
+  readings: 
+-
+  date: 2018-10-16
+  slides: 
+  title:  Probability 
+  readings: 
+-
+  date: 2018-10-18
+  slides: 
+  title:  Markov Models
+  readings: 
+-
+  date: 2018-10-23
+  slides: 
+  title:  Hidden Markov Models
+  readings: 
+-
+  date: 2018-10-25
+  slides: 
+  title:  Hidden Markov Models - applications
+  readings: 
+-
+  date: 2018-10-30
+  slides: 
+  title:  Bayes' Nets&colon; Representation
+  readings: 
+-
+  date: 2018-11-01
+  title:  Midterm exam 2 (date is provisional)
+  readings: 
+  type: exam
+-
+  date: 2018-11-06
+  slides: 
+  title:  Bayes' Nets&colon; Indepdendence
+  readings: 
+-
+  date: 2018-11-08
+  slides: 
+  title:  Bayes' Nets&colon; Inference
+  readings: 
+-
+  date: 2018-11-09
+  title: Last day to withdraw from a course
+  type: no_lecture
+-
+  date: 2018-11-13
+  slides: 
+  title:  Bayes' Nets&colon; Sampling
+  readings: 
+-
+  date: 2018-11-15
+  slides: 
+  title:  Decision Diagrams / VPI
+  readings: 
+-
+  date: 2018-11-20
+  slides: 
+  title:  Machine Learning&colon; Naive Bayes
+  readings: 
+-
+  date: 2018-11-22
+  title: Thanksgiving Break (no classes)
+  type: no_lecture
+-
+  date: 2018-11-27
+  slides: 
+  title:  Machine Learning&colon; Perceptrons
+  readings: 
+-
+  date: 2018-11-29
+  slides: 
+  title:  Machine Learning&colon; Clustering  
+  readings: 
+-
+  date: 2018-12-04
+  slides: 
+  title:  Advanced applications 
+  readings: 
+-
+  date: 2018-11-01
+  title:  Midterm exam 3
+  readings: 
+  type: exam
