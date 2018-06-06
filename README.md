@@ -1,1 +1,0 @@
-# artificial-intelligence-class.github.io
