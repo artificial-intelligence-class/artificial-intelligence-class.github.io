@@ -3,7 +3,7 @@ layout: default
 img: python.jpg
 img_link: http://xkcd.com/353/
 caption: Hello world!
-title: Homework 1 "Python Skills"
+title: CIS 521 Homework 1 "Python Skills"
 active_tab: homework
 release_date: 2018-08-10
 due_date: 2018-09-04 23:59:00EDT
@@ -31,7 +31,7 @@ This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{
 Links to tutorials and other Python resources are posted on the [resources page](resources.html).</div>
 
 
-Python Skills <span class="text-muted">: Assignment 1</span> 
+Homework 1: Python Skills [100 points]
 =============================================================
 
 # Instructions
@@ -52,7 +52,7 @@ You are strongly encouraged to follow the Python style guidelines set forth in P
 You will submit your assignment via Gradescope. We'll post instructions on Piazza. 
 
 
-## Python Concepts - Study Questions **[0 points]**
+## 1. Python Concepts - Study Questions **[0 points]**
 
 For each of the following questions, write your answers as triply-quoted strings using the indicated variables in the provided file.
 
@@ -83,7 +83,7 @@ def concatenate2(strings):
 
 One of these approaches is significantly faster than the other for large inputs. Which version is better, and what is the reason for the discrepancy?
 
-## Working with Lists [15 points]
+## 2. Working with Lists [15 points]
 
 1. **[5 points]** Consider the function `extract_and_apply(l, p, f)` shown below, which extracts the elements of a list `l` satisfying a boolean predicate `p`, applies a function `f` to each such element, and returns the result.
 
@@ -125,11 +125,11 @@ Rewrite extract_and_apply(l, p, f) in one line using a list comprehension.
 [[1, 3, 5], [2, 4, 6]]
 {% endhighlight %}
 
-## Sequence Slicing [9 points]
+## 3. Sequence Slicing [9 points]
 
-1. [3 points] The functions in this section should be implemented using sequence slices. Recall that the slice parameters take on sensible default values when omitted. In some cases, it may be necessary to use the optional third parameter to specify a step size.
+1. **[3 points]** The functions in this section should be implemented using sequence slices. Recall that the slice parameters take on sensible default values when omitted. In some cases, it may be necessary to use the optional third parameter to specify a step size.
 
-Write a function copy(seq) that returns a new sequence containing the same elements as the input sequence.
+Write a function `copy(seq)` that returns a new sequence containing the same elements as the input sequence.
 
 {% highlight python %}
 >>> copy("abc")
@@ -146,7 +146,7 @@ Write a function copy(seq) that returns a new sequence containing the same eleme
 [1, 0, 0] [0, 0, 0]
 {% endhighlight %}
 
-2. [3 points] Write a function all_but_last(seq) that returns a new sequence containing all but the last element of the input sequence. If the input sequence is empty, a new empty sequence of the same type should be returned.
+2. **[3 points]** Write a function `all_but_last(seq)` that returns a new sequence containing all but the last element of the input sequence. If the input sequence is empty, a new empty sequence of the same type should be returned.
 
 
 {% highlight python %}
@@ -165,7 +165,7 @@ Write a function copy(seq) that returns a new sequence containing the same eleme
 {% endhighlight %}
 
 
-2. [3 points] Write a function every_other(seq) that returns a new sequence containing every other element of the input sequence, starting with the first. This function can be written in one line using the optional third parameter of the slice notation.
+2. **[3 points]** Write a function `every_other(seq)` that returns a new sequence containing every other element of the input sequence, starting with the first. This function can be written in one line using the optional third parameter of the slice notation.
 
 
 {% highlight python %}
@@ -184,7 +184,7 @@ Write a function copy(seq) that returns a new sequence containing the same eleme
 'ace'
 {% endhighlight %}
 
-## Combinatorial Algorithms [12 points]
+## 4. Combinatorial Algorithms [12 points]
 
 The functions in this section should be implemented as generators. You may generate the output in any order you find convenient, as long as the correct elements are produced. However, in some cases, you may find that the order of the example output hints at a possible implementation.
 
@@ -192,7 +192,7 @@ Although generators in Python can be used in a variety of ways, you will not nee
 
 Since the contents of a generator cannot be viewed without employing some form of iteration, we wrap all function calls in this section's examples with the list function for convenience.
 
-1. [6 points] The prefixes of a sequence include the empty sequence, the first element, the first two elements, etc., up to and including the full sequence itself. Similarly, the suffixes of a sequence include the empty sequence, the last element, the last two elements, etc., up to and including the full sequence itself. Write a pair of functions prefixes(seq) and suffixes(seq) that yield all prefixes and suffixes of the input sequence.
+1. **[6 points]** The prefixes of a sequence include the empty sequence, the first element, the first two elements, etc., up to and including the full sequence itself. Similarly, the suffixes of a sequence include the empty sequence, the last element, the last two elements, etc., up to and including the full sequence itself. Write a pair of functions `prefixes(seq)` and `suffixes(seq)` that yield all prefixes and suffixes of the input sequence.
 
 {% highlight python %}
 >>> list(prefixes([1, 2, 3]))
@@ -209,7 +209,7 @@ Since the contents of a generator cannot be viewed without employing some form o
 ['abc', 'bc', 'c', '']
 {% endhighlight %}
 
-2. [6 points] Write a function slices(seq) that yields all non-empty slices of the input sequence.
+2. **[6 points]** Write a function `slices(seq)` that yields all non-empty slices of the input sequence.
 
 
 {% highlight python %}
@@ -224,9 +224,9 @@ Since the contents of a generator cannot be viewed without employing some form o
 {% endhighlight %}
 
 
-## Text Processing [20 points]
+## 5. Text Processing [20 points]
 
-1. [5 points] A common preprocessing step in many natural language processing tasks is text normalization, wherein words are converted to lowercase, extraneous whitespace is removed, etc. Write a function normalize(text) that returns a normalized version of the input string, in which all words have been converted to lowercase and are separated by a single space. No leading or trailing whitespace should be present in the output.
+1. **[5 points]** A common preprocessing step in many natural language processing tasks is text normalization, wherein words are converted to lowercase, extraneous whitespace is removed, etc. Write a function `normalize(text)` that returns a normalized version of the input string, in which all words have been converted to lowercase and are separated by a single space. No leading or trailing whitespace should be present in the output.
 
 
 {% highlight python %}
@@ -240,7 +240,7 @@ Since the contents of a generator cannot be viewed without employing some form o
 'extra space'
 {% endhighlight %}
 
-2. [5 points] Write a function no_vowels(text) that removes all vowels from the input string and returns the result. For the purposes of this problem, the letter 'y' is not considered to be a vowel.
+2. **[5 points]** Write a function `no_vowels(text)` that removes all vowels from the input string and returns the result. For the purposes of this problem, the letter 'y' is not considered to be a vowel.
 
 {% highlight python %}
 >>> no_vowels("This Is An Example.")
@@ -252,7 +252,7 @@ Since the contents of a generator cannot be viewed without employing some form o
 'W lv Pythn!'
 {% endhighlight %}
 
-3. [5 points] Write a function digits_to_words(text) that extracts all digits from the input string, spells them out as lowercase English words, and returns a new string in which they are each separated by a single space. If the input string contains no digits, then an empty string should be returned.
+3. **[5 points]** Write a `function digits_to_words(text)` that extracts all digits from the input string, spells them out as lowercase English words, and returns a new string in which they are each separated by a single space. If the input string contains no digits, then an empty string should be returned.
 
 {% highlight python %}
 >>> digits_to_words("Zip Code: 19104")
@@ -266,7 +266,7 @@ Since the contents of a generator cannot be viewed without employing some form o
 {% endhighlight %}
 
 
-4. [5 points] Although there exist many naming conventions in computer programming, two of them are particularly widespread. In the first, words in a variable name are separated using underscores. In the second, words in a variable name are written in mixed case, and are strung together without a delimiter. By mixed case, we mean that the first word is written in lowercase, and that subsequent words have a capital first letter. Write a function to_mixed_case(name) that converts a variable name from the former convention to the latter. Leading and trailing underscores should be ignored. If the variable name consists solely of underscores, then an empty string should be returned.
+4. **[5 points]** Although there exist many naming conventions in computer programming, two of them are particularly widespread. In the first, words in a variable name are separated using underscores. In the second, words in a variable name are written in mixed case, and are strung together without a delimiter. By mixed case, we mean that the first word is written in lowercase, and that subsequent words have a capital first letter. Write a `function to_mixed_case(name)` that converts a variable `name` from the former convention to the latter. Leading and trailing underscores should be ignored. If the variable name consists solely of underscores, then an empty string should be returned.
 
 {% highlight python %}
 >>> to_mixed_case("to_mixed_case")
@@ -278,7 +278,7 @@ Since the contents of a generator cannot be viewed without employing some form o
 'exampleName'
 {% endhighlight %}
 
-## Polynomials [39 points]
+## 6. Polynomials [39 points]
 
 In this section, you will implement a simple Polynomial class supporting basic arithmetic, simplification, evaluation, and pretty-printing. An example demonstrating these capabilities is shown below.
 
@@ -298,7 +298,7 @@ In this section, you will implement a simple Polynomial class supporting basic a
 {% endhighlight %}
 
 
-1. [3 points] In this problem, we will think of a polynomial as an immutable object, represented internally as a tuple of coefficient-power pairs. For instance, the polynomial 2x+1 would be represented internally by the tuple ((2, 1), (1, 0)). Write an initialization method __init__(self, polynomial) that converts the input sequence polynomial of coefficient-power pairs into a tuple and saves it for future use. Also write a corresponding method get_polynomial(self) that returns this internal representation.
+1. **[3 points]** In this problem, we will think of a polynomial as an immutable object, represented internally as a tuple of coefficient-power pairs. For instance, the polynomial 2x+1 would be represented internally by the tuple `((2, 1), (1, 0))`. Write an initialization method `__init__(self, polynomial)` that converts the input sequence polynomial of coefficient-power pairs into a tuple and saves it for future use. Also write a corresponding method `get_polynomial(self)` that returns this internal representation.
 
 {% highlight python %}
 >>> p = Polynomial([(2, 1), (1, 0)])
@@ -313,8 +313,8 @@ In this section, you will implement a simple Polynomial class supporting basic a
 {% endhighlight %}
 
 
-2. [4 points]
-Write a __neg__(self) method that returns a new polynomial equal to the negation of self. This method will be used by Python for unary negation.
+2. **[4 points]**
+Write a `__neg__(self)` method that returns a new polynomial equal to the negation of self. This method will be used by Python for unary negation.
 
 {% highlight python %}
 >>> p = Polynomial([(2, 1), (1, 0)])
@@ -330,8 +330,8 @@ Write a __neg__(self) method that returns a new polynomial equal to the negation
 {% endhighlight %}
 
 
-2. [3 points]
-Write an __add__(self, other) method that returns a new polynomial equal to the sum of self and other. This method will be used by Python for addition. No simplification should be performed on the result.
+3. **[3 points]**
+Write an `__add__(self, other)` method that returns a new polynomial equal to the sum of self and other. This method will be used by Python for addition. No simplification should be performed on the result.
 
 {% highlight python %}
 >>> p = Polynomial([(2, 1), (1, 0)])
@@ -346,8 +346,8 @@ Write an __add__(self, other) method that returns a new polynomial equal to the 
 ((2, 1), (1, 0), (4, 3), (3, 2))
 {% endhighlight %}
 
-3. [3 points]
-Write a __sub__(self, other) method that returns a new polynomial equal to the difference between self and other. This method will be used by Python for subtraction. No simplification should be performed on the result.
+4. **[3 points]**
+Write a `__sub__(self, other)` method that returns a new polynomial equal to the difference between self and other. This method will be used by Python for subtraction. No simplification should be performed on the result.
 
 
 {% highlight python %}
@@ -366,71 +366,77 @@ Write a __sub__(self, other) method that returns a new polynomial equal to the d
 {% endhighlight %}
 
 
-4. [3 points]
-Write a __mul__(self, other) method that returns a new polynomial equal to the product of self and other. This method will be used by Python for multiplication. No simplification should be performed on the result. Your result does not need to match the examples below exactly, as long as the same terms are present in some order.
+5. **[3 points]**
+Write a `__mul__(self, other)` method that returns a new polynomial equal to the product of self and other. This method will be used by Python for multiplication. No simplification should be performed on the result. Your result does not need to match the examples below exactly, as long as the same terms are present in some order.
 
+{% highlight python %}
 >>> p = Polynomial([(2, 1), (1, 0)])
 >>> q = p * p; q.get_polynomial()
 ((4, 2), (2, 1), (2, 1), (1, 0))
+{% endhighlight %}
+
+{% highlight python %}
 >>> p = Polynomial([(2, 1), (1, 0)])
 >>> q = Polynomial([(4, 3), (3, 2)])
 >>> r = p * q; r.get_polynomial()
 ((8, 4), (6, 3), (4, 3), (3, 2))
-Write a __call__(self, x) method that returns the result of evaluating the current polynomial at the point x. This method will be used by Python when a polynomial is called as a function. This method can be written in one line using Python's exponentiation operator, **, and the built-in sum function.
+{% endhighlight %}
 
+
+6. **[3 points]**
+Write a `__call__(self, x)` method that returns the result of evaluating the current polynomial at the point x. This method will be used by Python when a polynomial is called as a function. *Hint: This method can be written in one line using Python's exponentiation operator, `**`, and the built-in sum function.*
+
+{% highlight python %}
 >>> p = Polynomial([(2, 1), (1, 0)])
 >>> [p(x) for x in range(5)]
 [1, 3, 5, 7, 9]
+{% endhighlight %}
+
+
+{% highlight python %}
 >>> p = Polynomial([(2, 1), (1, 0)])
 >>> q = -(p * p) + p
 >>> [q(x) for x in range(5)]
 [0, -6, -20, -42, -72]
-Write a simplify(self) method that replaces the polynomial's internal representation with an equivalent, simplified representation. Unlike the previous methods, simplify(self) does not return a new polynomial, but rather acts in place. However, because the fundamental character of the polynomial is not changing, we do not consider this to violate the notion that polynomials are immutable.
+{% endhighlight %}
 
-The simplification process should begin by combining terms with a common power. Then, terms with a coefficient of zero should be removed, and the remaining terms should be sorted in decreasing order based on their power. In the event that all terms have a coefficient of zero after the first step, the polynomial should be simplified to the single term 0⋅x0
-0
-⋅
-x
-0
-, i.e. (0, 0).
+7. **[8 points]**
+Write a `simplify(self)` method that replaces the polynomial's internal representation with an equivalent, simplified representation. Unlike the previous methods, simplify(self) does not return a new polynomial, but rather acts in place. However, because the fundamental character of the polynomial is not changing, we do not consider this to violate the notion that polynomials are immutable.
 
+The simplification process should begin by combining terms with a common power. Then, terms with a coefficient of zero should be removed, and the remaining terms should be sorted in decreasing order based on their power. In the event that all terms have a coefficient of zero after the first step, the polynomial should be simplified to the single term $$0⋅x^0$$, i.e. `(0, 0)`.
+
+{% highlight python %}
 >>> p = Polynomial([(2, 1), (1, 0)])
 >>> q = -p + (p * p); q.get_polynomial()
 ((-2, 1), (-1, 0), (4, 2), (2, 1),
  (2, 1), (1, 0))
 >>> q.simplify(); q.get_polynomial()
 ((4, 2), (2, 1))
+{% endhighlight %}
+
+{% highlight python %}
 >>> p = Polynomial([(2, 1), (1, 0)])
 >>> q = p - p; q.get_polynomial()
 ((2, 1), (1, 0), (-2, 1), (-1, 0))
 >>> q.simplify(); q.get_polynomial()
 ((0, 0),)
-Write a __str__(self) method that returns a human-readable string representing the polynomial. This method will be used by Python when the str function is called on a polynomial, or when a polynomial is printed.
+{% endhighlight %}
 
-In general, your function should render polynomials as a sequence of signs and terms each separated by a single space, i.e. "sign1 term1 sign2 term2 ... signN termN", where signs can be "+" or "-", and terms have the form "ax^b" for coefficient a and power b. However, in adherence with conventional mathematical notation, there are a few exceptional cases that require special treatment:
 
-The first sign should not be separated from the first term by a space, and should be left blank if the first term has a positive coefficient.
+7. **[10 points]**
+Write a `__str__(self)` method that returns a human-readable string representing the polynomial. This method will be used by Python when the str function is called on a polynomial, or when a polynomial is printed.
 
-The variable and power portions of a term should be omitted if the power is 0
-0
-, leaving only the coefficient.
+In general, your function should render polynomials as a sequence of signs and terms each separated by a single space, i.e. `"sign1 term1 sign2 term2 ... signN termN"`, where signs can be `"+"` or `"-"`, and terms have the form `"ax^b"` for coefficient `a` and power `b`. However, in adherence with conventional mathematical notation, there are a few exceptional cases that require special treatment:
 
-The power portion of a term should be omitted if the power is 1
-1
-.
-
-Coefficients with magnitude 0
-0
- should always have a positive sign.
-
-Coefficients with magnitude 1
-1
- should be omitted, unless the power is 0
-0
-.
+* The first sign should not be separated from the first term by a space, and should be left blank if the first term has a positive coefficient.
+* The variable and power portions of a term should be omitted if the power is 0 , leaving only the coefficient.
+* The power portion of a term should be omitted if the power is 1.
+* Coefficients with magnitude 0 should always have a positive sign.
+* Coefficients with magnitude 1 should be omitted, unless the power is 0.
 
 You may assume that all polynomials have integer coefficients and non-negative integer powers.
 
+{% highlight python %}
 >>> p = Polynomial([(1, 1), (1, 0)])
 >>> qs = (p, p + p, -p, -p - p, p * p)
 >>> for q in qs: q.simplify(); str(q)
@@ -440,6 +446,10 @@ You may assume that all polynomials have integer coefficients and non-negative i
 '-x - 1'
 '-2x - 2'
 'x^2 + 2x + 1'
+{% endhighlight %}
+
+
+{% highlight python %}
 >>> p = Polynomial([(0, 1), (2, 3)])
 >>> str(p); str(p * p); str(-p * p)
 '0x + 2x^3'
@@ -450,10 +460,10 @@ You may assume that all polynomials have integer coefficients and non-negative i
 'x + 2x^3'
 'x^2 + 2x^4 + 2x^4 + 4x^6'
 '-x^2 - 2x^4 - 2x^4 - 4x^6'
-Feedback
+{% endhighlight %}
 
-Approximately how long did you spend on this assignment?
+## 7. Feedback
 
-Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
-
-Which aspects of this assignment did you like? Is there anything you would have changed?
+1. **[1 point]** Approximately how long did you spend on this assignment?
+2. **[1 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+3. **[1 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
