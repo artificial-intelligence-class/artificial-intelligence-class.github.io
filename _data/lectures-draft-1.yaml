@@ -7,21 +7,8 @@
       title: AIMA Chapter 1
       authors: Russell and Norvig
       optional: false
-
--
-  date: 2018-08-28
-  title:  HW 1 released (Python)
-  type: exam
 -
   date: 2018-08-30
-  slides: 
-  title: Python Review - part 1
--
-  date: 2018-09-04
-  slides: 
-  title: Python Review - part 2
--
-  date: 2018-09-06
   slides: 
   title:  Uninformed Search
   readings:   
@@ -30,7 +17,7 @@
       authors: Russell and Norvig
       optional: false 
 -
-  date: 2018-09-11
+  date: 2018-09-04
   slides: 
   title:  A* Search and Heuristics
   readings:   
@@ -39,11 +26,7 @@
       authors: Russell and Norvig
       optional: false 
 -
-  date: 2018-09-11
-  title:  HW 1 due (Python), HW2 released (Uninformed Search) 
-  type: exam
--
-  date: 2018-09-13
+  date: 2018-09-06
   slides: 
   title:  Constraint Satifaction Problems 
   readings:   
@@ -51,13 +34,8 @@
       title: AIMA Chapter 6.1
       authors: Russell and Norvig
       optional: false 
-
 -
-  date: 2018-09-17
-  title: Course Selection Period Ends
-  type: no_lecture
--
-  date: 2018-09-18
+  date: 2018-09-11
   slides: 
   title:  Constraint Satifaction Problems - part 2
   readings:   
@@ -66,11 +44,7 @@
       authors: Russell and Norvig
       optional: false 
 -
-  date: 2018-09-18
-  title:  HW2 due (Uninformed Search), HW3 released (Informed Search+Games) 
-  type: exam
--
-  date: 2018-09-20
+  date: 2018-09-13
   slides: 
   title:  Game Trees&colon; Minimax
   readings:   
@@ -79,7 +53,11 @@
       authors: Russell and Norvig
       optional: false 
 -
-  date: 2018-09-25
+  date: 2018-09-17
+  title: Course Selection Period Ends
+  type: no_lecture
+-
+  date: 2018-09-18
   slides: 
   title:  Game Trees&colon; Expectimax and Utilities
   readings:   
@@ -88,13 +66,32 @@
       authors: Russell and Norvig
       optional: false 
 -
-  date: 2018-09-18
-  title:  HW3 due (Informed Search+Games), HW4 released (Sudoku) 
-  type: exam
+  date: 2018-09-20
+  slides: 
+  title:  Markov Decision Processes
+  readings:   
+    - 
+      title: AIMA Chapter 17.1-17.3
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-09-25
+  slides: 
+  title:  Markov Decision Processes - part 2
+  readings:   
+    - 
+      title: AIMA Chapter 17.1-17.3
+      authors: Russell and Norvig
+      optional: false 
+  readings:   
+    - 
+      title: Chapter 3 - Finite Markov Decision Processes
+      authors: Sutton and Barto
+      url: https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view
 -
   date: 2018-09-27
   slides: 
-  title:  Catch-up
+  title:  Catch up time
 -
   date: 2018-10-02
   title:  Midterm exam 1 (date is provisional)
@@ -110,33 +107,6 @@
 -
   date: 2018-10-09
   slides: 
-  title:  Markov Decision Processes
-  readings:   
-    - 
-      title: AIMA Chapter 17.1-17.3
-      authors: Russell and Norvig
-      optional: false 
--
-  date: 2018-10-09
-  title:  HW4 due (Sudoku), HW5 released (TBD - Alexa?)
-  type: exam
--
-  date: 2018-10-11
-  slides: 
-  title:  Markov Decision Processes - part 2
-  readings:   
-    - 
-      title: AIMA Chapter 17.1-17.3
-      authors: Russell and Norvig
-      optional: false 
-  readings:   
-    - 
-      title: Chapter 3 - Finite Markov Decision Processes
-      authors: Sutton and Barto
-      url: https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view
--
-  date: 2018-10-16
-  slides: 
   title:  Reinforcement Learning
   readings:   
     - 
@@ -148,7 +118,7 @@
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view
 -
-  date: 2018-10-18
+  date: 2018-10-11
   slides: 
   title:  Reinforcement Learning - part 2
   readings:   
@@ -159,7 +129,7 @@
 -
   date: 2018-10-16
   slides: 
-  title:  Begin Schedule Change -  Probability 
+  title:  Probability 
   readings:   
     - 
       title: AIMA Chapter 13.1-13.5
