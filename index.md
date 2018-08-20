@@ -56,7 +56,7 @@ Office hours
 : TBD
 
 Textbook
-: TBD
+: [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
 
 Grading
 : TBD
