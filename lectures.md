@@ -49,7 +49,7 @@ The lecture schedule will be updated as the term progresses.
       <td>{{ lecture.date | date: '%a, %b %-d, %Y' }}</td>
       <td>
         {% if lecture.slides %}
-          <a href="assets/slides/{{lecture.slides }}">{{ lecture.title }}</a>
+          <a href="assets/slides/{{ lecture.slides }}">{{ lecture.title }}</a>
         {% else %}
          {{ lecture.title }} 
         {% endif %}
