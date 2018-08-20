@@ -7,6 +7,7 @@ caption: I am putting myself to the fullest possible use, which is all I think t
 active_tab: main_page 
 ---
 
+
 <!-- Display an alert about upcoming homework assignments -->
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
 {% for page in site.pages %}
@@ -31,6 +32,11 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 {% endif %}
 {% endfor %}
 <!-- End alert for upcoming homework assignments -->
+
+
+<div class="alert alert-warning">
+Interested in CIS 421/521 but didn't get in?  You can <a href="https://forms.cis.upenn.edu/waitlist/index.php">add yourself to waitlist</a>. Priority will be given to graduating students who need the course for their major requirements.
+</div>
 
 
 
