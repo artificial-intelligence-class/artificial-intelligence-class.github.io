@@ -1,8 +1,8 @@
 ---
 layout: default
-img: games.png
+img: chess-puzzle.png
 img_link: https://www.explainxkcd.com/wiki/index.php/1002:_Game_AIs
-caption: Difficulty of Various Games For Computers
+caption: Chess Puzzle
 title: CIS 521 Homework 2 "Uninformed Search"
 active_tab: homework
 release_date: 2018-09-11
@@ -14,6 +14,7 @@ materials:
     - 
         name: Lights Out GUI
         url: homework2_lights_out_gui.py 
+submission_link: https://www.gradescope.com/courses/21105
 ---
 
 <!-- Check whether the assignment is up to date -->
@@ -45,7 +46,6 @@ You can download the materials for this assignment here:
 
 
 
-
 Homework 2: Uninformed Search [100 points]
 =============================================================
 
@@ -61,7 +61,7 @@ You will find that in addition to a problem specification, most programming ques
 
 You are strongly encouraged to follow the Python style guidelines set forth in [PEP 8](http://www.python.org/dev/peps/pep-0008/), which was written in part by the creator of Python. However, your code will not be graded for style.
 
-Once you have completed the assignment, you should submit your file on [Gradescope](https://www.gradescope.com/courses/21105).
+Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}).
 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
