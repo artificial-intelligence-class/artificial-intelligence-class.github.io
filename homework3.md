@@ -55,7 +55,7 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-Homework 2: Uninformed Search [75 points]
+Homework 3: Informed Search [75 points]
 =============================================================
 
 
