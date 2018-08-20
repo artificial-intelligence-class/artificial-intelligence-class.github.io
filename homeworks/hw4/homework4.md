@@ -5,7 +5,7 @@ img_link: https://xkcd.com/74/
 caption: Binary Sudoku
 title: CIS 521 Homework 4 "Sudoku Solver"
 active_tab: homework
-release_date: 2018-09-11
+release_date: 2018-10-09
 due_date: 2018-10-09T23:59:00EDT
 materials:
     - 
