@@ -25,7 +25,7 @@ The assignment has multiple deliverables.
 {% endfor %}
 </ul>
 {% else %}
-It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | date: "%A, %B %-d, %Y" }}.
+It is due before {{ page.due_date | date: "%I:%M %p" }} on {{ page.due_date | date: "%A, %B %-d, %Y" }}.
 {% endif %}
 </div>
 {% endif %}
