@@ -69,7 +69,7 @@
       optional: false 
 -
   date: 2018-09-18
-  title:  HW2 due (Uninformed Search), HW3 released (Informed Search+Games) 
+  title:  HW2 due (Uninformed Search), HW3 released (Informed Search) 
   type: exam
 -
   date: 2018-09-20
@@ -91,8 +91,8 @@
       optional: false 
 -
   date: 2018-09-18
-  title:  HW3 due (Informed Search+Games), HW4 released (Sudoku) 
-  type: exam
+  title:  HW3 due (Informed Search), HW3 - part 2 released (Games) 
+  type: examsub
 -
   date: 2018-09-27
   slides: 
@@ -120,7 +120,7 @@
       optional: false 
 -
   date: 2018-10-09
-  title:  HW4 due (Sudoku), HW5 released (TBD - Alexa?)
+  title:  HW3 - part 2 due (Games), HW4 released (Sudoku)
   type: exam
 -
   date: 2018-10-11
@@ -149,6 +149,11 @@
       title: Chapter 6.1, 6.2 and 6.5 - Temporal-Difference Learning
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view
+
+-
+  date: 2018-10-09
+  title:  HW4 due (Sudoku), HW5 released (TBD - Alexa with POMDPs?)
+  type: exam
 -
   date: 2018-10-18
   slides: 
