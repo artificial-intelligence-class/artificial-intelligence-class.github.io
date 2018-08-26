@@ -6,27 +6,14 @@
   office_hours: TBD
   location: 3401 Walnut room 401B
 
-- name: Maria Kustikova
-  pic: mkust.png
-  email: mkust@seas.upenn.edu
-  url: https://www.linkedin.com/in/mkustikova/
-  office_hours: TBD
-  location: 3401 Walnut room 401B
- 
 
-- name: Simeng Sun
-  pic: ssun.png
-  email: simsun@seas.upenn.edu
-  url: https://www.linkedin.com/in/simeng-sun-675ab8138/
+- name: Andrej Ilić
+  pic: andr.jpeg
+  email: ailic@seas.upenn.edu
+  url: /
   office_hours: TBD
   location: 3401 Walnut room 401B
 
-- name: Ignacio Arranz
-  pic: iarranz.png
-  email: arranz@seas.upenn.edu
-  url: https://www.linkedin.com/in/arranzignacio/
-  office_hours: TBD
-  location: 3401 Walnut room 401B
 
 - name: Deniz Beser
   pic: deniz-photo.png
@@ -35,12 +22,13 @@
   office_hours: TBD
   location: 3401 Walnut room 401B
   
-- name: Andrej Ilić
-  pic: andr.jpeg
-  email: ailic@seas.upenn.edu
-  url: /
+- name: Ignacio Arranz
+  pic: iarranz.png
+  email: arranz@seas.upenn.edu
+  url: https://www.linkedin.com/in/arranzignacio/
   office_hours: TBD
   location: 3401 Walnut room 401B
+  
 
 - name: Jie Gao
   pic: jie.jpg
@@ -49,3 +37,17 @@
   office_hours: TBD
   location: 3401 Walnut room 401B
  
+
+- name: Maria Kustikova
+  pic: mkust.png
+  email: mkust@seas.upenn.edu
+  url: https://www.linkedin.com/in/mkustikova/
+  office_hours: TBD
+  location: 3401 Walnut room 401B
+ 
+- name: Simeng Sun
+  pic: ssun.png
+  email: simsun@seas.upenn.edu
+  url: https://www.linkedin.com/in/simeng-sun-675ab8138/
+  office_hours: TBD
+  location: 3401 Walnut room 401B
