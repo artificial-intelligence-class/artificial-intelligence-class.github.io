@@ -136,7 +136,7 @@ For each of the following questions, write your answers as triply-quoted strings
 
     ```python
     >>> x = [0, 0, 0]; y = copy(x)
-    >>> print x, y; x[0] = 1; print x, y
+    >>> print(x, y); x[0] = 1; print(x, y)
     [0, 0, 0] [0, 0, 0]
     [1, 0, 0] [0, 0, 0]
     ```
@@ -266,12 +266,12 @@ In this section, you will implement a simple Polynomial class supporting basic a
 
 {% highlight python %}
 >>> p, q = Polynomial([(2, 1), (1, 0)]), Polynomial([(2, 1), (-1, 0)])
->>> print p; print q
+>>> print(p); print(q)
 2x + 1
 2x - 1
->>> r = (p * p) + (q * q) - (p * q); print r
+>>> r = (p * p) + (q * q) - (p * q); print(r)
 4x^2 + 2x + 2x + 1 + 4x^2 - 2x - 2x + 1 - 4x^2 + 2x - 2x + 1
->>> r.simplify(); print r
+>>> r.simplify(); print(r)
 4x^2 + 3
 >>> [(x, r(x)) for x in range(-4, 5)]
 [(-4, 67), (-3, 39), (-2, 19), (-1, 7), (0, 3), (1, 7), (2, 19), (3, 39), (4, 67)]
