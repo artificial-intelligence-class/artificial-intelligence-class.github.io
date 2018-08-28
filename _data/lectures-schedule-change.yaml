@@ -1,0 +1,129 @@
+-
+  date: 2018-10-16
+  slides: 
+  title:  Begin Schedule Change -  Probability 
+  readings:   
+    - 
+      title: AIMA Chapter 13.1-13.5
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-10-18
+  slides: 
+  title:  Markov Models
+  readings:   
+    - 
+      title: AIMA Chapter 15.2 and 15.5
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-10-23
+  slides: 
+  title:  Hidden Markov Models
+  readings:   
+    - 
+      title: AIMA Chapter 15.2 and 15.5
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-10-25
+  slides: 
+  title:  Hidden Markov Models - applications
+  readings:   
+    - 
+      title: AIMA Chapter 15.2 and 15.6
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-10-30
+  slides: 
+  title:  Bayes' Nets&colon; Representation
+  readings:   
+    - 
+      title: AIMA Chapter 14.1, 14.2 and 14.4
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-11-01
+  title:  Midterm exam 2 (date is provisional)
+  type: exam
+-
+  date: 2018-11-06
+  slides: 
+  title:  Bayes' Nets&colon; Indepdendence
+  readings:   
+    - 
+      title: AIMA Chapter 14.1, 14.2 and 14.4
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-11-08
+  slides: 
+  title:  Bayes' Nets&colon; Inference
+  readings:   
+    - 
+      title: AIMA Chapter
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-11-09
+  title: Last day to withdraw from a course
+  type: no_lecture
+-
+  date: 2018-11-13
+  slides: 
+  title:  Bayes' Nets&colon; Sampling
+  readings:   
+    - 
+      title: AIMA Chapter  14.4-14.5
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-11-15
+  slides: 
+  title:  Decision Diagrams / VPI
+  readings:   
+    - 
+      title: AIMA Chapter 16.5-16.6
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-11-20
+  slides: 
+  title:  Machine Learning&colon; Naive Bayes
+  readings:   
+    - 
+      title: AIMA Chapter 20.1-20.2
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-11-22
+  title: Thanksgiving Break (no classes)
+  type: no_lecture
+-
+  date: 2018-11-27
+  slides: 
+  title:  Machine Learning&colon; Perceptrons
+  readings:   
+    - 
+      title: AIMA Chapter 18.6.3
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-11-29
+  slides: 
+  title:  Machine Learning&colon; Clustering  
+  readings:   
+    - 
+      title: AIMA Chapter 18,8
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-12-04
+  slides: 
+  title:  Advanced applications 
+  readings:   
+-
+  date: 2018-11-01
+  title:  Midterm exam 3
+  type: exam
