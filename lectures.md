@@ -9,6 +9,11 @@ active_tab: lectures
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
 <!-- End create a HTML anchor for the most recent lecture -->
 
+
+<div class="alert alert-info">
+You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=8fbdc22b-8b81-4c58-b819-a9460066259e">watch recordings of the lecture videos online</a>.
+</div>
+
 The lecture schedule will be updated as the term progresses. 
 
 <table class="table table-striped">
@@ -48,13 +53,17 @@ The lecture schedule will be updated as the term progresses.
     <!-- End create a HTML anchor for the most recent lecture -->
       <td>{{ lecture.date | date: '%a, %b %-d, %Y' }}</td>
       <td>
-        {% if lecture.slides %}
-          <a href="assets/slides/{{ lecture.slides }}">{{ lecture.title }}</a>
-        {% else %}
          {{ lecture.title }} 
+
+
+        {% if lecture.slides %}
+          <a href="assets/slides/{{ lecture.slides }}">[slides]</a>
         {% endif %}
 
 
+        {% if lecture.recording %}
+          <a href="{{ lecture.recording }}">[video] </a>
+        {% endif %}
 
 	    {% if lecture.speaker %}
           {% if lecture.speaker_url %}
