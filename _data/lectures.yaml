@@ -99,9 +99,9 @@
       authors: Russell and Norvig
       optional: false 
 -
-  date: 2018-09-18
+  date: 2018-09-25
   title:  HW3 due (Informed Search), HW3 - part 2 released (Games) 
-  type: examsub
+  type: exam
 -
   date: 2018-09-27
   slides: 
@@ -172,3 +172,83 @@
       title: AIMA Chapter 21
       authors: Russell and Norvig
       optional: false 
+-
+  date: 2018-10-23
+  slides: 
+  title:  TBD - maybe  Machine Learning&colon; Perceptrons
+  readings:   
+    - 
+      title: AIMA Chapter 18.6.3
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-10-25
+  slides: 
+  title:  TBD - maybe Machine Learning&colon; Clustering  
+  readings:   
+    - 
+      title: AIMA Chapter 18,8
+      authors: Russell and Norvig
+      optional: false 
+-
+  date: 2018-10-30
+  slides: 
+  title:  TBD
+  readings:   
+-
+  date: 2018-11-01
+  title:  Midterm exam 2 (date is provisional)
+  type: exam
+-
+  date: 2018-11-06
+  slides: 
+  title:  TBD
+  readings:   
+-
+  date: 2018-11-08
+  slides: 
+  title:  TBD
+  readings:   
+-
+  date: 2018-11-09
+  title: Last day to withdraw from a course
+  type: no_lecture
+-
+  date: 2018-11-13
+  slides: 
+  title:  TBD
+  readings:   
+-
+  date: 2018-11-15
+  slides: 
+  title:  TBD
+  readings:   
+-
+  date: 2018-11-20
+  slides: 
+  title:  TBD
+  readings:   
+-
+  date: 2018-11-22
+  title: Thanksgiving Break (no classes)
+  type: no_lecture
+-
+  date: 2018-11-27
+  slides: 
+  title:  TBD
+  readings:   
+-
+  date: 2018-11-29
+  slides: 
+  title: 
+  readings:   
+-
+  date: 2018-12-04
+  slides: 
+  title:  TBD 
+  readings:   
+-
+  date: 2018-12-06
+  title:  Midterm exam 3
+  type: exam
+
