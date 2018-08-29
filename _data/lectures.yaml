@@ -27,6 +27,11 @@
   slides: 
   title: Python Review - part 1
   slides: python3-review1.pptx
+  videos:
+    -  
+      url: https://www.youtube.com/watch?v=X2xlQaimsGg
+      title: Monty Python and the Holy Grail (witch buring scene)
+      length: 4 minutes 
 -
   date: 2018-09-04
   slides: 
