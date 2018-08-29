@@ -6,7 +6,7 @@ caption: Hello world!
 title: CIS 521 Homework 1 "Python Skills"
 active_tab: homework
 release_date: 2018-08-10
-due_date: 2018-09-04 23:59:00EDT
+due_date: 2018-09-11 23:59:00EDT
 ---
 
 <!-- Check whether the assignment is up to date -->
