@@ -37,6 +37,17 @@
       url: https://www.youtube.com/watch?v=xLovcfIugy8
       title: Learn Python in 60 Minutes from Java
       length: 60 minutes 
+    - 
+      authors: Dan Bader
+      url: https://www.youtube.com/watch?v=1HlyKKiGg-4
+      title: Python List Comprehensions Step-By-Step
+      length: 15 minutes 
+    - 
+      authors: Corey Schafer
+      url: https://www.youtube.com/watch?v=bD05uGo_sVI
+      title: Python Generators - How to use them and the benefits you receive
+      length: 11 minutes 
+
 -
   date: 2018-09-04
   slides: 
