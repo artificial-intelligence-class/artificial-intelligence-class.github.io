@@ -41,7 +41,7 @@ Interested in CIS 421/521 but didn't get in?  You can <a href="https://forms.cis
 
 
 Course number
-: CIS 530 - Computational Linguistics 
+: CIS 421/521 - Artificial Intelligence 
 
 Instructor
 : [Chris Callison-Burch](http://www.cis.upenn.edu/~ccb/)
@@ -59,12 +59,10 @@ Textbook
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
 
 Grading
-: TBD
-
+: Sundays 4-6pm, Mondays 3:30-7:30pm, Fridays 3-5pm in 3401 Walnut room 401B
 
 Collaboration Policy
 : Unless otherwise noted, you are not allowed to work in groups on the homework assignments. You can discuss homework problems with others (you must explicitly list who you discussed problems with on each homework submission), but   *all code must be your own indepdent work.*
-
 
 
 Late Day Policy
