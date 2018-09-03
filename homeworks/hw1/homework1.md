@@ -450,5 +450,7 @@ Write a `__str__(self)` method that returns a human-readable string representing
 ## 7. Feedback [5 points]
 
 1. **[1 point]** Approximately how long did you spend on this assignment?
+
 2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+
 3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
