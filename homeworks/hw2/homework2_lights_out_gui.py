@@ -1,9 +1,9 @@
 import sys
-import Tkinter
+import tkinter
 
 import homework2
 
-class Light(Tkinter.Canvas):
+class Light(tkinter.Canvas):
 
     BACKGROUND_ON = "white"
     BACKGROUND_OFF = "gray50"
@@ -12,7 +12,7 @@ class Light(Tkinter.Canvas):
     BORDER_OFF = "black"
 
     def __init__(self, master, size=60):
-        Tkinter.Canvas.__init__(self, master, height=size, width=size,
+        tkinter.Canvas.__init__(self, master, height=size, width=size,
             background=Light.BACKGROUND_OFF, highlightthickness=2,
             highlightbackground=Light.BORDER_OFF)
 
@@ -24,11 +24,11 @@ class Light(Tkinter.Canvas):
         color = Light.BORDER_ON if selected else Light.BORDER_OFF
         self.configure(highlightbackground=color)
 
-class Board(Tkinter.Frame):
+class Board(tkinter.Frame):
 
     def __init__(self, master, puzzle, rows, cols):
 
-        Tkinter.Frame.__init__(self, master)
+        tkinter.Frame.__init__(self, master)
 
         self.puzzle = puzzle
         self.rows = rows
@@ -70,23 +70,23 @@ class Board(Tkinter.Frame):
                 self.animate_moves(moves[1:], delay=delay)
             stage_1()
 
-class LightsOutGUI(Tkinter.Frame):
+class LightsOutGUI(tkinter.Frame):
 
     def __init__(self, master, rows, cols):
 
-        Tkinter.Frame.__init__(self, master)
+        tkinter.Frame.__init__(self, master)
 
         self.puzzle = homework2.create_puzzle(rows, cols)
 
         self.board = Board(self, self.puzzle, rows, cols)
-        self.board.pack(side=Tkinter.LEFT, padx=1, pady=1)
+        self.board.pack(side=tkinter.LEFT, padx=1, pady=1)
 
-        menu = Tkinter.Frame(self)
-        Tkinter.Button(menu, text="Scramble", command=self.scramble_click).pack(
-            fill=Tkinter.X, padx=1, pady=1)
-        Tkinter.Button(menu, text="Solve", command=self.solve_click).pack(
-            fill=Tkinter.X, padx=1, pady=1)
-        menu.pack(side=Tkinter.RIGHT)
+        menu = tkinter.Frame(self)
+        tkinter.Button(menu, text="Scramble", command=self.scramble_click).pack(
+            fill=tkinter.X, padx=1, pady=1)
+        tkinter.Button(menu, text="Solve", command=self.solve_click).pack(
+            fill=tkinter.X, padx=1, pady=1)
+        menu.pack(side=tkinter.RIGHT)
 
     def scramble_click(self):
         self.puzzle.scramble()
@@ -96,7 +96,7 @@ class LightsOutGUI(Tkinter.Frame):
         self.board.animate_moves(self.puzzle.find_solution())
 
 if __name__ == "__main__":
-    root = Tkinter.Tk()
+    root = tkinter.Tk()
     root.title("Lights Out")
     rows, cols = sys.argv[1:]
     LightsOutGUI(root, int(rows), int(cols)).pack()
