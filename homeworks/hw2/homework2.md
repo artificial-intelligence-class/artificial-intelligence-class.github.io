@@ -10,7 +10,7 @@ due_date: 2018-09-18 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homework3.py 
+        url: homework2.py 
     - 
         name: Lights Out GUI
         url: homework2_lights_out_gui.py 
