@@ -54,6 +54,12 @@
   slides: 
   title: Python Review - part 2
   slides: python3-review2.pdf
+  videos:
+    -  
+      authors: Piet Hoenderdos, Daniel Dennett and others
+      url: https://www.youtube.com/watch?v=U_8yo5hacKM
+      title: Victim of the Brain clip Dennett's brain gets removed
+      length: 10 minutes 
 -
   date: 2018-09-06
   slides: 
@@ -63,6 +69,13 @@
       title: AIMA Chapter 3.1-3.4
       authors: Russell and Norvig
       optional: false 
+  videos:
+    -  
+      authors: SRI International 
+      url: https://www.youtube.com/watch?v=7bsEN8mwUB8
+      title: Shakey the Robot&colon; The First Robot to Embody Artificial Intelligence
+      length: 6 minutes 
+
 -
   date: 2018-09-11
   slides: 
@@ -72,6 +85,12 @@
       title: AIMA Chapter 3.5-3.6
       authors: Russell and Norvig
       optional: false 
+  videos:
+    -  
+      authors: Nils Nilsson 
+      url: https://www.youtube.com/watch?v=mQ7M-zhiu7U
+      title: Story of A* and STRIPS
+      length: 6 minutes 
 -
   date: 2018-09-11
   title:  HW 1 due (Python), HW2 released (Uninformed Search) 
