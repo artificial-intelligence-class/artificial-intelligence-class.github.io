@@ -304,8 +304,10 @@ The starting configuration of this puzzle is a row of $\\ell$ cells, with disks 
     [(1, 3), (2, 1), (0, 2), (2, 4), (1, 2)]
     ```
 
-## 4. Feedback **[5 points]**
+## 4. Feedback [5 points]
 
 1. **[1 point]** Approximately how long did you spend on this assignment?
+
 2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+
 3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
