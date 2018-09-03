@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CIS 530 Staff
+title: CIS 521 Staff
 active_tab: staff
 ---
 
