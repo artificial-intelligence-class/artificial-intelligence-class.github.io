@@ -209,7 +209,7 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     ```python
     >>> p = create_puzzle(2, 2)
     >>> for move, new_p in p.successors():
-    ...     print move, new_p.get_board()
+    ...     print(move, new_p.get_board())
     ...
     (0, 0) [[True, True], [True, False]]
     (0, 1) [[True, True], [False, True]]
@@ -220,7 +220,7 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     ```python
     >>> for i in range(2, 6):
     ...     p = create_puzzle(i, i + 1)
-    ...     print len(list(p.successors()))
+    ...     print(len(list(p.successors())))
     ...
     6
     12
