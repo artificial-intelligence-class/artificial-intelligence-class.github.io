@@ -24,9 +24,8 @@
   type: exam
 -
   date: 2018-08-30
-  slides: 
   title: Python Review - part 1
-  slides: python3-review1.pdf
+  slides: 01-Python3-review1.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4a27eb8a-3607-4c63-b852-a9460066cfe9
   videos:
     -  
@@ -51,9 +50,8 @@
 
 -
   date: 2018-09-04
-  slides: 
   title: Python Review - part 2
-  slides: python3-review2.pdf
+  slides: 02-Python3-review2.pdf
   videos:
     -  
       authors: Piet Hoenderdos, Daniel Dennett and others
