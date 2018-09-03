@@ -53,13 +53,13 @@ Time and place
 : Fall 2018, Tuesdays and Thursdays 12-1:30, Wu and Chen Auditorium (Levine 101)
 
 Office hours
-: TBD
+: Sundays 4-6pm, Mondays 3:30-7:30pm, Fridays 3-5pm in 3401 Walnut room 401B
 
 Textbook
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
 
 Grading
-: Sundays 4-6pm, Mondays 3:30-7:30pm, Fridays 3-5pm in 3401 Walnut room 401B
+: 55% Homework Assignments, 15% Midterm 1, 15% Midterm 2, 15% Midterm 3
 
 Collaboration Policy
 : Unless otherwise noted, you are not allowed to work in groups on the homework assignments. You can discuss homework problems with others (you must explicitly list who you discussed problems with on each homework submission), but   *all code must be your own indepdent work.*
