@@ -7,6 +7,7 @@ title: CIS 521 Homework 1 "Python Skills"
 active_tab: homework
 release_date: 2018-08-10
 due_date: 2018-09-11 23:59:00EDT
+submission_link: https://www.gradescope.com/courses/21105
 ---
 
 <!-- Check whether the assignment is up to date -->
@@ -28,7 +29,7 @@ This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{
 
 
 <div class="alert alert-info" markdown="span">
-Links to tutorials and other Python resources are posted on the [resources page](resources.html).</div>
+Links to tutorials and other Python resources are posted on the [schedule page](/lectures.html) in the Python Review parts.</div>
 
 
 Homework 1: Python Skills [100 points]
@@ -46,10 +47,11 @@ You will find that in addition to a problem specification, each programming ques
 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-You are strongly encouraged to follow the Python style guidelines set forth in PEP 8, which was written in part by the creator of Python. However, your code will not be graded for style.
+You are strongly encouraged to follow the Python style guidelines set forth in [PEP 8](http://www.python.org/dev/peps/pep-0008/), which was written in part by the creator of Python. However, your code will not be graded for style.
 
+Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}).
 
-You will submit your assignment via Gradescope. We'll post instructions on Piazza. 
+You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
 
 ## 1. Python Concepts - Study Questions **[0 points]**
