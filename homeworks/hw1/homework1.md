@@ -35,7 +35,7 @@ Links to tutorials and other Python resources are posted on the [schedule page](
 Homework 1: Python Skills [100 points]
 =============================================================
 
-# Instructions
+## Instructions
 
 In this assignment, you will answer some conceptual questions about Python and write a collection of basic algorithms and data structures.
 
@@ -54,7 +54,7 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
 
-## 1. Python Concepts - Study Questions **[0 points]**
+## 1. Python Concepts - Study Questions [0 points]
 
 For each of the following questions, write your answers as triply-quoted strings using the indicated variables in the provided file.
 
@@ -434,7 +434,7 @@ Write a `__str__(self)` method that returns a human-readable string representing
     '-x^2 - 2x^4 - 2x^4 - 4x^6'
     ```
 
-## 7. Feedback **[5 points]**
+## 7. Feedback [5 points]
 
 1. **[1 point]** Approximately how long did you spend on this assignment?
 2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
