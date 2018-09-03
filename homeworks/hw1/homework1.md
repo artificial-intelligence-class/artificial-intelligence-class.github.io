@@ -7,6 +7,10 @@ title: CIS 521 Homework 1 "Python Skills"
 active_tab: homework
 release_date: 2018-08-10
 due_date: 2018-09-11 23:59:00EDT
+materials:
+    - 
+        name: skeleton file
+        url: homework1.py 
 submission_link: https://www.gradescope.com/courses/21105
 ---
 
@@ -22,10 +26,19 @@ Warning: this assignment is out of date.  It may still need to be updated for th
 
 
 <div class="alert alert-info">
-This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M %p" }}. 
+This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
 </div>
 
-
+{% if page.materials %}
+<div class="alert alert-info">
+You can download the materials for this assignment here:
+<ul>
+{% for item in page.materials %}
+<li><a href="{{item.url}}">{{ item.name }}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
 
 
 <div class="alert alert-info" markdown="span">
