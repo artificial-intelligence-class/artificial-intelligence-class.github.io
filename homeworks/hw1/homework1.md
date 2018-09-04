@@ -7,6 +7,11 @@ title: CIS 521 Homework 1 "Python Skills"
 active_tab: homework
 release_date: 2018-08-10
 due_date: 2018-09-11 23:59:00EDT
+materials:
+    - 
+        name: skeleton file
+        url: homework1.py 
+submission_link: https://www.gradescope.com/courses/21105
 ---
 
 <!-- Check whether the assignment is up to date -->
@@ -21,20 +26,29 @@ Warning: this assignment is out of date.  It may still need to be updated for th
 
 
 <div class="alert alert-info">
-This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M %p" }}. 
+This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
 </div>
 
-
+{% if page.materials %}
+<div class="alert alert-info">
+You can download the materials for this assignment here:
+<ul>
+{% for item in page.materials %}
+<li><a href="{{item.url}}">{{ item.name }}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
 
 
 <div class="alert alert-info" markdown="span">
-Links to tutorials and other Python resources are posted on the [resources page](resources.html).</div>
+Links to tutorials and other Python resources are posted on the [schedule page](/lectures.html) in the Python Review parts.</div>
 
 
 Homework 1: Python Skills [100 points]
 =============================================================
 
-# Instructions
+## Instructions
 
 In this assignment, you will answer some conceptual questions about Python and write a collection of basic algorithms and data structures.
 
@@ -46,13 +60,14 @@ You will find that in addition to a problem specification, each programming ques
 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-You are strongly encouraged to follow the Python style guidelines set forth in PEP 8, which was written in part by the creator of Python. However, your code will not be graded for style.
+You are strongly encouraged to follow the Python style guidelines set forth in [PEP 8](http://www.python.org/dev/peps/pep-0008/), which was written in part by the creator of Python. However, your code will not be graded for style.
+
+Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}).
+
+You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
 
-You will submit your assignment via Gradescope. We'll post instructions on Piazza. 
-
-
-## 1. Python Concepts - Study Questions **[0 points]**
+## 1. Python Concepts - Study Questions [0 points]
 
 For each of the following questions, write your answers as triply-quoted strings using the indicated variables in the provided file.
 
@@ -432,8 +447,10 @@ Write a `__str__(self)` method that returns a human-readable string representing
     '-x^2 - 2x^4 - 2x^4 - 4x^6'
     ```
 
-## 7. Feedback **[5 points]**
+## 7. Feedback [5 points]
 
 1. **[1 point]** Approximately how long did you spend on this assignment?
+
 2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+
 3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
