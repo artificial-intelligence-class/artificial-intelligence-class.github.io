@@ -53,7 +53,7 @@ Time and place
 : Fall 2018, Tuesdays and Thursdays 12-1:30, Wu and Chen Auditorium (Levine 101)
 
 Office hours
-: Sundays 4-6pm, Mondays 3:30-7:30pm, Fridays 3-5pm in 3401 Walnut room 401B
+: Sundays 4-6pm and Mondays 3:30-7:30pm in 3401 Walnut room 401B, Fridays 3-5pm in 3401 Walnut room 463C.
 
 Textbook
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
