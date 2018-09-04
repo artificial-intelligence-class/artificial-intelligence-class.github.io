@@ -53,13 +53,19 @@
   date: 2018-09-04
   slides: 
   title: Python Review - part 2
-  slides: python3-review2.pdf
+  slides: python3-review2.pptx
   videos:
     -  
       authors: Piet Hoenderdos, Daniel Dennett and others
       url: https://www.youtube.com/watch?v=U_8yo5hacKM
       title: Victim of the Brain clip Dennett's brain gets removed
       length: 10 minutes 
+    - 
+      authors: Sebastiaan Mathôt
+      url: https://www.youtube.com/watch?v=8qEnExGLZfY
+      title: Profiling and optimizing your Python code
+      length: 17 minutes 
+
 -
   date: 2018-09-06
   slides: 
