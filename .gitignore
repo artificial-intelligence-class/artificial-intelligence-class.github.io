@@ -1,6 +1,4 @@
 _site/*
 .jekyll-metadata
 *~
-assets/slides/~$python3-review1.pptx
-assets/slides/~$02-Python3-review2.pptx
-assets/slides/~$01-Python3-review1.pptx
+assets/slides/~*.pptx
