@@ -69,13 +69,17 @@
 
 -
   date: 2018-09-06
-  slides: 
-  title:  Uninformed Search
+  slides: 03-Agents-Search-Problems-and-Uninformed-Search.pdf
+  title:  Intelligent Agents, Search Problem Formulation and Uninformed Search
   readings:   
     - 
-      title: AIMA Chapter 3.1-3.4
+      title: AIMA Chapter 2 "Intelligent Agents" (2.1 and 2.2)
       authors: Russell and Norvig
-      optional: false 
+      optional: false
+    - 
+      title: AIMA Chapter 3 "Solving Problems by Search" (3.1-3.4)
+      authors: Russell and Norvig
+      optional: false
   videos:
     -  
       authors: SRI International 
