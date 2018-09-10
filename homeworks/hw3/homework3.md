@@ -6,7 +6,7 @@ caption: Difficulty of Various Games For Computers
 title: CIS 521 Homework 3 "Informed Search"
 active_tab: homework
 release_date: 2018-09-18
-due_date: 2018-09-04 23:59:00EDT
+due_date: 2018-09-25 23:59:00EDT
 materials:
     - 
         name: skeleton file
@@ -55,11 +55,10 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-Homework 2: Uninformed Search [75 points]
+Homework 3: Informed Search [100 points]
 =============================================================
 
-
-### Instructions
+## Instructions
 
 In this assignment, you will explore a number of games and puzzles from the perspectives of informed and adversarial search.
 
@@ -73,7 +72,7 @@ You are strongly encouraged to follow the Python style guidelines set forth in [
 
 Once you have completed the assignment, you should submit your file on [Gradescope](https://www.gradescope.com/courses/21105). You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-### Tile Puzzle
+## 1. Tile Puzzle [55 points]
 
 Recall from class that the Eight Puzzle consists of a $3 \\times 3$ board of sliding tiles with a single empty space. For each configuration, the only possible moves are to swap the empty tile with one of its neighboring tiles. The goal state for the puzzle consists of tiles 1-3 in the top row, tiles 4-6 in the middle row, and tiles 7 and 8 in the bottom row, with the empty space in the lower-right corner.
 
@@ -81,9 +80,9 @@ In this section, you will develop two solvers for a generalized version of the E
 
 A natural representation for this puzzle is a two-dimensional list of integer values between $0$ and $r \\cdot c - 1$ (inclusive), where $r$ and $c$ are the number of rows and columns in the board, respectively. In this problem, we will adhere to the convention that the $0$-tile represents the empty space.
 
-1.  In the `TilePuzzle` class, write an initialization method `__init__(self, board)` that stores an input board of this form described above for future use. You additionally may wish to store the dimensions of the board as separate internal variables, as well as the location of the empty tile.
+1. **[0 point]** In the `TilePuzzle` class, write an initialization method `__init__(self, board)` that stores an input board of this form described above for future use. You additionally may wish to store the dimensions of the board as separate internal variables, as well as the location of the empty tile.
     
-2.  Suggested infrastructure.
+2. **[0 point]** Suggested infrastructure.
     
     In the `TilePuzzle` class, write a method `get_board(self)` that returns the internal representation of the board stored during initialization.
     
@@ -187,7 +186,7 @@ A natural representation for this puzzle is a two-dimensional list of integer va
         right [[1, 2, 3], [4, 5, 0], [6, 7, 8]]
         
     
-3.  In the `TilePuzzle` class, write a method `find_solutions_iddfs(self)` that yields all optimal solutions to the current board, represented as lists of moves. Valid moves include the four strings `"up"`, `"down"`, `"left"`, and `"right"`, where each move indicates a single swap of the empty tile with its neighbor in the indicated direction. Your solver should be implemented using an iterative deepening depth-first search, consisting of a series of depth-first searches limited at first to $0$ moves, then $1$ move, then $2$ moves, and so on. You may assume that the board is solvable. The order in which the solutions are produced is unimportant, as long as all optimal solutions are present in the output.
+3. **[25 points]** In the `TilePuzzle` class, write a method `find_solutions_iddfs(self)` that yields all optimal solutions to the current board, represented as lists of moves. Valid moves include the four strings `"up"`, `"down"`, `"left"`, and `"right"`, where each move indicates a single swap of the empty tile with its neighbor in the indicated direction. Your solver should be implemented using an iterative deepening depth-first search, consisting of a series of depth-first searches limited at first to $0$ moves, then $1$ move, then $2$ moves, and so on. You may assume that the board is solvable. The order in which the solutions are produced is unimportant, as long as all optimal solutions are present in the output.
     
     This method is most easily implemented using recursion. First define a recursive helper method `iddfs_helper(self, limit, moves)` that yields all solutions to the current board of length no more than `limit` which are continuations of the provided move list. Your main method will then call this helper function in a loop, increasing the depth limit by one at each iteration, until one or more solutions have been found.
     
@@ -208,7 +207,7 @@ A natural representation for this puzzle is a two-dimensional list of integer va
          'up', 'right', 'down']]
         
     
-4.  In the `TilePuzzle` class, write a method `find_solution_a_star(self)` that returns an optimal solution to the current board, represented as a list of direction strings. If multiple optimal solutions exist, any of them may be returned. Your solver should be implemented as an A* search using the Manhattan distance heuristic, which is reviewed below. You may assume that the board is solvable. During your search, you should take care not to add positions to the queue that have already been visited. It is recommended that you use the `PriorityQueue` class from the `Queue` module.
+4. **[30 points]** In the `TilePuzzle` class, write a method `find_solution_a_star(self)` that returns an optimal solution to the current board, represented as a list of direction strings. If multiple optimal solutions exist, any of them may be returned. Your solver should be implemented as an A* search using the Manhattan distance heuristic, which is reviewed below. You may assume that the board is solvable. During your search, you should take care not to add positions to the queue that have already been visited. It is recommended that you use the `PriorityQueue` class from the `Queue` module.
     
     Recall that the Manhattan distance between two locations $(r\_1, c\_1)$ and $(r\_2, c\_2)$ on a board is defined to be the sum of the componentwise distances: $|r\_1 - r\_2| + |c\_1 - c\_2|$. The Manhattan distance heuristic for an entire puzzle is then the sum of the Manhattan distances between each tile and its solved location.
     
@@ -237,7 +236,7 @@ The arguments `rows` and `cols` are positive integers designating the size of th
 
 In the GUI, you can use the arrow keys to perform moves on the puzzle, and can use the side menu to scramble or solve the puzzle. The GUI is merely a wrapper around your implementations of the relevant functions, and may therefore serve as a useful visual tool for debugging.
 
-### Grid Navigation
+## 2. Grid Navigation [20 points]
 
 In this section, you will investigate the problem of navigation on a two-dimensional grid with obstacles. The goal is to produce the shortest path between a provided pair of points, taking care to maneuver around the obstacles as needed. Path length is measured in Euclidean distance. Valid directions of movement include up, down, left, right, up-left, up-right, down-left, and down-right.
 
@@ -265,7 +264,7 @@ Once you have implemented your solution, you can visualize the paths it produces
 
 The argument `scene_path` is a path to a scene file storing the layout of the target grid and obstacles. We use the following format for textual scene representation: `"."` characters correspond to empty spaces, and `"X"` characters correspond to obstacles.
 
-### Linear Disk Movement, Revisited
+## 3. Linear Disk Movement, Revisited [20 points]
 
 Recall the Linear Disk Movement section from Homework 2. The starting configuration of this puzzle is a row of $\\ell$ cells, with disks located on cells $0$ through $n - 1$. The goal is to move the disks to the end of the row using a constrained set of actions. At each step, a disk can only be moved to an adjacent empty cell, or to an empty cell two spaces away, provided another disk is located on the intervening square.
 
@@ -273,10 +272,10 @@ In a variant of the problem, the disks were distinct rather than identical, and 
 
 Implement an improved version of the `solve_distinct_disks(length, n)` function from Homework 2 that uses an A* search rather than an uninformed breadth-first search to find an optimal solution. As before, the exact solution produced is not important so long as it is of minimal length. You should devise a heuristic which is admissible but informative enough to yield significant improvements in performance.
 
-### Feedback
+## 4. Feedback [5 points]
 
-1.  Approximately how long did you spend on this assignment?
-    
-2.  Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
-    
-3.  Which aspects of this assignment did you like? Is there anything you would have changed?
+1. **[1 point]** Approximately how long did you spend on this assignment?
+
+2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+
+3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
