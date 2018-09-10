@@ -64,7 +64,7 @@ In this assignment, you will explore a number of games and puzzles from the pers
 
 A skeleton file [homework3.py](homework3.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
-You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel. If you are unsure where to start, consider taking a look at the data structures and functions defined in the `collections`, `itertools`, `Queue`, and `random` modules.
+You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel. If you are unsure where to start, consider taking a look at the data structures and functions defined in the `collections`, `itertools`, `queue`, and `random` modules.
 
 You will find that in addition to a problem specification, most programming questions also include a pair of examples from the Python interpreter. These are meant to illustrate typical use cases, and should not be taken as comprehensive test suites.
 
@@ -207,7 +207,7 @@ A natural representation for this puzzle is a two-dimensional list of integer va
      'up', 'right', 'down']]
     ```
     
-4. **[30 points]** In the `TilePuzzle` class, write a method `find_solution_a_star(self)` that returns an optimal solution to the current board, represented as a list of direction strings. If multiple optimal solutions exist, any of them may be returned. Your solver should be implemented as an A* search using the Manhattan distance heuristic, which is reviewed below. You may assume that the board is solvable. During your search, you should take care not to add positions to the queue that have already been visited. It is recommended that you use the `PriorityQueue` class from the `Queue` module.
+4. **[30 points]** In the `TilePuzzle` class, write a method `find_solution_a_star(self)` that returns an optimal solution to the current board, represented as a list of direction strings. If multiple optimal solutions exist, any of them may be returned. Your solver should be implemented as an A* search using the Manhattan distance heuristic, which is reviewed below. You may assume that the board is solvable. During your search, you should take care not to add positions to the queue that have already been visited. It is recommended that you use the `PriorityQueue` class from the `queue` module.
     
     Recall that the Manhattan distance between two locations $(r_1, c_1)$ and $(r_2, c_2)$ on a board is defined to be the sum of the componentwise distances: $\|r_1−r_2\|+\|c_1−c_2\|$. The Manhattan distance heuristic for an entire puzzle is then the sum of the Manhattan distances between each tile and its solved location.
     
