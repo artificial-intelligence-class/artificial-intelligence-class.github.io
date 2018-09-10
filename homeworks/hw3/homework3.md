@@ -168,7 +168,7 @@ A natural representation for this puzzle is a two-dimensional list of integer va
     ```python
     >>> p = create_tile_puzzle(3, 3)
     >>> for move, new_p in p.successors():
-    ...     print move, new_p.get_board()
+    ...     print(move, new_p.get_board())
     ...
     up   [[1, 2, 3], [4, 5, 0], [7, 8, 6]]
     left [[1, 2, 3], [4, 5, 6], [7, 0, 8]]
@@ -178,7 +178,7 @@ A natural representation for this puzzle is a two-dimensional list of integer va
     >>> b = [[1,2,3], [4,0,5], [6,7,8]]
     >>> p = TilePuzzle(b)
     >>> for move, new_p in p.successors():
-    ...     print move, new_p.get_board()
+    ...     print(move, new_p.get_board())
     ...
     up    [[1, 0, 3], [4, 2, 5], [6, 7, 8]]
     down  [[1, 2, 3], [4, 7, 5], [6, 0, 8]]
@@ -253,7 +253,7 @@ Your task is to write a function `find_path(start, goal, scene)` which returns t
 >>> scene = [[False, True, False],
 ...          [False, True, False],
 ...          [False, True, False]]
->>> print find_path((0, 0), (0, 2), scene)
+>>> print(find_path((0, 0), (0, 2), scene))
 None
 ```
 
