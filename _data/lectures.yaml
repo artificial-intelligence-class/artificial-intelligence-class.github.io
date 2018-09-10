@@ -154,7 +154,7 @@
       optional: false 
 -
   date: 2018-09-25
-  title:  HW3 due (Informed Search), HW3 - part 2 released (Games) 
+  title:  HW3 due (Informed Search), HW4 released (Sudoku and Games) 
   type: exam
 -
   date: 2018-09-27
@@ -181,10 +181,6 @@
       title: AIMA Chapter 17.1-17.3
       authors: Russell and Norvig
       optional: false 
--
-  date: 2018-10-09
-  title:  HW3 - part 2 due (Games), HW4 released (Sudoku)
-  type: exam
 -
   date: 2018-10-11
   slides: 
@@ -214,8 +210,8 @@
       url: https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view
 
 -
-  date: 2018-10-09
-  title:  HW4 due (Sudoku), HW5 released (TBD - Alexa with POMDPs?)
+  date: 2018-10-16
+  title:  HW4 due (Sudoku and Games), HW5 released (TBD - Alexa with POMDPs?)
   type: exam
 -
   date: 2018-10-18
