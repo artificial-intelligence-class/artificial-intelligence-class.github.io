@@ -1,15 +1,15 @@
 import sys
-import Tkinter
+import tkinter
 
 import homework3
 
-class Tile(Tkinter.Canvas):
+class Tile(tkinter.Canvas):
 
     BACKGROUND_NORMAL = "white"
     BACKGROUND_EMPTY = "black"
 
     def __init__(self, master, tile, size=60):
-        Tkinter.Canvas.__init__(self, master, height=size, width=size,
+        tkinter.Canvas.__init__(self, master, height=size, width=size,
             highlightthickness=2, highlightbackground="black")
         self.text = self.create_text(size / 2, size / 2, font=("Arial", 24))
         self.set_state(tile)
@@ -19,11 +19,11 @@ class Tile(Tkinter.Canvas):
         self.configure(background=color)
         self.itemconfig(self.text, text=tile)
 
-class Board(Tkinter.Frame):
+class Board(tkinter.Frame):
 
     def __init__(self, master, puzzle, rows, cols):
 
-        Tkinter.Frame.__init__(self, master)
+        tkinter.Frame.__init__(self, master)
 
         self.puzzle = puzzle
         self.rows = rows
@@ -65,32 +65,32 @@ class Board(Tkinter.Frame):
                 self.animate_moves(moves[1:], delay=delay)
             stage_1()
 
-class TilePuzzleGUI(Tkinter.Frame):
+class TilePuzzleGUI(tkinter.Frame):
 
     def __init__(self, master, rows, cols):
 
-        Tkinter.Frame.__init__(self, master)
+        tkinter.Frame.__init__(self, master)
 
         self.rows = rows
         self.cols = cols
         self.puzzle = homework3.create_tile_puzzle(rows, cols)
 
         self.board = Board(self, self.puzzle, rows, cols)
-        self.board.pack(side=Tkinter.LEFT, padx=1, pady=1)
+        self.board.pack(side=tkinter.LEFT, padx=1, pady=1)
 
-        menu = Tkinter.Frame(self)
+        menu = tkinter.Frame(self)
 
-        Tkinter.Label(menu, text="Manipulate the empty tile\nusing the arrow keys.").pack(
+        tkinter.Label(menu, text="Manipulate the empty tile\nusing the arrow keys.").pack(
             padx=1, pady=1)
 
-        Tkinter.Button(menu, text="Scramble", command=self.scramble_click).pack(
-            fill=Tkinter.X, padx=1, pady=1)
-        Tkinter.Button(menu, text="Solve Using IDDFS",
-            command=self.solve_iddfs_click).pack(fill=Tkinter.X, padx=1, pady=1)
-        Tkinter.Button(menu, text="Solve Using A*",
-            command=self.solve_a_star_click).pack(fill=Tkinter.X, padx=1, pady=1)
+        tkinter.Button(menu, text="Scramble", command=self.scramble_click).pack(
+            fill=tkinter.X, padx=1, pady=1)
+        tkinter.Button(menu, text="Solve Using IDDFS",
+            command=self.solve_iddfs_click).pack(fill=tkinter.X, padx=1, pady=1)
+        tkinter.Button(menu, text="Solve Using A*",
+            command=self.solve_a_star_click).pack(fill=tkinter.X, padx=1, pady=1)
 
-        menu.pack(side=Tkinter.RIGHT)
+        menu.pack(side=tkinter.RIGHT)
 
     def scramble_click(self):
         self.puzzle.scramble(self.rows * self.cols * 20)
@@ -103,7 +103,7 @@ class TilePuzzleGUI(Tkinter.Frame):
         self.board.animate_moves(self.puzzle.find_solution_a_star())
 
 if __name__ == "__main__":
-    root = Tkinter.Tk()
+    root = tkinter.Tk()
     root.title("Tile Puzzle")
     rows, cols = sys.argv[1:]
     TilePuzzleGUI(root, int(rows), int(cols)).pack()
