@@ -34,10 +34,6 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 <!-- End alert for upcoming homework assignments -->
 
 
-<div class="alert alert-warning">
-Interested in CIS 421/521 but didn't get in?  You can <a href="https://forms.cis.upenn.edu/waitlist/index.php">add yourself to waitlist</a>. Priority will be given to graduating students who need the course for their major requirements.
-</div>
-
 
 
 Course number
