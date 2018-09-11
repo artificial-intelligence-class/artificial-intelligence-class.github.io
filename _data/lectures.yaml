@@ -103,6 +103,16 @@
       url: https://www.youtube.com/watch?v=mQ7M-zhiu7U
       title: Story of A* and STRIPS
       length: 6 minutes 
+    -  
+      authors: Gerry Jenkins
+      url: https://www.youtube.com/watch?v=NUgMa5coCoE
+      title: Animation of DFS Algorithm set to music
+      length: 1.5 minutes 
+    -  
+      authors: Gerry Jenkins
+      url: https://www.youtube.com/watch?v=x-VTfcmrLEQ
+      title: Animation of BFS Algorithm set to music
+      length: 1.5 minutes 
 -
   date: 2018-09-11
   title:  HW 1 due (Python), HW2 released (Uninformed Search) 
