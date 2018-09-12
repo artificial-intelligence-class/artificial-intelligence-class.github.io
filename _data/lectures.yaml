@@ -95,7 +95,7 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=66ae0cb3-2490-4a21-b7ed-a9460066d047
   readings:   
     - 
-      title: AIMA Chapter 3.5-3.6
+      title: AIMA Chapter 3 "Solving Problems by Search"  (3.5-3.6)
       authors: Russell and Norvig
       optional: false 
   videos:
@@ -124,7 +124,7 @@
   title:  Constraint Satifaction Problems 
   readings:   
     - 
-      title: AIMA Chapter 6.1
+      title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
       authors: Russell and Norvig
       optional: false 
 
@@ -135,10 +135,14 @@
 -
   date: 2018-09-18
   slides: 
-  title:  Constraint Satifaction Problems - part 2
+  title:  Wrap-up of A* and CSPs
   readings:   
     - 
-      title: AIMA Chapter 6.2-6.5
+      title: AIMA Chapter 3 "Solving Problems by Search" (3.5-3.6)) 
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
       authors: Russell and Norvig
       optional: false 
 -
