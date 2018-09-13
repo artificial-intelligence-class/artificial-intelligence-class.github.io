@@ -120,7 +120,7 @@
   type: exam
 -
   date: 2018-09-13
-  slides: 
+  slides: 05-CSPs.pdf
   title:  Constraint Satifaction Problems 
   readings:   
     - 
