@@ -191,6 +191,11 @@
   type: no_lecture
 -
   date: 2018-10-09
+  title: Last day to register to vote in Pennsylvania 
+  type: exam
+  slides: https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx
+-
+  date: 2018-10-09
   slides: 
   title:  Markov Decision Processes
   readings:   
