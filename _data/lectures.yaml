@@ -122,6 +122,8 @@
   date: 2018-09-13
   slides: 05-CSPs.pdf
   title:  Constraint Satifaction Problems 
+  speaker: Deniz Beser and Maria Kustikova
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5ab781b9-67bb-49fa-ab36-a9460066d063
   readings:   
     - 
       title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
