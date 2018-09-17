@@ -1,6 +1,6 @@
 ---
 layout: default
-img: games.png
+img: sudoku.jpg
 img_link: https://xkcd.com/74/
 caption: Binary Sudoku
 title: CIS 521 Homework 4 "Sudoku Solver and Games"
