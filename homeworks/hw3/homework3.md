@@ -275,6 +275,6 @@ Implement an improved version of the `solve_distinct_disks(length, n)` function 
 
 1. **[1 point]** Approximately how long did you spend on this assignment?
 
-2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+2. **[2 points]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
-3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+3. **[2 points]**  Which aspects of this assignment did you like? Is there anything you would have changed?
