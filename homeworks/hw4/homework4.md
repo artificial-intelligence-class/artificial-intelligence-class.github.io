@@ -1,8 +1,8 @@
 ---
 layout: default
-img: games.png
-img_link: https://www.explainxkcd.com/wiki/index.php/1002:_Game_AIs
-caption: Difficulty of Various Games For Computers
+img: sudoku.jpg
+img_link: https://xkcd.com/74/
+caption: Binary Sudoku
 title: CIS 521 Homework 4 "Sudoku Solver and Games"
 active_tab: homework
 release_date: 2018-09-25
