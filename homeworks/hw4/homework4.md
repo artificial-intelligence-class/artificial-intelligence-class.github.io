@@ -500,7 +500,7 @@ An example puzzle originally from the Daily Pennsylvanian, available as `medium1
     set([1, 2, 3, 4, 5, 6, 7, 8, 9])
     >>> for col in [0, 1, 4]:
     ...     removed = sudoku.remove_inconsistent_values((0, 3), (0, col))
-    ...     print removed, sudoku.get_values((0, 3))
+    ...     print(removed, sudoku.get_values((0, 3)))
     ...
     True set([1, 2, 3, 4, 5, 6, 7, 9])
     True set([1, 3, 4, 5, 6, 7, 9])
@@ -1352,7 +1352,7 @@ The representation used for this puzzle is a two-dimensional list of Boolean val
     >>> b = [[False, False], [False, False]]
     >>> g = DominoesGame(b)
     >>> for m, new_g in g.successors(True):
-    ...     print m, new_g.get_board()
+    ...     print(m, new_g.get_board())
     ...
     (0, 0) [[True, False], [True, False]]
     (0, 1) [[False, True], [False, True]]
@@ -1362,7 +1362,7 @@ The representation used for this puzzle is a two-dimensional list of Boolean val
     >>> b = [[True, False], [True, False]]
     >>> g = DominoesGame(b)
     >>> for m, new_g in g.successors(True):
-    ...     print m, new_g.get_board()
+    ...     print(m, new_g.get_board())
     ...
     (0, 1) [[True, True], [True, True]]
     ```
