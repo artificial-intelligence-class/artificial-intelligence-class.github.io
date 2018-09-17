@@ -19,7 +19,7 @@ materials:
         url: homeworks/hw4/homework4_sudoku_solutions.pdf
     -
         name: Dominoes Game GUI 
-        url: homeworks/hw4/homework3a_dominoes_game_gui.py
+        url: homeworks/hw4/homework4_dominoes_game_gui.py
 submission_link: https://www.gradescope.com/courses/21105
 ---
 
@@ -1397,7 +1397,7 @@ The representation used for this puzzle is a two-dimensional list of Boolean val
 
 If you implemented the suggested infrastructure described in this section, you can play with an interactive version of the dominoes board game using the provided GUI by running the following command:
 
-    python3 homework3_dominoes_game_gui.py rows cols
+    python3 homework4_dominoes_game_gui.py rows cols
 
 The arguments `rows` and `cols` are positive integers designating the size of the board.
 
