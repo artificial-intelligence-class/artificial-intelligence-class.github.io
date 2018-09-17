@@ -1,15 +1,15 @@
 import sys
-import Tkinter
+import tkinter
 
-import homework3a
+import homework4
 
-class Square(Tkinter.Canvas):
+class Square(tkinter.Canvas):
 
     COLOR_EMPTY = "white"
     COLOR_FILLED = "gray50"
 
     def __init__(self, master, size=50):
-        Tkinter.Canvas.__init__(self, master, height=size, width=size,
+        tkinter.Canvas.__init__(self, master, height=size, width=size,
             background=Square.COLOR_EMPTY, highlightthickness=2,
             highlightbackground="black")
 
@@ -17,11 +17,11 @@ class Square(Tkinter.Canvas):
         color = Square.COLOR_FILLED if state else Square.COLOR_EMPTY
         self.configure(background=color)
 
-class Board(Tkinter.Frame):
+class Board(tkinter.Frame):
 
     def __init__(self, master, game, rows, cols):
 
-        Tkinter.Frame.__init__(self, master)
+        tkinter.Frame.__init__(self, master)
 
         self.game = game
         self.vertical = True
@@ -52,39 +52,39 @@ class Board(Tkinter.Frame):
             for col in range(self.cols):
                 self.squares[row][col].set_state(game_board[row][col])
 
-class DominoesGUI(Tkinter.Frame):
+class DominoesGUI(tkinter.Frame):
 
     def __init__(self, master, rows, cols):
 
-        Tkinter.Frame.__init__(self, master)
+        tkinter.Frame.__init__(self, master)
 
-        self.game = homework3a.create_dominoes_game(rows, cols)
+        self.game = homework4.create_dominoes_game(rows, cols)
         self.rows = rows
         self.cols = cols
 
         self.board = Board(self, self.game, rows, cols)
-        self.board.pack(side=Tkinter.LEFT, padx=1, pady=1)
+        self.board.pack(side=tkinter.LEFT, padx=1, pady=1)
 
-        menu = Tkinter.Frame(self)
+        menu = tkinter.Frame(self)
 
-        self.status_label = Tkinter.Label(menu, font=("Arial", 16))
+        self.status_label = tkinter.Label(menu, font=("Arial", 16))
         self.status_label.pack(padx=1, pady=(1, 10))
         self.update_status()
         
-        Tkinter.Label(menu, text="Press 'r' to perform a random move.").pack(
-            padx=1, pady=1, anchor=Tkinter.W)
+        tkinter.Label(menu, text="Press 'r' to perform a random move.").pack(
+            padx=1, pady=1, anchor=tkinter.W)
 
-        Tkinter.Label(menu,
+        tkinter.Label(menu,
             text=("Press a number between 1 and 9\n"
                   "to perform the best move found\n"
                   "according to an alpha-beta search\n"
-                  "with that limit."), justify=Tkinter.LEFT).pack(
-            padx=1, pady=1, anchor=Tkinter.W)
+                  "with that limit."), justify=tkinter.LEFT).pack(
+            padx=1, pady=1, anchor=tkinter.W)
         
-        Tkinter.Button(menu, text="Reset Game",
-            command=self.reset_click).pack(fill=Tkinter.X, padx=1, pady=1)
+        tkinter.Button(menu, text="Reset Game",
+            command=self.reset_click).pack(fill=tkinter.X, padx=1, pady=1)
         
-        menu.pack(side=Tkinter.RIGHT)
+        menu.pack(side=tkinter.RIGHT)
 
         self.focus_set()
 
@@ -118,7 +118,7 @@ class DominoesGUI(Tkinter.Frame):
             self.board.perform_move(row, col)
 
 if __name__ == "__main__":
-    root = Tkinter.Tk()
+    root = tkinter.Tk()
     root.title("Dominoes Game")
     rows, cols = sys.argv[1:]
     DominoesGUI(root, int(rows), int(cols)).pack()
