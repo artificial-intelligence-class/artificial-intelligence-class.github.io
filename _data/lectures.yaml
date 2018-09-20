@@ -138,6 +138,7 @@
   date: 2018-09-18
   slides: 
   title:  Wrap-up of A* and CSPs
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=01828182-96fd-4abd-8280-a9460066d07f
   readings:   
     - 
       title: AIMA Chapter 3 "Solving Problems by Search" (3.5-3.6)) 
@@ -160,6 +161,13 @@
       title: AIMA Chapter 5.2-5.5
       authors: Russell and Norvig
       optional: false 
+  videos:
+    -  
+      authors: BBC 
+      url: https://www.youtube.com/watch?v=KF6sLCeBj0s
+      title: Deep Blue vs Kasparov&colon; How a computer beat best chess player in the world
+      length: 4 minutes 
+
 -
   date: 2018-09-25
   slides: 
