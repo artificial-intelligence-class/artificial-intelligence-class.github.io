@@ -80,9 +80,9 @@ In this section, you will develop two solvers for a generalized version of the E
 
 A natural representation for this puzzle is a two-dimensional list of integer values between $0$ and $r \\cdot c - 1$ (inclusive), where $r$ and $c$ are the number of rows and columns in the board, respectively. In this problem, we will adhere to the convention that the $0$-tile represents the empty space.
 
-1. **[0 point]** In the `TilePuzzle` class, write an initialization method `__init__(self, board)` that stores an input board of this form described above for future use. You additionally may wish to store the dimensions of the board as separate internal variables, as well as the location of the empty tile.
+1. **[0 points]** In the `TilePuzzle` class, write an initialization method `__init__(self, board)` that stores an input board of this form described above for future use. You additionally may wish to store the dimensions of the board as separate internal variables, as well as the location of the empty tile.
     
-2. **[0 point]** *Suggested infrastructure.*
+2. **[0 points]** *Suggested infrastructure.*
     
     In the `TilePuzzle` class, write a method `get_board(self)` that returns the internal representation of the board stored during initialization.
     
@@ -186,7 +186,7 @@ A natural representation for this puzzle is a two-dimensional list of integer va
     right [[1, 2, 3], [4, 5, 0], [6, 7, 8]]
     ```
     
-3. **[25 points]** In the `TilePuzzle` class, write a method `find_solutions_iddfs(self)` that yields all optimal solutions to the current board, represented as lists of moves. Valid moves include the four strings `"up"`, `"down"`, `"left"`, and `"right"`, where each move indicates a single swap of the empty tile with its neighbor in the indicated direction. Your solver should be implemented using an iterative deepening depth-first search, consisting of a series of depth-first searches limited at first to $0$ moves, then $1$ move, then $2$ moves, and so on. You may assume that the board is solvable. The order in which the solutions are produced is unimportant, as long as all optimal solutions are present in the output.
+3. **[25 points]** In the `TilePuzzle` class, write a method `find_solutions_iddfs(self)` that yields all optimal solutions to the current board, represented as lists of moves. Valid moves include the four strings `"up"`, `"down"`, `"left"`, and `"right"`, where each move indicates a single swap of the empty tile with its neighbor in the indicated direction. Your solver should be implemented using an iterative deepening depth-first search (IDDFS), consisting of a series of depth-first searches limited at first to $0$ moves, then $1$ move, then $2$ moves, and so on. You may assume that the board is solvable. The order in which the solutions are produced is unimportant, as long as all optimal solutions are present in the output.
     
     *Hint: This method is most easily implemented using recursion. First define a recursive helper method `iddfs_helper(self, limit, moves)` that yields all solutions to the current board of length no more than `limit` which are continuations of the provided move list. Your main method will then call this helper function in a loop, increasing the depth limit by one at each iteration, until one or more solutions have been found.*
     
