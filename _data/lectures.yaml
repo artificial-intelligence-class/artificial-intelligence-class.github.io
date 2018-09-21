@@ -168,6 +168,11 @@
       url: https://www.youtube.com/watch?v=KF6sLCeBj0s
       title: Deep Blue vs Kasparov&colon; How a computer beat best chess player in the world
       length: 4 minutes 
+    -  
+      authors: Pieter Abbeel 
+      url: https://www.youtube.com/watch?v=jvpWtwVSvjA
+      title: Step-by-step Example&colon; Alpha-Beta
+      length: 14 minutes 
 -
   date: 2018-09-25
   slides: 
