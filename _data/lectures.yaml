@@ -175,13 +175,20 @@
       length: 14 minutes 
 -
   date: 2018-09-25
-  slides: 
+  slides: 08-Adversarial-Search-2.pdf
   title:  Game Trees&colon; Expectimax and Utilities
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 5.2-5.5 and 16.1-16.3
       authors: Russell and Norvig
       optional: false 
+  videos:
+    -
+      url: https://www.youtube.com/watch?v=HT-UZkiOLv8
+      title: Lee Sedol vs AlphaGo Move 37 reactions and analysis
+      length: 4 minutes 
+
 -
   date: 2018-09-25
   title:  HW3 due (Informed Search), HW4 released (Sudoku and Games) 
