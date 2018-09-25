@@ -34,7 +34,9 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 <!-- End alert for upcoming homework assignments -->
 
 
-
+<div class="alert alert-info">
+The first midterm will be in-class on Tuesday October 2.  If you'd like to do a practice exam, here's a <a href="assets/practice_exams/midterm1-practice.pdf">sample of a previous year's midterm</a>. You can take a look at <a href="assets/practice_exams/midterm1-practice+ANSWERS.pdf">the sample solutions</a> after you've done it.
+</div>
 
 Course number
 : CIS 421/521 - Artificial Intelligence 
