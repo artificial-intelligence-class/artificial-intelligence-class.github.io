@@ -3,3 +3,4 @@ _site/*
 *~
 assets/slides/~*.pptx
 assets/slides/00-Course-Intro.pptx
+*.mov
