@@ -201,6 +201,15 @@
       title: AIMA Chapter 17.1-17.3
       authors: Russell and Norvig
       optional: false 
+  videos: 
+    -
+      authors: CrashCourse 
+      url: https://www.youtube.com/watch?v=dqxQ3E1bubI
+      title: Behavioral Economics&colon; Crash Course Economics
+    -
+      authors: Jodi Beggs, Northeaster University 
+      url: https://www.youtube.com/watch?v=q-aUroyt1v8
+      title: Behaviroal Economics - Expected Utility Review
 -
   date: 2018-10-02
   title:  Midterm exam 1 (in class)
