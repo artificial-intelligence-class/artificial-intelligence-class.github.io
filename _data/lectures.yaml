@@ -177,7 +177,7 @@
   date: 2018-09-25
   slides: 08-Adversarial-Search-2.pdf
   title:  Game Trees&colon; Expectimax and Utilities
-  recording: 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7a9ce021-a9ed-4552-8830-a9460066d0ca
   readings:   
     - 
       title: AIMA Chapter 5.2-5.5 and 16.1-16.3
@@ -195,8 +195,12 @@
   type: exam
 -
   date: 2018-09-27
-  slides: 
+  slides: 09-MDPs.pdf
   title:  Markov Decision Processes
+    - 
+      title: AIMA Chapter 17.1-17.3
+      authors: Russell and Norvig
+      optional: false 
 -
   date: 2018-10-02
   title:  Midterm exam 1 (in class)
