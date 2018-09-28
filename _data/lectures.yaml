@@ -197,6 +197,8 @@
   date: 2018-09-27
   slides: 09-MDPs.pdf
   title:  Markov Decision Processes
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27b5b53b-c7ff-4200-a408-a9460066d0eb
+  readings:
     - 
       title: AIMA Chapter 17.1-17.3
       authors: Russell and Norvig
