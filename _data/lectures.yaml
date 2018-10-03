@@ -228,18 +228,8 @@
   date: 2018-10-09
   title: Last day to register to vote in Pennsylvania 
   type: exam
-  slides: https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx
 -
   date: 2018-10-09
-  slides: 
-  title:  Markov Decision Processes
-  readings:   
-    - 
-      title: AIMA Chapter 17.1-17.3
-      authors: Russell and Norvig
-      optional: false 
--
-  date: 2018-10-11
   slides: 
   title:  Markov Decision Processes - part 2
   readings:   
@@ -247,13 +237,17 @@
       title: AIMA Chapter 17.1-17.3
       authors: Russell and Norvig
       optional: false 
-  readings:   
     - 
       title: Chapter 3 - Finite Markov Decision Processes
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view
+  videos: 
+    -
+      authors: Machines with Brains 
+      url: https://www.youtube.com/watch?v=lFIW8KphZo0
+      title: How the "Most Human Human" passed the Turing Test
 -
-  date: 2018-10-16
+  date: 2018-10-11
   slides: 
   title:  Reinforcement Learning
   readings:   
@@ -271,7 +265,7 @@
   title:  HW4 due (Sudoku and Games), HW5 released (TBD - Alexa with POMDPs?)
   type: exam
 -
-  date: 2018-10-18
+  date: 2018-10-16
   slides: 
   title:  Reinforcement Learning - part 2
   readings:   
@@ -280,18 +274,19 @@
       authors: Russell and Norvig
       optional: false 
 -
+  date: 2018-10-18
+  slides: 
+  title:  TBD 
+  readings:   
+-
   date: 2018-10-23
   slides: 
-  title:  TBD - maybe  Machine Learning&colon; Perceptrons
-  readings:   
-    - 
-      title: AIMA Chapter 18.6.3
-      authors: Russell and Norvig
-      optional: false 
+  title:  TBD 
+  readings:  
 -
   date: 2018-10-25
   slides: 
-  title:  TBD - maybe Machine Learning&colon; Clustering  
+  title:  TBD 
   readings:   
     - 
       title: AIMA Chapter 18,8
