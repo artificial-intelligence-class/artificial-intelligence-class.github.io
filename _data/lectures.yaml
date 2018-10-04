@@ -262,7 +262,7 @@
 
 -
   date: 2018-10-16
-  title:  HW4 due (Sudoku and Games), HW5 released (TBD - Alexa with POMDPs?)
+  title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
   type: exam
 -
   date: 2018-10-16
@@ -276,40 +276,48 @@
 -
   date: 2018-10-18
   slides: 
-  title:  TBD 
+  title:  Probability 
   readings:   
 -
   date: 2018-10-23
   slides: 
-  title:  TBD 
+  title:  Markov Models 
   readings:  
+-
+  date: 2018-10-23
+  title:  HW5 due (MDPs and GridWorld), HW6 released (Reinforcement Learning)
+  type: exam
 -
   date: 2018-10-25
   slides: 
-  title:  TBD 
+  title:  Hidden Markov Models 
   readings:   
-    - 
-      title: AIMA Chapter 18,8
-      authors: Russell and Norvig
-      optional: false 
 -
   date: 2018-10-30
   slides: 
-  title:  TBD
+  title:  Applications of HMMs
   readings:   
 -
+  date: 2018-10-30
+  title:  HW6 due (Reinforcement Learning), study for exam
+  type: exam
+-
   date: 2018-11-01
+  slides: Bayes' Nets
+  title: exam
+  readings:   
+-
+  date: 2018-11-06
   title:  Midterm exam 2 (date is provisional)
   type: exam
 -
-  date: 2018-11-06
-  slides: 
-  title:  TBD
-  readings:   
+  date: 2018-10-30
+  title:  HW7 released (Generate a novel)
+  type: exam
 -
   date: 2018-11-08
   slides: 
-  title:  TBD
+  title:  Bayes' Nets part 2
   readings:   
 -
   date: 2018-11-09
@@ -318,18 +326,26 @@
 -
   date: 2018-11-13
   slides: 
-  title:  TBD
+  title:   Machine Learning&colon; Naive Bayes
   readings:   
+-
+  date: 2018-11-13
+  title:  HW7 due (Generate a novel), HW8 released (HMMs)
+  type: exam
 -
   date: 2018-11-15
   slides: 
-  title:  TBD
+  title:  Machine Learning&colon; Perceptrons
   readings:   
 -
   date: 2018-11-20
   slides: 
-  title:  TBD
+  title:  Machine Learning&colon; Kernels and Clustering
   readings:   
+-
+  date: 2018-11-20
+  title:  HW8 due (HMMs), HW9 released (Perceptrons)
+  type: exam
 -
   date: 2018-11-22
   title: Thanksgiving Break (no classes)
@@ -337,13 +353,17 @@
 -
   date: 2018-11-27
   slides: 
-  title:  TBD
+  title:      TBD
   readings:   
 -
   date: 2018-11-29
   slides: 
-  title: 
+  title: TBD
   readings:   
+-
+  date: 2018-11-29
+  title:  HW9 due (Perceptrons)
+  type: exam
 -
   date: 2018-12-04
   slides: 
