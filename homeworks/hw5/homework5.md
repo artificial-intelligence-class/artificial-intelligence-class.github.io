@@ -1,4 +1,50 @@
-# Homework 5: Markov Decision Processes [100 points]
+---
+layout: default
+img: sudoku.jpg
+img_link: https://xkcd.com/74/
+caption: Binary Sudoku
+title: CIS 521 Homework 5 "Markov Decision Processes"
+active_tab: homework
+release_date: 2018-10-08
+due_date: 2018-10-23 23:59:00EDT
+materials:
+    - 
+        name: skeleton files
+        url: homeworks/hw5/skeleton.zip 
+
+submission_link: https://www.gradescope.com/courses/21105
+---
+
+<!-- Check whether the assignment is up to date -->
+{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
+{% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
+{% if this_year != due_year %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
+
+
+<div class="alert alert-info">
+This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
+</div>
+
+
+{% if page.materials %}
+<div class="alert alert-info">
+You can download the materials for this assignment here:
+<ul>
+{% for item in page.materials %}
+<li><a href="{{site.baseurl}}/{{item.url}}">{{ item.name }}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+
+Homework 5: Markov Decision Processes [100 points]
+=============================================================
  
 ## Instructions
 In this project, you will implement value iteration.  You will test your agents first on Gridworld (from class).
