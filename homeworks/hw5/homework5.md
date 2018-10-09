@@ -2,7 +2,7 @@
 layout: default
 img: decision_paralysis.png
 img_link: https://xkcd.com/1801/
-caption: Someone needs policy iteration 
+caption: Someone needs value iteration 
 title: CIS 521 Homework 5 "Markov Decision Processes"
 active_tab: homework
 release_date: 2018-10-16
