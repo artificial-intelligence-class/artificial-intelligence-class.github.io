@@ -1,11 +1,11 @@
 ---
 layout: default
-img: sudoku.jpg
-img_link: https://xkcd.com/74/
-caption: Binary Sudoku
+img: decision_paralysis.png
+img_link: https://xkcd.com/1801/
+caption: Someone needs policy iteration 
 title: CIS 521 Homework 5 "Markov Decision Processes"
 active_tab: homework
-release_date: 2018-10-08
+release_date: 2018-10-16
 due_date: 2018-10-23 23:59:00EDT
 materials:
     - 
