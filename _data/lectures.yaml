@@ -195,7 +195,7 @@
   type: exam
 -
   date: 2018-09-27
-  slides: 09-MDPs.pdf
+  slides: ≈
   title:  Markov Decision Processes
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27b5b53b-c7ff-4200-a408-a9460066d0eb
   readings:
@@ -228,9 +228,13 @@
   date: 2018-10-09
   title: Last day to register to vote in Pennsylvania 
   type: exam
+  videos: 
+    - 
+      url: https://www.youtube.com/watch?v=POiqY4FIfMY
+      title: Don't Vote
 -
   date: 2018-10-09
-  slides: 
+  slides: 10-MDPs-2.pdf
   title:  Markov Decision Processes - part 2
   readings:   
     - 
@@ -240,7 +244,7 @@
     - 
       title: Chapter 3 - Finite Markov Decision Processes
       authors: Sutton and Barto
-      url: https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view
+      url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
   videos: 
     -
       authors: Machines with Brains 
@@ -258,7 +262,7 @@
     - 
       title: Chapter 6.1, 6.2 and 6.5 - Temporal-Difference Learning
       authors: Sutton and Barto
-      url: https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view
+      url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
 
 -
   date: 2018-10-16
