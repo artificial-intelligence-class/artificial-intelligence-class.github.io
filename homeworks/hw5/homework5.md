@@ -13,7 +13,7 @@ materials:
         url: homeworks/hw5/skeleton.zip 
 
 submission_link: https://www.gradescope.com/courses/21105
-attribution: This assignment adapted from the [Reinforcement Learning assignment from UC Berkeley's AI course](http://ai.berkeley.edu/reinforcement.html).
+attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
 ---
 
 <!-- Check whether the assignment is up to date -->
