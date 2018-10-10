@@ -136,7 +136,7 @@
   type: no_lecture
 -
   date: 2018-09-18
-  slides: 06-CSPs-02.pdf
+  slides: 06-CSPs-2.pdf
   title:  Wrap-up of A* and CSPs
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=01828182-96fd-4abd-8280-a9460066d07f
   readings:   
@@ -195,7 +195,7 @@
   type: exam
 -
   date: 2018-09-27
-  slides: ≈
+  slides: 09-MDPs.pdf
   title:  Markov Decision Processes
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27b5b53b-c7ff-4200-a408-a9460066d0eb
   readings:
