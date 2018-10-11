@@ -236,6 +236,7 @@
   date: 2018-10-09
   slides: 10-MDPs-2.pdf
   title:  Markov Decision Processes - part 2
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9431e864-382a-4c26-830f-a9460066d144
   readings:   
     - 
       title: AIMA Chapter 17.1-17.3
@@ -254,6 +255,7 @@
   date: 2018-10-11
   slides: 11-Reinforcement-Learning.pdf
   title:  Reinforcement Learning
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8577e149-ead6-4844-8041-a9460066d160
   readings:   
     - 
       title: AIMA Chapter 21
