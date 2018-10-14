@@ -136,7 +136,7 @@
   type: no_lecture
 -
   date: 2018-09-18
-  slides: 06-CSPs-02.pdf
+  slides: 06-CSPs-2.pdf
   title:  Wrap-up of A* and CSPs
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=01828182-96fd-4abd-8280-a9460066d07f
   readings:   
@@ -228,10 +228,15 @@
   date: 2018-10-09
   title: Last day to register to vote in Pennsylvania 
   type: exam
+  videos: 
+    - 
+      url: https://www.youtube.com/watch?v=POiqY4FIfMY
+      title: Don't Vote
 -
   date: 2018-10-09
-  slides: 
+  slides: 10-MDPs-2.pdf
   title:  Markov Decision Processes - part 2
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9431e864-382a-4c26-830f-a9460066d144
   readings:   
     - 
       title: AIMA Chapter 17.1-17.3
@@ -240,7 +245,7 @@
     - 
       title: Chapter 3 - Finite Markov Decision Processes
       authors: Sutton and Barto
-      url: https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view
+      url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
   videos: 
     -
       authors: Machines with Brains 
@@ -248,8 +253,9 @@
       title: How the "Most Human Human" passed the Turing Test
 -
   date: 2018-10-11
-  slides: 
+  slides: 11-Reinforcement-Learning.pdf
   title:  Reinforcement Learning
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8577e149-ead6-4844-8041-a9460066d160
   readings:   
     - 
       title: AIMA Chapter 21
@@ -258,12 +264,11 @@
     - 
       title: Chapter 6.1, 6.2 and 6.5 - Temporal-Difference Learning
       authors: Sutton and Barto
-      url: https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view
-
--
-  date: 2018-10-16
-  title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
-  type: exam
+      url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
+  videos: 
+    -
+      url: https://www.youtube.com/watch?v=s93KC4AGKnY
+      title: End of the 1983 movie Wargames 
 -
   date: 2018-10-16
   slides: 
@@ -273,6 +278,10 @@
       title: AIMA Chapter 21
       authors: Russell and Norvig
       optional: false 
+-
+  date: 2018-10-16
+  title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
+  type: exam
 -
   date: 2018-10-18
   slides: 
