@@ -111,6 +111,11 @@ Hint: On the default BookGrid, running value iteration for 5 iterations should g
 python gridworld.py -a value -i 5
 ```
 
+When you run the iterations, the parameter `-s` will let you change the speed at which the simiulation runs. Using a value lower than `1` will slow down the speed of animation. This will come in handy for all problems when you need to visualize the end results. See
+```
+python gridworld.py -a value -i 5 -s 0.2
+```
+
 ![value](./value.png)
 
 Your value iteration agent will be graded on a new grid. We will check your values, q-values, and policies after fixed numbers of iterations and at convergence (e.g. after 100 iterations).
