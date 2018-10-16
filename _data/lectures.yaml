@@ -271,13 +271,21 @@
       title: End of the 1983 movie Wargames 
 -
   date: 2018-10-16
-  slides: 
+  slides: 12-Reinforcement-Learning-2.pdf
   title:  Reinforcement Learning - part 2
   readings:   
     - 
       title: AIMA Chapter 21
       authors: Russell and Norvig
       optional: false 
+    - 
+      title: Chapter 6.1, 6.2 and 6.5 - Temporal-Difference Learning
+      authors: Sutton and Barto
+      url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
+  videos:
+      authors: Stanford University 
+      url: https://www.youtube.com/watch?v=M-QUkgk3HyE
+      title: Autonomous Helicopters Teach Themselves to Fly Stunts
 -
   date: 2018-10-16
   title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
