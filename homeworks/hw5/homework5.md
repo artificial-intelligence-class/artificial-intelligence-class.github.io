@@ -49,7 +49,6 @@ Homework 5: Markov Decision Processes [100 points]
  
 ## Instructions
 In this project, you will implement value iteration.  You will test your agents first on Gridworld (from class).
-As in previous projects, this project includes an autograder for you to grade your solutions on your machine. This can be run on all questions with the command.
 The code for this project contains the following files, which are available in a [zip](https://github.com/artificial-intelligence-class/cis521_homeworks/raw/master/hw5/skeleton.zip) archive.
 Files you will edit:
 * valueIterationAgents.py: A value iteration agent for solving known MDPs.
@@ -110,6 +109,11 @@ python gridworld.py -a value -i 100 -k 10
 Hint: On the default BookGrid, running value iteration for 5 iterations should give you this output:
 ```
 python gridworld.py -a value -i 5
+```
+
+When you run the iterations, the parameter `-s` will let you change the speed at which the simiulation runs. Using a value lower than `1` will slow down the speed of animation. This will come in handy for all problems when you need to visualize the end results. See
+```
+python gridworld.py -a value -i 5 -s 0.2
 ```
 
 ![value](./value.png)
