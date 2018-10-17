@@ -294,9 +294,19 @@
   type: exam
 -
   date: 2018-10-18
-  slides: 
-  title:  Probability 
+  slides: 13-Probability.pdf
+  title:  Reinforcement Learning wrap up and Probability 
+  recording: 
   readings:   
+    - 
+      title: AIMA Chapter 13.1-13.5 "Quantifying Uncertainty"
+      authors: Russell and Norvig
+      optional: false 
+  videos:
+    -
+      authors: World Science Festival 
+      url: https://www.youtube.com/watch?v=BcvLAw-JRss
+      title: Everything You Ever Wanted to Know About Bayes' Theorem But Were Afraid To Ask
 -
   date: 2018-10-23
   slides: 
