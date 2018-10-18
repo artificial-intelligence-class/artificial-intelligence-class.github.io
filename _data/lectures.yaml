@@ -141,7 +141,7 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=01828182-96fd-4abd-8280-a9460066d07f
   readings:   
     - 
-      title: AIMA Chapter 3 "Solving Problems by Search" (3.5-3.6)) 
+      title: AIMA Chapter 3 "Solving Problems by Search" (3.5-3.6)
       authors: Russell and Norvig
       optional: false 
     - 
@@ -321,6 +321,12 @@
       title: AIMA Chapter 15 "Probabilistic Reasoning Over Time" (15.2-15.5)
       authors: Russell and Norvig
       optional: false 
+  videos:
+    -
+      authors: Khan Academy 
+      url: https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication
+      title: A mathematical theory of communication
+
 -
   date: 2018-10-23
   title:  HW5 due (MDPs and GridWorld), HW6 released (Reinforcement Learning)
