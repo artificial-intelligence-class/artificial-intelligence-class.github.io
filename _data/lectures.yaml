@@ -159,7 +159,7 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2376392c-ef0e-41f1-896c-a9460066d0ae
   readings:   
     - 
-      title: AIMA Chapter 5.2-5.5
+      title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
       authors: Russell and Norvig
       optional: false 
   videos:
@@ -180,7 +180,11 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7a9ce021-a9ed-4552-8830-a9460066d0ca
   readings:   
     - 
-      title: AIMA Chapter 5.2-5.5 and 16.1-16.3
+      title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: AIMA Chapter 16 "Making Simple Decisions" (16.1-16.3)
       authors: Russell and Norvig
       optional: false 
   videos:
@@ -200,7 +204,7 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27b5b53b-c7ff-4200-a408-a9460066d0eb
   readings:
     - 
-      title: AIMA Chapter 17.1-17.3
+      title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
       authors: Russell and Norvig
       optional: false 
   videos: 
@@ -239,7 +243,7 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9431e864-382a-4c26-830f-a9460066d144
   readings:   
     - 
-      title: AIMA Chapter 17.1-17.3
+      title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
       authors: Russell and Norvig
       optional: false 
     - 
@@ -258,11 +262,11 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8577e149-ead6-4844-8041-a9460066d160
   readings:   
     - 
-      title: AIMA Chapter 21
+      title: AIMA Chapter 21 "Reinforcement Learning"
       authors: Russell and Norvig
       optional: false 
     - 
-      title: Chapter 6.1, 6.2 and 6.5 - Temporal-Difference Learning
+      title: Chapter 6 "Temporal-Difference Learning" (6.1, 6.2 and 6.5)
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
   videos: 
@@ -276,11 +280,11 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=707f00af-2879-4fa7-b3e2-a9460066d181
   readings:   
     - 
-      title: AIMA Chapter 21
+      title: AIMA Chapter 21 "Reinforcement Learning"
       authors: Russell and Norvig
       optional: false 
     - 
-      title: Chapter 6.1, 6.2 and 6.5 - Temporal-Difference Learning
+      title: Chapter 6 "Temporal-Difference Learning" (6.1, 6.2 and 6.5)
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
   videos:
@@ -299,7 +303,7 @@
   recording: 
   readings:   
     - 
-      title: AIMA Chapter 13.1-13.5 "Quantifying Uncertainty"
+      title: AIMA Chapter 13 "Quantifying Uncertainty" (13.1-13.5)
       authors: Russell and Norvig
       optional: false 
   videos:
@@ -311,7 +315,12 @@
   date: 2018-10-23
   slides: 
   title:  Markov Models 
+  recording: 
   readings:  
+    - 
+      title: AIMA Chapter 15 "Probabilistic Reasoning Over Time" (15.2-15.5)
+      authors: Russell and Norvig
+      optional: false 
 -
   date: 2018-10-23
   title:  HW5 due (MDPs and GridWorld), HW6 released (Reinforcement Learning)
@@ -320,11 +329,16 @@
   date: 2018-10-25
   slides: 
   title:  Hidden Markov Models 
-  readings:   
+  recording: 
+  readings:  
+    - 
+      title: AIMA Chapter 15 "Probabilistic Reasoning Over Time" (15.2-15.5)
+      authors: Russell and Norvig
+      optional: false 
 -
   date: 2018-10-30
   slides: 
-  title:  Applications of HMMs
+  title:  Bayes' Nets
   readings:   
 -
   date: 2018-10-30
@@ -333,7 +347,7 @@
 -
   date: 2018-11-01
   slides: 
-  title: Bayes' Nets
+  title: Bayes' Nets part 2
   readings:   
 -
   date: 2018-11-06
