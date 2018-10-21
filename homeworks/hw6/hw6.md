@@ -1,10 +1,51 @@
+---
+layout: default
+img: decision_paralysis.png
+img_link: https://xkcd.com/1801/
+caption: Someone needs value iteration 
+title: CIS 521 Homework 6 "Reinforcement Learning"
+active_tab: homework
+release_date: 2018-10-23
+due_date: 2018-10-30 23:59:00EDT
+materials:
+    - 
+        name: skeleton files
+        url: homeworks/hw6/skeleton.zip 
+
+attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
+---
+<!-- Check whether the assignment is up to date -->
+{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
+{% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
+{% if this_year != due_year %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
+
+
+<div class="alert alert-info">
+This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
+</div>
+
+{% if page.materials %}
+<div class="alert alert-info">
+You can download the materials for this assignment here:
+<ul>
+{% for item in page.materials %}
+<li><a href="{{site.baseurl}}/{{item.url}}">{{ item.name }}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
 # Homework 6: Reinforcement learning [100 points]
  
 ## Instructions
 In the last homework, you have implemented value iteration agent, which does not actually learn from experience. Rather, it ponders its MDP model to arrive at a complete policy before ever interacting with a real environment. When it does interact with the environment, it simply follows the precomputed policy (e.g. it becomes a reflex agent). This distinction may be subtle in a simulated environment like a Gridword, but it's very important in the real world, where the real MDP is not available.
 
-In this homework, You will write a Q-learning agent, which does very little on construction, but instead learns by trial and error from interactions with the environment through its update(state, action, nextState, reward) method. The code for this homework can be found here (####### add skeleton link#######)
-
+In this homework, You will write a Q-learning agent, which does very little on construction, but instead learns by trial and error from interactions with the environment through its update(state, action, nextState, reward) method. The code for this homework can be found [here](homeworks/hw6/skeleton.zip)
 
 ## 1. Q-Learning [xx Points]
 A stub of a Q-learner is specified in QLearningAgent in qlearningAgents.py, and you can select it with the option `-a q`. For this homework, you need to implement the `update`, `computeValueFromQValues`, `getQValue`, and `computeActionFromQValues` methods.
