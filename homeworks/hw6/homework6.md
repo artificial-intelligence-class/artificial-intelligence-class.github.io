@@ -47,7 +47,7 @@ In the last homework, you have implemented value iteration agent, which does not
 
 In this homework, You will write a Q-learning agent, which does very little on construction, but instead learns by trial and error from interactions with the environment through its update(state, action, nextState, reward) method. The code for this homework can be found [here](homeworks/hw6/skeleton.zip)
 
-## 1. Q-Learning [xx Points]
+## 1. Q-Learning [40 Points]
 A stub of a Q-learner is specified in QLearningAgent in qlearningAgents.py, and you can select it with the option `-a q`. For this homework, you need to implement the `update`, `computeValueFromQValues`, `getQValue`, and `computeActionFromQValues` methods.
 
 Note: For `computeActionFromQValues`, you should break ties randomly for better behavior. The `random.choice()` function will help. In a particular state, actions that your agent hasn't seen before still have a Q-value, specifically a Q-value of zero, and if all of the actions that your agent has seen before have a negative Q-value, an unseen action may be optimal.
@@ -65,7 +65,7 @@ Hint: to help with debugging, you can turn off noise by using the `--noise 0.0` 
 ![](./qlearning.png)
 
 
-## 2. Epsilon Greedy [xx points]
+## 2. Epsilon Greedy [20 points]
 
 Complete your Q-learning agent by implementing epsilon-greedy action selection in getAction, meaning it chooses random actions an epsilon fraction of the time, and follows its current best Q-values otherwise. Note that choosing a random action may result in choosing the best action - that is, you should not choose a random sub-optimal action, but rather any random legal action.
 
@@ -75,7 +75,7 @@ Your final Q-values should resemble those of your value iteration agent, especia
 
 You can choose an element from a list uniformly at random by calling the `random.choice` function. You can simulate a binary variable with probability p of success by using `util.flipCoin(p)`, which returns True with probability p and False with probability 1-p.
 
-## 3. Bridge Crossing Revisited [xx points]
+## 3. Bridge Crossing Revisited [10 points]
 
 First, train a completely random Q-learner with the default learning rate on the noiseless BridgeGrid for 50 episodes and observe whether it finds the optimal policy.
 
@@ -86,7 +86,7 @@ Now try the same experiment with an epsilon of 0. Is there an epsilon and a lear
 Note: Your response should be not depend on the exact tie-breaking mechanism used to choose actions. This means your answer should be correct even if for instance we rotated the entire bridge grid world 90 degrees.
 
 
-## 4. Q-Learning and Pacman [xx points]
+## 4. Q-Learning and Pacman [10 points]
 
 Time to play some Pacman! Pacman will play games in two phases. In the first phase, training, Pacman will begin to learn about the values of positions and actions. Because it takes a very long time to learn accurate Q-values even for tiny grids, Pacman's training games run in quiet mode by default, with no GUI (or console) display. Once Pacman's training is complete, he will enter testing mode. When testing, Pacman's `self.epsilon` and `self.alpha` will be set to 0.0, effectively stopping Q-learning and disabling exploration, in order to allow Pacman to exploit his learned policy. Test games are shown in the GUI by default. Without any code changes you should be able to run Q-learning Pacman for very tiny grids as follows:
 
@@ -114,7 +114,7 @@ However, you will find that training the same agent on the seemingly simple medi
 
 Pacman fails to win on larger layouts because each board configuration is a separate state with separate Q-values. He has no way to generalize that running into a ghost is bad for all positions. Obviously, this approach will not scale.
 
-## 5. Approximate Q-Learning [xx points]
+## 5. Approximate Q-Learning [20 points]
 
 Implement an approximate Q-learning agent that learns weights for features of states, where many states might share the same features. Write your implementation in ApproximateQAgent class in `qlearningAgents.py`, which is a subclass of PacmanQAgent.
 
