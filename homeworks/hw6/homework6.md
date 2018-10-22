@@ -2,7 +2,7 @@
 layout: default
 img: the_difference.png
 img_link: https://xkcd.com/242/
-caption: I was just updating my q-state values. 
+caption: I was just updating my q&ndash;state values. 
 title: CIS 521 Homework 6 "Reinforcement Learning"
 active_tab: homework
 release_date: 2018-10-23
