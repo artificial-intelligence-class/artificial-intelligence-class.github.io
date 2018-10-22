@@ -60,7 +60,7 @@ With the Q-learning update in place, you can watch your Q-learner learn under ma
 
 Recall that `-k` will control the number of episodes your agent gets to learn. Watch how the agent learns about the state it was just in, not the one it moves to, and "leaves learning in its wake." 
 
-Hint: to help with debugging, you can turn off noise by using the `--noise 0.0` parameter (though this obviously makes Q-learning less interesting). If you manually steer Pacman north and then east along the optimal path for four episodes, you should see the following Q-values:
+Hint: to help with debugging, you can turn off noise by using the `--noise 0.0` parameter (though this obviously makes Q-learning less interesting). If you manually steer north and then east along the optimal path for four episodes, you should see the following Q-values:
 
 ![](./qlearning.png)
 
