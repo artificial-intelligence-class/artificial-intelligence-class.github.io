@@ -1,8 +1,8 @@
 ---
 layout: default
-img: decision_paralysis.png
-img_link: https://xkcd.com/1801/
-caption: Someone needs value iteration 
+img: the_difference.png
+img_link: https://xkcd.com/242/
+caption: I was just updating my q-state values. 
 title: CIS 521 Homework 6 "Reinforcement Learning"
 active_tab: homework
 release_date: 2018-10-23
