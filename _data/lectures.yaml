@@ -313,9 +313,9 @@
       title: Everything You Ever Wanted to Know About Bayes' Theorem But Were Afraid To Ask
 -
   date: 2018-10-23
-  slides: 
-  title:  Markov Models 
-  recording: 
+  slides: 14-Markov-Models.pdf
+  title:  Probability Wrap Up and Markov Models 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9a71d6e2-caa1-4c19-a63c-a9460066d1d5
   readings:  
     - 
       title: AIMA Chapter 15 "Probabilistic Reasoning Over Time" (15.2-15.5)
