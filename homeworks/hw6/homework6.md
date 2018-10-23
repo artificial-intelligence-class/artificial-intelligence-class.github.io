@@ -62,8 +62,8 @@ Recall that `-k` will control the number of episodes your agent gets to learn. W
 
 Hint: to help with debugging, you can turn off noise by using the `--noise 0.0` parameter (though this obviously makes Q-learning less interesting). If you manually steer north and then east along the optimal path for four episodes, you should see the following Q-values:
 
-![](./qlearning.png)
 
+<img src="qlearning.png" alt="Q-values in Grid World" class="img-responsive" />
 
 ## 2. Epsilon Greedy [20 points]
 
