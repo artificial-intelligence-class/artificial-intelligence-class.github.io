@@ -118,15 +118,17 @@ Pacman fails to win on larger layouts because each board configuration is a sepa
 
 Implement an approximate Q-learning agent that learns weights for features of states, where many states might share the same features. Write your implementation in ApproximateQAgent class in `qlearningAgents.py`, which is a subclass of PacmanQAgent.
 
-Note: Approximate Q-learning assumes the existence of a feature function f(s,a) over state and action pairs, which yields a vector f1(s,a) .. fi(s,a) .. fn(s,a) of feature values. We provide feature functions for you in featureExtractors.py. Feature vectors are util.Counter (like a dictionary) objects containing the non-zero pairs of features and values; all omitted features have value zero.
+Note: Approximate Q-learning assumes the existence of a feature function $$f(s,a)$$ over state and action pairs, which yields a vector $$f_1(s,a) .. f_i(s,a) .. f_n(s,a)$$ of feature values. We provide feature functions for you in featureExtractors.py. Feature vectors are util.Counter (like a dictionary) objects containing the non-zero pairs of features and values; all omitted features have value zero.
 
 The approximate Q-function takes the following form
 
-![](./f1.png)
+$$Q(s,a)=\sum_{i=1}^{n}{f_i(s,a)w_i}$$
 
-where each weight wi is associated with a particular feature fi(s,a). In your code, you should implement the weight vector as a dictionary mapping features (which the feature extractors will return) to weight values. You will update your weight vectors similarly to how you updated Q-values:
+where each weight $$w_i$$ is associated with a particular feature $$f_i(s,a)$$. In your code, you should implement the weight vector as a dictionary mapping features (which the feature extractors will return) to weight values. You will update your weight vectors similarly to how you updated Q-values:
 
-![](./f2.png)
+$$w_i \leftarrow w_i + \alpha * difference * f_i(s,a)$$
+
+$$difference = (r + \gamma \max_{a'} Q(s', a')) - Q(s,a) $$
 
 Note that the _difference_ term is the same as in normal Q-learning, and _r_ is the experienced reward.
 
