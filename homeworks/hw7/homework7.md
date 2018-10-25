@@ -214,7 +214,17 @@ In this section, you will build a simple language model that can be used to gene
     1.4422495703074083
     ```
 
-## 2. Feedback [0 point]
+## 2. Use AI to Write Harry Potter Fanfiction [0 points]
+
+Botnik Studios used text prediction to create three pages of Harry Potter Fanfiction entitled [“Harry Potter and the Portrait of What Looked Like a Large Pile of Ash,”](https://www.theverge.com/2017/12/12/16768582/harry-potter-ai-fanfiction).  I think that we should try too.  So I downloaded an archive of Harry Potter fanfiction.  There is *a lot* of Harry Potter fanfiction.  There is more than a quarter of a billion words of it.  
+
+You can find the archive on eniac at `~/cis521/data/HarryPotterFanfiction.com.sentences.utf8.txt.gz`.  This file may contain copyrighted materials, so please don't redistrbute the file. We are using for non-commerical research purposes, which is fair use.  
+
+How well did your automatically generated Harry Potter sentences turn out?  Post your favorites to Piazza.
+
+
+
+## 3. Feedback [0 point]
 
 1. **[0 point]** Approximately how long did you spend on this assignment?
 
