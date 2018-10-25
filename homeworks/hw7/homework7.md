@@ -1,7 +1,7 @@
 ---
 layout: default
 img: ios_keyboard.png
-img_link: https://xkcd.com/1427/
+img_link: http://www.explainxkcd.com/wiki/index.php/1427:_iOS_Keyboard
 caption: Movie quotes according to autocomplete
 title: CIS 521 Homework 7 "Generate a Novel"
 active_tab: homework
