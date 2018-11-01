@@ -363,9 +363,13 @@
   type: exam
 -
   date: 2018-11-01
-  slides: 
+  slides: 16-Bayes-Nets-2.pdf
   title: Bayes' Nets part 2
   readings:   
+    - 
+      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
+      authors: Russell and Norvig
+      optional: false 
 -
   date: 2018-11-06
   title:  Midterm exam 2 
