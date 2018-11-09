@@ -71,7 +71,7 @@ As in previous assignments, your use of external code should be limited to built
 
 
 
-1. **[15 points]** Write a function `load_corpus(path)` that loads the corpus at the given path and returns it as a list of POS-tagged sentences. Each line in the file should be treated as a separate sentence, where sentences consist of sequences of whitespace-separated strings of the form `"token=POS"`. Your function should return a list of lists, with individual entries being 2-tuples of the form `(token, POS)`.
+1. **[10 points]** Write a function `load_corpus(path)` that loads the corpus at the given path and returns it as a list of POS-tagged sentences. Each line in the file should be treated as a separate sentence, where sentences consist of sequences of whitespace-separated strings of the form `"token=POS"`. Your function should return a list of lists, with individual entries being 2-tuples of the form `(token, POS)`.
     
     ```python
     >>> c = load_corpus("brown_corpus.txt")
@@ -85,7 +85,7 @@ As in previous assignments, your use of external code should be limited to built
     [('The', 'DET'), ('prospects', 'NOUN'), ('look', 'VERB'), ('great', 'ADJ'), ('.', '.')]
     ```
     
-2. **[25 points]** In the `Tagger` class, write an initialization method `__init__(self, sentences)` which takes a list of sentences in the form produced by `load_corpus(path)` as input and initializes the internal variables needed for the POS tagger. In particular, if {$t_1, t_2, \cdots, t_n$} denotes the set of tags and {${w_1, w_2, \cdots, w_m}$} denotes the set of tokens found in the input sentences, you should at minimum compute:    
+2. **[0 point]** In the `Tagger` class, write an initialization method `__init__(self, sentences)` which takes a list of sentences in the form produced by `load_corpus(path)` as input and initializes the internal variables needed for the POS tagger. In particular, if {$t_1, t_2, \cdots, t_n$} denotes the set of tags and {${w_1, w_2, \cdots, w_m}$} denotes the set of tokens found in the input sentences, you should at minimum compute:    
 
     - The initial tag probabilities $\pi(t_i)$ for $1\le i\le n$, where $\pi(t_i)$ is the probability that a sentence begins with tag $t_i$.
 
@@ -95,7 +95,7 @@ As in previous assignments, your use of external code should be limited to built
 
     It is imperative that you use Laplace smoothing where appropriate to ensure that your system can handle novel inputs, but the exact manner in which this is done is left up to you as a design decision. Your initialization method should take no more than a few seconds to complete when given the full Brown corpus as input.
     
-3. **[25 points]** In the `Tagger` class, write a method `most_probable_tags(self, tokens)` which returns the list of the most probable tags corresponding to each input token. In particular, the most probable tag for a token $w_j$ is defined to be the tag with index $i^∗=\text{argmax}\_i\ b(t_i\rightarrow w_j)$.
+3. **[40 points]** In the `Tagger` class, write a method `most_probable_tags(self, tokens)` which returns the list of the most probable tags corresponding to each input token. In particular, the most probable tag for a token $w_j$ is defined to be the tag with index $i^∗=\text{argmax}\_i\ b(t_i\rightarrow w_j)$.
     
     ```python
     >>> c = load_corpus("brown_corpus.txt")
@@ -113,7 +113,7 @@ As in previous assignments, your use of external code should be limited to built
     ```
         
     
-4. **[35 points]** In the `Tagger` class, write a method `viterbi_tags(self, tokens)` which returns the most probable tag sequence as found by Viterbi decoding. Recall from lecture that Viterbi decoding is a modification of the Forward algorithm, adapted to find the path of highest probability through the trellis graph containing all possible tag sequences. Computation will likely proceed in two stages: you will first compute the probability of the most likely tag sequence, and will then reconstruct the sequence which achieves that probability from end to beginning by tracing backpointers.
+4. **[50 points]** In the `Tagger` class, write a method `viterbi_tags(self, tokens)` which returns the most probable tag sequence as found by Viterbi decoding. Recall from lecture that Viterbi decoding is a modification of the Forward algorithm, adapted to find the path of highest probability through the trellis graph containing all possible tag sequences. Computation will likely proceed in two stages: you will first compute the probability of the most likely tag sequence, and will then reconstruct the sequence which achieves that probability from end to beginning by tracing backpointers.
 
     ```python
     >>> c = load_corpus("brown_corpus.txt")
