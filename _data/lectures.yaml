@@ -381,9 +381,14 @@
   type: exam
 -
   date: 2018-11-08
-  slides: 
-  title:  Bayes' Nets part 2
+  slides: 16-Bayes-Nets-3.pdf
+  title:  Bayes' Nets part 3
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3e7f0df0-ed71-4743-b411-a9460066d26b
   readings:   
+    - 
+      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
+      authors: Russell and Norvig
+      optional: false 
 -
   date: 2018-11-09
   title: Last day to withdraw from a course
