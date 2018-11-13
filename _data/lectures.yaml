@@ -403,6 +403,10 @@
       authors: Russell and Norvig
       optional: false 
   videos:
+    - 
+      authors: Name Explain
+      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
+      title: Why is Junk Email Called Spam?
     -
       authors: Monty Python 
       url: https://www.youtube.com/watch?v=cFrtpT1mKy8
