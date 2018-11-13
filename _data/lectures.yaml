@@ -395,9 +395,13 @@
   type: no_lecture
 -
   date: 2018-11-13
-  slides: 
+  slides: 19-Naive-Bayes.pdf
   title:   Machine Learning&colon; Naive Bayes
   readings:   
+    - 
+      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
+      authors: Russell and Norvig
+      optional: false 
 -
   date: 2018-11-13
   title:  HW7 due (Generate a novel), HW8 released (HMMs)
