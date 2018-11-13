@@ -402,6 +402,11 @@
       title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
       authors: Russell and Norvig
       optional: false 
+  videos:
+    -
+      authors: Monty Python 
+      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
+      title: SPAM
 -
   date: 2018-11-13
   title:  HW7 due (Generate a novel), HW8 released (HMMs)
