@@ -420,6 +420,21 @@
   date: 2018-11-15
   slides: 20-Perceptron.pdf
   title:  Machine Learning&colon; Perceptrons
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2f93efb7-8edf-4907-b93a-a9460066d2a8
+  readings:     
+    - 
+      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
+      authors: Russell and Norvig
+      optional: false  
+  videos:
+    - 
+      authors: Paul Anderson
+      url: https://www.youtube.com/watch?v=HZh0A-lWSmY
+      title: The Neuron
+    - 
+      authors: 3Blue1Brown
+      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+      title: Essence of Linear Algebra
 -
   date: 2018-11-20
   slides: 
