@@ -451,8 +451,12 @@
 -
   date: 2018-11-27
   slides: 
-  title:      TBD
-  readings:   
+  title: TBD
+  videos:
+    - 
+      authors: 3Blue1Brown
+      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+      title: Neural Networks
 -
   date: 2018-11-29
   slides: 
