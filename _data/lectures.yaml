@@ -423,9 +423,14 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2f93efb7-8edf-4907-b93a-a9460066d2a8
   readings:     
     - 
-      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
+      title: AIMA Chapter 18 "Learning from Examples" (18.6.3)
       authors: Russell and Norvig
       optional: false  
+    - 
+      title: Neural Networks and Deep Learning Chapter 1 "Using Neural Nets to Recognize Handwritten Digits" 
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap1.html
+      optional: true  
   videos:
     - 
       authors: Paul Anderson
@@ -437,9 +442,14 @@
       title: Essence of Linear Algebra
 -
   date: 2018-11-20
-  slides: 
-  title:  Machine Learning&colon; Kernels and Clustering
+  slides: 21-Perceptrons-KNNs-and-Kernels.pdf
+  title: Machine Learning&colon; Kernels and Clustering
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=087eea08-6db6-43c8-b12d-a9460066d2c4
   readings:   
+    - 
+      title: AIMA Chapter 18 "Learning from Examples" (18.8)
+      authors: Russell and Norvig
+      optional: false  
 -
   date: 2018-11-20
   title:  HW8 due (HMMs), HW9 released (Perceptrons)
