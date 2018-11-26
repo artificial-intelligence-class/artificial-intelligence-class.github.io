@@ -1,3 +1,47 @@
+---
+layout: default
+img: python.jpg
+img_link: http://xkcd.com/353/
+caption: Hello world!
+title: CIS 521 Homework 10 "Extra Credit"
+active_tab: homework
+release_date: 2018-12-06
+due_date: 2018-12-13 23:59:00EDT
+materials:
+    - 
+        name: skeleton file
+        url: homework10.py 
+submission_link: https://www.gradescope.com/courses/21105
+---
+
+<!-- Check whether the assignment is up to date -->
+{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
+{% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
+{% if this_year != due_year %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
+
+
+<div class="alert alert-info">
+This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
+</div>
+
+{% if page.materials %}
+<div class="alert alert-info">
+You can download the materials for this assignment here:
+<ul>
+{% for item in page.materials %}
+<li><a href="{{item.url}}">{{ item.name }}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+
+
 Homework 10: Extra Credit [? points]
 =============================================================
 
@@ -94,49 +138,49 @@ In this section, you will ..
 
 4. **[? points]** Write a function `max_pooling(image, kernel, stride)` that accepts a greyscale `image` as a numpy array of size `[image_height, image_width]`, `kernel` that is a typle `(kernel_height, kernel_width)`, `stride` of pooling window and applies a max pooling operation that reduces the dimensionality of an image. 
 
-```python
-   >>> image = np.array([
-            [1, 1, 2, 4],
-            [5, 6, 7, 8],
-            [3, 2, 1, 0],
-            [1, 2, 3, 4]])
-   >>> kernel = (2, 2)
-   >>> stride = 2
-   >>> print(max_pooling(image, kernel, stride))
-   [[6 8]
-    [3 4]]
-```
+    ```python
+       >>> image = np.array([
+                [1, 1, 2, 4],
+                [5, 6, 7, 8],
+                [3, 2, 1, 0],
+                [1, 2, 3, 4]])
+       >>> kernel = (2, 2)
+       >>> stride = 2
+       >>> print(max_pooling(image, kernel, stride))
+       [[6 8]
+        [3 4]]
+    ```
 
 4. **[? points]** Write a function `average_pooling(image, kernel, stride)` that accepts a greyscale `image` as a numpy array of size `[image_height, image_width]`, `kernel` of `[kernel_height, kernel_width]`, `stride` of pooling window and applies an average pooling operation, instead of maximum.
 
-```python
-   TODO: Example
-```
+    ```python
+       TODO: Example
+    ```
 
 5.  **[? points]** Write a function `sigmoid(x)` that accetps an input `x` and applies a sigmoid activation function. 
   
-```python
-   TODO: Example
-```
+    ```python
+       TODO: Example
+    ```
 
 6. **[? points]** Write a function `tanh(x)` that an input `x` and applies a tanh activation function. 
 
-```python
-   TODO: Example
-```
+    ```python
+       TODO: Example
+    ```
 
 ## 2. Fashion MNIST Dataset [? points]
 
 A [train dataset](train_dataset.csv) is provided along this Specification, which is adopted from the [Fashion MNIST dataset](https://github.com/zalandoresearch/fashion-mnist). 
 
-1.  **[? points]** Parse the data in `__init__(self, file)` of `MyDataset` class as `self.X` and `self.Y` variables. The first column of the dataset is a label `Y` and the remaining columns correspond to the pixel of an 28*28 image flattened. 
+1.  **[? points]** Parse the data in `__init__(self, file)` of `MyDataset` class as `self.X` and `self.Y` variables. The first column of the dataset is a label `Y` and the remaining columns correspond to the pixel of an 28*28 image flattened.
 
-```python
->>> my_dataset=MyDataset('train_dataset.csv')
->>> loader = torch.utils.data.DataLoader(my_dataset, batch_size=100, shuffle=False)
->>> print(list(loader)[0])
-?
-```
+    ```python
+    >>> my_dataset=MyDataset('train_dataset.csv')
+    >>> loader = torch.utils.data.DataLoader(my_dataset, batch_size=100, shuffle=False)
+    >>> print(list(loader)[0])
+    ?
+    ```
 2.  **[? points]** Fill in  `__init__(self)` and  `forward(self, x)` of `MyModel` class to implement architecture of your choice. We suggest starting from 1 convolutional layer followed by the final output layers. It is up to you to decide the architecture, and we recommend looking int [`torch.nn.MaxPool2d`](https://pytorch.org/docs/stable/nn.html) and [`torch.nn.Conv2d`](https://pytorch.org/docs/stable/nn.html) functions. 
 
 
