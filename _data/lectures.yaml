@@ -465,10 +465,10 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c0a6b3c0-fb72-49d5-8170-a9460066d301
   readings:   
     - 
-      title: Neural Networks and Deep Learning (Chapter 1 "Using Neural Nets to Recognize Handwritten Digits")
-      authors: Michael Nielsen
-      url: http://neuralnetworksanddeeplearning.com/chap1.html
-      optional: false       
+      title: Cluster analysis
+      authors: Wikipedia
+      url: https://en.wikipedia.org/wiki/Cluster_analysis
+      optional: false  
     - 
       title: k-Means Clustering
       authors: Wikipedia
@@ -479,6 +479,11 @@
       authors: Wikipedia
       url: https://en.wikipedia.org/wiki/Hierarchical_clustering
       optional: false  
+    - 
+      title: Neural Networks and Deep Learning (Chapter 1 "Using Neural Nets to Recognize Handwritten Digits")
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap1.html
+      optional: false       
 -
   videos:
     - 
