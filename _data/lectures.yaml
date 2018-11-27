@@ -460,8 +460,26 @@
   type: no_lecture
 -
   date: 2018-11-27
-  slides: 
-  title: TBD
+  slides: 22-Clustering-and-Neural-Nets.pdf
+  title: Clustering and Neural Networks
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c0a6b3c0-fb72-49d5-8170-a9460066d301
+  readings:   
+    - 
+      title: Neural Networks and Deep Learning (Chapter 1 "Using Neural Nets to Recognize Handwritten Digits")
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap1.html
+      optional: false       
+    - 
+      title: k-Means Clustering
+      authors: Wikipedia
+      url: https://en.wikipedia.org/wiki/K-means_clustering
+      optional: false  
+    - 
+      title: Agglomerative Clustering
+      authors: Wikipedia
+      url: https://en.wikipedia.org/wiki/Hierarchical_clustering
+      optional: false  
+-
   videos:
     - 
       authors: 3Blue1Brown
