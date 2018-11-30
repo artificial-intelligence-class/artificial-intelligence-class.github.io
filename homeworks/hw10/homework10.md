@@ -5,8 +5,8 @@ img_link: http://xkcd.com/353/
 caption: Hello world!
 title: CIS 521 Homework 10 "Extra Credit"
 active_tab: homework
-release_date: 2018-12-06
-due_date: 2018-12-13 23:59:00EDT
+release_date: 2018-12-03
+due_date: 2018-12-10 23:59:00EDT
 materials:
     - 
         name: skeleton file
