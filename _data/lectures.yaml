@@ -491,12 +491,23 @@
       title: Neural Networks
 -
   date: 2018-11-29
-  slides: 
-  title: TBD
-  readings:   
+  slides: 23-Neural-Networks-and-Computer-Vision.pdf
+  title: Neural Networks and Computer Vision
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4bfb8b70-bae5-4174-bd39-a9460066d322
+  readings:
+    - 
+      title: Neural Networks and Deep Learning (Chapter 2 "How the Backpropagation Algorithm Works")
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap2.html
+      optional: true 
+  videos:
+    - 
+      authors: Andrew Ng
+      url: https://www.coursera.org/learn/neural-networks-deep-learning
+      title: Neural Networks and Deep Learning     
 -
   date: 2018-11-29
-  title:  HW9 due (Perceptrons)
+  title:  HW9 due (Perceptrons), study for exam
   type: exam
 -
   date: 2018-12-04
