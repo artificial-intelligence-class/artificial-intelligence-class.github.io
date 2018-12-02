@@ -11,6 +11,9 @@ materials:
     - 
         name: skeleton file
         url: homework10.py 
+    - 
+        name: dataset.csv
+        url: dataset.csv 
 submission_link: https://www.gradescope.com/courses/21105
 ---
 
@@ -42,14 +45,19 @@ You can download the materials for this assignment here:
 
 
 
-Homework 10: Extra Credit [? points]
+Homework 10: Extra Credit [100 points]
 =============================================================
 
-## Instructions
+## <a name="instructions"></a> Instructions
 
-In this assignment, you will get an experience writing functions used in Neural Networks from scratch, as well as using one of the generic machine learning frameworks called [PyTorch](https://pytorch.org). 
+
+The [first part](#part_1) of this assignment involves implementing functions commonly used in Neural Networks from scratch without use of external libraries/packages other than [NumPy](http://www.numpy.org).
+
+The [second part](#part_2)of the assignment involves building a Neural Network using one of the Machine Learning frameworks called [PyTorch](https://pytorch.org) for a [Fashion MNIST dataset](https://github.com/zalandoresearch/fashion-mnist).
 
 A skeleton file [homework10.py](homework10.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+
+A file containing a sub-set of the Fashion MNIST dataset dataset [dataset.csv](dataset.csv) is provided. 
 
 You will find that in addition to a problem specification, most programming questions also include a pair of examples from the Python interpreter. These are meant to illustrate typical use cases, and should not be taken as comprehensive test suites.
 
@@ -58,6 +66,421 @@ You are strongly encouraged to follow the Python style guidelines set forth in [
 Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}).
 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
+
+
+
+## <a name="part_1"></a> Part 1 [40 points]
+
+The goal of this part of the assignment is to get an intuition of the underlying implementation used in Convolutional Neural Networks, specifically performing convolution and pooling, and applying an activation function.  
+
+The functions in this assignment test are simplified, are not explicitly related to each other (unless stated otherwise) and will not be used in [Part 2](#part_2).
+
+As mentioned in the [instructions](#instructions), you are restricted from using any external packages other than [NumPy](http://www.numpy.org). Numpy has a [Quickstart tutorial](https://docs.scipy.org/doc/numpy/user/quickstart.html), which we recommend looking at if you are not familiar or would like to refresh memory. 
+
+
+####  <a name="part_1_1"></a> Part 1.1 [12 points] 
+
+Write a function `convolve_greyscale(image, filter)` that accepts a numpy array `image` of shape `(image_height, image_width)` (greyscale image) of integers  and a numpy array `kernel` of shape `(kernel_height, kernel_width)` of floats. 
+
+The function performs a convolution,  which consists of adding each element of the image to its local neighbors, weighted by the kernel. 
+
+The result of this function is a new numpy array of integers that has the same shape as the input `image`. 
+
+Apply zero-padding to the input image to calculate image edges. Note that the height and width of both `image` and `kernel` might not be equal to each other. 
+
+There exist a few visualisations hands-on experience of applying a convolution online, for instance a post by [Victor Powell](http://setosa.io/ev/image-kernels/).
+
+For more information 
+
+You can also use real images as an input.  We recommend selecting a few images of type `gray` from the Miscellaneous Volume  of the  [USC-SIPI Image Database](http://sipi.usc.edu/database/database.php?volume=misc). (Image from [Example 3](#example_1_3) is taken from this dataset labelled under [5.1.09](http://sipi.usc.edu/database/download.php?vol=misc&img=5.1.09))
+
+###### Example 1
+
+        
+```python
+>>> import numpy as np
+>>> image = np.array([
+        [0,  1,  2,  3,  4],
+        [ 5,  6,  7,  8,  9], 
+        [10, 11, 12, 13, 14], 
+        [15, 16, 17, 18, 19], 
+        [20, 21, 22, 23, 24]])
+>>> kernel = np.array([
+        [0, -1, 0],
+        [-1, 5, -1],
+        [0, -1, 0]])
+>>> print(convolve_greyscale(image, kernel))
+[[-6 -3 -1  1  8]
+ [ 9  6  7  8 19]
+ [19 11 12 13 29]
+ [29 16 17 18 39]
+ [64 47 49 51 78]]
+```
+
+###### Example 2
+
+```python
+>>> import numpy as np
+>>> image = np.array([
+        [0,  1,  2,  3,  4],
+        [ 5,  6,  7,  8,  9], 
+        [10, 11, 12, 13, 14], 
+        [15, 16, 17, 18, 19], 
+        [20, 21, 22, 23, 24]])
+>>> kernel = np.array([
+        [1, 2, 3],
+        [0, 0, 0],
+        [-1, -2, -3]])
+>>> print(convolve_greyscale(image, kernel))
+[[  16   34   40   46   42]
+ [  30   60   60   60   50]
+ [  30   60   60   60   50]
+ [  30   60   60   60   50]
+ [ -46  -94 -100 -106  -92]]
+```
+
+
+######  <a name="example_1_3"></a> Example 3
+```python
+>>> import numpy as np
+>>> from PIL import Image
+>>> import matplotlib.pyplot as plt
+>>> image = np.array(Image.open('5.1.09.tiff'))
+>>> plt.imshow(image, cmap='gray')
+>>> plt.show()
+>>> kernel = np.array([
+    [0, -1, 0],
+    [-1, 5, -1],
+    [0, -1, 0]])
+>>> output = convolve_greyscale(image, kernel)
+>>> plt.imshow(output, cmap='gray')
+>>> plt.show()
+```
+
+<p align="center">
+Line 6 of Example 3 (Before function invokation)
+<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+<p align="center">
+Line 10 of Example 3 (After function invokation)
+<img src="5.1.09_convolved.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+
+#### Part 1.2 [5 points]
+
+Write a function `convolve_rgb(image, filter)` that accepts a numpy array `image` of shape `(image_height, image_width, image_depth)` of integers  and a numpy array `kernel` of shape `(kernel_height, kernel_width)` of floats. 
+
+The function performs a convolution,  which consists of adding each element of the image to its local neighbors, weighted by the kernel. 
+
+The result of this function is a new numpy array of integers that has the same shape as the input `image`. 
+
+You can use `convolve_greyscale(image, filter)` implemented in the previous [part](#part_1_1). 
+
+As before, apply zero-padding to the input image to calculate image edges. Note that the height and width of both `image` and `kernel` might not be equal to each other. 
+
+We recommend selecting a few images of type `color` from the Miscellaneous Volume of the  [USC-SIPI Image Database](http://sipi.usc.edu/database/database.php?volume=misc). (Image from [Example 1](#example_2_1) and [Example 2](#example_2_2) is taken from this dataset labelled under [4.1.07](http://sipi.usc.edu/database/download.php?vol=misc&img=4.1.07))
+
+
+######  <a name="example_2_1"></a> Example 1
+```python
+>>> import numpy as np
+>>> from PIL import Image
+>>> import matplotlib.pyplot as plt
+>>> image = np.array(Image.open('test_images/4.1.07.tiff'))
+>>> plt.imshow(image)
+>>> plt.show()
+>>> kernel = np.array([
+[0.11111111, 0.11111111, 0.11111111],
+ [0.11111111, 0.11111111, 0.11111111],
+ [0.11111111, 0.11111111, 0.11111111]])
+>>> output = convolve_rgb(image, kernel)
+>>> plt.imshow(output)
+>>> plt.show()
+```
+
+<p align="center">
+Line 6 of Example 1 (Before function invokation)
+<img src="4.1.07.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+<p align="center">
+Line 10 of Example 1 (After function invokation)
+<img src="4.1.07_convolved_1.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+######  <a name="example_2_2"></a> Example 2
+```python
+>>> import numpy as np
+>>> from PIL import Image
+>>> import matplotlib.pyplot as plt
+>>> image = np.array(Image.open('test_images/4.1.07.tiff'))
+>>> plt.imshow(image)
+>>> plt.show()
+>>> kernel = np.ones((10, 10))
+>>> kernel /= np.sum(kernel)
+>>> output = convolve_rgb(image, kernel)
+>>> plt.imshow(output)
+>>> plt.show()
+```
+
+<p align="center">
+Line 6 of Example 1 (Before function invokation)
+<img src="4.1.07.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+<p align="center">
+Line 11 of Example 1 (After function invokation)
+<img src="4.1.07_convolved_2.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+
+
+#### Part 1.3 [12 points]
+
+Write a function `max_pooling(image, kernel_size, stride)` that accepts a numpy array `image` of integers of shape `(image_height, image_width)` (greyscale image) of integers, a tuple `kernel_size` corresponding to `(kernel_height, kernel_width)`, and a tuple `stride` of `(stride_height, stride_width)` corresponding to the stride of pooling window. 
+
+The goal of this function is to reduce the spatial size of the representation and in this case reduce dimensionality of an image with max down-sampling. 
+
+It is not common to pad the input using zero-padding for the pooling layer in Convolutional Neural Network and as such, so we do not ask to pad. 
+
+Notice that this function must support overlapping pooling if `stride` is not equal to `kernel_size`.
+
+As before, we recommend selecting a few images of type `gray` from the Miscellaneous Volume  of the  [USC-SIPI Image Database](http://sipi.usc.edu/database/database.php?volume=misc). (Image from [Example 3](#example_3_3) is taken from this dataset labelled under [5.1.09](http://sipi.usc.edu/database/download.php?vol=misc&img=5.1.09))
+
+
+###### Example 1
+```python
+>>> image = np.array([
+        [1, 1, 2, 4],
+        [5, 6, 7, 8],
+        [3, 2, 1, 0],
+        [1, 2, 3, 4]])
+>>> kernel_size = (2, 2)
+>>> stride = (2, 2)
+>>> print(max_pooling(image, kernel_size, stride))
+[[6 8]
+[3 4]]
+```
+
+###### Example 2
+```python
+>>> image = np.array([
+        [1, 1, 2, 4],
+        [5, 6, 7, 8],
+        [3, 2, 1, 0],
+        [1, 2, 3, 4]])
+>>> kernel_size = (2, 2)
+>>> stride = (1, 1)
+>>> print(max_pooling(image, kernel_size, stride))
+[[6 7 8]
+ [6 7 8]
+ [3 3 4]]
+```
+
+###### Example 3
+```python
+>>> import numpy as np
+>>> from PIL import Image
+>>> import matplotlib.pyplot as plt
+>>> image = np.array(Image.open('5.1.09.tiff'))
+>>> plt.imshow(image, cmap='gray')
+>>> plt.show()
+>>> kernel_size = (2, 2)
+>>> stride = (2, 2)
+>>> output = max_pooling(image, kernel_size, stride)
+>>> plt.imshow(output, cmap='gray')
+>>> plt.show()
+```
+<p align="center">
+Line 6 of Example 3 (Before function invokation with image shape (256, 256))
+<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+<p align="center">
+Line 11 of Example 3 (After function invokation with image shape (128, 128))
+<img src="5.1.09_max_pool_22_22.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+
+###### Example 4
+```python
+>>> import numpy as np
+>>> from PIL import Image
+>>> import matplotlib.pyplot as plt
+>>> image = np.array(Image.open('5.1.09.tiff'))
+>>> plt.imshow(image, cmap='gray')
+>>> plt.show()
+>>> kernel_size = (4, 4)
+>>> stride = (1, 1)
+>>> output = max_pooling(image, kernel_size, stride)
+>>> plt.imshow(output, cmap='gray')
+>>> plt.show()
+```
+<p align="center">
+Line 6 of Example 4 (Before function invokation with image shape (256, 256))
+<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+<p align="center">
+Line 11 of Example 4 (After function invokation with image shape (253, 253))
+<img src="5.1.09_max_pool_44_11.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+
+
+
+###### Example 5
+```python
+>>> import numpy as np
+>>> from PIL import Image
+>>> import matplotlib.pyplot as plt
+>>> image = np.array(Image.open('5.1.09.tiff'))
+>>> plt.imshow(image, cmap='gray')
+>>> plt.show()
+>>> kernel_size = (3, 3)
+>>> stride = (1, 3)
+>>> output = max_pooling(image, kernel_size, stride)
+>>> plt.imshow(output, cmap='gray')
+>>> plt.show()
+```
+<p align="center">
+Line 6 of Example 5 (Before function invokation with image shape (256, 256))
+<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+<p align="center">
+Line 11 of Example 5 (After function invokation with image shape (254, 85))
+<img src="5.1.09_max_pool_33_13.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+
+
+
+#### Part 1.4 [5 points]
+
+
+Similarly to the previous part, write a function `average_pooling(image, kernel_size, stride)` that accepts a numpy array `image` of integers of shape `(image_height, image_width)` (greyscale image) of integers, a tuple `kernel_size` corresponding to `(kernel_height, kernel_width)`, and a tuple `stride` of `(stride_height, stride_width)` corresponding to the stride of pooling window. 
+
+The goal of this function is to reduce the spatial size of the representation and in this case reduce dimensionality of an image with average down-sampling. 
+
+As before, we recommend selecting a few images of type `gray` from the Miscellaneous Volume  of the  [USC-SIPI Image Database](http://sipi.usc.edu/database/database.php?volume=misc). (Image from [Example 3](#example_3_3) is taken from this dataset labelled under [5.1.09](http://sipi.usc.edu/database/download.php?vol=misc&img=5.1.09))
+
+
+###### Example 1
+```python
+>>> image = np.array([
+        [1, 1, 2, 4],
+        [5, 6, 7, 8],
+        [3, 2, 1, 0],
+        [1, 2, 3, 4]])
+>>> kernel_size = (2, 2)
+>>> stride = (2, 2)
+>>> print(average_pooling(image, kernel_size, stride))
+[[3.25 5.25]
+ [2.   2.  ]]
+```
+
+###### Example 2
+```python
+>>> image = np.array([
+        [1, 1, 2, 4],
+        [5, 6, 7, 8],
+        [3, 2, 1, 0],
+        [1, 2, 3, 4]])
+>>> kernel_size = (2, 2)
+>>> stride = (1, 1)
+>>> print(average_pooling(image, kernel_size, stride))
+[[3.25 4.   5.25]
+ [4.   4.   4.  ]
+ [2.   2.   2.  ]]
+```
+
+###### Example 3
+```python
+>>> import numpy as np
+>>> from PIL import Image
+>>> import matplotlib.pyplot as plt
+>>> image = np.array(Image.open('5.1.09.tiff'))
+>>> plt.imshow(image, cmap='gray')
+>>> plt.show()
+>>> kernel_size = (2, 2)
+>>> stride = (2, 2)
+>>> output = average_pooling(image, kernel_size, stride)
+>>> plt.imshow(output, cmap='gray')
+>>> plt.show()
+```
+<p align="center">
+Line 6 of Example 3 (Before function invokation with image shape (256, 256))
+<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+<p align="center">
+Line 11 of Example 3 (After function invokation with image shape (128, 128))
+<img src="5.1.09_average_pool_22_22.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+
+###### Example 4
+```python
+>>> import numpy as np
+>>> from PIL import Image
+>>> import matplotlib.pyplot as plt
+>>> image = np.array(Image.open('5.1.09.tiff'))
+>>> plt.imshow(image, cmap='gray')
+>>> plt.show()
+>>> kernel_size = (4, 4)
+>>> stride = (1, 1)
+>>> output = average_pooling(image, kernel_size, stride)
+>>> plt.imshow(output, cmap='gray')
+>>> plt.show()
+```
+<p align="center">
+Line 6 of Example 4 (Before function invokation with image shape (256, 256))
+<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+<p align="center">
+Line 11 of Example 4 (After function invokation with image shape (253, 253))
+<img src="5.1.09_average_pool_44_11.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+
+
+
+###### Example 5
+```python
+>>> import numpy as np
+>>> from PIL import Image
+>>> import matplotlib.pyplot as plt
+>>> image = np.array(Image.open('5.1.09.tiff'))
+>>> plt.imshow(image, cmap='gray')
+>>> plt.show()
+>>> kernel_size = (3, 3)
+>>> stride = (1, 3)
+>>> output = average_pooling(image, kernel_size, stride)
+>>> plt.imshow(output, cmap='gray')
+>>> plt.show()
+```
+<p align="center">
+Line 6 of Example 5 (Before function invokation with image shape (256, 256))
+<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+<p align="center">
+Line 11 of Example 5 (After function invokation with image shape (254, 85))
+<img src="5.1.09_average_pool_33_13.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+</p>
+
+
+#### Part 1.5 [5 points]
+
+Write a function `sigmoid(w, x, b)` that accepts an input neuron `x`, a one-dimensional numpy array of weights and bias and applies a sigmoid activation function. 
+  
+
+
+## <a name="part_2"></a> Part 2 [60 points]
 
 
 ## Set up Pytorch 
@@ -90,90 +513,10 @@ $ bash Miniconda3-latest-Linux-x86_64.sh
 ```
 After successful installation, running the command ```$ which conda``` should output ```/home1/m/$USERNAME/miniconda3/bin/conda```.
 
-## 1. Individual Functions [? points]
-
-In this section, you will ..
-
-1. **[? points]** Write a function `convolve_greyscale(image, filter)` that accepts a greyscale `image` as a numpy array of size `[image_height, image_width]`, and a kernel filter as a numpy array of size `[kernel_height, kernel_width]` and performs a convolution, which consists of adding each element of the image to its local neighbors, weighted by the kernel. The result of this function is a new numpy array that has the same size as `image`. Please apply zero-padding to the input image to calculate image edges. 
-        
-    ```python
-    >>> image = np.array([
-            [0,  1,  2,  3,  4],
-            [ 5,  6,  7,  8,  9], 
-            [10, 11, 12, 13, 14], 
-            [15, 16, 17, 18, 19], 
-            [20, 21, 22, 23, 24]])
-    >>> kernel = np.array([
-            [0, -1, 0],
-            [-1, 5, -1],
-            [0, -1, 0]])
-    >>> print(convolve_greyscale(image, kernel))
-    [[-6 -3 -1  1  8]
-     [ 9  6  7  8 19]
-     [19 11 12 13 29]
-     [29 16 17 18 39]
-     [64 47 49 51 78]]
-    ```
-
-   ```python
-    >>> image = np.array([
-            [0,  1,  2,  3,  4],
-            [ 5,  6,  7,  8,  9], 
-            [10, 11, 12, 13, 14], 
-            [15, 16, 17, 18, 19], 
-            [20, 21, 22, 23, 24]])
-    >>> kernel = np.array([
-            [1, 2, 3],
-            [0, 0, 0],
-            [-1, -2, -3]])
-    >>> print(convolve_greyscale(image, kernel))
-    [[  16   34   40   46   42]
-     [  30   60   60   60   50]
-     [  30   60   60   60   50]
-     [  30   60   60   60   50]
-     [ -46  -94 -100 -106  -92]]
-    ```
-
-3. **[? points]** Write a function `convolve_rgb(image, filter)` that accepts RGB `image` as a numpy array of size `[image_height, image_width, number_of_channels]`, and a kernel filter as a numpy array of size `[kernel_height, kernel_width]` and performs a convolution. You can use `convolve_greyscale(image, filter)` in the previous section. The result of this function is a new numpy array that has the same size as `image`. Please apply zero-padding to the input image to calculate image edges. 
-
-4. **[? points]** Write a function `max_pooling(image, kernel, stride)` that accepts a greyscale `image` as a numpy array of size `[image_height, image_width]`, `kernel` that is a typle `(kernel_height, kernel_width)`, `stride` of pooling window and applies a max pooling operation that reduces the dimensionality of an image. 
-
-    ```python
-       >>> image = np.array([
-                [1, 1, 2, 4],
-                [5, 6, 7, 8],
-                [3, 2, 1, 0],
-                [1, 2, 3, 4]])
-       >>> kernel = (2, 2)
-       >>> stride = 2
-       >>> print(max_pooling(image, kernel, stride))
-       [[6 8]
-        [3 4]]
-    ```
-
-4. **[? points]** Write a function `average_pooling(image, kernel, stride)` that accepts a greyscale `image` as a numpy array of size `[image_height, image_width]`, `kernel` of `[kernel_height, kernel_width]`, `stride` of pooling window and applies an average pooling operation, instead of maximum.
-
-    ```python
-       TODO: Example
-    ```
-
-5.  **[? points]** Write a function `sigmoid(x)` that accetps an input `x` and applies a sigmoid activation function. 
-  
-    ```python
-       TODO: Example
-    ```
-
-6. **[? points]** Write a function `tanh(x)` that an input `x` and applies a tanh activation function. 
-
-    ```python
-       TODO: Example
-    ```
-
-## 2. Fashion MNIST Dataset [? points]
 
 A [train dataset](train_dataset.csv) is provided along this Specification, which is adopted from the [Fashion MNIST dataset](https://github.com/zalandoresearch/fashion-mnist). 
 
-1.  **[? points]** Parse the data in `__init__(self, file)` of `MyDataset` class as `self.X` and `self.Y` variables. The first column of the dataset is a label `Y` and the remaining columns correspond to the pixel of an 28*28 image flattened.
+1.  **[10 points]** Parse the data in `__init__(self, file)` of `MyDataset` class as `self.X` and `self.Y` variables. The first column of the dataset is a label `Y` and the remaining columns correspond to the pixel of an 28*28 image flattened.
 
     ```python
     >>> my_dataset=MyDataset('train_dataset.csv')
@@ -181,7 +524,7 @@ A [train dataset](train_dataset.csv) is provided along this Specification, which
     >>> print(list(loader)[0])
     ?
     ```
-2.  **[? points]** Fill in  `__init__(self)` and  `forward(self, x)` of `MyModel` class to implement architecture of your choice. We suggest starting from 1 convolutional layer followed by the final output layers. It is up to you to decide the architecture, and we recommend looking int [`torch.nn.MaxPool2d`](https://pytorch.org/docs/stable/nn.html) and [`torch.nn.Conv2d`](https://pytorch.org/docs/stable/nn.html) functions. 
+2.  **[50 points]** Fill in  `__init__(self)` and  `forward(self, x)` of `MyModel` class to implement architecture of your choice. We suggest starting from 1 convolutional layer followed by the final output layers. It is up to you to decide the architecture, and we recommend looking int [`torch.nn.MaxPool2d`](https://pytorch.org/docs/stable/nn.html) and [`torch.nn.Conv2d`](https://pytorch.org/docs/stable/nn.html) functions. 
 
 
 ## 3. Feedback [0 points]
