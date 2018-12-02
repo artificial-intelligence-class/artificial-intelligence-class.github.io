@@ -69,7 +69,7 @@ You may submit as many times as you would like before the deadline, but only the
 
 
 
-## <a name="part_1"></a> Part 1 [40 points]
+## <a name="part_1"></a> Part 1 [45 points]
 
 The goal of this part of the assignment is to get an intuition of the underlying implementation used in Convolutional Neural Networks, specifically performing convolution and pooling, and applying an activation function.  
 
@@ -78,7 +78,7 @@ The functions in this assignment test are simplified, are not explicitly related
 As mentioned in the [instructions](#instructions), you are restricted from using any external packages other than [NumPy](http://www.numpy.org). Numpy has a [Quickstart tutorial](https://docs.scipy.org/doc/numpy/user/quickstart.html), which we recommend looking at if you are not familiar or would like to refresh memory. 
 
 
-####  <a name="part_1_1"></a> Part 1.1 [12 points] 
+####  <a name="part_1_1"></a> Part 1.1 [15 points] 
 
 Write a function `convolve_greyscale(image, filter)` that accepts a numpy array `image` of shape `(image_height, image_width)` (greyscale image) of integers  and a numpy array `kernel` of shape `(kernel_height, kernel_width)` of floats. 
 
@@ -158,13 +158,13 @@ You can also use real images as an input.  We recommend selecting a few images o
 ```
 
 <p align="center">
-Line 6 of Example 3 (Before function invokation)
-<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 6 of Example 3 (Before function invocation)
+<img src="5.1.09.tiff"  class="img-responsive" />
 </p>
 
 <p align="center">
-Line 10 of Example 3 (After function invokation)
-<img src="5.1.09_convolved.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 10 of Example 3 (After function invocation)
+<img src="5.1.09_convolved.tiff"  class="img-responsive" />
 </p>
 
 
@@ -188,7 +188,7 @@ We recommend selecting a few images of type `color` from the Miscellaneous Volum
 >>> import numpy as np
 >>> from PIL import Image
 >>> import matplotlib.pyplot as plt
->>> image = np.array(Image.open('test_images/4.1.07.tiff'))
+>>> image = np.array(Image.open('4.1.07.tiff'))
 >>> plt.imshow(image)
 >>> plt.show()
 >>> kernel = np.array([
@@ -201,13 +201,13 @@ We recommend selecting a few images of type `color` from the Miscellaneous Volum
 ```
 
 <p align="center">
-Line 6 of Example 1 (Before function invokation)
-<img src="4.1.07.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 6 of Example 1 (Before function invocation)
+<img src="4.1.07.tiff"  class="img-responsive" />
 </p>
 
 <p align="center">
-Line 10 of Example 1 (After function invokation)
-<img src="4.1.07_convolved_1.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 10 of Example 1 (After function invocation)
+<img src="4.1.07_convolved_1.tiff"  class="img-responsive" />
 </p>
 
 ######  <a name="example_2_2"></a> Example 2
@@ -215,7 +215,7 @@ Line 10 of Example 1 (After function invokation)
 >>> import numpy as np
 >>> from PIL import Image
 >>> import matplotlib.pyplot as plt
->>> image = np.array(Image.open('test_images/4.1.07.tiff'))
+>>> image = np.array(Image.open('4.1.07.tiff'))
 >>> plt.imshow(image)
 >>> plt.show()
 >>> kernel = np.ones((10, 10))
@@ -226,18 +226,18 @@ Line 10 of Example 1 (After function invokation)
 ```
 
 <p align="center">
-Line 6 of Example 1 (Before function invokation)
-<img src="4.1.07.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 6 of Example 1 (Before function invocation)
+<img src="4.1.07.tiff"  class="img-responsive" />
 </p>
 
 <p align="center">
-Line 11 of Example 1 (After function invokation)
-<img src="4.1.07_convolved_2.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 11 of Example 1 (After function invocation)
+<img src="4.1.07_convolved_2.tiff"  class="img-responsive" />
 </p>
 
 
 
-#### Part 1.3 [12 points]
+#### Part 1.3 [15 points]
 
 Write a function `max_pooling(image, kernel_size, stride)` that accepts a numpy array `image` of integers of shape `(image_height, image_width)` (greyscale image) of integers, a tuple `kernel_size` corresponding to `(kernel_height, kernel_width)`, and a tuple `stride` of `(stride_height, stride_width)` corresponding to the stride of pooling window. 
 
@@ -294,13 +294,13 @@ As before, we recommend selecting a few images of type `gray` from the Miscellan
 >>> plt.show()
 ```
 <p align="center">
-Line 6 of Example 3 (Before function invokation with image shape (256, 256))
-<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 6 of Example 3 (Before function invocation with image shape (256, 256))
+<img src="5.1.09.tiff"  class="img-responsive" />
 </p>
 
 <p align="center">
-Line 11 of Example 3 (After function invokation with image shape (128, 128))
-<img src="5.1.09_max_pool_22_22.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 11 of Example 3 (After function invocation with image shape (128, 128))
+<img src="5.1.09_max_pool_22_22.tiff"  class="img-responsive" />
 </p>
 
 
@@ -319,13 +319,13 @@ Line 11 of Example 3 (After function invokation with image shape (128, 128))
 >>> plt.show()
 ```
 <p align="center">
-Line 6 of Example 4 (Before function invokation with image shape (256, 256))
-<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 6 of Example 4 (Before function invocation with image shape (256, 256))
+<img src="5.1.09.tiff"  class="img-responsive" />
 </p>
 
 <p align="center">
-Line 11 of Example 4 (After function invokation with image shape (253, 253))
-<img src="5.1.09_max_pool_44_11.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 11 of Example 4 (After function invocation with image shape (253, 253))
+<img src="5.1.09_max_pool_44_11.tiff"  class="img-responsive" />
 </p>
 
 
@@ -346,13 +346,13 @@ Line 11 of Example 4 (After function invokation with image shape (253, 253))
 >>> plt.show()
 ```
 <p align="center">
-Line 6 of Example 5 (Before function invokation with image shape (256, 256))
-<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 6 of Example 5 (Before function invocation with image shape (256, 256))
+<img src="5.1.09.tiff"  class="img-responsive" />
 </p>
 
 <p align="center">
-Line 11 of Example 5 (After function invokation with image shape (254, 85))
-<img src="5.1.09_max_pool_33_13.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 11 of Example 5 (After function invocation with image shape (254, 85))
+<img src="5.1.09_max_pool_33_13.tiff"  class="img-responsive" />
 </p>
 
 
@@ -412,13 +412,13 @@ As before, we recommend selecting a few images of type `gray` from the Miscellan
 >>> plt.show()
 ```
 <p align="center">
-Line 6 of Example 3 (Before function invokation with image shape (256, 256))
-<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 6 of Example 3 (Before function invocation with image shape (256, 256))
+<img src="5.1.09.tiff"  class="img-responsive" />
 </p>
 
 <p align="center">
-Line 11 of Example 3 (After function invokation with image shape (128, 128))
-<img src="5.1.09_average_pool_22_22.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 11 of Example 3 (After function invocation with image shape (128, 128))
+<img src="5.1.09_average_pool_22_22.tiff"  class="img-responsive" />
 </p>
 
 
@@ -437,13 +437,13 @@ Line 11 of Example 3 (After function invokation with image shape (128, 128))
 >>> plt.show()
 ```
 <p align="center">
-Line 6 of Example 4 (Before function invokation with image shape (256, 256))
-<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 6 of Example 4 (Before function invocation with image shape (256, 256))
+<img src="5.1.09.tiff"  class="img-responsive" />
 </p>
 
 <p align="center">
-Line 11 of Example 4 (After function invokation with image shape (253, 253))
-<img src="5.1.09_average_pool_44_11.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 11 of Example 4 (After function invocation with image shape (253, 253))
+<img src="5.1.09_average_pool_44_11.tiff"  class="img-responsive" />
 </p>
 
 
@@ -464,33 +464,42 @@ Line 11 of Example 4 (After function invokation with image shape (253, 253))
 >>> plt.show()
 ```
 <p align="center">
-Line 6 of Example 5 (Before function invokation with image shape (256, 256))
-<img src="5.1.09.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 6 of Example 5 (Before function invocation with image shape (256, 256))
+<img src="5.1.09.tiff"  class="img-responsive" />
 </p>
 
 <p align="center">
-Line 11 of Example 5 (After function invokation with image shape (254, 85))
-<img src="5.1.09_average_pool_33_13.tiff" alt="Grid World bridge challenge" class="img-responsive" />
+Line 11 of Example 5 (After function invocation with image shape (254, 85))
+<img src="5.1.09_average_pool_33_13.tiff"  class="img-responsive" />
 </p>
 
 
 #### Part 1.5 [5 points]
 
-Write a function `sigmoid(w, x, b)` that accepts an input neuron `x`, a one-dimensional numpy array of weights and bias and applies a sigmoid activation function. 
-  
+Write a function `sigmoid(x)` that accepts an a one-dimensional numpy array `x` and applies a sigmoid activation function on the input. 
+
+###### Example 1
+ ```python
+>>> x = np.array([0.5, 3, 1.5, -4.7, -100])
+>>> print(sigmoid(x))
+[6.22459331e-01 9.52574127e-01 8.17574476e-01 9.01329865e-03 3.72007598e-44]
+```
 
 
-## <a name="part_2"></a> Part 2 [60 points]
 
 
-## Set up Pytorch 
 
-Pytorch is one of the most popular deep learning frameworks in both industry and academia, and learning its use will be invaluable should you choose a career in deep learning. 
-You will be using Pytorch for this assignment, and instead of providing you source code, we ask you to build off a couple Pytorch tutorials. 
 
-### Setup
 
-#### Using miniconda
+
+## <a name="part_2"></a> Part 2 [55 points]
+
+The goal of this part of the assignment is to get familiar with one of the Machine Learning frameworks called [PyTorch](https://pytorch.org). 
+
+The installation instructions can be found [here](https://pytorch.org/get-started/locally/). If you are having difficulty installing it here is an alternative way to  [setup PyTorch using miniconda](#setup).
+
+
+### <a name="setup"></a>  (Setup PyTorch using miniconda)
 Miniconda is a package, dependency and environment management for python (amongst other languages). It lets you install different versions of python, different versions of various packages in different environments which makes working on multiple projects (with different dependencies) easy.
 
 There are two ways to use miniconda,
@@ -514,17 +523,87 @@ $ bash Miniconda3-latest-Linux-x86_64.sh
 After successful installation, running the command ```$ which conda``` should output ```/home1/m/$USERNAME/miniconda3/bin/conda```.
 
 
-A [train dataset](train_dataset.csv) is provided along this Specification, which is adopted from the [Fashion MNIST dataset](https://github.com/zalandoresearch/fashion-mnist). 
 
-1.  **[10 points]** Parse the data in `__init__(self, file)` of `MyDataset` class as `self.X` and `self.Y` variables. The first column of the dataset is a label `Y` and the remaining columns correspond to the pixel of an 28*28 image flattened.
+### Fashion MNIST Dataset
 
-    ```python
-    >>> my_dataset=MyDataset('train_dataset.csv')
-    >>> loader = torch.utils.data.DataLoader(my_dataset, batch_size=100, shuffle=False)
-    >>> print(list(loader)[0])
-    ?
-    ```
-2.  **[50 points]** Fill in  `__init__(self)` and  `forward(self, x)` of `MyModel` class to implement architecture of your choice. We suggest starting from 1 convolutional layer followed by the final output layers. It is up to you to decide the architecture, and we recommend looking int [`torch.nn.MaxPool2d`](https://pytorch.org/docs/stable/nn.html) and [`torch.nn.Conv2d`](https://pytorch.org/docs/stable/nn.html) functions. 
+
+The [dataset.csv](dataset.csv) we will use is a sub-set of the Fashion MNIST dataset . 
+
+
+<p align="center">
+<img src="fashion-mnist-sprite.png" class="img-responsive" width="50%" height="50%"/>
+</p>
+
+<p align="center">
+<img src="embedding.gif" class="img-responsive" width="50%" height="50%"/>
+</p>
+
+The dataset contains 28x28 greyscale images, where each image has a label from one of 10 classes:
+
+| Label | Description |
+| --- | --- |
+| 0 | T-shirt/top |
+| 1 | Trouser |
+| 2 | Pullover |
+| 3 | Dress |
+| 4 | Coat |
+| 5 | Sandal |
+| 6 | Shirt |
+| 7 | Sneaker |
+| 8 | Bag |
+| 9 | Ankle boot |
+
+
+
+
+#### Part 2.1 [5 points]
+
+Parse the data in `__init__(self, file_path)` of `MyDataset` class as `self.X` and `self.Y` variables. 
+The shape of `self.X` is supposed to be (?, 1, 28, 28) and `self.Y` is supposed to be (?,). Each line in the file corresponds 
+to a label and an image, where label is in first column and the remaining columns (pixel 1...pixel 784) are image pixels.  
+You should expect something as follows when dataset is loaded:
+
+```python
+>>> import matplotlib.pyplot as plt
+>>> classes = ['T-Shirt', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle Boot']
+>>> dataset = MyDataset('dataset.csv')
+>>> print(dataset.X.shape)
+(?, 1, 28, 28)
+>>> print(dataset.Y.shape)
+(?, )
+>>> index = 0
+>>> print(classes[dataset.Y[index]])
+Pullover
+>>> image = dataset.X[index]
+>>> print(image.shape)
+(1, 28, 28)
+>>> plt.imshow(image.reshape(28, 28), cmap='gray')
+>>> plt.title(classes[dataset.Y[index])
+>>> plt.show()
+```
+<p align="center">
+<img src="sample_image.png" class="img-responsive" width="50%" height="50%"/>
+</p>
+
+
+    
+#### Part 2.2 [50 points]
+
+Fill in  `__init__(self)` and  `forward(self, x)` of `MyModel` class to implement architecture of your choice. 
+
+We suggest starting from a Fully-Connected Network with a single hidden layer and developing your implementation to a Convolutional Neural Network. You can see performance of different architectures for this dataset [here](https://github.com/zalandoresearch/fashion-mnist/blob/master/README.md#Benchmark)
+ 
+There are many tutorials online for you to use, for instance here [blog post](http://adventuresinmachinelearning.com/pytorch-tutorial-deep-learning/) that builds a Fully-Connected Network with 2 hidden layers. 
+
+We provide code used for training, so your output should be something like:
+```text
+Epoch : 1/5, Iteration : 100/?,  Loss: 0.4771
+Epoch : 1/5, Iteration : 200/?,  Loss: 0.3591
+...
+Epoch : 5/5, Iteration : ?/?,  Loss: 0.3591
+```
+
+You will be evaluated on the reserved test dataset in terms of Accuracy and F1-score. 
 
 
 ## 3. Feedback [0 points]
