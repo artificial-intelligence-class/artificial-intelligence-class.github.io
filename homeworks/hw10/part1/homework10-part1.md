@@ -1,8 +1,8 @@
 ---
 layout: default
-img: python.jpg
-img_link: http://xkcd.com/353/
-caption: Hello world!
+img: modified_bayes_theorem_2x.png
+img_link: http://xkcd.com/2059/
+caption: Modified Bayes' Theorem
 title: CIS 521 Homework 10 "Extra Credit - Part 1"
 active_tab: homework
 release_date: 2018-12-03
@@ -66,7 +66,9 @@ The goal of this part of the assignment is to get an intuition of the underlying
 As mentioned in the instructions, you are restricted from using any external packages other than [NumPy](http://www.numpy.org). Numpy has a [Quickstart tutorial](https://docs.scipy.org/doc/numpy/user/quickstart.html), which we recommend looking at if you are not familiar or would like to refresh memory. 
 
 
-1. **[15 points]** Write a function `convolve_greyscale(image, filter)` that accepts a numpy array `image` of shape `(image_height, image_width)` (greyscale image) of integers  and a numpy array `kernel` of shape `(kernel_height, kernel_width)` of floats. The function performs a convolution,  which consists of adding each element of the image to its local neighbors, weighted by the kernel. The result of this function is a new numpy array of integers that has the same shape as the input `image`. Apply zero-padding to the input image to calculate image edges. Note that the height and width of both `image` and `kernel` might not be equal to each other. 
+1. **[15 points]** Write a function `convolve_greyscale(image, filter)` that accepts a numpy array `image` of shape `(image_height, image_width)` (greyscale image) of integers  and a numpy array `kernel` of shape `(kernel_height, kernel_width)` of floats. The function performs a convolution,  which consists of adding each element of the image to its local neighbors, weighted by the kernel. 
+
+    The result of this function is a new numpy array of integers that has the same shape as the input `image`. You can consider using the function `astype('uint8')` to turn all array elements to integers. Apply zero-padding to the input image to calculate image edges. Note that the height and width of both `image` and `kernel` might not be equal to each other. 
 
     There exist a few visualisations hands-on experience of applying a convolution online, for instance a post by [Victor Powell](http://setosa.io/ev/image-kernels/). For more information, you can also use real images as an input.  We recommend selecting a few images of type `gray` from the Miscellaneous Volume  of the  [USC-SIPI Image Database](http://sipi.usc.edu/database/database.php?volume=misc). (Image in the third example below is taken from this dataset labelled under [5.1.09](http://sipi.usc.edu/database/download.php?vol=misc&img=5.1.09).)
             
@@ -139,9 +141,9 @@ As mentioned in the instructions, you are restricted from using any external pac
     </p>
 
 
-2. **[5 points]** Write a function `convolve_rgb(image, filter)` that accepts a numpy array `image` of shape `(image_height, image_width, image_depth)` of integers  and a numpy array `kernel` of shape `(kernel_height, kernel_width)` of floats. The function performs a convolution,  which consists of adding each element of the image to its local neighbors, weighted by the kernel. The result of this function is a new numpy array of integers that has the same shape as the input `image`. 
+2. **[5 points]** Write a function `convolve_rgb(image, filter)` that accepts a numpy array `image` of shape `(image_height, image_width, image_depth)` of integers  and a numpy array `kernel` of shape `(kernel_height, kernel_width)` of floats. The function performs a convolution,  which consists of adding each element of the image to its local neighbors, weighted by the kernel. 
 
-    You can use `convolve_greyscale(image, filter)` implemented in the previous part.  As before, apply zero-padding to the input image to calculate image edges. Note that the height and width of both `image` and `kernel` might not be equal to each other. 
+    The result of this function is a new numpy array of integers that has the same shape as the input `image`. You can use `convolve_greyscale(image, filter)` implemented in the previous part. As before, you can consider using the function `astype('uint8')` to turn all array elements to integers. Also, apply zero-padding to the input image to calculate image edges. Note that the height and width of both `image` and `kernel` might not be equal to each other. 
 
     We recommend selecting a few images of type `color` from the Miscellaneous Volume of the  [USC-SIPI Image Database](http://sipi.usc.edu/database/database.php?volume=misc). (Images in the examples below are taken from this dataset labelled under [4.1.07](http://sipi.usc.edu/database/download.php?vol=misc&img=4.1.07))
 
