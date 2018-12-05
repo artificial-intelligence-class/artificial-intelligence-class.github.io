@@ -511,9 +511,9 @@
   type: exam
 -
   date: 2018-12-04
-  slides: 
-  title:  TBD 
-  readings:   
+  slides: 24-Computer-Vision-Self-Driving-Cars-and-NLP.pdf
+  title:  Computer Vision, Self-Driving Cars, and NLP 
+  recording:   https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f512fdc6-78e7-4bd0-bccc-a9460066d33e
 -
   date: 2018-12-06
   title:  Midterm exam 3
