@@ -6,7 +6,7 @@ caption: Hello world!
 title: CIS 521 Homework 10 "Extra Credit - Part 2"
 active_tab: homework
 release_date: 2018-12-7
-due_date: 2018-12-13 23:59:00EDT
+due_date: 2018-12-10 23:59:00EDT
 materials:
     - 
         name: skeleton file
