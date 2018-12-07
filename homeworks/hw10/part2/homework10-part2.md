@@ -389,8 +389,8 @@ Full points will be given for a `Advanced Model` for num_epochs = 2, batch_size 
 
 
 ## 3. Feedback [5 points]
-1. **[2 points]** What were the two classes that one of your models confused the most?  
-2. **[3 points]** Describe your architecture for the Advanced Model 
+1. **[2 points]** What were the two classes that one of your models confused the most?
+2. **[3 points]** Describe your architecture for the Advanced Model.
 3. **[0 points]** Approximately how long did you spend on this assignment?
 4. **[0 points]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 5. **[0 points]**  Which aspects of this assignment did you like? Is there anything you would have changed?
