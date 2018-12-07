@@ -169,7 +169,7 @@ Here is a way to visualise the first image of our data:
 
 ##### Data Loading and Processing in PyTorch
 
-`load_data(file_path, reshape_images)` function gets called in the `FashionMNISTDataset` class given in the skeleton file. `FashionMNISTDataset` class is a custom dataset that inherits [`torch.utils.data.Dataset`](https://pytorch.org/docs/stable/_modules/torch/utils/data/dataset.html#Dataset), an abstract class representing a dataset in PyTorch. We filled in required `__len__` and `__getitem__` functions to return the size of the dataset and to add support the indexing of the dataset. 
+The `load_data(file_path, reshape_images)` function gets called in the `FashionMNISTDataset` class, which is given in the skeleton file. The `FashionMNISTDataset` class is a custom dataset that inherits [`torch.utils.data.Dataset`](https://pytorch.org/docs/stable/_modules/torch/utils/data/dataset.html#Dataset), which is an abstract class representing a dataset in PyTorch. We filled in the required `__len__` and `__getitem__` functions to return the size of the dataset and to add support the indexing of the dataset. 
 
 ```python
 from torch.utils.data import Dataset
@@ -239,28 +239,39 @@ Note that we added the code to load the data with `torch.utils.data.DataLoader` 
 
 
     
-### Part 2.2 - 2.4  [50 points]
+### Part 2.2 - 2.4  [45 points]
 
-For the next part of the assignment we give you a few functions that you are welcome to use and modify:
+For the next part of the assignment we give you a few functions that you are welcome to use and modify.  They are:
 
-1. `train(model, data_loader, num_epochs, learning_rate)` function accepts a `model` which is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module), `data_loader` which is a class of [`torch.utils.data.DataLoader`](https://pytorch.org/docs/stable/_modules/torch/utils/data/dataloader.html#DataLoader) and two hyper-parameters and `num_epochs` and `learning_rate`.
+* The `train(model, data_loader, num_epochs, learning_rate)` function, which accepts the following arguments
+1. a `model` which is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module), 
+2. a `data_loader` which is a class of [`torch.utils.data.DataLoader`](https://pytorch.org/docs/stable/_modules/torch/utils/data/dataloader.html#DataLoader) 
+3. two hyper-parameters: `num_epochs` and `learning_rate`.
 This function trains a `model` for the specified `num_epochs` using [`torch.nn.CrossEntropyLoss`](https://pytorch.org/docs/stable/nn.html#loss-functions) loss function and [`torch.optim.Adam`](https://pytorch.org/docs/stable/optim.html) as an optimizer. Once in a specified amount of iterations, the function prints the current loss, train accuracy, train F1-score for the model. 
 
-2. `evaluate(model, data_loader)` function accepts a `model` which is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module) and a `data_loader` which is a class of [`torch.utils.data.DataLoader`](https://pytorch.org/docs/stable/_modules/torch/utils/data/dataloader.html#DataLoader)
-The function returns and gives a list of actual labels and a list of predicted labels by that `model` for this `data_loader` class. This function can be used to get the metrics, such as accuracy or F1-score
+* The `evaluate(model, data_loader)` function, which accepts
+1. a `model` which is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module) 
+2. a `data_loader` which is a class of [`torch.utils.data.DataLoader`](https://pytorch.org/docs/stable/_modules/torch/utils/data/dataloader.html#DataLoader).
 
-3. `plot_confusion_matrix(cm, class_names, title=None)` function that accepts a confusion matrix `cm`, list of corresponding `class_names` and an optional `title` and visualises confusion matrix. This function was taken and modified from [here](https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html)
+The `evaluate` function returns a list of actual labels and a list of predicted labels by that `model` for this `data_loader` class. This function can be used to get the metrics, such as accuracy or F1-score
+
+* The `plot_confusion_matrix(cm, class_names, title=None)` function, which visualises a confusion matrix. It accepts
+1. a confusion matrix `cm`, 
+2. a list of corresponding `class_names` 
+3. an optional `title`. 
+
+The `plot_confusion_matrix` function was modified from [here](https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html)
 
 
-All you have to do is to fill in `__init__(self)` and  `forward(self, x)` for 3 different classes: Easy, Medium, and Advanced.  
+All you have to do is to fill in `__init__(self)` and  `forward(self, x)` for 3 different classes: *Easy*, *Medium*, and *Advanced*.  
 
 #### Part 2.2: Easy [10 pts]
 
-In this part we ask you to fill in `__init__(self)` and  `forward(self, x)` of `EasyModel` class that is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module), which is a base class for all neural network models in PyTorch. 
-We ask you to build a model that consists of a single linear layer (using [`torch.nn.Linear`](https://pytorch.org/docs/stable/nn.html#linear-layers) for instance) that maps the size of a one dimensional representation of an image to the number of classes.
+In this part we ask you to fill in `__init__(self)` and  `forward(self, x)` of the `EasyModel` class. `EasyModel` is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module), which is a base class for all neural network models in PyTorch. 
+We ask you to build a model that consists of a single linear layer (using [`torch.nn.Linear`](https://pytorch.org/docs/stable/nn.html#linear-layers)).  You will need to write one line of code.  It starts with `self.fc = torch.nn.Linear`. It maps the size of the representation of an image to the number of classes.
 We recommend to have look around the API for [`torch.nn`](https://pytorch.org/docs/stable/nn.html). 
 
-Once you have filled in `__init__(self)` and  `forward(self, x)` of `EasyModel` class you should expect something similar to this:
+Once you have filled in `__init__(self)` and  `forward(self, x)` of the `EasyModel` class you should expect something similar to this:
 
 ```python
 >>> class_names = ['T-Shirt', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle Boot']
@@ -296,12 +307,12 @@ Full points will be given for an `Easy Model` for num_epochs = 2, batch_size = 1
 
 #### Part 2.3: Medium [15 pts]
 
-In this part we ask you to fill in `__init__(self)` and  `forward(self, x)` of `Medium` class that is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module). 
-We ask you to build a model that consists of a multiple fully-connected linear layers (using [`torch.nn.Linear`](https://pytorch.org/docs/stable/nn.html#linear-layers) for instance).
-The network architecture is open-ended, so it is up to you to decide the number of linear layers and the size of nodes within the hidden layer(s). There are many tutorials online for you to use, for instance here [blog post](http://adventuresinmachinelearning.com/pytorch-tutorial-deep-learning/) that builds a Fully-Connected Network with 2 hidden layers.  You can also use activation functions and pooling in between the layers. 
+In this part we ask you to fill in `__init__(self)` and  `forward(self, x)` of the `Medium` class that is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module). 
+We ask you to build a model that consists of a multiple fully-connected linear layers (using [`torch.nn.Linear`](https://pytorch.org/docs/stable/nn.html#linear-layers)).
+The network architecture is open-ended, so it is up to you to decide the number of linear layers and the size of nodes within the hidden layer(s). There are many tutorials online for you to use, for instance [this blog post](http://adventuresinmachinelearning.com/pytorch-tutorial-deep-learning/) gives a good solution for our  `Medium` class  by building a Fully-Connected Network with 2 hidden layers.  You can also use activation functions like ReLU. 
 Remember that the input to this model is the size of a one dimensional representation of an image and the output is the number of classes as for the Easy Model.
 
-Once you have filled in `__init__(self)` and  `forward(self, x)` of `MediumModel` class you should expect something similar to this:
+Once you have filled in `__init__(self)` and  `forward(self, x)` of the `MediumModel` class you should expect something similar to this:
 ```python
 >>> class_names = ['T-Shirt', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle Boot']
 >>> num_epochs = 2
@@ -337,12 +348,12 @@ Full points will be given for a `Medium Model` for num_epochs = 2, batch_size = 
 
 #### Part 2.3: Advanced [20 pts]
 
-In this part we ask you to fill in `__init__(self)` and  `forward(self, x)` of `Advanced` class that is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module).
+In this part we ask you to fill in `__init__(self)` and  `forward(self, x)` of the `Advanced` class that is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module).
 We ask you to build a Convolutional Neural Network, which will consists of one or more convolutional layers ([`torch.nn.Conv2d`](https://pytorch.org/docs/stable/nn.html#convolutional-layers)) connected by the linear layers. The architecture is open-ended, so it is up to you to decide the number of layers, kernel size, activation functions etc. 
 You can see performance of different architectures for this dataset [here](https://github.com/zalandoresearch/fashion-mnist/blob/master/README.md#Benchmark). 
 The input to this model, unlike the input for `Easy` and `Medium` Models is expected to be different, and this is the reason why we asked you to reshape the images in Part 2.1. The output of this model remains the same as before.
 
-Once you have filled in `__init__(self)` and  `forward(self, x)` of `EasyModel` class you can use the following to see the performance of your  
+Once you have filled in `__init__(self)` and  `forward(self, x)` of the `EasyModel` class you can use the following to see the performance of your  
 
 ```python
 >>> class_names = ['T-Shirt', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle Boot']
