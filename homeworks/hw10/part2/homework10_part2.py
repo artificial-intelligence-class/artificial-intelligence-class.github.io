@@ -150,5 +150,40 @@ def main():
     plot_confusion_matrix(confusion_matrix(y_true_advanced, y_pred_advanced), class_names, 'Advanced Model')
 
 
+############################################################
+# Feedback
+############################################################
+
+feedback_question_1 = """
+Type your response here.
+Your response may span multiple lines.
+Do not include these instructions in your response.
+"""
+
+feedback_question_2 = """
+Type your response here.
+Your response may span multiple lines.
+Do not include these instructions in your response.
+"""
+
+feedback_question_3 = """
+Type your response here.
+Your response may span multiple lines.
+Do not include these instructions in your response.
+"""
+
+feedback_question_4 = """
+Type your response here.
+Your response may span multiple lines.
+Do not include these instructions in your response.
+"""
+
+feedback_question_5 = """
+Type your response here.
+Your response may span multiple lines.
+Do not include these instructions in your response.
+"""
+
+
 if __name__ == '__main__':
     main()
