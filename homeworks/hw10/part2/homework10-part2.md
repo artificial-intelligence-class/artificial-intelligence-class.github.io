@@ -1,8 +1,8 @@
 ---
 layout: default
-img: python.jpg
-img_link: http://xkcd.com/353/
-caption: Hello world!
+img: turing_test.png
+img_link: http://xkcd.com/329/
+caption: Turing Test
 title: CIS 521 Homework 10 "Extra Credit - Part 2"
 active_tab: homework
 release_date: 2018-12-7
@@ -214,7 +214,7 @@ This `FashionMNISTDataset` class can be used by [`torch.utils.data.DataLoader`](
     0     0     0  ...     25     9     0
     0     0     0  ...      0     0     0
     0     0     0  ...      0     0     0
-       ...         $\ddots$          ...       
+       ...         ...           ...       
     0     0     0  ...      0     0     0
     0     0     0  ...      0     0     0
     0     0     1  ...      0     0     0
