@@ -214,7 +214,7 @@ This `FashionMNISTDataset` class can be used by [`torch.utils.data.DataLoader`](
     0     0     0  ...     25     9     0
     0     0     0  ...      0     0     0
     0     0     0  ...      0     0     0
-       ...          ⋱          ...       
+       ...         $\ddots$          ...       
     0     0     0  ...      0     0     0
     0     0     0  ...      0     0     0
     0     0     1  ...      0     0     0
@@ -253,14 +253,14 @@ This function trains a `model` for the specified `num_epochs` using [`torch.nn.C
 1. a `model` which is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module) 
 2. a `data_loader` which is a class of [`torch.utils.data.DataLoader`](https://pytorch.org/docs/stable/_modules/torch/utils/data/dataloader.html#DataLoader).
 
-The `evaluate` function returns a list of actual labels and a list of predicted labels by that `model` for this `data_loader` class. This function can be used to get the metrics, such as accuracy or F1-score
+The `evaluate` function returns a list of actual labels and a list of predicted labels by that `model` for this `data_loader` class. This function can be used to get the metrics, such as accuracy or F1-score.
 
 * The `plot_confusion_matrix(cm, class_names, title=None)` function, which visualises a confusion matrix. It accepts
 1. a confusion matrix `cm`, 
 2. a list of corresponding `class_names` 
 3. an optional `title`. 
 
-The `plot_confusion_matrix` function was modified from [here](https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html)
+The `plot_confusion_matrix` function was modified from [here](https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html).
 
 
 All you have to do is to fill in `__init__(self)` and  `forward(self, x)` for 3 different classes: *Easy*, *Medium*, and *Advanced*.  
@@ -302,12 +302,12 @@ Easy Model: Final Train Accuracy: 75.4150, Final Train F1 Score: 73.7432
 
 
 We reserved multiple datasets for testing with the same distribution of labels as given in `dataset.csv`. We will train and evaluate your model on our end using the same `train()` and `evaluate()` functions as given. 
-Full points will be given for an `Easy Model` for num_epochs = 2, batch_size = 100, learning_rate = 0.001 if the accuracy on the reserved datasets and F1-Score is >= 72%.
+Full points will be given for an `Easy Model` for num_epochs = 2, batch_size = 100, learning_rate = 0.001 if the accuracy on the reserved datasets and F1-Score is >= 73%.
 
 
 #### Part 2.3: Medium [15 pts]
 
-In this part we ask you to fill in `__init__(self)` and  `forward(self, x)` of the `Medium` class that is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module). 
+In this part we ask you to fill in `__init__(self)` and  `forward(self, x)` of the `MediumModel` class that is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module). 
 We ask you to build a model that consists of a multiple fully-connected linear layers (using [`torch.nn.Linear`](https://pytorch.org/docs/stable/nn.html#linear-layers)).
 The network architecture is open-ended, so it is up to you to decide the number of linear layers and the size of nodes within the hidden layer(s). There are many tutorials online for you to use, for instance [this blog post](http://adventuresinmachinelearning.com/pytorch-tutorial-deep-learning/) gives a good solution for our  `Medium` class  by building a Fully-Connected Network with 2 hidden layers.  You can also use activation functions like ReLU. 
 Remember that the input to this model is the size of a one dimensional representation of an image and the output is the number of classes as for the Easy Model.
@@ -346,7 +346,7 @@ As before, we reserved multiple datasets for testing with the same distribution 
 Full points will be given for a `Medium Model` for num_epochs = 2, batch_size = 100, learning_rate = 0.001 if the accuracy on the reserved datasets and F1-Score is >= 82%.
 
 
-#### Part 2.3: Advanced [20 pts]
+#### Part 2.4: Advanced [20 pts]
 
 In this part we ask you to fill in `__init__(self)` and  `forward(self, x)` of the `Advanced` class that is a subclass of [`torch.nn.Module`](https://pytorch.org/docs/stable/_modules/torch/nn/modules/module.html#Module).
 We ask you to build a Convolutional Neural Network, which will consists of one or more convolutional layers ([`torch.nn.Conv2d`](https://pytorch.org/docs/stable/nn.html#convolutional-layers)) connected by the linear layers. The architecture is open-ended, so it is up to you to decide the number of layers, kernel size, activation functions etc. 
