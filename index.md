@@ -6,6 +6,16 @@ img_link: https://en.wikipedia.org/wiki/HAL_9000
 caption: I am putting myself to the fullest possible use, which is all I think that any conscious entity can ever hope to do. 
 active_tab: main_page 
 ---
+ 
+<div class="alert alert-info">
+CIS 421/521 will be offered during the Summer 2 Session (July 5-August 9).  The class will meet in 3401 Walnut room 401B on Mondays, Wednesdays and Fridays from 2:30pm-5pm (not noon-2:30pm like it said during Advanced Registration). 
+</div>
+
+
+<div class="alert alert-info" markdown="1">
+Enrollment for CIS 421/521 for Fall 2019 will be handled via the CIS Department Waitlist system, and not via the Advance Registration system.  You do **not** need to contact the instructor to request permission to register.  To get a permit, [you can sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) after the Advance Registration period ends.     
+</div>
+
 
 
 <!-- Display an alert about upcoming homework assignments -->
@@ -49,10 +59,10 @@ Discussion Forum
 : [Piazza](https://piazza.com/upenn/fall2018/cis521)
 
 Time and place
-: Fall 2018, Tuesdays and Thursdays 12-1:30, Wu and Chen Auditorium (Levine 101)
+: Summer 2 Session 2019 (from July 5th through August 9th). Mondays, Wednesdays and Fridays from 2:30pm-5pm in 3401 Walnut room 401B.
 
 Office hours
-: Sundays 4-6pm and Mondays 3:30-7:30pm in 3401 Walnut room 401B, Fridays 3-5pm in 3401 Walnut room 463C.
+: TBD
 
 Textbook
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
