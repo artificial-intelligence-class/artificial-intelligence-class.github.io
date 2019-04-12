@@ -7,13 +7,13 @@ caption: I am putting myself to the fullest possible use, which is all I think t
 active_tab: main_page 
 ---
  
-<div class="alert alert-info">
+<div class="alert alert-success">
 CIS 421/521 will be offered during the Summer 2 Session (July 5-August 9).  The class will meet in 3401 Walnut room 401B on Mondays, Wednesdays and Fridays from 2:30pm-5pm (not noon-2:30pm like it said during Advanced Registration). 
 </div>
 
 
-<div class="alert alert-info" markdown="1">
-Enrollment for CIS 421/521 for Fall 2019 will be handled via the CIS Department Waitlist system, and not via the Advance Registration system.  You do **not** need to contact the instructor to request permission to register.  To get a permit, [you can sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) after the Advance Registration period ends.     
+<div class="alert alert-success" markdown="1">
+Interestred in joining the class in the Fall?  To get a permit, [you can sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) now. You do **not** need to contact the instructor to request permission to register.  
 </div>
 
 
