@@ -141,7 +141,7 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=01828182-96fd-4abd-8280-a9460066d07f
   readings:   
     - 
-      title: AIMA Chapter 3 "Solving Problems by Search" (3.5-3.6)) 
+      title: AIMA Chapter 3 "Solving Problems by Search" (3.5-3.6)
       authors: Russell and Norvig
       optional: false 
     - 
@@ -159,7 +159,7 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2376392c-ef0e-41f1-896c-a9460066d0ae
   readings:   
     - 
-      title: AIMA Chapter 5.2-5.5
+      title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
       authors: Russell and Norvig
       optional: false 
   videos:
@@ -180,7 +180,11 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7a9ce021-a9ed-4552-8830-a9460066d0ca
   readings:   
     - 
-      title: AIMA Chapter 5.2-5.5 and 16.1-16.3
+      title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: AIMA Chapter 16 "Making Simple Decisions" (16.1-16.3)
       authors: Russell and Norvig
       optional: false 
   videos:
@@ -200,7 +204,7 @@
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27b5b53b-c7ff-4200-a408-a9460066d0eb
   readings:
     - 
-      title: AIMA Chapter 17.1-17.3
+      title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
       authors: Russell and Norvig
       optional: false 
   videos: 
@@ -236,9 +240,10 @@
   date: 2018-10-09
   slides: 10-MDPs-2.pdf
   title:  Markov Decision Processes - part 2
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9431e864-382a-4c26-830f-a9460066d144
   readings:   
     - 
-      title: AIMA Chapter 17.1-17.3
+      title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
       authors: Russell and Norvig
       optional: false 
     - 
@@ -252,64 +257,120 @@
       title: How the "Most Human Human" passed the Turing Test
 -
   date: 2018-10-11
-  slides: 
+  slides: 11-Reinforcement-Learning.pdf
   title:  Reinforcement Learning
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8577e149-ead6-4844-8041-a9460066d160
   readings:   
     - 
-      title: AIMA Chapter 21
+      title: AIMA Chapter 21 "Reinforcement Learning"
       authors: Russell and Norvig
       optional: false 
     - 
-      title: Chapter 6.1, 6.2 and 6.5 - Temporal-Difference Learning
+      title: Chapter 6 "Temporal-Difference Learning" (6.1, 6.2 and 6.5)
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
-
+  videos: 
+    -
+      url: https://www.youtube.com/watch?v=s93KC4AGKnY
+      title: End of the 1983 movie Wargames 
+-
+  date: 2018-10-16
+  slides: 12-Reinforcement-Learning-2.pdf
+  title:  Reinforcement Learning - part 2
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=707f00af-2879-4fa7-b3e2-a9460066d181
+  readings:   
+    - 
+      title: AIMA Chapter 21 "Reinforcement Learning"
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: Chapter 6 "Temporal-Difference Learning" (6.1, 6.2 and 6.5)
+      authors: Sutton and Barto
+      url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
+  videos:
+    -
+      authors: Stanford University 
+      url: https://www.youtube.com/watch?v=M-QUkgk3HyE
+      title: Autonomous Helicopters Teach Themselves to Fly Stunts
 -
   date: 2018-10-16
   title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
   type: exam
 -
-  date: 2018-10-16
-  slides: 
-  title:  Reinforcement Learning - part 2
+  date: 2018-10-18
+  slides: 13-Probability.pdf
+  title:  Reinforcement Learning wrap up and Probability 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=32c249cf-dac2-4de0-843a-a9460066d19d
   readings:   
     - 
-      title: AIMA Chapter 21
+      title: AIMA Chapter 13 "Quantifying Uncertainty" (13.1-13.5)
       authors: Russell and Norvig
       optional: false 
--
-  date: 2018-10-18
-  slides: 
-  title:  Probability 
-  readings:   
+  videos:
+    -
+      authors: World Science Festival 
+      url: https://www.youtube.com/watch?v=BcvLAw-JRss
+      title: Everything You Ever Wanted to Know About Bayes' Theorem But Were Afraid To Ask
 -
   date: 2018-10-23
-  slides: 
-  title:  Markov Models 
+  slides: 14-Markov-Models.pdf
+  title:  Probability Wrap Up and Markov Models 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9a71d6e2-caa1-4c19-a63c-a9460066d1d5
   readings:  
+    - 
+      title: AIMA Chapter 15 "Probabilistic Reasoning Over Time" (15.2-15.5)
+      authors: Russell and Norvig
+      optional: false 
+  videos:
+    -
+      authors: Khan Academy 
+      url: https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication
+      title: A mathematical theory of communication
+
 -
   date: 2018-10-23
   title:  HW5 due (MDPs and GridWorld), HW6 released (Reinforcement Learning)
   type: exam
 -
   date: 2018-10-25
-  slides: 
+  slides: 15-HMMs.pdf
   title:  Hidden Markov Models 
-  readings:   
+  speaker: Mitch Marcus
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ff838e0c-c00a-41c2-8509-a9460066d1f1
+  readings:  
+    - 
+      title: AIMA Chapter 15 "Probabilistic Reasoning Over Time" (15.2-15.5)
+      authors: Russell and Norvig
+      optional: false 
 -
   date: 2018-10-30
-  slides: 
-  title:  Applications of HMMs
+  slides: 16-Bayes-Nets.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3dff1015-86e5-4404-b46c-a9460066d212
+  title:  Bayes' Nets
   readings:   
+    - 
+      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
+      authors: Russell and Norvig
+      optional: false 
+  videos:
+    -
+      authors: Daphne Koller 
+      url: https://www.youtube.com/playlist?list=PLBAGcD3siRDjiQ5VZQ8t0C7jkHQ8fhuq8
+      title: Probabilistic Graphical Models online course
 -
   date: 2018-10-30
   title:  HW6 due (Reinforcement Learning), study for exam
   type: exam
 -
   date: 2018-11-01
-  slides: 
-  title: Bayes' Nets
+  slides: 16-Bayes-Nets-2.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfedeced-9e2e-4cc9-9cf8-a9460066d22e
+  title: Bayes' Nets part 2
   readings:   
+    - 
+      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
+      authors: Russell and Norvig
+      optional: false 
 -
   date: 2018-11-06
   title:  Midterm exam 2 
@@ -320,32 +381,80 @@
   type: exam
 -
   date: 2018-11-08
-  slides: 
-  title:  Bayes' Nets part 2
+  slides: 16-Bayes-Nets-3.pdf
+  title:  Bayes' Nets part 3
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3e7f0df0-ed71-4743-b411-a9460066d26b
   readings:   
+    - 
+      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
+      authors: Russell and Norvig
+      optional: false 
 -
   date: 2018-11-09
   title: Last day to withdraw from a course
   type: no_lecture
 -
   date: 2018-11-13
-  slides: 
+  slides: 19-Naive-Bayes.pdf
   title:   Machine Learning&colon; Naive Bayes
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=abcca865-5536-4e35-8747-a9460066d287
   readings:   
+    - 
+      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
+      authors: Russell and Norvig
+      optional: false 
+  videos:
+    - 
+      authors: Name Explain
+      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
+      title: Why is Junk Email Called Spam?
+    -
+      authors: Monty Python 
+      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
+      title: SPAM
 -
   date: 2018-11-13
   title:  HW7 due (Generate a novel), HW8 released (HMMs)
   type: exam
 -
   date: 2018-11-15
-  slides: 
+  slides: 20-Perceptron.pdf
   title:  Machine Learning&colon; Perceptrons
-  readings:   
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2f93efb7-8edf-4907-b93a-a9460066d2a8
+  readings:     
+    - 
+      title: AIMA Chapter 18 "Learning from Examples" (18.6.3)
+      authors: Russell and Norvig
+      optional: false  
+    - 
+      title: Neural Networks and Deep Learning Chapter 1 "Using Neural Nets to Recognize Handwritten Digits" 
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap1.html
+      optional: true  
+    - 
+      title: Electronic 'Brain' Teaches Itself
+      authors: New York Times (July 13, 1958)
+      url: https://timesmachine.nytimes.com/timesmachine/1958/07/13/91396361.html?action=click&contentCollection=Archives&module=LedeAsset&region=ArchiveBody&pgtype=article&pageNumber=116
+      optional: true  
+  videos:
+    - 
+      authors: Paul Anderson
+      url: https://www.youtube.com/watch?v=HZh0A-lWSmY
+      title: The Neuron
+    - 
+      authors: 3Blue1Brown
+      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+      title: Essence of Linear Algebra
 -
   date: 2018-11-20
-  slides: 
-  title:  Machine Learning&colon; Kernels and Clustering
+  slides: 21-Perceptrons-KNNs-and-Kernels.pdf
+  title: Machine Learning&colon; Kernels and Clustering
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=087eea08-6db6-43c8-b12d-a9460066d2c4
   readings:   
+    - 
+      title: AIMA Chapter 18 "Learning from Examples" (18.8)
+      authors: Russell and Norvig
+      optional: false  
 -
   date: 2018-11-20
   title:  HW8 due (HMMs), HW9 released (Perceptrons)
@@ -356,23 +465,60 @@
   type: no_lecture
 -
   date: 2018-11-27
-  slides: 
-  title:      TBD
+  slides: 22-Clustering-and-Neural-Nets.pdf
+  title: Clustering and Neural Networks
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c0a6b3c0-fb72-49d5-8170-a9460066d301
   readings:   
+    - 
+      title: Cluster analysis
+      authors: Wikipedia
+      url: https://en.wikipedia.org/wiki/Cluster_analysis
+      optional: false  
+    - 
+      title: k-Means Clustering
+      authors: Wikipedia
+      url: https://en.wikipedia.org/wiki/K-means_clustering
+      optional: false  
+    - 
+      title: Agglomerative Clustering
+      authors: Wikipedia
+      url: https://en.wikipedia.org/wiki/Hierarchical_clustering
+      optional: false  
+    - 
+      title: Neural Networks and Deep Learning (Chapter 1 "Using Neural Nets to Recognize Handwritten Digits")
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap1.html
+      optional: false       
+  videos:
+    - 
+      authors: 3Blue1Brown
+      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+      title: Neural Networks
 -
   date: 2018-11-29
-  slides: 
-  title: TBD
-  readings:   
+  slides: 23-Neural-Networks-and-Computer-Vision.pdf
+  title: Neural Networks and Computer Vision
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4bfb8b70-bae5-4174-bd39-a9460066d322
+  readings:
+    - 
+      title: Neural Networks and Deep Learning (Chapter 2 "How the Backpropagation Algorithm Works")
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap2.html
+      optional: true 
+  videos:
+    - 
+      authors: Andrew Ng
+      url: https://www.coursera.org/learn/neural-networks-deep-learning
+      title: Neural Networks and Deep Learning     
 -
   date: 2018-11-29
-  title:  HW9 due (Perceptrons)
+  title:  HW9 due (Perceptrons), study for exam
   type: exam
 -
   date: 2018-12-04
-  slides: 
-  title:  TBD 
-  readings:   
+  slides: 24-Computer-Vision-Self-Driving-Cars-and-NLP.pdf
+  title:  Computer Vision, Self-Driving Cars, and NLP 
+  recording:   https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f512fdc6-78e7-4bd0-bccc-a9460066d33e
 -
   date: 2018-12-06
   title:  Midterm exam 3
