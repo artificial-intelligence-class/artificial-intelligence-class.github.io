@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lectures
-active_tab: lectures
+active_tab: lectures-summer-2018
 ---
 
 <!-- Create a HTML anchor for the most recent lecture -->
