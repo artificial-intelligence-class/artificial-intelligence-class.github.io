@@ -5,8 +5,8 @@ img_link: https://www.explainxkcd.com/wiki/index.php/1002:_Game_AIs
 caption: Chess Puzzle
 title: CIS 521 Homework 1 Part 2 "Uninformed Search"
 active_tab: homework
-release_date: 2019-06-05
-due_date: 2019-06-08 23:59:00EDT
+release_date: 2019-07-05
+due_date: 2019-07-08 23:59:00EDT
 materials:
     - 
         name: skeleton file
