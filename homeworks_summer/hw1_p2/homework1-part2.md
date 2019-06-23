@@ -13,7 +13,7 @@ materials:
         url: homework1_part2.py 
     - 
         name: Lights Out GUI
-        url: homework2_lights_out_gui.py 
+        url: homework1_lights_out_gui.py 
 submission_link: https://www.gradescope.com/courses/52017
 ---
 
@@ -207,9 +207,9 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     True
     ```
 
-Once you have implemented the functions and methods described in this section, you can play with an interactive version of the Lights Out puzzle using the GUI provided in the file [homework2_lights_out_gui.py](homework2_lights_out_gui.py) by running the following command:
+Once you have implemented the functions and methods described in this section, you can play with an interactive version of the Lights Out puzzle using the GUI provided in the file [homework1_lights_out_gui.py](homework1_lights_out_gui.py) by running the following command:
 
-    python3 homework2_lights_out_gui.py rows cols
+    python3 homework1_lights_out_gui.py rows cols
 
 The arguments `rows` and `cols` are positive integers designating the size of the puzzle.
 
