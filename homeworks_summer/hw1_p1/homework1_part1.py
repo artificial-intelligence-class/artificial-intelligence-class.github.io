@@ -1,5 +1,5 @@
 ############################################################
-# CIS 521: Homework 1
+# CIS 521: Homework 1 Part 1
 ############################################################
 
 student_name = "Type your full name here."
@@ -116,28 +116,3 @@ class Polynomial(object):
 
     def __str__(self):
         pass
-
-############################################################
-# Section 7: Feedback
-############################################################
-
-feedback_question_1 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-This question will not be graded.
-"""
-
-feedback_question_2 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-This question will not be graded.
-"""
-
-feedback_question_3 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-This question will not be graded.
-"""
