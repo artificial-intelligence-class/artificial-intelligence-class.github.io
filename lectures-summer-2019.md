@@ -22,7 +22,8 @@ The lecture schedule will be updated as the term progresses.
       <th>Date</th> 
       <th>Topic</th>
       <th>Required Readings</th>
-      <th>Homework/Quiz</th>
+      <th>Quiz</th>
+      <!-- <th>Homework</th> -->
       <!-- <th>Supplemental Videos</th> -->
     </tr>
   </thead>
@@ -97,24 +98,36 @@ The lecture schedule will be updated as the term progresses.
         {% endif %}
       </td>
       <td>
-        {% if lecture.homeworks %} 
-          {% for homework in lecture.homeworks %}
-          {{ homework.title }} <a href="{{ homework.url }}">{{ homework.name }}</a> 
+      {% if lecture.quiz %}
+        {% for q in lecture.quiz %}
+          {{ q.title }}: <a href="{{ q.url }}">{{ q.name }}</a>
             <br />
-          {% endfor %}
-        {% endif %}
+        {% endfor %}
+      {% endif %}
       </td>
-      <!-- <td>
-        {% if lecture.videos %} 
-          {% for video in lecture.videos %}
-          {% if video.authors %} {{ video.authors }}, {% endif %}
-          <a href="{{ video.url }}">{{ video.title }}</a> 
-          {% if video.length %} ({{ video.length }}) {% endif %}
-          <br />
-          {% endfor %}
-        {% endif %}
-      </td> -->
     </tr>
+
+    {% if lecture.homeworks %}
+      <tr
+      {% if anchor_created != true and lecture_date >= now %}
+        {% assign anchor_created = true %}
+        id="now" 
+      {% endif %}
+      class="info" >
+        <td>{{ lecture.date | date: '%a, %b %-d, %Y' }}</td>
+        <td>
+          {% for homework in lecture.homeworks %}
+          {{ homework.title }}: <a href="{{ homework.url }}">{{ homework.name }}</a>
+          <br/>
+            {% if homework.due %}
+            <td>(due by {{ homework.due | date: '%a, %b %-d, %Y' }} midnight)</td>
+            {% endif %}
+          {% endfor %}
+        </td>
+        <td></td>
+      </tr>
+    {% endif %}
+
     {% endfor %}
   </tbody>
 </table>
