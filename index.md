@@ -53,16 +53,16 @@ Course number
 : CIS 421/521 - Artificial Intelligence 
 
 Instructor
-: [Chris Callison-Burch](http://www.cis.upenn.edu/~ccb/)
+: [Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/)
 
 Discussion Forum
-: [Piazza](piazza.com/upenn/summer2019/cis521)
+: [Piazza](https://piazza.com/upenn/summer2019/cis521)
 
 Time and place
 : Summer 2 Session 2019 (from July 5th through August 9th). Mondays, Wednesdays and Fridays from 2:30pm-5pm in 3401 Walnut room 401B.
 
 Office hours
-: TBD
+: Tuesdays from 1pm-3pm in 3401 room 463 C
 
 Textbook
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
