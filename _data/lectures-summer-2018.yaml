@@ -25,41 +25,6 @@
       title: HW1 Part1 
       name: Python Skills
       url: homeworks_summer/hw1_p1/homework1-part1.html
-  videos:
-    -  
-      authors: PBS Crash Course in Philosophy
-      url: https://www.youtube.com/watch?v=39EdqUbj92U
-      title: Artificial Intelligence & Personhood
-      length: 9.5 minutes
-    -  
-      url: https://www.youtube.com/watch?v=X2xlQaimsGg
-      title: Monty Python and the Holy Grail (witch buring scene)
-      length: 4 minutes 
-    -  
-      authors: Krohn - Education
-      url: https://www.youtube.com/watch?v=xLovcfIugy8
-      title: Learn Python in 60 Minutes from Java
-      length: 60 minutes 
-    - 
-      authors: Dan Bader
-      url: https://www.youtube.com/watch?v=1HlyKKiGg-4
-      title: Python List Comprehensions Step-By-Step
-      length: 15 minutes 
-    - 
-      authors: Corey Schafer
-      url: https://www.youtube.com/watch?v=bD05uGo_sVI
-      title: Python Generators - How to use them and the benefits you receive
-      length: 11 minutes
-    -  
-      authors: Piet Hoenderdos, Daniel Dennett and others
-      url: https://www.youtube.com/watch?v=U_8yo5hacKM
-      title: Victim of the Brain clip Dennett's brain gets removed
-      length: 10 minutes 
-    - 
-      authors: Sebastiaan Mathôt
-      url: https://www.youtube.com/watch?v=8qEnExGLZfY
-      title: Profiling and optimizing your Python code
-      length: 17 minutes
 -
   date: 2019-07-08
   titles: 
@@ -89,12 +54,6 @@
       title: HW1 Part2
       name: Uninformed Search
       url: homeworks_summer/hw1_p2/homework1-part2.html
-  videos:
-    -  
-      authors: SRI International 
-      url: https://www.youtube.com/watch?v=7bsEN8mwUB8
-      title: Shakey the Robot&colon; The First Robot to Embody Artificial Intelligence
-      length: 6 minutes 
 -
   date: 2019-07-10
   titles:
@@ -116,22 +75,6 @@
       title: <b>TBD</b> HW2
       name: Robot HW / Grid Navigation from HW3
       url: 
-  videos:
-    -  
-      authors: Nils Nilsson 
-      url: https://www.youtube.com/watch?v=mQ7M-zhiu7U
-      title: Story of A* and STRIPS
-      length: 6 minutes 
-    -  
-      authors: Gerry Jenkins
-      url: https://www.youtube.com/watch?v=NUgMa5coCoE
-      title: Animation of DFS Algorithm set to music
-      length: 1.5 minutes 
-    -  
-      authors: Gerry Jenkins
-      url: https://www.youtube.com/watch?v=x-VTfcmrLEQ
-      title: Animation of BFS Algorithm set to music
-      length: 1.5 minutes 
 -
   date: 2019-07-12
   titles: 
@@ -158,21 +101,6 @@
     -
       title: <b>TBD</b> HW3
       name: Tile Puzzle from HW3 plus HW4 (Sudoku and Domino)
-  videos:
-    -  
-      authors: BBC 
-      url: https://www.youtube.com/watch?v=KF6sLCeBj0s
-      title: Deep Blue vs Kasparov&colon; How a computer beat best chess player in the world
-      length: 4 minutes 
-    -  
-      authors: Pieter Abbeel 
-      url: https://www.youtube.com/watch?v=jvpWtwVSvjA
-      title: Step-by-step Example&colon; Alpha-Beta
-      length: 14 minutes
-    -
-      url: https://www.youtube.com/watch?v=HT-UZkiOLv8
-      title: Lee Sedol vs AlphaGo Move 37 reactions and analysis
-      length: 4 minutes
 -
   date: 2019-07-12
   titles: 
@@ -204,19 +132,6 @@
       title: HW4
       name: MDP and Gridworld (HW5)
       url: homeworks_summer/hw5/homework5.html
-  videos: 
-    -
-      authors: CrashCourse 
-      url: https://www.youtube.com/watch?v=dqxQ3E1bubI
-      title: Behavioral Economics&colon; Crash Course Economics
-    -
-      authors: Jodi Beggs, Northeaster University 
-      url: https://www.youtube.com/watch?v=q-aUroyt1v8
-      title: Behaviroal Economics - Expected Utility Review
-    -
-      authors: Machines with Brains 
-      url: https://www.youtube.com/watch?v=lFIW8KphZo0
-      title: How the "Most Human Human" passed the Turing Test
 -
   date: 2019-07-17
   titles:
@@ -238,14 +153,6 @@
       title: Quiz 6
       name: Reinforcement Learning (AIMA Chapter 21 Sutton and Barto, 6.1, 6.2 and 6.5)
       url: https://www.gradescope.com/courses/52017
-  videos: 
-    -
-      url: https://www.youtube.com/watch?v=s93KC4AGKnY
-      title: End of the 1983 movie Wargames
-    -
-      authors: Stanford University 
-      url: https://www.youtube.com/watch?v=M-QUkgk3HyE
-      title: Autonomous Helicopters Teach Themselves to Fly Stunts
 -
   date: 2019-07-19
   titles: 
@@ -264,11 +171,6 @@
     -
       title: <b>TBD</b> 
       name: 
-  videos:
-    -
-      authors: World Science Festival 
-      url: https://www.youtube.com/watch?v=BcvLAw-JRss
-      title: Everything You Ever Wanted to Know About Bayes' Theorem But Were Afraid To Ask
 -
   date: 2019-07-20
   titles: 
@@ -294,11 +196,6 @@
       title: HW5
       name: Reinforcement learning (HW6)
       url: homeworks_summer/hw6/homework6.html
-  videos:
-    -
-      authors: Khan Academy 
-      url: https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication
-      title: A mathematical theory of communication
 -
   date: 2019-07-24
   titles:
@@ -329,16 +226,11 @@
     -
       title: <b>TBD</b> 
       name: 
-  videos:
-    -
-      authors: Daphne Koller 
-      url: https://www.youtube.com/playlist?list=PLBAGcD3siRDjiQ5VZQ8t0C7jkHQ8fhuq8
-      title: Probabilistic Graphical Models online course
 -
   date: 2019-07-29
   titles:
     -
-      name: Natural Language Processing
+      name: NLP (Natural Language Processing)
   readings:
   homeworks:
     -
@@ -396,19 +288,6 @@
       title: <b>TBD</b> HW7
       name: (HW9?) Perceptrons
       url: homeworks_summer/hw9/homework9.html
-  videos:
-    - 
-      authors: Paul Anderson
-      url: https://www.youtube.com/watch?v=HZh0A-lWSmY
-      title: The Neuron
-    - 
-      authors: 3Blue1Brown
-      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
-      title: Essence of Linear Algebra
-    - 
-      authors: 3Blue1Brown
-      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
-      title: Neural Networks
 -
   date: 2019-08-02
   titles:
@@ -431,11 +310,6 @@
       title: <b>TBD</b> HW8
       name: (HW10?) Extra credit Part 1 and 2
       url: homeworks_summer/hw10/part1/homework10-part1.html
-  videos:
-    - 
-      authors: Andrew Ng
-      url: https://www.coursera.org/learn/neural-networks-deep-learning
-      title: Neural Networks and Deep Learning
 -
   date: 2019-08-02
   titles: 
