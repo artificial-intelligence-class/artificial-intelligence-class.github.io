@@ -44,6 +44,8 @@ The lecture schedule will be updated as the term progresses.
         class="info" 
       {% else if lecture.type and lecture.type == 'deadline' %}
         class="warning"
+      {% else if lecture.type and lecture.type == 'homework' %}
+        class="primary"
       {% else if lecture.type and lecture.type == 'no_lecture' %}
         class="success"
       {% endif %}
