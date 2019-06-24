@@ -1,0 +1,136 @@
+-
+  date: 2019-07-01
+  thumbnail: C3PO.jpg
+  title: Introduction / AI in Science Fiction and Philosophy 
+  description: Artificial Intelligence plays a role in SciFi and Philosophy.  In this fun intro lecture, we'll look at some of the fiction and philosophy that has inspired AI researchers in the past. We'll look at what parts of science fiction have become science fact. 
+  type: video
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a4256e5d-9c02-41b6-aefd-a9460066cfba&v=1
+  slides: 00-Course-Intro.pdf
+  readings:   
+    - 
+      title: AIMA Chapter 1 "Introduction"
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA Chapter 26 "Philosophical Foundations"
+      authors: Russell and Norvig
+      optional: false
+  videos:
+    -  
+      authors: PBS Crash Course in Philosophy
+      url: https://www.youtube.com/watch?v=39EdqUbj92U
+      title: Artificial Intelligence & Personhood
+      length: 9.5 minutes 
+-
+  date: 2019-07-05
+  title: Introduction / AI in Science Fiction and Philosophy 
+  slides: 00-Course-Intro.pdf
+  recording: 
+  readings:  
+  videos: 
+-
+  date: 2019-07-08
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-07-10
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-07-12
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-07-15
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-07-17
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-07-19
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-07-22
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-07-24
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-07-26
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-07-29
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-07-31
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-08-02
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-08-05
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-08-07
+  title:
+  slides: 
+  recording:
+  readings:   
+  videos:
+-
+  date: 2019-08-09
+  title: Final Exam
+  slides: 
+  recording:
+  readings:   
+  videos:
+
