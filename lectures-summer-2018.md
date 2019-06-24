@@ -56,7 +56,10 @@ The lecture schedule will be updated as the term progresses.
       <td>
          {{ title.name }}
         {% for title in lecture.titles %}
-         - {{ title.name }}
+        {% if lecture.type == nil %}
+        -
+        {% endif %} 
+         {{ title.name }}
         <br />
         {% endfor %}
 
