@@ -1,5 +1,5 @@
 ---
-title: CIS 521 - Artificial Intelligence - University of Pennsylvania
+title: CIS 421/521 - Artificial Intelligence - University of Pennsylvania
 layout: default
 img: HAL.png
 img_link: https://en.wikipedia.org/wiki/HAL_9000
