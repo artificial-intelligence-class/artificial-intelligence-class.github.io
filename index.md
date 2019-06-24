@@ -69,8 +69,8 @@ Textbook
 
 Grading
 : 50% Homework Assignments
-: 25% Quizzes
-: 25% Final Exam
+: 20% Quizzes
+: 30% Final Exam
 
 <!--
 Grading
