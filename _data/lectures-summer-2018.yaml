@@ -28,6 +28,14 @@
       optional: true
   homeworks:
     -
+      title: Quiz 1
+      name: Python
+      url: https://www.gradescope.com/courses/52017
+    -
+      title: Quiz 2
+      name: Solving Problems by Search (AIMA 3.1-3.4)
+      url: https://www.gradescope.com/courses/52017
+    -
       title: HW1 Part1 
       name: Python Skills
       url: homeworks_summer/hw1_p1/homework1-part1.html
@@ -89,6 +97,10 @@
       optional: false
   homeworks:
     -
+      title: Quiz 3
+      name: A* Search and Heuristics (AIMA 3.5-3.6)
+      url: https://www.gradescope.com/courses/52017
+    -
       title: <b>TBD</b> HW2
       name: Robot HW / Grid Navigation from HW3
       url: 
@@ -128,6 +140,10 @@
       optional: false 
   homeworks:
     -
+      title: Quiz 4
+      name: Minimax, Expectimax, and Utilities (AIMA, 5.2-5.5 and 16.1-16.3)
+      url: https://www.gradescope.com/courses/52017
+    -
       title: <b>TBD</b> HW3
       name: Tile Puzzle from HW3 plus HW4 (Sudoku and Domino)
   videos:
@@ -163,6 +179,10 @@
       url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
   homeworks:
     -
+      title: Quiz 5
+      name: Markov Decision Processes (AIMA, 17.1-17.3 and Sutton and Barto, Chapter 3)
+      url: https://www.gradescope.com/courses/52017
+    -
       title: HW4
       name: MDP and Gridworld (HW5)
       url: homeworks_summer/hw5/homework5.html
@@ -179,6 +199,12 @@
       authors: Machines with Brains 
       url: https://www.youtube.com/watch?v=lFIW8KphZo0
       title: How the "Most Human Human" passed the Turing Test
+-
+  date: 2019-07-12
+  titles: 
+    -
+      name: Last Day to Drop
+  type: no_lecture
 -
   date: 2019-07-15
   titles:
@@ -197,8 +223,9 @@
       url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
   homeworks:
     -
-      title: <b>TBD</b> Quiz
-      name: Reinforcement Learning
+      title: Quiz 6
+      name: Reinforcement Learning (AIMA Chapter 21 Sutton and Barto, 6.1, 6.2 and 6.5)
+      url: https://www.gradescope.com/courses/52017
   videos: 
     -
       url: https://www.youtube.com/watch?v=s93KC4AGKnY
@@ -254,6 +281,12 @@
       authors: Khan Academy 
       url: https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication
       title: A mathematical theory of communication
+-
+  date: 2019-07-20
+  titles: 
+    -
+      name: Last Day to Change Grade Status
+  type: no_lecture
 -
   date: 2019-07-22
   titles:
@@ -400,6 +433,12 @@
       name: (HW10?) Extra credit Part 1 and 2
       url: homeworks_summer/hw10/part1/homework10-part1.html
 -
+  date: 2019-08-02
+  titles: 
+    -
+      name: Last Day to Withdraw
+  type: no_lecture
+-
   date: 2019-08-05
   titles:
     - 
@@ -407,20 +446,8 @@
   readings: 
 
 -
-  date: 2019-08-05
+  date: 2019-08-07
   titles: 
     -
       name: Final Exam (in class)
   type: exam
-
-
-
-
-
-
-
-
-
-
-
-
