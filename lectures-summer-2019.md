@@ -53,10 +53,10 @@ The lecture schedule will be updated as the term progresses.
     >
 
     <!-- End create a HTML anchor for the most recent lecture -->
-      <td>{{ lecture.date | date: '%a, %b %-d, %Y' }}</td>
-      <td>
+      <td width="12%">{{ lecture.date | date: '%a, %b %-d, %Y' }}</td>
+      <td width="30%">
          {{ title.name }}
-        {% for title in lecture.titles %}
+        {% for title in lecture.titles %} 
         {% if lecture.type == nil %}
         -
         {% endif %} 
@@ -82,7 +82,7 @@ The lecture schedule will be updated as the term progresses.
       {% endif %}
 
       </td>
-      <td>
+      <td width="30%">
         {% if lecture.readings %} 
           {% for reading in lecture.readings %}
           {% if reading.url %}
@@ -97,7 +97,7 @@ The lecture schedule will be updated as the term progresses.
           {% endfor %}
         {% endif %}
       </td>
-      <td>
+      <td width="auto">
       {% if lecture.quiz %}
         {% for q in lecture.quiz %}
           {{ q.title }}: <a href="{{ q.url }}">{{ q.name }}</a>
