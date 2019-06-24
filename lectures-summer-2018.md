@@ -23,7 +23,7 @@ The lecture schedule will be updated as the term progresses.
       <th>Topic</th>
       <th>Required Readings</th>
       <th>Homework/Quiz</th>
-      <th>Supplemental Videos</th>
+      <!-- <th>Supplemental Videos</th> -->
     </tr>
   </thead>
   <tbody>
@@ -104,7 +104,7 @@ The lecture schedule will be updated as the term progresses.
           {% endfor %}
         {% endif %}
       </td>
-      <td>
+      <!-- <td>
         {% if lecture.videos %} 
           {% for video in lecture.videos %}
           {% if video.authors %} {{ video.authors }}, {% endif %}
@@ -113,7 +113,7 @@ The lecture schedule will be updated as the term progresses.
           <br />
           {% endfor %}
         {% endif %}
-      </td>
+      </td> -->
     </tr>
     {% endfor %}
   </tbody>
