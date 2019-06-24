@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lectures
-active_tab: lectures-summer-2018
+active_tab: lectures-summer-2019
 ---
 
 <!-- Create a HTML anchor for the most recent lecture -->
@@ -27,7 +27,7 @@ The lecture schedule will be updated as the term progresses.
     </tr>
   </thead>
   <tbody>
-    {% for lecture in site.data.lectures-summer-2018 %}
+    {% for lecture in site.data.lectures-summer-2019 %}
 
     <!-- Create a HTML anchor for the most recent lecture -->
     {% capture lecture_date %}{{lecture.date | date: '%s'}}{% endcapture %}

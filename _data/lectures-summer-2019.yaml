@@ -169,8 +169,9 @@
       optional: false
   homeworks:
     -
-      title: <b>TBD</b> 
-      name: 
+      title: HW5
+      name: Reinforcement learning (HW6)
+      url: homeworks_summer/hw6/homework6.html 
 -
   date: 2019-07-20
   titles: 
@@ -193,9 +194,8 @@
       optional: false
   homeworks:
     -
-      title: HW5
-      name: Reinforcement learning (HW6)
-      url: homeworks_summer/hw6/homework6.html
+      title: <b>TBD</b> 
+      name:
 -
   date: 2019-07-24
   titles:
@@ -212,22 +212,6 @@
       name: 
 -
   date: 2019-07-26
-  titles: 
-    -
-      name: Bayes' Nets
-  # slides: 16-Bayes-Nets.pdf
-  # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3dff1015-86e5-4404-b46c-a9460066d212
-  readings:   
-    - 
-      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
-      authors: Russell and Norvig
-      optional: false
-  homeworks:
-    -
-      title: <b>TBD</b> 
-      name: 
--
-  date: 2019-07-29
   titles:
     -
       name: NLP (Natural Language Processing)
@@ -246,14 +230,28 @@
       name: (HW7?) Generate a Novel
       url: homeworks_summer/hw7/homework7.html
 -
+  date: 2019-07-29
+  titles: 
+    -
+      name: Bayes' Nets
+  # slides: 16-Bayes-Nets.pdf
+  # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3dff1015-86e5-4404-b46c-a9460066d212
+  readings:   
+    - 
+      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
+      authors: Russell and Norvig
+      optional: false
+  homeworks:
+    -
+      title: <b>TBD</b> 
+      name: 
+-
   date: 2019-07-31
   titles: 
     -
       name: Machine Learning&colon; Perceptrons
     -
       name: Machine Learning&colon; Kernels and Clustering
-    -
-      name: Clustering and Neural Networks
   # slides: 20-Perceptron.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2f93efb7-8edf-4907-b93a-a9460066d2a8
   readings:     
@@ -276,16 +274,26 @@
       authors: Wikipedia
       url: https://en.wikipedia.org/wiki/Hierarchical_clustering
       optional: false  
-    - 
-      title: Neural Networks and Deep Learning (Chapter 1 "Using Neural Nets to Recognize Handwritten Digits")
-      authors: Michael Nielsen
-      url: http://neuralnetworksanddeeplearning.com/chap1.html
-      optional: false
+  homeworks:
+    
+-
+  date: 2019-08-02
+  titles:
+    -
+      name: Neural Networks
+  # slides: 23-Neural-Networks-and-Computer-Vision.pdf
+  # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4bfb8b70-bae5-4174-bd39-a9460066d322
+  readings:
     - 
       title: Neural Networks and Deep Learning Chapter 1 "Using Neural Nets to Recognize Handwritten Digits" 
       authors: Michael Nielsen
       url: http://neuralnetworksanddeeplearning.com/chap1.html
-      optional: true  
+      optional: true
+    - 
+      title: Neural Networks and Deep Learning Chapter 2 "How the Backpropagation Algorithm Works"
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap2.html
+      optional: true
     - 
       title: Electronic 'Brain' Teaches Itself
       authors: New York Times (July 13, 1958)
@@ -296,24 +304,6 @@
       title: <b>TBD</b> HW7
       name: (HW9?) Perceptrons
       url: homeworks_summer/hw9/homework9.html
--
-  date: 2019-08-02
-  titles:
-    -
-      name: Neural Networks
-    -
-      name: Computer Vision
-    -
-      name: Self-Driving Cars
-  # slides: 23-Neural-Networks-and-Computer-Vision.pdf
-  # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4bfb8b70-bae5-4174-bd39-a9460066d322
-  readings:
-    - 
-      title: Neural Networks and Deep Learning (Chapter 2 "How the Backpropagation Algorithm Works")
-      authors: Michael Nielsen
-      url: http://neuralnetworksanddeeplearning.com/chap2.html
-      optional: true 
-  homeworks:
     -
       title: <b>TBD</b> HW8
       name: (HW10?) Extra credit Part 1 and 2
@@ -328,13 +318,13 @@
   date: 2019-08-05
   titles:
     - 
-      name: <b>TBD</b>
+      name: Computer Vision
   readings:
 -
   date: 2019-08-07
   titles:
-    - 
-      name: Catch up
+    -
+      name: Self-Driving Cars
   readings: 
 
 -
