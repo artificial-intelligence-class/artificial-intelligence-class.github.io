@@ -63,6 +63,7 @@ Time and place
 
 Office hours
 : Tuesdays from 1pm-3pm in 3401 Walnut room 463C
+: Saturdays from 2pm-4pm in Levine Hall 5th floor bump space 
 
 Textbook
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
