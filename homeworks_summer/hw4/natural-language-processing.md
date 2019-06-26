@@ -45,7 +45,7 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-Homework 7: Generate a Novel [100 points]
+Homework 4: Natural Language Processing [100 points]
 =============================================================
 
 ## Instructions

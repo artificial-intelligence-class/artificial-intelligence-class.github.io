@@ -25,7 +25,7 @@
     -
       title: HW 1
       name: Python Skills
-      url: homeworks_summer/hw1/homework1.html
+      url: homeworks_summer/hw1/python-skills.html
       due: 2019-07-09
 -
   date: 2019-07-08
@@ -96,7 +96,7 @@
     -
       title: HW 2
       name: Search and Games
-      url: homeworks_summer/hw2/homework2.html
+      url: homeworks_summer/hw2/search-and-games.html
       due: 2019-07-16
 -
   date: 2019-07-12
@@ -129,7 +129,7 @@
   date: 2019-07-17
   titles:
     -
-      name: Reinforcement Learning
+      name: MDPs and Reinforcement Learning
   # slides: 11-Reinforcement-Learning.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8577e149-ead6-4844-8041-a9460066d160
   readings:   
@@ -169,7 +169,7 @@
     -
       title: HW 3
       name: Reinforcement learning
-      url: homeworks_summer/hw6/homework6.html 
+      url: homeworks_summer/hw3/reinforcement-learning.html 
       due: 2019-07-23
 -
   date: 2019-07-20
@@ -231,8 +231,8 @@
   homeworks:
     -
       title: HW 4
-      name: Generate a Novel
-      url: homeworks_summer/hw7/homework7.html
+      name: Natural Language Processing
+      url: homeworks_summer/hw4/natural-language-processing.html
       due: 2019-07-30
 -
   date: 2019-07-29
@@ -315,17 +315,9 @@
       url: https://www.gradescope.com/courses/52017 
   homeworks:
     -
-      title: HW 5 Part 1
-      name: Perceptrons
-      url: homeworks_summer/hw9/homework9.html
-    -
-      title: HW 5 Part 2
-      name: Neural Network functions
-      url: homeworks_summer/hw10/part1/homework10-part1.html
-    -
-      title: HW 5 Part 3
-      name: Neural Network PyTorch
-      url: homeworks_summer/hw10/part2/homework10-part2.html
+      title: HW 5
+      name: Perceptrons and Neural Network
+      url: homeworks_summer/hw5/perceptrons-and-neural-nets.html
       due: 2019-08-06
 -
   date: 2019-08-02
