@@ -44,7 +44,7 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-Homework 5: Markov Decision Processes [100 points]
+Homework 3: Markov Decision Processes and Reinforcement Learning [100 points]
 =============================================================
  
 ## Instructions

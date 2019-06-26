@@ -53,7 +53,7 @@ You can download the materials for this assignment here:
 </style>
 
 
-Homework 9: Perceptrons [100 points]
+Homework 5: Perceptrons and Neural Networks [100 points]
 =============================================================
 
 ## Instructions
