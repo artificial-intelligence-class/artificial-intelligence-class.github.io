@@ -10,7 +10,7 @@ due_date: 2018-09-11 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homework1.py 
+        url: python-skills.py 
 submission_link: https://www.gradescope.com/courses/21105
 ---
 
@@ -52,7 +52,7 @@ Homework 1: Python Skills [100 points]
 
 In this assignment, you will answer some conceptual questions about Python and write a collection of basic algorithms and data structures.
 
-A skeleton file [homework1.py](homework1.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [python-skills.py](python-skills.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 Unless explicitly stated otherwise, you may not import any of the standard Python modules, meaning your solutions should not include any lines of the form `import x` or `from x import y`. Accordingly, you may find it helpful to refresh yourself on Python's built-in functions and data types.
 
@@ -446,11 +446,3 @@ Write a `__str__(self)` method that returns a human-readable string representing
     'x^2 + 2x^4 + 2x^4 + 4x^6'
     '-x^2 - 2x^4 - 2x^4 - 4x^6'
     ```
-
-## 7. Feedback [5 points]
-
-1. **[1 point]** Approximately how long did you spend on this assignment?
-
-2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
-
-3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
