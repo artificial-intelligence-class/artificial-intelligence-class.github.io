@@ -14,7 +14,7 @@ materials:
     - 
         name: Frankenstein (text file)
         url: homeworks/hw7/frankenstein.txt
-submission_link: https://www.gradescope.com/courses/21105
+submission_link: https://www.gradescope.com/courses/52017
 ---
 
 <!-- Check whether the assignment is up to date -->
