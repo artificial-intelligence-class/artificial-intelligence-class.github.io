@@ -5,8 +5,8 @@ img_link: http://xkcd.com/353/
 caption: Hello world!
 title: CIS 521 Homework 1 "Python Skills"
 active_tab: homework
-release_date: 2018-08-10
-due_date: 2018-09-11 23:59:00EDT
+release_date: 2019-07-05
+due_date: 2019-07-19 23:59:00EDT
 materials:
     - 
         name: skeleton file
