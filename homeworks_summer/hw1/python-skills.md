@@ -6,7 +6,7 @@ caption: Hello world!
 title: CIS 521 Homework 1 "Python Skills"
 active_tab: homework
 release_date: 2019-07-05
-due_date: 2019-07-19 23:59:00EDT
+due_date: 2019-07-09 23:59:00EDT
 materials:
     - 
         name: skeleton file
