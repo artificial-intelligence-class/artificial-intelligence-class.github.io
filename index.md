@@ -70,8 +70,9 @@ Textbook
 
 Grading
 : 50% Homework Assignments
-: 20% Quizzes
+: 15% Quizzes
 : 30% Final Exam
+: 5% Term Project
 
 <!--
 Grading
