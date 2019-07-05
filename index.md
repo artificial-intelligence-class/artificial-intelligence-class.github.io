@@ -43,8 +43,12 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 {% endfor %}
 <!-- End alert for upcoming homework assignments -->
 
-<div class="alert alert-info" markdown="1">
-Here is the [robot checkout form](https://docs.google.com/forms/d/e/1FAIpQLSdwSUTomNOdcsx0d1u3j57fQ9AqKiGei435-gAnbS1lfLuyhA/viewform?usp=sf_link).
+<div class="alert alert-warning" markdown="1">
+[Here is the robot checkout form.](https://docs.google.com/forms/d/e/1FAIpQLSdwSUTomNOdcsx0d1u3j57fQ9AqKiGei435-gAnbS1lfLuyhA/viewform?usp=sf_link)
+</div>
+
+<div class="alert alert-warning" markdown="1">
+[Today's in-class exercise will be starting to program our robots with Python.](r2d2_assignments/hw1/homework1.html)
 </div>
 
 
