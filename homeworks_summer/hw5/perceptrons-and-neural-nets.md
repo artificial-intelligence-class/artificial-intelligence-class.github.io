@@ -14,7 +14,7 @@ materials:
     - 
         name: data sets (python file)
         url: homeworks/hw9/homework9_data.py
-submission_link: https://www.gradescope.com/courses/21105
+submission_link: https://www.gradescope.com/courses/52017
 ---
 
 <!-- Check whether the assignment is up to date -->
