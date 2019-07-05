@@ -5,13 +5,13 @@ img_link: http://xkcd.com/353/
 caption: Hello world!
 title: CIS 521 Homework 1 "Python Skills"
 active_tab: homework
-release_date: 2018-08-10
-due_date: 2018-09-11 23:59:00EDT
+release_date: 2019-07-05
+due_date: 2019-07-09 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homework1.py 
-submission_link: https://www.gradescope.com/courses/21105
+        url: python_skills.py 
+submission_link: https://www.gradescope.com/courses/52017
 ---
 
 <!-- Check whether the assignment is up to date -->
@@ -41,8 +41,8 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-<div class="alert alert-info" markdown="span">
-Links to tutorials and other Python resources are posted on the [schedule page](/lectures.html) in the Python Review parts.</div>
+<!-- <div class="alert alert-info" markdown="span">
+Links to tutorials and other Python resources are posted on the [schedule page](/lectures-summer-2019.html) in the Python Review parts.</div> -->
 
 
 Homework 1: Python Skills [100 points]
@@ -52,7 +52,7 @@ Homework 1: Python Skills [100 points]
 
 In this assignment, you will answer some conceptual questions about Python and write a collection of basic algorithms and data structures.
 
-A skeleton file [homework1.py](homework1.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [python_skills.py](python_skills.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 Unless explicitly stated otherwise, you may not import any of the standard Python modules, meaning your solutions should not include any lines of the form `import x` or `from x import y`. Accordingly, you may find it helpful to refresh yourself on Python's built-in functions and data types.
 
@@ -136,7 +136,7 @@ For each of the following questions, write your answers as triply-quoted strings
     [[1, 3, 5], [2, 4, 6]]
     ```
 
-## 3. Sequence Slicing [9 points]
+## 3. Sequence Slicing [10 points]
 
 1. **[3 points]** The functions in this section should be implemented using sequence slices. Recall that the slice parameters take on sensible default values when omitted. In some cases, it may be necessary to use the optional third parameter to specify a step size.
 
@@ -172,7 +172,7 @@ For each of the following questions, write your answers as triply-quoted strings
     []
     ```
 
-3. **[3 points]** Write a function `every_other(seq)` that returns a new sequence containing every other element of the input sequence, starting with the first. This function can be written in one line using the optional third parameter of the slice notation.
+3. **[4 points]** Write a function `every_other(seq)` that returns a new sequence containing every other element of the input sequence, starting with the first. This function can be written in one line using the optional third parameter of the slice notation.
 
     ```python
     >>> every_other([1, 2, 3, 4, 5])
@@ -189,7 +189,7 @@ For each of the following questions, write your answers as triply-quoted strings
     'ace'
     ```
 
-## 4. Combinatorial Algorithms [12 points]
+## 4. Combinatorial Algorithms [15 points]
 
 The functions in this section should be implemented as generators. You may generate the output in any order you find convenient, as long as the correct elements are produced. However, in some cases, you may find that the order of the example output hints at a possible implementation.
 
@@ -197,7 +197,7 @@ Although generators in Python can be used in a variety of ways, you will not nee
 
 Since the contents of a generator cannot be viewed without employing some form of iteration, we wrap all function calls in this section's examples with the list function for convenience.
 
-1. **[6 points]** The prefixes of a sequence include the empty sequence, the first element, the first two elements, etc., up to and including the full sequence itself. Similarly, the suffixes of a sequence include the empty sequence, the last element, the last two elements, etc., up to and including the full sequence itself. Write a pair of functions `prefixes(seq)` and `suffixes(seq)` that yield all prefixes and suffixes of the input sequence.
+1. **[7 points]** The prefixes of a sequence include the empty sequence, the first element, the first two elements, etc., up to and including the full sequence itself. Similarly, the suffixes of a sequence include the empty sequence, the last element, the last two elements, etc., up to and including the full sequence itself. Write a pair of functions `prefixes(seq)` and `suffixes(seq)` that yield all prefixes and suffixes of the input sequence.
 
     ```python
     >>> list(prefixes([1, 2, 3]))
@@ -213,7 +213,7 @@ Since the contents of a generator cannot be viewed without employing some form o
     ['abc', 'bc', 'c', '']
     ```
 
-2. **[6 points]** Write a function `slices(seq)` that yields all non-empty slices of the input sequence.
+2. **[8 points]** Write a function `slices(seq)` that yields all non-empty slices of the input sequence.
 
     ```python
     >>> list(slices([1, 2, 3]))
@@ -275,7 +275,7 @@ Since the contents of a generator cannot be viewed without employing some form o
     'exampleName'
     ```
 
-## 6. Polynomials [39 points]
+## 6. Polynomials [40 points]
 
 In this section, you will implement a simple Polynomial class supporting basic arithmetic, simplification, evaluation, and pretty-printing. An example demonstrating these capabilities is shown below.
 
@@ -370,7 +370,7 @@ Write a `__mul__(self, other)` method that returns a new polynomial equal to the
     ((8, 4), (6, 3), (4, 3), (3, 2))
     ```
 
-6. **[3 points]**
+6. **[4 points]**
 Write a `__call__(self, x)` method that returns the result of evaluating the current polynomial at the point x. This method will be used by Python when a polynomial is called as a function. *Hint: This method can be written in one line using Python's exponentiation operator, `**`, and the built-in sum function.*
 
     ```python
@@ -446,11 +446,3 @@ Write a `__str__(self)` method that returns a human-readable string representing
     'x^2 + 2x^4 + 2x^4 + 4x^6'
     '-x^2 - 2x^4 - 2x^4 - 4x^6'
     ```
-
-## 7. Feedback [5 points]
-
-1. **[1 point]** Approximately how long did you spend on this assignment?
-
-2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
-
-3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
