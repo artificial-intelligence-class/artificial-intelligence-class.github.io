@@ -14,6 +14,11 @@ active_tab: lectures-summer-2019
 You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=8fbdc22b-8b81-4c58-b819-a9460066259e">watch recordings of the Fall 2018 lecture videos online</a>.
 </div>
 
+<div class="alert alert-info">
+You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=5ea6b718-7bb4-4019-880a-aa7f010f88d1">review recordings for the Summer 2018 lectures too.</a>.
+</div>
+
+
 The lecture schedule will be updated as the term progresses. 
 
 <table class="table table-striped">
