@@ -111,7 +111,7 @@ For each of the following questions, write your answers as triply-quoted strings
     Rewrite extract_and_apply(l, p, f) in one line using a list comprehension.
 
 
-2. **[5 points]**  Write a function `concatenate(seqs)` that returns a list containing the concatenation of the elements of the input sequences. Your implementation should consist of a single list comprehension, and should not exceed one line.
+2. **[5 points]**  Write a function `concatenate(seqs)` that returns a list containing the concatenation of the elements of the input sequences. Your implementation should consist of a single list comprehension, and should not exceed one line.  *Hint: Python allows you to have nested for loops in list comprehensions.  The syntax is a bit hard to understand the first time that you read it.*
 
     ```python
     >>> concatenate([[1, 2], [3, 4]])
