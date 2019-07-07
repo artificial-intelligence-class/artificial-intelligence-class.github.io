@@ -175,7 +175,7 @@ Since we know the goal vertex, the algorithms can stop once they have found a so
 
 ## Step 3: Implement A\* Search
 
-Using the pseudocode ![here](https://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode) and the lecture slides, implement A\* search by filling in the TODOs:
+Using the pseudocode [here](https://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode) and the lecture slides, implement A\* search by filling in the TODOs:
 
 
 ```
