@@ -358,6 +358,8 @@ If you want to see the solution [check here](homework1-solutions.html#colors).
 
 ### 7. Sorting and Lambda Functions
 
+
+Let's create a list of roll commands: 
 ```python
 roll_commands = [ (20, 0, 1),
                   (40, 72, 1),
@@ -376,6 +378,17 @@ roll_commands = [ (20, 0, 1),
                   (300, 288, 1),
                   (0, 0, 0), ]
 ```
+Here's a quick function to exectute them in order:
+```python
+def roll_list(roll_commands):
+    for speed, heading, duration in roll_commands:
+        droid.roll(speed, heading, duration)
+```
+
+OK, so we've a list of a bunch of headings.  You can think of these as vectors.  We should be able add these in any order, and the resulting end point will be the same.  Is that right?  I can't remember. Lets just try it out and see.
+
+
+Let's try sorting the roll_commands in different orders, and see whether the droid ends up at the same location, as when the commands are executed in the initial order.
 
 You can user the `shuffle` command to put the items in a list in random order.
 
@@ -392,7 +405,7 @@ roll_commands.sort()
 print(roll_commands)
 ```
 
-You can alslo sort them in reverse order with the `reverse` keyword argument:
+You can also sort them in reverse order with the `reverse` keyword argument:
 
 ```python
 roll_commands.sort(reverse=True)
@@ -415,9 +428,6 @@ Python supports `lambda` functions, which allows us to rewrite the previous snip
 roll_commands.sort(key=lambda e: e[1], reverse=False)
 print(roll_commands)
 ```
-
-OK, so we've a list of a bunch of headings.  You can think of these as vectors.  We should be able add these in any order, and the resulting end point will be the same.  Is that right?  I can't remember. Lets just try it out and see.
-
 
 
 ## 8. Driving with the keyboard arrow keys
