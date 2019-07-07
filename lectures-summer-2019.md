@@ -15,7 +15,7 @@ You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.as
 </div>
 
 <div class="alert alert-info">
-You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=5ea6b718-7bb4-4019-880a-aa7f010f88d1">review recordings for the Summer 2018 lectures too.</a>.
+You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=5ea6b718-7bb4-4019-880a-aa7f010f88d1">review recordings for the Summer 2019 lectures too</a>.
 </div>
 
 
