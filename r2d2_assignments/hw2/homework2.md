@@ -1,8 +1,8 @@
 ---
 layout: default
-img: python.jpg
-img_link: http://xkcd.com/353/
-caption: Hello world!
+img: new_pet.png
+img_link: https://xkcd.com/413/
+caption: import soul
 title: CIS 521 Homework 2 "Robot Navigation with A\*"
 active_tab: homework
 release_date: 2018-08-10
