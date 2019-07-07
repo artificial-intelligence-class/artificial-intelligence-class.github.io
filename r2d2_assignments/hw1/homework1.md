@@ -44,7 +44,7 @@ You can download the materials for this assignment here:
 Links to tutorials and other Python resources are posted on the [schedule page](/lectures.html) in the Python Review parts.</div>
 -->
 
-Homework 1: Using Python to Control R2D2 [100 points]
+Robot Excercise 1: Using Python to Control R2D2 [0 points]
 =============================================================
 
 ## Instructions
