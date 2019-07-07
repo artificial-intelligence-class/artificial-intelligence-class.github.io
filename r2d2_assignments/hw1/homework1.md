@@ -77,13 +77,13 @@ You can start a Python session on your terminal by typing `python3`.  This will 
 First launch the R2D2 server.  This will manage the bluetooth connection between your computer and the robot, and will relay commands from your python code to the robot.  You should launch the server in its own terminal window by running the commands:
 ```bash
 cd sphero-project/spherov2.js/examples
-sudo yarn r2d2-server
+sudo yarn server
 ```
 It will ask for your password, and then if everything is working properly, you'll see this:
 ```bash
- yarn run v1.16.0
- $ ts-node src/r2d2-server
- Listening...
+yarn run v1.16.0
+$ ts-node src/server
+Listening...
 ```
 
 Next start a new terminal window and launch python by typing:
@@ -94,10 +94,10 @@ You'll now see a REPL environment with a  `>>>`  prompt that lets you interactiv
 
 ```python
 from client import DroidClient
-droid = DroidClient()
-droid.scan()
+droid = DroidClient() 
+droid.scan() # Scan the area for droids.
 # Connect to your robot.
-droid.connect_to_droid('D2-55A2') # replace D2-55A2 with your droid's ID
+droid.connect_to_droid('D2-55A2') # This is not the droid you're looking for. Replace D2-55A2 with your droid's ID
 droid.animate(5)
 ```
 This should cause your robot to make a friendly chirping sound.  Next you can have it roll by passing it 3 arguments, the speed (ranging from 0.0 to 1.0), the heading (0 to 360) and the amount of time to roll (in seconds).
