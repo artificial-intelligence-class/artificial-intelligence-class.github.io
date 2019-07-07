@@ -1,21 +1,15 @@
 ---
 title: CIS 421/521 - Artificial Intelligence - University of Pennsylvania
 layout: default
-img: HAL.png
-img_link: https://en.wikipedia.org/wiki/HAL_9000
-caption: I am putting myself to the fullest possible use, which is all I think that any conscious entity can ever hope to do. 
+img: R2D2.png
 active_tab: main_page 
 ---
  
+<!--
 <div class="alert alert-success">
 CIS 421/521 will be offered during the Summer 2 Session (July 5-August 9).  The class will meet in 3401 Walnut room 401B on Mondays, Wednesdays and Fridays from 2:30pm-5pm (not noon-2:30pm like it said during Advanced Registration). 
 </div>
-
-
-<div class="alert alert-success" markdown="1">
-The Fall 2019 class is full. But [you can sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) if you'd like to try to get a spot.
-</div>
-
+-->
 
 
 <!-- Display an alert about upcoming homework assignments -->
@@ -43,13 +37,26 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 {% endfor %}
 <!-- End alert for upcoming homework assignments -->
 
+
+
+
+<!--
 <div class="alert alert-warning" markdown="1">
 [Here is the robot checkout form.](https://docs.google.com/forms/d/e/1FAIpQLSdwSUTomNOdcsx0d1u3j57fQ9AqKiGei435-gAnbS1lfLuyhA/viewform?usp=sf_link)
 </div>
+-->
 
-<div class="alert alert-warning" markdown="1">
-[Today's in-class exercise will be starting to program our robots with Python.](r2d2_assignments/hw1/homework1.html)
+<div class="alert alert-info" markdown="1">
+R2D2 Assignments:
+* [Program robots with Python](r2d2_assignments/hw1/homework1.html)
+* [A* Search](r2d2_assignments/hw2/homework2.html)
 </div>
+
+
+<div class="alert alert-success" markdown="1">
+The Fall 2019 class is full. But [you can sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) if you'd like to try to get a spot.
+</div>
+
 
 
 Course number
