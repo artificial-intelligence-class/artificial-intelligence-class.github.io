@@ -385,7 +385,7 @@ def roll_list(roll_commands):
         droid.roll(speed, heading, duration)
 ```
 
-OK, so we've a list of a bunch of headings.  You can think of these as vectors.  We should be able add these in any order, and the resulting end point will be the same.  Is that right?  I can't remember. Lets just try it out and see.
+OK, so we've a list of a bunch of headings.  You can think of these as vectors.  We should be able add these in any order, and the resulting end point will be the same.  Is that right?  I can't remember. Let's just try it out and see.
 
 
 Let's try sorting the roll_commands in different orders, and see whether the droid ends up at the same location, as when the commands are executed in the initial order.
