@@ -3,17 +3,33 @@ layout: default
 img: chess-puzzle.png
 img_link: https://www.explainxkcd.com/wiki/index.php/1002:_Game_AIs
 caption: Chess Puzzle
-title: CIS 521 Homework 2 "Uninformed Search"
+title: CIS 521 Homework 2 "Search and Games"
 active_tab: homework
-release_date: 2018-09-11
-due_date: 2018-09-18 23:59:00EDT
+release_date: 2019-07-08
+due_date: 2019-07-16 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homework2.py 
+        url: search_and_games.py
     - 
         name: Lights Out GUI
-        url: homework2_lights_out_gui.py 
+        url: lights_out_gui.py 
+    - 
+        name: Grid Navigation GUI
+        url: grid_navigation_gui.py
+    -
+        name: Dominoes Game GUI 
+        url: dominoes_game_gui.py
+    - 
+        name: simple scene
+        url: scene_simple.txt
+    - 
+        name: barrier scene
+        url: scene_barrier.txt
+    - 
+        name: random 50x50 scene
+        url: scene_random.txt
+
 submission_link: https://www.gradescope.com/courses/52017
 ---
 
@@ -51,9 +67,9 @@ Homework 2: Search and Games [100 points]
 
 ## Instructions
 
-In this assignment, you will explore three classic puzzles from the perspective of uninformed search.
+In this assignment, you will explore three classic puzzles from the perspective of search and games.
 
-A skeleton file [homework2.py](homework2.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [search_and_games.py](search_and_games.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in cases where you find yourself reinventing the wheel. If you are unsure where to start, consider taking a look at the data structures and functions defined in the `collections`, `itertools`, `math`, and `random` modules.
 
@@ -65,52 +81,8 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-## 1. N-Queens [25 points]
 
-In this section, you will develop a solver for the $n$-queens problem, wherein $n$ queens are to be placed on an $n \\times n$ chessboard so that no pair of queens can attack each other. Recall that in chess, a queen can attack any piece that lies in the same row, column, or diagonal as itself.
-
-A brief treatment of this problem for the case where $n = 8$ is given in Section 3.2 of the textbook, which you may wish to consult for additional information.
-
-1. **[5 points]** Rather than performing a search over all possible placements of queens on the board, it is sufficient to consider only those configurations for which each row contains exactly one queen. Without taking any of the chess-specific constraints between queens into account, implement the pair of functions `num_placements_all(n)` and `num_placements_one_per_row(n)` that return the number of possible placements of $n$ queens on an $n \\times n$ board without or with this additional restriction. Think carefully about why this restriction is valid, and note the extent to which it reduces the size of the search space. You should assume that all queens are indistinguishable for the purposes of your calculations.
-    
-2. **[5 points]** With the answer to the previous question in mind, a sensible representation for a board configuration is a list of numbers between $0$ and $n - 1$, where the $i$th number designates the column of the queen in row $i$ for $0 \\le i \\lt n$. A complete configuration is then specified by a list containing $n$ numbers, and a partial configuration is specified by a list containing fewer than $n$ numbers. Write a function `n_queens_valid(board)` that accepts such a list and returns `True` if no queen can attack another, or `False` otherwise. Note that the board size need not be included as an additional argument to decide whether a particular list is valid.
-    
-        
-    ```python
-    >>> n_queens_valid([0, 0])
-    False
-    >>> n_queens_valid([0, 2])
-    True
-    ```
-
-    ```python
-    >>> n_queens_valid([0, 1])
-    False
-    >>> n_queens_valid([0, 3, 1])
-    True
-    ```
-
-3. **[15 points]** Write a function `n_queens_solutions(n)` that yields all valid placements of $n$ queens on an $n \\times n$ board, using the representation discussed above. The output may be generated in any order you see fit. Your solution should be implemented as a depth-first search, where queens are successively placed in empty rows until all rows have been filled. You may find it helpful to define a helper function `n_queens_helper(n, board)` that yields all valid placements which extend the partial solution denoted by `board`.
-    
-    Though our discussion of search in class has primarily covered algorithms that return just a single solution, the extension to a generator which yields all solutions is relatively simple. Rather than using a `return` statement when a solution is encountered, `yield` that solution instead, and then continue the search.
-    
-    ```python
-    >>> solutions = n_queens_solutions(4)
-    >>> next(solutions)
-    [1, 3, 0, 2]
-    >>> next(solutions)
-    [2, 0, 3, 1]
-    ```
-
-    ```python
-    >>> list(n_queens_solutions(6))
-    [[1, 3, 5, 0, 2, 4], [2, 5, 1, 4, 0, 3],
-     [3, 0, 4, 1, 5, 2], [4, 2, 0, 5, 3, 1]]
-    >>> len(list(n_queens_solutions(8)))
-    92
-    ```
-
-## 2. Lights Out [40 points]
+## 1. Lights Out [40 points]
 
 The Lights Out puzzle consists of an $m \\times n$ grid of lights, each of which has two states: on and off. The goal of the puzzle is to turn all the lights off, with the caveat that whenever a light is toggled, its neighbors above, below, to the left, and to the right will be toggled as well. If a light along the edge of the board is toggled, then fewer than four other lights will be affected, as the missing neighbors will be ignored.
 
@@ -251,63 +223,260 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     True
     ```
 
-Once you have implemented the functions and methods described in this section, you can play with an interactive version of the Lights Out puzzle using the GUI provided in the file [homework2_lights_out_gui.py](homework2_lights_out_gui.py) by running the following command:
+Once you have implemented the functions and methods described in this section, you can play with an interactive version of the Lights Out puzzle using the GUI provided in the file [lights_out_gui.py](lights_out_gui.py) by running the following command:
 
-    python3 homework2_lights_out_gui.py rows cols
+    python3 lights_out_gui.py rows cols
 
 The arguments `rows` and `cols` are positive integers designating the size of the puzzle.
 
 In the GUI, you can click on a light to perform a move at that location, and use the side menu to scramble or solve the puzzle. The GUI is merely a wrapper around your implementations of the relevant functions, and may therefore serve as a useful visual tool for debugging.
 
-## 3. Linear Disk Movement [30 points]
+## 2. Grid Navigation [30 points]
 
-In this section, you will investigate the movement of disks on a linear grid.
+In this section, you will investigate the problem of navigation on a two-dimensional grid with obstacles. The goal is to produce the shortest path between a provided pair of points, taking care to maneuver around the obstacles as needed. Path length is measured in Euclidean distance. Valid directions of movement include up, down, left, right, up-left, up-right, down-left, and down-right.
 
-The starting configuration of this puzzle is a row of $\\ell$ cells, with disks located on cells $0$ through $n - 1$. The goal is to move the disks to the end of the row using a constrained set of actions. At each step, a disk can only be moved to an adjacent empty cell, or to an empty cell two spaces away, provided another disk is located on the intervening square. Given these restrictions, it can be seen that in many cases, no movements will be possible for the majority of the disks. For example, from the starting position, the only two options are to move the last disk from cell $n - 1$ to cell $n$, or to move the second-to-last disk from cell $n - 2$ to cell $n$.
+Your task is to write a function `find_path(start, goal, scene)` which returns the shortest path from the start point to the goal point that avoids traveling through the obstacles in the grid. For this problem, points will be represented as two-element tuples of the form (row, column), and scenes will be represented as two-dimensional lists of Boolean values, with `False` values corresponding empty spaces and `True` values corresponding to obstacles. Your output should be the list of points in the path, and should explicitly include both the start point and the goal point. Your implementation should consist of an $A^\*$ search using the straight-line Euclidean distance heuristic. If multiple optimal solutions exist, any of them may be returned. If no optimal solutions exist, or if the start point or goal point lies on an obstacle, you should return the sentinal value `None`.
 
-1. **[15 points]** Write a function `solve_identical_disks(length, n)` that returns an optimal solution to the above problem as a list of moves, where `length` is the number of cells in the row and `n` is the number of disks. Each move in the solution should be a two-element tuple of the form (from, to) indicating a disk movement from the first cell to the second. As suggested by its name, this function should treat all disks as being identical.
+```python
+>>> scene = [[False, False, False],
+...          [False, True , False],
+...          [False, False, False]]
+>>> find_path((0, 0), (2, 1), scene)
+[(0, 0), (1, 0), (2, 1)]
+```
+
+```python
+>>> scene = [[False, True, False],
+...          [False, True, False],
+...          [False, True, False]]
+>>> print(find_path((0, 0), (0, 2), scene))
+None
+```
+
+Once you have implemented your solution, you can visualize the paths it produces using the provided GUI by running the following command:
+
+    python3 grid_navigation_gui.py scene_path
+
+The argument `scene_path` is a path to a scene file storing the layout of the target grid and obstacles. We use the following format for textual scene representation: `"."` characters correspond to empty spaces, and `"X"` characters correspond to obstacles.
+
+## 3. Dominoes Games [30 points]
+
+In this section, you will develop an AI for a game in which two players take turns placing $1 \\times 2$ dominoes on a rectangular grid. One player must always place his dominoes vertically, and the other must always place his dominoes horizontally. The last player who successfully places a domino on the board wins.
+
+As with the Tile Puzzle, an infrastructure that is compatible with the provided GUI has been suggested. However, only the search method will be tested, so you are free to choose a different approach if you find it more convenient to do so.
+
+The representation used for this puzzle is a two-dimensional list of Boolean values, where `True` corresponds to a filled square and `False` corresponds to an empty square.
+
+1. **[0 point]** In the `DominoesGame` class, write an initialization method `__init__(self, board)` that stores an input board of the form described above for future use. You additionally may wish to store the dimensions of the board as separate internal variables, though this is not required.
     
-    Your solver for this problem should be implemented using a breadth-first graph search. The exact solution produced is not important, as long as it is of minimal length.
+2. **[0 point]** *Suggested infrastructure.*
     
-    Unlike in the previous two sections, no requirement is made with regards to the manner in which puzzle configurations are represented. Before you begin, think carefully about which data structures might be best suited for the problem, as this choice may affect the efficiency of your search.
+    In the `DominoesGame` class, write a method `get_board(self)` that returns the internal representation of the board stored during initialization.
     
     ```python
-    >>> solve_identical_disks(4, 2)
-    [(0, 2), (1, 3)]
-    >>> solve_identical_disks(5, 2)
-    [(0, 2), (1, 3), (2, 4)]
-    ```
-
-    ```python
-    >>> solve_identical_disks(4, 3)
-    [(1, 3), (0, 1)]
-    >>> solve_identical_disks(5, 3)
-    [(1, 3), (0, 1), (2, 4), (1, 2)]
+    >>> b = [[False, False], [False, False]]
+    >>> g = DominoesGame(b)
+    >>> g.get_board()
+    [[False, False], [False, False]]
     ```
     
-2. **[15 points]** Write a function `solve_distinct_disks(length, n)` that returns an optimal solution to the same problem with a small modification: in addition to moving the disks to the end of the row, their final order must be the reverse of their initial order. More concretely, if we abbreviate `length` as $\\ell$, then a desired solution moves the first disk from cell $0$ to cell $\\ell - 1$, the second disk from cell $1$ to cell $\\ell - 2$, $\\cdots$, and the last disk from cell $n - 1$ to cell $\\ell - n$.
+    ```python
+    >>> b = [[True, False], [True, False]]
+    >>> g = DominoesGame(b)
+    >>> g.get_board()
+    [[True, False], [True, False]]
+    ```
     
-    Your solver for this problem should again be implemented using a breadth-first graph search. As before, the exact solution produced is not important, as long as it is of minimal length.
+    Write a top-level function `create_dominoes_game(rows, cols)` that returns a new `DominoesGame` of the specified dimensions with all squares initialized to the empty state.
     
     ```python
-    >>> solve_distinct_disks(4, 2)
-    [(0, 2), (2, 3), (1, 2)]
-    >>> solve_distinct_disks(5, 2)
-    [(0, 2), (1, 3), (2, 4)]
+    >>> g = create_dominoes_game(2, 2)
+    >>> g.get_board()
+    [[False, False], [False, False]]
     ```
-
+    
     ```python
-    >>> solve_distinct_disks(4, 3)
-    [(1, 3), (0, 1), (2, 0), (3, 2), (1, 3),
-     (0, 1)]
-    >>> solve_distinct_disks(5, 3)
-    [(1, 3), (2, 1), (0, 2), (2, 4), (1, 2)]
+    >>> g = create_dominoes_game(2, 3)
+    >>> g.get_board()
+    [[False, False, False],
+     [False, False, False]]
     ```
+    
+    In the `DominoesGame` class, write a method `reset(self)` which resets all of the internal board's squares to the empty state.
+    
+    ```python
+    >>> b = [[False, False], [False, False]]
+    >>> g = DominoesGame(b)
+    >>> g.get_board()
+    [[False, False], [False, False]]
+    >>> g.reset()
+    >>> g.get_board()
+    [[False, False], [False, False]]
+    ```
+    
+    ```python
+    >>> b = [[True, False], [True, False]]
+    >>> g = DominoesGame(b)
+    >>> g.get_board()
+    [[True, False], [True, False]]
+    >>> g.reset()
+    >>> g.get_board()
+    [[False, False], [False, False]]
+    ```
+    
+    In the `DominoesGame` class, write a method `is_legal_move(self, row, col, vertical)` that returns a Boolean value indicating whether the given move can be played on the current board. A legal move must place a domino fully within bounds, and may not cover squares which have already been filled.
+    
+    If the `vertical` parameter is `True`, then the current player intends to place a domino on squares `(row, col)` and `(row + 1, col)`. If the `vertical` parameter is `False`, then the current player intends to place a domino on squares `(row, col)` and `(row, col + 1)`. This convention will be followed throughout the rest of the section.
+    
+    ```python
+    >>> b = [[False, False], [False, False]]
+    >>> g = DominoesGame(b)
+    >>> g.is_legal_move(0, 0, True)
+    True
+    >>> g.is_legal_move(0, 0, False)
+    True
+    ```
+    
+    ```python
+    >>> b = [[True, False], [True, False]]
+    >>> g = DominoesGame(b)
+    >>> g.is_legal_move(0, 0, False)
+    False
+    >>> g.is_legal_move(0, 1, True)
+    True
+    >>> g.is_legal_move(1, 1, True)
+    False
+    ```
+    
+    In the `DominoesGame` class, write a method `legal_moves(self, vertical)` which yields the legal moves available to the current player as (row, column) tuples. The moves should be generated in row-major order (i.e. iterating through the rows from top to bottom, and within rows from left to right), starting from the top-left corner of the board.
+    
+    ```python
+    >>> g = create_dominoes_game(3, 3)
+    >>> list(g.legal_moves(True))
+    [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
+    >>> list(g.legal_moves(False))
+    [(0, 0), (0, 1), (1, 0), (1, 1), (2, 0), (2, 1)]
+    ```
+    
+    ```python
+    >>> b = [[True, False], [True, False]]
+    >>> g = DominoesGame(b)
+    >>> list(g.legal_moves(True))
+    [(0, 1)]
+    >>> list(g.legal_moves(False))
+    []
+    ```
+    
+    In the `DominoesGame` class, write a method `perform_move(self, row, col, vertical)` which fills the squares covered by a domino placed at the given location in the specified orientation.
+    
+    ```python
+    >>> g = create_dominoes_game(3, 3)
+    >>> g.perform_move(0, 1, True)
+    >>> g.get_board()
+    [[False, True,  False],
+     [False, True,  False],
+     [False, False, False]]
+    ```
+    
+    ```python
+    >>> g = create_dominoes_game(3, 3)
+    >>> g.perform_move(1, 0, False)
+    >>> g.get_board()
+    [[False, False, False],
+     [True,  True,  False],
+     [False, False, False]]
+    ```
+    
+    In the `DominoesGame` class, write a method `game_over(self, vertical)` that returns whether the current player is unable to place any dominoes.
+    
+    ```python
+    >>> b = [[False, False], [False, False]]
+    >>> g = DominoesGame(b)
+    >>> g.game_over(True)
+    False
+    >>> g.game_over(False)
+    False
+    ```
+    
+    ```python
+    >>> b = [[True, False], [True, False]]
+    >>> g = DominoesGame(b)
+    >>> g.game_over(True)
+    False
+    >>> g.game_over(False)
+    True
+    ```
+    
+    In the `DominoesGame` class, write a method `copy(self)` that returns a new `DominoesGame` object initialized with a deep copy of the current board. Changes made to the original puzzle should not be reflected in the copy, and vice versa.
+    
+    ```python
+    >>> g = create_dominoes_game(4, 4)
+    >>> g2 = g.copy()
+    >>> g.get_board() == g2.get_board()
+    True
+    ```
+    
+    ```python
+    >>> g = create_dominoes_game(4, 4)
+    >>> g2 = g.copy()
+    >>> g.perform_move(0, 0, True)
+    >>> g.get_board() == g2.get_board()
+    False
+    ```
+    
+    In the `DominoesGame` class, write a method `successors(self, vertical)` that yields all successors of the puzzle for the current player as (move, new-game) tuples, where moves themselves are (row, column) tuples. The second element of each successor should be a new `DominoesGame` object whose board is the result of applying the corresponding move to the current board. The successors should be generated in the same order in which moves are produced by the `legal_moves(self, vertical)` method.
+    
+    ```python
+    >>> b = [[False, False], [False, False]]
+    >>> g = DominoesGame(b)
+    >>> for m, new_g in g.successors(True):
+    ...     print(m, new_g.get_board())
+    ...
+    (0, 0) [[True, False], [True, False]]
+    (0, 1) [[False, True], [False, True]]
+    ```
+    
+    ```python
+    >>> b = [[True, False], [True, False]]
+    >>> g = DominoesGame(b)
+    >>> for m, new_g in g.successors(True):
+    ...     print(m, new_g.get_board())
+    ...
+    (0, 1) [[True, True], [True, True]]
+    ```
+    
+    *Optional.*
+    
+    In the `DominoesGame` class, write a method `get_random_move(self, vertical)` which returns a random legal move for the current player as a (row, column) tuple. *The `random` module contains a function `random.choice(seq)` which returns a random element from its input sequence.*
+    
+3. **[30 points]** In the `DominoesGame` class, write a method `get_best_move(self, vertical, limit)` which returns a $3$-element tuple containing the best move for the current player as a (row, column) tuple, its associated value, and the number of leaf nodes visited during the search. Recall that if the `vertical` parameter is `True`, then the current player intends to place a domino on squares `(row, col)` and `(row + 1, col)`, and if the `vertical` parameter is `False`, then the current player intends to place a domino on squares `(row, col)` and `(row, col + 1)`. Moves should be explored row-major order, described in further detail above, to ensure consistency.
+    
+    Your search should be a faithful implementation of the alpha-beta search given on page 170 of the course textbook, with the restriction that you should look no further than `limit` moves into the future. To evaluate a board, you should compute the number of moves available to the current player, then subtract the number of moves available to the opponent.
+    
+    ```python
+    >>> b = [[False] * 3 for i in range(3)]
+    >>> g = DominoesGame(b)
+    >>> g.get_best_move(True, 1)
+    ((0, 1), 2, 6)
+    >>> g.get_best_move(True, 2)
+    ((0, 1), 3, 10)
+    ```
+    
+    ```python
+    >>> b = [[False] * 3 for i in range(3)]
+    >>> g = DominoesGame(b)
+    >>> g.perform_move(0, 1, True)
+    >>> g.get_best_move(False, 1)
+    ((2, 0), -3, 2)
+    >>> g.get_best_move(False, 2)
+    ((2, 0), -2, 5)
+    ```
+    
 
-## 4. Feedback [5 points]
+If you implemented the suggested infrastructure described in this section, you can play with an interactive version of the dominoes board game using the provided GUI by running the following command:
 
-1. **[1 point]** Approximately how long did you spend on this assignment?
+    python3 dominoes_game_gui.py rows cols
 
-2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+The arguments `rows` and `cols` are positive integers designating the size of the board.
 
-3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+In the GUI, you can click on a square to make a move, press 'r' to perform a random move, or press a number between $1$ and $9$ to perform the best move found according to an alpha-beta search with that limit. The GUI is merely a wrapper around your implementations of the relevant functions, and may therefore serve as a useful visual tool for debugging.
