@@ -5,9 +5,19 @@
       name: Introduction / AI in Science Fiction and Philosophy 
     -
       name: Python Review
-  # slides: 00-Course-Intro.pdf
-  # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a4256e5d-9c02-41b6-aefd-a9460066cfba
+  slides: 00-Course-Intro.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=da2bc713-2f48-40fd-8542-aa7f011038cb
   readings:
+    - 
+      title: Intro to Python Part 1
+      authors: Fall 2018 lecture
+      url: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4a27eb8a-3607-4c63-b852-a9460066cfe9
+      optional: false
+    - 
+      title: Intro to Python Part 2 
+      authors: Fall 2018 lecture
+      url: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a6aac32e-032d-4780-9d52-a9460066d00a
+      optional: false
     - 
       title: AIMA Chapter 1 "Introduction"
       authors: Russell and Norvig
@@ -15,7 +25,7 @@
     - 
       title: AIMA Chapter 26 "Philosophical Foundations"
       authors: Russell and Norvig
-      optional: false
+      optional: true
   quiz:
     -
       title: Quiz 1
@@ -36,7 +46,7 @@
       name: Search Problem Formulation
     -
       name: Uninformed Search
-  # slides: 00-Course-Intro.pdf
+  slides: 03-Agents-Search-Problems-and-Uninformed-Search.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a4256e5d-9c02-41b6-aefd-a9460066cfba
   readings:   
     - 
