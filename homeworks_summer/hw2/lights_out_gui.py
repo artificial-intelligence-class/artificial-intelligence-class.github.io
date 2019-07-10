@@ -1,7 +1,7 @@
 import sys
 import tkinter
 
-import homework2
+import search_and_games as X
 
 class Light(tkinter.Canvas):
 
@@ -76,7 +76,7 @@ class LightsOutGUI(tkinter.Frame):
 
         tkinter.Frame.__init__(self, master)
 
-        self.puzzle = homework2.create_puzzle(rows, cols)
+        self.puzzle = X.create_puzzle(rows, cols)
 
         self.board = Board(self, self.puzzle, rows, cols)
         self.board.pack(side=tkinter.LEFT, padx=1, pady=1)
