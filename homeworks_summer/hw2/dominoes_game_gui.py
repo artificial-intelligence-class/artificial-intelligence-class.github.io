@@ -58,7 +58,7 @@ class DominoesGUI(tkinter.Frame):
 
         tkinter.Frame.__init__(self, master)
 
-        self.game = homework4.create_dominoes_game(rows, cols)
+        self.game = X.create_dominoes_game(rows, cols)
         self.rows = rows
         self.cols = cols
 
