@@ -67,7 +67,7 @@
   titles:
     - 
       name: A* Search and Heuristics
-  # slides: 04-informed-search.pdf
+  slides: 04-informed-search.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=66ae0cb3-2490-4a21-b7ed-a9460066d047
   readings:   
     - 
