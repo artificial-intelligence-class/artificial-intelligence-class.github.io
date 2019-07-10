@@ -1,7 +1,7 @@
 import sys
 import tkinter
 
-import homework3
+import search_and_games as X
 
 class Grid(tkinter.Canvas):
 
@@ -109,7 +109,7 @@ class GridNavigationGUI(tkinter.Frame):
     def find_path_click(self):
         start, goal = self.start_and_goal
         if start is not None and goal is not None:
-            path = homework3.find_path(start, goal, self.scene)
+            path = X.find_path(start, goal, self.scene)
             if path:
                 self.grid.draw_path(path)
 
