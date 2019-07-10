@@ -1,7 +1,7 @@
 import sys
 import tkinter
 
-import homework4
+import search_and_games as X
 
 class Square(tkinter.Canvas):
 
