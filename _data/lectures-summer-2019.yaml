@@ -86,11 +86,11 @@
       name: Game Trees&colon; Minimax
     -
       name: Game Trees&colon; Expectimax and Utilities
-  # slides: 07-Adversarial-Search.pdf
+  slides: 05-Games-and-Adverserial-Search.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2376392c-ef0e-41f1-896c-a9460066d0ae
   readings:   
     - 
-      title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
+      title: AIMA Chapter 5 "Adversarial Search" (5.1-5.5)
       authors: Russell and Norvig
       optional: false
     - 
@@ -100,7 +100,7 @@
   quiz:
     -
       title: Quiz 4
-      name: Minimax, Expectimax, and Utilities (AIMA 5.2-5.5 and 16.1-16.3)
+      name: Minimax, Expectimax, and Utilities (AIMA 5.1-5.5 and 16.1-16.3)
       url: https://www.gradescope.com/courses/52017
   homeworks:
     -
