@@ -65,10 +65,90 @@ You may submit as many times as you would like before the deadline, but only the
 
 ## Set Up
 
+For now, we have setup instructions for Mac.  We are working on creating instructions for Windows and Linux.
+
 To get started, we are going to download a set of APIs for controling the robots via Bluetooth.  This step is a little bit complicated, so we recommend that you start early, so that you can ask for help if you get stuck.
 
-Please follow the instructions in this [README](https://github.com/josephcappadona/sphero-project/blob/master/README.md).
+1. Download and install the current version of Python from [https://www.python.org/downloads/](https://www.python.org/downloads/).  
+2. After you have installed it, you will need to Double click on the "Install Certificates.command" file in your `/Applications/Python 3.7` folder.
+3.  The Mac installer will put it at /usr/local/bin/python3 which you can verify by checking the date after typing
+```bash
+ls -la /usr/local/bin/py*
+```
+You should see today’s date.
+4. Make sure you have brew installed. You can find out whether you've got it by typing
+```bash
+which brew
+```
+in ther terminal.  If you don’t have it, then install it from here: [https://brew.sh](https://brew.sh)
+5. Download the repo
+```bash
+git clone https://github.com/josephcappadona/sphero-project.git
+cd sphero-project
+```
 
+6. Create a virtual environment 
+```bash
+/usr/local/bin/python3 -m venv r2d2
+source r2d2/bin/activate
+python -m pip install --upgrade pip
+```
+
+7. Set your Path
+```bash
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+```
+
+8. Set up Node in your virtual environment
+```bash
+python -m pip install nodeenv
+nodeenv -p --node=10.15.3
+brew install yarn
+```
+
+9. Install python dependencies
+```bash
+python -m pip install numpy pygame
+```
+
+10. Compile the server library and dependencies
+```bash
+cd spherov2.js
+rm yarn.lock
+sudo yarn install
+cd lib/
+yarn rebuild
+```
+
+11. Start the server, and leave it running in its own Terminal window.
+```bash
+cd ../examples/
+sudo yarn server
+```
+
+12. Open a new Terminal window, and change into your  sphero-project director.  Then activate your virual environment.
+
+```bash
+cd sphero-project/
+source r2d2/bin/activate
+```
+
+13. Change into the src directory and run python:
+```bash
+cd src/
+python 
+```
+
+14.  Try copying and pasting these commands into the Python environment:
+```python
+from client import DroidClient
+droid = DroidClient() 
+droid.scan() # Scan the area for droids.
+# Connect to your robot.
+droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your ID
+droid.animate(5)
+```
+If you hear a happy chirp, you're ready to go!
 
 ## 1. Let's get rolling
 
