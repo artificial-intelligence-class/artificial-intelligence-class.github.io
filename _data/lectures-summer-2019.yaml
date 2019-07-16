@@ -118,8 +118,8 @@
   date: 2019-07-15
   titles:
     -
-     name: Markov Decision Processes
-  # slides: 09-MDPs.pdf
+     name: Expectimax, Utilities and Markov Decision Processes
+  slides: 06-expectimax-utilities-and-MDPs.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27b5b53b-c7ff-4200-a408-a9460066d0eb
   readings:
     - 
