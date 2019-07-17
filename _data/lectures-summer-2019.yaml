@@ -140,7 +140,7 @@
   titles:
     -
       name: MDPs and Reinforcement Learning
-  # slides: 11-Reinforcement-Learning.pdf
+  slides: 07-MDPs-part-2.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8577e149-ead6-4844-8041-a9460066d160
   readings:   
     - 
