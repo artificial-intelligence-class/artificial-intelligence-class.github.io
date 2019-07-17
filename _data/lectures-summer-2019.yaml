@@ -178,8 +178,8 @@
   homeworks:
     -
       title: HW 3
-      name: Reinforcement learning
-      url: homeworks_summer/hw3/reinforcement-learning.html 
+      name: Markov Decision Processes
+      url: homeworks_summer/hw3/markov-decision-processes.html 
       due: 2019-07-23
 -
   date: 2019-07-20
