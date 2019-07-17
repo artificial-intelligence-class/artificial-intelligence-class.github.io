@@ -5,12 +5,12 @@ img_link: https://xkcd.com/1801/
 caption: Someone needs value iteration 
 title: CIS 521 Homework 3 "Markov Decision Processes"
 active_tab: homework
-release_date: 2018-10-16
-due_date: 2018-10-23 23:59:00EDT
+release_date: 2019-07-16
+due_date: 2019-07-23 23:59:00EDT
 materials:
     - 
         name: skeleton files
-        url: homeworks/hw5/skeleton.zip 
+        url: skeleton.zip 
 
 submission_link: https://www.gradescope.com/courses/52017
 attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
