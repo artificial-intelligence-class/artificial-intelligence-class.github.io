@@ -84,8 +84,6 @@
   titles: 
     -
       name: Game Trees&colon; Minimax
-    -
-      name: Game Trees&colon; Expectimax and Utilities
   slides: 05-Games-and-Adverserial-Search.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2376392c-ef0e-41f1-896c-a9460066d0ae
   readings:   
@@ -118,7 +116,9 @@
   date: 2019-07-15
   titles:
     -
-     name: Expectimax, Utilities and Markov Decision Processes
+      name: Game Trees&colon; Expectimax and Utilities
+    -
+     name: Markov Decision Processes 1
   slides: 06-expectimax-utilities-and-MDPs.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27b5b53b-c7ff-4200-a408-a9460066d0eb
   readings:
@@ -139,14 +139,22 @@
   date: 2019-07-17
   titles:
     -
-      name: MDPs and Reinforcement Learning
+      name: Markov Decision Processes 2
   slides: 07-MDPs-part-2.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8577e149-ead6-4844-8041-a9460066d160
-  readings:   
+  readings:
+-
+  date: 2019-07-19
+  titles: 
+    -
+      name: Reinforcement Learning 1
+  # slides: 13-Probability.pdf
+  # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=32c249cf-dac2-4de0-843a-a9460066d19d
+  readings:
     - 
       title: AIMA Chapter 21 "Reinforcement Learning"
       authors: Russell and Norvig
-      optional: false 
+      optional: false
     - 
       title: Chapter 6 "Temporal-Difference Learning" (6.1, 6.2 and 6.5)
       authors: Sutton and Barto
@@ -156,25 +164,7 @@
       title: Quiz 6
       name: Reinforcement Learning (AIMA Chapter 21; Sutton and Barto, 6.1, 6.2 and 6.5)
       url: https://www.gradescope.com/courses/52017
--
-  date: 2019-07-19
-  titles: 
-    -
-      name: Reinforcement Learning 2
-    -
-      name: Probability 
-  # slides: 13-Probability.pdf
-  # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=32c249cf-dac2-4de0-843a-a9460066d19d
-  readings:   
-    - 
-      title: AIMA Chapter 13 "Quantifying Uncertainty" (13.1-13.5)
-      authors: Russell and Norvig
-      optional: false
-  quiz:
-    -
-      title: Quiz 7
-      name: Probability (AIMA 13.1-13.5)
-      url: https://www.gradescope.com/courses/52017
+  
   homeworks:
     -
       title: HW 3
@@ -191,33 +181,30 @@
   date: 2019-07-22
   titles:
     -
-      name: Markov Models 
+      name: Reinforcement Learning 2
   # slides: 14-Markov-Models.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9a71d6e2-caa1-4c19-a63c-a9460066d1d5
   readings:  
+-
+  date: 2019-07-24
+  titles:
+    -
+      name: Markov Models
+    -
+      name: Probability
+  readings:
+    - 
+      title: AIMA Chapter 13 "Quantifying Uncertainty" (13.1-13.5)
+      authors: Russell and Norvig
+      optional: false
     - 
       title: AIMA Chapter 15 "Probabilistic Reasoning Over Time" (15.2-15.5)
       authors: Russell and Norvig
       optional: false
   quiz:
     -
-      title: Quiz 8
-      name: Markov Models (AIMA 15.2-15.5)
-      url: https://www.gradescope.com/courses/52017
--
-  date: 2019-07-24
-  titles:
-    -
-      name: SLAM (Simultaneous Localization and Mapping)
-  readings:
-    -
-      title: AIMA Chapter 25 “Robotics” (25.3)
-      authors: Russell and Norvig
-      optional: false
-  quiz:
-    -
-      title: Quiz 9
-      name: SLAM (AIMA 25.3)
+      title: Quiz 7
+      name: Markov Models and Probability (AIMA 13.1-13.5 and 15.2-15.5)
       url: https://www.gradescope.com/courses/52017
 -
   date: 2019-07-26
@@ -235,13 +222,13 @@
       url: https://homes.cs.washington.edu/~lsz/papers/mhzf-iser12.pdf
   quiz:
     -
-      title: Quiz 10
+      title: Quiz 8
       name: NLP (Jurafsky and Martin Chapter 6; paper)
       url: https://www.gradescope.com/courses/52017
   homeworks:
     -
       title: HW 4
-      name: Natural Language Processing
+      name: Reinforcement Learning
       url: homeworks_summer/hw4/natural-language-processing.html
       due: 2019-07-30
 -
@@ -258,7 +245,7 @@
       optional: false
   quiz:
     -
-      title: Quiz 11
+      title: Quiz 9
       name: Bayes' Nets (AIMA 14.1, 14.2, 14.4)
       url: https://www.gradescope.com/courses/52017 
 -
@@ -292,7 +279,7 @@
       optional: false  
   quiz:
     -
-      title: Quiz 12
+      title: Quiz 10
       name: Machine Learning (AIMA 18.6.3, 18.8; Wikipedia)
       url: https://www.gradescope.com/courses/52017 
 -
@@ -320,7 +307,7 @@
       optional: false
   quiz:
     -
-      title: Quiz 13
+      title: Quiz 11
       name: Neural Networks (Michael Nielsen Chapter 1 and 2)
       url: https://www.gradescope.com/courses/52017 
   homeworks:
@@ -338,12 +325,23 @@
 -
   date: 2019-08-05
   titles:
-    - 
-      name: <b>TBD</b> Computer Vision
+    -
+      name: SLAM (Simultaneous Localization and Mapping)
   readings:
+    -
+      title: AIMA Chapter 25 “Robotics” (25.3)
+      authors: Russell and Norvig
+      optional: false
+  quiz:
+    -
+      title: Quiz 12
+      name: SLAM (AIMA 25.3)
+      url: https://www.gradescope.com/courses/52017
 -
   date: 2019-08-07
   titles:
+    - 
+      name: <b>TBD</b> Computer Vision
     -
       name: <b>TBD</b> Self-Driving Cars
   readings: 
