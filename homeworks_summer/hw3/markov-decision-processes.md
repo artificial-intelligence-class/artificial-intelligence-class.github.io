@@ -10,7 +10,7 @@ due_date: 2019-07-23 23:59:00EDT
 materials:
     - 
         name: skeleton files
-        url: skeleton.zip 
+        url: homeworks_summer/hw3/skeleton.zip 
 
 submission_link: https://www.gradescope.com/courses/52017
 attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
