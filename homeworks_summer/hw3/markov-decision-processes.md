@@ -70,7 +70,7 @@ The code for this project contains the following files, which are available in a
 
 Your code will be autograded for technical correctness. Please ___do not___ change the names of any provided functions or classes within the code, ___do not___ change any file that is not one of the two files for submission explained in 1 above. Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-## 1. MDPs [0 points]
+## MDPs [0 points]
 To get started, run Gridworld in manual control mode, which uses the arrow keys:
 ```
 python gridworld.py -m
@@ -91,7 +91,7 @@ Look at the console output that accompanies the graphical output (or use -t for 
 As in Pac-Man, positions are represented by (x,y) Cartesian coordinates and any arrays are indexed by `[x][y]`, with `'north'` being the direction of increasing `y`, etc.  By default, most transitions will receive a reward of zero, though you can change this with the living reward option (-r).
 
 
-## 2. Value Iteration [50 Points]
+## 1. Value Iteration [50 Points]
 Write a value iteration agent in `ValueIterationAgent`, which has been partially specified for you in __valueIterationAgents.py__.  Your value iteration agent is an offline planner, not a reinforcement agent, and so the relevant training option is the number of iterations of value iteration it should run (option `-i`) in its initial planning phase.  `ValueIterationAgent` takes an MDP on construction and runs value iteration for the specified number of iterations before the constructor returns.
 Value iteration computes k-step estimates of the optimal values, Vk. In addition to running value iteration, implement the following methods for `ValueIterationAgent` using Vk.
 + `getValue(state)` returns the value of a state.
@@ -124,7 +124,7 @@ python gridworld.py -a value -i 5 -s 0.2
 Your value iteration agent will be graded on a new grid. We will check your values, q-values, and policies after fixed numbers of iterations and at convergence (e.g. after 100 iterations).
 Hint: Use the `util.Counter` class in __util.py__, which is a dictionary with a default value of zero. Methods such as `totalCount` should simplify your code. However, be careful with `argMax`: the actual argmax you want may be a key not in the counter!
 
-## 3. Bridge Crossing Analysis [10 Points]
+## 2. Bridge Crossing Analysis [10 Points]
 
 BridgeGrid is a grid world map with the a low-reward terminal state and a high-reward terminal state separated by a narrow "bridge", on either side of which is a chasm of high negative reward. The agent starts near the low-reward state. With the default discount of 0.9 and the default noise of 0.2, the optimal policy does not cross the bridge. Change only ONE of the discount and noise parameters so that the optimal policy causes the agent to attempt to cross the bridge. Put your answer in question2() of analysis.py. (Noise refers to how often an agent ends up in an unintended successor state when they perform an action.) The default corresponds to:
 
@@ -137,7 +137,7 @@ BridgeGrid is a grid world map with the a low-reward terminal state and a high-r
 python gridworld.py -a value -i 100 -g BridgeGrid --discount 0.9 --noise 0.2
 ```
 
-## 4. Policies [40 Points]
+## 3. Policies [40 Points]
 Consider the DiscountGrid layout, shown below. This grid has two terminal states with positive payoff (in the middle row), a close exit with payoff +1 and a distant exit with payoff +10. The bottom row of the grid consists of terminal states with negative payoff (shown in red); each state in this "cliff" region has payoff -10. The starting state is the yellow square. We distinguish between two types of paths: (1) paths that "risk the cliff" and travel near the bottom row of the grid; these paths are shorter but risk earning a large negative payoff, and are represented by the red arrow in the figure below. (2) paths that "avoid the cliff" and travel along the top edge of the grid. These paths are longer but are less likely to incur huge negative payoffs. These paths are represented by the green arrow in the figure below.
 
 <center>
@@ -164,8 +164,8 @@ Here are the optimal policy types you should attempt to produce:
 	<li>Avoid both exits and the cliff (so an episode should never terminate)</li>
 </ol>
 
-Questions 4a through question 4e should each return a 3-item tuple of (discount, noise, living reward) in analysis.py.
+Questions 3a through question 3e should each return a 3-item tuple of (discount, noise, living reward) in analysis.py.
 
-Note: You can check your policies in the GUI. For example, using a correct answer to 4a, the arrow in (0,1) should point east, the arrow in (1,1) should also point east, and the arrow in (2,1) should point north.
+Note: You can check your policies in the GUI. For example, using a correct answer to 3a, the arrow in (0,1) should point east, the arrow in (1,1) should also point east, and the arrow in (2,1) should point north.
 
 __Note:__ On some machines you may not see an arrow. In this case, press a button on the keyboard to switch to qValue display, and mentally calculate the policy by taking the arg max of the available qValues for each state.
