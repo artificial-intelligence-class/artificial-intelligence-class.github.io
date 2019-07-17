@@ -173,7 +173,7 @@
   quiz:
     -
       title: Quiz 7
-      name: Probability
+      name: Probability (AIMA 13.1-13.5)
       url: https://www.gradescope.com/courses/52017
   homeworks:
     -
