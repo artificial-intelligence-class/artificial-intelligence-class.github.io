@@ -3,14 +3,14 @@ layout: default
 img: decision_paralysis.png
 img_link: https://xkcd.com/1801/
 caption: Someone needs value iteration 
-title: CIS 521 Homework 5 "Markov Decision Processes"
+title: CIS 521 Homework 3 "Markov Decision Processes"
 active_tab: homework
-release_date: 2018-10-16
-due_date: 2018-10-23 23:59:00EDT
+release_date: 2019-07-16
+due_date: 2019-07-23 23:59:00EDT
 materials:
     - 
         name: skeleton files
-        url: homeworks/hw5/skeleton.zip 
+        url: homeworks_summer/hw3/skeleton.zip 
 
 submission_link: https://www.gradescope.com/courses/52017
 attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
@@ -44,32 +44,31 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-Homework 3: Markov Decision Processes and Reinforcement Learning [100 points]
+Homework 3: Markov Decision Processes [100 points]
 =============================================================
  
 ## Instructions
-In this project, you will implement value iteration.  You will test your agents on `Gridworld`.
-The code for this project contains the following files, which are available in a [zip](https://github.com/artificial-intelligence-class/cis521_homeworks/raw/master/hw5/skeleton.zip) archive.
-Files you will edit:
-* valueIterationAgents.py: A value iteration agent for solving known MDPs.
-* analysis.py: A file to put your answers to questions given in the project.
+In this project, you will implement value iteration.  You will test your agents on **Gridworld**.
+The code for this project contains the following files, which are available in a [zip](https://github.com/artificial-intelligence-class/cis521_homeworks/raw/master/hw5/skeleton.zip) archive. It contains multiple files to help you with this homework.
 
-Files you should read but not edit:
-+ __mdp.py__: Defines methods on general MDPs.
-+ __learningAgents.py__: Defines the base classes ValueEstimationAgent and QLearningAgent, which your agents will extend.
-+ __util.py__: Utilities, including util.Counter, which is particularly useful for q-learners.
-+ __gridworld.py__: The Gridworld implementation
++ __Files you will edit and submit:__
+	+ __valueIterationAgents.py__: A value iteration agent for solving known MDPs.
+	+ __analysis.py__: A file to put your answers to questions given in the project.
 
-Files you can ignore:
-+ __environment.py__: Abstract class for general reinforcement learning environments. Used by gridworld.py.
-+ __graphicsGridworldDisplay.py__: Gridworld graphical display.
-+ __graphicsUtils.py__: Graphics utilities.
-+ __textGridworldDisplay.py__: Plug-in for the Gridworld text interface.
-+ __graphicsCrawlerDisplay.py__: GUI for the crawler robot.
++ Files you should read but not edit:
+	+ mdp.py: Defines methods on general MDPs.
+	+ learningAgents.py: Defines the base classes ValueEstimationAgent and QLearningAgent, which your agents will extend.
+	+ util.py: Utilities, including util.Counter, which is particularly useful for q-learners.
+	+ gridworld.py: The Gridworld implementation
 
-__What to submit__: You will fill in portions of `valueIterationAgents.py` and `analysis.py` during the assignment. You will submit only these files. Please don't change any others.
++ Files you can ignore:
+	* environment.py: Abstract class for general reinforcement learning environments. Used by gridworld.py.
+	* graphicsGridworldDisplay.py: Gridworld graphical display.
+	* graphicsUtils.py: Graphics utilities.
+	* textGridworldDisplay.py: Plug-in for the Gridworld text interface.
+	* graphicsCrawlerDisplay.py: GUI for the crawler robot.
 
-__Evaluation__: Your code will be autograded for technical correctness. Please ___do not___ change the names of any provided functions or classes within the code, or you will wreak havoc on the autograder. However, the correctness of your implementation -- not the autograder's judgements -- will be the final judge of your score. If necessary, we will review and grade assignments individually to ensure that you receive due credit for your work.
+Your code will be autograded for technical correctness. Please ___do not___ change the names of any provided functions or classes within the code, ___do not___ change any file that is not one of the two files for submission explained in 1 above. Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
 ## MDPs [0 points]
 To get started, run Gridworld in manual control mode, which uses the arrow keys:
@@ -87,9 +86,11 @@ python gridworld.py -g MazeGrid
 ```
 You should see the random agent bounce around the grid until it happens upon an exit.  Not the finest hour for an AI agent.
 
-___Note:___ The Gridworld MDP is such that you first must enter a pre-terminal state (the double boxes shown in the GUI) and then take the special 'exit' action before the episode actually ends (in the true terminal state called `TERMINAL_STATE`, which is not shown in the GUI).  If you run an episode manually, your total return may be less than you expected, due to the discount rate (-d to change; 0.9 by default).
+__Note:__ The Gridworld MDP is such that you first must enter a pre-terminal state (the double boxes shown in the GUI) and then take the special 'exit' action before the episode actually ends (in the true terminal state called `TERMINAL_STATE`, which is not shown in the GUI).  If you run an episode manually, your total return may be less than you expected, due to the discount rate (-d to change; 0.9 by default).
 Look at the console output that accompanies the graphical output (or use -t for all text). You will be told about each transition the agent experiences (to turn this off, use -q). 
 As in Pac-Man, positions are represented by (x,y) Cartesian coordinates and any arrays are indexed by `[x][y]`, with `'north'` being the direction of increasing `y`, etc.  By default, most transitions will receive a reward of zero, though you can change this with the living reward option (-r).
+
+
 ## 1. Value Iteration [50 Points]
 Write a value iteration agent in `ValueIterationAgent`, which has been partially specified for you in __valueIterationAgents.py__.  Your value iteration agent is an offline planner, not a reinforcement agent, and so the relevant training option is the number of iterations of value iteration it should run (option `-i`) in its initial planning phase.  `ValueIterationAgent` takes an MDP on construction and runs value iteration for the specified number of iterations before the constructor returns.
 Value iteration computes k-step estimates of the optimal values, Vk. In addition to running value iteration, implement the following methods for `ValueIterationAgent` using Vk.
@@ -115,9 +116,10 @@ When you run the iterations, the parameter `-s` will let you change the speed at
 ```
 python gridworld.py -a value -i 5 -s 0.2
 ```
-
-
-<img src="value.png" alt="Grid World - Values after 5 iterations" class="img-responsive" />
+<center>
+<img src="value.png" alt="Grid World - Values after 5 iterations" class="img-responsive" width="50%" height="50%"/>
+</center>
+<br/>
 
 Your value iteration agent will be graded on a new grid. We will check your values, q-values, and policies after fixed numbers of iterations and at convergence (e.g. after 100 iterations).
 Hint: Use the `util.Counter` class in __util.py__, which is a dictionary with a default value of zero. Methods such as `totalCount` should simplify your code. However, be careful with `argMax`: the actual argmax you want may be a key not in the counter!
@@ -126,8 +128,10 @@ Hint: Use the `util.Counter` class in __util.py__, which is a dictionary with a 
 
 BridgeGrid is a grid world map with the a low-reward terminal state and a high-reward terminal state separated by a narrow "bridge", on either side of which is a chasm of high negative reward. The agent starts near the low-reward state. With the default discount of 0.9 and the default noise of 0.2, the optimal policy does not cross the bridge. Change only ONE of the discount and noise parameters so that the optimal policy causes the agent to attempt to cross the bridge. Put your answer in question2() of analysis.py. (Noise refers to how often an agent ends up in an unintended successor state when they perform an action.) The default corresponds to:
 
-
+<center>
 <img src="value-q2.png" alt="Grid World bridge challenge" class="img-responsive" />
+</center>
+<br/>
 
 ```
 python gridworld.py -a value -i 100 -g BridgeGrid --discount 0.9 --noise 0.2
@@ -136,28 +140,32 @@ python gridworld.py -a value -i 100 -g BridgeGrid --discount 0.9 --noise 0.2
 ## 3. Policies [40 Points]
 Consider the DiscountGrid layout, shown below. This grid has two terminal states with positive payoff (in the middle row), a close exit with payoff +1 and a distant exit with payoff +10. The bottom row of the grid consists of terminal states with negative payoff (shown in red); each state in this "cliff" region has payoff -10. The starting state is the yellow square. We distinguish between two types of paths: (1) paths that "risk the cliff" and travel near the bottom row of the grid; these paths are shorter but risk earning a large negative payoff, and are represented by the red arrow in the figure below. (2) paths that "avoid the cliff" and travel along the top edge of the grid. These paths are longer but are less likely to incur huge negative payoffs. These paths are represented by the green arrow in the figure below.
 
-<img src="discountgrid.png" alt="Grid World ledge challenge" class="img-responsive" />
-
+<center>
+<img src="discountgrid.png" alt="Grid World ledge challenge" class="img-responsive" width="50%" height="50%"/>
+</center>
+<br/>
 
 In this question, you will choose settings of the discount, noise, and living reward parameters for this MDP to produce optimal policies of several different types. Your setting of the parameter values for each part should have the property that, if your agent followed its optimal policy without being subject to any noise, it would exhibit the given behavior. If a particular behavior is not achieved for any setting of the parameters, assert that the policy is impossible by returning the string 'NOT POSSIBLE'. The default corresponds to:
 
-`python gridworld.py -a value -i 100 -g DiscountGrid --discount 0.9 --noise 0.2 --livingReward 0.0`
-
+```
+python gridworld.py -a value -i 100 -g DiscountGrid --discount 0.9 --noise 0.2 --livingReward 0.0
+```
 Here are the optimal policy types you should attempt to produce:
 
-(a) Prefer the close exit (+1), risking the cliff (-10)
+<ol type="a">
+	<li>Prefer the close exit (+1), risking the cliff (-10)</li>
 
-(b) Prefer the close exit (+1), but avoiding the cliff (-10)
+	<li>Prefer the close exit (+1), but avoiding the cliff (-10)</li>
 
-(c) Prefer the distant exit (+10), risking the cliff (-10)
+	<li>Prefer the distant exit (+10), risking the cliff (-10)</li>
 
-(d) Prefer the distant exit (+10), avoiding the cliff (-10)
+	<li>Prefer the distant exit (+10), avoiding the cliff (-10)</li>
 
-(e) Avoid both exits and the cliff (so an episode should never terminate)
+	<li>Avoid both exits and the cliff (so an episode should never terminate)</li>
+</ol>
 
-question3(a) through question3(e) should each return a 3-item tuple of (discount, noise, living reward) in analysis.py.
+Questions 3a through question 3e should each return a 3-item tuple of (discount, noise, living reward) in analysis.py.
 
-Note: You can check your policies in the GUI. For example, using a correct answer to 3(a), the arrow in (0,1) should point east, the arrow in (1,1) should also point east, and the arrow in (2,1) should point north.
+Note: You can check your policies in the GUI. For example, using a correct answer to 3a, the arrow in (0,1) should point east, the arrow in (1,1) should also point east, and the arrow in (2,1) should point north.
 
 __Note:__ On some machines you may not see an arrow. In this case, press a button on the keyboard to switch to qValue display, and mentally calculate the policy by taking the arg max of the available qValues for each state.
- 

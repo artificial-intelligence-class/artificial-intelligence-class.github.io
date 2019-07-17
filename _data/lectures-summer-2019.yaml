@@ -173,13 +173,13 @@
   quiz:
     -
       title: Quiz 7
-      name: Reinforcement Learning and Probability
+      name: Probability (AIMA 13.1-13.5)
       url: https://www.gradescope.com/courses/52017
   homeworks:
     -
       title: HW 3
-      name: Reinforcement learning
-      url: homeworks_summer/hw3/reinforcement-learning.html 
+      name: Markov Decision Processes
+      url: homeworks_summer/hw3/markov-decision-processes.html 
       due: 2019-07-23
 -
   date: 2019-07-20
