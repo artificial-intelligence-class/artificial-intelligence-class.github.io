@@ -147,8 +147,8 @@
   date: 2019-07-19
   titles: 
     -
-      name: Reinforcement Learning 1
-  # slides: 13-Probability.pdf
+      name: MDPs Wrap-up and Reinforcement Learning 1
+  slides: 08-MDPs-wrapup-and-reinforcement-learning.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=32c249cf-dac2-4de0-843a-a9460066d19d
   readings:
     - 
