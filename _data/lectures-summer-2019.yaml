@@ -182,7 +182,7 @@
   titles:
     -
       name: Reinforcement Learning 2
-  # slides: 14-Markov-Models.pdf
+  slides: 09-Reinforcement-Learning-2.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9a71d6e2-caa1-4c19-a63c-a9460066d1d5
   readings:  
 -
