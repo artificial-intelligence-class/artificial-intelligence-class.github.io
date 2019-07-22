@@ -114,7 +114,7 @@ python -m pip install numpy pygame
 10. Compile the server library and dependencies
 ```bash
 cd spherov2.js
-rm yarn.lock
+sodo rm -r node_modules/ yarn.lock
 sudo yarn install
 cd lib/
 yarn rebuild
@@ -127,7 +127,6 @@ sudo yarn server
 ```
 
 12. Open a new Terminal window, and change into your  sphero-project director.  Then activate your virual environment.
-
 ```bash
 cd sphero-project/
 source r2d2/bin/activate
