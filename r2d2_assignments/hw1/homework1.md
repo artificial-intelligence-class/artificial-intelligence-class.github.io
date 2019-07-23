@@ -153,7 +153,7 @@ If you hear a happy chirp, you're ready to go!
 
 ## 1. Let's get rolling
 
-You can start a Python session on your terminal by typing `python3`.  This will launch a "REPL" environment.  REPL stands for read, eval, print, loop.  That means you can interactively write and test code in the terminal.  
+Let's use Python to send commands to the robots! 
 
 First launch the R2D2 server.  This will manage the bluetooth connection between your computer and the robot, and will relay commands from your python code to the robot.  You should launch the server in its own terminal window by running the commands:
 ```bash
@@ -174,9 +174,10 @@ Next start a new terminal window and type the following commands:
 cd sphero-project
 source r2d2/bin/activate
 cd src/
-python3
+python
 ```
-You'll now see a Python REPL environment with a  `>>>`  prompt that lets you interactively enter python commands.  Try copying and pasting these commands:
+ When you type `python` on your terminal, it will launch a Python "REPL" environment.  REPL stands for read, eval, print, loop.  That means you can interactively write and test code in the terminal.  
+You'll now see the REPL environment's  `>>>`  prompt that lets you interactively enter python commands.  Try copying and pasting these commands:
 
 ```python
 from client import DroidClient
