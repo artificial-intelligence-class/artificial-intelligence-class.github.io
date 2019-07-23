@@ -119,7 +119,6 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$PATH
 10. Compile the server library and dependencies
 ```bash
 cd spherov2.js
-sydo rm -r node_modules/ yarn.lock
 sudo yarn install
 cd lib/
 yarn rebuild
@@ -187,7 +186,7 @@ You'll now see the REPL environment's  `>>>`  prompt where you can interactively
 ```python
 from client import DroidClient
 droid = DroidClient() 
-droid.scan() # Scan the area for droids.
+droid.scan() # Scan for droids.
 # Connect to your robot.
 droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your droid's ID
 droid.animate(5)
@@ -199,10 +198,10 @@ droid.roll(0.3, 90, 3)
 The heading variable is relative to the robot's orientation when you first connect to it.  0&deg; is straight ahead, 90&deg; is to its right, 180&deg; is behind it, and 270&deg; is to its left.
 
 ```python 
-droid.turn(90) # turn right
-droid.turn(180) # turn to face backwards from the initial orientation
-droid.turn(270) # turn to face left from the initial orientation
-droid.turn(0) # return to the initial orientation
+droid.roll(0, 90, 0) # turn right 
+droid.roll(0, 180, 0)  # turn to face backwards from the initial orientation
+droid.roll(0, 279, 0)  # turn to face left from the initial orientation
+droid.roll(0, 0, 0)  # return to the initial orientation
 ```
 The robot has a gyroscope, which allows it to remember its original orientation, even if you pick it up and manually reposition it.  Turning back to 0&deg will cause it to face the same direction as when it woke up.
 
