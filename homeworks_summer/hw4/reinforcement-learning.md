@@ -107,10 +107,10 @@ Note: Your response should be not depend on the exact tie-breaking mechanism use
 Time to play some Pacman! Pacman will play games in two phases. In the first phase, training, Pacman will begin to learn about the values of positions and actions. Because it takes a very long time to learn accurate Q-values even for tiny grids, Pacman's training games run in quiet mode by default, with no GUI (or console) display. Once Pacman's training is complete, he will enter testing mode. When testing, Pacman's `self.epsilon` and `self.alpha` will be set to 0.0, effectively stopping Q-learning and disabling exploration, in order to allow Pacman to exploit his learned policy. Test games are shown in the GUI by default. Without any code changes you should be able to run Q-learning Pacman for very tiny grids as follows:
 
 ```
-python pacman.py -p PacmanQAgent -x 2000 -n 2010 -l smallGrid
+python pacman.py -p `PacmanQAgent` -x 2000 -n 2010 -l smallGrid
 ```
 
-Note that PacmanQAgent is already defined for you in terms of the QLearningAgent you've already written. PacmanQAgent is only different in that it has default learning parameters that are more effective for the Pacman problem (epsilon=0.05, alpha=0.2, gamma=0.8). You will receive full credit for this question if the command above works without exceptions and your agent wins at least 80% of the time. The autograder will run 100 test games after the 2000 training games.
+Note that `PacmanQAgent` is already defined for you in terms of the QLearningAgent you've already written. `PacmanQAgent` is only different in that it has default learning parameters that are more effective for the Pacman problem (epsilon=0.05, alpha=0.2, gamma=0.8). You will receive full credit for this question if the command above works without exceptions and your agent wins at least 80% of the time. The autograder will run 100 test games after the 2000 training games.
 
 Hint: If your QLearningAgent works for `gridworld.py` and `crawler.py` but does not seem to be learning a good policy for Pacman on smallGrid, it may be because your getAction and/or computeActionFromQValues methods do not in some cases properly consider unseen actions. In particular, because unseen actions have by definition a Q-value of zero, if all of the actions that have been seen have negative Q-values, an unseen action may be optimal. Beware of the `argmax` function from `util.Counter`!
 
@@ -136,7 +136,7 @@ Pacman fails to win on larger layouts because each board configuration is a sepa
 
 ## 5. Approximate Q-Learning [20 points]
 
-Implement an approximate Q-learning agent that learns weights for features of states, where many states might share the same features. Write your implementation in `ApproximateQAgent` class in `qlearningAgents.py`, which is a subclass of `PacmanQAgent`.
+Implement an approximate Q-learning agent that learns weights for features of states, where many states might share the same features. Write your implementation in `ApproximateQAgent` class in `qlearningAgents.py`, which is a subclass of ``PacmanQAgent``.
 
 Note: Approximate Q-learning assumes the existence of a feature function $$f(s,a)$$ over state and action pairs, which yields a vector $$f_1(s,a) .. f_i(s,a) .. f_n(s,a)$$ of feature values. We provide feature functions for you in featureExtractors.py. Feature vectors are util.Counter (like a dictionary) objects containing the non-zero pairs of features and values; all omitted features have value zero.
 
@@ -152,13 +152,13 @@ $$difference = (r + \gamma \max_{a'} Q(s', a')) - Q(s,a) $$
 
 Note that the _difference_ term is the same as in normal Q-learning, and _r_ is the experienced reward.
 
-By default, ApproximateQAgent uses the IdentityExtractor, which assigns a single feature to every (state,action) pair. With this feature extractor, your approximate Q-learning agent should work identically to PacmanQAgent. You can test this with the following command:
+By default, `ApproximateQAgent` uses the IdentityExtractor, which assigns a single feature to every (state,action) pair. With this feature extractor, your approximate Q-learning agent should work identically to `PacmanQAgent`. You can test this with the following command:
 
 ```
 python pacman.py -p ApproximateQAgent -x 2000 -n 2010 -l smallGrid 
 ```
 
-Important:ApproximateQAgent is a subclass of QLearningAgent, and it therefore shares several methods like getAction. Make sure that your methods in QLearningAgent call getQValue instead of accessing Q-values directly, so that when you override getQValue in your approximate agent, the new approximate q-values are used to compute actions.
+Important:`ApproximateQAgent` is a subclass of QLearningAgent, and it therefore shares several methods like getAction. Make sure that your methods in QLearningAgent call getQValue instead of accessing Q-values directly, so that when you override getQValue in your approximate agent, the new approximate q-values are used to compute actions.
 
 Once you're confident that your approximate learner works correctly with the identity features, run your approximate Q-learning agent with our custom feature extractor, which can learn to win with ease:
 
@@ -166,11 +166,10 @@ Once you're confident that your approximate learner works correctly with the ide
 python pacman.py -p ApproximateQAgent -a extractor=SimpleExtractor -x 50 -n 60 -l mediumGrid 
 ```
 
-Even much larger layouts should be no problem for your ApproximateQAgent. (warning: this may take a few minutes to train)
+Even much larger layouts should be no problem for your `ApproximateQAgent`. (warning: this may take a few minutes to train)
 
 ```
 python pacman.py -p ApproximateQAgent -a extractor=SimpleExtractor -x 50 -n 60 -l mediumClassic 
 ```
 
 If you have no errors, your approximate Q-learning agent should win almost every time with these simple features, even with only 50 training games.
-
