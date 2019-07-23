@@ -49,7 +49,7 @@ Homework 3: Markov Decision Processes [100 points]
  
 ## Instructions
 In this project, you will implement value iteration.  You will test your agents on **Gridworld**.
-The code for this project contains the following files, which are available in a [zip](https://github.com/artificial-intelligence-class/cis521_homeworks/raw/master/hw5/skeleton.zip) archive. It contains multiple files to help you with this homework.
+The code for this project contains the following files, which are available in a [zip](skeleton.zip) archive. It contains multiple files to help you with this homework.
 
 + __Files you will edit and submit:__
 	+ __valueIterationAgents.py__: A value iteration agent for solving known MDPs.
