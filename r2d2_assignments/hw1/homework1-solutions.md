@@ -20,7 +20,7 @@ The angle that you want to turn the droid is the *exterior* angle.  The exterior
 Here's the solution to the trace polygon function:
 
 ```python
-def trace_polygon(n, speed=100, duration=2):
+def trace_polygon(n, speed=.5, duration=2):
     interior_angle = (n-2)*180/n
     exterior_angle = 180-interior_angle
     heading = 0
@@ -78,7 +78,7 @@ flash_colors(rainbow)
 Here is my function for driving the robot with the keyboard arrowkeys.
 
 ```python
-def drive_with_keyboard(speed_increment=30, heading_increment=45, duration=0.1):
+def drive_with_keyboard(speed_increment=.1, heading_increment=45, duration=0.1):
     speed = 0
     heading = 0
     max_speed = 255
