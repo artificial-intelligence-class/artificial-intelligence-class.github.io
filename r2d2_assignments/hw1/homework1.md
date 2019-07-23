@@ -122,6 +122,7 @@ cd lib/
 yarn rebuild
 ```
 
+<!--
 11. Start the server, and leave it running in its own Terminal window.
 ```bash
 cd ../examples/
@@ -150,6 +151,8 @@ droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your ID
 droid.animate(5)
 ```
 If you hear a happy chirp, you're ready to go!
+-->
+
 
 ## 1. Let's get rolling
 
