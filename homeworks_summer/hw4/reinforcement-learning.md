@@ -57,7 +57,7 @@ Your code will be autograded for technical correctness. Please ___do not___ chan
 
 
 ## 1. Q-Learning [40 Points]
-A stub of a Q-learner is specified in QLearningAgent in qlearningAgents.py, and you can select it with the option `-a q`. For this homework, you need to implement the `update`, `computeValueFromQValues`, `getQValue`, and `computeActionFromQValues` methods.
+A stub of a Q-learner is specified in `QLearningAgent` in __qlearningAgents.py__, and you can select it with the option `-a q`. For this homework, you need to implement the `update`, `computeValueFromQValues`, `getQValue`, and `computeActionFromQValues` methods.
 
 Note: For `computeActionFromQValues`, you should break ties randomly for better behavior. The `random.choice()` function will help. In a particular state, actions that your agent hasn't seen before still have a Q-value, specifically a Q-value of zero, and if all of the actions that your agent has seen before have a negative Q-value, an unseen action may be optimal.
 
@@ -97,7 +97,7 @@ First, train a completely random Q-learner with the default learning rate on the
 python gridworld.py -a q -k 50 -n 0 -g BridgeGrid -e 1
 ```
 
-Now try the same experiment with an epsilon of 0. Is there an epsilon and a learning rate for which it is highly likely (greater than 99%) that the optimal policy will be learned after 50 iterations? `question6()` in `analysis.py` should return EITHER a 2-item tuple of (epsilon, learning rate) OR the string 'NOT POSSIBLE' if there is none. Epsilon is controlled by -e, learning rate by -l.
+Now try the same experiment with an epsilon of 0. Is there an epsilon and a learning rate for which it is highly likely (greater than 99%) that the optimal policy will be learned after 50 iterations? `question6()` in __analysis.py__ should return EITHER a 2-item tuple of (epsilon, learning rate) OR the string 'NOT POSSIBLE' if there is none. Epsilon is controlled by -e, learning rate by -l.
 
 Note: Your response should be not depend on the exact tie-breaking mechanism used to choose actions. This means your answer should be correct even if for instance we rotated the entire bridge grid world 90 degrees.
 
@@ -107,12 +107,12 @@ Note: Your response should be not depend on the exact tie-breaking mechanism use
 Time to play some Pacman! Pacman will play games in two phases. In the first phase, training, Pacman will begin to learn about the values of positions and actions. Because it takes a very long time to learn accurate Q-values even for tiny grids, Pacman's training games run in quiet mode by default, with no GUI (or console) display. Once Pacman's training is complete, he will enter testing mode. When testing, Pacman's `self.epsilon` and `self.alpha` will be set to 0.0, effectively stopping Q-learning and disabling exploration, in order to allow Pacman to exploit his learned policy. Test games are shown in the GUI by default. Without any code changes you should be able to run Q-learning Pacman for very tiny grids as follows:
 
 ```
-python pacman.py -p `PacmanQAgent` -x 2000 -n 2010 -l smallGrid
+python pacman.py -p PacmanQAgent -x 2000 -n 2010 -l smallGrid
 ```
 
-Note that `PacmanQAgent` is already defined for you in terms of the QLearningAgent you've already written. `PacmanQAgent` is only different in that it has default learning parameters that are more effective for the Pacman problem (epsilon=0.05, alpha=0.2, gamma=0.8). You will receive full credit for this question if the command above works without exceptions and your agent wins at least 80% of the time. The autograder will run 100 test games after the 2000 training games.
+Note that `PacmanQAgent` is already defined for you in terms of the `QLearningAgent` you've already written. `PacmanQAgent` is only different in that it has default learning parameters that are more effective for the Pacman problem (epsilon=0.05, alpha=0.2, gamma=0.8). You will receive full credit for this question if the command above works without exceptions and your agent wins at least 80% of the time. The autograder will run 100 test games after the 2000 training games.
 
-Hint: If your QLearningAgent works for `gridworld.py` and `crawler.py` but does not seem to be learning a good policy for Pacman on smallGrid, it may be because your getAction and/or computeActionFromQValues methods do not in some cases properly consider unseen actions. In particular, because unseen actions have by definition a Q-value of zero, if all of the actions that have been seen have negative Q-values, an unseen action may be optimal. Beware of the `argmax` function from `util.Counter`!
+Hint: If your `QLearningAgent` works for **gridworld.py** and **crawler.py** but does not seem to be learning a good policy for Pacman on smallGrid, it may be because your getAction and/or computeActionFromQValues methods do not in some cases properly consider unseen actions. In particular, because unseen actions have by definition a Q-value of zero, if all of the actions that have been seen have negative Q-values, an unseen action may be optimal. Beware of the `argmax` function from `util.Counter`!
 
 Note: If you want to experiment with learning parameters, you can use the option -a, for example -a epsilon=0.1,alpha=0.3,gamma=0.7. These values will then be accessible as `self.epsilon`, `self.gamma` and `self.alpha` inside the agent.
 
@@ -136,7 +136,7 @@ Pacman fails to win on larger layouts because each board configuration is a sepa
 
 ## 5. Approximate Q-Learning [20 points]
 
-Implement an approximate Q-learning agent that learns weights for features of states, where many states might share the same features. Write your implementation in `ApproximateQAgent` class in `qlearningAgents.py`, which is a subclass of ``PacmanQAgent``.
+Implement an approximate Q-learning agent that learns weights for features of states, where many states might share the same features. Write your implementation in `ApproximateQAgent` class in __qlearningAgents.py__, which is a subclass of ``PacmanQAgent``.
 
 Note: Approximate Q-learning assumes the existence of a feature function $$f(s,a)$$ over state and action pairs, which yields a vector $$f_1(s,a) .. f_i(s,a) .. f_n(s,a)$$ of feature values. We provide feature functions for you in featureExtractors.py. Feature vectors are util.Counter (like a dictionary) objects containing the non-zero pairs of features and values; all omitted features have value zero.
 
@@ -158,7 +158,7 @@ By default, `ApproximateQAgent` uses the IdentityExtractor, which assigns a sing
 python pacman.py -p ApproximateQAgent -x 2000 -n 2010 -l smallGrid 
 ```
 
-Important:`ApproximateQAgent` is a subclass of QLearningAgent, and it therefore shares several methods like getAction. Make sure that your methods in QLearningAgent call getQValue instead of accessing Q-values directly, so that when you override getQValue in your approximate agent, the new approximate q-values are used to compute actions.
+Important: `ApproximateQAgent` is a subclass of `QLearningAgent`, and it therefore shares several methods like getAction. Make sure that your methods in `QLearningAgent` call getQValue instead of accessing Q-values directly, so that when you override getQValue in your approximate agent, the new approximate q-values are used to compute actions.
 
 Once you're confident that your approximate learner works correctly with the identity features, run your approximate Q-learning agent with our custom feature extractor, which can learn to win with ease:
 
