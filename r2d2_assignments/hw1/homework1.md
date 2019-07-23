@@ -97,21 +97,24 @@ mv yarn-*/lib/* r2d2/lib/
 mv yarn-*/bin/* r2d2/bin/
 rm -r latest.tar.gz yarn-*
 ```
-7. Set your Path
-```bash
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$PATH
-```
 
-8. Set up Node in your virtual environment
+7. Set up Node in your virtual environment
 ```bash
 python -m pip install nodeenv
 nodeenv -p --node=10.15.3
 ```
 
-9. Install python dependencies
+8. Install python dependencies
 ```bash
 python -m pip install numpy pygame
 ```
+
+
+9. Set your Path
+```bash
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$PATH
+```
+
 
 10. Compile the server library and dependencies
 ```bash
