@@ -63,7 +63,9 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-## Set Up
+## Set Up 
+
+You only need to run this set up once.  After you've successfully set up your server, you can skip ahead to the "Lets get rolling" section below.
 
 For now, we have setup instructions for Mac.  We are working on creating instructions for Windows and Linux.
 
@@ -76,34 +78,34 @@ To get started, we are going to download a set of APIs for controling the robots
 ls -la /usr/local/bin/py*
 ```
 You should see today’s date.
-4. Make sure you have brew installed. You can find out whether you've got it by typing
-```bash
-which brew
-```
-in ther terminal.  If you don’t have it, then install it from here: [https://brew.sh](https://brew.sh)
-5. Download the repo
+4. Download the repo
 ```bash
 git clone https://github.com/josephcappadona/sphero-project.git
 cd sphero-project
 ```
-
-6. Create a virtual environment 
+5. Create a virtual environment 
 ```bash
 /usr/local/bin/python3 -m venv r2d2
 source r2d2/bin/activate
 python -m pip install --upgrade pip
 ```
-
+6. Install yarn by typing these commands into the terminal.
+```bash
+wget https://yarnpkg.com/latest.tar.gz
+tar xfz latest.tar.gz
+mv yarn-*/lib/* r2d2/lib/
+mv yarn-*/bin/* r2d2/bin/
+rm -r latest.tar.gz yarn-*
+```
 7. Set your Path
 ```bash
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$PATH
 ```
 
 8. Set up Node in your virtual environment
 ```bash
 python -m pip install nodeenv
 nodeenv -p --node=10.15.3
-brew install yarn
 ```
 
 9. Install python dependencies
@@ -114,7 +116,7 @@ python -m pip install numpy pygame
 10. Compile the server library and dependencies
 ```bash
 cd spherov2.js
-sodo rm -r node_modules/ yarn.lock
+sydo rm -r node_modules/ yarn.lock
 sudo yarn install
 cd lib/
 yarn rebuild
@@ -155,7 +157,9 @@ You can start a Python session on your terminal by typing `python3`.  This will 
 
 First launch the R2D2 server.  This will manage the bluetooth connection between your computer and the robot, and will relay commands from your python code to the robot.  You should launch the server in its own terminal window by running the commands:
 ```bash
-cd sphero-project/spherov2.js/examples
+cd sphero-project/
+source r2d2/bin/activate
+cd spherov2.js/examples
 sudo yarn server
 ```
 It will ask for your password, and then if everything is working properly, you'll see this:
@@ -165,18 +169,21 @@ $ ts-node src/server
 Listening...
 ```
 
-Next start a new terminal window and launch python by typing:
+Next start a new terminal window and type the following commands:
 ```bash
+cd sphero-project
+source r2d2/bin/activate
+cd src/
 python3
 ```
-You'll now see a REPL environment with a  `>>>`  prompt that lets you interactively enter python commands.  Try copying and pasting these commands:
+You'll now see a Python REPL environment with a  `>>>`  prompt that lets you interactively enter python commands.  Try copying and pasting these commands:
 
 ```python
 from client import DroidClient
 droid = DroidClient() 
 droid.scan() # Scan the area for droids.
 # Connect to your robot.
-droid.connect_to_droid('D2-55A2') # This is not the droid you're looking for. Replace D2-55A2 with your droid's ID
+droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your droid's ID
 droid.animate(5)
 ```
 This should cause your robot to make a friendly chirping sound.  Next you can have it roll by passing it 3 arguments, the speed (ranging from 0.0 to 1.0), the heading (0 to 360) and the amount of time to roll (in seconds).
