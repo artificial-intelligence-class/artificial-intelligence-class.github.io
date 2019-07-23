@@ -217,7 +217,7 @@ Let's drive in a square by dividing forward, turning 90 degrees and then driving
 ```python
 heading = 0
 for i in range(4):
-    droid.roll(100, heading, 2)
+    droid.roll(1, heading, 2)
     heading = heading + 90
 ```
 
@@ -259,13 +259,13 @@ Once we've got that list, we could use a for loop to drive the robot in a square
 ```python
 for i in range(len(headings)):
     heading = headings[i] 
-    droid.roll(100, heading, 2)
+    droid.roll(0.3, heading, 2)
 ```
 But there is a cooler way to do it in Python without a variable `i`:
 
 ```python
 for heading in headings:
-    droid.roll(100, heading, 2)
+    droid.roll(0.3, heading, 2)
 ```
 
 
@@ -274,7 +274,7 @@ for heading in headings:
 Our roll command takes three arguments `speed`, `heading`, and `duration`.  We can encode all three of those into a Python type called a tuple.  A tuple is an ordered list of values. In Python a tuple is immutable, meaning the its elements cannot be changed (unlike a list). In Python tuples are written with round brackets, and their elements can be accessed with an index in square brackets (just like accessing an element of a list).
 
 ```python
-roll_command = (100, 0, 3) 
+roll_command = (0.3, 0, 2) 
 speed = roll_command[0]
 heading = roll_command[1]
 duration = roll_command[2]
@@ -284,21 +284,21 @@ Let's create a list of (speed, heading, duration) tuples.
 
 ```python
 roll_commands = [] # create an empty list
-roll_commands.append((200, 0, 1)) # add an item to the end of the list
-roll_commands.append((200, 72, 1))
-roll_commands.append((200, 144, 1))
-roll_commands.append((200, 216, 1))
-roll_commands.append((200, 288, 1))
+roll_commands.append((0.5, 0, 1)) # add an item to the end of the list
+roll_commands.append((0.5, 72, 1))
+roll_commands.append((0.5, 144, 1))
+roll_commands.append((0.5, 216, 1))
+roll_commands.append((0.5, 288, 1))
 roll_commands.append((0, 0, 0))
 
 ```
 Or equivalently:
 ```python
-roll_commands = [ (200, 0, 1),
-                  (200, 72, 1),
-                  (200, 144, 1),
-                  (200, 216, 1),
-                  (200, 288, 1),
+roll_commands = [ (0.5, 0, 1),
+                  (0.5, 72, 1),
+                  (0.5, 144, 1),
+                  (0.5, 216, 1),
+                  (0.5, 288, 1),
                   (0, 0, 0), ]
 ```
 
@@ -332,7 +332,7 @@ Instead of manually specifying the commands to have the robot drive in a square 
 Let's see how to write a python function.  Here's how we can write a function for driving in a square.
 
 ```python
-def trace_square(speed=100, duration=2):
+def trace_square(speed=0.5, duration=2):
     heading = 0
     for i in range(4):
        print("Heading: %i" % heading)
@@ -350,7 +350,7 @@ The angle that you want to turn the droid is the *exterior* angle.  The exterior
 
 
 ```python
-def trace_polygon(n, speed=100, duration=2):
+def trace_polygon(n, speed=0.5, duration=2):
     interior_angle = # todo
     exterior_angle = # todo
     heading = 0
@@ -364,8 +364,8 @@ In Python, you can set default values to arguments that you pass into a function
 
 ```python
 trace_polygon(3) # triangle
-trace_polygon(3, speed=255) # faster, and therefore larger triangle
-trace_polygon(3, speed=255, duration=1) 
+trace_polygon(3, speed=1) # faster, and therefore larger triangle
+trace_polygon(3, speed=1, duration=1) 
 trace_polygon(4) # square
 trace_polygon(5) # pentagon
 trace_polygon(8, duration=1) # octogon, making it smaller by setting the duration value to be lower
@@ -452,21 +452,21 @@ If you want to see the solution [check here](homework1-solutions.html#colors).
 
 Let's create a list of roll commands: 
 ```python
-roll_commands = [ (20, 0, 1),
-                  (40, 72, 1),
-                  (60, 144, 1),
-                  (80, 216, 1),
-                  (100, 288, 1),
-                  (120, 0, 1),
-                  (140, 72, 1),
-                  (160, 144, 1),
-                  (180, 216, 1),
-                  (200, 288, 1),
-                  (220, 0, 1),
-                  (240, 72, 1),
-                  (260, 144, 1),
-                  (280, 216, 1),
-                  (300, 288, 1),
+roll_commands = [ (.1, 0, 1),
+                  (.1, 72, 1),
+                  (.2, 144, 1),
+                  (.2, 216, 1),
+                  (.3, 288, 1),
+                  (.4, 0, 1),
+                  (.4, 72, 1),
+                  (.4, 144, 1),
+                  (.5, 216, 1),
+                  (.6, 288, 1),
+                  (.7, 0, 1),
+                  (.8, 72, 1),
+                  (.9, 144, 1),
+                  (1, 216, 1),
+                  (1, 288, 1),
                   (0, 0, 0), ]
 ```
 Here's a quick function to exectute them in order:
@@ -558,7 +558,7 @@ def getkey():
 Next, you can write a function to continuously read in the keyboard input and use it to drive the robot.
 
 ```python
-def drive_with_keyboard(speed_increment=30, heading_increment=45, duration=0.1):
+def drive_with_keyboard(speed_increment=.1, heading_increment=45, duration=0.1):
     speed = 0
     heading = 0
     max_speed = 255
