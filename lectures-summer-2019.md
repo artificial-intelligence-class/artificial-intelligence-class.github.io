@@ -113,24 +113,23 @@ The lecture schedule will be updated as the term progresses.
     </tr>
 
     {% if lecture.homeworks %}
-      <tr
-      {% if anchor_created != true and lecture_date >= now %}
-        {% assign anchor_created = true %}
-        id="now" 
-      {% endif %}
-      class="info" >
+      {% for homework in lecture.homeworks %}
+        <tr
+        {% if anchor_created != true and lecture_date >= now %}
+          {% assign anchor_created = true %}
+          id="now" 
+        {% endif %}
+        class="info" >
         <td>{{ lecture.date | date: '%a, %b %-d, %Y' }}</td>
         <td>
-          {% for homework in lecture.homeworks %}
           {{ homework.title }}: <a href="{{ homework.url }}">{{ homework.name }}</a>
           <br/>
             {% if homework.due %}
             <td>(due by {{ homework.due | date: '%a, %b %-d, %Y' }} midnight)</td>
             {% endif %}
-          {% endfor %}
         </td>
-        <td></td>
-      </tr>
+        <td></td></tr>
+      {% endfor %}
     {% endif %}
 
     {% endfor %}

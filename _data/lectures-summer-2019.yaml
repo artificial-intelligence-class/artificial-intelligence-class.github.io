@@ -231,6 +231,11 @@
       name: Reinforcement Learning
       url: homeworks_summer/hw4/reinforcement-learning.html
       due: 2019-07-30
+    -
+      title: Term Project
+      name: R2D2 project or NLP assignment
+      url: homeworks_summer/term-project/r2d2-or-nlp.html
+      due: 2019-08-07
 -
   date: 2019-07-29
   titles: 
