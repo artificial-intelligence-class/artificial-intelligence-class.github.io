@@ -7,13 +7,6 @@ title: CIS 521 Term Project
 active_tab: homework
 release_date: 2019-07-26
 due_date: 2019-08-07 23:59:00EDT
-materials:
-    - 
-        name: skeleton file
-        url: homeworks/hw7/homework7.py 
-    - 
-        name: Frankenstein (text file)
-        url: homeworks/hw7/frankenstein.txt
 submission_link: https://www.gradescope.com/courses/52017
 ---
 
@@ -45,14 +38,33 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-Homework 4: Natural Language Processing [100 points]
+Term Project: R2D2 project or NLP assignment
 =============================================================
 
-## Instructions
+Term project is **required for 521 students**, but not for 421 students. Nevertheless, if you are a 421 student, you can do it optionally and got extra credit that would worth up to 3% of the total course credit.
+
+You need to complete 1 of the two things, either an R2D2 project or the NLP assignment. Of course, you can do both if you are interested, but we do not offer extra credit for that.
+
+
+**Notice:** 
+1. No late submission is allowed for the Term Project.
+2. The NLP assignement will be autograded. But different from the other homework, you do not have access to all the test cases upon submission. Your will only get to see your final scores after the due date when we apply the autograder.
+
+
+## 1. R2D2 project
+
+Specifications.
+
+
+## 2. NLP assignment: Generate a Novel
+
+### Instructions
 
 In this assignment, you will gain experience working with Markov models on text.
 
-A skeleton file [homework7.py](homework7.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+You need to download the following files. The skeleton file  containing empty definitions for each question has been provided. Since this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+1. skeleton file [markov_models.py](markov_models.py)
+2. [Frankenstein (text file)](frankenstein.txt)
 
 You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel.
 
@@ -60,10 +72,10 @@ You will find that in addition to a problem specification, most programming ques
 
 You are strongly encouraged to follow the Python style guidelines set forth in [PEP 8](http://legacy.python.org/dev/peps/pep-0008/), which was written in part by the creator of Python. However, your code will not be graded for style.
 
-Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). 
+Once you have completed the assignment, you should submit your **markov_models.py** file on [Gradescope]({{page.submission_link}}). 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-## 1. Markov Models [100 points]
+### Markov Models [100 points]
 
 In this section, you will build a simple language model that can be used to generate random text resembling a source document. Your use of external code should be limited to built-in Python modules, which excludes, for example, NumPy and NLTK.
 
@@ -213,21 +225,3 @@ In this section, you will build a simple language model that can be used to gene
     >>> m.perplexity("a b")
     1.4422495703074083
     ```
-
-## 2. Use AI to Write Harry Potter Fanfiction [0 points - just for fun]
-
-Botnik Studios used text prediction to create three pages of Harry Potter Fanfiction entitled [“Harry Potter and the Portrait of What Looked Like a Large Pile of Ash,”](https://www.theverge.com/2017/12/12/16768582/harry-potter-ai-fanfiction).  I think that we should try too.  So I downloaded an archive of Harry Potter fanfiction.  There is *a lot* of Harry Potter fanfiction.  There is more than a quarter of a billion words of it.  
-
-You can find the archive on eniac at `~cis521/data/HarryPotterFanfiction.com.sentences.utf8.txt.gz`.  This file may contain copyrighted materials, so please don't redistrbute the file. We are using for non-commerical research purposes, which is fair use.  
-
-How well did your automatically generated Harry Potter sentences turn out?  Post your favorites to Piazza.
-
-
-
-## 3. Feedback [0 point]
-
-1. **[0 point]** Approximately how long did you spend on this assignment?
-
-2. **[0 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
-
-3. **[0 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
