@@ -213,13 +213,13 @@
       name: NLP (Natural Language Processing)
   readings:
     -
-      title: Chapter 6 “Vector Semantics”
+      title: Chapter 3 "Language Modeling with N-Grams"
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
     -
-      title: “Learning to Parse Natural Language Commands to a Robot Control System”
-      authors: Cynthia Matuszek, Evan Herbst, Luke Zettlemoyer, Dieter Fox
-      url: https://homes.cs.washington.edu/~lsz/papers/mhzf-iser12.pdf
+      title: Chapter 6 "Vector Semantics"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
   quiz:
     -
       title: Quiz 8
