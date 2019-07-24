@@ -3,10 +3,10 @@ layout: default
 img: ios_keyboard.png
 img_link: http://www.explainxkcd.com/wiki/index.php/1427:_iOS_Keyboard
 caption: Movie quotes according to autocomplete
-title: CIS 521 Homework 7 "Generate a Novel"
+title: CIS 521 Term Project
 active_tab: homework
-release_date: 2018-10-30
-due_date: 2018-11-13 23:59:00EDT
+release_date: 2019-07-26
+due_date: 2019-08-07 23:59:00EDT
 materials:
     - 
         name: skeleton file
@@ -18,9 +18,9 @@ submission_link: https://www.gradescope.com/courses/52017
 ---
 
 <!-- Check whether the assignment is up to date -->
-{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
-{% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
-{% if this_year != due_year %} 
+{% capture today %}{{'now' | date: '%B %d, %Y'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%B %d, %Y'}}{% endcapture %}
+{% if release_date > today %} 
 <div class="alert alert-danger">
 Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
 </div>
