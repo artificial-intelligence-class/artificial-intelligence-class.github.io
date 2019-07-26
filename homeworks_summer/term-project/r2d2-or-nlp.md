@@ -55,7 +55,7 @@ You need to complete 1 of the two things, either a group projec that uses your R
 
 This is a self-designed project.  You should pick a topic from the class, and write a program to demonstrate how it can apply to your robots.  You will turn in your code, plus a short write-up or video that describes what you did.  This is a team-based project.  Your team can have anywhere from 2-5 people.  Everyone in your team will get the same grade.
 
-Here is an example of the scope and style of project that we are hoping that you'll do: [A* search with robots.](r2d2_assignments/hw2/homework2.html)
+Here is an example of the scope and style of project that we are hoping that you'll do: [A* search with robots.](http://artificial-intelligence-class.org/r2d2_assignments/hw2/homework2.html)
 
 Here are some potential ideas of what you could do:
 * Use 8 Puzzle to sort a grid of robots into ascending order by their ID.
@@ -64,10 +64,10 @@ Here are some potential ideas of what you could do:
 * Create a Grid World for R2D2 and execute its actions according to a probability distribution. Use an MPD to find the best policy to naviate its Grid World.
 * Add a new sensor to R2D2 by using your smart phone camera's to estimate its position and orientation on a grid. 
 
-Milestones:
+**Milestones:**
 * Monday July 29: Form a team, and announce your team in a private note on Piazza.  
 * Wednesday July 31: Submit your term project idea for feedback to Piazza (can be private or public).
-* Wednesday August 7: give an in-class demo of your project.  Prepare a short (5 minute) presentation and show your robots in action. Submit your code and report/video.
+* Wednesday August 7: give an in-class demo of your project.  Prepare a short (5 minute) presentation and show your robots in action. Submit your code and report/video on [Gradescope]({{page.submission_link}}).
 
 
 ## 2. Alternate individual assignment: Use NLP to Generate a Novel
