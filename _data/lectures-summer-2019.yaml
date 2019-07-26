@@ -192,7 +192,7 @@
       name: Probability
     -
       name: Markov Models
-  slides: 10-Probabilities-and-N-Grams.pdf
+  slides: 10-Probabilities.pdf
   readings:
     - 
       title: AIMA Chapter 13 "Quantifying Uncertainty" (13.1-13.5)
