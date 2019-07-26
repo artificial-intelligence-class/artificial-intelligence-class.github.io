@@ -53,17 +53,19 @@ You need to complete 1 of the two things, either a group projec that uses your R
 
 ## 1. R2D2 team project
 
-This is an open-ended project where you get to pick a topic from the class, and write a program to demonstrate how it can apply to your robots.  You will turn in your code, plus a short write-up or video that describes what you did.  This is a team-based project.  Your team can have anywhere from 2-5 people.  Everyone in your team will get the same grade.
+This is a self-designed project option.  You should pick a topic from the class, and write a program to demonstrate how it can apply to your robots.  You will turn in your code, plus a short write-up or video that describes what you did.  This is a team-based project.  Your team can have anywhere from 2-5 people.  Everyone in your team will get the same grade.
 
 Here is an example of the type of the scope and style of project that we are hooping that you'll do: [A* search with the robots.](r2d2_assignments/hw2/homework2.html)
 
 Here are some potential ideas on what you could do:
-* Use 8 Puzzle to sort grid of robots into ascending order by ID
-* Adversarial search for a game between R2D2 and R2Q5
-* Translate language commands into code
+* Use 8 Puzzle to sort grid of robots into ascending order by ID.
+* Design  a game between R2D2 and R2Q5 that uses adversarial search.
+* Translate natural language commands into code.
+* Create a Grid World for R2D2 and change its actions according to a probability, use an MPD to find the best policy to naviate its Grid World.
+* Add a new sensor to R2D2 by using your smart phone camera's to estiamte its position and orientation on a grid. 
 
 Milestones:
-* Monday July 29: Form a team
+* Monday July 29: Form a team, and announce your team in a private note on Piazza.  
 * Wednesday July 31: Submit your idea for feedback to Piazza.
 * Wednesday August 7: in-class demo of your project.  Give a short (5 minute) presentation and show your robots in action. Submit your code and report/video.
 
