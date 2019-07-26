@@ -40,7 +40,7 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 
 <div class="alert alert-warning" markdown="1">
 [You can copy a demo of Word Vectors here.](
-https://colab.research.google.com/drive/1UxOLskCL7aS4-Mt08x2SpalI10PoprwK#scrollTo=n50qMALy-cCu
+https://colab.research.google.com/drive/1UxOLskCL7aS4-Mt08x2SpalI10PoprwK#scrollTo=n50qMALy-cCu)
 </div>
 
 
