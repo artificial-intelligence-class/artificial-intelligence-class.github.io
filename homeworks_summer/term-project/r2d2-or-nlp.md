@@ -43,7 +43,7 @@ Term Project: R2D2 project or NLP assignment
 
 Term project is **required for 521 students**, but not for 421 students. Nevertheless, if you are a 421 student, you can do it optionally and got extra credit that would worth up to 3% of the total course credit.
 
-You need to complete 1 of the two things, either an R2D2 project or the NLP assignment. Of course, you can do both if you are interested, but we do not offer extra credit for that.
+You need to complete 1 of the two things, either a group projec that uses your R2D2s or an individual homework assignment (the NLP assignment given below). Of course, you can do both if you are interested, but we do not offer extra credit for that.
 
 
 **Notice:** 
@@ -51,12 +51,24 @@ You need to complete 1 of the two things, either an R2D2 project or the NLP assi
 2. The NLP assignement will be autograded. But different from the other homework, you do not have access to all the test cases upon submission. Your will only get to see your final scores after the due date when we apply the autograder.
 
 
-## 1. R2D2 project
+## 1. R2D2 team project
 
-Specifications.
+This is an open-ended project where you get to pick a topic from the class, and write a program to demonstrate how it can apply to your robots.  You will turn in your code, plus a short write-up or video that describes what you did.  This is a team-based project.  Your team can have anywhere from 2-5 people.  Everyone in your team will get the same grade.
+
+Here is an example of the type of the scope and style of project that we are hooping that you'll do: [A* search with the robots.](r2d2_assignments/hw2/homework2.html)
+
+Here are some potential ideas on what you could do:
+* Use 8 Puzzle to sort grid of robots into ascending order by ID
+* Adversarial search for a game between R2D2 and R2Q5
+* Translate language commands into code
+
+Milestones:
+* Monday July 29: Form a team
+* Wednesday July 31: Submit your idea for feedback to Piazza.
+* Wednesday August 7: in-class demo of your project.  Give a short (5 minute) presentation and show your robots in action. Submit your code and report/video.
 
 
-## 2. NLP assignment: Generate a Novel
+## 2. Alternate individual assignment: Use NLP to Generate a Novel
 
 ### Instructions
 
