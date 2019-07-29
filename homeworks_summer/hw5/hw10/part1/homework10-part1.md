@@ -16,7 +16,7 @@ submission_link: https://www.gradescope.com/courses/21105
 
 <!-- Check whether the assignment is up to date -->
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
-{% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
+{% capture due_year %}{{page.fdue_date | date: '%Y'}}{% endcapture %}
 {% if this_year != due_year %} 
 <div class="alert alert-danger">
 Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
