@@ -1,21 +1,12 @@
 ############################################################
-# CIS 521: Homework 9
+# CIS 521: Perceptrons
 ############################################################
 
-student_name = "Type your full name here."
-
-############################################################
-# Imports
-############################################################
-
-import homework9_data as data
-
-# Include your imports here, if any are used.
-
+import perceptrons_data as data
 
 
 ############################################################
-# Section 1: Perceptrons
+# Perceptrons Implementation
 ############################################################
 
 class BinaryPerceptron(object):
@@ -35,7 +26,7 @@ class MulticlassPerceptron(object):
         pass
 
 ############################################################
-# Section 2: Applications
+# Applications
 ############################################################
 
 class IrisClassifier(object):
@@ -77,25 +68,3 @@ class MysteryClassifier2(object):
 
     def classify(self, instance):
         pass
-
-############################################################
-# Section 3: Feedback
-############################################################
-
-feedback_question_1 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
-
-feedback_question_2 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
-
-feedback_question_3 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
