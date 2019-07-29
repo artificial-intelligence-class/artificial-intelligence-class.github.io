@@ -3,24 +3,24 @@ layout: default
 img: machine_learning.png
 img_link: http://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning
 caption: Machine Learning
-title: CIS 521 Homework 9 "Perceptrons"
+title: CIS 521 Homework 5 "Perceptrons and Neural Networks"
 active_tab: homework
-release_date: 2018-11-20
-due_date: 2018-11-29 23:59:00EDT
+release_date: 2019-07-30
+due_date: 2019-08-06 23:59:00EDT
 materials:
     - 
-        name: skeleton file
-        url: homeworks/hw9/homework9.py 
+        name: skeleton file - perceptrons.py
+        url: homeworks_summer/hw5/perceptrons.py
     - 
         name: data sets (python file)
-        url: homeworks/hw9/homework9_data.py
+        url: homeworks_summer/hw5/perceptrons_data.py
 submission_link: https://www.gradescope.com/courses/52017
 ---
 
 <!-- Check whether the assignment is up to date -->
-{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
-{% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
-{% if this_year != due_year %} 
+{% capture today %}{{'now' | date: '%B %d, %Y'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%B %d, %Y'}}{% endcapture %}
+{% if release_date > today %} 
 <div class="alert alert-danger">
 Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
 </div>
@@ -60,9 +60,9 @@ Homework 5: Perceptrons and Neural Networks [100 points]
 
 In this assignment, you will gain experience working with binary and multiclass perceptrons.
 
-A skeleton file [homework9.py](homework9.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [perceptrons.py](perceptrons.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
-You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel.
+You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel. As in previous assignments, your use of external code should be limited to built-in Python modules, which excludes packages such as NumPy and NLTK.
 
 You will find that in addition to a problem specification, most programming questions also include a pair of examples from the Python interpreter. These are meant to illustrate typical use cases, and should not be taken as comprehensive test suites.
 
@@ -71,14 +71,13 @@ You are strongly encouraged to follow the Python style guidelines set forth in [
 Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
+## 1. Perceptrons and Applications [50 points]
 
-## 1. Perceptrons [40 points]
+In this section, first, you will implement two varieties of the standard perceptron: one which performs binary classification, distinguishing between positive and negative instances, and one which performs multiclass classification, distinguishing between an arbitrary number of labeled groups.
 
-In this section, you will implement two varieties of the standard perceptron: one which performs binary classification, distinguishing between positive and negative instances, and one which performs multiclass classification, distinguishing between an arbitrary number of labeled groups.
+Then after you implement the general-purpose perceptrons, you will use it to create classification systems for a number of specific problems. In each case, you will be responsible for creating feature vectors from the raw data, determining which type of perceptron should be used, and deciding how many passes over the training data should be performed. You will likely require some experimentation to achieve good results. The requisite data sets have been provided as Python objects in [perceptron_data.py](perceptron_data.py), which has been pre-imported under the module name data in the skeleton file.
 
-As in previous assignments, your use of external code should be limited to built-in Python modules, which excludes packages such as NumPy and NLTK.
-
-1. **[20 points]** A binary perceptron is one of the simplest examples of a linear classifier. Given a set of data points each associated with a positive or negative label, the goal is to learn a vector $\vec{w}$  such that $\vec{w} \cdot \vec{x}\_+ > 0$ for positive instances $\vec{x}\_+$ and $\vec{w} \cdot \vec{x}\_- \le 0$ for negative instances $\vec{x}\_-$.
+1. **[10 points]** A binary perceptron is one of the simplest examples of a linear classifier. Given a set of data points each associated with a positive or negative label, the goal is to learn a vector $\vec{w}$  such that $\vec{w} \cdot \vec{x}\_+ > 0$ for positive instances $\vec{x}\_+$ and $\vec{w} \cdot \vec{x}\_- \le 0$ for negative instances $\vec{x}\_-$.
 
     One learning algorithm for this problem initializes the weight vector $\vec{w}$ to the zero vector, then loops through the training data for a fixed number of iterations, adjusting the weight vector whenever a sample is misclassified.
 
@@ -125,7 +124,7 @@ As in previous assignments, your use of external code should be limited to built
     [True, True, True, False]
     ```
 
-2. **[20 points]** A multiclass perceptron uses the same linear classification framework as a binary perceptron, but can accommodate an arbitrary number of classes rather than just two. Given a set of data points and associated labels, where the labels are assumed to be drawn from some set {$\mathscr{l}\_1, \cdots,\mathscr{l}\_m$}, the goal is to learn a collection of weight vectors $\vec{w}\_{\mathscr{l}\_1}, \cdots, \vec{w}\_{\mathscr{l}\_m}$ such that $\text{argmax}\_{\mathscr{l}\_k} (\vec{w}\_{\mathscr{l}\_k}\cdot \vec{x})$ equals the correct label $\mathscr{l}$ for each input pair $(\vec{x}, \mathscr{l})$.
+2. **[10 points]** A multiclass perceptron uses the same linear classification framework as a binary perceptron, but can accommodate an arbitrary number of classes rather than just two. Given a set of data points and associated labels, where the labels are assumed to be drawn from some set {$\mathscr{l}\_1, \cdots,\mathscr{l}\_m$}, the goal is to learn a collection of weight vectors $\vec{w}\_{\mathscr{l}\_1}, \cdots, \vec{w}\_{\mathscr{l}\_m}$ such that $\text{argmax}\_{\mathscr{l}\_k} (\vec{w}\_{\mathscr{l}\_k}\cdot \vec{x})$ equals the correct label $\mathscr{l}$ for each input pair $(\vec{x}, \mathscr{l})$.
 
 
     The learning algorithm for this problem is similar to the one for the binary case. All weight vectors are first initialized to zero vectors, and then several passes are made over the training data, with the appropriate weight vectors being adjusted whenever a sample is misclassified.
@@ -172,14 +171,7 @@ As in previous assignments, your use of external code should be limited to built
     [1, 2, 3, 4, 5, 6, 7, 8]
     ```
 
-
-## 2. Applications [60 points]
-
-
-In this section, you will use the general-purpose perceptrons implemented above to create classification systems for a number of specific problems. In each case, you will be responsible for creating feature vectors from the raw data, determining which type of perceptron should be used, and deciding how many passes over the training data should be performed. You will likely require some experimentation to achieve good results. The requisite data sets have been provided as Python objects in [homework9_data.py](homework9_data.py), which has been pre-imported under the module name data in the skeleton file.
-
-
-1. **[10 points]** Ronald Fisher's iris flower data set has been a benchmark for statistical analysis and machine learning since it was first released in 1936. It contains 50 samples from each of three species of the iris flower: iris setosa, iris versicolor, and iris virginica. Each sample consists of four measurements: the length and width of the sepals and petals of the specimen, in centimeters.
+3. **[5 points]** Ronald Fisher's iris flower data set has been a benchmark for statistical analysis and machine learning since it was first released in 1936. It contains 50 samples from each of three species of the iris flower: iris setosa, iris versicolor, and iris virginica. Each sample consists of four measurements: the length and width of the sepals and petals of the specimen, in centimeters.
 
     Your task is to implement the `__init__(self, data)` and `classify(self, instance)` methods in the `IrisClassifier` class, which should perform training and classification on this data set. Example data will be provided as a list of 2-tuples $(\vec{x}, y)$, where $\vec{x}$ is a 4-tuple of real-valued measurements and $y$ is the name of a species. Test instances will be provided in the same format as the $\vec{x}$ components of the training examples.
 
@@ -195,7 +187,7 @@ In this section, you will use the general-purpose perceptrons implemented above 
     'iris-versicolor'
     ```
     
-2. **[10 points]** The National Institute of Standards and Technology has released a collection of bitmap images depicting thousands of handwritten digits from different authors. Though originally presented as $32\times32$ blocks of binary pixels, the data has been pre-processed by dividing the images into nonoverlapping blocks of $4\times4$ pixels and counting the number of activated pixels in each block. This reduces the dimensionality of the data, making it easier to work with, and also provides some robustness against minor distortions. Each processed image is therefore represented by a list of $8\times 8=64$ values between 0 and 16 (inclusive), along with a label between 0 and 9 corresponding to the digit which was origially written.    
+4. **[5 points]** The National Institute of Standards and Technology has released a collection of bitmap images depicting thousands of handwritten digits from different authors. Though originally presented as $32\times32$ blocks of binary pixels, the data has been pre-processed by dividing the images into nonoverlapping blocks of $4\times4$ pixels and counting the number of activated pixels in each block. This reduces the dimensionality of the data, making it easier to work with, and also provides some robustness against minor distortions. Each processed image is therefore represented by a list of $8\times 8=64$ values between 0 and 16 (inclusive), along with a label between 0 and 9 corresponding to the digit which was origially written.    
     Your task is to implement the `__init__(self, data)` and `classify(self, instance)` methods in the `DigitClassifier` class, which should perform training and classification on this data set. Example data will be provided as a list of 2-tuples $(\vec{x}, y)$, where $\vec{x}$ is a 64-tuple of pixel counts between 0 and 16 and $y$ is the digit represented by the image. Test instances will be provided in the same format as the $\vec{x}$ components of the training examples.
 
     ```python
@@ -205,7 +197,7 @@ In this section, you will use the general-purpose perceptrons implemented above 
     0
     ```
 
-3. **[10 points]** A simple data set of one-dimensional data is given in `data.bias`, where each example consists of a single positive real-valued feature paired with a binary label. Because the binary perceptron discussed in the previous section contains no bias term, a classifier will not be able to directly distinguish between the two classes of points, despite them being linearly separable. To see why, we observe that if the weight vector (consisting of a single component) is positive, then all instances will be labeled as positive, and if the weight vector is negative, then all instances will be labeled as negative. It is therefore necessary to augment the input data with an additional feature in order to allow a constant bias term to be learned.
+5. **[5 points]** A simple data set of one-dimensional data is given in `data.bias`, where each example consists of a single positive real-valued feature paired with a binary label. Because the binary perceptron discussed in the previous section contains no bias term, a classifier will not be able to directly distinguish between the two classes of points, despite them being linearly separable. To see why, we observe that if the weight vector (consisting of a single component) is positive, then all instances will be labeled as positive, and if the weight vector is negative, then all instances will be labeled as negative. It is therefore necessary to augment the input data with an additional feature in order to allow a constant bias term to be learned.
 
     Your task is to implement the `__init__(self, data)` and `classify(self, instance)` methods in the `BiasClassifier` class to perform training and classification on this data set. Example data will be provided as a list of 2-tuples $(\vec{x}, y)$ of real numbers paired with binary labels. Test instances will be single numbers, and should be classified as either `True` or `False`. As discussed above, instances will have to be augmented with an additional feature before being fed into a perceptron in order for proper learning and classification to take place.
 
@@ -215,7 +207,7 @@ In this section, you will use the general-purpose perceptrons implemented above 
     [False, False, False, True, True]
     ```
 
-4. **[15 points]** A mystery data set of two-dimensional data is given in `data.mystery1`, where each example consists of a pair of real-valued features and a binary label. As in the previous problem, this data set is not linearly separable on its own, but each instance can be augmented with one or more additional features derived from the two original features so that linear separation is possible in the new higher-dimensional space.
+6. **[7 points]** A mystery data set of two-dimensional data is given in `data.mystery1`, where each example consists of a pair of real-valued features and a binary label. As in the previous problem, this data set is not linearly separable on its own, but each instance can be augmented with one or more additional features derived from the two original features so that linear separation is possible in the new higher-dimensional space.
 
 
     Your task is to implement the `__init__(self, data)` and `classify(self, instance)` methods in the `MysteryClassifier1` class to perform training and classification on this data set. Example data will be provided as a list of 2-tuples $(\vec{x}, y)$ of pairs of real numbers and their associated binary labels. Test instances will be pairs of real numbers, and should be classified as either `True` or `False`. Instances will have to be augmented with one or more additional features before being fed into a perceptron in order for proper learning and classification to take place. We recommend first visualizing the data using your favorite plotting software in order to understand its structure, which should help make the appropriate transformation(s) more apparent.
@@ -226,7 +218,7 @@ In this section, you will use the general-purpose perceptrons implemented above 
     [False, False, False, True, True]
     ```
 
-5. **[15 points]** Another mystery data set of three-dimensional data is given in `data.mystery2`, where each example consists of a triple of real-valued features paired with a binary label. As in the previous few problems, this data set is not linearly separable on its own, but each instance can be augmented with one or more additional features so that linear separation is possible in the new higher-dimensional space.
+7. **[8 points]** Another mystery data set of three-dimensional data is given in `data.mystery2`, where each example consists of a triple of real-valued features paired with a binary label. As in the previous few problems, this data set is not linearly separable on its own, but each instance can be augmented with one or more additional features so that linear separation is possible in the new higher-dimensional space.
 
     Your task is to implement the `__init__(self, data)` and `classify(self, instance)` methods in the `MysteryClassifier2` class to perform training and classification on this data set. Example data will be provided as a list of 2-tuples $(\vec{x}, y)$ of triples of real numbers paired with binary labels. Test instances will be triples of real numbers, and should be classified as either `True` or `False`. Instances will again have to be augmented with one or more additional features before being fed into a perceptron in order for proper learning and classification to take place. As before, we recommend first visualizing the data using your favorite plotting software in order to understand its structure, then thinking about what transformation(s) might help separate the two classes of data.
 
@@ -235,11 +227,3 @@ In this section, you will use the general-purpose perceptrons implemented above 
     >>> [c.classify(x) for x in ((1, 1, 1), (-1, -1, -1), (1, 2, -3), (-1, -2, 3))]
     [True, False, False, True]
     ```
-
-## 3. Feedback [0 point]
-
-1. **[0 point]** Approximately how long did you spend on this assignment?
-
-2. **[0 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
-
-3. **[0 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
