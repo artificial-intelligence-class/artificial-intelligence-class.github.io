@@ -41,7 +41,7 @@ You can download the materials for this assignment here:
 Term Project: R2D2 project or NLP assignment
 =============================================================
 
-<div class="alert alert-success">
+<div class="alert alert-success" markdown="1">
 Term project is **required for 521 students**, but not for 421 students. Nevertheless, if you are a 421 student, you can do it optionally and got extra credit that would worth up to 3% of the total course credit.  If you are a 521 student, you can opt to do both assignments and get extra credit for the NLP assignment (up to 3%).  
 </div>
 
