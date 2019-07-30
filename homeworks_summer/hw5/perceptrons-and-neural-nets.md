@@ -13,7 +13,7 @@ materials:
         url: homeworks_summer/hw5/perceptrons.py
     - 
         name: perceptron data sets (python file)
-        url: homeworks_summer/hw5/perceptron_data.py
+        url: homeworks_summer/hw5/perceptrons_data.py
     - 
         name: skeleton file 2 - cnn_functions.py
         url: homeworks_summer/hw5/cnn_functions.py
@@ -82,7 +82,7 @@ You may submit as many times as you would like before the deadline, but only the
 
 In this section, first, you will implement two varieties of the standard perceptron: one which performs binary classification, distinguishing between positive and negative instances, and one which performs multiclass classification, distinguishing between an arbitrary number of labeled groups.
 
-Then after you implement the general-purpose perceptrons, you will use it to create classification systems for a number of specific problems. In each case, you will be responsible for creating feature vectors from the raw data, determining which type of perceptron should be used, and deciding how many passes over the training data should be performed. You will likely require some experimentation to achieve good results. The requisite data sets have been provided as Python objects in [perceptron_data.py](perceptron_data.py), which has been pre-imported under the module name data in the skeleton file.
+Then after you implement the general-purpose perceptrons, you will use it to create classification systems for a number of specific problems. In each case, you will be responsible for creating feature vectors from the raw data, determining which type of perceptron should be used, and deciding how many passes over the training data should be performed. You will likely require some experimentation to achieve good results. The requisite data sets have been provided as Python objects in [perceptrons_data.py](perceptrons_data.py), which has been pre-imported under the module name data in the skeleton file.
 
 1. **[10 points]** A binary perceptron is one of the simplest examples of a linear classifier. Given a set of data points each associated with a positive or negative label, the goal is to learn a vector $\vec{w}$  such that $\vec{w} \cdot \vec{x}\_+ > 0$ for positive instances $\vec{x}\_+$ and $\vec{w} \cdot \vec{x}\_- \le 0$ for negative instances $\vec{x}\_-$.
 
