@@ -1,5 +1,5 @@
 ############################################################
-# CIS 521: Perceptrons
+# CIS 521: Perceptrons and Applications
 ############################################################
 
 student_name = "Type your full name here."
