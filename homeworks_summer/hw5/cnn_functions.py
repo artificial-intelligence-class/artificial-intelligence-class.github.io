@@ -1,5 +1,5 @@
 ############################################################
-# CIS 521: Homework 10 - Part 1
+# CIS 521: Individual Functions for CNN
 ############################################################
 
 student_name = "Type your full name here."
@@ -13,7 +13,7 @@ student_name = "Type your full name here."
 
 
 ############################################################
-# Part 1: Individual Functions
+# Individual Functions
 ############################################################
 
 def convolve_greyscale(image, kernel):
@@ -34,26 +34,3 @@ def average_pooling(image, kernel, stride):
 
 def sigmoid(x):
     pass
-
-
-############################################################
-# Feedback
-############################################################
-
-feedback_question_1 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
-
-feedback_question_2 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
-
-feedback_question_3 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""

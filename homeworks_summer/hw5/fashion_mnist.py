@@ -1,3 +1,13 @@
+############################################################
+# CIS 521: Neural Network for Fashion MNIST Dataset
+############################################################
+
+student_name = "Type your full name here."
+
+############################################################
+# Imports
+############################################################
+
 import torch
 import numpy as np
 from torch.utils.data import Dataset
@@ -5,8 +15,14 @@ from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
 import matplotlib.pyplot as plt
 import itertools
 
+# Include your imports here, if any are used.
 
-# PART 2.1
+
+
+############################################################
+# Neural Networks
+############################################################
+
 def load_data(file_path, reshape_images):
     pass
 
@@ -41,6 +57,10 @@ class AdvancedModel(torch.nn.Module):
         pass
 
 
+############################################################
+# Fashion MNIST dataset
+############################################################
+
 class FashionMNISTDataset(Dataset):
     def __init__(self, file_path, reshape_images):
         self.X, self.Y = load_data(file_path, reshape_images)
@@ -51,6 +71,9 @@ class FashionMNISTDataset(Dataset):
     def __getitem__(self, index):
         return self.X[index], self.Y[index]
 
+############################################################
+# Reference Code
+############################################################
 
 def train(model, data_loader, num_epochs, learning_rate):
     criterion = torch.nn.CrossEntropyLoss()
@@ -148,41 +171,6 @@ def main():
           f'Final Train Accuracy: {100.* accuracy_score(y_true_advanced, y_pred_advanced):.4f},',
           f'Final F1 Score: {100.* f1_score(y_true_advanced, y_pred_advanced, average="weighted"):.4f}')
     plot_confusion_matrix(confusion_matrix(y_true_advanced, y_pred_advanced), class_names, 'Advanced Model')
-
-
-############################################################
-# Feedback
-############################################################
-
-feedback_question_1 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
-
-feedback_question_2 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
-
-feedback_question_3 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
-
-feedback_question_4 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
-
-feedback_question_5 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
 
 
 if __name__ == '__main__':
