@@ -13,7 +13,7 @@ materials:
         url: homeworks_summer/hw5/perceptrons.py
     - 
         name: perceptron data sets (python file)
-        url: homeworks_summer/hw5/perceptrons_data.py
+        url: homeworks_summer/hw5/perceptron_data.py
     - 
         name: skeleton file 2 - cnn_functions.py
         url: homeworks_summer/hw5/cnn_functions.py
