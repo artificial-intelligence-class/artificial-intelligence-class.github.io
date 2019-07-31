@@ -268,13 +268,17 @@
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3dff1015-86e5-4404-b46c-a9460066d212
   readings:   
     - 
-      title: AIMA Chapter 14 "Learning Probabilistic Models" (20.1)
+      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1)
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA Chapter 18 "Learning From Examples" (18.6.3, 18.8)
       authors: Russell and Norvig
       optional: false
   quiz:
     - 
       title: Quiz 10
-      name: Machine Learning (AIMA 18.6.3, 18.8; Wikipedia)
+      name: Machine Learning (AIMA 18.6.3, 18.8)
       url: https://www.gradescope.com/courses/52017 
 -
   date: 2019-08-02
