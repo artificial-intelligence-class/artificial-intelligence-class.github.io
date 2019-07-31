@@ -250,6 +250,10 @@
       title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
       authors: Russell and Norvig
       optional: false
+    - 
+      title: AIMA Chapter 18 "Learning from Examples" (18.6.3, 18.8)
+      authors: Russell and Norvig
+      optional: false
   quiz:
     -
       title: Quiz 9
@@ -258,34 +262,17 @@
 -
   date: 2019-07-31
   titles: 
-    -
-      name: Machine Learning&colon; Perceptrons
-    -
-      name: Machine Learning&colon; Kernels and Clustering
-  # slides: 20-Perceptron.pdf
-  # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2f93efb7-8edf-4907-b93a-a9460066d2a8
-  readings:     
+     -
+      name: BN wrapup and Naive Bayes
+  slides: 14-BN-wrapup-Naive-Bayes.pdf
+  # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3dff1015-86e5-4404-b46c-a9460066d212
+  readings:   
     - 
-      title: AIMA Chapter 18 "Learning from Examples" (18.6.3, 18.8)
+      title: AIMA Chapter 14 "Learning Probabilistic Models" (20.1)
       authors: Russell and Norvig
       optional: false
-    - 
-      title: Cluster analysis
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/Cluster_analysis
-      optional: false  
-    - 
-      title: k-Means Clustering
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/K-means_clustering
-      optional: false  
-    - 
-      title: Agglomerative Clustering
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/Hierarchical_clustering
-      optional: false  
   quiz:
-    -
+    - 
       title: Quiz 10
       name: Machine Learning (AIMA 18.6.3, 18.8; Wikipedia)
       url: https://www.gradescope.com/courses/52017 
@@ -293,7 +280,7 @@
   date: 2019-08-02
   titles:
     -
-      name: Neural Networks
+      name: Perceptrons and Neural Networks
   # slides: 23-Neural-Networks-and-Computer-Vision.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4bfb8b70-bae5-4174-bd39-a9460066d322
   readings:
@@ -333,24 +320,12 @@
   date: 2019-08-05
   titles:
     -
-      name: SLAM (Simultaneous Localization and Mapping)
-  readings:
-    -
-      title: AIMA Chapter 25 “Robotics” (25.3)
-      authors: Russell and Norvig
-      optional: false
-  quiz:
-    -
-      title: Quiz 12
-      name: SLAM (AIMA 25.3)
-      url: https://www.gradescope.com/courses/52017
+      name: TBD
 -
   date: 2019-08-07
   titles:
     - 
-      name: <b>TBD</b> Computer Vision
-    -
-      name: <b>TBD</b> Self-Driving Cars
+      name: In-class demos for your final projects
   readings: 
 
 -
