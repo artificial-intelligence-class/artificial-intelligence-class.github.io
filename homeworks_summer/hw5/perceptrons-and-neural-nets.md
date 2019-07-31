@@ -6,7 +6,7 @@ caption: Machine Learning
 title: CIS 521 Homework 5 "Perceptrons and Neural Networks"
 active_tab: homework
 release_date: 2019-07-30
-due_date: 2019-08-06 23:59:00EDT
+due_date: 2019-08-13 23:59:00EDT
 materials:
     - 
         name: skeleton file 1 - perceptrons.py
