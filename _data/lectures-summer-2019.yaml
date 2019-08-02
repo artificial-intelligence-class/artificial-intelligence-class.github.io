@@ -282,8 +282,8 @@
       url: https://www.gradescope.com/courses/52017 
 -
   date: 2019-08-02
-  titles:
   slides: 15-Perceptron.pdf
+  titles:
     -
       name: Perceptrons 
   # slides: 23-Neural-Networks-and-Computer-Vision.pdf
