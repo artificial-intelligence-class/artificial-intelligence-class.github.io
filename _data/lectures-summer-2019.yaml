@@ -283,21 +283,12 @@
 -
   date: 2019-08-02
   titles:
+  slides: 15-Perceptron.pdf
     -
-      name: Perceptrons and Neural Networks
+      name: Perceptrons 
   # slides: 23-Neural-Networks-and-Computer-Vision.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4bfb8b70-bae5-4174-bd39-a9460066d322
   readings:
-    - 
-      title: Neural Networks and Deep Learning Chapter 1 "Using Neural Nets to Recognize Handwritten Digits" 
-      authors: Michael Nielsen
-      url: http://neuralnetworksanddeeplearning.com/chap1.html
-      optional: false
-    - 
-      title: Neural Networks and Deep Learning Chapter 2 "How the Backpropagation Algorithm Works"
-      authors: Michael Nielsen
-      url: http://neuralnetworksanddeeplearning.com/chap2.html
-      optional: false
     - 
       title: Electronic 'Brain' Teaches Itself
       authors: New York Times (July 13, 1958)
@@ -324,13 +315,23 @@
   date: 2019-08-05
   titles:
     -
-      name: TBD
+      name: Neural Networks
 -
   date: 2019-08-07
   titles:
     - 
       name: In-class demos for your final projects
-  readings: 
+  readings:
+    - 
+      title: Neural Networks and Deep Learning Chapter 1 "Using Neural Nets to Recognize Handwritten Digits" 
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap1.html
+      optional: false
+    - 
+      title: Neural Networks and Deep Learning Chapter 2 "How the Backpropagation Algorithm Works"
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap2.html
+      optional: false
 
 -
   date: 2019-08-09
