@@ -305,6 +305,7 @@
   type: no_lecture
 -
   date: 2019-08-05
+  slides: 16-Neural-Networks.pdf
   titles:
     -
       name: Neural Networks
