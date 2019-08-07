@@ -12,6 +12,10 @@ CIS 421/521 will be offered during the Summer 2 Session (July 5-August 9).  The 
 -->
 
 
+<div class="alert alert-success" markdown="1">
+[Add links to your final presentation slides or video here.](https://docs.google.com/document/d/1VLX9rHiURcjyCSVWk8MG3UVHYogCmXmKx4HWNETv6Ws/edit?usp=sharing)
+</div>
+
 <!-- Display an alert about upcoming homework assignments -->
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
 {% for page in site.pages %}
