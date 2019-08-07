@@ -326,9 +326,12 @@
       optional: false
 -
   date: 2019-08-07
+  slides: 17-Computer-Vision.pdf
   titles:
     - 
       name: In-class demos for your final projects
+    - 
+      name: Computer Vision
 
 -
   date: 2019-08-09
