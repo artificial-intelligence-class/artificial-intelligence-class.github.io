@@ -4,17 +4,12 @@ layout: default
 img: R2D2.png
 active_tab: main_page 
 ---
- 
-<!--
-<div class="alert alert-success">
-CIS 421/521 will be offered during the Summer 2 Session (July 5-August 9).  The class will meet in 3401 Walnut room 401B on Mondays, Wednesdays and Fridays from 2:30pm-5pm (not noon-2:30pm like it said during Advanced Registration). 
-</div>
--->
 
 
 <div class="alert alert-success" markdown="1">
-[Add links to your final presentation slides or video here.](https://docs.google.com/document/d/1VLX9rHiURcjyCSVWk8MG3UVHYogCmXmKx4HWNETv6Ws/edit?usp=sharing)
+The Fall 2019 class is full.  There are currently 150 students enrolled in the class, and another students on the waitlist. [You can sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) if you'd like to try to get a spot. 
 </div>
+
 
 <!-- Display an alert about upcoming homework assignments -->
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
@@ -42,11 +37,6 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 <!-- End alert for upcoming homework assignments -->
 
 
-<div class="alert alert-warning" markdown="1">
-[You can copy a demo of Word Vectors here.](
-https://colab.research.google.com/drive/1UxOLskCL7aS4-Mt08x2SpalI10PoprwK#scrollTo=n50qMALy-cCu)
-</div>
-
 
 <!--
 <div class="alert alert-warning" markdown="1">
@@ -61,11 +51,6 @@ R2D2 Assignments:
 </div>
 
 
-<div class="alert alert-success" markdown="1">
-The Fall 2019 class is full. But [you can sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) if you'd like to try to get a spot.
-</div>
-
-
 
 Course number
 : CIS 421/521 - Artificial Intelligence 
@@ -74,14 +59,13 @@ Instructor
 : [Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/)
 
 Discussion Forum
-: [Piazza](https://piazza.com/upenn/summer2019/cis521)
+: [Piazza](piazza.com/upenn/fall2019/cis521)
 
 Time and place
-: Summer 2 Session 2019 (from July 5th through August 9th). Mondays, Wednesdays and Fridays from 2:30pm-5pm in 3401 Walnut room 401B.
+: Tuesdays and Thursdays from noon-1:30pm in Wu and Chen Auditorium (Levine Hall room 101)
 
 Office hours
-: Tuesdays from 1pm-3pm in 3401 Walnut room 401B
-: Saturdays from 2pm-4pm in Levine Hall 5th floor bump space 
+: TBD
 
 Textbook
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
@@ -102,5 +86,5 @@ Collaboration Policy
 
 
 Late Day Policy
-: Each student has two free "late days".  Homeworks can be submitted at most two days late.  If you are out of late days, then you will not be able to get credit for subsequent late assignments. One "day" is defined as anytime between 1 second and 24 hours after the homework deadline. The intent of the late day policy it to allow you to take extra time due to unforseen circumstances like illnesses or family emergencies, and for forseeable interruptions like on campus interviewing and religious holidays.  You do not need to ask permission to use your late days.  No additional late days are granted. 
+: Each student has five free "late days".  Homeworks can be submitted at most two days late.  If you are out of late days, then you will not be able to get credit for subsequent late assignments. One "day" is defined as anytime between 1 second and 24 hours after the homework deadline. The intent of the late day policy it to allow you to take extra time due to unforseen circumstances like illnesses or family emergencies, and for forseeable interruptions like on campus interviewing and religious holidays.  You do not need to ask permission to use your late days.  No additional late days are granted. 
 
