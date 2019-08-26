@@ -3,14 +3,14 @@ layout: default
 img: turing_test.png
 img_link: http://xkcd.com/329/
 caption: Turing Test
-title: CIS 521 Homework 10 "Extra Credit - Part 2"
+title: CIS 521 Homework 9 "Extra Credit - Part 2"
 active_tab: homework
 release_date: 2018-12-7
 due_date: 2018-12-10 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homework10_part2.py 
+        url: homework9_part2.py 
     - 
         name: dataset.csv
         url: dataset.csv 
@@ -45,7 +45,7 @@ You can download the materials for this assignment here:
 
 
 
-Homework 10: Extra Credit - Part 2 [55 points]
+Homework 9: Extra Credit - Part 2 [55 points]
 =============================================================
 
 ## <a name="instructions"></a> Instructions
@@ -53,7 +53,7 @@ Homework 10: Extra Credit - Part 2 [55 points]
 
 This part of the assignment involves building a Neural Network using one of the Machine Learning frameworks called [PyTorch](https://pytorch.org) for a [Fashion MNIST dataset](https://github.com/zalandoresearch/fashion-mnist).
 
-A skeleton file [homework10_part2.py](homework10_part2.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [homework9_part2.py](homework9_part2.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 A file containing a sub-set of the Fashion MNIST dataset [dataset.csv](dataset.csv) is provided. 
 
