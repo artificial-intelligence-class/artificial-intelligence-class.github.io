@@ -1,11 +1,38 @@
+- name: Chris Callison-Burch 
+  pic: ccb.jpg
+  email: ccb@upenn.edu 
+  url: https://www.cis.upenn.edu/~ccb/
+  extra_title: Instructor
+  office_hours: TBD
+  location: 3401 Walnut room 463C
 
- 
-- name: Faazilah Mohamed
-  pic: faazilah.jpg
-  email: faazilah@sas.upenn.edu
-  url: https://www.linkedin.com/in/faazilah-penn/
-  office_hours: Saturday, 2-4pm
-  location: Levine Hall, 5th floor bump space
+- name: Danni Ma
+  pic: danni.jpg
+  email: dannima@seas.upenn.edu
+  url: /
+  office_hours: TBD
+  location: TBD
+
+- name: Diana Marsala
+  pic: marsalad.jpg
+  email: marsalad@sas.upenn.edu
+  url: /
+  office_hours: TBD
+  location: TBD
+  
+- name: Emily Hilman
+  pic: kermit.png
+  email: ehilman@sas.upenn.edu
+  url: /
+  office_hours: TBD
+  location: TBD
+
+- name: Jasmine Lee
+  pic: kermit.png
+  email: leesunj@sas.upenn.edu
+  url: /
+  office_hours: TBD
+  location: TBD
 
 - name: Jie Gao
   pic: jie.jpg
@@ -13,9 +40,18 @@
   url: https://jiegaopoc.me
   location: Piazza
 
-- name: Joseph Cappadona
-  pic: joe.jpg
-  email: josephcappadona27@gmail.com
-  url: https://github.com/josephcappadona/
-  location: Piazza
- 
+- name: John Zhang
+  pic: johnzhang.jpg
+  email: johnzh@sas.upenn.edu
+  url: /
+  office_hours: TBD
+  location: TBD
+
+- name: Yue Yang
+  pic: yueyang.png
+  email: yueyang1@seas.upenn.edu
+  url: /
+  office_hours: TBD
+  location: TBD
+
+  
