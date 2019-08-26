@@ -1,8 +1,8 @@
 -
   date: 2019-08-27
   title: Introduction / AI in Science Fiction and Philosophy 
-  slides: 00-Course-Intro.pdf
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a4256e5d-9c02-41b6-aefd-a9460066cfba
+  slides: 
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 1 "Introduction"
@@ -26,8 +26,8 @@
   date: 2019-08-29
   slides: 
   title: Python Review - part 1
-  slides: 01-Python3-review1.pdf
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4a27eb8a-3607-4c63-b852-a9460066cfe9
+  slides: 
+  recording:
   videos:
     -  
       url: https://www.youtube.com/watch?v=X2xlQaimsGg
@@ -53,8 +53,8 @@
   date: 2019-09-03
   slides: 
   title: Python Review - part 2
-  slides: 02-Python3-review2.pdf
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a6aac32e-032d-4780-9d52-a9460066d00a
+  slides: 
+  recording: 
   videos:
     -  
       authors: Piet Hoenderdos, Daniel Dennett and others
@@ -69,9 +69,9 @@
 
 -
   date: 2019-09-05
-  slides: 03-Agents-Search-Problems-and-Uninformed-Search.pdf
+  slides: 
   title:  Intelligent Agents, Search Problem Formulation and Uninformed Search
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fdaade1a-fae8-4ff1-890e-a9460066d026
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 2 "Intelligent Agents" (2.1 and 2.2)
@@ -101,9 +101,9 @@
   type: no_lecture
 -
   date: 2019-09-12
-  slides: 04-informed-search.pdf
+  slides: 
   title:  A* Search and Heuristics
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=66ae0cb3-2490-4a21-b7ed-a9460066d047
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 3 "Solving Problems by Search"  (3.5-3.6)
@@ -127,9 +127,9 @@
       length: 1.5 minutes 
 -
   date: 2019-09-17
-  slides: 05-CSPs.pdf
+  slides: 
   title:  Constraint Satifaction Problems 
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5ab781b9-67bb-49fa-ab36-a9460066d063
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
@@ -141,9 +141,9 @@
   type: exam
 -
   date: 2019-09-19
-  slides: 07-Adversarial-Search.pdf
+  slides: 
   title:  Game Trees&colon; Minimax
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2376392c-ef0e-41f1-896c-a9460066d0ae
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
@@ -162,9 +162,9 @@
       length: 14 minutes 
 -
   date: 2019-09-24
-  slides: 08-Adversarial-Search-2.pdf
+  slides: 
   title:  Game Trees&colon; Expectimax and Utilities
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7a9ce021-a9ed-4552-8830-a9460066d0ca
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
@@ -186,9 +186,9 @@
   type: exam
 -
   date: 2019-09-26
-  slides: 09-MDPs.pdf
+  slides: 
   title:  Markov Decision Processes
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27b5b53b-c7ff-4200-a408-a9460066d0eb
+  recording: 
   readings:
     - 
       title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
@@ -205,9 +205,9 @@
       title: Behaviroal Economics - Expected Utility Review
 -
   date: 2019-10-01
-  slides: 10-MDPs-2.pdf
+  slides: 
   title:  Markov Decision Processes - part 2
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9431e864-382a-4c26-830f-a9460066d144
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
@@ -234,9 +234,9 @@
   type: no_lecture
 -
   date: 2019-10-8
-  slides: 11-Reinforcement-Learning.pdf
+  slides: 
   title:  Reinforcement Learning
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8577e149-ead6-4844-8041-a9460066d160
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 21 "Reinforcement Learning"
@@ -260,9 +260,9 @@
   type: no_lecture
 -
   date: 2019-10-15
-  slides: 12-Reinforcement-Learning-2.pdf
+  slides: 
   title:  Reinforcement Learning - part 2
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=707f00af-2879-4fa7-b3e2-a9460066d181
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 21 "Reinforcement Learning"
@@ -279,9 +279,9 @@
       title: Autonomous Helicopters Teach Themselves to Fly Stunts
 -
   date: 2019-10-17
-  slides: 13-Probability.pdf
+  slides: 
   title:  Reinforcement Learning wrap up and Probability 
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=32c249cf-dac2-4de0-843a-a9460066d19d
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 13 "Quantifying Uncertainty" (13.1-13.5)
@@ -294,9 +294,9 @@
       title: Everything You Ever Wanted to Know About Bayes' Theorem But Were Afraid To Ask
 -
   date: 2019-10-22
-  slides: 14-Markov-Models.pdf
+  slides: 
   title:  Probability Wrap Up and Markov Models 
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9a71d6e2-caa1-4c19-a63c-a9460066d1d5
+  recording: 
   readings:  
     - 
       title: AIMA Chapter 15 "Probabilistic Reasoning Over Time" (15.2-15.5)
@@ -314,8 +314,8 @@
   type: exam
 -
   date: 2019-10-24
-  slides: 16-Bayes-Nets.pdf
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3dff1015-86e5-4404-b46c-a9460066d212
+  slides: 
+  recording: 
   title:  Bayes' Nets
   readings:   
     - 
@@ -329,8 +329,8 @@
       title: Probabilistic Graphical Models online course
 -
   date: 2019-10-29
-  slides: 16-Bayes-Nets-2.pdf
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfedeced-9e2e-4cc9-9cf8-a9460066d22e
+  slides: 
+  recording: 
   title: Bayes' Nets part 2
   readings:   
     - 
@@ -369,9 +369,9 @@
   type: exam
 -
   date: 2019-11-07
-  slides: 19-Naive-Bayes.pdf
+  slides: 
   title:   Machine Learning&colon; Naive Bayes
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=abcca865-5536-4e35-8747-a9460066d287
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
@@ -388,9 +388,9 @@
       title: SPAM
 -
   date: 2019-11-12
-  slides: 20-Perceptron.pdf
+  slides: 
   title:  Machine Learning&colon; Perceptrons
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2f93efb7-8edf-4907-b93a-a9460066d2a8
+  recording: 
   readings:     
     - 
       title: AIMA Chapter 18 "Learning from Examples" (18.6.3)
@@ -421,9 +421,9 @@
   type: exam
 -
   date: 2019-11-14
-  slides: 21-Perceptrons-KNNs-and-Kernels.pdf
+  slides: 
   title: Machine Learning&colon; Kernels and Clustering
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=087eea08-6db6-43c8-b12d-a9460066d2c4
+  recording: 
   readings:   
     - 
       title: AIMA Chapter 18 "Learning from Examples" (18.8)
@@ -431,9 +431,9 @@
       optional: false
 -
   date: 2019-11-19
-  slides: 22-Clustering-and-Neural-Nets.pdf
+  slides: 
   title: Clustering and Neural Networks
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c0a6b3c0-fb72-49d5-8170-a9460066d301
+  recording: 
   readings:   
     - 
       title: Cluster analysis
@@ -466,9 +466,9 @@
   type: exam
 -
   date: 2019-11-21
-  slides: 23-Neural-Networks-and-Computer-Vision.pdf
+  slides: 
   title: Neural Networks
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4bfb8b70-bae5-4174-bd39-a9460066d322
+  recording: 
   readings:
     - 
       title: Neural Networks and Deep Learning (Chapter 2 "How the Backpropagation Algorithm Works")
@@ -482,9 +482,9 @@
       title: Neural Networks and Deep Learning
 -
   date: 2019-11-26
-  slides: 24-Computer-Vision-Self-Driving-Cars-and-NLP.pdf
+  slides: 
   title: Neural Networks&colon; CNN
-  recording:   https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f512fdc6-78e7-4bd0-bccc-a9460066d33e
+  recording: 
 -
   date: 2019-11-26
   title:  HW9 released (Neural Nets 1 & 2)
