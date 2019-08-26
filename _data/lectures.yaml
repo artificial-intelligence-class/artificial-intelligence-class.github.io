@@ -414,7 +414,7 @@
       title: SPAM
 -
   date: 2018-11-13
-  title:  HW7 due (Generate a novel), HW8 released (HMMs)
+  title:  HW7 due (Generate a novel), HW8 released (Perceptrons)
   type: exam
 -
   date: 2018-11-15
@@ -455,10 +455,6 @@
       title: AIMA Chapter 18 "Learning from Examples" (18.8)
       authors: Russell and Norvig
       optional: false  
--
-  date: 2018-11-20
-  title:  HW8 due (HMMs), HW9 released (Perceptrons)
-  type: exam
 -
   date: 2018-11-22
   title: Thanksgiving Break (no classes)
@@ -512,7 +508,7 @@
       title: Neural Networks and Deep Learning     
 -
   date: 2018-11-29
-  title:  HW9 due (Perceptrons), study for exam
+  title:  HW8 due (Perceptrons), study for exam
   type: exam
 -
   date: 2018-12-04

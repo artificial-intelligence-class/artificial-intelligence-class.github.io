@@ -3,14 +3,14 @@ layout: default
 img: modified_bayes_theorem_2x.png
 img_link: http://xkcd.com/2059/
 caption: Modified Bayes' Theorem
-title: CIS 521 Homework 10 "Extra Credit - Part 1"
+title: CIS 521 Homework 9 "Extra Credit - Part 1"
 active_tab: homework
 release_date: 2018-12-03
 due_date: 2018-12-10 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homework10_part1.py 
+        url: homework9_part1.py 
 submission_link: https://www.gradescope.com/courses/21105
 ---
 
@@ -42,14 +42,14 @@ You can download the materials for this assignment here:
 
 
 
-Homework 10: Extra Credit - Part 1 [45 points]
+Homework 9: Extra Credit - Part 1 [45 points]
 =============================================================
 
 ## Instructions
 
 This first part of the Extra Credit assignment involves implementing functions commonly used in Neural Networks from scratch without use of external libraries/packages other than [NumPy](http://www.numpy.org).
 
-A skeleton file [homework10_part1.py](homework10_part1.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [homework9_part1.py](homework9_part1.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You will find that in addition to a problem specification, most programming questions also include a pair of examples from the Python interpreter. These are meant to illustrate typical use cases, and should not be taken as comprehensive test suites.
 

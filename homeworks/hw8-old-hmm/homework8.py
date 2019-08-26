@@ -8,78 +8,30 @@ student_name = "Type your full name here."
 # Imports
 ############################################################
 
-import homework8_data as data
-
 # Include your imports here, if any are used.
 
 
 
 ############################################################
-# Section 1: Perceptrons
+# Section 1: Hidden Markov Models
 ############################################################
 
-class BinaryPerceptron(object):
+def load_corpus(path):
+    pass
 
-    def __init__(self, examples, iterations):
+class Tagger(object):
+
+    def __init__(self, sentences):
         pass
 
-    def predict(self, x):
+    def most_probable_tags(self, tokens):
         pass
 
-class MulticlassPerceptron(object):
-
-    def __init__(self, examples, iterations):
-        pass
-    
-    def predict(self, x):
+    def viterbi_tags(self, tokens):
         pass
 
 ############################################################
-# Section 2: Applications
-############################################################
-
-class IrisClassifier(object):
-
-    def __init__(self, data):
-        pass
-
-    def classify(self, instance):
-        pass
-
-class DigitClassifier(object):
-
-    def __init__(self, data):
-        pass
-
-    def classify(self, instance):
-        pass
-
-class BiasClassifier(object):
-
-    def __init__(self, data):
-        pass
-
-    def classify(self, instance):
-        pass
-
-class MysteryClassifier1(object):
-
-    def __init__(self, data):
-        pass
-
-    def classify(self, instance):
-        pass
-
-class MysteryClassifier2(object):
-
-    def __init__(self, data):
-        pass
-
-    def classify(self, instance):
-        pass
-
-############################################################
-# Section 3: Feedback
+# Section 2: Feedback
 ############################################################
 
 feedback_question_1 = """
