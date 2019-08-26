@@ -11,7 +11,7 @@ active_tab: lectures
 
 
 <div class="alert alert-info">
-You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=5ea6b718-7bb4-4019-880a-aa7f010f88d1">watch recordings of the lecture videos online</a>.
+You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=5ea6b718-7bb4-4019-880a-aa7f010f88d1">watch recordings of the previous lecture videos online</a>.
 </div>
 
 The lecture schedule will be updated as the term progresses. 
@@ -53,8 +53,8 @@ The lecture schedule will be updated as the term progresses.
     >
 
     <!-- End create a HTML anchor for the most recent lecture -->
-      <td>{{ lecture.date | date: '%a, %b %-d, %Y' }}</td>
-      <td>
+      <td width="14%">{{ lecture.date | date: '%a, %b %-d, %Y' }}</td>
+      <td width="30%">
          {{ lecture.title }} 
 
 
