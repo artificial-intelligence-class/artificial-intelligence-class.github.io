@@ -59,7 +59,7 @@ Instructor
 : [Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/)
 
 Discussion Forum
-: [Piazza](piazza.com/upenn/fall2019/cis521)
+: [Piazza](http://piazza.com/upenn/fall2019/cis521)
 
 Time and place
 : Tuesdays and Thursdays from noon-1:30pm in Wu and Chen Auditorium (Levine Hall room 101)
