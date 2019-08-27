@@ -11,7 +11,7 @@ materials:
     - 
         name: skeleton file
         url: homework1.py 
-submission_link: https://www..com/courses/59562
+submission_link: https://www.gradescope.com/courses/59562
 ---
 
 <!-- Check whether the assignment is up to date -->
