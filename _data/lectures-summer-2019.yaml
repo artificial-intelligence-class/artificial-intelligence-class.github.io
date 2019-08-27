@@ -5,7 +5,7 @@
       name: Introduction / AI in Science Fiction and Philosophy 
     -
       name: Python Review
-  slides: 00-Course-Intro.pdf
+  slides: summer/00-Course-Intro.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=da2bc713-2f48-40fd-8542-aa7f011038cb
   readings:
     - 
@@ -46,7 +46,7 @@
       name: Search Problem Formulation
     -
       name: Uninformed Search
-  slides: 03-Agents-Search-Problems-and-Uninformed-Search.pdf
+  slides: summer/03-Agents-Search-Problems-and-Uninformed-Search.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a4256e5d-9c02-41b6-aefd-a9460066cfba
   readings:   
     - 
@@ -67,7 +67,7 @@
   titles:
     - 
       name: A* Search and Heuristics
-  slides: 04-informed-search.pdf
+  slides: summer/04-informed-search.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=66ae0cb3-2490-4a21-b7ed-a9460066d047
   readings:   
     - 
@@ -84,7 +84,7 @@
   titles: 
     -
       name: Game Trees&colon; Minimax
-  slides: 05-Games-and-Adverserial-Search.pdf
+  slides: summer/05-Games-and-Adverserial-Search.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2376392c-ef0e-41f1-896c-a9460066d0ae
   readings:   
     - 
@@ -119,7 +119,7 @@
       name: Game Trees&colon; Expectimax and Utilities
     -
      name: Markov Decision Processes 1
-  slides: 06-expectimax-utilities-and-MDPs.pdf
+  slides: summer/06-expectimax-utilities-and-MDPs.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27b5b53b-c7ff-4200-a408-a9460066d0eb
   readings:
     - 
@@ -140,7 +140,7 @@
   titles:
     -
       name: Markov Decision Processes 2
-  slides: 07-MDPs-part-2.pdf
+  slides: summer/07-MDPs-part-2.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8577e149-ead6-4844-8041-a9460066d160
   readings:
 -
@@ -148,7 +148,7 @@
   titles: 
     -
       name: MDPs Wrap-up and Reinforcement Learning 1
-  slides: 08-MDPs-wrapup-and-reinforcement-learning.pdf
+  slides: summer/08-MDPs-wrapup-and-reinforcement-learning.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=32c249cf-dac2-4de0-843a-a9460066d19d
   readings:
     - 
@@ -182,7 +182,7 @@
   titles:
     -
       name: Reinforcement Learning 2
-  slides: 09-Reinforcement-Learning-2.pdf
+  slides: summer/09-Reinforcement-Learning-2.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9a71d6e2-caa1-4c19-a63c-a9460066d1d5
   readings:  
 -
@@ -192,7 +192,7 @@
       name: Probability
     -
       name: Markov Models
-  slides: 10-Probabilities.pdf
+  slides: summer/10-Probabilities.pdf
   readings:
     - 
       title: AIMA Chapter 13 "Quantifying Uncertainty" (13.1-13.5)
@@ -237,13 +237,13 @@
       name: R2D2 project or NLP assignment
       url: homeworks_summer/term-project/r2d2-or-nlp.html
       due: 2019-08-07
-  slides: 11-n-grams-and-vector-space-models.pdf
+  slides: summer/11-n-grams-and-vector-space-models.pdf
 -
   date: 2019-07-29
   titles: 
     -
       name: Bayes' Nets
-  slides: 13-Bayes-Nets.pdf
+  slides: summer/13-Bayes-Nets.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3dff1015-86e5-4404-b46c-a9460066d212
   readings:   
     - 
@@ -260,7 +260,7 @@
   titles: 
      -
       name: BN wrapup and Naive Bayes
-  slides: 14-BN-wrapup-Naive-Bayes.pdf
+  slides: summer/14-BN-wrapup-Naive-Bayes.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3dff1015-86e5-4404-b46c-a9460066d212
   readings:   
     - 
@@ -274,11 +274,11 @@
       url: https://www.gradescope.com/courses/52017 
 -
   date: 2019-08-02
-  slides: 15-Perceptron.pdf
+  slides: summer/15-Perceptron.pdf
   titles:
     -
       name: Perceptrons 
-  # slides: 23-Neural-Networks-and-Computer-Vision.pdf
+  # slides: summer/23-Neural-Networks-and-Computer-Vision.pdf
   # recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4bfb8b70-bae5-4174-bd39-a9460066d322
   readings:
     - 
@@ -305,7 +305,7 @@
   type: no_lecture
 -
   date: 2019-08-05
-  slides: 16-Neural-Networks.pdf
+  slides: summer/16-Neural-Networks.pdf
   titles:
     -
       name: Neural Networks
@@ -326,7 +326,7 @@
       optional: false
 -
   date: 2019-08-07
-  slides: 17-Computer-Vision.pdf
+  slides: summer/17-Computer-Vision.pdf
   titles:
     - 
       name: In-class demos for your final projects
