@@ -11,7 +11,7 @@
     - 
       title: AIMA Chapter 26 "Philosophical Foundations"
       authors: Russell and Norvig
-      optional: false
+      optional: true
   videos:
     -  
       authors: PBS Crash Course in Philosophy
