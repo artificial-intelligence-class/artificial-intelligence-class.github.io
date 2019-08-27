@@ -5,13 +5,13 @@ img_link: http://xkcd.com/353/
 caption: Hello world!
 title: CIS 521 Homework 1 "Python Skills"
 active_tab: homework
-release_date: 2018-08-10
-due_date: 2018-09-11 23:59:00EDT
+release_date: 2019-08-27
+due_date: 2019-09-10 23:59:00EDT
 materials:
     - 
         name: skeleton file
         url: homework1.py 
-submission_link: https://www.gradescope.com/courses/21105
+submission_link: https://www..com/courses/59562
 ---
 
 <!-- Check whether the assignment is up to date -->
