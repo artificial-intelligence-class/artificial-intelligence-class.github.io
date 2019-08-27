@@ -11,7 +11,7 @@ active_tab: lectures
 
 
 <div class="alert alert-info">
-You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=5ea6b718-7bb4-4019-880a-aa7f010f88d1">watch recordings of the lecture videos online</a>.
+You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=12985a70-115d-4b55-b0b3-aab500eecae5">watch recordings of the lecture videos online</a>.
 </div>
 
 The lecture schedule will be updated as the term progresses. 
