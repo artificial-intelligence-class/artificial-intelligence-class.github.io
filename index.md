@@ -51,6 +51,11 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 R2D2 Extra Credit Assignments:
 * [Program robots with Python](r2d2_assignments/hw1/homework1.html)
 * [A* Search](r2d2_assignments/hw2/homework2.html)
+
+Extra Credit Bounty Items:
+* Get the Python API that we developed working on Windows
+* Find a way to communicate the robot's gyroscopic sensor info back to Python
+* Develop a Python collision detection protocol 
 </div>
 
 
