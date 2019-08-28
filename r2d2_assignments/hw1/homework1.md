@@ -124,6 +124,8 @@ cd lib/
 yarn rebuild
 ```
 
+11. Make sure that Bluetooth is turned on.  Go to the Apple menu, pick System Preferences.  Click on the Bluetooth preferences icon.  If you see "Bluetooth: On" you're all set.  If not, clikc on the "Turn Bluetooth On" button.
+
 <!--
 11. Start the server, and leave it running in its own Terminal window.
 ```bash
