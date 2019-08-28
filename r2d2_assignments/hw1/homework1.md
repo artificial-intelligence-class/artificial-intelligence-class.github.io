@@ -72,7 +72,7 @@ For now, we have setup instructions for Mac.  We are working on creating instruc
 To get started, we are going to download a set of APIs for controling the robots via Bluetooth.  This step is a little bit complicated, so we recommend that you start early, so that you can ask for help if you get stuck.
 
 1. Download and install the current version of Python from [https://www.python.org/downloads/](https://www.python.org/downloads/).  
-2. After you have installed it, you will need to Double click on the "Install Certificates.command" file in your `/Applications/Python 3.7` folder.
+2. After you have installed it, you will need to double click on the **"Install Certificates.command"** file in your `/Applications/Python 3.7` folder.
 3.  The Mac installer will put it at /usr/local/bin/python3 which you can verify by checking the date after typing
 ```bash
 ls -la /usr/local/bin/py*
