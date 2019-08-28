@@ -344,7 +344,7 @@ def trace_square(speed=0.5, duration=2):
 Now let's generalize it to be any regular polygon.  For a polygon with $n$ sides, we'll need to compute what angle to turn to turn instead of 90&deg; in a square.  
 
 
-<img src="image/external_angles.png" alt="Internal angle + External angle = 180 degrees" class="img-responsive" />
+<img src="images/external_angles.png" alt="Internal angle + External angle = 180 degrees" class="img-responsive" />
 
 Here's how to compute the *interior* angle of a polygon: 
     $$ \frac{(n-2) \cdot 180}{n} $$
