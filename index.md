@@ -6,9 +6,10 @@ active_tab: main_page
 ---
 
 
-<div class="alert alert-success" markdown="1">
+<div class="alert alert-danger" markdown="1">
 The Fall 2019 class is full.  There are currently 150 students enrolled in the class, and another 170 students on the waitlist. [You can sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) if you'd like to try to get a spot, but it unlikely that you will get in unless you are in Category 1+ or Category 1. 
 </div>
+
 
 
 <!-- Display an alert about upcoming homework assignments -->
@@ -38,14 +39,16 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 
 
 
-<!--
-<div class="alert alert-warning" markdown="1">
-[Here is the robot checkout form.](https://docs.google.com/forms/d/e/1FAIpQLSdwSUTomNOdcsx0d1u3j57fQ9AqKiGei435-gAnbS1lfLuyhA/viewform?usp=sf_link)
+
+
+<div class="alert alert-success" markdown="1">
+[When you borrow one of the programmable toy R2D2s for the semester, please fill out this Robot Checkout Form.](https://docs.google.com/forms/d/e/1FAIpQLSeVrCvG_2zcb2bPdn0bor61EOTzzqesI748l1pG4u9TqJ_GgQ/viewform?usp=sf_link)
 </div>
--->
+
+
 
 <div class="alert alert-info" markdown="1">
-R2D2 Assignments:
+R2D2 Extra Credit Assignments:
 * [Program robots with Python](r2d2_assignments/hw1/homework1.html)
 * [A* Search](r2d2_assignments/hw2/homework2.html)
 </div>
@@ -80,7 +83,7 @@ Grading
 : 15% Midterm 1
 : 15% Midterm 2
 : 15% Midterm 3 <br/>
-There roughly one homework assignment per week, aside from weeks with exams.  Students enrolled in CIS 421 may skip one HW assignment, or they may discard their lowest scoring HW assignment.  You do not get late days back on the homework that you discard.  Students enrolled in CIS 521 must complete all HW assignments and cannot discard their lowest scoring assignment.
+There is roughly one homework assignment per week, aside from weeks with exams.  Students enrolled in CIS 421 may skip one HW assignment, or they may discard their lowest scoring HW assignment.  You do not get late days back on the homework that you discard.  Students enrolled in CIS 521 must complete all HW assignments and cannot discard their lowest scoring assignment.
 
 
 Collaboration Policy
