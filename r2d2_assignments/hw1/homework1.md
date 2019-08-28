@@ -91,7 +91,7 @@ python -m pip install --upgrade pip
 ```
 6. Install yarn by typing these commands into the terminal.
 ```bash
-wget https://yarnpkg.com/latest.tar.gz
+curl -o latest.tar.gz https://yarnpkg.com/latest.tar.gz
 tar xfz latest.tar.gz
 mv yarn-*/lib/* r2d2/lib/
 mv yarn-*/bin/* r2d2/bin/
