@@ -5,8 +5,8 @@ img_link: https://www.explainxkcd.com/wiki/index.php/1002:_Game_AIs
 caption: Chess Puzzle
 title: CIS 521 Homework 2 "Uninformed Search"
 active_tab: homework
-release_date: 2018-09-11
-due_date: 2018-09-18 23:59:00EDT
+release_date: 2019-09-10
+due_date: 2019-09-17 23:59:00EDT
 materials:
     - 
         name: skeleton file
@@ -18,9 +18,9 @@ submission_link: https://www.gradescope.com/courses/21105
 ---
 
 <!-- Check whether the assignment is up to date -->
-{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
-{% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
-{% if this_year != due_year %} 
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
 <div class="alert alert-danger">
 Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
 </div>
