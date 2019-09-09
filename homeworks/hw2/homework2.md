@@ -14,7 +14,7 @@ materials:
     - 
         name: Lights Out GUI
         url: homework2_lights_out_gui.py 
-submission_link: https://www.gradescope.com/courses/21105
+submission_link: https://www.gradescope.com/courses/59562
 ---
 
 <!-- Check whether the assignment is up to date -->
