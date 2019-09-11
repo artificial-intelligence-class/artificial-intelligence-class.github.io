@@ -99,7 +99,7 @@
   type: no_lecture
 -
   date: 2019-09-12
-  slides: 
+  slides: 04-informed-search.pdf
   title:  A* Search and Heuristics
   recording: 
   readings:   
