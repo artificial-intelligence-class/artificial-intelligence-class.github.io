@@ -109,7 +109,7 @@
       optional: false 
     - 
       title: Introduction to the A* Algorithm
-      authors:  Red Blob Games
+      authors: Amit Patel of Red Blob Games
       optional: true
       url: https://www.redblobgames.com/pathfinding/a-star/introduction.html 
   videos:
