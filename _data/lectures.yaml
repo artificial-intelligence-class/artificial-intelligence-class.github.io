@@ -107,6 +107,11 @@
       title: AIMA Chapter 3 "Solving Problems by Search"  (3.5-3.6)
       authors: Russell and Norvig
       optional: false 
+    - 
+      title: Introduction to the A* Algorithm
+      authors:  Red Blob Games
+      optional: true
+      url: https://www.redblobgames.com/pathfinding/a-star/introduction.html 
   videos:
     -  
       authors: Nils Nilsson 
