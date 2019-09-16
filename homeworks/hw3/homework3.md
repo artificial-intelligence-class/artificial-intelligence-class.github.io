@@ -5,8 +5,8 @@ img_link: https://www.explainxkcd.com/wiki/index.php/1002:_Game_AIs
 caption: Difficulty of Various Games For Computers
 title: CIS 521 Homework 3 "Informed Search"
 active_tab: homework
-release_date: 2018-09-18
-due_date: 2018-09-25 23:59:00EDT
+release_date: 2019-09-17
+due_date: 2019-09-24 23:59:00EDT
 materials:
     - 
         name: skeleton file
@@ -27,6 +27,16 @@ materials:
         name: random 50x50 scene
         url: homework3_scene_random.txt
 ---
+
+<!-- Check whether the assignment is ready to release -->
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
 
 <!-- Check whether the assignment is up to date -->
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}

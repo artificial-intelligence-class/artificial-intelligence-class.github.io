@@ -5,8 +5,8 @@ img_link: http://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning
 caption: Machine Learning
 title: CIS 521 Homework 8 "Perceptrons"
 active_tab: homework
-release_date: 2018-11-20
-due_date: 2018-11-29 23:59:00EDT
+release_date: 2019-11-12
+due_date: 2019-11-19 23:59:00EDT
 materials:
     - 
         name: skeleton file
@@ -16,6 +16,17 @@ materials:
         url: homeworks/hw8/homework8_data.py
 submission_link: https://www.gradescope.com/courses/21105
 ---
+
+<!-- Check whether the assignment is ready to release -->
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
+
 
 <!-- Check whether the assignment is up to date -->
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}

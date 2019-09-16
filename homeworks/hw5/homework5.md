@@ -5,8 +5,8 @@ img_link: https://xkcd.com/1801/
 caption: Someone needs value iteration 
 title: CIS 521 Homework 5 "Markov Decision Processes"
 active_tab: homework
-release_date: 2018-10-16
-due_date: 2018-10-23 23:59:00EDT
+release_date: 2019-10-8
+due_date: 2019-10-22 23:59:00EDT
 materials:
     - 
         name: skeleton files
@@ -15,6 +15,16 @@ materials:
 submission_link: https://www.gradescope.com/courses/21105
 attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
 ---
+
+<!-- Check whether the assignment is ready to release -->
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
 
 <!-- Check whether the assignment is up to date -->
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
