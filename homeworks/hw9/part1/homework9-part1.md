@@ -5,14 +5,25 @@ img_link: http://xkcd.com/2059/
 caption: Modified Bayes' Theorem
 title: CIS 521 Homework 9 "Extra Credit - Part 1"
 active_tab: homework
-release_date: 2018-12-03
-due_date: 2018-12-10 23:59:00EDT
+release_date: 2019-11-26
+due_date: 2019-12-03 23:59:00EDT
 materials:
     - 
         name: skeleton file
         url: homework9_part1.py 
 submission_link: https://www.gradescope.com/courses/21105
 ---
+
+<!-- Check whether the assignment is ready to release -->
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
+
 
 <!-- Check whether the assignment is up to date -->
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}

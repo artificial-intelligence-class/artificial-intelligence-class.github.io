@@ -5,8 +5,8 @@ img_link: https://xkcd.com/74/
 caption: Binary Sudoku
 title: CIS 521 Homework 4 "Sudoku Solver and Games"
 active_tab: homework
-release_date: 2018-09-25
-due_date: 2018-10-16 23:59:00EDT
+release_date: 2019-09-24
+due_date: 2019-10-8 23:59:00EDT
 materials:
     - 
         name: skeleton file
@@ -22,6 +22,16 @@ materials:
         url: homeworks/hw4/homework4_dominoes_game_gui.py
 submission_link: https://www.gradescope.com/courses/21105
 ---
+
+<!-- Check whether the assignment is ready to release -->
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
 
 <!-- Check whether the assignment is up to date -->
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}

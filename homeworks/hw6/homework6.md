@@ -5,8 +5,8 @@ img_link: https://xkcd.com/242/
 caption: I was just updating my q&ndash;state values. 
 title: CIS 521 Homework 6 "Reinforcement Learning"
 active_tab: homework
-release_date: 2018-10-23
-due_date: 2018-10-30 23:59:00EDT
+release_date: 2019-10-22
+due_date: 2019-10-29 23:59:00EDT
 materials:
     - 
         name: skeleton files
@@ -14,6 +14,18 @@ materials:
 
 attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
 ---
+
+<!-- Check whether the assignment is ready to release -->
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
+
+
 <!-- Check whether the assignment is up to date -->
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
 {% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
