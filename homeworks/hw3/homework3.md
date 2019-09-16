@@ -283,7 +283,7 @@ Implement an improved version of the `solve_distinct_disks(length, n)` function 
 
 ## 4. Feedback [5 points]
 
-1. **[1 point]** Approximately how long did you spend on this assignment?
+1. **[1 point]** Approximately how many hours did you spend on this assignment?
 
 2. **[2 points]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
