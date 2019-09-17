@@ -75,11 +75,16 @@ Time and place
 : Tuesdays and Thursdays from noon-1:30pm in Wu and Chen Auditorium (Levine Hall room 101)
 
 Office hours
-: Mondays 3-5pm and 6-8pm
-: Tuesday 9-10am, 9-11am, and 3-4pm
-: Wednesday 2-4pm
-: Thursday 9-10am, 9-11am, and 3-4pm
-: Sunday 3-5pm
+: Mondays 3-5pm in GRW 5th Floor Bump Space
+: Mondays 6-8pm in 268 GRW
+: Tuesday 9-10am in GRW 5th Floor Bump Space
+: Tuesday 9-11am in GRW 5th Floor Bump Space
+: Tuesday 3-4pm in 3401 Walnut room 463C
+: Wednesday 2-4pm in GRW 5th Floor Bump Space
+: Thursday 9-10am in GRW 5th Floor Bump Space
+: Thursday 9-11am in in GRW 5th Floor Bump Space
+: Thursday 3-4pm in 3401 Walnut room 463C
+: Sunday 3-5pm in Harrison Mezz
 
 Textbook
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
