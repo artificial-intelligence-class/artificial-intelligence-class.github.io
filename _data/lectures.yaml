@@ -138,6 +138,11 @@
       title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
       authors: Russell and Norvig
       optional: false
+  videos:
+    -  
+      url: https://www.youtube.com/watch?v=AcDVVnyRk8Y
+      title: David Waltz - Constraint Propagation
+      length: 2.5 minutes (no sound)
 -
   date: 2019-09-17
   title:  HW2 due (Uninformed Search), HW3 released (Informed Search) 
