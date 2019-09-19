@@ -149,7 +149,7 @@
   type: exam
 -
   date: 2019-09-19
-  slides: 
+  slides: 06-Games-and-Adversarial-Search.pdf
   title: Games and Adversarial Search
   recording: 
   readings:   
@@ -180,7 +180,7 @@
       length: 14 minutes 
 -
   date: 2019-09-24
-  slides: 
+  slides: 07-Expectimax-and-Utilities.pdf
   title:  Game Trees&colon; Expectimax and Utilities
   recording: 
   readings:   
