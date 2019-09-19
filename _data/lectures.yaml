@@ -163,10 +163,10 @@
       optional: true
       url: http://artificial-intelligence-class.org/assets/readings/Shanning-1950-Programming-a-Computer-for-Playing-Chess.pdf
     - 
-      title: Digital Computers Applied to Games (1953)
-      authors: Alan Turning
+      title: Reconstructing Turing's "Paper Machine"
+      authors: Frederic Friedel
       optional: true
-      url: http://artificial-intelligence-class.org/assets/readings/Turing-1953-Digital-Computers-Applied-to-Games.pdf
+      url: https://en.chessbase.com/post/reconstructing-turing-s-paper-machine
 
   videos:    
     -  
