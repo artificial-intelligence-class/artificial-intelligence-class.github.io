@@ -150,13 +150,18 @@
 -
   date: 2019-09-19
   slides: 
-  title:  Game Trees&colon; Minimax
+  title: Games and Adversarial Search
   recording: 
   readings:   
     - 
       title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
       authors: Russell and Norvig
       optional: false 
+    - 
+      title: Programming a Computer for PLaying Chess (1950)
+      authors: Claude Shannon
+      optional: true
+      url: http://artificial-intelligence-class.org/assets/readings/Programming-a-Computer-for-Playing-Chess-1950.pdf
   videos:
     -  
       authors: BBC 
