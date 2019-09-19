@@ -161,8 +161,14 @@
       title: Programming a Computer for PLaying Chess (1950)
       authors: Claude Shannon
       optional: true
-      url: http://artificial-intelligence-class.org/assets/readings/Programming-a-Computer-for-Playing-Chess-1950.pdf
-  videos:
+      url: http://artificial-intelligence-class.org/assets/readings/Shanning-1950-Programming-a-Computer-for-Playing-Chess.pdf
+    - 
+      title: Digital Computers Applied to Games (1953)
+      authors: Alan Turning
+      optional: true
+      url: http://artificial-intelligence-class.org/assets/readings/Turing-1953-Digital-Computers-Applied-to-Games.pdf
+
+  videos:    
     -  
       authors: BBC 
       url: https://www.youtube.com/watch?v=KF6sLCeBj0s
