@@ -20,7 +20,7 @@ materials:
     -
         name: Dominoes Game GUI 
         url: homeworks/hw4/homework4_dominoes_game_gui.py
-submission_link: https://www.gradescope.com/courses/21105
+submission_link: https://www.gradescope.com/courses/59562
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -113,7 +113,7 @@ It is highly recommended that you follow the Python style guidelines set forth i
 Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-## 1. Sudoku Solver [80 points]
+## 1. Sudoku Solver [75 points]
 
 In the game of Sudoku, you are given a partially-filled $9 \\times 9$ grid, grouped into a $3 \\times 3$ grid of $3 \\times 3$ blocks. The objective is to fill each square with a digit from 1 to 9, subject to the requirement that each row, column, and block must contain each digit exactly once.
 
@@ -1413,10 +1413,10 @@ The arguments `rows` and `cols` are positive integers designating the size of th
 
 In the GUI, you can click on a square to make a move, press 'r' to perform a random move, or press a number between $1$ and $9$ to perform the best move found according to an alpha-beta search with that limit. The GUI is merely a wrapper around your implementations of the relevant functions, and may therefore serve as a useful visual tool for debugging.
 
-## 3. Feedback [0 point]
+## 3. Feedback [5 points]
 
-1. **[0 point]** Approximately how long did you spend on this assignment?
+1. **[1 point]** Approximately how long did you spend on this assignment?
 
-2. **[0 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
-3. **[0 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?

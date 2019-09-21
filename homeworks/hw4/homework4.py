@@ -96,11 +96,8 @@ class DominoesGame(object):
 # Section 3: Feedback
 ############################################################
 
-feedback_question_1 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
+# Just an approximation is fine.
+feedback_question_1 = 0
 
 feedback_question_2 = """
 Type your response here.
