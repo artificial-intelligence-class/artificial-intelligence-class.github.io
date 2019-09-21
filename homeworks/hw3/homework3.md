@@ -26,6 +26,7 @@ materials:
     - 
         name: random 50x50 scene
         url: homework3_scene_random.txt
+submission_link: https://www.gradescope.com/courses/59562
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -80,7 +81,7 @@ You will find that in addition to a problem specification, most programming ques
 
 You are strongly encouraged to follow the Python style guidelines set forth in [PEP 8](http://legacy.python.org/dev/peps/pep-0008/), which was written in part by the creator of Python. However, your code will not be graded for style.
 
-Once you have completed the assignment, you should submit your file on [Gradescope](https://www.gradescope.com/courses/21105). You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
+Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
 ## 1. Tile Puzzle [55 points]
 
