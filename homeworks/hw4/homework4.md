@@ -1415,7 +1415,7 @@ In the GUI, you can click on a square to make a move, press 'r' to perform a ran
 
 ## 3. Feedback [5 points]
 
-1. **[1 point]** Approximately how long did you spend on this assignment?
+1. **[1 point]** Approximately how many hours did you spend on this assignment?
 
 2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
