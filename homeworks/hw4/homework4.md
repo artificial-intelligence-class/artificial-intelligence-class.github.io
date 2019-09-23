@@ -20,7 +20,7 @@ materials:
     -
         name: Dominoes Game GUI 
         url: homeworks/hw4/homework4_dominoes_game_gui.py
-submission_link: https://www.gradescope.com/courses/21105
+submission_link: https://www.gradescope.com/courses/59562
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -113,7 +113,7 @@ It is highly recommended that you follow the Python style guidelines set forth i
 Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-## 1. Sudoku Solver [80 points]
+## 1. Sudoku Solver [75 points]
 
 In the game of Sudoku, you are given a partially-filled $9 \\times 9$ grid, grouped into a $3 \\times 3$ grid of $3 \\times 3$ blocks. The objective is to fill each square with a digit from 1 to 9, subject to the requirement that each row, column, and block must contain each digit exactly once.
 
@@ -478,7 +478,7 @@ An example puzzle originally from the Daily Pennsylvanian, available as `medium1
     [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), ..., (8, 5), (8, 6), (8, 7), (8, 8)]
     ```
     
-3. **[5 points]** Write a function `sudoku_arcs()` that returns the list of all arcs between cells in a Sudoku puzzle corresponding to inequality constraints. In other words, each arc should be a pair of cells whose values cannot be equal in a solved puzzle. The arcs should be represented a two-tuples of cells, where cells themselves are (row, column) pairs. The line `ARCS = sudoku_arcs()` in the `Sudoku` class then creates a class-level constant `Sudoku.ARCS` that can be used wherever the full list of arcs is needed. The ordering of the arcs within the list is not important, as long as they are all present.
+3. **[3 points]** Write a function `sudoku_arcs()` that returns the list of all arcs between cells in a Sudoku puzzle corresponding to inequality constraints. In other words, each arc should be a pair of cells whose values cannot be equal in a solved puzzle. The arcs should be represented a two-tuples of cells, where cells themselves are (row, column) pairs. The line `ARCS = sudoku_arcs()` in the `Sudoku` class then creates a class-level constant `Sudoku.ARCS` that can be used wherever the full list of arcs is needed. The ordering of the arcs within the list is not important, as long as they are all present.
     
     ```python
     >>> ((0, 0), (0, 8)) in sudoku_arcs()
@@ -500,7 +500,7 @@ An example puzzle originally from the Daily Pennsylvanian, available as `medium1
     ```
         
     
-4. **[10 points]** In the `Sudoku` class, write a method `remove_inconsistent_values(self, cell1, cell2)` that removes any value in the set of possibilities for `cell1` for which there are no values in the set of possibilities for `cell2` satisfying the corresponding inequality constraint. Each cell argument will be a (row, column) pair. If any values were removed, return `True`; otherwise, return `False`.
+4. **[7 points]** In the `Sudoku` class, write a method `remove_inconsistent_values(self, cell1, cell2)` that removes any value in the set of possibilities for `cell1` for which there are no values in the set of possibilities for `cell2` satisfying the corresponding inequality constraint. Each cell argument will be a (row, column) pair. If any values were removed, return `True`; otherwise, return `False`.
     
     *Hint: Think carefully about what this exercise is asking you to implement. How many values can be removed during a single invocation of the function?*
     
@@ -1413,10 +1413,10 @@ The arguments `rows` and `cols` are positive integers designating the size of th
 
 In the GUI, you can click on a square to make a move, press 'r' to perform a random move, or press a number between $1$ and $9$ to perform the best move found according to an alpha-beta search with that limit. The GUI is merely a wrapper around your implementations of the relevant functions, and may therefore serve as a useful visual tool for debugging.
 
-## 3. Feedback [0 point]
+## 3. Feedback [5 points]
 
-1. **[0 point]** Approximately how long did you spend on this assignment?
+1. **[1 point]** Approximately how many hours did you spend on this assignment?
 
-2. **[0 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
-3. **[0 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
