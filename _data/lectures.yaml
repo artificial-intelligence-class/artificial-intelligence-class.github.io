@@ -243,7 +243,7 @@
 
 -
   date: 2019-10-03
-  title:  Midterm exam 1 (in class).  An alternate date (to be determined) will be set for a makeup exam for students who cannot attend class.
+  title:  Midterm exam 1 (in class).  An alternate date is available for a makeup exam for students who cannot attend class.  The make up exam is Wednesday, Oct 9, 2019 in the morning from 10-11:30am.
   type: exam
 
 -
@@ -271,6 +271,10 @@
 -
   date: 2019-10-08
   title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
+  type: exam
+-
+  date: 2019-10-09
+  title:  Make up date for midterm exam 1 (10am-11:30am).  
   type: exam
 -
   date: 2019-10-10
