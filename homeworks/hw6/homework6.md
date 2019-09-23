@@ -12,7 +12,7 @@ materials:
         name: skeleton files
         url: homeworks/hw6/skeleton.zip 
 
-submission_link: https://www.gradescope.com/courses/52017
+submission_link: https://www.gradescope.com/courses/59562
 attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
 ---
 
