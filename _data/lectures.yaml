@@ -298,7 +298,8 @@
 -
   date: 2019-10-17
   slides: 
-  title:  Reinforcement Learning wrap up and Probability 
+  title:  No class today.  CCB is traveling for the HLTCOE.  Please review the linked Probability slides, and read AIMA chapter 13.1-13.5. 
+  type: no_lecture
   recording: 
   readings:   
     - 
@@ -313,7 +314,7 @@
 -
   date: 2019-10-22
   slides: 
-  title:  Probability Wrap Up and Markov Models 
+  title:  Markov Models 
   recording: 
   readings:  
     - 
