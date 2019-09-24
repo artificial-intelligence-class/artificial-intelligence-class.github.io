@@ -14,7 +14,7 @@ materials:
     - 
         name: Frankenstein (text file)
         url: homeworks/hw7/frankenstein.txt
-submission_link: https://www.gradescope.com/courses/21105
+submission_link: https://www.gradescope.com/courses/59562
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -56,7 +56,7 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-Homework 7: Generate a Novel [100 points]
+Homework 7: Generate a Novel [95 points]
 =============================================================
 
 ## Instructions
@@ -235,10 +235,10 @@ How well did your automatically generated Harry Potter sentences turn out?  Post
 
 
 
-## 3. Feedback [0 point]
+## 3. Feedback [5 point]
 
-1. **[0 point]** Approximately how long did you spend on this assignment?
+1. **[1 point]** Approximately how many hours did you spend on this assignment?
 
-2. **[0 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
-3. **[0 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?

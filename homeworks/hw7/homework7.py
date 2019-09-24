@@ -49,11 +49,7 @@ def create_ngram_model(n, path):
 # Section 2: Feedback
 ############################################################
 
-feedback_question_1 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-"""
+feedback_question_1 = 0
 
 feedback_question_2 = """
 Type your response here.
