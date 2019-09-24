@@ -56,7 +56,7 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-Homework 7: Generate a Novel [95 points]
+Homework 7: Generate a Novel [100 points]
 =============================================================
 
 ## Instructions
@@ -74,7 +74,7 @@ You are strongly encouraged to follow the Python style guidelines set forth in [
 Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-## 1. Markov Models [100 points]
+## 1. Markov Models [95 points]
 
 In this section, you will build a simple language model that can be used to generate random text resembling a source document. Your use of external code should be limited to built-in Python modules, which excludes, for example, NumPy and NLTK.
 
