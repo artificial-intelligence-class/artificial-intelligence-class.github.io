@@ -247,10 +247,10 @@ In this section, you will use the general-purpose perceptrons implemented above 
     [True, False, False, True]
     ```
 
-## 3. Feedback [0 point]
+## 3. Feedback [5 point]
 
-1. **[0 point]** Approximately how long did you spend on this assignment?
+1. **[1 point]** Approximately how many hours did you spend on this assignment?
 
-2. **[0 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
-3. **[0 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
