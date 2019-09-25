@@ -14,7 +14,7 @@ materials:
     - 
         name: Frankenstein (text file)
         url: homeworks/hw7/frankenstein.txt
-submission_link: https://www.gradescope.com/courses/21105
+submission_link: https://www.gradescope.com/courses/59562
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -74,11 +74,11 @@ You are strongly encouraged to follow the Python style guidelines set forth in [
 Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-## 1. Markov Models [100 points]
+## 1. Markov Models [95 points]
 
 In this section, you will build a simple language model that can be used to generate random text resembling a source document. Your use of external code should be limited to built-in Python modules, which excludes, for example, NumPy and NLTK.
 
-1. **[10 points]** Write a simple tokenization function `tokenize(text)` which takes as input a string of text and returns a list of tokens derived from that text. Here, we define a token to be a contiguous sequence of non-whitespace characters, with the exception that any punctuation mark should be treated as an individual token. *Hint: Use the built-in constant `string.punctuation`, found in the `string` module.*
+1. **[5 points]** Write a simple tokenization function `tokenize(text)` which takes as input a string of text and returns a list of tokens derived from that text. Here, we define a token to be a contiguous sequence of non-whitespace characters, with the exception that any punctuation mark should be treated as an individual token. *Hint: Use the built-in constant `string.punctuation`, found in the `string` module.*
     
     ```python
     >>> tokenize("  This is an example.  ")
@@ -235,10 +235,10 @@ How well did your automatically generated Harry Potter sentences turn out?  Post
 
 
 
-## 3. Feedback [0 point]
+## 3. Feedback [5 point]
 
-1. **[0 point]** Approximately how long did you spend on this assignment?
+1. **[1 point]** Approximately how many hours did you spend on this assignment?
 
-2. **[0 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
-3. **[0 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
