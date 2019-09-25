@@ -222,6 +222,10 @@
       url: https://www.youtube.com/watch?v=q-aUroyt1v8
       title: Behaviroal Economics - Expected Utility Review
 -
+  date: 2019-09-26
+  title:  Practice Exam released on Gradescope
+  type: exam
+-
   date: 2019-10-01
   slides: 
   title:  Markov Decision Processes - part 2
@@ -240,7 +244,10 @@
       authors: Machines with Brains 
       url: https://www.youtube.com/watch?v=lFIW8KphZo0
       title: How the "Most Human Human" passed the Turing Test
-
+-
+  date: 2019-10-01
+  title:  Practice Exam is due on Gradescope
+  type: exam
 -
   date: 2019-10-03
   title:  Midterm exam 1 (in class).  An alternate date is available for a makeup exam for students who cannot attend class.  The make up exam is Wednesday, Oct 9, 2019 in the morning from 10-11:30am.
