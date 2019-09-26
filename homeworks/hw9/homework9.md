@@ -10,13 +10,13 @@ due_date: 2019-12-03 23:59:00EDT
 materials:
     - 
         name: skeleton file 1 - cnn_functions.py
-        url: homeworks_summer/hw5/cnn_functions.py
+        url: homeworks/hw9/cnn_functions.py
     - 
         name: skeleton file 2 - fashion_mnist.py
-        url: homeworks_summer/hw5/fashion_mnist.py
+        url: homeworks/hw9/fashion_mnist.py
     - 
         name: subset of the Fashion MNIST dataset (csv file)
-        url: homeworks_summer/hw5/dataset.csv
+        url: homeworks/hw9/dataset.csv
 submission_link: https://www.gradescope.com/courses/59562
 ---
 
