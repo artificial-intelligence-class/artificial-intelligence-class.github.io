@@ -235,7 +235,7 @@ How well did your automatically generated Harry Potter sentences turn out?  Post
 
 
 
-## 3. Feedback [5 point]
+## 3. Feedback [5 points]
 
 1. **[1 point]** Approximately how many hours did you spend on this assignment?
 
