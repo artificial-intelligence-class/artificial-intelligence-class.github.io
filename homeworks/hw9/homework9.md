@@ -5,8 +5,8 @@ img_link: http://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning
 caption: Machine Learning
 title: CIS 521 Homework 5 "Neural Networks"
 active_tab: homework
-release_date: 2019-07-30
-due_date: 2019-08-13 23:59:00EDT
+release_date: 2019-11-26
+due_date: 2019-12-03 23:59:00EDT
 materials:
     - 
         name: skeleton file 1 - cnn_functions.py
