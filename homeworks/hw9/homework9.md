@@ -905,9 +905,13 @@ The dataset contains 20000 28x28 greyscale images, where each image has a label 
 
 ## 3. Feedback [5 points]
 
-1. **[1 point]** Approximately how many hours did you spend on this assignment?
+1. **[1 points]** What were the two classes that one of your models confused the most?
 
-2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+2. **[1 points]** Describe your architecture for the Advanced Model.
 
-3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+3. **[1 point]** Approximately how many hours did you spend on this assignment?
+
+4. **[1 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+
+5. **[1 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
 
