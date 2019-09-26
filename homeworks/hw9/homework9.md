@@ -20,6 +20,7 @@ materials:
 submission_link: https://www.gradescope.com/courses/59562
 ---
 
+
 <!-- Check whether the assignment is ready to release -->
 {% capture today %}{{'now' | date: '%s'}}{% endcapture %}
 {% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
@@ -65,6 +66,7 @@ You can download the materials for this assignment here:
         font-family: Georgia,Times,Times New Roman,serif; 
     }
 </style>
+
 
 
 Homework 9: Neural Networks [100 points]
