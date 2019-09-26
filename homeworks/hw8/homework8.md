@@ -14,7 +14,7 @@ materials:
     - 
         name: data sets (python file)
         url: homeworks/hw8/homework8_data.py
-submission_link: https://www.gradescope.com/courses/21105
+submission_link: https://www.gradescope.com/courses/59562
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -83,13 +83,13 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
 
-## 1. Perceptrons [40 points]
+## 1. Perceptrons [35 points]
 
 In this section, you will implement two varieties of the standard perceptron: one which performs binary classification, distinguishing between positive and negative instances, and one which performs multiclass classification, distinguishing between an arbitrary number of labeled groups.
 
 As in previous assignments, your use of external code should be limited to built-in Python modules, which excludes packages such as NumPy and NLTK.
 
-1. **[20 points]** A binary perceptron is one of the simplest examples of a linear classifier. Given a set of data points each associated with a positive or negative label, the goal is to learn a vector $\vec{w}$  such that $\vec{w} \cdot \vec{x}\_+ > 0$ for positive instances $\vec{x}\_+$ and $\vec{w} \cdot \vec{x}\_- \le 0$ for negative instances $\vec{x}\_-$.
+1. **[15 points]** A binary perceptron is one of the simplest examples of a linear classifier. Given a set of data points each associated with a positive or negative label, the goal is to learn a vector $\vec{w}$  such that $\vec{w} \cdot \vec{x}\_+ > 0$ for positive instances $\vec{x}\_+$ and $\vec{w} \cdot \vec{x}\_- \le 0$ for negative instances $\vec{x}\_-$.
 
     One learning algorithm for this problem initializes the weight vector $\vec{w}$ to the zero vector, then loops through the training data for a fixed number of iterations, adjusting the weight vector whenever a sample is misclassified.
 
@@ -247,10 +247,10 @@ In this section, you will use the general-purpose perceptrons implemented above 
     [True, False, False, True]
     ```
 
-## 3. Feedback [0 point]
+## 3. Feedback [5 points]
 
-1. **[0 point]** Approximately how long did you spend on this assignment?
+1. **[1 point]** Approximately how many hours did you spend on this assignment?
 
-2. **[0 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
-3. **[0 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
