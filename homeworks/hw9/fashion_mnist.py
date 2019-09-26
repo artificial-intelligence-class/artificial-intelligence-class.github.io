@@ -176,7 +176,11 @@ def main():
 # Feedback
 ############################################################
 
-feedback_question_1 = 0
+feedback_question_1 = """
+Type your response here.
+Your response may span multiple lines.
+Do not include these instructions in your response.
+"""
 
 feedback_question_2 = """
 Type your response here.
@@ -184,7 +188,15 @@ Your response may span multiple lines.
 Do not include these instructions in your response.
 """
 
-feedback_question_3 = """
+feedback_question_3 = 0
+
+feedback_question_4 = """
+Type your response here.
+Your response may span multiple lines.
+Do not include these instructions in your response.
+"""
+
+feedback_question_5 = """
 Type your response here.
 Your response may span multiple lines.
 Do not include these instructions in your response.
