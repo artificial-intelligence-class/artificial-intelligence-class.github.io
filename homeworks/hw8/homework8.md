@@ -247,7 +247,7 @@ In this section, you will use the general-purpose perceptrons implemented above 
     [True, False, False, True]
     ```
 
-## 3. Feedback [5 point]
+## 3. Feedback [5 points]
 
 1. **[1 point]** Approximately how many hours did you spend on this assignment?
 
