@@ -80,7 +80,7 @@ You will find that in addition to a problem specification, most programming ques
 
 You are strongly encouraged to follow the Python style guidelines set forth in [PEP 8](http://legacy.python.org/dev/peps/pep-0008/), which was written in part by the creator of Python. However, your code will not be graded for style.
 
-Once you have finished the assignment, you should submit all 3 completed skeleton files on [Gradescope]({{page.submission_link}}). 
+Once you have finished the assignment, you should submit both 2 completed skeleton files on [Gradescope]({{page.submission_link}}). 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
 ## 1. Individual Functions for CNN [50 points]
