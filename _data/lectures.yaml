@@ -180,9 +180,17 @@
       length: 14 minutes 
 -
   date: 2019-09-24
+  title: No Class 
+  type: no_lecture
+-
+  date: 2019-09-24
+  title:  HW3 due (Informed Search), HW4 released (Sudoku and Games) 
+  type: exam
+-
+  date: 2019-09-26
   slides: 07-Expectimax-and-Utilities.pdf
   title:  Game Trees&colon; Expectimax and Utilities
-  recording: 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=601142a0-302f-4705-8431-aab501264928
   readings:   
     - 
       title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
@@ -197,30 +205,6 @@
       url: https://www.youtube.com/watch?v=HT-UZkiOLv8
       title: Lee Sedol vs AlphaGo Move 37 reactions and analysis
       length: 4 minutes 
-
--
-  date: 2019-09-24
-  title:  HW3 due (Informed Search), HW4 released (Sudoku and Games) 
-  type: exam
--
-  date: 2019-09-26
-  slides: 
-  title:  Markov Decision Processes
-  recording: 
-  readings:
-    - 
-      title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
-      authors: Russell and Norvig
-      optional: false 
-  videos: 
-    -
-      authors: CrashCourse 
-      url: https://www.youtube.com/watch?v=dqxQ3E1bubI
-      title: Behavioral Economics&colon; Crash Course Economics
-    -
-      authors: Jodi Beggs, Northeaster University 
-      url: https://www.youtube.com/watch?v=q-aUroyt1v8
-      title: Behaviroal Economics - Expected Utility Review
 -
   date: 2019-09-26
   title:  Practice Exam released on Gradescope
@@ -228,7 +212,7 @@
 -
   date: 2019-10-01
   slides: 
-  title:  Markov Decision Processes - part 2
+  title:  Markov Decision Processes
   recording: 
   readings:   
     - 
@@ -240,6 +224,14 @@
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
   videos: 
+    -
+      authors: CrashCourse 
+      url: https://www.youtube.com/watch?v=dqxQ3E1bubI
+      title: Behavioral Economics&colon; Crash Course Economics
+    -
+      authors: Jodi Beggs, Northeaster University 
+      url: https://www.youtube.com/watch?v=q-aUroyt1v8
+      title: Behaviroal Economics - Expected Utility Review
     -
       authors: Machines with Brains 
       url: https://www.youtube.com/watch?v=lFIW8KphZo0
