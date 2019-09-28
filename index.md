@@ -84,7 +84,7 @@ Office hours
 : Thursday 9-10am in GRW 5th Floor Bump Space
 : Thursday 9-11am in in GRW 5th Floor Bump Space
 : Thursday 3-4pm in 3401 Walnut room 463C
-: Sunday 3-5pm in Harrison Mezz
+: Friday, 1:30-3 pm in Moore 100A
 
 Textbook
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
