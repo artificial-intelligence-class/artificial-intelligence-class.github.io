@@ -61,7 +61,7 @@ You are strongly encouraged to follow the Python style guidelines set forth in [
 
 Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}).
 
-You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
+Because this is an extra credit assignment, late submissions will not be accepted (you cannot use late days on this assignment). 
 
 ## Set Up 
 
@@ -215,14 +215,6 @@ in the Python REPL environment to see what methods your robots supports.
 
 ## 2. For Loops in Python
 
-Let's drive in a square by dividing forward, turning 90 degrees and then driving forward again.  We can use a for loop to roll forward and change heading 4 times:
-```python
-heading = 0
-for i in range(4):
-    droid.roll(1, heading, 2)
-    heading = heading + 90
-```
-
 For loops in Python are done differently than for loops in Java or C++.  In a for loop in Java, we initialize a variable, test a truth condition, and then increment (or decrement a variable) like so: 
 ```java
 for(int i=1; i<=10; i++){  
@@ -231,13 +223,18 @@ for(int i=1; i<=10; i++){
 ```
 Whereas in Python, we actually have a variable that gets assigned a value based on each element in a list.  In our Python for statement that caused the robot to drive in a square, we used the `range()` function, which generates a list of numbers.  
 
-
-
 The python expression
 ```python
 for i in range(num):
 ```
 is very common.
+
+
+<div class="alert alert-info" markdown="1">
+1. Write a function ```python drive_square()``` that uses a for loop to drive in a square by rolling forward, turning 90 degrees and then rolling forward again.  Change the heading 4 times to complete the square. Set speed to 1 and duration to 1. 
+
+2. Write a function ```python drive_rectangle()``` that works similarly to ```python drive_square```, but the first and third sides of the rectangle should be twice as long as the second and fourth sides. Set speed to 1. 
+</div>
 
 ### 3. Lists 
 
@@ -270,6 +267,9 @@ for heading in headings:
     droid.roll(0.3, heading, 2)
 ```
 
+1. Write ```python drive_robot(headings)```, which will use a for loop to roll the droid in each direction it is given, in order. Set the speed to 1, and duration to 1. Notice that passing in```python headings=[0,90,180,279] ``` drives the robot in a square. 
+
+2. Give an example of a list of headings that would result in the robot driving in a pentagon. 
 
 ### 4. Tuples and multiple return variables
 
@@ -326,53 +326,32 @@ for speed, heading, duration in roll_commands:
     droid.roll(speed, heading, duration)
 ```
 
+1. Write a function ```python drive_speedy(roll_commands)``` that takes in a list of roll_command tuples, and if the speed is faster than 0.5, doubles the duration.
+ 
 
 ## 5. Python functions
 
 Instead of manually specifying the commands to have the robot drive in a square or a pentgon, let's write a function that will let it drive in the shape of any polygon. 
 
-Let's see how to write a python function.  Here's how we can write a function for driving in a square.
-
-```python
-def trace_square(speed=0.5, duration=2):
-    heading = 0
-    for i in range(4):
-       print("Heading: %i" % heading)
-       droid.roll(speed, heading, duration)
-       heading += 90
-```
-Now let's generalize it to be any regular polygon.  For a polygon with $n$ sides, we'll need to compute what angle to turn to turn instead of 90&deg; in a square.  
+Let's generalize our ```python drive_square() ```function to be for any regular polygon.  For a polygon with $n$ sides, we'll need to compute what angle to turn to turn instead of 90&deg; in a square.  
 
 
 <img src="images/external_angles.png" alt="Internal angle + External angle = 180 degrees" class="img-responsive" />
 
 Here's how to compute the *interior* angle of a polygon: 
     $$ \frac{(n-2) \cdot 180}{n} $$
-The angle that you want to turn the droid is the *exterior* angle.  The exterior angle is 180&deg; minus the interior angle.   Try to implement this function:
-
-
-```python
-def trace_polygon(n, speed=0.5, duration=2):
-    interior_angle = # todo
-    exterior_angle = # todo
-    heading = 0
-    for i in range(n):
-       droid.roll(speed, heading, duration)
-       heading += # todo 
-```
-Did you get it?  If you want to see the solution [check here](homework1-solutions.html#polygon).
+The angle that you want to turn the droid is the *exterior* angle.  The exterior angle is 180&deg; minus the interior angle. Use this angle to implement ```python drive_polygon(n, speed=0.5, duration=2)```:
 
 In Python, you can set default values to arguments that you pass into a function.  In this case, we have set default values for speed and duration.  This means that you can call the function just by specifying the number of sides in the polygon. 
 
 ```python
-trace_polygon(3) # triangle
-trace_polygon(3, speed=1) # faster, and therefore larger triangle
-trace_polygon(3, speed=1, duration=1) 
-trace_polygon(4) # square
-trace_polygon(5) # pentagon
-trace_polygon(8, duration=1) # octogon, making it smaller by setting the duration value to be lower
+drive_polygon(3) # triangle
+drive_polygon(3, speed=1) # faster, and therefore larger triangle
+drive_polygon(3, speed=1, duration=1) #making it smaller by setting the duration value to be lower
+drive_polygon(4) # square
+drive_polygon(5) # pentagon
+drive_polygon(8, duration=1) # octogon
 ```
-
 
 ### 6. Python Dictionaries 
 
@@ -414,16 +393,24 @@ droid.set_front_LED_color(255,0,255)
 droid.set_back_LED_color(255,0,255)
 ```
 
-Why don't you try to write a function that will set the color of the droid's lights to the same value using the color name?
+Use this color dictionary to get started: 
 
 ```python
-def set_lights(color_name, which_light='both'):
-    r,g,b = color_names_to_rgb[color_name]
-    if(which_light=='both'):
-        # TODO
+def init_color_names_to_rgb():
+  color_names_to_rgb = {} 
+  color_names_to_rgb['red'] = (255,0,0)
+  color_names_to_rgb['orange'] = (255,165,0)
+  color_names_to_rgb['yellow'] = (255,255,0)
+  color_names_to_rgb['green'] = (0,128,0)
+  color_names_to_rgb['blue'] = (0,0,255)
+  color_names_to_rgb['indigo'] = (75,0,130)
+  color_names_to_rgb['violet'] = (238,130,238)
+  color_names_to_rgb['purple'] = (128,0,128)
 ```
 
-Now, let's write a function to walk through a list of colors, and set the light to each color in turn for a certain number of seconds.  We'll use Python's time library to sleep between color changes.
+1. Why don't you try to write a function ```python set_lights(color_name, which_light='both')``` that will set the color of either the front, back, or both of the droid's lights to the same value using the color name?
+
+2. Now, let's write a function to walk through a list of colors, and set the front light to each color in turn for a certain number of seconds.  We'll use Python's time library to sleep between color changes.
 
 ```python
 import time
@@ -432,22 +419,14 @@ time.sleep(2) # Example of how to wait for 2 seconds
 
 rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 
-def init_color_names_to_rgb():
-    # TODO create a color names to RGB code dictionary 
-    # Here's a web page with color names to RGB codes
-    # https://www.rapidtables.com/web/color/RGB_Color.html
-
 
 def flash_colors(colors, seconds=1):
-    # TODO call the set_lights method on each color in the colors list
+    # TODO call the set_ligts method on each color in the colors list
     # wait for the specified number of seconds in between
 
 color_names_to_rgb = init_color_names_to_rgb()
 
 ```
-If you want to see the solution [check here](homework1-solutions.html#colors).
-
-
 
 ### 7. Sorting and Lambda Functions
 
@@ -478,12 +457,12 @@ def roll_list(roll_commands):
         droid.roll(speed, heading, duration)
 ```
 
-OK, so we've a list of a bunch of headings.  You can think of these as vectors.  We should be able add these in any order, and the resulting end point will be the same.  Is that right?  I can't remember. Let's just try it out and see.
+OK, so we have a list of a bunch of headings.  You can think of these as vectors.  We should be able add these in any order, and the resulting end point will be the same.  Is that right?  I can't remember. Let's just try it out and see.
 
 
 Let's try sorting the roll_commands in different orders, and see whether the droid ends up at the same location, as when the commands are executed in the initial order.
 
-You can user the `shuffle` command to put the items in a list in random order.
+You can use the `shuffle` command to put the items in a list in random order.
 
 ```python
 from random import shuffle
@@ -521,6 +500,8 @@ Python supports `lambda` functions, which allows us to rewrite the previous snip
 roll_commands.sort(key=lambda e: e[1], reverse=False)
 print(roll_commands)
 ```
+
+1. Write a one-line function ```python sort_lambda(roll_commands)```that uses a lamba function to first sort the roll_commands by duration, and then by speed.
 
 
 ## 8. Driving with the keyboard arrow keys
@@ -584,6 +565,8 @@ Generators behave similar to iterators like lists, so they can be used in Python
 
 Try writing these methods:
 
+Hint: To set holo projector on/off, do ```python droid.set_holo_projector_intensity(1)```, and ```python droid.set_holo_projector_intensity(0)```.
+
 ```python
 def encode_in_morse_code(message): 
     # TODO - Create a generator that walks through each 
@@ -595,10 +578,10 @@ def encode_in_morse_code(message):
     # ...
     # Return a string for the next character.
 
+def blink(lenth):
+  # TODO - make the holo projector blink
 
-def play_message(message, droid, short_length=0.1, long_length=0.3, length_between_blips=0.1, length_between_letters=0.5):
+def play_message(message, short_length=0.1, long_length=0.3, length_between_blips=0.1, length_between_letters=0.5):
     # TODO - blink out the message on the holo projector.
 
 ```
-
-
