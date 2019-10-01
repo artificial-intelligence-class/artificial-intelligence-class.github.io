@@ -173,6 +173,10 @@
       url: https://www.youtube.com/watch?v=KF6sLCeBj0s
       title: Deep Blue vs Kasparov&colon; How a computer beat best chess player in the world
       length: 4 minutes 
+    -
+      url: https://www.youtube.com/watch?v=HT-UZkiOLv8
+      title: Lee Sedol vs AlphaGo Move 37 reactions and analysis
+      length: 4 minutes 
     -  
       authors: Pieter Abbeel 
       url: https://www.youtube.com/watch?v=jvpWtwVSvjA
@@ -200,11 +204,19 @@
       title: AIMA Chapter 16 "Making Simple Decisions" (16.1-16.3)
       authors: Russell and Norvig
       optional: false 
-  videos:
+  videos: 
     -
-      url: https://www.youtube.com/watch?v=HT-UZkiOLv8
-      title: Lee Sedol vs AlphaGo Move 37 reactions and analysis
-      length: 4 minutes 
+      authors: CrashCourse 
+      url: https://www.youtube.com/watch?v=dqxQ3E1bubI
+      title: Behavioral Economics&colon; Crash Course Economics
+    -
+      authors: Jodi Beggs, Northeaster University 
+      url: https://www.youtube.com/watch?v=q-aUroyt1v8
+      title: Behaviroal Economics - Expected Utility Review
+    -
+      authors: Machines with Brains 
+      url: https://www.youtube.com/watch?v=lFIW8KphZo0
+      title: How the "Most Human Human" passed the Turing Test
 -
   date: 2019-09-26
   title:  Practice Exam released on Gradescope
@@ -223,19 +235,6 @@
       title: Chapter 3 - Finite Markov Decision Processes
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
-  videos: 
-    -
-      authors: CrashCourse 
-      url: https://www.youtube.com/watch?v=dqxQ3E1bubI
-      title: Behavioral Economics&colon; Crash Course Economics
-    -
-      authors: Jodi Beggs, Northeaster University 
-      url: https://www.youtube.com/watch?v=q-aUroyt1v8
-      title: Behaviroal Economics - Expected Utility Review
-    -
-      authors: Machines with Brains 
-      url: https://www.youtube.com/watch?v=lFIW8KphZo0
-      title: How the "Most Human Human" passed the Turing Test
 -
   date: 2019-10-01
   title:  Practice Exam is due on Gradescope
