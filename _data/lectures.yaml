@@ -211,7 +211,7 @@
   type: exam
 -
   date: 2019-10-01
-  slides: 
+  slides: 08-MDPs.pdf
   title:  Markov Decision Processes
   recording: 
   readings:   
