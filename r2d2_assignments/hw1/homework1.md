@@ -1,20 +1,31 @@
 ---
 layout: default
-img: python.jpg
-img_link: http://xkcd.com/353/
-caption: Hello world!
-title: CIS 521 Homework 1 "Python Skills"
+img: new_robot_2x.png
+img_link: http://xkcd.com/2128/
+caption: New Robot
+title: CIS 521 Robot Excercise 1 "Using Python to Control R2D2"
 active_tab: homework
-release_date: 2018-08-10
-due_date: 2018-09-11 23:59:00EDT
+release_date: 2019-10-03
+due_date: 2019-10-10 23:59:00EDT
 materials:
     - 
-        name: skeleton file
-        url: homework1.py 
-submission_link: https://www.gradescope.com/courses/21105
+      name: skeleton file
+      url: r2d2_hw1.py 
+submission_link: https://www.gradescope.com/courses/59562
 ---
 
-<!--
+<!-- Check whether the assignment is ready to release -->
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
+
+
+<!-- Check whether the assignment is up to date -->
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
 {% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
 {% if this_year != due_year %} 
@@ -22,7 +33,7 @@ submission_link: https://www.gradescope.com/courses/21105
 Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
 </div>
 {% endif %}
-
+<!-- End of check whether the assignment is up to date -->
 
 <div class="alert alert-info">
 This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
@@ -39,17 +50,12 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-
-<div class="alert alert-info" markdown="span">
-Links to tutorials and other Python resources are posted on the [schedule page](/lectures.html) in the Python Review parts.</div>
--->
-
-Robot Excercise 1: Using Python to Control R2D2 [0 points]
+Robot Excercise 1: Using Python to Control R2D2
 =============================================================
 
 ## Instructions
 
-In this assignment, you'll learn how to write Python code to control your robot.  A skeleton file [homework1.py](homework1.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+In this assignment, you'll learn how to write Python code to control your robot.  A skeleton file [r2d2_hw1.py](r2d2_hw1.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 Unless explicitly stated otherwise, you may not import any of the standard Python modules, meaning your solutions should not include any lines of the form `import x` or `from x import y`. Accordingly, you may find it helpful to refresh yourself on Python's built-in functions and data types.
 
@@ -230,13 +236,13 @@ for i in range(num):
 is very common.
 
 
-<div class="alert alert-info" markdown="1">
-1. Write a function ```python drive_square()``` that uses a for loop to drive in a square by rolling forward, turning 90 degrees and then rolling forward again.  Change the heading 4 times to complete the square. Set speed to 1 and duration to 1. 
+<!-- <div class="alert alert-info" markdown="1"> -->
++ Write a function ```python drive_square()``` that uses a for loop to drive in a square by rolling forward, turning 90 degrees and then rolling forward again.  Change the heading 4 times to complete the square. Set speed to 1 and duration to 1. 
 
-2. Write a function ```python drive_rectangle()``` that works similarly to ```python drive_square```, but the first and third sides of the rectangle should be twice as long as the second and fourth sides. Set speed to 1. 
-</div>
++ Write a function ```python drive_rectangle()``` that works similarly to ```python drive_square```, but the first and third sides of the rectangle should be twice as long as the second and fourth sides. Set speed to 1. 
+<!-- </div> -->
 
-### 3. Lists 
+## 3. Lists 
 
 Python's for loop also allows us to execute a series of roll commands based on a list of headings.  Creating a list in python is easy.  We can initalize a list with a bunch of vables like like this:
 
@@ -271,7 +277,7 @@ for heading in headings:
 
 2. Give an example of a list of headings that would result in the robot driving in a pentagon. 
 
-### 4. Tuples and multiple return variables
+## 4. Tuples and multiple return variables
 
 Our roll command takes three arguments `speed`, `heading`, and `duration`.  We can encode all three of those into a Python type called a tuple.  A tuple is an ordered list of values. In Python a tuple is immutable, meaning the its elements cannot be changed (unlike a list). In Python tuples are written with round brackets, and their elements can be accessed with an index in square brackets (just like accessing an element of a list).
 
@@ -335,11 +341,12 @@ Instead of manually specifying the commands to have the robot drive in a square 
 
 Let's generalize our ```python drive_square() ```function to be for any regular polygon.  For a polygon with $n$ sides, we'll need to compute what angle to turn to turn instead of 90&deg; in a square.  
 
-
-<img src="images/external_angles.png" alt="Internal angle + External angle = 180 degrees" class="img-responsive" />
+<center>
+<img src="images/external_angles.png" alt="Internal angle + External angle = 180 degrees" class="img-responsive" width="50%" height="50%"/>
+</center>
 
 Here's how to compute the *interior* angle of a polygon: 
-    $$ \frac{(n-2) \cdot 180}{n} $$
+    $$ \frac{(n-2) \cdot 180}{n} $$.
 The angle that you want to turn the droid is the *exterior* angle.  The exterior angle is 180&deg; minus the interior angle. Use this angle to implement ```python drive_polygon(n, speed=0.5, duration=2)```:
 
 In Python, you can set default values to arguments that you pass into a function.  In this case, we have set default values for speed and duration.  This means that you can call the function just by specifying the number of sides in the polygon. 
@@ -353,7 +360,7 @@ drive_polygon(5) # pentagon
 drive_polygon(8, duration=1) # octogon
 ```
 
-### 6. Python Dictionaries 
+## 6. Python Dictionaries 
 
 Python dictionaries are hash tables that let us store key-value pairs. Let's use a dictionary to map from color names (Strings) onto their corresponding RGB values.  We'll store the RGB values as (red, green, blue) triples that indiciate the intesity of each of those colors (ranging from 0 to 255).  
 
@@ -428,7 +435,7 @@ color_names_to_rgb = init_color_names_to_rgb()
 
 ```
 
-### 7. Sorting and Lambda Functions
+## 7. Sorting and Lambda Functions
 
 
 Let's create a list of roll commands: 
