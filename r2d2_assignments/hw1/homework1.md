@@ -273,9 +273,9 @@ for heading in headings:
     droid.roll(0.3, heading, 2)
 ```
 
-1. Write ```python drive_robot(headings)```, which will use a for loop to roll the droid in each direction it is given, in order. Set the speed to 1, and duration to 1. Notice that passing in```python headings=[0,90,180,279] ``` drives the robot in a square. 
++ Write ```python drive_robot(headings)```, which will use a for loop to roll the droid in each direction it is given, in order. Set the speed to 1, and duration to 1. Notice that passing in```python headings=[0,90,180,279] ``` drives the robot in a square. 
 
-2. Give an example of a list of headings that would result in the robot driving in a pentagon. 
++ Give an example of a list of headings that would result in the robot driving in a pentagon. 
 
 ## 4. Tuples and multiple return variables
 
@@ -332,7 +332,7 @@ for speed, heading, duration in roll_commands:
     droid.roll(speed, heading, duration)
 ```
 
-1. Write a function ```python drive_speedy(roll_commands)``` that takes in a list of roll_command tuples, and if the speed is faster than 0.5, doubles the duration.
++ Write a function ```python drive_speedy(roll_commands)``` that takes in a list of roll_command tuples, and if the speed is faster than 0.5, doubles the duration.
  
 
 ## 5. Python functions
@@ -415,9 +415,9 @@ def init_color_names_to_rgb():
   color_names_to_rgb['purple'] = (128,0,128)
 ```
 
-1. Why don't you try to write a function ```python set_lights(color_name, which_light='both')``` that will set the color of either the front, back, or both of the droid's lights to the same value using the color name?
++ Why don't you try to write a function ```python set_lights(color_name, which_light='both')``` that will set the color of either the front, back, or both of the droid's lights to the same value using the color name?
 
-2. Now, let's write a function to walk through a list of colors, and set the front light to each color in turn for a certain number of seconds.  We'll use Python's time library to sleep between color changes.
++ Now, let's write a function to walk through a list of colors, and set the front light to each color in turn for a certain number of seconds.  We'll use Python's time library to sleep between color changes.
 
 ```python
 import time
@@ -508,7 +508,7 @@ roll_commands.sort(key=lambda e: e[1], reverse=False)
 print(roll_commands)
 ```
 
-1. Write a one-line function ```python sort_lambda(roll_commands)```that uses a lamba function to first sort the roll_commands by duration, and then by speed.
++ Write a one-line function ```python sort_lambda(roll_commands)```that uses a lamba function to first sort the roll_commands by duration, and then by speed.
 
 
 ## 8. Driving with the keyboard arrow keys
@@ -565,14 +565,13 @@ def drive_with_keyboard(speed_increment=.1, heading_increment=45, duration=0.1):
 
 In Star Wars, R2-D2 delivers a message from Princess Leia to Obi-Wan Kenobi.  Our robots can only play pre-programmed sounds, so we will use the robot's lights to blink out the message "Help me, Obi-Wan Kenobi. You're my only hope." in [Morse Code](https://en.wikipedia.org/wiki/Morse_code).
 
-Here we will use the Python concept of a [generator](https://wiki.python.org/moin/Generators).  
-Generators behave similar to iterators like lists, so they can be used in Python's for loops.  They have the added nice property of creating the next item on-demand, which means that they can often be more efficient than the equivalent operation of generating a list and returning its iterator.   That property is nice in this example, since the message that Leia sent to Obi-Wan is actually quite a bit longer than everyone remembers:
+Here we will use the Python concept of a [generator](https://wiki.python.org/moin/Generators). Generators behave similar to iterators like lists, so they can be used in Python's for loops.  They have the added nice property of creating the next item on-demand, which means that they can often be more efficient than the equivalent operation of generating a list and returning its iterator.   That property is nice in this example, since the message that Leia sent to Obi-Wan is actually quite a bit longer than everyone remembers:
 
-> General Kenobi. Years ago, you served my father in the Clone Wars. Now he begs you to help him in his struggle against the Empire. I regret that I am unable to present my father's request to you in person, but my ship has fallen under attack and I'm afraid my mission to bring you to Alderaan has failed. I have placed information vital to the survival of the Rebellion into the memory systems of this R2 unit. My father will know how to retrieve it. You must see this droid safely delivered to him on Alderaan. This is our most desperate hour. Help me, Obi-Wan Kenobi. You're my only hope.
+<blockquote style="font-size:15px">
+General Kenobi. Years ago, you served my father in the Clone Wars. Now he begs you to help him in his struggle against the Empire. I regret that I am unable to present my father's request to you in person, but my ship has fallen under attack and I'm afraid my mission to bring you to Alderaan has failed. I have placed information vital to the survival of the Rebellion into the memory systems of this R2 unit. My father will know how to retrieve it. You must see this droid safely delivered to him on Alderaan. This is our most desperate hour. Help me, Obi-Wan Kenobi. You're my only hope.
+</blockquote>
 
-Try writing these methods:
-
-Hint: To set holo projector on/off, do ```python droid.set_holo_projector_intensity(1)```, and ```python droid.set_holo_projector_intensity(0)```.
+Try to write the following methods:
 
 ```python
 def encode_in_morse_code(message): 
@@ -592,3 +591,4 @@ def play_message(message, short_length=0.1, long_length=0.3, length_between_blip
     # TODO - blink out the message on the holo projector.
 
 ```
+Hint: To set holo projector on/off, do ```python droid.set_holo_projector_intensity(1)```, and ```python droid.set_holo_projector_intensity(0)```.
