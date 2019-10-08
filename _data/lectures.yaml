@@ -249,8 +249,8 @@
   type: no_lecture
 -
   date: 2019-10-8
-  slides: 
-  title:  Reinforcement Learning
+  slides: 09-MDPs-wrapup-and-reinforcement-learning.pdf
+  title: MDPs Wrapup and Reinforcement Learning
   recording: 
   readings:   
     - 
