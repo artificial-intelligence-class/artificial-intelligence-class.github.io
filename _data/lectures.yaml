@@ -265,6 +265,10 @@
     -
       url: https://www.youtube.com/watch?v=s93KC4AGKnY
       title: End of the 1983 movie Wargames
+    -
+      url: https://www.youtube.com/watch?v=WVIIigrPUJs
+      title: Textworld
+      authors: Microsoft Research Montreal 
 -
   date: 2019-10-08
   title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
@@ -299,7 +303,7 @@
 -
   date: 2019-10-17
   slides: 
-  title:  No class today.  CCB is traveling for the HLTCOE.  Please review the Probability slides, and read AIMA chapter 13.1-13.5. 
+  title:  No class today.  CCB is traveling for the HLTCOE.  Please read AIMA chapter 13.1-13.5. 
   type: no_lecture
   recording: 
   readings:   
