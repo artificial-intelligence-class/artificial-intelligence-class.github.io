@@ -10,7 +10,7 @@ active_tab: main_page
 <div class="alert alert-danger" markdown="1">
 The Fall 2019 class is full.  There are currently 150 students enrolled in the class, and another 170 students on the waitlist. [You can sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) if you'd like to try to get a spot, but it unlikely that you will get in unless you are in Category 1+ or Category 1. 
 </div>
-
+ 
 -->
 
 
