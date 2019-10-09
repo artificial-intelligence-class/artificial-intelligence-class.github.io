@@ -76,7 +76,7 @@ class R2D2(object):
         # 1 point
         pass
 
-    def set_colors(self, which_light='both'):
+    def set_lights(self, color_name, which_light='both'):
         # 0 point
         pass
 
