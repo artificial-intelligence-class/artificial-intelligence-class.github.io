@@ -6,7 +6,7 @@ caption: I was just updating my q&ndash;state values.
 title: CIS 521 Homework 6 "Reinforcement Learning"
 active_tab: homework
 release_date: 2019-10-22
-due_date: 2019-10-29 23:59:00EDT
+due_date: 2019-11-05 23:59:00EDT
 materials:
     - 
         name: skeleton files
