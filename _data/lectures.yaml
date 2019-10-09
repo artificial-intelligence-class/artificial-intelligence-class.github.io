@@ -360,11 +360,7 @@
     - 
       title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
       authors: Russell and Norvig
-      optional: false 
--
-  date: 2019-10-29
-  title:  HW6 due (Reinforcement Learning), study for exam
-  type: exam
+      optional: false
 -
   date: 2019-10-31
   title:  Midterm exam 2 (in class)
@@ -389,7 +385,7 @@
   recording:
 -
   date: 2019-11-05
-  title:  HW7 released (Generate a novel)
+  title: HW6 due (Reinforcement Learning), HW7 released (Generate a novel)
   type: exam
 -
   date: 2019-11-07
