@@ -3,19 +3,29 @@ layout: default
 img: new_pet.png
 img_link: https://xkcd.com/413/
 caption: import soul
-title: CIS 521 Homework 2 "Robot Navigation with A\*"
+title: CIS 521 Homework 2 "Robot Navigation"
 active_tab: homework
-release_date: 2018-08-10
-due_date: 2018-09-11 23:59:00EDT
+release_date: 2019-10-10
+due_date: 2019-10-24 23:59:00EDT
 materials:
     - 
         name: skeleton file
         url: homework2.py 
-submission_link: https://www.gradescope.com/courses/52017
+submission_link: https://www.gradescope.com/courses/59562
 ---
 
+<!-- Check whether the assignment is ready to release -->
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
+
+
 <!-- Check whether the assignment is up to date -->
-<!--
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
 {% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
 {% if this_year != due_year %} 
@@ -23,7 +33,7 @@ submission_link: https://www.gradescope.com/courses/52017
 Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
 </div>
 {% endif %}
-
+<!-- End of check whether the assignment is up to date -->
 
 <div class="alert alert-info">
 This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
@@ -40,34 +50,22 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-
-<div class="alert alert-info" markdown="span">
-Links to tutorials and other Python resources are posted on the [schedule page](/lectures.html) in the Python Review parts.</div>
-
-
--->
-
-Robot Excercise 2: Robot Navigation with A\* [0 points]
+Robot Excercise 2: Robot Navigation
 =============================================================
-
 ## Preface
-
-During a reconnaissance mission gone wrong, R2D2 was attacked by Stormtroopers, leaving his executive control unit disconnected from his motor control unit. Luckily, R2D2's motor control unit can still access his 9G-capable network card. He just needs you to SSH into his motor control unit and guide him to the rendezvous with C3PO and Luke, but time is of the essence, so you must use A\* search to get him there as fast as possible. He just needs you to program and run the A\* search algorithm and integrate motor controls via his motor control unit API.
+During a reconnaissance mission gone wrong, R2D2 was attacked by Stormtroopers, leaving his executive control unit disconnected from his motor control unit. Luckily, R2D2’s motor control unit can still access his 9G-capable network card. He just needs you to SSH into his motor control unit and guide him to the rendezvous with C3PO and Luke, but time is of the essence, so you must use A* search to get him there as fast as possible. He just needs you to program and run the A* search algorithm and integrate motor controls via his motor control unit API.
 
 ## Instructions
+In this assignment, you’ll learn the differences between “uninformed” search algorithms like BFS and DFS, and “informed” search algorithms like A*. You will use both types of algorithms to solve multi-dimensional mazes and see how their performance compares (and save R2D2!).
 
-In this assignment, you'll learn the differences between "uninformed" search algorithms like BFS and DFS, and "informed" search algorithms like A\*. You will use both types of algorithms to solve multi-dimensional mazes and see how their performance compares (and save R2D2!).
-
-
-## Part 1: Implement a Graph
-
+## Part 1: Implement a Graph [15 points]
 In order to solve a maze, we first need to create a representation of a maze to run our algorithms on. We will implement our maze as a graph, where each vertex represents a grid cell, and an edge between vertices represents the ability to traverse between those grid cells.
 
-There are many different ways we can implement a graph, and these design decisions will impact the running time of our algorithms. For this assignment, we will implement an *undirected*, *unweighted* graph with its edges stored as an *adjacency list*. 
+There are many different ways we can implement a graph, and these design decisions will impact the running time of our algorithms. For this assignment, we will implement an undirected, unweighted graph with its edges stored as an adjacency list.
 
-Implement a graph with the following interface:
+Implement a graph with the following interface: 
 
-```
+```python
 class Graph:
 
     def __init__(self, V, E):
@@ -79,198 +77,221 @@ class Graph:
     def dist_between(self, u, v):
         # TODO: implement
 ```
+1. **[5 points]** ```Graph(V, E)``` should take in a list of vertices ```V = [v_1, v_2, ...]``` and a list of edges ```E = [(v_1, v_2), (v_3, v_4), ...]```. You should convert the list of edges into an adjacency list representation.
 
-`Graph(V, E)` should take in a list of vertices `V = [v_1, v_2, ...]` and a list of edges `E = [(v_1, v_2), (v_3, v_4), ...]`. You should convert the list of edges into an adjacency list representation.
+2. **[8 points]**```neighbors(u)``` should take in a vertex ```u``` and return the list of vertices reachable from u (you don’t need to include ```u``` in that list). Try to avoid recomputing neighborhoods every time the function is called since for large graphs this can waste a lot of time.
 
-`neighbors(u)` should take in a vertex `u` and return the set of vertices reachable from `u` (you don't need to include `u` in that set). Try to avoid recomputing neighborhoods every time the function is called since for large graphs this can waste a lot of time.
-
-`dist_between(u, v)` should take in two vertices `u` and `v` and return 1 if there is an edge between `u` and `v`, otherwise it should return `None`.
-
+3. **[2 points]**```dist_between(u, v)``` should take in two vertices ```u``` and ```v``` and return 1 if there is an edge between ```u``` and ```v```, otherwise it should return None.
 
 For example, for this 2x2 graph,
 
-```
-╭───╮   ╭───╮
-│1,0╞═══╡1,1│
-╰─╥─╯   ╰─╥─╯
-  ║       ║
-╭─╨─╮   ╭─╨─╮
-│0,0│   │1,0│
-╰───╯   ╰───╯
-```
-
-you could expect the following outputs:
-
-```
+```python
 >>> V = [(0, 0), (0, 1), (1, 0), (1, 1)]
 >>> E = [((0,0), (0,1)), ((0,1), (1,1)), ((1,1), (1,0))]
 >>> G = Graph(V, E)
-
 >>> G.neighbors((0,0))
-set([(1,0)])
-
->>> G.neighbors((0,1))
-set([(0,0), (1,1)])
-
+[(0, 1)]
 >>> G.dist_between((0,0), (0,1))
-1
-
+1.0
 >>> G.dist_between((0,0), (1,0))
 None
 ```
+You could use the provided ```generate_map``` and ```printmap``` functions to test your graphs. The ```generate_map(row, cols, barriers)``` takes in the number of the rows and columns of your desired map and ```barriers``` is a list of edges you want to remove from the fully connected map (with no barrier). Note that in this function, each edge in the barriers, along with its interpositional edge will all be removed. ```printmap(G)``` is a visualization function that display the grid world. An example is shown below:
 
-You might find the following cartesian product function useful when testing your graphs:
+```python
+>>> vertics, edges = generate_map(3, 3, [])
+>>> G = Graph(vertics, edges)
+>>> printmap(G)
+☐   ☐   ☐   
+            
+☐   ☐   ☐   
+            
+☐   ☐   ☐  
 
+>>> vertics, edges = generate_map(3, 3, [((0, 0), (0, 1)), ((1, 1), (1, 2)), ((1, 1), (0, 1))])
+>>> G = Graph(vertics, edges)
+>>> printmap(G)
+☐ | ☐   ☐   
+   ===     
+☐   ☐ | ☐   
+           
+☐   ☐   ☐  
 ```
->>> from itertools import product
->>> list(product(range(3), range(3)))
-[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
-```
+## Step 2: Implement BFS and DFS [40 points]
+BFS and DFS, two algorithms that you will revisit again and again in this course, are two of the most primitive graph algorithms. 
+Using pseudocode from [here](https://en.wikipedia.org/wiki/Breadth-first_search#Pseudocode) and [here](https://en.wikipedia.org/wiki/Depth-first_search#Pseudocode) and the lecture slides, implement both of them from the skeleton code below:
 
-## Step 2: Implement BFS and DFS
-
-BFS and DFS, two algorithms that you will revisit again and again in this course, are two of the most primitive graph algorithms. Using pseudocode from [here](https://en.wikipedia.org/wiki/Breadth-first_search#Pseudocode
-) and [here](https://en.wikipedia.org/wiki/Depth-first_search#Pseudocode) and the lecture slides, implement both of them from the skeleton code below:
-
-```
-from queue import Queue
-from collections import defaultdict
-
+```python
 def BFS(G, start, goal):
-    frontier = Queue()
-    discovered = defaultdict(lambda:False)
-    parent = {}
+    '''
+        path -- a list of tuples
+        node-visited -- a list of tuples
+    '''
+    return path, node_visited
 
-    # TODO: implement
-    
-    return reconstruct_path(start, goal, parent)
+def DFS(G, start, goal):
+    '''
+        path -- a list of tuples
+        node-visited -- a list of tuples
+    '''
+    return path, node_visited
+```
 
+Here are outputs of the test cases:
 
-def DFS_recursive(G, start, goal):
-    discovered = defaultdict(lambda:False)
-    parent = {}
-    
-    # TODO: implement
+```python
+>>> vertics, edges = generate_map(3, 3, [])
+>>> G = Graph(vertics, edges)
+>>> solution_BFS = BFS(G, (0, 0), (2, 2))[0]
+[(0, 0), (1, 0), (2, 0), (2, 1), (2, 2)]
 
-    return reconstruct_path(start, goal, parent)
+>>> solution_DFS = DFS(G, (0, 0), (2, 2))[0]
+[(0, 0), (1, 0), (2, 0), (2, 1), (1, 1), (0, 1), (0, 2), (1, 2), (2, 2)]
+``` 
 
+You could use the provided ```printpath(G, start, goal, path)``` function to visualize your solution. The ``` ☑``` represents the start node and path nodes and ``` ☒``` represents the goal node.
 
-def DFS_iterative(G, start, goal):
-    discovered = defaultdict(lambda:False)
-    parent = {}
-    stack = []
+```python
+>>> printpath(G, (0,0), (2,2), solution_BFS)
+☑   ☐   ☐   
+           
+☑   ☐   ☐   
+           
+☑   ☑   ☒ 
 
-    # TODO: implement
-
-    return reconstruct_path(start, goal, parent)
-
-
-def reconstruct_path(start, goal, parent):
-    
-    # TODO: implement
+>>>  printpath(G, (0,0), (2,2), solution_DFS)
+☑   ☑   ☑   
+           
+☑   ☑   ☑   
+           
+☑   ☑   ☒  
 
 ```
 
-Since we know the goal vertex, the algorithms can stop once they have found a solution, however, note that this is not always the case when we are running these algorithms.
+## Step 3: Implement A* Search [35 points]
+1. **[25 points]** Using the pseudocode [here](https://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode) and the lecture slides, implement A* search by finish the following function:
 
-## Step 3: Implement A\* Search
-
-Using the pseudocode [here](https://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode) and the lecture slides, implement A\* search by filling in the TODOs:
-
-
-```
-from queue import PriorityQueue
-from collections import defaultdict
-from math import sqrt
-inf = float('inf')
-
-def A_star(G, start, goal, heuristic):
-
-    closedSet = set()
-    openSet = set([start])
-    frontier = PriorityQueue()
-    parent = {}
-
-    gScore = defaultdict(lambda:inf)  # gScore[v] = cost(start, v)
-    fScore = defaultdict(lambda:inf)  # fScore[v] = cost(start, v) + heuristic_cost(v, goal)
-
-    # TODO: implement
-
-    return reconstruct_path(start, goal, parent)
-
-
-def reconstruct_path(start, goal, parent):
-    
-    # TODO: implement
-
-
-def null_heuristic(u, v):
-    # TODO: implement
-
-def manhattan_distance_heuristic(u, v):
-    # TODO: implement
-
-def euclidean_distance_heuristic(u, v):
-    # TODO: implement
-
+```python
+def A_star(G, start, goal):
+    '''
+        find solution using A* search
+    '''
+    return path, node_visited
 ```
 
-Keep in mind that we would like the algorithm and heuristics to work for mazes of arbitrary dimensions.
+Several test cases:
 
+```python
+>>> vertics, edges = generate_map(3, 3, [])
+>>> G = Graph(vertics, edges)
+>>> solution_A_star = A_star(G, (0, 0), (2, 2))[0]
+[(0, 0), (0, 1), (0, 2), (1, 2), (2, 2)]
+>>> printpath(G, (0,0), (2,2), solution_A_star)
+☑   ☑   ☑   
+           
+☐   ☐   ☑   
+           
+☐   ☐   ☒  
 
-## Step 4: Integrate R2D2's Motor Control API
+>>> vertics, edges = generate_map(4, 4, [((1, 2), (1, 3)), ((2, 2), (2, 3)), ((2, 2), (3, 2)), ((2, 1), (3, 1))])
+>>> G = Graph(vertics, edges)
+>>> printmap(G)
+☐   ☐   ☐   ☐   
+               
+☐   ☐   ☐ | ☐   
+               
+☐   ☐   ☐ | ☐   
+   === ===     
+☐   ☐   ☐   ☐   
 
-R2D2 Motor Control Interface:
+>>> solution_A_star = A_star(G, (1, 1), (3, 3))
+[(1, 1), (0, 1), (0, 2), (0, 3), (1, 3), (2, 3), (3, 3)][0]
+
+>>> printpath(G, (1, 1), (3, 3), solution_A_star)
+☐   ☑   ☑   ☑   
+               
+☐   ☑   ☐ | ☑   
+               
+☐   ☐   ☐ | ☑   
+   === ===     
+☐   ☐   ☐   ☒  
 ```
-rotate(heading)
-roll(heading, distance)
+2. **[10 points]** Try to apply [Traveling Sales Person (TSP)] (https://en.wikipedia.org/wiki/Travelling_salesman_problem) algorithm to solve a search problem with multiple goals. ```tsp(G, start, goals) ``` function shown below calls the A star you implemented above and return the shortest path which visites all the goal nodes. You could use ```itertools``` to generate all the combinations of two target nodes and use A star to calculate the cost of each combination, then find the optimal order that has the shortest total cost.
+
+```python
+def tsp(G, start, goals):
+    '''
+        return the optimal order of nodes and shortest path that passes all the goals
+        output format: (order, path)
+    '''
+    return optimal_order, path
+```
+An example is shown as follows:
+
+```python
+>>> vertics, edges = generate_map(4, 4, [((1, 2), (1, 3)), ((2, 2), (2, 3)), ((2, 2), (3, 2)), ((2, 1), (3, 1))])
+>>> G = Graph(vertics, edges)
+>>> printmap(G)
+☐   ☐   ☐   ☐   
+               
+☐   ☐   ☐ | ☐   
+               
+☐   ☐   ☐ | ☐   
+   === ===     
+☐   ☐   ☐   ☐  
+
+>>> optimal_order, shortest_path = tsp(G, (0, 0), [(2, 2), (3, 3), (3, 0)])
+>>> optimal_order
+((0, 0), (2, 2), (3, 0), (3, 3))
+>>> shortest_path
+[(0, 0), (0, 1), (0, 2), (1, 2), (2, 2), (2, 2), (2, 1), (2, 0), (3, 0), (3, 0), (3, 1), (3, 2), (3, 3)]
+
+>>> printtsp(G, (0, 0), [(2, 2), (3, 3), (3, 0)], shortest_path)
+
+☑   ☑   ☑   ☐   
+               
+☐   ☐   ☑ | ☐   
+               
+☑   ☑   ☒ | ☐   
+   === ===     
+☒   ☑   ☑   ☒ 
+```
+**[Launch the GUI to visualize you results]**
+
+If you finish all the steps above, you are able to use the provided GUI to display your solutions. You could choose different methods(dfs, bfs, A*) in the GUI and compare the results of them. The nodes that visited in your algorithm will be colored and you could find the difference between these method through it.
+
+**[Instructions on using the GUI]** 
+
+Please type```python r2d2_navigation_gui.py rows cols``` in the terminal and it will generate a random graph which has the size of rows * cols that you just insert. Left click to set the start position and right click to set the goal position, choose your method in the pull-down menu on the right side and click find path to display your solution. If you choose 'tsp' as your method, you coule do multiple right clicks to set more than one goals and then click find path, it will show the number of order on each goal.
+![](gui_sample.png)
+## Step 4: Let your Robots rolling in a real game [10 points]
+
+In this step, you will convert your navigation solution to the commands for your R2D2 to play in a game.
+
+1. **[5 points]** ```path2move(path)``` take in your finded path and return a dictionary which uses directions('north', 'west', 'south', 'east') as keys and move distance as values. The output shoule look like this:
+
+```
+>>> vertics, edges = generate_map(3, 3, [])
+>>> G = Graph(vertics, edges)
+>>> solution_A_star = A_star(G, (0, 0), (2, 2))[0]
+[(0, 0), (0, 1), (0, 2), (1, 2), (2, 2)]
+>>> path2move(solution_A_star)
+[('east', 2), ('south', 2)]
+
+>>> vertics, edges = generate_map(4, 4, [((1, 2), (1, 3)), ((2, 2), (2, 3)), ((2, 2), (3, 2)), ((2, 1), (3, 1))])
+>>> G = Graph(vertics, edges)
+>>> solution_A_star = A_star(G, (1, 1), (3, 3))[0]
+>>> path2move(solution_A_star)
+>>> [('north', 1), ('east', 2), ('south', 3)]
+
 ```
 
-`rotate(heading)` rotates R2D2 `heading` degrees clockwise. For example, calling `rotate(90)` will turn R2D2 90° to the right, and calling `rotate(90)` again will turn R2D2 another 90° to the right (for a total of 180° relative to his original orientation). There is no functional difference between `rotate(-90)` and `rotate(270)`.
+2. **[5 points]**```r2d2_action(movement, droid, speed, time_for_moving_one_step)``` transfers the movement generated above to the commands for robot. This fuction also takes in the droid object as input, the speed and time will be used in ```droid.roll(speed, direction, time)``` function. The speed and time may varies according to the size of real world map. The direction range from 0 - 360 and it is decided by the key in the ```movement``` and the initial direction of the robot.
 
-`roll(heading, distance)` rotates R2D2 `heading` degrees clockwise and then moves him forward `distance` units.
-
-For example, the command sequence
+```python
+def r2d2_action(movement, droid, speed, time)
+    '''
+        convert movemnts to the commands for R2D2
+    '''
+    pass
 ```
-roll(90, 1)
-roll(180, 2)
-roll(180, 1)
-rotate(-90)
-```
-would result in R2D2 finishing in the same location with the same orientation that he started in.
-
-
-
-```
-def guide_r2d2(r2d2, path):
-    # TODO: implement
-```
-
-Given a `path` and an `r2d2` object that implements the above interface, write a function that makes R2D2 follow the path. You can assume that a starting position of (0,0) represents the origin, the unit vector (1,0) represents movement along the +x-axis, and the unit vector (0,1) represents movement along the +y-axis. You can assume for this function that the path you are following is 2-dimensional.
-
-
-## Step 5: Critical Thinking Questions
-
-1.
-    1. When might we use an informed search algorithm such as A\* rather than a shortest path algorithm (Bellman-Ford, Dijkstra)?
-    2. Of the following algorithms, which are guaranteed to give a shortest path solution? Explain why or why not. (A counterexample is an acceptable argument.)
-        1. BFS
-        2. DFS
-        3. A\*
-
-2. In the context of A\* search:
-    1. What is an admissable heuristic? Cite your source.
-    2. What is the purpose of heuristics?
-
-3. Run `python time_maze_solutions.py LENGTH WIDTH` with different maze sizes (e.g., 60x60, 150x150, 300x300) and look at the different statistics for each algorithm. You can see sample mazes by running `python generate_random_maze.py LENGTH HEIGHT`.
-    1. Copy-paste the results you get for 100x100 mazes.
-    2. Looking at your results:
-        1. Which algorithm performed the best?
-        2. Was it what you expected?
-        3. Why do you think this algorithm performed the best?
-        4. What changes in relative performance might you expect to see as the complexity of the problem (i.e., complexity and size of the problem and solution space) increases and why?
-    3. Which A\* heuristic performed the best? Was it what you expected?
-        1. How might the structures of the mazes affect the performance of the heuristics?
-        2. What kind of maze structure would you expect the Manhattan distance heuristic to perform the worst on?
-        3. What kind of maze structure would you expect the Manhattan distance heuristic to perform the best on?
-
