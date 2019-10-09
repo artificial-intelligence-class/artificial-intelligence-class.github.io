@@ -10,8 +10,8 @@ import tkinter.ttk
 import os
 from PIL import Image, ImageTk
 
-import EC2 as X
-from EC2 import generate_map, generate_random
+import r2d2_hw2 as X
+from r2d2_hw2 import generate_map, generate_random
 
 
 class Grid(tkinter.Canvas):
