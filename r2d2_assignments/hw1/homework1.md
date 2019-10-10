@@ -551,7 +551,7 @@ Next, you can write a function to continuously read in the keyboard input and us
 def drive_with_keyboard(speed_increment=.1, heading_increment=45, duration=0.1):
     speed = 0
     heading = 0
-    max_speed = 255
+    max_speed = 1.0
     while True:
         key = getkey()
         if key == 'esc':
