@@ -3,7 +3,7 @@ layout: default
 img: new_pet.png
 img_link: https://xkcd.com/413/
 caption: import soul
-title: CIS 521 Homework 2 "Robot Navigation"
+title: CIS 521 Robot Excercise 2 "Robot Navigation"
 active_tab: homework
 release_date: 2019-10-10
 due_date: 2019-10-24 23:59:00EDT
