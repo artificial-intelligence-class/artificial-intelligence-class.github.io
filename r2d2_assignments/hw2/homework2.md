@@ -38,6 +38,7 @@ Warning: this assignment is out of date.  It may still need to be updated for th
 {% endif %}
 <!-- End of check whether the assignment is up to date -->
 
+
 <div class="alert alert-info">
 This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
 </div>
