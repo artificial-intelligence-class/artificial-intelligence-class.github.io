@@ -3,7 +3,7 @@ layout: default
 img: new_robot_2x.png
 img_link: http://xkcd.com/2128/
 caption: New Robot
-title: CIS 521 Robot Excercise 1 "Using Python to Control R2D2"
+title: CIS 521 Robot Excercise 1 "Using Python to Control R2D2" (Extra Credit)
 active_tab: homework
 release_date: 2019-10-03
 due_date: 2019-10-10 23:59:00EDT
