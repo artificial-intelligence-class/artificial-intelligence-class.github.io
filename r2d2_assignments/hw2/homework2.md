@@ -275,7 +275,7 @@ If you finish all the steps above, you are able to use the provided GUI to displ
 
     python3 r2d2_navigation_gui.py rows cols
 
-Type in the above command in terminal and it will generate a random graph which has the size of rows $$\times$$ cols that you just insert. Left click to set the start position and right click to set the goal position, choose your method in the pull-down menu on the right side and click find path to display your solution. If you choose 'tsp' as your method, you coule do multiple right clicks to set more than one goals and then click find path, it will show the number of order on each goal. Some examples of GUI is shown below.
+Type in the above command in terminal and it will generate a random graph which has the size of rows $$\times$$ cols that you just insert. Left click to set the start position and right click to set the goal position, choose your method in the pull-down menu on the right side and click find path to display your solution. If you choose 'tsp' as your method, you coule do multiple right clicks to set more than one goals and then click find path, it will show the number of order on each goal. Some examples of GUI are shown below.
 <!-- ![](gui_sample.png) -->
 <center>
 <img src="gui_sample.png" class="img-responsive"/>
