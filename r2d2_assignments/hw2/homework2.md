@@ -230,7 +230,7 @@ You could use the provided ```printpath(G, start, goal, path)``` function to vis
     ☐   ☐   ☐   ☒  
     ```
 
-2. **[10 points]** Try to apply [Traveling Sales Person (TSP)] (https://en.wikipedia.org/wiki/Travelling_salesman_problem) algorithm to solve a search problem with multiple goals. ```tsp(G, start, goals) ``` function shown below calls the A star you implemented above and return the shortest path which visites all the goal nodes. You could use ```itertools``` to generate all the combinations of two target nodes and use A star to calculate the cost of each combination, then find the optimal order that has the shortest total cost.
+2. **[10 points]** Try to apply [Traveling Sales Person (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem) algorithm to solve a search problem with multiple goals. ```tsp(G, start, goals) ``` function shown below calls the A star you implemented above and return the shortest path which visites all the goal nodes. You could use ```itertools``` to generate all the combinations of two target nodes and use A star to calculate the cost of each combination, then find the optimal order that has the shortest total cost.
 
     ```python
     def tsp(G, start, goals):
@@ -283,7 +283,7 @@ Type in the above command in terminal and it will generate a random graph which 
 
 ## 4. Let your Robots rolling in a real game [10 points]
 
-In this step, you will convert your navigation solution to the commands for your R2D2 to play in a game.
+In this step, you will convert your navigation solution to the commands for your R2D2 to play in a game. Click [here](https://www.youtube.com/watch?v=8x4vBZTtzl0&feature=youtu.be) to watch a demo of how R2D2 rolling in the real maze.
 
 1. **[5 points]** ```path2move(path)``` take in your finded path and return a list of tuples which uses directions('north', 'west', 'south', 'east') as the first element and the distance to move as the second element. The output should look like this:
 
