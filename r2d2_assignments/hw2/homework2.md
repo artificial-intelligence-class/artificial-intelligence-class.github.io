@@ -285,7 +285,7 @@ Type in the above command in terminal and it will generate a random graph which 
 
 In this step, you will convert your navigation solution to the commands for your R2D2 to play in a game.
 
-1. **[5 points]** ```path2move(path)``` take in your finded path and return a dictionary which uses directions('north', 'west', 'south', 'east') as keys and move distance as values. The output shoule look like this:
+1. **[5 points]** ```path2move(path)``` take in your finded path and return a list of tuples which uses directions('north', 'west', 'south', 'east') as the first element and the distance to move as the second element. The output should look like this:
 
     ```python
     >>> vertics, edges = generate_map(3, 3, [])
