@@ -41,8 +41,6 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 
 
 
-
-
 <div class="alert alert-success" markdown="1">
 [When you borrow one of the programmable toy R2D2s for the semester, please fill out this Robot Checkout Form.](https://docs.google.com/forms/d/e/1FAIpQLSeVrCvG_2zcb2bPdn0bor61EOTzzqesI748l1pG4u9TqJ_GgQ/viewform?usp=sf_link)
 </div>
