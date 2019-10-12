@@ -92,7 +92,7 @@ class Graph:
 ```
 1. **[5 points]** ```Graph(V, E)``` should take in a list of vertices ```V = [v_1, v_2, ...]``` and a list of edges ```E = [(v_1, v_2), (v_3, v_4), ...]```. You should convert the list of edges into an adjacency list representation.
 
-2. **[8 points]**```neighbors(u)``` should take in a vertex ```u``` and return the list of vertices reachable from u (you don’t need to include ```u``` in that list). Try to avoid recomputing neighborhoods every time the function is called since for large graphs this can waste a lot of time.
+2. **[8 points]**```neighbors(u)``` should take in a vertex ```u``` and return the list of vertices reachable from u (you don’t need to include ```u``` in that list and the order of the neighbors does not matter). Try to avoid recomputing neighborhoods every time the function is called since for large graphs this can waste a lot of time.
 
 3. **[2 points]**```dist_between(u, v)``` should take in two vertices ```u``` and ```v``` and return 1 if there is an edge between ```u``` and ```v```, otherwise it should return None.
 
@@ -150,7 +150,7 @@ def DFS(G, start, goal):
     return path, node_visited
 ```
 
-Here are outputs of the test cases:
+Outputs of the test cases are shown below, note that your results may be different because of the different order of neighbors to explore. Feel free to use your own implementations, we will not grade on the lenght of your dfs path:
 
 ```python
 >>> vertics, edges = generate_map(3, 3, [])
