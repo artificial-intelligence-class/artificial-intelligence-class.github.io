@@ -1,8 +1,8 @@
 ---
 layout: default
-img: turing_test.png
-img_link: http://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning
-caption: Machine Learning
+img: trained_a_neural_net.png
+img_link: https://xkcd.com/2173/
+caption: Technically you trained a neural net
 title: CIS 521 Homework 5 "Neural Networks"
 active_tab: homework
 release_date: 2019-11-26
