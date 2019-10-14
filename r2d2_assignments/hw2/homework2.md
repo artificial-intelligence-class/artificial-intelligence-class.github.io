@@ -90,7 +90,7 @@ class Graph:
     def dist_between(self, u, v):
         # TODO: implement
 ```
-1. **[5 points]** ```Graph(V, E)``` should take in a list of vertices ```V = [v_1, v_2, ...]``` and a list of edges ```E = [(v_1, v_2), (v_3, v_4), ...]```. You should convert the list of edges into an adjacency list representation.
+1. **[2 points]** ```Graph(V, E)``` should take in a list of vertices ```V = [v_1, v_2, ...]``` and a list of edges ```E = [(v_1, v_2), (v_3, v_4), ...]```. You should convert the list of edges into an adjacency list representation.
 
 2. **[8 points]**```neighbors(u)``` should take in a vertex ```u``` and return the list of vertices reachable from u (you don’t need to include ```u``` in that list and the order of the neighbors does not matter). Try to avoid recomputing neighborhoods every time the function is called since for large graphs this can waste a lot of time.
 
@@ -285,7 +285,7 @@ Type in the above command in terminal and it will generate a random graph which 
 
 In this step, you will convert your navigation solution to the commands for your R2D2 to play in a game. Click [here](https://www.youtube.com/watch?v=8x4vBZTtzl0&feature=youtu.be) to watch a demo of how R2D2 rolling in the real maze.
 
-1. **[5 points]** ```path2move(path)``` take in your finded path and return a list of tuples which uses directions('north', 'west', 'south', 'east') as the first element and the distance to move as the second element. The output should look like this:
+1. **[8 points]** ```path2move(path)``` take in your finded path and return a list of tuples which uses directions('north', 'west', 'south', 'east') as the first element and the distance to move as the second element. The output should look like this:
 
     ```python
     >>> vertics, edges = generate_map(3, 3, [])
