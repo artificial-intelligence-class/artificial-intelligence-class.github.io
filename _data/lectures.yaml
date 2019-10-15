@@ -248,7 +248,7 @@
   title: Drop Period Ends
   type: no_lecture
 -
-  date: 2019-10-8
+  date: 2019-10-08
   slides: 09-MDPs-wrapup-and-reinforcement-learning.pdf
   title: MDPs Wrapup and Reinforcement Learning
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d38a701-365b-4f71-9802-aab501264a1c
@@ -283,7 +283,7 @@
   type: no_lecture
 -
   date: 2019-10-15
-  slides: 
+  slides: 10-Reinforcement-Learning-2.pdf
   title:  Reinforcement Learning - part 2
   recording: 
   readings:   
@@ -296,6 +296,10 @@
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
   videos:
+    -
+      authors: OpenAI 
+      url: https://www.youtube.com/watch?v=kopoLzvh5jY
+      title: Multi-Agent Hide and Seek q
     -
       authors: Stanford University 
       url: https://www.youtube.com/watch?v=M-QUkgk3HyE
