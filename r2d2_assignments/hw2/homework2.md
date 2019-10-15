@@ -182,7 +182,7 @@ You could use the provided ```printpath(G, start, goal, path)``` function to vis
 ```
 
 ## 3. Implement A\* Search [35 points]
-1. **[25 points]** Using the pseudocode [here](https://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode) and the lecture slides, implement A\* search by finish the following function:
+1. **[20 points]** Using the pseudocode [here](https://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode) and the lecture slides, implement A\* search by finish the following function:
 
     ```python
     def A_star(G, start, goal):
@@ -230,7 +230,7 @@ You could use the provided ```printpath(G, start, goal, path)``` function to vis
     ☐   ☐   ☐   ☒  
     ```
 
-2. **[10 points]** Try to apply [Traveling Sales Person (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem) algorithm to solve a search problem with multiple goals. ```tsp(G, start, goals) ``` function shown below calls the A star you implemented above and return the shortest path which visites all the goal nodes. You could use ```itertools``` to generate all the combinations of two target nodes and use A star to calculate the cost of each combination, then find the optimal order that has the shortest total cost.
+2. **[20 points]** Try to apply [Traveling Sales Person (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem) algorithm to solve a search problem with multiple goals. ```tsp(G, start, goals) ``` function shown below calls the A star you implemented above and return the shortest path which visites all the goal nodes. You could use ```itertools``` to generate all the combinations of two target nodes and use A star to calculate the cost of each combination, then find the optimal order that has the shortest total cost.
 
     ```python
     def tsp(G, start, goals):
@@ -258,7 +258,7 @@ You could use the provided ```printpath(G, start, goal, path)``` function to vis
     >>> optimal_order
     ((0, 0), (2, 2), (3, 0), (3, 3))
     >>> shortest_path
-    [(0, 0), (0, 1), (0, 2), (1, 2), (2, 2), (2, 2), (2, 1), (2, 0), (3, 0), (3, 0), (3, 1), (3, 2), (3, 3)]
+    [(0, 0), (0, 1), (0, 2), (1, 2), (2, 2), (2, 1), (2, 0), (3, 0), (3, 1), (3, 2), (3, 3)]
 
     >>> printtsp(G, (0, 0), [(2, 2), (3, 3), (3, 0)], shortest_path)
 
@@ -303,7 +303,7 @@ In this step, you will convert your navigation solution to the commands for your
 
     ```
 
-2. **[5 points]**```r2d2_action(movement, droid, speed, time_for_moving_one_step)``` transfers the movement generated above to the commands for robot. This fuction also takes in the droid object as input, the speed and time will be used in ```droid.roll(speed, direction, time)``` function. The speed and time may varies according to the size of real world map. The direction range from 0 - 360 and it is decided by the key in the ```movement``` and the initial direction of the robot.
+2. **[0 points]**```r2d2_action(movement, droid, speed, time_for_moving_one_step)``` transfers the movement generated above to the commands for robot. This fuction also takes in the droid object as input, the speed and time will be used in ```droid.roll(speed, direction, time)``` function. The speed and time may varies according to the size of real world map. The direction range from 0 - 360 and it is decided by the key in the ```movement``` and the initial direction of the robot.
 
     ```python
     def r2d2_action(movement, droid, speed, time)
