@@ -50,7 +50,7 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-Robot Excercise 1: Using Python to Control R2D2
+Robot Excercise 1: Using Python to Control R2D2 [18 points]
 =============================================================
 
 ## Instructions
