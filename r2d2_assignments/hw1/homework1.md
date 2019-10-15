@@ -164,7 +164,7 @@ If you hear a happy chirp, you're ready to go!
 -->
 
 
-## 1. Let's get rolling
+## 1. Let's get rolling [1 point]
 
 Let's use Python to send commands to the robots! We'll need two terminal windows to do this.  One to run the the R2D2 server, and one to run Python "REPL" environment.  REPL stands for read, eval, print, loop.  That means we can interactively write and test code in the terminal.  
 
@@ -219,7 +219,7 @@ help(DroidClient)
 ```
 in the Python REPL environment to see what methods your robots supports.
 
-## 2. For Loops in Python
+## 2. For Loops in Python [2 points]
 
 For loops in Python are done differently than for loops in Java or C++.  In a for loop in Java, we initialize a variable, test a truth condition, and then increment (or decrement a variable) like so: 
 ```java
@@ -242,7 +242,7 @@ is very common.
 + Write a function ```drive_rectangle()``` that works similarly to ```drive_square()```, but the first and third sides of the rectangle should be twice as long as the second and fourth sides. Set speed to 1. 
 <!-- </div> -->
 
-## 3. Lists 
+## 3. Lists [1 point]
 
 Python's for loop also allows us to execute a series of roll commands based on a list of headings.  Creating a list in python is easy.  We can initalize a list with a bunch of vables like like this:
 
@@ -277,7 +277,7 @@ for heading in headings:
 
 + Give an example of a list of headings that would result in the robot driving in a pentagon. 
 
-## 4. Tuples and multiple return variables
+## 4. Tuples and multiple return variables [1 point]
 
 Our roll command takes three arguments `speed`, `heading`, and `duration`.  We can encode all three of those into a Python type called a tuple.  A tuple is an ordered list of values. In Python a tuple is immutable, meaning the its elements cannot be changed (unlike a list). In Python tuples are written with round brackets, and their elements can be accessed with an index in square brackets (just like accessing an element of a list).
 
@@ -335,7 +335,7 @@ for speed, heading, duration in roll_commands:
 + Write a function ```drive_speedy(roll_commands)``` that takes in a list of roll_command tuples, and if the speed is faster than 0.5, doubles the duration.
  
 
-## 5. Python functions
+## 5. Python functions [1 point]
 
 Instead of manually specifying the commands to have the robot drive in a square or a pentgon, let's write a function that will let it drive in the shape of any polygon. 
 
@@ -360,7 +360,7 @@ drive_polygon(5) # pentagon
 drive_polygon(8, duration=1) # octogon
 ```
 
-## 6. Python Dictionaries 
+## 6. Python Dictionaries [2 points]
 
 Python dictionaries are hash tables that let us store key-value pairs. Let's use a dictionary to map from color names (Strings) onto their corresponding RGB values.  We'll store the RGB values as (red, green, blue) triples that indiciate the intesity of each of those colors (ranging from 0 to 255).  
 
@@ -435,7 +435,7 @@ color_names_to_rgb = init_color_names_to_rgb()
 
 ```
 
-## 7. Sorting and Lambda Functions
+## 7. Sorting and Lambda Functions [1 point]
 
 
 Let's create a list of roll commands: 
@@ -511,7 +511,7 @@ print(roll_commands)
 + Write a one-line function ```sort_lambda(roll_commands)```that uses a lamba function to first sort the roll_commands by duration, and then by speed.
 
 
-## 8. Driving with the keyboard arrow keys
+## 8. Driving with the keyboard arrow keys [4 points]
 
 Let's design a video game style controler for the robot, where we can use the arrow keys to change its speed (by pressing *up* or *down*) and its orientation (by pressing *left* or *right*)
 
@@ -561,7 +561,7 @@ def drive_with_keyboard(speed_increment=.1, heading_increment=45, duration=0.1):
 ```
 
 
-## 9. Sending a message
+## 9. Sending a message [5 points]
 
 In Star Wars, R2-D2 delivers a message from Princess Leia to Obi-Wan Kenobi.  Our robots can only play pre-programmed sounds, so we will use the robot's lights to blink out the message "Help me, Obi-Wan Kenobi. You're my only hope." in [Morse Code](https://en.wikipedia.org/wiki/Morse_code).
 
