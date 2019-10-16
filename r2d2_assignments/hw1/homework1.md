@@ -6,7 +6,7 @@ caption: New Robot
 title: CIS 521 Robot Excercise 1 "Using Python to Control R2D2" (Extra Credit)
 active_tab: homework
 release_date: 2019-10-03
-due_date: 2019-10-10 23:59:00EDT
+due_date: 2019-10-24 23:59:00EDT
 materials:
     - 
       name: skeleton file
@@ -69,11 +69,11 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 
 Because this is an extra credit assignment, late submissions will not be accepted (you cannot use late days on this assignment). 
 
-## Set Up 
+## Set Up Instructions
+
+### Set Up Instructions for Mac
 
 You only need to run this set up once.  After you've successfully set up your server, you can skip ahead to the "Lets get rolling" section below.
-
-For now, we have setup instructions for Mac.  We are working on creating instructions for Windows and Linux.
 
 To get started, we are going to download a set of APIs for controling the robots via Bluetooth.  This step is a little bit complicated, so we recommend that you start early, so that you can ask for help if you get stuck.
 
@@ -132,36 +132,104 @@ yarn rebuild
 
 11. Make sure that Bluetooth is turned on.  Go to the Apple menu and open System Preferences.  Click on the Bluetooth preferences icon.  If you see "Bluetooth: On" you're all set.  If not, click on the "Turn Bluetooth On" button.
 
-<!--
-11. Start the server, and leave it running in its own Terminal window.
-```bash
-cd ../examples/
-sudo yarn server
-```
 
-12. Open a new Terminal window, and change into your  sphero-project director.  Then activate your virual environment.
+
+
+
+
+
+### Set Up Instructions for Linux
+
+This is a tutorial about helping students set up the Node server required to communicate with the R2D2 robot on Linux distributions (including Ubuntu/Debian/CentOS etc.).
+
+1. **Install Docker.**  The first step is to install docker, normally you just need to run this one line: 
 ```bash
-cd sphero-project/
+curl -sSL https://get.docker.com | sh
+```
+If this command does not work out for you, please check out the [Docker website](https://docs.docker.com/install/) for manual installation.
+
+2. **For amd64 (x86_64) architecture computers**
+Once the docker is installed, simply run
+```bash
+ sudo docker run --net=host --privileged -itP superfashi/sphero-project
+``` 
+and you are good to go.
+
+The first time run will download a docker image (~1GB), it may take some time. After the image is downloaded, any later runs should start immediately and would not require a network connection.
+
+3. **For other architectures (including x86/armhf/arm64)**
+Once the docker is installed, run this command 
+```bash
+sudo docker build -t sphero-project https://github.com/hanbang-wang/sphero-project.git 
+```
+to build the image locally.
+This should go smoothly. You can safely ignore any errors that pops up midway as long as the image is successfully built at the end. You only need to build the image once.
+After the build is complete, you can run 
+```bash
+sudo docker run --net=host --privileged -itP sphero-project 
+```
+to start the Node server whenever you need it.
+
+**Disclaimer**
+To run the above commands on your computer requires you to give full root access for your computer's resources to the docker engine and the docker image we wrote.
+In no events shall the authors be liable for any claim, damages or other liability to your computer.
+
+You only need to run this set up once.  After you've successfully set up your server, you can skip ahead to the "Lets get rolling" section below.
+
+To get started, we are going to download a set of APIs for controling the robots via Bluetooth.  This step is a little bit complicated, so we recommend that you start early, so that you can ask for help if you get stuck.
+
+
+4. Download the repo
+```bash
+git clone https://github.com/josephcappadona/sphero-project.git
+cd sphero-project
+```
+5. Create a virtual environment 
+```bash
+python3 -m venv r2d2
 source r2d2/bin/activate
+python -m pip install --upgrade pip
 ```
 
-13. Change into the src directory and run python:
+6. Install python dependencies
 ```bash
-cd src/
-python 
+python -m pip install numpy pygame
 ```
 
-14.  Try copying and pasting these commands into the Python environment:
+
+
+
+### Set Up Instructions for Windows
+
+These instructions allow you to run the assignments on Windows by connecting remotely to a Raspberry Pi which is located in CCB's office
+
+1. Download the repo
+```bash
+git clone https://github.com/josephcappadona/sphero-project.git
+```
+
+2. Install python dependencies
+```bash
+python -m pip install numpy pygame
+```
+
+3. Change into the src directory and start python:
+```bash
+cd sphero-project/src
+python3
+```
+
+4. Type the following commands into the python REPL environment to connect to the Raspberry Pi robot server:
 ```python
 from client import DroidClient
-droid = DroidClient() 
-droid.scan() # Scan the area for droids.
+droid = DroidClient(autoconnect=False) 
+droid.connect_to_server('10.103.213.71') 
+#This connects you to the Raspberry Pi sever in CCB's office. You have to be sitting outside his office in order to drive your robot.
+droid.scan() # Scan for droids.
 # Connect to your robot.
-droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your ID
+droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your droid's ID
 droid.animate(5)
 ```
-If you hear a happy chirp, you're ready to go!
--->
 
 
 ## 1. Let's get rolling [1 point]
