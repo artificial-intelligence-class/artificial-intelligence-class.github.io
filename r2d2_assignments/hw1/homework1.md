@@ -201,7 +201,7 @@ python -m pip install numpy pygame
 
 ### Set Up Instructions for Windows
 
-These instructions allow you to run the assignments on Windows by connecting remotely to a Raspberry Pi which is located in CCB's office
+These instructions allow you to run the assignments on Windows by connecting remotely to a Raspberry Pi which is located in CCB's office. You have to be sitting outside his office in order to drive your robot.
 
 1. Download the repo
 ```bash
@@ -223,12 +223,12 @@ python3
 ```python
 from client import DroidClient
 droid = DroidClient(autoconnect=False) 
-droid.connect_to_server('10.103.213.71') 
-#This connects you to the Raspberry Pi sever in CCB's office. You have to be sitting outside his office in order to drive your robot.
+droid.connect_to_server('10.103.213.71') #Connect to the Raspberry Pi in CCB's office
 droid.scan() # Scan for droids.
 # Connect to your robot.
 droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your droid's ID
 droid.animate(5)
+droid.roll(0.5, 0, 1)
 ```
 
 
