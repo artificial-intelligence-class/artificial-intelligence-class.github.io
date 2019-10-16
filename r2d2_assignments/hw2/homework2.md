@@ -230,7 +230,7 @@ You could use the provided ```printpath(G, start, goal, path)``` function to vis
     ☐   ☐   ☐   ☒  
     ```
 
-2. **[20 points]** Try to apply [Traveling Sales Person (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem) algorithm to solve a search problem with multiple goals. ```tsp(G, start, goals) ``` function shown below calls the A star you implemented above and return the shortest path which visites all the goal nodes. You could use ```itertools``` to generate all the combinations of two target nodes and use A star to calculate the cost of each combination, then find the optimal order that has the shortest total cost.
+2. **[20 points]** Try to apply [Traveling Sales Person (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem) algorithm to solve a search problem with multiple goals. ```tsp(G, start, goals) ``` function shown below calls the A star you implemented above and return the shortest path which visites all the goal nodes (note that your path should begin with the start node). You could use ```itertools``` to generate all the combinations of two target nodes and use A star to calculate the cost of each combination, then find the optimal order that has the shortest total cost.
 
     ```python
     def tsp(G, start, goals):
