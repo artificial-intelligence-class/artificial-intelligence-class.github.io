@@ -77,11 +77,11 @@ class R2D2(object):
         pass
 
     def set_lights(self, color_name, which_light='both'):
-        # 0 point
+        # 1 point
         pass
 
     def flash_colors(self, colors, seconds=1):
-        # 0 point
+        # 1 point
         pass
 
     def drive_with_keyboard(self, speed_increment=.1, heading_increment=45, duration=0.1):
@@ -102,7 +102,7 @@ class R2D2(object):
         pass
 
     def blink(self, length):
-        # 0 point
+        # 1 point
         pass
 
     def play_message(self, message, short_length=0.1, long_length=0.3, 
