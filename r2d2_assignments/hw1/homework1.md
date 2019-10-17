@@ -6,7 +6,7 @@ caption: New Robot
 title: CIS 521 Robot Excercise 1 "Using Python to Control R2D2" (Extra Credit)
 active_tab: homework
 release_date: 2019-10-03
-due_date: 2019-10-10 23:59:00EDT
+due_date: 2019-10-24 23:59:00EDT
 materials:
     - 
       name: skeleton file
@@ -35,6 +35,7 @@ Warning: this assignment is out of date.  It may still need to be updated for th
 {% endif %}
 <!-- End of check whether the assignment is up to date -->
 
+
 <div class="alert alert-info">
 This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
 </div>
@@ -50,7 +51,7 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-Robot Excercise 1: Using Python to Control R2D2
+Robot Excercise 1: Using Python to Control R2D2 [18 points]
 =============================================================
 
 ## Instructions
@@ -69,11 +70,11 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 
 Because this is an extra credit assignment, late submissions will not be accepted (you cannot use late days on this assignment). 
 
-## Set Up 
+## Set Up Instructions
+
+### Set Up Instructions for Mac
 
 You only need to run this set up once.  After you've successfully set up your server, you can skip ahead to the "Lets get rolling" section below.
-
-For now, we have setup instructions for Mac.  We are working on creating instructions for Windows and Linux.
 
 To get started, we are going to download a set of APIs for controling the robots via Bluetooth.  This step is a little bit complicated, so we recommend that you start early, so that you can ask for help if you get stuck.
 
@@ -132,39 +133,107 @@ yarn rebuild
 
 11. Make sure that Bluetooth is turned on.  Go to the Apple menu and open System Preferences.  Click on the Bluetooth preferences icon.  If you see "Bluetooth: On" you're all set.  If not, click on the "Turn Bluetooth On" button.
 
-<!--
-11. Start the server, and leave it running in its own Terminal window.
-```bash
-cd ../examples/
-sudo yarn server
-```
 
-12. Open a new Terminal window, and change into your  sphero-project director.  Then activate your virual environment.
+
+
+
+
+
+### Set Up Instructions for Linux
+
+This is a tutorial about helping students set up the Node server required to communicate with the R2D2 robot on Linux distributions (including Ubuntu/Debian/CentOS etc.).
+
+1. **Install Docker.**  The first step is to install docker, normally you just need to run this one line: 
 ```bash
-cd sphero-project/
+curl -sSL https://get.docker.com | sh
+```
+If this command does not work out for you, please check out the [Docker website](https://docs.docker.com/install/) for manual installation.
+
+2. **For amd64 (x86_64) architecture computers**
+Once the docker is installed, simply run
+```bash
+ sudo docker run --net=host --privileged -itP superfashi/sphero-project
+``` 
+and you are good to go.
+
+The first time run will download a docker image (~1GB), it may take some time. After the image is downloaded, any later runs should start immediately and would not require a network connection.
+
+3. **For other architectures (including x86/armhf/arm64)**
+Once the docker is installed, run this command 
+```bash
+sudo docker build -t sphero-project https://github.com/hanbang-wang/sphero-project.git 
+```
+to build the image locally.
+This should go smoothly. You can safely ignore any errors that pops up midway as long as the image is successfully built at the end. You only need to build the image once.
+After the build is complete, you can run 
+```bash
+sudo docker run --net=host --privileged -itP sphero-project 
+```
+to start the Node server whenever you need it.
+
+**Disclaimer**
+To run the above commands on your computer requires you to give full root access for your computer's resources to the docker engine and the docker image we wrote.
+In no events shall the authors be liable for any claim, damages or other liability to your computer.
+
+You only need to run this set up once.  After you've successfully set up your server, you can skip ahead to the "Lets get rolling" section below.
+
+To get started, we are going to download a set of APIs for controling the robots via Bluetooth.  This step is a little bit complicated, so we recommend that you start early, so that you can ask for help if you get stuck.
+
+
+4. Download the repo
+```bash
+git clone https://github.com/josephcappadona/sphero-project.git
+cd sphero-project
+```
+5. Create a virtual environment 
+```bash
+python3 -m venv r2d2
 source r2d2/bin/activate
+python -m pip install --upgrade pip
 ```
 
-13. Change into the src directory and run python:
+6. Install python dependencies
 ```bash
-cd src/
-python 
+python -m pip install numpy pygame
 ```
 
-14.  Try copying and pasting these commands into the Python environment:
+
+
+
+### Set Up Instructions for Windows
+
+These instructions allow you to run the assignments on Windows by connecting remotely to a Raspberry Pi which is located in CCB's office. You have to be sitting outside his office in order to drive your robot.
+
+1. Download the repo
+```bash
+git clone https://github.com/josephcappadona/sphero-project.git
+```
+
+2. Install python dependencies
+```bash
+python -m pip install numpy pygame
+```
+
+3. Change into the src directory and start python:
+```bash
+cd sphero-project/src
+python3
+```
+
+4. Type the following commands into the python REPL environment to connect to the Raspberry Pi robot server:
 ```python
 from client import DroidClient
-droid = DroidClient() 
-droid.scan() # Scan the area for droids.
+droid = DroidClient(autoconnect=False) 
+droid.connect_to_server('10.103.213.71') #Connect to the Raspberry Pi in CCB's office
+droid.scan() # Scan for droids.
 # Connect to your robot.
-droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your ID
+droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your droid's ID
 droid.animate(5)
+droid.roll(0.5, 0, 1)
 ```
-If you hear a happy chirp, you're ready to go!
--->
 
 
-## 1. Let's get rolling
+## 1. Let's get rolling [1 point]
 
 Let's use Python to send commands to the robots! We'll need two terminal windows to do this.  One to run the the R2D2 server, and one to run Python "REPL" environment.  REPL stands for read, eval, print, loop.  That means we can interactively write and test code in the terminal.  
 
@@ -219,7 +288,7 @@ help(DroidClient)
 ```
 in the Python REPL environment to see what methods your robots supports.
 
-## 2. For Loops in Python
+## 2. For Loops in Python [2 points]
 
 For loops in Python are done differently than for loops in Java or C++.  In a for loop in Java, we initialize a variable, test a truth condition, and then increment (or decrement a variable) like so: 
 ```java
@@ -242,7 +311,7 @@ is very common.
 + Write a function ```drive_rectangle()``` that works similarly to ```drive_square()```, but the first and third sides of the rectangle should be twice as long as the second and fourth sides. Set speed to 1. 
 <!-- </div> -->
 
-## 3. Lists 
+## 3. Lists [1 point]
 
 Python's for loop also allows us to execute a series of roll commands based on a list of headings.  Creating a list in python is easy.  We can initalize a list with a bunch of vables like like this:
 
@@ -277,7 +346,7 @@ for heading in headings:
 
 + Give an example of a list of headings that would result in the robot driving in a pentagon. 
 
-## 4. Tuples and multiple return variables
+## 4. Tuples and multiple return variables [1 point]
 
 Our roll command takes three arguments `speed`, `heading`, and `duration`.  We can encode all three of those into a Python type called a tuple.  A tuple is an ordered list of values. In Python a tuple is immutable, meaning the its elements cannot be changed (unlike a list). In Python tuples are written with round brackets, and their elements can be accessed with an index in square brackets (just like accessing an element of a list).
 
@@ -335,7 +404,7 @@ for speed, heading, duration in roll_commands:
 + Write a function ```drive_speedy(roll_commands)``` that takes in a list of roll_command tuples, and if the speed is faster than 0.5, doubles the duration.
  
 
-## 5. Python functions
+## 5. Python functions [1 point]
 
 Instead of manually specifying the commands to have the robot drive in a square or a pentgon, let's write a function that will let it drive in the shape of any polygon. 
 
@@ -360,7 +429,7 @@ drive_polygon(5) # pentagon
 drive_polygon(8, duration=1) # octogon
 ```
 
-## 6. Python Dictionaries 
+## 6. Python Dictionaries [2 points]
 
 Python dictionaries are hash tables that let us store key-value pairs. Let's use a dictionary to map from color names (Strings) onto their corresponding RGB values.  We'll store the RGB values as (red, green, blue) triples that indiciate the intesity of each of those colors (ranging from 0 to 255).  
 
@@ -435,7 +504,7 @@ color_names_to_rgb = init_color_names_to_rgb()
 
 ```
 
-## 7. Sorting and Lambda Functions
+## 7. Sorting and Lambda Functions [1 point]
 
 
 Let's create a list of roll commands: 
@@ -511,7 +580,7 @@ print(roll_commands)
 + Write a one-line function ```sort_lambda(roll_commands)```that uses a lamba function to first sort the roll_commands by duration, and then by speed.
 
 
-## 8. Driving with the keyboard arrow keys
+## 8. Driving with the keyboard arrow keys [4 points]
 
 Let's design a video game style controler for the robot, where we can use the arrow keys to change its speed (by pressing *up* or *down*) and its orientation (by pressing *left* or *right*)
 
@@ -561,7 +630,7 @@ def drive_with_keyboard(speed_increment=.1, heading_increment=45, duration=0.1):
 ```
 
 
-## 9. Sending a message
+## 9. Sending a message [5 points]
 
 In Star Wars, R2-D2 delivers a message from Princess Leia to Obi-Wan Kenobi.  Our robots can only play pre-programmed sounds, so we will use the robot's lights to blink out the message "Help me, Obi-Wan Kenobi. You're my only hope." in [Morse Code](https://en.wikipedia.org/wiki/Morse_code).
 

@@ -248,7 +248,7 @@
   title: Drop Period Ends
   type: no_lecture
 -
-  date: 2019-10-8
+  date: 2019-10-08
   slides: 09-MDPs-wrapup-and-reinforcement-learning.pdf
   title: MDPs Wrapup and Reinforcement Learning
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d38a701-365b-4f71-9802-aab501264a1c
@@ -283,9 +283,9 @@
   type: no_lecture
 -
   date: 2019-10-15
-  slides: 
+  slides: 10-Reinforcement-Learning-2.pdf
   title:  Reinforcement Learning - part 2
-  recording: 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
   readings:   
     - 
       title: AIMA Chapter 21 "Reinforcement Learning"
@@ -296,6 +296,10 @@
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
   videos:
+    -
+      authors: OpenAI 
+      url: https://www.youtube.com/watch?v=kopoLzvh5jY
+      title: Multi-Agent Hide and Seek q
     -
       authors: Stanford University 
       url: https://www.youtube.com/watch?v=M-QUkgk3HyE
@@ -364,6 +368,10 @@
 -
   date: 2019-10-31
   title:  Midterm exam 2 (in class)
+  type: exam 
+-
+  date: 2019-11-01
+  title:  Make up date for midterm exam 2 (9:30am-11am in 3401 Walnut room 401B).  
   type: exam
 -
   date: 2019-11-04
@@ -525,5 +533,9 @@
 -
   date: 2019-12-05
   title:  Midterm exam 3 (in class)
+  type: exam
+-
+  date: 2019-12-06
+  title:  Make up date for midterm exam 3 (9:30am-11am in 3401 Walnut room 401B).  
   type: exam
 
