@@ -10,9 +10,9 @@ due_date: 2019-11-7 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: r2d2_hw2.py
+        url: r2d2_hw3.py
     - 
-        name: R2D2 Navigation GUI
+        name: R2D2 FlagCapture GUI
         url: r2d2_navigation_gui.py 
 submission_link: https://www.gradescope.com/courses/59562
 ---
