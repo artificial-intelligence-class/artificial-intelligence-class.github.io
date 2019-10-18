@@ -51,7 +51,7 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 R2D2 ***Extra Credit*** Assignments (late submission not allowed):
 * [Robot Excercise 1: Using Python to Control R2D2](r2d2_assignments/hw1/homework1.html)
 * [Robot Excercise 2: Robot Navigation](r2d2_assignments/hw2/homework2.html)
-* [Robot Excercise 3: Flag Capture Game](r2d2_assignments/hw3/homework3.html)
+<!-- * [Robot Excercise 3: Flag Capture Game](r2d2_assignments/hw3/homework3.html) -->
 <!-- * [A* Search](r2d2_assignments/hw2/homework2.html) -->
 
 Extra Credit Bounty Items:
