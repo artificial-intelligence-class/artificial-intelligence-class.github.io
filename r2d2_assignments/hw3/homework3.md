@@ -305,10 +305,9 @@ False
 ☐   ☐   ❷   ☐ 
 ``` 
 
-## Step 3: Define your utility evaluate function
+## Step 3: Define your utility evaluate function [25 points]
 
-1. **[25 points]** This part is open-ended, you should come up with a method to evaluate the utilities of the game. The evaluate function will have impact on the performance of your robot and we will use the official method to play a game with your algorithm as the autograder. We will give your robots some advantages in the test cases and if your algorithm could beat us in 20 rounds, you could get the points.
-
+This part is open-ended, you should come up with a method to evaluate the utilities of the game. The evaluate function will have impact on the performance of your robot and we will use the official method to play a game with your algorithm as the autograder. We will give your robots some advantages in the test cases and if your algorithm could beat us in 20 rounds, you could get the points.
 
 ## Step 4: Implement Minimax algorithm with alpha-beta pruning [30 points]
 
@@ -326,68 +325,13 @@ def get_best_move(self, D2, limit):
 	pass
 ```
 
-Here, you are free to use whatever implementation of the minimax algorithm you want. 
-
-However, we require that in your get_best_move function, your return value be of the type ```best_move, best_value, total_leaves```, where best_move is the best move (syntax equivalent to the first element of the successors function), best_value is some value corresponding to what ```alpha_beta_max``` returns (won't be testing on this value), and total_leaves is the total number of leaf elements encountered, where a leaf is a finished goal state or any state after performing limit amount of moves. The return type of get_best_move should be a hint on what the return types of alpha_beta_max and alpha_beta_min should look like.
+Here, you are free to use whatever implementation of the minimax algorithm you want. However, we require that in your get_best_move function, your return value be of the type ```best_move, best_value, total_leaves```, where best_move is the best move (syntax equivalent to the first element of the successors function), best_value is some value corresponding to what ```alpha_beta_max``` returns (won't be testing on this value), and total_leaves is the total number of leaf elements encountered, where a leaf is a finished goal state or any state after performing limit amount of moves. The return type of get_best_move should be a hint on what the return types of alpha_beta_max and alpha_beta_min should look like.
 
 The inputs to the get_best_move function are D2, a boolean representing if it is the D2 team's turn, and limit, an upper bound on the number of turns to take.
 
 After you finished the minimax algorithm, you could now play the game in a virtual environment.
 
-```python
->>> from game_simulation import simulate_game
->>> record_game = simulate_game(graph, D2 = True, limit = 4)
-Round: 1
-D2 Turn
-☐   ➀   ☐   ☐   
-               
-➁   ☐   ☐   ☐   
-               
-☐   ☐   ☐   ❶   
-               
-☐   ☐   ⚐   ❷   
---------------
-☐   ➀   ☐   ☐   
-               
-☐   ➁   ☐   ☐   
-               
-☐   ☐   ☐   ❶   
-               
-☐   ☐   ⚐   ❷   
---------------
-Q5 Turn
-☐   ➀   ☐   ☐   
-               
-☐   ➁   ☐   ❶   
-               
-☐   ☐   ☐   ☐   
-               
-☐   ☐   ⚐   ❷   
---------------
-☐   ➀   ☐   ☐   
-               
-☐   ➁   ☐   ❶   
-               
-☐   ☐   ☐   ☐   
-               
-☐   ☐   ❷   ☐   
---------------
-
-...
-
-Q5 Turn
-☐   ❶   ☐   ☐   
-               
-➁   ☐   ☐   ➀   
-               
-☐   ☐   ☐   ☐   
-               
-❷   ☐   ⚐   ☐   
---------------
-Q5 WIN
-```
-
-## Step 5: Set up your Robots to play a real game [0 points]
+## Step 5: Play with your algorithm or fight with your friends [0 points]
 You will apply your algorithm in the real robots to visulize your program. The ```record_game``` store the movement of each robot and the data looks like:
 
 ```python
