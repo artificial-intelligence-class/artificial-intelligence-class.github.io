@@ -8,7 +8,6 @@ class FlagCaptureGraph:
     ##############################################
     ##                  Part 1                  ##
     ##############################################
-    
     def __init__(self, V, E, game_map, flag):
         '''
         self.vertices --  store the vertices of the graph
@@ -84,7 +83,6 @@ class FlagCaptureGraph:
     ##############################################
     ##                  Part 3                  ##
     ##############################################
-
     def evaluate(self, D2):
     '''
         Return a numeric value (float/int) representing the utility for the D2 or Q5 team.
@@ -105,7 +103,7 @@ class FlagCaptureGraph:
         pass
 
 ####################################################
-###########help functions, do not change############
+###########helper functions, do not change##########
 ####################################################
 
 def printmap(G):
