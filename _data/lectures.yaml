@@ -306,10 +306,10 @@
       title: Autonomous Helicopters Teach Themselves to Fly Stunts
 -
   date: 2019-10-17
-  slides: 
+  slides: 11-Probabilities.pdf 
   title:  No class today.  CCB is traveling for the HLTCOE.  Please read AIMA chapter 13.1-13.5. 
   type: no_lecture
-  recording: 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=02d25e7b-5be9-48de-a513-aa7f0110399a
   readings:   
     - 
       title: AIMA Chapter 13 "Quantifying Uncertainty" (13.1-13.5)
