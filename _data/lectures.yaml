@@ -335,7 +335,10 @@
       authors: Khan Academy 
       url: https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication
       title: A mathematical theory of communication
-
+-
+  date: 2019-10-22
+  title:  Practice Exam 2 released on Gradescope
+  type: exam
 -
   date: 2019-10-22
   title:  HW5 due (MDPs and GridWorld), HW6 released (Reinforcement Learning)
@@ -365,6 +368,10 @@
       title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
       authors: Russell and Norvig
       optional: false
+-
+  date: 2019-10-29
+  title:  Practice Exam 2 is due on Gradescope
+  type: exam
 -
   date: 2019-10-31
   title:  Midterm exam 2 (in class)

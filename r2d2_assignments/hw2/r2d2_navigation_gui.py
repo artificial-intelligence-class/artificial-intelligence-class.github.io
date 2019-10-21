@@ -392,7 +392,7 @@ class MainApp(tk.Tk):
             self.canvas_grid.draw_path(path_ls=path_ls, goals_num = goals_num)
             self.canvas_grid.draw_scene()
             self.canvas_grid.draw_point(self.canvas_grid.start, color="red", tags="start")
-            self.canvas_grid.draw_point(self.canvas_grid.goal, color="red", tags="start")
+            self.canvas_grid.draw_point(self.canvas_grid.goals[0], color="red", tags="start")
 
 
     def clear_path(self):

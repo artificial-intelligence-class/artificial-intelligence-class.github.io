@@ -71,7 +71,7 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 
 Since this is an extra credit assignment, late submissions will not be accepted (you cannot use late days on this assignment).
 
-## 1. Implement a Graph [15 points]
+## 1. Implement a Graph [12 points]
 In order to solve a maze, we first need to create a representation of a maze to run our algorithms on. We will implement our maze as a graph, where each vertex represents a grid cell, and an edge between vertices represents the ability to traverse between those grid cells.
 
 There are many different ways we can implement a graph, and these design decisions will impact the running time of our algorithms. For this assignment, we will implement an undirected, unweighted graph with its edges stored as an adjacency list.
@@ -181,7 +181,7 @@ You could use the provided ```printpath(G, start, goal, path)``` function to vis
 
 ```
 
-## 3. Implement A\* Search [35 points]
+## 3. Implement A\* Search [40 points]
 1. **[20 points]** Using the pseudocode [here](https://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode) and the lecture slides, implement A\* search by finish the following function:
 
     ```python
@@ -230,7 +230,7 @@ You could use the provided ```printpath(G, start, goal, path)``` function to vis
     ☐   ☐   ☐   ☒  
     ```
 
-2. **[20 points]** Try to apply [Traveling Sales Person (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem) algorithm to solve a search problem with multiple goals. ```tsp(G, start, goals) ``` function shown below calls the A star you implemented above and return the shortest path which visites all the goal nodes. You could use ```itertools``` to generate all the combinations of two target nodes and use A star to calculate the cost of each combination, then find the optimal order that has the shortest total cost.
+2. **[20 points]** Try to apply [Traveling Sales Person (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem) algorithm to solve a search problem with multiple goals. ```tsp(G, start, goals) ``` function shown below calls the A star you implemented above and return the shortest path which visites all the goal nodes (note that your path should begin with the start node). You could use ```itertools``` to generate all the combinations of two target nodes and use A star to calculate the cost of each combination, then find the optimal order that has the shortest total cost.
 
     ```python
     def tsp(G, start, goals):
@@ -281,7 +281,7 @@ Type in the above command in terminal and it will generate a random graph which 
 <img src="gui_sample.png" class="img-responsive"/>
 </center>
 
-## 4. Let your Robots rolling in a real game [10 points]
+## 4. Let your Robots rolling in a real game [8 points]
 
 In this step, you will convert your navigation solution to the commands for your R2D2 to play in a game. Click [here](https://www.youtube.com/watch?v=8x4vBZTtzl0&feature=youtu.be) to watch a demo of how R2D2 rolling in the real maze.
 
