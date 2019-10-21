@@ -51,13 +51,13 @@ class FlagCaptureGraph:
 
     def islegalmove(self, move_robot, move_direction):
     '''
-        return a boolean indicating if a movement is legal
+        Return a boolean indicating if a movement is legal
     '''
         pass
 
     def legalmoves(self, move_robot):
     '''
-        return a list of all legal moves of a robot
+        Return a list of all legal moves of a robot
     '''
         pass
 
