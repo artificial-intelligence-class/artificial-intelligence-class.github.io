@@ -2,7 +2,7 @@
 layout: default
 img: Darth_Vader.png
 img_link: https://www.pinterest.com/pin/341851427962125071/?nic=1
-caption: Darth Vader Copyright: Pinterest
+caption: Darth Vader Copyright&#58; Pinterest
 title: CIS 521 Robot Excercise 3 "Flag Capture Game" (Extra Credit)
 active_tab: homework
 release_date: 2019-10-24
@@ -54,8 +54,8 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-# Robot Excercise 3: Flag Capture Game using a Minimax Algorithm
-
+Robot Excercise 3: Flag Capture Game using a Minimax Algorithm [100 points]
+=============================================================
 ## Preface
 The First Galactic Empire dispatched Darth Vader and their evil robot R2Q5 to distroy the base of Rebel Alliance. Our brave R2D2s will battle with the dark robots and capture the flag of Rebellion. We must also prevent the R2Q5s to capture the empire flag before us.
 
@@ -72,244 +72,246 @@ You are strongly encouraged to follow the Python style guidelines set forth in P
 
 Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}).
 
-## Step 1. Create the Game Board [9 points]
+## 1. Create the Game Board [9 points]
 
-1. **[2 points]** Similar to the navigation game in the last extra credit exerecise, the game board in this assignment also takes in the vertices and edges to define a graph. Along with these two parameters, we also need to define the position of the robots and the flags. These location vertices will be passed to the constructor for our FlagCaptureGraph game.
+1. **[2 points]** Similar to the navigation game in the last extra credit exerecise, the game board in this assignment also takes in the vertices and edges to define a graph. Along with these two parameters, we also need to define the position of the robots and the flags. These location vertices will be passed to the constructor for our `FlagCaptureGraph` game.
 
-```python
-def __init__(self, V, E, robots_pos, flags_pos):
-	'''
-		self.vertices --  store the vertices of the graph
-		self.edges   --  store the edges of the graph
-		self.robots_pos -- store the positions of the robots in a dictionary, keys = robot name, value = vertex
-		self.flags_pos    -- store the positions of the flags
-	'''
-	pass
-```
-Given the inputs as shown, you should match the following outputs (the printmap function is already defined in our skeleton file):
+	```python
+	def __init__(self, V, E, robots_pos, flags_pos):
+		'''
+			self.vertices --  store the vertices of the graph
+			self.edges   --  store the edges of the graph
+			self.robots_pos -- store the positions of the robots in a dictionary, keys = robot name, value = vertex
+			self.flags_pos    -- store the positions of the flags
+		'''
+		pass
+	```
 
-```python
->>> V, E = generate_map(4, 4, [])
->>> robots_pos = {'D2_1': (0, 0), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
->>> flags_pos = {'flag_D2': (3, 2), 'flag_Q5': (0, 1)}
->>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
->>> printmap(graph)
-➀   ⚑   ☐   ☐   
-               
-➁   ☐   ☐   ☐   
-               
-☐   ☐   ☐   ❶   
-               
-☐   ☐   ⚐   ❷   
-```
+	Given the inputs as shown, you should match the following outputs (the printmap function is already defined in our skeleton file):
+
+	```python
+	>>> V, E = generate_map(4, 4, [])
+	>>> robots_pos = {'D2_1': (0, 0), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
+	>>> flags_pos = {'flag_D2': (3, 2), 'flag_Q5': (0, 1)}
+	>>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
+	>>> printmap(graph)
+	➀   ⚑   ☐   ☐   
+	               
+	➁   ☐   ☐   ☐   
+	               
+	☐   ☐   ☐   ❶   
+	               
+	☐   ☐   ⚐   ❷   
+	```
 
 2. **[5 points]** ```neighbors(u)``` should take in a vertex ```u``` and return the list of vertices reachable from u (you don’t need to include ```u``` in that list and the order of the neighbors does not matter). Try to avoid recomputing neighborhoods every time the function is called since for large graphs this can waste a lot of time. In this function, you don't have to consider the positions of robots and flags.
 
-```python	
-def neighbors(self, u):
-	'''
-		Return the neighbors of a vertex.
-	'''
-	pass
-```
-With the FlagCaptureGraph variable graph as defined above, you should have:
+	```python	
+	def neighbors(self, u):
+		'''
+			Return the neighbors of a vertex.
+		'''
+		pass
+	```
+	With the `FlagCaptureGraph` variable graph as defined above, you should have:
 
-```python
->>> graph.neighbors((0, 0))
-[(0, 1), (1, 0)]
->>> graph.neighbors((0, 1))
->>> [(0, 2), (1, 1), (0, 0)]
-```
+	```python
+	>>> graph.neighbors((0, 0))
+	[(0, 1), (1, 0)]
+	>>> graph.neighbors((0, 1))
+	>>> [(0, 2), (1, 1), (0, 0)]
+	```
 
 3. **[2 points]** ```dist_between(u, v)``` should take in two vertices ```u``` and ```v``` and return 1 if there is an edge between ```u``` and ```v```, otherwise it should return None.
 
-```python
-def dist_between(self, u, v):
-	'''
-		Return the distance between two vertices.
-	'''
-	pass
-```
+	```python
+	def dist_between(self, u, v):
+		'''
+			Return the distance between two vertices.
+		'''
+		pass
+	```
 
-```python
->>> graph.dist_between((0, 0), (0, 1))
-1.0
->>> graph.dist_between((0, 0), (1, 0))
-None
-```
-## Step 2. Defining the Game Rules [36 points]
+	```python
+	>>> graph.dist_between((0, 0), (0, 1))
+	1.0
+	>>> graph.dist_between((0, 0), (1, 0))
+	None
+	```
+
+## 2. Defining the Game Rules [36 points]
 
 In this step, we will define the basic rules of the game, such as how to update the game state, what the successors of a state are, how to judge whether the game is over, etc.
 
 1. **[4 points]** Implement ```game_over(self)``` to reflect whether a game is over or not. The criteria for a game being over is if a robot from a team is on its flag.
 
-```python
->>> V, E = generate_map(4, 4, [])
->>> robots_pos = {'D2_1': (0, 0), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
->>> flags_pos = {'flag_D2': (3, 2), 'flag_Q5': (0, 1)}
->>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
+	```python
+	>>> V, E = generate_map(4, 4, [])
+	>>> robots_pos = {'D2_1': (0, 0), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
+	>>> flags_pos = {'flag_D2': (3, 2), 'flag_Q5': (0, 1)}
+	>>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
 
->>> graph.game_over()
-False
+	>>> graph.game_over()
+	False
 
->>> robots_pos = {'D2_1': (3, 2), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
->>> graph = FlagCaptureGraph(V, E, state, flag)
+	>>> robots_pos = {'D2_1': (3, 2), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
+	>>> graph = FlagCaptureGraph(V, E, state, flag)
 
->>> graph.game_over()
-True
-```
+	>>> graph.game_over()
+	True
+	```
 
 2. **[4 points]** ```islegalmove``` returns a boolean indicating if a movement is legal. The move direction includes 'north', 'south', 'east', 'west'. The robot shoult move within the game board and could only move to the neighbors of current grid. If there is a robot occupied at the grid you try to move, this movement will not be not legal.
 
-```python
-def islegalmove(self, move_robot, move_direction):
-	pass
-```
-Keep using the given graph and robots/flags positions, you could expect the outputs shown below:
+	```python
+	def islegalmove(self, move_robot, move_direction):
+		pass
+	```
+	Keep using the given graph and robots/flags positions, you could expect the outputs shown below:
 
-```python
->>> graph.islegalmove('D2_1', 'east')
-True
+	```python
+	>>> graph.islegalmove('D2_1', 'east')
+	True
 
->>> graph.islegalmove('D2_1', 'south')
-False
-```
+	>>> graph.islegalmove('D2_1', 'south')
+	False
+	```
 
 3. **[8 points]** ```legalmoves(self, move_robot)``` returns a list of all legal moves of a robot. Note that, if a robot is trapped (no move direction available), you should return 'stay' as its legal move.
 
-```python
->>> graph.legalmoves('D2_1')
-['east']
+	```python
+	>>> graph.legalmoves('D2_1')
+	['east']
 
->>> graph.legalmoves('D2_2')
-['south', 'east']
+	>>> graph.legalmoves('D2_2')
+	['south', 'east']
 
->>> robots_pos = {'D2_1': (0, 0), 'D2_2': (1, 0), 'Q5_1': (0, 1), 'Q5_2': (1, 1)}
->>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
->>> printmap(graph)
-➀   ❶   ☐   ☐   
-               
-➁   ❷   ☐   ☐   
-               
-☐   ☐   ☐   ☐   
-               
-☐   ☐   ⚐   ☐   
->>> graph.legalmoves('D2_1')
-['stay']
-```
+	>>> robots_pos = {'D2_1': (0, 0), 'D2_2': (1, 0), 'Q5_1': (0, 1), 'Q5_2': (1, 1)}
+	>>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
+	>>> printmap(graph)
+	➀   ❶   ☐   ☐   
+	               
+	➁   ❷   ☐   ☐   
+	               
+	☐   ☐   ☐   ☐   
+	               
+	☐   ☐   ⚐   ☐   
+	>>> graph.legalmoves('D2_1')
+	['stay']
+	```
 
 4. **[8 points]** Implement the function: ```perform_move(self, robot, direction)``` to execute the movement of the robot and update the game accordingly. This function takes in the name of the robot to move and its move direction. Make sure to update ```self.robot``` after execute a movement. 
 
-```python
->>> printmap(graph)
-➀   ⚑   ☐   ☐   
-               
-➁   ☐   ☐   ☐   
-               
-☐   ☐   ☐   ❶   
-               
-☐   ☐   ⚐   ❷     
+	```python
+	>>> printmap(graph)
+	➀   ⚑   ☐   ☐   
+	               
+	➁   ☐   ☐   ☐   
+	               
+	☐   ☐   ☐   ❶   
+	               
+	☐   ☐   ⚐   ❷     
 
->>> graph.perform_move('D2_1', 'east')
->>> graph.printmap()
-☐   ➀   ☐   ☐   
-               
-➁   ☐   ☐   ☐   
-               
-☐   ☐   ☐   ❶   
-               
-☐   ☐   ⚐   ❷ 
->>> graph.robots_pos
-{'D2_1': (0, 1), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)} 
-```
+	>>> graph.perform_move('D2_1', 'east')
+	>>> graph.printmap()
+	☐   ➀   ☐   ☐   
+	               
+	➁   ☐   ☐   ☐   
+	               
+	☐   ☐   ☐   ❶   
+	               
+	☐   ☐   ⚐   ❷ 
+	>>> graph.robots_pos
+	{'D2_1': (0, 1), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)} 
+	```
 
-2. **[2 points]** Implement ```copy(self)``` to return a new FlagCaptureGraph object that is identical to the current, making a deep copy of the current map in doing so. You do not need to deep copy the vertex, edge, or flag parameters as these will not change during a game.
+5. **[2 points]** Implement ```copy(self)``` to return a new `FlagCaptureGraph` object that is identical to the current, making a deep copy of the current map in doing so. You do not need to deep copy the vertex, edge, or flag parameters as these will not change during a game.
 
-```python
->>> new_graph = graph.copy()
->>> print(new_graph.robots_pos == graph.robots_pos)
-True
->>> new_graph.perform_move('D2_1', 'east')
->>> print(new_graph.robots_pos == graph.robots_pos)
-False
-```
+	```python
+	>>> new_graph = graph.copy()
+	>>> print(new_graph.robots_pos == graph.robots_pos)
+	True
+	>>> new_graph.perform_move('D2_1', 'east')
+	>>> print(new_graph.robots_pos == graph.robots_pos)
+	False
+	```
 
-3. **[10 points]** Implement the function: ```successors(self, D2)``` to generate the successors of a game state. The parameter D2 indicates whether it is the D2 team's turn. During each turn for a team, the robot 1 will move first and then the robot 2, meaning that if the first robot leaves a position, that position is open for the robot's teammate on its move. This function should yield a tuple where the first element is the movements of the two robots (a dictionary with keys of the robots and their next positions), as well as a copy of the new game map after these moves are performed. For the FlagCaptureGraph graph defined previously, we expect the following outputs:
+6. **[10 points]** Implement the function: ```successors(self, D2)``` to generate the successors of a game state. The parameter D2 indicates whether it is the D2 team's turn. During each turn for a team, the robot 1 will move first and then the robot 2, meaning that if the first robot leaves a position, that position is open for the robot's teammate on its move. This function should yield a tuple where the first element is the movements of the two robots (a dictionary with keys of the robots and their next positions), as well as a copy of the new game map after these moves are performed. For the `FlagCaptureGraph` graph defined previously, we expect the following outputs:
 
-```python
->>> for move, game in graph.successors(D2 = True):
-...     print(move)
-...     printmap(game)
-... 
-{'D2_1': 'east', 'D2_2': 'south'}
-☐   ➀   ☐   ☐   
-               
-☐   ☐   ☐   ☐   
-               
-➁   ☐   ☐   ❶   
-               
-☐   ☐   ⚐   ❷  
-{'D2_1': 'east', 'D2_2': 'north'}
-➁   ➀   ☐   ☐   
-               
-☐   ☐   ☐   ☐   
-               
-☐   ☐   ☐   ❶   
-               
-☐   ☐   ⚐   ❷  
-{'D2_1': 'east', 'D2_2': 'east'}
-☐   ➀   ☐   ☐   
-               
-☐   ➁   ☐   ☐   
-               
-☐   ☐   ☐   ❶   
-               
-☐   ☐   ⚐   ❷  
-``` 
-```python
->>> for move, game in graph.successors(D2 = False):
-...     print(move)
-...     printmap(game)
-... 
-{'Q5_1': 'north', 'Q5_2': 'north'}
-➀   ⚑   ☐   ☐   
-               
-➁   ☐   ☐   ❶   
-               
-☐   ☐   ☐   ❷   
-               
-☐   ☐   ⚐   ☐   
-{'Q5_1': 'north', 'Q5_2': 'west'}
-➀   ⚑   ☐   ☐   
-               
-➁   ☐   ☐   ❶   
-               
-☐   ☐   ☐   ☐   
-               
-☐   ☐   ❷   ☐  
-{'Q5_1': 'west', 'Q5_2': 'north'}
-➀   ⚑   ☐   ☐   
-               
-➁   ☐   ☐   ☐   
-               
-☐   ☐   ❶   ❷   
-               
-☐   ☐   ⚐   ☐  
-{'Q5_1': 'west', 'Q5_2': 'west'}
-➀   ⚑   ☐   ☐   
-               
-➁   ☐   ☐   ☐   
-               
-☐   ☐   ❶   ☐   
-               
-☐   ☐   ❷   ☐ 
-``` 
+	```python
+	>>> for move, game in graph.successors(D2 = True):
+	...     print(move)
+	...     printmap(game)
+	... 
+	{'D2_1': 'east', 'D2_2': 'south'}
+	☐   ➀   ☐   ☐   
+	               
+	☐   ☐   ☐   ☐   
+	               
+	➁   ☐   ☐   ❶   
+	               
+	☐   ☐   ⚐   ❷  
+	{'D2_1': 'east', 'D2_2': 'north'}
+	➁   ➀   ☐   ☐   
+	               
+	☐   ☐   ☐   ☐   
+	               
+	☐   ☐   ☐   ❶   
+	               
+	☐   ☐   ⚐   ❷  
+	{'D2_1': 'east', 'D2_2': 'east'}
+	☐   ➀   ☐   ☐   
+	               
+	☐   ➁   ☐   ☐   
+	               
+	☐   ☐   ☐   ❶   
+	               
+	☐   ☐   ⚐   ❷  
+	``` 
+	```python
+	>>> for move, game in graph.successors(D2 = False):
+	...     print(move)
+	...     printmap(game)
+	... 
+	{'Q5_1': 'north', 'Q5_2': 'north'}
+	➀   ⚑   ☐   ☐   
+	               
+	➁   ☐   ☐   ❶   
+	               
+	☐   ☐   ☐   ❷   
+	               
+	☐   ☐   ⚐   ☐   
+	{'Q5_1': 'north', 'Q5_2': 'west'}
+	➀   ⚑   ☐   ☐   
+	               
+	➁   ☐   ☐   ❶   
+	               
+	☐   ☐   ☐   ☐   
+	               
+	☐   ☐   ❷   ☐  
+	{'Q5_1': 'west', 'Q5_2': 'north'}
+	➀   ⚑   ☐   ☐   
+	               
+	➁   ☐   ☐   ☐   
+	               
+	☐   ☐   ❶   ❷   
+	               
+	☐   ☐   ⚐   ☐  
+	{'Q5_1': 'west', 'Q5_2': 'west'}
+	➀   ⚑   ☐   ☐   
+	               
+	➁   ☐   ☐   ☐   
+	               
+	☐   ☐   ❶   ☐   
+	               
+	☐   ☐   ❷   ☐ 
+	``` 
 
-## Step 3: Define your utility evaluate function [25 points]
+## 3. Define your utility evaluate function [25 points]
 
 This part is open-ended, you should come up with a method to evaluate the utilities of the game. The evaluate function will have impact on the performance of your robot and we will use the official method to play a game with your algorithm as the autograder. We will give your robots some advantages in the test cases and if your algorithm could beat us in 20 rounds, you could get the points.
 
-## Step 4: Implement Minimax algorithm with alpha-beta pruning [30 points]
+## 4. Implement Minimax algorithm with alpha-beta pruning [30 points]
 
 In this part, you will utilize your knowledge of alpha-beta minimax algorithm to help the R2D2s find out the optimal movements.
 
@@ -365,6 +367,3 @@ speed = 0.4
 time = 1.5
 action(record_game, Droids, speed, time)
 ```
-
-
-
