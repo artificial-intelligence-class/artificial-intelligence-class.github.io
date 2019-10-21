@@ -12,19 +12,14 @@ class FlagCaptureGraph:
         '''
         self.vertices --  store the vertices of the graph
         self.edges    --  store the edges of the graph
-        self.map      --  store the map of the gameboard
-        self.flag     -- store the positions of the flags
-        
-        self.state    --  dictionary to represent the state of each grid, keys = vertices, value = vertex value in map
-        self.robot_pos -- store the positions of the robots in a dictionary, keys = robot name, value = vertex
+        self.robots_pos -- store the positions of the robots in a dictionary, keys = robot name, value = vertex
+        self.robots_pos -- store the positions of the flags in a dictionary, keys = flag name, value = vertex
     '''
 
     def neighbors(self, u):
         '''
         Return the neighbors of a vertex.
-        If there is a robot occupying the neighboring vertex, 
-        do not return that vertex as a neighbor.
-    '''
+        '''
         pass
 
     def dist_between(self, u, v):
@@ -63,9 +58,7 @@ class FlagCaptureGraph:
     
     def perform_move(self, current_state, move_state):
     '''
-        Execute the movement of the robot and update the game accordingly, updating the state,
-        map, and robot_pos parameters. This function should also return the direction of the 
-        movement ("north", "south", "west", "east")
+        Execute the movement of the robot and update the game accordingly, updating robots_pos, flags_pos.
     '''
         pass
     
@@ -74,7 +67,7 @@ class FlagCaptureGraph:
         Generate the successors of a game state. The parameter D2 indicates whether it is 
         the D2 team's turn. This function should yield a tuple where the first element is
         the movements of the two robots (a dictionary with keys of the robots and their
-        next positions), as well as a copy of the new game map after these moves are performed.
+        move directions), as well as a copy of the new game object after these moves are performed.
     '''
         pass
 
