@@ -13,7 +13,7 @@ materials:
         url: r2d2_hw3.py
     - 
         name: R2D2 FlagCapture GUI
-        url: r2d2_navigation_gui.py 
+        url: r2d2_flag_capture_gui.zip
 submission_link: https://www.gradescope.com/courses/59562
 ---
 
@@ -79,7 +79,7 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 	```python
 	def __init__(self, V, E, robots_pos, flags_pos):
 		'''
-			self.vertices --  store the vertices of the graph
+			self.vertics --  store the vertices of the graph
 			self.edges   --  store the edges of the graph
 			self.robots_pos -- store the positions of the robots in a dictionary, keys = robot name, value = vertex
 			self.flags_pos    -- store the positions of the flags
@@ -87,7 +87,7 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 		pass
 	```
 
-	Given the inputs as shown, you should match the following outputs (the printmap function is already defined in our skeleton file):
+	Given the inputs as shown, you should match the following outputs (the printmap function is already defined in our skeleton file - ```➀```, ```➁``` represent for the R2D2s, ```❶```, ```❷``` represent for the R2Q5s, ```⚐```, ```⚑``` are the flags of D2's and Q5's ):
 
 	```python
 	>>> V, E = generate_map(4, 4, [])
@@ -135,7 +135,7 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 	```python
 	>>> graph.dist_between((0, 0), (0, 1))
 	1.0
-	>>> graph.dist_between((0, 0), (1, 0))
+	>>> graph.dist_between((0, 0), (1, 1))
 	None
 	```
 
@@ -155,7 +155,7 @@ In this step, we will define the basic rules of the game, such as how to update 
 	False
 
 	>>> robots_pos = {'D2_1': (3, 2), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
-	>>> graph = FlagCaptureGraph(V, E, state, flag)
+	>>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
 
 	>>> graph.game_over()
 	True
@@ -165,14 +165,21 @@ In this step, we will define the basic rules of the game, such as how to update 
 
 	```python
 	def islegalmove(self, move_robot, move_direction):
+	'''
+       Return a boolean indicating if a movement is legal
+	'''
 		pass
 	```
 	Keep using the given graph and robots/flags positions, you could expect the outputs shown below:
 
 	```python
+	>>> V, E = generate_map(4, 4, [])
+	>>> robots_pos = {'D2_1': (0, 0), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
+	>>> flags_pos = {'flag_D2': (3, 2), 'flag_Q5': (0, 1)}
+	>>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
+	
 	>>> graph.islegalmove('D2_1', 'east')
 	True
-
 	>>> graph.islegalmove('D2_1', 'south')
 	False
 	```
@@ -203,6 +210,10 @@ In this step, we will define the basic rules of the game, such as how to update 
 4. **[8 points]** Implement the function: ```perform_move(self, robot, direction)``` to execute the movement of the robot and update the game accordingly. This function takes in the name of the robot to move and its move direction. Make sure to update ```self.robot``` after execute a movement. 
 
 	```python
+	>>> V, E = generate_map(4, 4, [])
+	>>> robots_pos = {'D2_1': (0, 0), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
+	>>> flags_pos = {'flag_D2': (3, 2), 'flag_Q5': (0, 1)}
+	>>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
 	>>> printmap(graph)
 	➀   ⚑   ☐   ☐   
 	               
@@ -213,7 +224,7 @@ In this step, we will define the basic rules of the game, such as how to update 
 	☐   ☐   ⚐   ❷     
 
 	>>> graph.perform_move('D2_1', 'east')
-	>>> graph.printmap()
+	>>> printmap(graph)
 	☐   ➀   ☐   ☐   
 	               
 	➁   ☐   ☐   ☐   
@@ -239,6 +250,11 @@ In this step, we will define the basic rules of the game, such as how to update 
 6. **[10 points]** Implement the function: ```successors(self, D2)``` to generate the successors of a game state. The parameter D2 indicates whether it is the D2 team's turn. During each turn for a team, the robot 1 will move first and then the robot 2, meaning that if the first robot leaves a position, that position is open for the robot's teammate on its move. This function should yield a tuple where the first element is the movements of the two robots (a dictionary with keys of the robots and their next positions), as well as a copy of the new game map after these moves are performed. For the `FlagCaptureGraph` graph defined previously, we expect the following outputs:
 
 	```python
+	>>> V, E = generate_map(4, 4, [])
+	>>> robots_pos = {'D2_1': (0, 0), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
+	>>> flags_pos = {'flag_D2': (3, 2), 'flag_Q5': (0, 1)}
+	>>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
+
 	>>> for move, game in graph.successors(D2 = True):
 	...     print(move)
 	...     printmap(game)
@@ -307,11 +323,11 @@ In this step, we will define the basic rules of the game, such as how to update 
 	☐   ☐   ❷   ☐ 
 	``` 
 
-## 3. Define your utility evaluate function [25 points]
+## 3. Define Your Utility Evaluate Function [25 points]
 
-This part is open-ended, you should come up with a method to evaluate the utilities of the game. The evaluate function will have impact on the performance of your robot and we will use the official method to play a game with your algorithm as the autograder. We will give your robots some advantages in the test cases and if your algorithm could beat us in 20 rounds, you could get the points.
+This part is open-ended, you should come up with a method to evaluate the utilities of the game. The evaluate function will have great impact on the performance of your robot and we will use the official method to play a game with your algorithm as the autograder. We will give your robots some advantages in the test cases and if your algorithm could beat us in 20 rounds, you could get the points.
 
-## 4. Implement Minimax algorithm with alpha-beta pruning [30 points]
+## 4. Implement Minimax Algorithm with Alpha-beta Pruning [30 points]
 
 In this part, you will utilize your knowledge of alpha-beta minimax algorithm to help the R2D2s find out the optimal movements.
 
@@ -327,25 +343,40 @@ def get_best_move(self, D2, limit):
 	pass
 ```
 
-Here, you are free to use whatever implementation of the minimax algorithm you want. However, we require that in your get_best_move function, your return value be of the type ```best_move, best_value, total_leaves```, where best_move is the best move (syntax equivalent to the first element of the successors function), best_value is some value corresponding to what ```alpha_beta_max``` returns (won't be testing on this value), and total_leaves is the total number of leaf elements encountered, where a leaf is a finished goal state or any state after performing limit amount of moves. The return type of get_best_move should be a hint on what the return types of alpha_beta_max and alpha_beta_min should look like.
+Here, you are free to use whatever implementation of the minimax algorithm you want. However, we require that in your ```get_best_move``` function, your return value must be of the type ```best_move, best_value, total_leaves```, where ```best_move``` is the a movement (dictionary, syntax equivalent to the first element of the successors function), ```best_value``` is some value corresponding to what ```evaluate``` returns (won't be testing on this value), and ```total_leaves``` is the total number of leaf elements encountered, where a leaf is a finished goal state or any state after performing limit amount of moves. 
 
-The inputs to the get_best_move function are D2, a boolean representing if it is the D2 team's turn, and limit, an upper bound on the number of turns to take.
+The inputs to the ```get_best_move``` function are D2, a boolean representing if it is the D2 team's turn, and limit, an upper bound on the number of turns to take. Here is an example of what outputs should look like:
+
+```python
+>>> V, E = generate_map(4, 4, [])
+>>> robots_pos = {'D2_1': (0, 0), 'D2_2': (1, 0), 'Q5_1': (2, 3), 'Q5_2': (3, 3)}
+>>> flags_pos = {'flag_D2': (3, 2), 'flag_Q5': (0, 1)}
+>>> graph = FlagCaptureGraph(V, E, robots_pos, flags_pos)
+>>> graph.get_best_move(D2 = True, limit = 4)
+({'D2_1': 'east', 'D2_2': 'east'}, -3, 53)
+
+>>> graph.get_best_move(D2 = False, limit = 4)
+({'Q5_1': 'north', 'Q5_2': 'west'}, -3, 53)
+```
+Your results may be different because of your own method of evaluating the utilities. We won't grade on the results of your ```get_best_move```function. We will use the official method to play a game with your algorithm as the autograder. Your robots will be given some advantages in the test cases and if your algorithm could beat us in 20 rounds, you could get the points.
 
 After you finished the minimax algorithm, you could now play the game in a virtual environment.
 
-## Step 5: Play with your algorithm or fight with your friends [0 points]
-You will apply your algorithm in the real robots to visulize your program. The ```record_game``` store the movement of each robot and the data looks like:
+##5. Test Your Algorithm via the GUI
 
-```python
->>> record_game
-[('D2_1', 'east'), ('D2_2', 'south'), ('Q5_1', 'north'), ('Q5_2', 'west'), ('D2_1', 'east'), ('D2_2', 'south'), ('Q5_1', 'west'), ('Q5_2', 'west'), ('D2_1', 'east'), ('D2_2', 'north'), ('Q5_1', 'north'), ('Q5_2', 'west'), ('D2_1', 'south'), ('D2_2', 'east'), ('Q5_1', 'west')]
-```
+We provided a GUI for you to test your algorithm, [here](https://www.youtube.com/watch?v=WOnuUSAIqmQ) is a short video showing how to use the GUI. If you face any problems running the GUI, please post questions on piazza. The GUI has two interface shown as the figures below. The first one is for setting the system configurations. You could choose your scene or generate random scene given row and column number. You could also generate your own scene using the provided ```generate_scenes.py``` which will create a ```.sc``` file and will show up inside the pull-down menu of system configuration interface. The left side of game board interface shows the graph, the positions of the robots and flags. You need to follow the instructions on the right side to set the positions of the robots and flags at the begining. Then you could either press 1-9 to set the limit of your minimax algorithm to generate a best move for current robot or use arrow keys to play by yourself. By playing with your algorithm, you could find out whether your method to evaluate utilities is good or not.
+![](GUI.png)
+
+**[Find a partner]** You could also use the ```r2d2_flag_capture_gui_for_2_players.py``` to play the game with your friends to compare whose method is better. This GUI takes in two modules as imports and you could put your homework along with your friend's in the same folder and modify the file names just follow the instructions at the begining of the GUI file. Because we are also new to this project, there are still some bugs exist. If you face any problems using the GUI, please post questions on piazza and feel free to come to the OH.
+
+##6. Play a Real World Game
+
+You will apply your algorithm in the real robots to visulize your program. Remember to put your ```r2d2_hw3``` in the src folder of sphero project. 
 
 You could implement an API to send commands to the robots to perform the movements. First, you need to connect to all of your robots using the following code.  
 
 ```python
 >>> from client import DroidClient
->>> from r2d2_action import action
 ###replace with your own tags###
 >>> robot_tag = {'D2_1': 'D2-FE32', 'D2_2': 'D2-3493', 'Q5_1': 'Q5-D26A', 'Q5_2': 'Q5-B348'}
 >>> droid1 = DroidClient()
@@ -357,13 +388,22 @@ You could implement an API to send commands to the robots to perform the movemen
 ...     Droids[key].connect_to_droid(robot_tag[key])
 ```
 
-Then, you will write a function to convert the ```record_game``` to the rolling commands. ```r2d2_action(record_game, Droids, speed, time)``` takes in the movement of a game, all the droids, as well as the speed and time to control the distance of one movement.
+Then, you are required to write a function for rolling commands. ```r2d2_action(Droids, move_robot, move_direction, speed, time)``` takes in the ```Droids``` which is a dictionary storing all the droid clients. ```move_robot``` is the name of the robot to move and ```move_direction``` which could be ```'north'```, ```'south'```, ```'west'```, ```'east'``` and ```'stay'```. The ```speed``` and ```time``` should be adjusted according to the actual grid size. Note that the initial directions of the robots are all ```'north'``` which is 0 degree.
 
-When you finish all the tasks above, you could now let your robots play a real world game!
+When you finish all the tasks above, you could now let your robots play a real world game! Click [here](https://www.youtube.com/watch?v=RpySn8pJcXA) to watch a demo of how the game plays. Type the following commands in the terminal and you will see ```Enter a limit or choose the directions for the robots: ``` which is waiting for the inputs. You could either type a number or two directions as inputs.
 
 ```python
 ###adjust the speed and time according to the grid size###
-speed = 0.4
-time = 1.5
-action(record_game, Droids, speed, time)
+>>> speed = 0.4
+>>> time = 1.5
+>>> import r2d2_hw3 as X
+>>> V, E = X.generate_map(4, 4, [])
+>>> robots_pos = {'D2_1': (1, 2), 'D2_2': (2, 2), 'Q5_1': (1, 1), 'Q5_2': (2, 1)}
+>>> flags_pos = {'flag_D2': (1, 0), 'flag_Q5': (2, 3)}
+>>> graph = X.FlagCaptureGraph(V, E, robots_pos, flags_pos)
+>>> X.playgame(graph, Droids, D2 = True, speed, time)
+D2 Turn
+Enter a limit or choose the directions for the robots: 3
+Q5 Turn
+Enter a limit or choose the directions for the robots: north west
 ```
