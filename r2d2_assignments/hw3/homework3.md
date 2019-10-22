@@ -166,7 +166,7 @@ In this step, we will define the basic rules of the game, such as how to update 
 	```python
 	def islegalmove(self, move_robot, move_direction):
 		'''
-	       Return a boolean indicating if a movement is legal
+	        Return a boolean indicating if a movement is legal
 		'''
 		pass
 	```
@@ -333,14 +333,14 @@ In this part, you will utilize your knowledge of alpha-beta minimax algorithm to
 
 ```python
 def get_best_move(self, D2, limit):
-	'''
-	    D2 - boolean representing if it is the D2 team's turn
-	    limit - upper bound on the number of turns
-		
-	    Return the best move, its utility value, and the total number of leaves encountered as
-	    (best_move, best_value, total_leaves)
-	'''
-	pass
+    '''
+        D2 - boolean representing if it is the D2 team's turn
+        limit - upper bound on the number of turns
+    	
+        Return the best move, its utility value, and the total number of leaves encountered as
+        (best_move, best_value, total_leaves)
+    '''
+    pass
 ```
 
 Here, you are free to use whatever implementation of the minimax algorithm you want. However, we require that in your ```get_best_move``` function, your return value must be of the type ```best_move, best_value, total_leaves```, where ```best_move``` is the a movement (dictionary, syntax equivalent to the first element of the successors function), ```best_value``` is some value corresponding to what ```evaluate``` returns (won't be testing on this value), and ```total_leaves``` is the total number of leaf elements encountered, where a leaf is a finished goal state or any state after performing limit amount of moves. 
