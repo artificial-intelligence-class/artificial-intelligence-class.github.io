@@ -32,11 +32,6 @@ class FlagCaptureGraph:
     ##############################################
     ##                  Part 2                  ##
     ##############################################
-    def copy(self):
-        '''
-        Return a deep copy of the current FlagCaptureGraph object
-        '''
-        pass
     def game_over(self):
         '''
         Return a boolean indicating if the game is over.
@@ -62,6 +57,12 @@ class FlagCaptureGraph:
         '''
         pass
 
+    def copy(self):
+        '''
+        Return a deep copy of the current FlagCaptureGraph object
+        '''
+        pass
+        
     def successors(self, D2):
         '''
         Generate the successors of a game state. The parameter D2 indicates whether it is 

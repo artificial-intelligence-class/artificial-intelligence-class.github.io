@@ -161,13 +161,13 @@ In this step, we will define the basic rules of the game, such as how to update 
 	True
 	```
 
-2. **[4 points]** ```islegalmove``` returns a boolean indicating if a movement is legal. The move direction includes 'north', 'south', 'east', 'west'. The robot shoult move within the game board and could only move to the neighbors of current grid. If there is a robot occupied at the grid you try to move, this movement will not be not legal.
+2. **[4 points]** ```islegalmove(self, move_robot, move_direction)``` should return a boolean indicating if a movement is legal. The move direction includes 'north', 'south', 'east', 'west'. The robot shoult move within the game board and could only move to the neighbors of current grid. If there is a robot occupied at the grid you try to move, this movement will not be not legal.
 
 	```python
 	def islegalmove(self, move_robot, move_direction):
-	'''
-       Return a boolean indicating if a movement is legal
-	'''
+		'''
+	       Return a boolean indicating if a movement is legal
+		'''
 		pass
 	```
 	Keep using the given graph and robots/flags positions, you could expect the outputs shown below:
@@ -207,7 +207,7 @@ In this step, we will define the basic rules of the game, such as how to update 
 	['stay']
 	```
 
-4. **[8 points]** Implement the function: ```perform_move(self, robot, direction)``` to execute the movement of the robot and update the game accordingly. This function takes in the name of the robot to move and its move direction. Make sure to update ```self.robot``` after execute a movement. 
+4. **[8 points]** Implement the function ```perform_move(self, move_robot, move_direction)``` to execute the movement of the robot and update the game accordingly. This function takes in the name of the robot to move and its move direction. Make sure to update ```self.robot``` after execute a movement. 
 
 	```python
 	>>> V, E = generate_map(4, 4, [])
@@ -334,11 +334,11 @@ In this part, you will utilize your knowledge of alpha-beta minimax algorithm to
 ```python
 def get_best_move(self, D2, limit):
 	'''
-		D2 - boolean representing if it is the D2 team's turn
-		limit - upper bound on the number of turns
+	    D2 - boolean representing if it is the D2 team's turn
+	    limit - upper bound on the number of turns
 		
-		Return the best move, its utility value, and the total number of leaves encountered as
-		(best_move, best_value, total_leaves)
+	    Return the best move, its utility value, and the total number of leaves encountered as
+	    (best_move, best_value, total_leaves)
 	'''
 	pass
 ```
@@ -368,14 +368,18 @@ We provided a GUI for you to test your algorithm, [here](https://www.youtube.com
 <center>
 <img src="GUI.png" class="img-responsive"/>
 </center>
+<br/>
 
-**[Find a partner]** You could also use the ```r2d2_flag_capture_gui_for_2_players.py``` to play the game with your friends to compare whose method is better. This GUI takes in two modules as imports and you could put your homework along with your friend's in the same folder and modify the file names just follow the instructions at the begining of the GUI file. Because we are also new to this project, there are still some bugs exist. If you face any problems using the GUI, please post questions on piazza and feel free to come to the OH.
+**[Find an opponent]** Now, the following part can allow you to have some more fun!
+
+You could also use the ```r2d2_flag_capture_gui_for_2_players.py``` to play the game with another team to compare whose method is better. This GUI can take in two modules as imports. So you could put your code along with your friend's in the same folder and modify the file names following the instructions at the begining of the GUI file. Since we are also new to this project, there might still be some bugs. If you find anything not working properly, please feel free to let us know. Also, if you face any problems using the GUI, please post questions on piazza and feel free to come to the OH. However, please do not collaborate with your opponent team on the code. Sorry that we have to stress this all the time. But, you are meant to have a contest againt your opponent team other than collaboration.
 
 ## 6. Play a Real World Game
 
-You will apply your algorithm in the real robots to visulize your program. Remember to put your ```r2d2_hw3``` in the src folder of sphero project. 
+For more fun, you could apply your algorithm in real robots to visulize your program! <br/>
 
-You could implement an API to send commands to the robots to perform the movements. First, you need to connect to all of your robots using the following code.  
+*Note:* remember to put your ```r2d2_hw3``` in the src folder of sphero project. 
+Then you could implement an API to send commands to the robots to perform the movements. First, you need to connect to all of your robots using the following code.  
 
 ```python
 >>> from client import DroidClient
