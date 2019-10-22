@@ -362,14 +362,16 @@ Your results may be different because of your own method of evaluating the utili
 
 After you finished the minimax algorithm, you could now play the game in a virtual environment.
 
-##5. Test Your Algorithm via the GUI
+## 5. Test Your Algorithm via the GUI
 
 We provided a GUI for you to test your algorithm, [here](https://www.youtube.com/watch?v=WOnuUSAIqmQ) is a short video showing how to use the GUI. If you face any problems running the GUI, please post questions on piazza. The GUI has two interface shown as the figures below. The first one is for setting the system configurations. You could choose your scene or generate random scene given row and column number. You could also generate your own scene using the provided ```generate_scenes.py``` which will create a ```.sc``` file and will show up inside the pull-down menu of system configuration interface. The left side of game board interface shows the graph, the positions of the robots and flags. You need to follow the instructions on the right side to set the positions of the robots and flags at the begining. Then you could either press 1-9 to set the limit of your minimax algorithm to generate a best move for current robot or use arrow keys to play by yourself. By playing with your algorithm, you could find out whether your method to evaluate utilities is good or not.
-![](GUI.png)
+<center>
+<img src="GUI.png" class="img-responsive"/>
+</center>
 
 **[Find a partner]** You could also use the ```r2d2_flag_capture_gui_for_2_players.py``` to play the game with your friends to compare whose method is better. This GUI takes in two modules as imports and you could put your homework along with your friend's in the same folder and modify the file names just follow the instructions at the begining of the GUI file. Because we are also new to this project, there are still some bugs exist. If you face any problems using the GUI, please post questions on piazza and feel free to come to the OH.
 
-##6. Play a Real World Game
+## 6. Play a Real World Game
 
 You will apply your algorithm in the real robots to visulize your program. Remember to put your ```r2d2_hw3``` in the src folder of sphero project. 
 
