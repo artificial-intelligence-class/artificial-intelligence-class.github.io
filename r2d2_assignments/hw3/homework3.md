@@ -372,11 +372,11 @@ We provided a GUI for you to test your algorithm, [here](https://www.youtube.com
 
 **[Find an opponent]** Now, the following part can allow you to have some more fun!
 
-You could also use the ```r2d2_flag_capture_gui_for_2_players.py``` to play the game with another team to compare whose method is better. This GUI can take in two modules as imports. So you could put your code along with your friend's in the same folder and modify the file names following the instructions at the begining of the GUI file. Since we are also new to this project, there might still be some bugs. If you find anything not working properly, please feel free to let us know. Also, if you face any problems using the GUI, please post questions on piazza and feel free to come to the OH. However, please do not collaborate with your opponent team on the code. Sorry that we have to stress this all the time. But, you are meant to have a contest againt your opponent team other than collaboration.
+You could also use the ```r2d2_flag_capture_gui_for_2_players.py``` to play the game with another team to compare whose method is better. This GUI can take in two modules as imports. So you could put your code along with your friend's in the same folder and modify the file names following the instructions at the begining of the GUI file. Since this is a newly designed project, there might still be some bugs. If you find anything not working properly, please feel free to let us know. Also, if you face any problems using the GUI, please post questions on piazza and feel free to come to the OH. However, please do not collaborate with your opponent team on the code. Sorry that we have to stress this all the time. But, you are meant to have a contest againt your opponent team other than collaboration.
 
 ## 6. Play a Real World Game
 
-For more fun, you could apply your algorithm in real robots to visulize your program! <br/>
+Still, for more fun, you could apply your algorithm in real robots to visulize your program! <br/>
 
 *Note:* remember to put your ```r2d2_hw3``` in the src folder of sphero project. 
 Then you could implement an API to send commands to the robots to perform the movements. First, you need to connect to all of your robots using the following code.  
