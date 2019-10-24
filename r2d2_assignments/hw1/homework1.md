@@ -224,7 +224,7 @@ python3
 ```python
 from client import DroidClient
 droid = DroidClient(autoconnect=False) 
-droid.connect_to_server('10.103.213.71') #Connect to the Raspberry Pi in CCB's office
+droid.connect_to_server('10.103.215.169') #Connect to the Raspberry Pi in CCB's office
 droid.scan() # Scan for droids.
 # Connect to your robot.
 droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your droid's ID
