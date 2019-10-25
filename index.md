@@ -88,10 +88,6 @@ Office hours
 Textbook
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
 
-<!-- Grading
-: 55% Homework Assignments
-: 45% Three Midterms -->
-
 
 Grading
 : 55% Homework Assignments
