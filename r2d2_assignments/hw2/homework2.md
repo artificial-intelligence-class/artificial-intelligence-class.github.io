@@ -74,7 +74,7 @@ Since this is an extra credit assignment, late submissions will not be accepted 
 ## 1. Implement a Graph [12 points]
 In order to solve a maze, we first need to create a representation of a maze to run our algorithms on. We will implement our maze as a graph, where each vertex represents a grid cell, and an edge between vertices represents the ability to traverse between those grid cells.
 
-There are many different ways we can implement a graph, and these design decisions will impact the running time of our algorithms. For this assignment, we will implement an undirected, unweighted graph with its edges stored as an adjacency list.
+There are many different ways we can implement a graph, and these design decisions will impact the running time of our algorithms. For this assignment, we will implement a directed, unweighted graph with its edges stored as an adjacency list.
 
 Implement a graph with the following interface: 
 
