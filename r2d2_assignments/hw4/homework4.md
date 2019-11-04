@@ -1,16 +1,16 @@
 ---
 layout: default
 img: new_robot_2x.png
-img_link: http://xkcd.com/2128/
-caption: New Robot
-title: CIS 521 Robot Excercise 1 "Using Python to Control R2D2" (Extra Credit)
+img_link: https://xkcd.com/149/
+caption: Natural Language Commands
+title: CIS 521 Robot Excercise 4 "Commanding Robots with Natural Language" (Extra Credit)
 active_tab: homework
-release_date: 2019-10-03
-due_date: 2019-10-24 23:59:00EDT
+release_date: 2019-11-12
+due_date: 2019-10-26 23:59:00EST
 materials:
     - 
       name: skeleton file
-      url: r2d2_hw1.py 
+      url: r2d2_hw4.py 
 submission_link: https://www.gradescope.com/courses/59562
 ---
 
@@ -50,6 +50,17 @@ You can download the materials for this assignment here:
 </ul>
 </div>
 {% endif %}
+
+Robot Excercise 4: Commanding Robots with Natural Language [XXX points]
+=============================================================
+
+## Instructions
+
+This assignment will focus on natural language processing (NLP).  NLP is a vibrant subfield of artificial intelligence.  One of the goals of NLP is to allow computers to understand commands spoken in human language.  This enables technologies like Amazon Alexa, Apple's Siri or Google's Assistant. 
+
+
+
+
 
 Word2vec is a very cool word embedding method that was developed by [Thomas Mikolov et al](https://www.aclweb.org/anthology/N13-1090) in 2013, as part of Google’s NLP team. You can read about it here, in [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). To summarize: one of the ways you could represent words that commonly occur around it. For example, words the may appear in a 2 word window around burger may include words like delicious, tasty, ate, king, etc., that would identify it with other closely related food items. Then, if we wanted to represent a word, we could count how many times a context word appears around it. However, if we suppose our vocabulary has size 10,000, then our vectors would be very sparse.
 One of the ways around this is to first fix a random size to the array, initialize random values, and then push target words closer to their context words.
