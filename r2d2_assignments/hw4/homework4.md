@@ -65,3 +65,9 @@ man is to king as woman is to [blank]
 
 However, one of the issues with word2vec is that it is not very good at capturing semantic meanings, and focuses more on context. For example, although front and ahead have similar semantic meanings, the similarity between Forward and front is 0.230, while the similarity between forward and ahead is 0.477. Similarly, one of the issues that word2vec runs into is that antonyms which have very similar context map onto similar vectors: the similarity between south and north is 0.967.
 One of the nice things about antonyms matching together though is that the word2vec vectors have a good idea what kind of thing you want them to do. For example, north and south are both cardinal directions, and kick and punch have a good similarity score. We will try to leverage this fact to match R2D2 commands to the category of commands they belong to.
+
+1. Magnitude
+
+In the first part of the assigment, you will play around with the [Magnitude](https://github.com/plasticityai/magnitude)  library.  You will use Magnitude to load a vector model trained using word2vec, and use it to manipulate and analyze the vectors. Please refer [here](https://github.com/plasticityai/magnitude#installation) for the installation guidelines.
+
+Refer to the [Using the Libary](https://github.com/plasticityai/magnitude#using-the-library) section and the [Querying](https://github.com/plasticityai/magnitude#querying) section to see how to import and use the methods found the in library.
