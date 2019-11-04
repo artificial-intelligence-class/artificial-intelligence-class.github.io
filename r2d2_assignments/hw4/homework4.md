@@ -51,12 +51,16 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-Word2vec is a very cool word embedding method that was developed by Thomas Mikolov et al. in 2013, as part of Google’s NLP team. You can read about it here, in Chapter 6 of this book. To summarize: one of the ways you could represent words that commonly occur around it. For example, words the may appear in a 2 word window around burger may include words like delicious, tasty, ate, king, etc., that would identify it with other closely related food items. Then, if we wanted to represent a word, we could count how many times a context word appears around it. However, if we suppose our vocabulary has size 10,000, then our vectors would be very sparse.
+Word2vec is a very cool word embedding method that was developed by [Thomas Mikolov et al](https://www.aclweb.org/anthology/N13-1090) in 2013, as part of Google’s NLP team. You can read about it here, in [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). To summarize: one of the ways you could represent words that commonly occur around it. For example, words the may appear in a 2 word window around burger may include words like delicious, tasty, ate, king, etc., that would identify it with other closely related food items. Then, if we wanted to represent a word, we could count how many times a context word appears around it. However, if we suppose our vocabulary has size 10,000, then our vectors would be very sparse.
 One of the ways around this is to first fix a random size to the array, initialize random values, and then push target words closer to their context words.
 One of the noteworthy things about the method is that it can be used to solve word analogy problems like:
+<p align="center">
 man is to king as woman is to [blank]
-The way that it they take the vectors representing king, man and woman and perform some vector arithmetic to produce a vector that is close to the expected answer:
-king−man+woman≈queenking−man+woman≈queen.
+ </p>
+ The way that it they take the vectors representing *king*, *man* and *woman* and perform some vector arithmetic to produce a vector that is close to the expected answer:
+  <p align="center">
+ $king−man+woman \approx queen$. 
+ </p>.
 
 
 However, one of the issues with word2vec is that it is not very good at capturing semantic meanings, and focuses more on context. For example, although front and ahead have similar semantic meanings, the similarity between Forward and front is 0.230, while the similarity between forward and ahead is 0.477. Similarly, one of the issues that word2vec runs into is that antonyms which have very similar context map onto similar vectors: the similarity between south and north is 0.967.
