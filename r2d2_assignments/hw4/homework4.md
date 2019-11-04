@@ -66,8 +66,16 @@ man is to king as woman is to [blank]
 However, one of the issues with word2vec is that it is not very good at capturing semantic meanings, and focuses more on context. For example, although front and ahead have similar semantic meanings, the similarity between Forward and front is 0.230, while the similarity between forward and ahead is 0.477. Similarly, one of the issues that word2vec runs into is that antonyms which have very similar context map onto similar vectors: the similarity between south and north is 0.967.
 One of the nice things about antonyms matching together though is that the word2vec vectors have a good idea what kind of thing you want them to do. For example, north and south are both cardinal directions, and kick and punch have a good similarity score. We will try to leverage this fact to match R2D2 commands to the category of commands they belong to.
 
-1. Magnitude
+#### Getting Started with Magnitude and Downloading data
 
-In the first part of the assigment, you will play around with the [Magnitude](https://github.com/plasticityai/magnitude)  library.  You will use Magnitude to load a vector model trained using word2vec, and use it to manipulate and analyze the vectors. Please refer [here](https://github.com/plasticityai/magnitude#installation) for the installation guidelines.
+In the first part of the assigment, you will play around with the [Magnitude](https://github.com/plasticityai/magnitude)  library.  You will use Magnitude to load a vector model trained using word2vec, and use it to manipulate and analyze the vectors. Please refer [here](https://github.com/plasticityai/magnitude#installation) for the installation guidelines. 
+In order to proceed further, you need to use the Medium Google-word2vec embedding model trained on Google News by using file `GoogleNews-vectors-negative300.magnitude` on eniac in `/home1/c/cis530/hw4_2019/vectors/`. ***WARNING, THIS FILE IS VERY LARGE, ~5GB
+. MAKE SURE YOU HAVE ENOUGH SPACE BEFORE DOWNLOADING***
+Once the file is downloaded, refer to the [Using the Libary](https://github.com/plasticityai/magnitude#using-the-library) section and the [Querying](https://github.com/plasticityai/magnitude#querying) section to see how to import and use the methods found in the library.
 
-Refer to the [Using the Libary](https://github.com/plasticityai/magnitude#using-the-library) section and the [Querying](https://github.com/plasticityai/magnitude#querying) section to see how to import and use the methods found the in library.
+#### Assignment Questions
+
+1.	What is the dimensionality of these word embeddings? Provide an integer answer.
+2.	What are the top-5 most similar words to couch (not including couch itself)?
+3.	According to the word embeddings, which of these words is not like the others? ['dodge_charger', 'ford_taurus', 'honda', 'lamborghini', 'tesla']
+4.	Solve the following analogy: american is to dollar as japanese is to x. (10 points)
