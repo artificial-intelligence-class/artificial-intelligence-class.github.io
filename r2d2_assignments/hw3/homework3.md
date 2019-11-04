@@ -54,12 +54,12 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-Robot Excercise 3: Flag Capture Game using a Minimax Algorithm [100 points]
+Robot Excercise 3: Flag Capture Using Minimax [100 points]
 =============================================================
 ## Preface
-The First Galactic Empire dispatched Darth Vader and their evil robot R2Q5 to distroy the base of Rebel Alliance. Our brave R2D2s will battle with the dark robots and capture the flag of Rebellion. We must also prevent the R2Q5s to capture the empire flag before us.
+The First Galactic Empire dispatched Darth Vader and their evil robot R2Q5 to distroy the base of Rebel Alliance. Our brave R2D2s will battle with the dark robots and reclaim the flag of Rebellion. We must also prevent the R2Q5s from capturing their empire flag before we get ours.
 
-May the force be with you, go ahead, R2D2s. 
+May the force be with you, R2D2s. 
 
 ## Instructions
 In this assignment, you will combine your knowledge of informed search algorithms with the adversarial search game tree to teach the R2D2s how to play optimally in a capture the flag game.
