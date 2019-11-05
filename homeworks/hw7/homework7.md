@@ -10,10 +10,10 @@ due_date: 2019-11-12 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homeworks/hw8/homework7.py 
+        url: homeworks/hw7/homework7.py 
     - 
         name: data sets (python file)
-        url: homeworks/hw8/homework7_data.py
+        url: homeworks/hw7/homework7_data.py
 submission_link: https://www.gradescope.com/courses/59562
 ---
 
