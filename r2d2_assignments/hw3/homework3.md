@@ -74,7 +74,7 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 
 ## 1. Create the Game Board [9 points]
 
-1. **[2 points]** Similar to the navigation game in the last extra credit exerecise, the game board in this assignment also takes in the vertices and edges to define a graph. Along with these two parameters, we also need to define the position of the robots and the flags. These location vertices will be passed to the constructor for our `FlagCaptureGraph` game.
+1. **[2 points]** Similar to the navigation game in the last extra credit exerecise, the game board in this assignment also takes in the vertices and edges **(Note: the edges are directional)** to define a graph. Along with these two parameters, we also need to define the position of the robots and the flags. These location vertices will be passed to the constructor for our `FlagCaptureGraph` game.
 
 	```python
 	def __init__(self, V, E, robots_pos, flags_pos):
