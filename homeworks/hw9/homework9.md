@@ -32,17 +32,6 @@ Warning: this assignment is out of date.  It may still need to be updated for th
 <!-- End of check whether the assignment is up to date -->
 
 
-<!-- Check whether the assignment is up to date -->
-{% capture today %}{{'now' | date: '%B %d, %Y'}}{% endcapture %}
-{% capture release_date %}{{page.release_date | date: '%B %d, %Y'}}{% endcapture %}
-{% if release_date > today %} 
-<div class="alert alert-danger">
-Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
-</div>
-{% endif %}
-<!-- End of check whether the assignment is up to date -->
-
-
 <div class="alert alert-info">
 This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
 </div>
