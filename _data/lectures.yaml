@@ -399,10 +399,14 @@
   type: no_lecture
 -
   date: 2019-11-05
-  slides: 
-  title:  Machine Learning&colon; Perceptrons
+  slides: 15-Naive-Bayes-and-Perceptron.pdf
+  title:  Machine Learning&colon; Naieve Bayes and Perceptrons
   recording: 
   readings:     
+    - 
+      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
+      authors: Russell and Norvig
+      optional: false 
     - 
       title: AIMA Chapter 18 "Learning from Examples" (18.6.3)
       authors: Russell and Norvig
