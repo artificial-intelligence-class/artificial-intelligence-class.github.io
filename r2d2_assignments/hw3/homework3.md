@@ -161,7 +161,7 @@ In this step, we will define the basic rules of the game, such as how to update 
 	True
 	```
 
-2. **[4 points]** ```islegalmove(self, move_robot, move_direction)``` should return a boolean indicating if a movement is legal. The move direction includes 'north', 'south', 'east', 'west'. The robot shoult move within the game board and could only move to the neighbors of current grid. If there is a robot occupied at the grid you try to move, this movement will not be not legal.
+2. **[4 points]** ```islegalmove(self, move_robot, move_direction)``` should return a boolean indicating if a movement is legal. The move direction includes 'north', 'south', 'east', 'west'. The robot shoult move within the game board and could only move to the neighbors of current grid. If there is a robot occupied at the grid you try to move, this movement will not be legal.
 
 	```python
 	def islegalmove(self, move_robot, move_direction):
