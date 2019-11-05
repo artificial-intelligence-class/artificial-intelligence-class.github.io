@@ -10,10 +10,10 @@ due_date: 2019-11-19 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homeworks/hw7/homework7.py 
+        url: homeworks/hw8/homework8.py 
     - 
         name: Frankenstein (text file)
-        url: homeworks/hw7/frankenstein.txt
+        url: homeworks/hw8/frankenstein.txt
 submission_link: https://www.gradescope.com/courses/59562
 ---
 
@@ -63,7 +63,7 @@ Homework 8: Generate a Novel [100 points]
 
 In this assignment, you will gain experience working with Markov models on text.
 
-A skeleton file [homework7.py](homework7.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [homework8.py](homework8.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel.
 
