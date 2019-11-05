@@ -6,7 +6,7 @@ caption: Darth Vader Copyright&#58; Pinterest
 title: CIS 521 Robot Excercise 3 "Flag Capture Game" (Extra Credit)
 active_tab: homework
 release_date: 2019-10-24
-due_date: 2019-11-7 23:59:00EDT
+due_date: 2019-11-14 23:59:00EDT
 materials:
     - 
         name: skeleton file
