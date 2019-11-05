@@ -428,7 +428,7 @@
       title: Essence of Linear Algebra
 -
   date: 2019-11-05
-  title: HW6 due (Reinforcement Learning), HW7 released (Generate a novel)
+  title: HW6 due (Reinforcement Learning), HW7 released (Perceptrons)
   type: exam
 -
   date: 2019-11-07
@@ -469,7 +469,7 @@
       optional: false
 -
   date: 2019-11-12
-  title:  HW7 due (Generate a novel), HW8 released (Perceptrons)
+  title:  HW7 due (Generate a novel), HW8 released (Generate a novel)
   type: exam
 -
   date: 2019-11-14
@@ -514,7 +514,7 @@
       title: Neural Networks
 -
   date: 2019-11-19
-  title:  HW8 due (Perceptrons)
+  title:  HW8 due (Generate a novel)
   type: exam
 -
   date: 2019-11-21
