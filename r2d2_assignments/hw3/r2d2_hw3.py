@@ -10,7 +10,7 @@ class FlagCaptureGraph:
     ##############################################
     def __init__(self, V, E, robots_pos, flags_pos):
         '''
-        self.vertics --  store the vertices of the graph
+        self.vertics --  store the vertics of the graph
         self.edges    --  store the edges of the graph
         self.robots_pos -- store the positions of the robots in a dictionary, keys = robot name, value = vertex
         self.flags_pos -- store the positions of the flags in a dictionary, keys = flag name, value = vertex
