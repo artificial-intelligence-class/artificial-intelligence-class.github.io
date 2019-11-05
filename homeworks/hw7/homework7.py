@@ -1,5 +1,5 @@
 ############################################################
-# CIS 521: Homework 7
+# CIS 521: Homework 8
 ############################################################
 
 student_name = "Type your full name here."
@@ -8,45 +8,78 @@ student_name = "Type your full name here."
 # Imports
 ############################################################
 
+import homework8_data as data
+
 # Include your imports here, if any are used.
 
 
 
 ############################################################
-# Section 1: Markov Models
+# Section 1: Perceptrons
 ############################################################
 
-def tokenize(text):
-    pass
+class BinaryPerceptron(object):
 
-def ngrams(n, tokens):
-    pass
-
-class NgramModel(object):
-
-    def __init__(self, n):
+    def __init__(self, examples, iterations):
         pass
 
-    def update(self, sentence):
+    def predict(self, x):
         pass
 
-    def prob(self, context, token):
-        pass
+class MulticlassPerceptron(object):
 
-    def random_token(self, context):
+    def __init__(self, examples, iterations):
         pass
-
-    def random_text(self, token_count):
+    
+    def predict(self, x):
         pass
-
-    def perplexity(self, sentence):
-        pass
-
-def create_ngram_model(n, path):
-    pass
 
 ############################################################
-# Section 2: Feedback
+# Section 2: Applications
+############################################################
+
+class IrisClassifier(object):
+
+    def __init__(self, data):
+        pass
+
+    def classify(self, instance):
+        pass
+
+class DigitClassifier(object):
+
+    def __init__(self, data):
+        pass
+
+    def classify(self, instance):
+        pass
+
+class BiasClassifier(object):
+
+    def __init__(self, data):
+        pass
+
+    def classify(self, instance):
+        pass
+
+class MysteryClassifier1(object):
+
+    def __init__(self, data):
+        pass
+
+    def classify(self, instance):
+        pass
+
+class MysteryClassifier2(object):
+
+    def __init__(self, data):
+        pass
+
+    def classify(self, instance):
+        pass
+
+############################################################
+# Section 3: Feedback
 ############################################################
 
 feedback_question_1 = 0
