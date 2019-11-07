@@ -362,7 +362,7 @@
   date: 2019-10-29
   slides: 14-BN-wrapup-Naive-Bayes.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9428cfd3-a134-4b3a-b2c5-aab501264af0
-  title: Bayes' Nets wrap up and Naive Bayes
+  title: Bayes' Nets wrap up and Naieve Bayes
   readings:   
     - 
       title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
@@ -400,9 +400,9 @@
 -
   date: 2019-11-05
   slides: 15-Naive-Bayes-and-Perceptron.pdf
-  title:  Machine Learning&colon; Naive Bayes and Perceptrons
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c019251a-9eb1-4a5d-b55e-aab501264b45
-  readings:
+  title:  Machine Learning&colon; Naieve Bayes and Perceptrons
+  recording: 
+  readings:     
     - 
       title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
       authors: Russell and Norvig
@@ -436,31 +436,6 @@
   type: exam
 -
   date: 2019-11-07
-  title: Machine Learning&colon; Kernels and Clustering
-  slides: 16-Perceptron-wrapup-Kernels-and-Clustering.pdf
-  recording: 
-  readings:   
-    - 
-      title: AIMA Chapter 18 "Learning from Examples" (18.8)
-      authors: Russell and Norvig
-      optional: false
-    - 
-      title: Cluster analysis
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/Cluster_analysis
-      optional: false  
-    - 
-      title: k-Means Clustering
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/K-means_clustering
-      optional: false  
-    - 
-      title: Agglomerative Clustering
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/Hierarchical_clustering
-      optional: false  
--
-  date: 2019-11-12
   slides: 
   recording:
   title: NLP (Natural Language Processing)
@@ -477,9 +452,28 @@
       title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
       authors: Russell and Norvig
       optional: false 
+  videos:
+    - 
+      authors: Name Explain
+      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
+      title: Why is Junk Email Called Spam?
+    -
+      authors: Monty Python 
+      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
+      title: SPAM
 -
   date: 2019-11-12
-  title:  HW7 due (Perceptrons), HW8 released (Generate a Novel)
+  slides: 
+  title: Machine Learning&colon; Kernels and Clustering
+  recording: 
+  readings:   
+    - 
+      title: AIMA Chapter 18 "Learning from Examples" (18.8)
+      authors: Russell and Norvig
+      optional: false
+-
+  date: 2019-11-12
+  title:  HW7 due (Generate a novel), HW8 released (Generate a novel)
   type: exam
 -
   date: 2019-11-14
@@ -524,7 +518,7 @@
       title: Neural Networks
 -
   date: 2019-11-19
-  title:  HW8 due (Generate a Novel)
+  title:  HW8 due (Generate a novel)
   type: exam
 -
   date: 2019-11-21
