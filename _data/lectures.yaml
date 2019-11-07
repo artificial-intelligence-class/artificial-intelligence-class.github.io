@@ -437,8 +437,8 @@
 -
   date: 2019-11-07
   slides: 16-Vector-Space-Semantics.pdf
-  recording:
-  title: NLP (Natural Language Processing)
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b426d17e-a201-4f2d-bb3a-aab501264b66
+  title: Perceptrons wrap-up and NLP (Natural Language Processing)
   readings:
     -
       title: Chapter 3 "Language Modeling with N-Grams"
