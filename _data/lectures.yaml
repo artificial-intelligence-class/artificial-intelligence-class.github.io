@@ -473,7 +473,7 @@
       optional: false
 -
   date: 2019-11-12
-  title:  HW7 due (Generate a novel), HW8 released (Generate a novel)
+  title:  HW7 due (Perceptrons), HW8 released (Generate a Novel)
   type: exam
 -
   date: 2019-11-14
@@ -518,7 +518,7 @@
       title: Neural Networks
 -
   date: 2019-11-19
-  title:  HW8 due (Generate a novel)
+  title:  HW8 due (Generate a Novel)
   type: exam
 -
   date: 2019-11-21
