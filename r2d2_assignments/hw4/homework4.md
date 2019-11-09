@@ -198,11 +198,11 @@ Now that we have a good idea which categories our commands belong to, we have to
 
 1. **[15 points]** Using regex or word2vec vectors, populate the functions `def lightParser(command)` and `def directionParser(command):` to perform slot-filling for the predefined slots, given string input `command`. We will test these functions and give you full credit if you get above a 50% accuracy. These functions do not have to be perfect, but the better these functions are, the better your R2D2 will respond to your commands.
 
-For `lightParser`, the `holoEmit` and `logDisp` indicate whether the command references the holoemitter or the logic display. If the command wants to add (increase), or subtract (decrease) RGB values, those slots should be true. The `on` and `off` fields correspond to whether the lights should be turned on or off, and should also respond to words like "maximum." The `lights` slot should be a list of which lights the command refers to, either `front` or `back`, or both if you believe your command refers to both lights.
+    For `lightParser`, the `holoEmit` and `logDisp` indicate whether the command references the holoemitter or the logic display. If the command wants to add (increase), or subtract (decrease) RGB values, those slots should be true. The `on` and `off` fields correspond to whether the lights should be turned on or off, and should also respond to words like "maximum." The `lights` slot should be a list of which lights the command refers to, either `front` or `back`, or both if you believe your command refers to both lights.
 
-For `directionParser`, `increase` and `decrease` correspond to whether the command wants you to increase/decrease the speed, and `directions` correspond to a list of directions that appear in the command, in order. Directions should be one of `forward`, `back`, `left`, or `right`. Cardinal directions like "South" should map onto `back`, and "East" should map onto `right`, etc.
+    For `directionParser`, `increase` and `decrease` correspond to whether the command wants you to increase/decrease the speed, and `directions` correspond to a list of directions that appear in the command, in order. Directions should be one of `forward`, `back`, `left`, or `right`. Cardinal directions like "South" should map onto `back`, and "East" should map onto `right`, etc.
 
-Your functions should work like so:
+    Your functions should work like so:
 
     ```python
     >>> lightParser("Set your lights to maximum")
