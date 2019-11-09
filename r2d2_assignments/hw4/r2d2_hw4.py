@@ -8,18 +8,95 @@ student_name = "Type your full name here."
 # Imports
 ############################################################
 
-from client import DroidClient
-import time
-from random import shuffle
-import sys,tty,os,termios
+from pymagnitude import *
+import numpy as np
+import re
 
 ############################################################
-# Section 1: Natural Language Commands
+# Helper Functions
 ############################################################
 
+def loadTrainingSentences(file_path):
+    commandTypeToSentences = {}
 
+    with open(file_path, 'r') as fin:
+        for line in fin:
+            line = line.rstrip('\n')
+            if len(line.strip()) == 0 or "##" == line.strip()[0:2]:
+                continue
+            commandType, command = line.split(' :: ')
+            if commandType not in commandTypeToSentences:
+                commandTypeToSentences[commandType] = [command]
+            else:
+                commandTypeToSentences[commandType].append(command)
 
+    return commandTypeToSentences
 
+############################################################
+# Section 3: Intent Detection
+############################################################
+
+# Change this path to the location of your magnitude file
+path = "/Volumes/SD/hw4_2019/vectors/"
+vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude")
+
+def sentenceToWords(sentence):
+    pass
+
+def cosignSimilarity(vector1, vector2):
+    pass
+
+def calcSentenceEmbedding(sentence):
+    pass
+
+def sentenceToEmbeddings(commandTypeToSentences):
+    '''Returns a tuple of sentence embeddings and an index-to-(category, sentence)
+    dictionary.
+
+    Inputs:
+        commandTypeToSentences: A dictionary in the form returned by
+        loadTrainingSentences. Each key is a string '[category]Sentences' which
+        maps to a list of the sentences belonging to that category.
+
+    Let m = number of sentences.
+    Let n = dimension of vectors.
+
+    Returns: a tuple (sentenceEmbeddings, indexToSentence)
+        sentenceEmbeddings: A mxn numpy array where m[i:] containes the embedding
+        for sentence i.
+
+        indexToSentence: A dictionary with key: index i, value: (category, sentence).
+    '''
+    pass
+
+def closestSentence(sentence, sentenceEmbeddings):
+    '''Returns the index of the closest sentence to the input, 'sentence'.
+
+    Inputs:
+        sentence: A sentence
+
+        sentenceEmbeddings: An mxn numpy array, where m is the total number
+        of sentences and n is the dimension of the vectors.
+
+    Returns:
+        an integer i, where i is the row index in sentenceEmbeddings 
+        that contains the closest sentence to the input
+    '''
+    pass
+
+def getCategory(sentence, file_path):
+    '''Returns the supposed category of 'sentence'.
+
+    Inputs:
+        sentence: A sentence
+
+        file_path: path to a file containing r2d2 commands
+
+    Returns:
+        a string 'command', where 'command' is the category that the sentence
+        should belong to.
+    '''
+    pass
 
 
 ############################################################
