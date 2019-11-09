@@ -94,4 +94,27 @@ Once the file is downloaded, refer to the [Using the Libary](https://github.com/
 
 We have provided a file called `part2.txt` for you to submit answers to the questions above.
 
+## 3. Intent Detection [XXX points]
+
+In this section, we will try to leverage the individual word embeddings provided by word2vec using the Magnitude library, to try to detect the intent of random commands issued to the R2D2. Thus, given a input command, we want to find the category: `state`, `direction`, `light`, `animation`, `head`, or `grid`, to which it belongs to. One of the ways to do this is to create sentence/phrase embeddings out of the word embeddings we have.
+
+1. **[5 points]** Write a function `sentenceToWords(sentence)` that returns a list of the words in a sentence, given a string `sentence` as input. The words in the list should all be lower case. Note that some words commonly have punctuation marks inside them, such as “accident-prone”. Our function should treat hyphenated words as one word. However, when passing in sentences you can assume that hyphenated words will come in the form of “accident_prone”, where an underscore separates the word instead. There is also one more case where punctuation can be “inside” a word.
+
+2. **[5 points]** To determine how close two R2D2 commands are, we will need a method of determining the similarity of the two different vectors. We will use the cosign similarity metric. Recall from linear algebra that the dot product between two vectors v and w is:
+
+> dot-product($\vec{v}, \vec{w}) = \vec{v} \cdot \vec{w} = \sum_{i=1}^{N}{v_iw_i} = v_1w_1 +v_2w_2 +...+v_Nw_N$
+
+> The vector length of a vector c is defined as:
+
+> $\|\vec{v}\| = \sqrt{\sum_{i=1}^{N}{v_i^2}}$
+
+> And from linear algebra:
+
+> $\frac{\vec{v} \cdot \vec{w}}{\|\vec{v}\|\|\vec{w}\|} =  cos \Theta$
+
+Where here, $\Theta$ represents the angle between v and w.
+
+Implement a cosign similarity function `def cosignSimilarity(vector1, vector2) `, where given two numpy vectors of similar length (feel free to use the numpy library), you return the cosign of the angles between them. You can verify that this is the method that the Magnitude library uses as well, by querying two words from the Magnitude library and using your own function to find the similarity, and compare that to Magnitude’s .similarity() function.
+
+3. **[5 points]** Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` that takes a sentence and returns a vector embedding for that sentence. You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosign similarity.
 
