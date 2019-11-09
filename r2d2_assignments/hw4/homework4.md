@@ -98,7 +98,14 @@ We have provided a file called `part2.txt` for you to submit answers to the ques
 
 In this section, we will try to leverage the individual word embeddings provided by word2vec using the Magnitude library, to try to detect the intent of random commands issued to the R2D2. Thus, given a input command, we want to find the category: `state`, `direction`, `light`, `animation`, `head`, or `grid`, to which it belongs to. One of the ways to do this is to create sentence/phrase embeddings out of the word embeddings we have.
 
-1. **[5 points]** Write a function `sentenceToWords(sentence)` that returns a list of the words in a sentence, given a string `sentence` as input. The words in the list should all be lower case. Note that some words commonly have punctuation marks inside them, such as “accident-prone”. Our function should treat hyphenated words as one word. However, when passing in sentences you can assume that hyphenated words will come in the form of “accident_prone”, where an underscore separates the word instead. There is also one more case where punctuation can be “inside” a word.
+1. **[5 points]** Write a function `sentenceToWords(sentence)` that returns a list of the words in a sentence, given a string `sentence` as input. The words in the list should all be lower case. Note that some words commonly have punctuation marks inside them, such as “accident-prone”. Our function should treat hyphenated words as one word. However, when passing in sentences you can assume that hyphenated words will come in the form of “accident_prone”, where an underscore separates the word instead. There is also one more case where punctuation can be “inside” a word. Your function should work like so:
+
+    ```python
+    >>> sentenceToWords("Due to his limp, Jack is accident_prone.")
+    ['due', 'to', 'his', 'limp', 'jack', 'is', 'accident_prone']
+    >>> sentenceToWords("REALLY?!")
+    ['really']
+    ```
 
 2. **[5 points]** To determine how close two R2D2 commands are, we will need a method of determining the similarity of the two different vectors. We will use the cosign similarity metric. Recall from linear algebra that the dot product between two vectors v and w is:
 
@@ -115,17 +122,68 @@ In this section, we will try to leverage the individual word embeddings provided
 > Where here, $\Theta$ represents the angle between v and w.
 
    Implement a cosign similarity function `def cosignSimilarity(vector1, vector2)`, where given two numpy vectors of similar length (feel free to use the numpy library), you return the cosign of the angles between them. You can verify that this is the method that the Magnitude library uses as well, by querying two words from the Magnitude library and using your own function to find the similarity, and compare that to Magnitude’s .similarity() function.
+   
+    ```python
+    >>> from pymagnitude import *
+    >>> vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude")
+    ...
+    ```
+    
+    ```python
+    >>> cosignSimilarity(np.array([2, 0]), np.array([0, 1]))
+    0.0
+    >>> vectors.similarity("cat", "dog")
+    0.76094574
+    >>> cosignSimilarity(vectors.query("cat"), vectors.query("dog"))
+    0.76094574
+    ```
 
 3. **[5 points]** Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` that takes a sentence and returns a vector embedding for that sentence. You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosign similarity.
 
 4. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]Sentences` which map to a list of the sentences belonging to that category.
 
-    Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding, and row i of the array contains the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is category, such as “direction”,. The indexes of the matrix and the dictionary should match. i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary. The category should not contain the word `Sentences`.
+    Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding, and row i of the array contains the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is category, such as “direction”,. The order of the indices does not matter, but the indices of the matrix and the dictionary should match. i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary. The category should not contain the word `Sentences`.
+    
+    ```python
+    >>> trainingSentences = loadTrainingSentences("r2d2TrainingSentences.txt")
+    >>> sentenceEmbeddings, indexToSentence = sentenceToEmbeddings(trainingSentences)
+    >>> sentenceEmbeddings[14:]
+    array([[-0.05598213,  0.1943551 , -0.11834867, ..., -0.06152995,
+             0.08182373, -0.09995176],
+           [ 0.08825371,  0.11762686,  0.13814032, ..., -0.08913179,
+            -0.01735716, -0.11799385],
+           [ 0.0267941 ,  0.07393055,  0.16094553, ...,  0.01224081,
+             0.30259034, -0.27123183],
+           ...,
+           [ 0.10430418, -0.1844649 ,  0.23166019, ...,  0.03172258,
+             0.01876774,  0.08740467],
+           [ 0.35799584,  0.15163158,  0.20712882, ..., -0.02359562,
+             0.14265963, -0.31631052],
+           [ 0.18705991, -0.02135478,  0.36185202, ..., -0.30548167,
+             0.04913769, -0.20094341]])
+    >>> indexToSentence[14]
+    ('Turn to heading 30 degrees.', 'direction')
+    ```
 
-5. **[10 points]** Now, given an arbitrary input sentence, and an m by n matrix of sentence embeddings, write a function `closestSentence(sentence, sentenceEmbeddings)` that returns the index of the closest sentence to the input. This should be the row vector which is closest to the sentence vector of the input.
+5. **[10 points]** Now, given an arbitrary input sentence, and an m by n matrix of sentence embeddings, write a function `closestSentence(sentence, sentenceEmbeddings)` that returns the index of the closest sentence to the input. This should be the row vector which is closest to the sentence vector of the input. Depending on the indices of your implementation of `sentenceToEmbeddings(commandTypeToSentences)`, the following output may vary.
+
+    ```python
+    >>> sentenceEmbeddings, _ = sentenceToEmbeddings(loadTrainingSentences("r2d2TrainingSentences.txt"))
+    >>> closestSentence("Lights on.", sentenceEmbeddings)
+    32
+    ```
 
 6. **[30 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
 
     Simply finding the closest sentence and outputting that category will not be enough for this function. We suggest trying out a k-nearest neighbors approach, and scoring the neighbors in some way to find which category is the best fit. You can write new helper functions to help out. Which kind of words appear in almost all sentences and so are not a good way to distinguish sentence meanings?
-
+        
+    ```python
+    >>> getCategory("Turn your lights green.", "r2d2TrainingSentences.txt")
+    'light'
+    >>> getCategory("Drive forward for two feet.", "r2d2TrainingSentences.txt")
+    'direction'
+    >>> getCategory("Do not laugh at me.", "r2d2TrainingSentences.txt")
+    'no'
+    ```
+    
     Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers (30 points).
