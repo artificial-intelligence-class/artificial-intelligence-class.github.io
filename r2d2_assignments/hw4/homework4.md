@@ -51,6 +51,13 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
+For this assignment, you will edit and submit the following files:
+=============================================================
+
+- part1.txt
+- part2.txt
+- r2d2_hw4.py
+
 Robot Excercise 4: Commanding Robots with Natural Language [XXX points]
 =============================================================
 
