@@ -145,7 +145,7 @@ In this section, we will try to leverage the individual word embeddings provided
     Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding, and row i of the array contains the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is category, such as “direction”,. The order of the indices does not matter, but the indices of the matrix and the dictionary should match. i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary. The category should not contain the word `Sentences`.
     
     ```python
-    >>> trainingSentences = loadTrainingSentences("r2d2TrainingSentences.txt")
+    >>> trainingSentences = loadTrainingSentences("data/r2d2TrainingSentences.txt")
     >>> sentenceEmbeddings, indexToSentence = sentenceToEmbeddings(trainingSentences)
     >>> sentenceEmbeddings[14:]
     array([[-0.05598213,  0.1943551 , -0.11834867, ..., -0.06152995,
@@ -168,21 +168,21 @@ In this section, we will try to leverage the individual word embeddings provided
 5. **[10 points]** Now, given an arbitrary input sentence, and an m by n matrix of sentence embeddings, write a function `closestSentence(sentence, sentenceEmbeddings)` that returns the index of the closest sentence to the input. This should be the row vector which is closest to the sentence vector of the input. Depending on the indices of your implementation of `sentenceToEmbeddings(commandTypeToSentences)`, the following output may vary.
 
     ```python
-    >>> sentenceEmbeddings, _ = sentenceToEmbeddings(loadTrainingSentences("r2d2TrainingSentences.txt"))
+    >>> sentenceEmbeddings, _ = sentenceToEmbeddings(loadTrainingSentences("data/r2d2TrainingSentences.txt"))
     >>> closestSentence("Lights on.", sentenceEmbeddings)
     32
     ```
 
 6. **[30 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
 
-    Simply finding the closest sentence and outputting that category will not be enough for this function. We suggest trying out a k-nearest neighbors approach, and scoring the neighbors in some way to find which category is the best fit. You can write new helper functions to help out. Which kind of words appear in almost all sentences and so are not a good way to distinguish sentence meanings?
+    Simply finding the closest sentence and outputting that category may not be enough for this function. We suggest trying out a k-nearest neighbors approach, and scoring the neighbors in some way to find which category is the best fit. You can write new helper functions to help out. Which kind of words appear in almost all sentences and so are not a good way to distinguish sentence meanings?
         
     ```python
-    >>> getCategory("Turn your lights green.", "r2d2TrainingSentences.txt")
+    >>> getCategory("Turn your lights green.", "data/r2d2TrainingSentences.txt")
     'light'
-    >>> getCategory("Drive forward for two feet.", "r2d2TrainingSentences.txt")
+    >>> getCategory("Drive forward for two feet.", "data/r2d2TrainingSentences.txt")
     'direction'
-    >>> getCategory("Do not laugh at me.", "r2d2TrainingSentences.txt")
+    >>> getCategory("Do not laugh at me.", "data/r2d2TrainingSentences.txt")
     'no'
     ```
     
