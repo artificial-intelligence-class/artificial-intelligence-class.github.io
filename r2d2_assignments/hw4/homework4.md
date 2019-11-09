@@ -187,3 +187,11 @@ In this section, we will try to leverage the individual word embeddings provided
     ```
     
     Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers (30 points).
+    
+*For Extra Extra Credit*
+
+Take a look at this [online service](https://github.com/hanxiao/bert-as-service) which uses BERT. [BERT](https://arxiv.org/pdf/1810.04805.pdf) is one of the latest breakthroughs in NLP, and has broken previous state-of-the-art records on a number of tasks. With BERT, even without fine-tuning, you should easily be able to break through a 0.90 accuracy on our r2d2 test set. If you use BERT in your intent detection function `getCategory(sentence, file_path)`, either with Hanxiao's online service or in some other manner, we will manually give you extra extra credit.
+
+## 4. Slot filling [15 points]
+
+Now that we have a good idea which categories our commands belong to, we have to find a way to convert these commands to actions. This can be done via slot-filling, 
