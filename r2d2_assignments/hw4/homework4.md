@@ -194,4 +194,34 @@ Take a look at this [online service](https://github.com/hanxiao/bert-as-service)
 
 ## 4. Slot filling [15 points]
 
-Now that we have a good idea which categories our commands belong to, we have to find a way to convert these commands to actions. This can be done via slot-filling, 
+Now that we have a good idea which categories our commands belong to, we have to find a way to convert these commands to actions. This can be done via slot-filling, where given a natural language command we try to fill out slots corresponding to important values in the command. For example, given the slots NAME, RESTAURANT, TIME and HAS_RESERVED, and a command to a chat-bot such as "John wants to go to Olive Garden", the chat-bot should fill out the slots with values: {NAME: John, RESTAURANT: Olive Garden, TIME: N/A, HAS_RESERVED: False}, and then it can decide to either execute the command or ask for more information given the slot-values.
+
+1. **[15 points]** Using regex or word2vec vectors, populate the functions `def lightParser(command)` and `def directionParser(command):` to perform slot-filling for the predefined slots, given string input `command`. We will test these functions and give you full credit if you get above a 50% accuracy. These functions do not have to be perfect, but the better these functions are, the better your R2D2 will respond to your commands.
+
+For `lightParser`, the `holoEmit` and `logDisp` indicate whether the command references the holoemitter or the logic display. If the command wants to add (increase), or subtract (decrease) RGB values, those slots should be true. The `on` and `off` fields correspond to whether the lights should be turned on or off, and should also respond to words like "maximum." The `lights` slot should be a list of which lights the command refers to, either `front` or `back`, or both if you believe your command refers to both lights.
+
+For `directionParser`, `increase` and `decrease` correspond to whether the command wants you to increase/decrease the speed, and `directions` correspond to a list of directions that appear in the command, in order. Directions should be one of `forward`, `back`, `left`, or `right`. Cardinal directions like "South" should map onto `back`, and "East" should map onto `right`, etc.
+
+Your functions should work like so:
+
+    ```python
+    >>> lightParser("Set your lights to maximum")
+    {'holoEmit': False, 'logDisp': False, 'lights': ['front', 'back'], 'add': False, 'sub': False, 'off': False, 'on': True}
+    >>> lightParser("Increase the red RGB value of your front light by 50.")
+    {'holoEmit': False, 'logDisp': False, 'lights': ['front'], 'add': True, 'sub': False, 'off': False, 'on': False}
+    ```
+   
+    ```python
+    >>> directionParser("Increase your speed!")
+    {'increase': True, 'decrease': False, 'directions': []}
+    >>> directionParser("Go forward, left, right, and then East.")
+    {'increase': False, 'decrease': False, 'directions': ['forward', 'left', 'right', 'right']}
+    ```
+
+## GIVE YOUR R2D2 LIFE
+
+Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, just change the ID in line 14 of `robot_com.py` to the ID of your robot, and on the command line run `python3 robot_com.py`.
+
+Have fun! Try not to be too mean to your robot :).
+
+*For More Extra Extra Credit* Integrate the Google Voice IPO like so: ETC
