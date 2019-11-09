@@ -58,12 +58,9 @@ Robot Excercise 4: Commanding Robots with Natural Language [XXX points]
 
 This assignment will focus on natural language processing (NLP).  NLP is a vibrant subfield of artificial intelligence.  One of the goals of NLP is to allow computers to understand commands spoken in human language.  This enables technologies like Amazon Alexa, Apple's Siri or Google's Assistant. 
 
+Word2vec is a very cool word embedding method that was developed by [Thomas Mikolov et al](https://www.aclweb.org/anthology/N13-1090) in 2013, as part of Google’s NLP team. You can read about it here, in [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). To summarize: the intuition behind distributional word embeddings like Word2vec is that words that appear in similar contexts have similar meanings. Words that may appear in a 2 word window around burger may include words like delicious, tasty, ate, king, etc., that would identify it with other closely related food items that are also delicious, tasty, and ate, for example. Then, if we wanted to represent a word, we could count how many times a context word appears around it. Say when crawling over the entirety of Wikipedia, we find that the word "delicious" appears 6 times in total around the word "burger", we may have a 6 in the index for "delicious" in the vector for "burger". Our vectors can get really nasty with a vocabulary of size 10,000, not to mention that they would be very sparse as well.
+One of the ways around this is to first fix a size for the word vectors, initialize random values, and then push the vector representations of similar words together, using gradient descent to minimize some sort of distance function. More can be read about the methods the Word2vec strategy uses here: [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). Word2vec provides small, fixed-dimensional vector embeddings of words, trained on a corpus of Google News articles which contained about 100 billion words.
 
-
-
-
-Word2vec is a very cool word embedding method that was developed by [Thomas Mikolov et al](https://www.aclweb.org/anthology/N13-1090) in 2013, as part of Google’s NLP team. You can read about it here, in [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). To summarize: one of the ways you could represent words that commonly occur around it. For example, words the may appear in a 2 word window around burger may include words like delicious, tasty, ate, king, etc., that would identify it with other closely related food items. Then, if we wanted to represent a word, we could count how many times a context word appears around it. However, if we suppose our vocabulary has size 10,000, then our vectors would be very sparse.
-One of the ways around this is to first fix a random size to the array, initialize random values, and then push target words closer to their context words.
 One of the noteworthy things about the method is that it can be used to solve word analogy problems like:
 <p align="center">
 man is to king as woman is to [blank]
@@ -74,19 +71,27 @@ man is to king as woman is to [blank]
  </p>.
 
 
-However, one of the issues with word2vec is that it is not very good at capturing semantic meanings, and focuses more on context. For example, although front and ahead have similar semantic meanings, the similarity between Forward and front is 0.230, while the similarity between forward and ahead is 0.477. Similarly, one of the issues that word2vec runs into is that antonyms which have very similar context map onto similar vectors: the similarity between south and north is 0.967.
+Distributional word embeddings like Word2vec can run into the issue where antonyms, which have very similar contexts, map onto similar vectors: i.e., the similarity between "south" and "north" is 0.967.
 One of the nice things about antonyms matching together though is that the word2vec vectors have a good idea what kind of thing you want them to do. For example, north and south are both cardinal directions, and kick and punch have a good similarity score. We will try to leverage this fact to match R2D2 commands to the category of commands they belong to.
 
-#### Getting Started with Magnitude and Downloading data
+## 1. R2D2 Commands [10 points]
 
-In the first part of the assigment, you will play around with the [Magnitude](https://github.com/plasticityai/magnitude)  library.  You will use Magnitude to load a vector model trained using word2vec, and use it to manipulate and analyze the vectors. Please refer [here](https://github.com/plasticityai/magnitude#installation) for the installation guidelines. 
+Take a look at the file `r2d2TrainingSentences.txt`. We have 6 categories of commands, `state`, `direction`, `light`, `animation`, `head`, and `grid`. After reading these commands, we would realllyyyyyyy appreciate it if you could come up with 10 example sentences (distinct from the ones in `r2d2TrainingSentences.txt`), in a mix and match of these categories. Then, put these sentences in `part1.txt` in the syntax of the commands found in `r2d2TrainingSentences.txt`, where we have a `[category]Sentences :: Example sentence.` in each line. Do not worry about the punctuation of the sentence.
+
+## Getting Started with Magnitude and Downloading data
+
+To get accustomed with word2vec, you will play around with the [Magnitude](https://github.com/plasticityai/magnitude)  library.  You will use Magnitude to load a vector model trained using word2vec, and use it to manipulate and analyze the vectors. Please refer [here](https://github.com/plasticityai/magnitude#installation) for the installation guidelines. 
 In order to proceed further, you need to use the Medium Google-word2vec embedding model trained on Google News by using file `GoogleNews-vectors-negative300.magnitude` on eniac in `/home1/c/cis530/hw4_2019/vectors/`. ***WARNING, THIS FILE IS VERY LARGE, ~5GB
 . MAKE SURE YOU HAVE ENOUGH SPACE BEFORE DOWNLOADING***
 Once the file is downloaded, refer to the [Using the Libary](https://github.com/plasticityai/magnitude#using-the-library) section and the [Querying](https://github.com/plasticityai/magnitude#querying) section to see how to import and use the methods found in the library.
 
-#### Assignment Questions
+## 2. Assignment Questions [10 points]
 
 1.	What is the dimensionality of these word embeddings? Provide an integer answer.
-2.	What are the top-5 most similar words to couch (not including couch itself)?
-3.	According to the word embeddings, which of these words is not like the others? ['dodge_charger', 'ford_taurus', 'honda', 'lamborghini', 'tesla']
-4.	Solve the following analogy: american is to dollar as japanese is to x. (10 points)
+2.	What are the top-5 most similar words to `couch` (not including `couch` itself)?
+3.	According to the word embeddings, which of these words is not like the others? `['dodge_charger', 'ford_taurus', 'honda', 'lamborghini', 'tesla']`
+4.	Solve the following analogy: `american` is to `dollar` as `japanese` is to x.
+
+We have provided a file called `part2.txt` for you to submit answers to the questions above.
+
+
