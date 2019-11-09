@@ -98,6 +98,26 @@ def getCategory(sentence, file_path):
     '''
     pass
 
+############################################################
+# Section 4: Slot filling
+############################################################
+
+def lightParser(command):
+    # slot filler for lights
+    slots = {"holoEmit": False, "logDisp": False, "lights": [], "add": False, "sub": False, "off": False, "on": False}
+
+    ### YOUR CODE HERE ###
+
+    return slots
+
+def directionParser(command):
+    # slot filler for direction
+    slots = {"increase": False, "decrease": False, "directions": []}
+
+    ### YOUR CODE HERE ###
+
+    return slots
+
 
 ############################################################
 # Section XXX: Feedback
