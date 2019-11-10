@@ -103,7 +103,7 @@ Once the file is downloaded, refer to the [Using the Libary](https://github.com/
 
 We have provided a file called `part2.txt` for you to submit answers to the questions above.
 
-## 3. Intent Detection [65 points]
+## 3. Intent Detection [60 points]
 
 In this section, we will try to leverage the individual word embeddings provided by word2vec using the Magnitude library, to try to detect the intent of random commands issued to the R2D2. Thus, given a input command, we want to find the category: `state`, `direction`, `light`, `animation`, `head`, or `grid`, to which it belongs to. One of the ways to do this is to create sentence/phrase embeddings out of the word embeddings we have.
 
@@ -182,7 +182,7 @@ In this section, we will try to leverage the individual word embeddings provided
     32
     ```
 
-6. **[30 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
+6. **[25 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
 
     Simply finding the closest sentence and outputting that category may not be enough for this function. We suggest trying out a k-nearest neighbors approach, and scoring the neighbors in some way to find which category is the best fit. You can write new helper functions to help out. Also, which kind of words appear in almost all sentences and so are not a good way to distinguish between sentence meanings?
         
@@ -201,11 +201,11 @@ In this section, we will try to leverage the individual word embeddings provided
 
 Take a look at this [online service](https://github.com/hanxiao/bert-as-service) which uses BERT. [BERT](https://arxiv.org/pdf/1810.04805.pdf) is one of the latest breakthroughs in NLP, and has broken previous state-of-the-art records on a number of tasks. With BERT, even without fine-tuning, you should easily be able to achieve a 0.90 accuracy on our r2d2 test set. If you use BERT in your intent detection function `getCategory(sentence, file_path)`, either with Hanxiao's online service or in some other manner, we will manually give you extra extra credit.
 
-## 4. Slot filling [15 points]
+## 4. Slot filling [10 points]
 
 Now that we have a good idea which categories our commands belong to, we have to find a way to convert these commands to actions. This can be done via slot-filling, which fills slots in the natural language command corresponding to important values. For example, given the slots NAME, RESTAURANT, TIME and HAS_RESERVED, and a command to a chat-bot such as "John wants to go to Olive Garden", the chat-bot should fill out the slots with values: {NAME: John, RESTAURANT: Olive Garden, TIME: N/A, HAS_RESERVED: False}, and then it can decide to either execute the command or ask for more information given the slot-values.
 
-1. **[15 points]** Using regex or word2vec vectors, populate the functions `def lightParser(command)` and `def directionParser(command):` to perform slot-filling for the predefined slots, given string input `command`. We will test these functions and give you full credit if you get above a 50% accuracy. These functions do not have to be perfect, but the better these functions are, the better your R2D2 will respond to your commands.
+1. **[10 points]** Using regex or word2vec vectors, populate the functions `def lightParser(command)` and `def directionParser(command):` to perform slot-filling for the predefined slots, given string input `command`. We will test these functions and give you full credit if you get above a 50% accuracy. These functions do not have to be perfect, but the better these functions are, the better your R2D2 will respond to your commands.
 
     For `lightParser`, the `holoEmit` and `logDisp` indicate whether the command references the holoemitter or the logic display. If the command wants to add (increase), or subtract (decrease) RGB values, those slots should be true. The `on` and `off` fields correspond to whether the lights should be turned on or off, and should also respond to words like "maximum." The `lights` slot should be a list of which lights the command refers to, either `front` or `back`, or both if you believe your command refers to both lights.
 
@@ -235,7 +235,7 @@ Have fun! Try not to be too mean to your robot :).
 
 *For More Extra Extra Credit* Integrate Google Cloud Platform speech-to-text module so that you can command your robot using voice!
 
-## Voice IO
+## Voice IO [10 points]
 
 Put robot_com.py and audio_io.py under the src folder. robot_com.py supports command line IO to control your robot using natural English language. With the addition of audio_io.py, you are able to control your robot using voice!
 
