@@ -37,16 +37,18 @@ def loadTrainingSentences(file_path):
 ############################################################
 
 # Change this path to the location of your magnitude file
-path = "/Volumes/SD/hw4_2019/vectors/"
-vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude")
+vectors = Magnitude("/Volumes/SD/hw4_2019/vectors/GoogleNews-vectors-negative300.magnitude")
 
-def sentenceToWords(sentence):
+'''
+Given 2 vectors, return their cosine similarity
+'''
+def cos_similarity(vector1, vector2):
     pass
 
-def cosignSimilarity(vector1, vector2):
-    pass
-
-def calcSentenceEmbedding(sentence):
+'''
+Given a sentence in natural langauge, return its sentence embedding by averaging the values of all words along each dimension
+'''
+def calc_sentence_embedding(sentence):
     pass
 
 def sentenceToEmbeddings(commandTypeToSentences):
