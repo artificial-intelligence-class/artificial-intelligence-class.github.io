@@ -58,7 +58,7 @@ For this assignment, you will edit and submit the following files:
 - part2.txt
 - r2d2_hw4.py
 
-Robot Excercise 4: Commanding Robots with Natural Language [XXX points]
+Robot Excercise 4: Commanding Robots with Natural Language [100 points]
 =============================================================
 
 ## Instructions
@@ -103,7 +103,7 @@ Once the file is downloaded, refer to the [Using the Libary](https://github.com/
 
 We have provided a file called `part2.txt` for you to submit answers to the questions above.
 
-## 3. Intent Detection [XXX points]
+## 3. Intent Detection [65 points]
 
 In this section, we will try to leverage the individual word embeddings provided by word2vec using the Magnitude library, to try to detect the intent of random commands issued to the R2D2. Thus, given a input command, we want to find the category: `state`, `direction`, `light`, `animation`, `head`, or `grid`, to which it belongs to. One of the ways to do this is to create sentence/phrase embeddings out of the word embeddings we have.
 
@@ -227,10 +227,48 @@ Now that we have a good idea which categories our commands belong to, we have to
     {'increase': False, 'decrease': False, 'directions': ['forward', 'left', 'right', 'right']}
     ```
 
-## GIVE YOUR R2D2 LIFE
+## GIVE YOUR R2D2 LIFE [20 points]
 
 Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, just change the ID in line 14 of `robot_com.py` to the ID of your robot, and on the command line run `python3 robot_com.py`.
 
 Have fun! Try not to be too mean to your robot :).
 
-*For More Extra Extra Credit* Integrate the Google Voice IPO like so: ETC
+*For More Extra Extra Credit* Integrate Google Cloud Platform speech-to-text module so that you can command your robot using voice!
+
+## Voice IO
+
+Put robot_com.py and audio_io.py under the src folder. robot_com.py supports command line IO to control your robot using natural English language. With the addition of audio_io.py, you are able to control your robot using voice!
+
+To run command line IO, you need to install matplotlib:
+
+```
+pip3 install matplotlib
+```
+
+You also need to uncomment code in robot_com.py, change the robot serial ID with your own, start the server in one Terminal, cd into the src folder in another Terminal and type:
+
+```
+python3 robot_com.py
+```
+
+To run audio IO, you will need to install portaudio and pyaudio:
+
+```
+brew install portaudio
+pip3 install pyaudio
+```
+
+Next, you need an account with Google Cloud Platform (GCP). When you register a new account, you'll get $300 of free credits. You need to enable speech-to-text module, set up a new project and service account in your GCP account and get a service account key file (this is going to be in .json format). Rename it credentials.json and put it under the src folder. You may also need to install and set up Google Cloud SDK locally. Look up GCP's documentation for more details.
+
+As before, change the robot serial ID with your own in audio_io.py. Make sure you recomment the code in robot_com.py if you decide to use voice IO.
+
+To run voice IO, you need to start the server in one Terminal, cd into the src folder in another Terminal and type:
+
+```
+python3 audio_io.py
+```
+
+Notes:
+1. If you want to try audio IO, please try command line IO first.
+
+2. If you are able to successfully run audio_io.py, say your command (using voice!) and see if text appears in the Terminal. To end the session, simply say any sentence containing one of the following keywords: "exit", "quit", "bye" or "goodbye".
