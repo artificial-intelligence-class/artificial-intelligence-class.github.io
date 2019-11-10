@@ -111,17 +111,16 @@ In this section, we will try to leverage the individual word embeddings provided
 1. **[5 points]** Generate a list of the words in a sentence, given a string `sentence` as input. The words in the list should all be **lower case**. Note that some words commonly have punctuation marks inside them, such as “accident-prone”. Our function should treat **hyphenated words** as **one** word. However, when passing in sentences you can assume that hyphenated words will come in the form of “accident_prone”, where an **underscore** separates the word instead. There is also one more case where punctuation can be “inside” a word. Your function should work like so:
 
     ```
-    ("Due to his limp, Jack is accident_prone.")
+    "Due to his limp, Jack is accident_prone."
     becomes
     ['due', 'to', 'his', 'limp', 'jack', 'is', 'accident_prone']
     
-    sentenceToWords("REALLY?!")
+    "REALLY?!"
     becomes
     ['really']
     ```
     
 Now, implement the function `calc_sentence_embedding(sentence)` that takes a sentence, does normalization as above and returns a vector embedding for that sentence. You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosign similarity.
-    
 
 2. **[5 points]** To determine how close two R2D2 commands are, we will need a method of determining the similarity of the two different vectors. We will use the cosign similarity metric. Recall from linear algebra that the dot product between two vectors v and w is:
 
