@@ -58,7 +58,7 @@ For this assignment, you will edit and submit the following files:
 - part2.txt
 - r2d2_hw4.py
 
-Robot Excercise 4: Commanding Robots with Natural Language [XXX points]
+Robot Excercise 4: Commanding Robots with Natural Language [100 points]
 =============================================================
 
 ## Instructions
@@ -103,7 +103,7 @@ Once the file is downloaded, refer to the [Using the Libary](https://github.com/
 
 We have provided a file called `part2.txt` for you to submit answers to the questions above.
 
-## 3. Intent Detection [XXX points]
+## 3. Intent Detection [65 points]
 
 In this section, we will try to leverage the individual word embeddings provided by word2vec using the Magnitude library, to try to detect the intent of random commands issued to the R2D2. Thus, given a input command, we want to find the category: `state`, `direction`, `light`, `animation`, `head`, or `grid`, to which it belongs to. One of the ways to do this is to create sentence/phrase embeddings out of the word embeddings we have.
 
