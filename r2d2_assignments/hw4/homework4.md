@@ -227,7 +227,7 @@ Now that we have a good idea which categories our commands belong to, we have to
     {'increase': False, 'decrease': False, 'directions': ['forward', 'left', 'right', 'right']}
     ```
 
-## GIVE YOUR R2D2 LIFE [20 points]
+## GIVE YOUR R2D2 LIFE
 
 Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, just change the ID in line 14 of `robot_com.py` to the ID of your robot, and on the command line run `python3 robot_com.py`.
 
