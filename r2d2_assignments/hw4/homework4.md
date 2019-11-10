@@ -103,18 +103,24 @@ Once the file is downloaded, refer to the [Using the Libary](https://github.com/
 
 We have provided a file called `part2.txt` for you to submit answers to the questions above.
 
-## 3. Intent Detection [60 points]
+## 3. Intent Detection [55 points]
 
 In this section, we will try to leverage the individual word embeddings provided by word2vec using the Magnitude library, to try to detect the intent of random commands issued to the R2D2. Thus, given a input command, we want to find the category: `state`, `direction`, `light`, `animation`, `head`, or `grid`, to which it belongs to. One of the ways to do this is to create sentence/phrase embeddings out of the word embeddings we have.
 
-1. **[5 points]** Write a function `sentenceToWords(sentence)` that returns a list of the words in a sentence, given a string `sentence` as input. The words in the list should all be **lower case**. Note that some words commonly have punctuation marks inside them, such as “accident-prone”. Our function should treat **hyphenated words** as **one** word. However, when passing in sentences you can assume that hyphenated words will come in the form of “accident_prone”, where an **underscore** separates the word instead. There is also one more case where punctuation can be “inside” a word. Your function should work like so:
+1. **[5 points]** Generate a list of the words in a sentence, given a string `sentence` as input. The words in the list should all be **lower case**. Note that some words commonly have punctuation marks inside them, such as “accident-prone”. Our function should treat **hyphenated words** as **one** word. However, when passing in sentences you can assume that hyphenated words will come in the form of “accident_prone”, where an **underscore** separates the word instead. There is also one more case where punctuation can be “inside” a word. Your function should work like so:
 
-    ```python
-    >>> sentenceToWords("Due to his limp, Jack is accident_prone.")
+    ```
+    ("Due to his limp, Jack is accident_prone.")
+    becomes
     ['due', 'to', 'his', 'limp', 'jack', 'is', 'accident_prone']
-    >>> sentenceToWords("REALLY?!")
+    
+    sentenceToWords("REALLY?!")
+    becomes
     ['really']
     ```
+    
+Now, implement the function `calc_sentence_embedding(sentence)` that takes a sentence, does normalization as above and returns a vector embedding for that sentence. You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosign similarity.
+    
 
 2. **[5 points]** To determine how close two R2D2 commands are, we will need a method of determining the similarity of the two different vectors. We will use the cosign similarity metric. Recall from linear algebra that the dot product between two vectors v and w is:
 
@@ -147,9 +153,7 @@ In this section, we will try to leverage the individual word embeddings provided
     0.76094574
     ```
 
-3. **[5 points]** Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` that takes a sentence and returns a vector embedding for that sentence. You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosign similarity.
-
-4. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]Sentences` which map to a list of the sentences belonging to that category.
+3. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]Sentences` which map to a list of the sentences belonging to that category.
 
     Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding. Row i of the array should contain the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is a category, such as “direction”. The order of the indices does not matter, but the indices of the matrix and the dictionary should match i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary. The category should not contain the word `Sentences`.
     
@@ -174,7 +178,7 @@ In this section, we will try to leverage the individual word embeddings provided
     ('Turn to heading 30 degrees.', 'direction')
     ```
 
-5. **[10 points]** Now, given an arbitrary input sentence, and an m by n matrix of sentence embeddings, write a function `closestSentence(sentence, sentenceEmbeddings)` that returns the index of the closest sentence to the input. This should be the row vector which is closest to the sentence vector of the input. Depending on the indices of your implementation of `sentenceToEmbeddings(commandTypeToSentences)`, the following output may vary.
+4. **[10 points]** Now, given an arbitrary input sentence, and an m by n matrix of sentence embeddings, write a function `closestSentence(sentence, sentenceEmbeddings)` that returns the index of the closest sentence to the input. This should be the row vector which is closest to the sentence vector of the input. Depending on the indices of your implementation of `sentenceToEmbeddings(commandTypeToSentences)`, the following output may vary.
 
     ```python
     >>> sentenceEmbeddings, _ = sentenceToEmbeddings(loadTrainingSentences("data/r2d2TrainingSentences.txt"))
@@ -182,7 +186,7 @@ In this section, we will try to leverage the individual word embeddings provided
     32
     ```
 
-6. **[25 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
+5. **[25 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
 
     Simply finding the closest sentence and outputting that category may not be enough for this function. We suggest trying out a k-nearest neighbors approach, and scoring the neighbors in some way to find which category is the best fit. You can write new helper functions to help out. Also, which kind of words appear in almost all sentences and so are not a good way to distinguish between sentence meanings?
         
@@ -235,7 +239,7 @@ Have fun! Try not to be too mean to your robot :).
 
 *For More Extra Extra Credit* Integrate Google Cloud Platform speech-to-text module so that you can command your robot using voice!
 
-## Voice IO [10 points]
+## Voice IO [15 points]
 
 Put robot_com.py and audio_io.py under the src folder. robot_com.py supports command line IO to control your robot using natural English language. With the addition of audio_io.py, you are able to control your robot using voice!
 
