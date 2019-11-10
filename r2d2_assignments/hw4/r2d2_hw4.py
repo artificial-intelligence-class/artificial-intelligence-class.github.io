@@ -46,7 +46,7 @@ def cos_similarity(vector1, vector2):
     pass
 
 '''
-Given a sentence in natural langauge, return its sentence embedding by averaging the values of all words along each dimension
+Given a sentence in natural langauge, return its sentence embedding by summing the values of all words along each dimension
 '''
 def calc_sentence_embedding(sentence):
     pass
