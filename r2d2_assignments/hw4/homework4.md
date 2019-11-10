@@ -57,6 +57,7 @@ For this assignment, you will edit and submit the following files:
 - part1.txt
 - part2.txt
 - r2d2_hw4.py
+- audio_io.py
 
 Robot Excercise 4: Commanding Robots with Natural Language [100 points]
 =============================================================
