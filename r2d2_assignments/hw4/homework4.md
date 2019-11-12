@@ -235,7 +235,7 @@ Have fun! Try not to be too mean to your robot :).
 
 *For More Extra Extra Credit* Integrate Google Cloud Platform speech-to-text module so that you can command your robot using voice!
 
-## Voice IO
+## Voice IO [EC: 15 points]
 
 Put robot_com.py and audio_io.py under the src folder. robot_com.py supports command line IO to control your robot using natural English language. With the addition of audio_io.py, you are able to control your robot using voice!
 
