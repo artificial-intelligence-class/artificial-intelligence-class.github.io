@@ -426,10 +426,18 @@
       authors: Paul Anderson
       url: https://www.youtube.com/watch?v=HZh0A-lWSmY
       title: The Neuron
-    - 
+     - 
       authors: 3Blue1Brown
       url: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
       title: Essence of Linear Algebra
+    - 
+      authors: Name Explain
+      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
+      title: Why is Junk Email Called Spam?
+    -
+      authors: Monty Python 
+      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
+      title: SPAM
 -
   date: 2019-11-05
   title: HW6 due (Reinforcement Learning), HW7 released (Perceptrons)
@@ -437,8 +445,8 @@
 -
   date: 2019-11-07
   slides: 16-Vector-Space-Semantics.pdf
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b426d17e-a201-4f2d-bb3a-aab501264b66
-  title: Perceptrons wrap-up and NLP (Natural Language Processing)
+  recording:
+  title: NLP (Natural Language Processing)
   readings:
     -
       title: Chapter 3 "Language Modeling with N-Grams"
@@ -454,24 +462,50 @@
       optional: false 
   videos:
     - 
-      authors: Name Explain
-      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
-      title: Why is Junk Email Called Spam?
-    -
-      authors: Monty Python 
-      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
-      title: SPAM
+      title: Overview of distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=gtuhPq0Xyno&index=1&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 10 minutes
+    - 
+      title: Vector comparison for distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=LYH93YnhuyQ&t=304s&index=2&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 10 minutes
+    - 
+      title: Matrix reweighting for distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=WFySbJ3FGcM&index=3&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 16 minutes
 -
   date: 2019-11-12
-  slides: 
-  title: Machine Learning&colon; Kernels and Clustering
-  recording: 
-  readings:   
+  slides: 17-Vector-Space-Semantics-part-2.pdf
+  recording:
+  title: NLP part 2
+  readings:
+    -
+      title: Chapter 3 "Language Modeling with N-Grams"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/3.pdf
+    -
+      title: Chapter 6 "Vector Semantics"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
+  videos:
     - 
-      title: AIMA Chapter 18 "Learning from Examples" (18.8)
-      authors: Russell and Norvig
-      optional: false
--
+      title: Overview of distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=gtuhPq0Xyno&index=1&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 10 minutes
+    - 
+      title: Vector comparison for distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=LYH93YnhuyQ&t=304s&index=2&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 10 minutes
+    - 
+      title: Matrix reweighting for distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=WFySbJ3FGcM&index=3&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 16 minutes
   date: 2019-11-12
   title:  HW7 due (Perceptrons), HW8 released (Generate a Novel)
   type: exam
