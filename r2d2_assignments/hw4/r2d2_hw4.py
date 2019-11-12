@@ -102,18 +102,9 @@ def getCategory(sentence, file_path):
 # Section 4: Slot filling
 ############################################################
 
-'''
-Given a natural language light command, modify the corresponding slots
-'''
 def lightParser(command):
-    '''
-    Slots for light command
-    Explanation for each slot:
-    holo emitter
-    logical display
-    lights should have 4 possible states: [], ["front"], ["back"] or ["front", "back"]
-    add / sub refers to light intensity
-    on / off refers to whether light is on or off
+    '''Slots for light command
+    The slot "lights" can have any combination of "front"/"back"
     '''
     slots = {"holoEmit": False, "logDisp": False, "lights": [], "add": False, "sub": False, "off": False, "on": False}
 
@@ -121,15 +112,10 @@ def lightParser(command):
 
     return slots
 
-'''
-Given a natural language directional command, modify the corresponding slots
-'''
 def directionParser(command):
-    '''
-    Slots for directional command
-    Increase / decrease refers to robot moving speed. Directions should support sequential directional
-    commands in one sentence, such as "go straight and turn left". You may ignore special cases such as
-    "make a left before you come back"
+    '''Slots for directional command
+    Directions should support sequential directional commands in one sentence, such as "go straight and turn left". 
+    You may ignore special cases such as "make a left before you come back"
     '''
     slots = {"increase": False, "decrease": False, "directions": []}
 
