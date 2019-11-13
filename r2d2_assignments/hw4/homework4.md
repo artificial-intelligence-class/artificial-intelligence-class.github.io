@@ -98,7 +98,7 @@ One of the nice things about antonyms matching together though is that the word2
 
 ## 1. R2D2 Commands [10 points]
 
-Take a look at the file `r2d2TrainingSentences.txt` in the `data` folder. We have 6 categories of commands, `state`, `direction`, `light`, `animation`, `head`, and `grid`. After reading these commands, we would realllyyyyyyy appreciate it if you could come up with 10 example sentences (distinct from the ones in `r2d2TrainingSentences.txt`), in a mix and match of these categories. Then, put these sentences in `part1.txt` in the syntax of the commands found in `r2d2TrainingSentences.txt`, where we have a `[category]Sentences :: Example sentence.` in each line. Do not worry about the punctuation of the sentence.
+Take a look at the file `[r2d2TrainingSentences.txt](data/r2d2TrainingSentences.txt)` in the `data` folder. We have 6 categories of commands, `state`, `direction`, `light`, `animation`, `head`, and `grid`. After reading these commands, we would realllyyyyyyy appreciate it if you could come up with 10 example sentences (distinct from the ones in `r2d2TrainingSentences.txt`), in a mix and match of these categories. Then, put these sentences in `part1.txt` in the syntax of the commands found in `r2d2TrainingSentences.txt`, where we have a `[category]Sentences :: Example sentence.` in each line. Do not worry about the punctuation of the sentence.
 
 ## Getting Started with Magnitude and Downloading data
 
