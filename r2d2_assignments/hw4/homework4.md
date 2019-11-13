@@ -161,7 +161,7 @@ In this section, we will try to leverage the individual word embeddings provided
 4. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]Sentences` which map to a list of the sentences belonging to that category.
 
     ```python
-    >>> trainingSentences = r2d2_hw4_solutions.loadTrainingSentences("data/r2d2TrainingSentences.txt")
+    >>> trainingSentences = loadTrainingSentences("data/r2d2TrainingSentences.txt")
     >>> trainingSentences['animationSentences']
     ['Fall over', 'Scream', 'Make some noise', 'Laugh', 'Play an alarm']
     ```
