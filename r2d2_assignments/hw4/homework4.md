@@ -75,6 +75,7 @@ Word2vec is a very cool word embedding method that was developed by [Thomas Miko
 One of the ways around this is to first fix a size for the word vectors, initialize random values, and then push the vector representations of similar words together, using gradient descent to minimize some sort of distance function. More can be read about the methods the Word2vec strategy uses here: [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). Word2vec provides small, fixed-dimensional vector embeddings of words, trained on a corpus of Google News articles which contained about 100 billion words.
 
 One of the noteworthy things about the method is that it can be used to solve word analogy problems like:
+
 <p align="center">
 man is to king as woman is to [blank]
  </p>
@@ -136,8 +137,8 @@ In this section, we will try to leverage the individual word embeddings provided
 > $\frac{\vec{v} \cdot \vec{w}}{\|\vec{v}\|\|\vec{w}\|} =  cos \Theta$
 
 > Where here, $\Theta$ represents the angle between v and w.
-
-   Implement a cosine similarity function `def cosineSimilarity(vector1, vector2)`, where given two numpy vectors of similar length (feel free to use the numpy library), you return the cosine of the angles between them. You can verify that this is the method that the Magnitude library uses as well, by querying two words from the Magnitude library and using your own function to find the similarity, and compare that to Magnitude’s .similarity() function.
+\s\s
+    Implement a cosine similarity function `def cosineSimilarity(vector1, vector2)`, where given two numpy vectors of similar length (feel free to use the numpy library), you return the cosine of the angles between them. You can verify that this is the method that the Magnitude library uses as well, by querying two words from the Magnitude library and using your own function to find the similarity, and compare that to Magnitude’s .similarity() function.
    
     ```python
     >>> from pymagnitude import *
