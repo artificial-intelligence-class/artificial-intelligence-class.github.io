@@ -65,13 +65,30 @@ Robot Excercise 4: Commanding Robots with Natural Language [100 points]
 
 ## Instructions
 
-This assignment will focus on natural language processing (NLP).  NLP is a vibrant subfield of artificial intelligence.  One of the goals of NLP is to allow computers to understand commands spoken in human language.  This enables technologies like Amazon Alexa, Apple's Siri or Google's Assistant. 
+This assignment will focus on natural language processing (NLP).  NLP is a vibrant subfield of artificial intelligence.  One of the goals of NLP is to allow computers to understand commands spoken in human language.  This enables technologies like Amazon Alexa, Apple’s Siri or Google’s Assistant.
 
-In this assignment, we will examine some advanced uses of vector representations of words. To do so we will accomplish three tasks in this assignment:
+Instead of issuing a command to your droid in Python like
 
-+ Understand word vectors and how they are used
-+ Use individual word vectors to create sentence vectors, for the task of **Intent Detection**
-+ Convert intent recognized commands to robots actions, using **Slot Filling**
+```python
+droid.set_front_LED_color(255, 0, 0)
+time.sleep(2)
+droid.set_front_LED_color(204, 204, 205)
+time.sleep(2)
+droid.set_front_LED_color(123, 63, 0)
+time.sleep(2)
+```
+
+we are going to implement an NLP system that will allow you to say
+
+```python
+“Display the colors: red, periwinkle, and chocolate on your front LED for two seconds each.”
+```
+
+Our NLP system will have three main components:
+
+1. __An intent detection module__ that will take in a natural language command, and determine what type of command that a user wants the droid to do.  These will include things like direction commands, light commands, changing the position of its head, making sounds, etc.)
+2. __A slot-filler module__ will take the command, and extract the arguments that need to be included when translating the natural language command into its Python equivalent. For example, light comands will need arguments like *which light* to set, and *what color* to change it to.
+3. __A speech to text module__ that will allow you to speak into your computer’s microphone and have your voice command converted to text.  For this, we will use an API provided by Google.
 
 ## Background: Word Vectors
 
