@@ -132,6 +132,7 @@ Our NLP system will have three main components:
 2. __A slot-filler module__ will take the command, and extract the arguments that need to be included when translating the natural language command into its Python equivalent. For example, light comands will need arguments like *which light* to set, and *what color* to change it to.
 3. __A speech to text module__ that will allow you to speak into your computer’s microphone and have your voice command converted to text.  For this, we will use an API provided by Google.
 
+<!--
 ## Background: Word Vectors
 
 Word2vec is a very cool word embedding method that was developed by [Thomas Mikolov et al](https://www.aclweb.org/anthology/N13-1090) in 2013, as part of Google’s NLP team. You can read about it here, in [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). To summarize: the intuition behind distributional word embeddings like Word2vec is that words that appear in similar contexts have similar meanings. Words that may appear in a 2 word window around burger may include words like delicious, tasty, ate, king, etc., that would identify it with other closely related food items that are also delicious, tasty, and ate, for example. Then, if we wanted to represent a word, we could count how many times a context word appears around it. Say, when crawling over the entirety of Wikipedia, we find that the word "delicious" appears 6 times in total around the word "burger". Then, maybe we could have a 6 in the index for "delicious" in the vector for "burger". Our vectors can get really nasty with a vocabulary of size 10,000, not to mention that they would be very sparse as well.
@@ -153,27 +154,148 @@ Distributional word embeddings like Word2vec can run into the issue where antony
 
 One of the nice things about antonyms matching together though is that the word2vec vectors have a good idea what kind of thing you want them to do. For example, north and south are both cardinal directions, and kick and punch have a good similarity score. We will try to leverage this fact to match R2D2 commands to the category of commands they belong to.
 
-## 1. R2D2 Commands [10 points]
-
-Take a look at the file `[r2d2TrainingSentences.txt](data/r2d2TrainingSentences.txt)` in the `data` folder. We have 6 categories of commands, `state`, `direction`, `light`, `animation`, `head`, and `grid`. After reading these commands, we would realllyyyyyyy appreciate it if you could come up with 10 example sentences (distinct from the ones in `r2d2TrainingSentences.txt`), in a mix and match of these categories. Then, put these sentences in `part1.txt` in the syntax of the commands found in `r2d2TrainingSentences.txt`, where we have a `[category]Sentences :: Example sentence.` in each line. Do not worry about the punctuation of the sentence.
-
 ## Getting Started with Magnitude and Downloading data
 
 To get accustomed with word2vec, you will play around with the [Magnitude](https://github.com/plasticityai/magnitude)  library.  You will use Magnitude to load a vector model trained using word2vec, and use it to manipulate and analyze the vectors. Please refer [here](https://github.com/plasticityai/magnitude#installation) for the installation guidelines. 
 
-In order to proceed further, you need to use the Medium Google-word2vec embedding model trained on Google News by using file `GoogleNews-vectors-negative300.magnitude` on eniac in `/home1/c/cis530/hw4_2019/vectors/`. ***WARNING, THIS FILE IS VERY LARGE, ~5GB
-. MAKE SURE YOU HAVE ENOUGH SPACE BEFORE DOWNLOADING***
+In order to proceed further, you need to use the Medium Google-word2vec embedding model trained on Google News by using file `GoogleNews-vectors-negative300.magnitude` on eniac in `/home1/c/cis530/hw4_2019/vectors/`. *WARNING, THIS FILE IS VERY LARGE, ~5GB
+. MAKE SURE YOU HAVE ENOUGH SPACE BEFORE DOWNLOADING*
 
 Once the file is downloaded, refer to the [Using the Libary](https://github.com/plasticityai/magnitude#using-the-library) section and the [Querying](https://github.com/plasticityai/magnitude#querying) section to see how to import and use the methods found in the library.
 
-## 2. Assignment Questions [10 points]
+## Questions about Magnitude [10 points]
 
-1.	What is the dimensionality of these word embeddings? Provide an integer answer.
-2.	What are the top-5 most similar words to `couch` (not including `couch` itself)?
-3.	According to the word embeddings, which of these words is not like the others? `['dodge_charger', 'ford_taurus', 'honda', 'lamborghini', 'tesla']`
-4.	Solve the following analogy: `american` is to `dollar` as `japanese` is to x.
+1.  What is the dimensionality of these word embeddings? Provide an integer answer.
+2.  What are the top-5 most similar words to `couch` (not including `couch` itself)?
+3.  According to the word embeddings, which of these words is not like the others? `['dodge_charger', 'ford_taurus', 'honda', 'lamborghini', 'tesla']`
+4.  Solve the following analogy: `american` is to `dollar` as `japanese` is to x.
 
 We have provided a file called `part2.txt` for you to submit answers to the questions above.
+
+-->
+
+## 1. Natural Language Commands for R2D2 [10 points]
+
+We're going to begin this assignment by brainstorming different commands that we might like to give to our robot.  We'll take several factors into account:
+1. What actions can the robot perform?
+2. What are different ways that we can describe those actions?
+
+The type of actions that our R2D2s can perform are dictated by its Python API.  You can see a list of the commands in the API like this:
+
+```python
+from client import DroidClient
+droid = DroidClient() 
+droid.scan() 
+droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your droid's ID
+help(droid)
+````
+
+Let's group these commands into different groups.  We'll then brainstorm natural langauge commands for each group. 
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
+### Driving 
+
+```python
+enter_drive_mode(self)
+roll(self, speed, angle, time)
+turn(self, angle, **kwargs)
+update_position_vector(self, speed, angle, time)
+roll_time(self, speed, angle, time, **kwargs)
+roll_continuous(self, speed, angle, **kwargs)
+restart_continuous_roll(self)
+stop_roll(self, **kwargs) 
+```
+</div>
+
+
+<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
+### Head orientation
+
+```python
+rotate_head(self, angle)
+```
+</div>
+
+<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
+### Stance
+
+```python
+set_stance(self, stance, **kwargs)
+set_waddle(self, waddle)
+```
+</div>
+
+<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
+### Lights
+
+```python
+set_back_LED_color(self, r, g, b)
+set_front_LED_color(self, r, g, b)
+set_holo_projector_intensity(self, intensity)
+set_logic_display_intensity(self, intensity)
+```
+</div>
+
+<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
+### Animations and sounds
+```python
+animate(self, i, wait=3)
+play_sound(self, soundID, wait=4)
+```
+</div>
+
+<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
+### Connecting to droids
+
+```python
+connect_to_R2D2(self)
+connect_to_R2Q5(self)
+disconnect(self)
+scan(self)
+exit(self)
+```
+</div>
+
+<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
+### Variables about the droid's states
+
+```python
+angle = 0
+awake = False
+back_LED_color = (0, 0, 0)
+battery(self)
+connected_to_droid = False
+continuous_roll_timer = None
+drive_mode = False
+drive_mode_angle = None
+drive_mode_shift = None
+drive_mode_spreed = None
+front_LED_color = (0, 0, 0)
+holo_projector_intensity = 0
+logic_display_intensity = 0
+stance = 2
+waddling = False
+```
+</div>
+
+<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
+### Navigation on a grid
+
+In addition to the robot's API, we also implemented command to navigate in a grid/maze for the [Droid navigation assignment](hw2/homework2.html).  
+```python 
+Graph(vertics, edges)
+A_star(G, start, goal)
+path2move(path)
+```
+</div>
+</div>
+</div>
+
+Take a look at the file [r2d2TrainingSentences.txt](data/r2d2TrainingSentences.txt) in the `data` folder. We have 6 categories of commands, `state`, `direction`, `light`, `animation`, `head`, and `grid`. After reading these commands, we would realllyyyyyyy appreciate it if you could come up with 10 example sentences (distinct from the ones in `r2d2TrainingSentences.txt`), in a mix and match of these categories. Then, put these sentences in `part1.txt` in the syntax of the commands found in `r2d2TrainingSentences.txt`, where we have a `[category]Sentences :: Example sentence.` in each line. Do not worry about the punctuation of the sentence.
+
+
 
 ## 3. Intent Detection [65 points]
 
