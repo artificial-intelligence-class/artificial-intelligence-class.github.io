@@ -5,9 +5,10 @@ img: new_robot_2x.png
 img_link: https://xkcd.com/149/
 caption: Natural Language Commands
 title: CIS 521 Robot Excercise 4 "Commanding Robots with Natural Language" (Extra Credit)
-attribution: John Zhang, Calvin Zhenghua Chen, Yrvine Thelusma, and Chris Callison-Burch developed this homework assignment for UPenn's CIS 521 class in Fall 2019.
+attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2019 John Zhang, Calvin Zhenghua Chen, and Chris Callison-Burch with help from Yrvine Thelusma.
 release_date: 2019-11-19
 due_date: 2019-12-03 23:59:00EST
+submission_link: https://www.gradescope.com/courses/59562
 materials:
     - 
       name: skeleton file
@@ -21,7 +22,50 @@ materials:
     - 
       name: audio_io.py
       url: audio_io.py
-submission_link: https://www.gradescope.com/courses/59562
+readings:
+-
+   title: Dialogue Systems and Chatbots 
+   authors: Dan Jurafsky and James H. Martin
+   venue: Speech and Language Processing (3rd edition draft)
+   type: textbook
+   url: https://web.stanford.edu/~jurafsky/slp3/26.pdf
+-
+   title: Vector Semantics and Embeddings 
+   authors: Dan Jurafsky and James H. Martin
+   venue: Speech and Language Processing (3rd edition draft)
+   type: textbook
+   url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
+-
+   title: Linguistic Regularities in Continuous Space Word Representations
+   authors: Tomas Mikolov, Wen-tau Yih, Geoffrey Zweig
+   venue: NACL 2013
+   type: conference
+   url: https://www.aclweb.org/anthology/N13-1090/
+-
+   title: Magnitude&colon; A Fast, Efficient Universal Vector Embedding Utility Package
+   authors: Ajay Patel, Alexander Sands, Chris Callison-Burch, Marianna Apidianaki
+   venue: ACL 2018
+   type: conference
+   url: https://www.aclweb.org/anthology/D18-2021/
+-
+   title: Learning to Parse Natural Language Commands to a Robot Control System
+   authors: Cynthia Matuszek and Evan Herbst and Luke S. Zettlemoyer and Dieter Fox
+   venue: ISER 2012
+   type: conference
+   url: https://homes.cs.washington.edu/~lsz/papers/mhzf-iser12.pdf
+   optional: true
+-
+   title: Developing Skills for Amazon Alexa
+   authors: Amazon
+   type: developer tutorial
+   url: https://developer.amazon.com/en-US/alexa/alexa-skills-kit
+   optinal: true
+-
+   title: Getting Started with Rasa
+   authors: Rasa
+   type: developer tutorial
+   url: https://rasa.com/docs/getting-started/
+   optinal: true
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -311,3 +355,24 @@ Notes:
 1. If you want to try audio IO, please try command line IO first.
 
 2. If you are able to successfully run audio_io.py, say your command (using voice!) and see if text appears in the Terminal. To end the session, simply say any sentence containing one of the following keywords: "exit", "quit", "bye" or "goodbye".
+
+
+
+
+
+## Recommended readings
+
+<table>
+   {% for publication in page.readings %}
+    <tr>
+      <td>
+  {% if publication.url %}
+    <a href="{{ publication.url }}">{{ publication.title }}.</a>
+        {% else %}
+    {{ publication.title }}.
+  {% endif %}
+  {{ publication.authors }}.
+  {{ publication.venue }}  {{ publication.year }}.
+</td></tr>
+  {% endfor %}
+</table>
