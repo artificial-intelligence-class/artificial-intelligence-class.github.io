@@ -609,9 +609,9 @@ Take a look at this [online service](https://github.com/hanxiao/bert-as-service)
 -->
 
 
-## 3. How good is your intent detection [15 points]
+## 3. How good is your intent detection [5 points]
 
-CCB - todo
+TODO - write an accuracy function, evaluate your intent detection module on a test set.
 
 
 ## 4. Slot filling [15 points]
@@ -640,7 +640,7 @@ Now that we have a good idea which categories our commands belong to, we have to
     {'increase': False, 'decrease': False, 'directions': ['forward', 'left', 'right', 'right']}
     ```
 
-## GIVE YOUR R2D2 LIFE
+## 5. Try it out!
 
 Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, just change the ID in line 14 of `robot_com.py` to the ID of your robot, and on the command line run `python3 robot_com.py`.
 
@@ -652,9 +652,10 @@ Try out commands like:
 
 Have fun! Try not to be too mean to your robot :).
 
-*For More Extra Extra Credit* Integrate Google Cloud Platform speech-to-text module so that you can command your robot using voice!
 
-## Voice Input [Extra Credit: 15 points]
+## 6. Voice Input [Extra Extra Credit: 15 points]
+
+*For More Extra Extra Credit* Integrate Google Cloud Platform speech-to-text module so that you can command your robot using voice!
 
 Put robot_com.py and audio_io.py under the src folder. robot_com.py supports command line IO to control your robot using natural English language. With the addition of audio_io.py, you are able to control your robot using voice!
 
