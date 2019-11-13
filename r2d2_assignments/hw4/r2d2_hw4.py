@@ -43,7 +43,7 @@ vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude")
 def sentenceToWords(sentence):
     pass
 
-def cosignSimilarity(vector1, vector2):
+def cosineSimilarity(vector1, vector2):
     pass
 
 def calcSentenceEmbedding(sentence):
