@@ -20,7 +20,6 @@ materials:
     - 
       name: audio_io.py
       url: audio_io.py
-- 
 submission_link: https://www.gradescope.com/courses/59562
 ---
 
@@ -76,6 +75,9 @@ Robot Excercise 4: Commanding Robots with Natural Language [100 points]
 
 This assignment will focus on natural language processing (NLP).  NLP is a vibrant subfield of artificial intelligence.  One of the goals of NLP is to allow computers to understand commands spoken in human language.  This enables technologies like Amazon Alexa, Apple's Siri or Google's Assistant. 
 
++
++
++
 Word2vec is a very cool word embedding method that was developed by [Thomas Mikolov et al](https://www.aclweb.org/anthology/N13-1090) in 2013, as part of Google’s NLP team. You can read about it here, in [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). To summarize: the intuition behind distributional word embeddings like Word2vec is that words that appear in similar contexts have similar meanings. Words that may appear in a 2 word window around burger may include words like delicious, tasty, ate, king, etc., that would identify it with other closely related food items that are also delicious, tasty, and ate, for example. Then, if we wanted to represent a word, we could count how many times a context word appears around it. Say, when crawling over the entirety of Wikipedia, we find that the word "delicious" appears 6 times in total around the word "burger". Then, maybe we could have a 6 in the index for "delicious" in the vector for "burger". Our vectors can get really nasty with a vocabulary of size 10,000, not to mention that they would be very sparse as well.
 
 One of the ways around this is to first fix a size for the word vectors, initialize random values, and then push the vector representations of similar words together, using gradient descent to minimize some sort of distance function. More can be read about the methods the Word2vec strategy uses here: [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). Word2vec provides small, fixed-dimensional vector embeddings of words, trained on a corpus of Google News articles which contained about 100 billion words.
