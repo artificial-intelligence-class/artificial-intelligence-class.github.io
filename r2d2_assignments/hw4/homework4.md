@@ -11,6 +11,16 @@ materials:
     - 
       name: skeleton file
       url: r2d2_hw4.py 
+    - 
+      name: part1.txt
+      url: part1.txt
+    - 
+      name: part2.txt
+      url: part2.txt
+    - 
+      name: audio_io.py
+      url: audio_io.py
+- 
 submission_link: https://www.gradescope.com/courses/59562
 ---
 
@@ -57,6 +67,7 @@ For this assignment, you will edit and submit the following files:
 - part1.txt
 - part2.txt
 - r2d2_hw4.py
+- audio_io.py [optional]
 
 Robot Excercise 4: Commanding Robots with Natural Language [100 points]
 =============================================================
