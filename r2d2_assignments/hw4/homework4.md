@@ -80,7 +80,7 @@ time.sleep(2)
 
 we are going to implement an NLP system that will allow you to say
 
-```python
+```
 “Display the colors: red, periwinkle, and chocolate on your front LED for two seconds each.”
 ```
 
