@@ -126,20 +126,20 @@ In this section, we will try to leverage the individual word embeddings provided
 
 2. **[5 points]** To determine how close two R2D2 commands are, we will need a method of determining the similarity of the two different vectors. We will use the cosine similarity metric. Recall from linear algebra that the dot product between two vectors v and w is:
 
-> dot-product($\vec{v}, \vec{w}) = \vec{v} \cdot \vec{w} = \sum_{i=1}^{N}{v_iw_i} = v_1w_1 +v_2w_2 +...+v_Nw_N$
+<p align="center">
+    dot-product($\vec{v}, \vec{w}) = \vec{v} \cdot \vec{w} = \sum_{i=1}^{N}{v_iw_i} = v_1w_1 +v_2w_2 +...+v_Nw_N$
+</p>
+The vector length of a vector c is defined as:
+<p align="center">
+    $\|\vec{v}\| = \sqrt{\sum_{i=1}^{N}{v_i^2}}$
+</p>
+And from linear algebra:
+<p align="center">
+    $\frac{\vec{v} \cdot \vec{w}}{\|\vec{v}\|\|\vec{w}\|} =  cos \Theta$
+</p>
+Where here, $\Theta$ represents the angle between v and w.
 
-> The vector length of a vector c is defined as:
-
-> $\|\vec{v}\| = \sqrt{\sum_{i=1}^{N}{v_i^2}}$
-
-> And from linear algebra:
-
-> $\frac{\vec{v} \cdot \vec{w}}{\|\vec{v}\|\|\vec{w}\|} =  cos \Theta$
-
-> Where here, $\Theta$ represents the angle between v and w.
-
-**
-    Implement a cosine similarity function `def cosineSimilarity(vector1, vector2)`, where given two numpy vectors of similar length (feel free to use the numpy library), you return the cosine of the angles between them. You can verify that this is the method that the Magnitude library uses as well, by querying two words from the Magnitude library and using your own function to find the similarity, and compare that to Magnitude’s .similarity() function.
+   Implement a cosine similarity function `def cosineSimilarity(vector1, vector2)`, where given two numpy vectors of similar length (feel free to use the numpy library), you return the cosine of the angles between them. You can verify that this is the method that the Magnitude library uses as well, by querying two words from the Magnitude library and using your own function to find the similarity, and compare that to Magnitude’s .similarity() function.
    
     ```python
     >>> from pymagnitude import *
