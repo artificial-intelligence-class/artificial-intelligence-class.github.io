@@ -59,13 +59,13 @@ readings:
    authors: Amazon
    type: developer tutorial
    url: https://developer.amazon.com/en-US/alexa/alexa-skills-kit
-   optinal: true
+   optional: true
 -
    title: Getting Started with Rasa
    authors: Rasa
    type: developer tutorial
    url: https://rasa.com/docs/getting-started/
-   optinal: true
+   optional: true
 ---
 
 <!-- Check whether the assignment is ready to release -->
