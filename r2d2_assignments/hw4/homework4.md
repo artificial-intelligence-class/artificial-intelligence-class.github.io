@@ -70,18 +70,13 @@ This assignment will focus on natural language processing (NLP).  NLP is a vibra
 Instead of issuing a command to your droid in Python like
 
 ```python
-droid.set_front_LED_color(255, 0, 0)
-time.sleep(2)
-droid.set_front_LED_color(204, 204, 205)
-time.sleep(2)
-droid.set_front_LED_color(123, 63, 0)
-time.sleep(2)
+droid.roll(speed=0.5, heading=0, duration=2)
 ```
 
 we are going to implement an NLP system that will allow you to say
 
 ```
-“Display the colors: red, periwinkle, and chocolate on your front LED for two seconds each.”
+“Drive straight ahead for 2 seconds at half speed”
 ```
 
 Our NLP system will have three main components:
@@ -267,6 +262,12 @@ Now that we have a good idea which categories our commands belong to, we have to
 ## GIVE YOUR R2D2 LIFE
 
 Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, just change the ID in line 14 of `robot_com.py` to the ID of your robot, and on the command line run `python3 robot_com.py`.
+
+Try out commands such as:
+
+    ```
+    Change your lights to red, periwinkle, azure, green, and magenta.
+    ```
 
 Have fun! Try not to be too mean to your robot :).
 
