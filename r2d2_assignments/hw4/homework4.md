@@ -285,8 +285,8 @@ rotate_head(self, angle)
 
 ```python
 head_sentences = [
-"turn your head to face forward",
-"look behind you", ]
+"Turn your head to face forward.",
+"Look behind you.", ]
 ```
 </div>
 
@@ -321,7 +321,7 @@ waddling = False
 ```python
 state_sentences = [
 "What color is your front light?",
-"Tell me what color your front list is set to",
+"Tell me what color your front light is set to.",
 "Is your logic display on?",
 "What is your stance?"
 "What is your orientation?",
@@ -393,6 +393,7 @@ stance_sentences = [
 
 <div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
 ### Animations and sounds API
+
 ```python
 animate(self, i, wait=3)
 play_sound(self, soundID, wait=4)
@@ -403,6 +404,7 @@ play_sound(self, soundID, wait=4)
 
 <div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
 ### Animation sentences
+
 ```python
 animation_sentences = [
 "Fall over",
@@ -452,6 +454,8 @@ One of the amazing thing about language is that there are many different ways of
 ```python 
 "waddle",
 "totter",
+"todder",
+"teater"
 "start to waddle"
 "start waddling",
 "begin waddling",
@@ -474,16 +478,20 @@ Similarly, if we wanted it to stop, we could prefix the command above with a bun
 "stop acting like a duck",
 "don't walk like a duck",
 "stop teetering like that"
+"put your feet flat on the ground"
 ```
 
 The goal of this part of the assignment is to enumerate as many ways of saying a command as you can think of (minimum of 10 per command group).  We will use these to train an intent detection module. 
 
 
 
-## 3. Intent Detection [65 points]
+## 2. Intent Detection [65 points]
 
-In this section, we will try to leverage the individual word embeddings provided by word2vec using the Magnitude library, to try to detect the intent of random commands issued to the R2D2. Thus, given a input command, we want to find the category: `state`, `direction`, `light`, `animation`, `head`, or `grid`, to which it belongs to. One of the ways to do this is to create sentence/phrase embeddings out of the word embeddings we have.
+In this section, we will take in a new sentence that we have never seen before and try to classify what type of command the user wants to have the the robot execute.  To do so, we will measure the similarity of the user's new sentence with each of our training sentences.  We know what command group each of our training sentences belongs to, so we will find the nearest command sentences to the new sentence, and use their labels as the label of new sentence.  This is called $k$-nearest neighbor classification.   The label that we will assign will be `driving`, `light`, `head`, `state`, `connection`, `stance`, `animation`, or `grid`.
 
+To calculate how similar two sentences are, we are going to leverage word embeddings that we dicussed in lecture (and that are described in the [Vector Semantics and Embeddings chapter of the Jurafsky and Martin textbook]).  We will use with pre-trained word2vec embeddings, and use the Magnitude python package work with the word embeddings.  We will create sentence embeddings out of the word embeddings for the words in the sentence.
+
+<!--
 1. **[5 points]** Write a function `sentenceToWords(sentence)` that returns a list of the words in a sentence, given a string `sentence` as input. The words in the list should all be **lower case**. Note that some words commonly have punctuation marks inside them, such as “accident-prone”. Our function should treat hyphenated words as **one** word. However, when passing in sentences you can assume that hyphenated words will come in the form of “accident_prone”, where an underscore separates the word instead. There is also one more case where punctuation can be “inside” a word. Your function should work like so:
 
     ```python
@@ -492,23 +500,36 @@ In this section, we will try to leverage the individual word embeddings provided
     >>> sentenceToWords("REALLY?!")
     ['really']
     ```
-
-2. **[5 points]** To determine how close two R2D2 commands are, we will need a method of determining the similarity of the two different vectors. We will use the cosine similarity metric. Recall from linear algebra that the dot product between two vectors v and w is:
-
-    <p align="center">
-    dot-product($\vec{v}, \vec{w}) = \vec{v} \cdot \vec{w} = \sum_{i=1}^{N}{v_iw_i} = v_1w_1 +v_2w_2 +...+v_Nw_N$
-    </p>
-    The vector length of a vector c is defined as:
-    <p align="center">
-    $\|\vec{v}\| = \sqrt{\sum_{i=1}^{N}{v_i^2}}$
-    </p>
-    And from linear algebra:
-    <p align="center">
-    $\frac{\vec{v} \cdot \vec{w}}{\|\vec{v}\|\|\vec{w}\|} =  cos \Theta$
-    </p>
-    Where here, $\Theta$ represents the angle between v and w.
+-->
+1. **[5 points]** Write a tokenization function `sentenceToWords(text)` which takes as input a string of text and returns a list of tokens derived from that text. Here, we define a token to be a contiguous sequence of non-whitespace characters.  We will remove punctuation marks and convert the text to lowercase. *Hint: Use the built-in constant `string.punctuation`, found in the `string` module.*
     
-    Implement a cosine similarity function `cosineSimilarity(vector1, vector2)`, where given two numpy vectors of similar length (feel free to use the numpy library), you return the cosine of the angles between them. You can verify that this is the method that the Magnitude library uses as well, by querying two words from the Magnitude library and using your own function to find the similarity, and compare that to Magnitude’s .similarity() function.
+    ```python
+    >>> tokenize("  This is an example.  ")
+    ['this', 'is', 'an', 'example' ]
+    ```
+    
+    ```python
+    >>> tokenize("'Medium-rare,' she said.")
+    ['medium', 'rare', 'she', 'said']
+    ```
+
+2. **[5 points]** Implement the cosine similarity fuction to compute how similar two  vectors. Here is the mathmatical definition of the different parts of the cosine function.  The __dot product__ between two vectors $$\vec{v}$$ and $$\vec{w}$$ is:
+    
+    $$\text{dot-product}(\vec{v}, \vec{w}) = \vec{v} \cdot \vec{w} = \sum_{i=1}^{N}{v_iw_i} = v_1w_1 +v_2w_2 +...+v_Nw_N$$
+  
+    The __vector length__ of a vector $$\vec{v}$$  is defined as:
+
+    $$\|\vec{v}\| = \sqrt{\sum_{i=1}^{N}{v_i^2}}$$
+
+    The __cosine__ of the angles between  $$\vec{v}$$  and $$\vec{w}$$ is:
+    
+    $$cos \Theta = \frac{\vec{v} \cdot \vec{w}}{\|\vec{v}\|\|\vec{w}\|}$$
+
+    Here $$\Theta$$ represents the angle between $$\vec{v}$$ and $$\vec{w}$$.
+    
+    Implement a cosine similarity function `cosineSimilarity(vector1, vector2)`, where given two numpy vectors of similar length (feel free to use the [numpy library](https://numpy.org), you return the cosine of the angles between them. 
+
+    You can compare your implementation against the similarity method that the Magnitude library uses like this:
    
     ```python
     >>> from pymagnitude import *
@@ -517,11 +538,11 @@ In this section, we will try to leverage the individual word embeddings provided
     ```
     
     ```python
-    >>> cosineSimilarity(np.array([2, 0]), np.array([0, 1]))
+    >>> cosineSimilarity(np.array([2, 0]), np.array([0, 1])) # Your implementation
     0.0
-    >>> vectors.similarity("cat", "dog")
+    >>> vectors.similarity("cat", "dog") # Magnitude's implementation
     0.76094574
-    >>> cosineSimilarity(vectors.query("cat"), vectors.query("dog"))
+    >>> cosineSimilarity(vectors.query("cat"), vectors.query("dog")) # Your implementation
     0.76094574
     ```
 
@@ -580,10 +601,18 @@ In this section, we will try to leverage the individual word embeddings provided
     ```
     
     Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers (30 points).
-    
+
+<!--
 *For Extra Extra Credit*
 
 Take a look at this [online service](https://github.com/hanxiao/bert-as-service) which uses BERT. [BERT](https://arxiv.org/pdf/1810.04805.pdf) is one of the latest breakthroughs in NLP, and has broken previous state-of-the-art records on a number of tasks. With BERT, even without fine-tuning, you should easily be able to achieve a 0.90 accuracy on our r2d2 test set. If you use BERT in your intent detection function `getCategory(sentence, file_path)`, either with Hanxiao's online service or in some other manner, we will manually give you extra extra credit.
+-->
+
+
+## 3. How good is your intent detection [15 points]
+
+CCB - todo
+
 
 ## 4. Slot filling [15 points]
 
