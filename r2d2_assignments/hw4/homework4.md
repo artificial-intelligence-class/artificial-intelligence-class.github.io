@@ -67,9 +67,14 @@ Robot Excercise 4: Commanding Robots with Natural Language [100 points]
 
 This assignment will focus on natural language processing (NLP).  NLP is a vibrant subfield of artificial intelligence.  One of the goals of NLP is to allow computers to understand commands spoken in human language.  This enables technologies like Amazon Alexa, Apple's Siri or Google's Assistant. 
 
-+
-+
-+
+In this assignment, we will examine some advanced uses of vector representations of words. To do so we will accomplish three tasks in this assignment:
+
++ Understand word vectors and how they are used
++ Use individual word vectors to create sentence vectors, for the task of **Intent Detection**
++ Convert intent recognized commands to robots actions, using **Slot Filling**
+
+## Background: Word Vectors
+
 Word2vec is a very cool word embedding method that was developed by [Thomas Mikolov et al](https://www.aclweb.org/anthology/N13-1090) in 2013, as part of Google’s NLP team. You can read about it here, in [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). To summarize: the intuition behind distributional word embeddings like Word2vec is that words that appear in similar contexts have similar meanings. Words that may appear in a 2 word window around burger may include words like delicious, tasty, ate, king, etc., that would identify it with other closely related food items that are also delicious, tasty, and ate, for example. Then, if we wanted to represent a word, we could count how many times a context word appears around it. Say, when crawling over the entirety of Wikipedia, we find that the word "delicious" appears 6 times in total around the word "burger". Then, maybe we could have a 6 in the index for "delicious" in the vector for "burger". Our vectors can get really nasty with a vocabulary of size 10,000, not to mention that they would be very sparse as well.
 
 One of the ways around this is to first fix a size for the word vectors, initialize random values, and then push the vector representations of similar words together, using gradient descent to minimize some sort of distance function. More can be read about the methods the Word2vec strategy uses here: [Chapter 6 of this book](https://web.stanford.edu/~jurafsky/slp3/6.pdf). Word2vec provides small, fixed-dimensional vector embeddings of words, trained on a corpus of Google News articles which contained about 100 billion words.
@@ -245,6 +250,12 @@ Now that we have a good idea which categories our commands belong to, we have to
 ## GIVE YOUR R2D2 LIFE
 
 Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, just change the ID in line 14 of `robot_com.py` to the ID of your robot, and on the command line run `python3 robot_com.py`.
+
+Try out commands such as:
+
+    ```
+    Change your lights to red, periwinkle, azure, green, and magenta.
+    ```
 
 Have fun! Try not to be too mean to your robot :).
 
