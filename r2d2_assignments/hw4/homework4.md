@@ -1,12 +1,13 @@
 ---
 layout: default
+active_tab: homework
 img: new_robot_2x.png
 img_link: https://xkcd.com/149/
 caption: Natural Language Commands
 title: CIS 521 Robot Excercise 4 "Commanding Robots with Natural Language" (Extra Credit)
-active_tab: homework
-release_date: 2019-11-12
-due_date: 2019-10-26 23:59:00EST
+attribution: John Zhang, Calvin Zhenghua Chen, Yrvine Thelusma, and Chris Callison-Burch developed this homework assignment for UPenn's CIS 521 class in Fall 2019.
+release_date: 2019-11-19
+due_date: 2019-12-03 23:59:00EST
 materials:
     - 
       name: skeleton file
@@ -263,17 +264,17 @@ Now that we have a good idea which categories our commands belong to, we have to
 
 Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, just change the ID in line 14 of `robot_com.py` to the ID of your robot, and on the command line run `python3 robot_com.py`.
 
-Try out commands such as:
+Try out commands like:
 
-    ```
-    Change your lights to red, periwinkle, azure, green, and magenta.
-    ```
+```python
+"Change your lights to red, periwinkle, azure, green, and magenta."
+```
 
 Have fun! Try not to be too mean to your robot :).
 
 *For More Extra Extra Credit* Integrate Google Cloud Platform speech-to-text module so that you can command your robot using voice!
 
-## Voice IO [Extra Credit: 15 points]
+## Voice Input [Extra Credit: 15 points]
 
 Put robot_com.py and audio_io.py under the src folder. robot_com.py supports command line IO to control your robot using natural English language. With the addition of audio_io.py, you are able to control your robot using voice!
 
@@ -296,7 +297,7 @@ brew install portaudio
 pip3 install pyaudio
 ```
 
-Next, you need an account with Google Cloud Platform (GCP). When you register a new account, you'll get $300 of free credits. You need to enable speech-to-text module, set up a new project and service account in your GCP account and get a service account key file (this is going to be in .json format). Rename it credentials.json and put it under the src folder. You may also need to install and set up Google Cloud SDK locally. Look up GCP's documentation for more details.
+Next, you need to [sign up for a [Google Cloud Platform (GCP) account](https://cloud.google.com/gcp/). When you register a new account, you'll get $300 of free credits. You need to enable speech-to-text module, set up a new project and service account in your GCP account and get a service account key file (this is going to be in .json format). Rename it credentials.json and put it under the src folder. You may also need to install and set up Google Cloud SDK locally. Look up GCP's documentation for more details.
 
 As before, change the robot serial ID with your own in audio_io.py. Make sure you recomment the code in robot_com.py if you decide to use voice IO.
 
