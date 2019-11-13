@@ -123,7 +123,7 @@ droid.roll(speed=0.5, heading=0, duration=2)
 we are going to implement an NLP system that will allow you to say
 
 ```
-“Drive straight ahead for 2 seconds at half speed”
+"Drive straight ahead for 2 seconds at half speed"
 ```
 
 Our NLP system will have three main components:
@@ -190,7 +190,7 @@ droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your droid's ID
 help(droid)
 ````
 
-Let's put the API commands that help lists into different groups.  We'll also list natural langauge commands that might be associated with each group.  For the first part of this assignment, you will brainstrom 10 unique language commands and submit them.
+Let's put the API commands that help lists into different groups.  We'll also list natural langauge commands that might be associated with each group.  For the first part of this assignment, you will brainstrom 10 unique language commands for each group.  You will submit your sentences along with your code.
 
 <div class="container-fluid">
 <div class="row">
@@ -319,8 +319,9 @@ waddling = False
 ### Questions about variables 
 
 ```python
-state_questions = [
+state_sentences = [
 "What color is your front light?",
+"Tell me what color your front list is set to",
 "Is your logic display on?",
 "What is your stance?"
 "What is your orientation?",
@@ -445,7 +446,37 @@ grid_sentences = [
 </div>
 </div>
 
-Take a look at the file [r2d2TrainingSentences.txt](data/r2d2TrainingSentences.txt) in the `data` folder. We have 6 categories of commands, `state`, `direction`, `light`, `animation`, `head`, and `grid`. After reading these commands, we would realllyyyyyyy appreciate it if you could come up with 10 example sentences (distinct from the ones in `r2d2TrainingSentences.txt`), in a mix and match of these categories. Then, put these sentences in `part1.txt` in the syntax of the commands found in `r2d2TrainingSentences.txt`, where we have a `[category]Sentences :: Example sentence.` in each line. Do not worry about the punctuation of the sentence.
+For each of the 8 categories of commands pleaese create 10 unique sentences on how you might tell the robot to execute one or more of the actions in that category. You can add add your sentence lists to the code by adding them as arrays called `my_driving_sentences`, `my_light_sentences`, `my_head_sentences`, `my_state_sentences`, `my_connection_sentences`, `my_stance_sentences`, `my_animation_sentences`, and `my_grid_sentences`.
+
+One of the amazing thing about language is that there are many different ways of communicating the same intent.  For example, if we wanted to have our R2D2 start waddling, we could say 
+```python 
+"waddle",
+"totter",
+"start to waddle"
+"start waddling",
+"begin waddling",
+"set your stance to waddle",
+"try to stand on your tiptoes",
+"move up and down on your toes",
+"rock from side to side on your toes",
+"imitate a duck's walk",
+"walk like a duck"
+```
+Similarly, if we wanted it to stop, we could prefix the command above with a bunch of ways of saying stop:
+```python 
+"stop your waddle",
+"end your waddle",
+"don't waddle anymore",
+"stop waddling",
+"cease waddling",
+"stop standing on your toes",
+"stand still"
+"stop acting like a duck",
+"don't walk like a duck",
+"stop teetering like that"
+```
+
+The goal of this part of the assignment is to enumerate as many ways of saying a command as you can think of (minimum of 10 per command group).  We will use these to train an intent detection module. 
 
 
 
