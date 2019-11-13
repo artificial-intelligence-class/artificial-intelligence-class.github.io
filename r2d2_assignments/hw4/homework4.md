@@ -190,12 +190,12 @@ droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your droid's ID
 help(droid)
 ````
 
-Let's group these commands into different groups.  We'll then brainstorm natural langauge commands for each group. 
+Let's put the API commands that help lists into different groups.  We'll also list natural langauge commands that might be associated with each group.  For the first part of this assignment, you will brainstrom 10 unique language commands and submit them.
 
 <div class="container-fluid">
 <div class="row">
-<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
-### Driving 
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Driving API
 
 ```python
 enter_drive_mode(self)
@@ -209,26 +209,35 @@ stop_roll(self, **kwargs)
 ```
 </div>
 
-
-<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
-### Head orientation
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Driving sentences
 
 ```python
-rotate_head(self, angle)
+driving_sentences = [
+"Go forward for 2 feet, then turn right.",
+"North is at heading 50 degrees.",
+"Go North.",
+"Go East.",
+"Go South-by-southeast",
+"Run away!",
+"Turn to heading 30 degrees.",
+"Reset your heading to 0",
+"Turn to face North.",
+"Start rolling forward.",
+"Increase your speed by 50%.",
+"Turn to your right.",
+"Stop.",
+"Set speed to be 0.",
+"Set speed to be 20%",
+"Turn around", ]
 ```
 </div>
 
-<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
-### Stance
 
-```python
-set_stance(self, stance, **kwargs)
-set_waddle(self, waddle)
-```
-</div>
 
-<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
-### Lights
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Lights API
 
 ```python
 set_back_LED_color(self, r, g, b)
@@ -238,28 +247,53 @@ set_logic_display_intensity(self, intensity)
 ```
 </div>
 
-<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
-### Animations and sounds
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Light sentences
+
 ```python
-animate(self, i, wait=3)
-play_sound(self, soundID, wait=4)
+light_sentences = [
+"Change the intensity on the holoemitter to maximum.",
+"Turn off the holoemitter.",
+"Blink your logic display.",
+"Change the back LED to green.",
+"Turn your back light green.",
+"Dim your lights holoemitter.",
+"Turn off all your lights.",
+"Lights out.",
+"Set the RGB values on your lights to be 255,0,0.",
+"Add 100 to the red value of your front LED.",
+"Increase the blue value of your back LED by 50%.",
+"Display the following colors for 2 seconds each: red, orange, yellow, green, blue, purple.",
+"Change the color on both LEDs to be green.", ]
 ```
 </div>
 
-<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
-### Connecting to droids
+
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Head API
 
 ```python
-connect_to_R2D2(self)
-connect_to_R2Q5(self)
-disconnect(self)
-scan(self)
-exit(self)
+rotate_head(self, angle)
 ```
 </div>
 
-<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
-### Variables about the droid's states
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Head sentences
+
+```python
+head_sentences = [
+"turn your head to face forward",
+"look behind you", ]
+```
+</div>
+
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Variables about the droid's state
+
 
 ```python
 angle = 0
@@ -280,16 +314,134 @@ waddling = False
 ```
 </div>
 
-<div class="col-lg-4 col-md-6 col-xs-12" markdown="1">
-### Navigation on a grid
 
-In addition to the robot's API, we also implemented command to navigate in a grid/maze for the [Droid navigation assignment](hw2/homework2.html).  
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Questions about variables 
+
+```python
+state_questions = [
+"What color is your front light?",
+"Is your logic display on?",
+"What is your stance?"
+"What is your orientation?",
+"What direction are you facing?",
+"Are you standing on 2 feet or 3?",
+"What is your current heading?",
+"How much battery do you have left?",
+"What is your battery status?",
+"Are you driving right now?",
+"How fast are you going?",
+"What is your current speed?",
+"Is your back light red?",
+"Are you awake?", ]
+```
+</div>
+
+
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Connection API
+
+```python
+connect_to_R2D2(self)
+connect_to_R2Q5(self)
+disconnect(self)
+scan(self)
+exit(self)
+```
+</div>
+
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Connection sentences
+
+```python
+connection_sentences = [
+"Connect D2-55A2 to the server",
+"Are there any other droids nearby?",
+"Disconnect.",
+"Disconnect from the server.", ]
+```
+</div>
+
+
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Stance API
+
+```python
+set_stance(self, stance, **kwargs)
+set_waddle(self, waddle)
+```
+</div>
+
+
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Stance sentences
+
+```python
+stance_sentences = [
+"Set your stance to be biped.",
+"Put down your third wheel.",
+"Stand on your tiptoes.",]
+```
+</div>
+
+
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Animations and sounds API
+```python
+animate(self, i, wait=3)
+play_sound(self, soundID, wait=4)
+```
+</div>
+
+
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Animation sentences
+```python
+animation_sentences = [
+"Fall over",
+"Scream",
+"Make some noise",
+"Laugh",
+"Play an alarm",]
+```
+</div>
+
+
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Navigation on a grid
+The following grid navigation commands are from the [Droid navigation assignment](hw2/homework2.html), not the provided API.  We will support grid navigation commands too.
+
 ```python 
 Graph(vertics, edges)
 A_star(G, start, goal)
 path2move(path)
 ```
 </div>
+
+
+<div class="col-lg-6 col-md-6 col-xs-12" markdown="1">
+### Navigation on a grid
+
+```python 
+grid_sentences = [
+"You are on a 4 by 5 grid.",
+"Each square is 1 foot large.",
+"You are at position (0,0).",
+"Go to position (3,3).",
+"There is an obstacle at position 2,1.",
+"There is a chair at position 3,3",
+"Go to the left of the chair.",
+"It’s not possible to go from 2,2 to 2,3.", ]
+```
+</div>
+
 </div>
 </div>
 
