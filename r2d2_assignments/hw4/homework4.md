@@ -129,7 +129,7 @@ In this section, we will try to leverage the individual word embeddings provided
     ['really']
     ```
 
-2. **[5 points]** To determine how close two R2D2 commands are, we will need a method of determining the similarity of the two different vectors. We will use the cosign similarity metric. Recall from linear algebra that the dot product between two vectors v and w is:
+2. **[5 points]** To determine how close two R2D2 commands are, we will need a method of determining the similarity of the two different vectors. We will use the cosine similarity metric. Recall from linear algebra that the dot product between two vectors v and w is:
 
 > dot-product($\vec{v}, \vec{w}) = \vec{v} \cdot \vec{w} = \sum_{i=1}^{N}{v_iw_i} = v_1w_1 +v_2w_2 +...+v_Nw_N$
 
@@ -143,7 +143,7 @@ In this section, we will try to leverage the individual word embeddings provided
 
 > Where here, $\Theta$ represents the angle between v and w.
 
-   Implement a cosign similarity function `def cosignSimilarity(vector1, vector2)`, where given two numpy vectors of similar length (feel free to use the numpy library), you return the cosign of the angles between them. You can verify that this is the method that the Magnitude library uses as well, by querying two words from the Magnitude library and using your own function to find the similarity, and compare that to Magnitude’s .similarity() function.
+   Implement a cosine similarity function `def cosineSimilarity(vector1, vector2)`, where given two numpy vectors of similar length (feel free to use the numpy library), you return the cosine of the angles between them. You can verify that this is the method that the Magnitude library uses as well, by querying two words from the Magnitude library and using your own function to find the similarity, and compare that to Magnitude’s .similarity() function.
    
     ```python
     >>> from pymagnitude import *
@@ -152,15 +152,15 @@ In this section, we will try to leverage the individual word embeddings provided
     ```
     
     ```python
-    >>> cosignSimilarity(np.array([2, 0]), np.array([0, 1]))
+    >>> cosineSimilarity(np.array([2, 0]), np.array([0, 1]))
     0.0
     >>> vectors.similarity("cat", "dog")
     0.76094574
-    >>> cosignSimilarity(vectors.query("cat"), vectors.query("dog"))
+    >>> cosineSimilarity(vectors.query("cat"), vectors.query("dog"))
     0.76094574
     ```
 
-3. **[5 points]** Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` that takes a sentence and returns a vector embedding for that sentence. You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosign similarity.
+3. **[5 points]** Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` that takes a sentence and returns a vector embedding for that sentence. You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosine similarity.
 
 4. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]Sentences` which map to a list of the sentences belonging to that category.
 
