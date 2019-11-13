@@ -57,13 +57,15 @@ readings:
 -
    title: Developing Skills for Amazon Alexa
    authors: Amazon
-   type: developer tutorial
+   type: website
+   venue: developer tutorial
    url: https://developer.amazon.com/en-US/alexa/alexa-skills-kit
    optional: true
 -
    title: Getting Started with Rasa
    authors: Rasa
-   type: developer tutorial
+   type: website
+   venue: developer tutorial
    url: https://rasa.com/docs/getting-started/
    optional: true
 ---
@@ -372,7 +374,7 @@ Notes:
     {{ publication.title }}.
   {% endif %}
   {{ publication.authors }}.
-  {{ publication.venue }}  {{ publication.year }}.
+  {{ publication.venue }}.
 </td></tr>
   {% endfor %}
 </table>
