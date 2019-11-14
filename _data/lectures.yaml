@@ -513,14 +513,34 @@
   type: exam
 -
   date: 2019-11-14
+  slides: 18-Vector-Space-Semantics-part-3.pdf
+  recording: 
+  title: NLP part 3
+  readings:
+    -
+      title: Chapter 6 "Vector Semantics"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
+-
+  date: 2019-11-19
   slides: 
-  title: Machine Learning&colon; Kernels and Clustering
+  title: Machine Learning&colon; Nearest Neighbors and Clustering
   recording: 
   readings:   
     - 
       title: AIMA Chapter 18 "Learning from Examples" (18.8)
       authors: Russell and Norvig
       optional: false
+    - 
+      title: k-nearest neighbors algorithm
+      authors: Wikipedia
+      url: https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
+      optional: false  
+    - 
+      title: Nearest neighbors search
+      authors: Wikipedia
+      url: https://en.wikipedia.org/wiki/Nearest_neighbor_search
+      optional: false  
     - 
       title: Cluster analysis
       authors: Wikipedia
@@ -538,22 +558,6 @@
       optional: false  
 -
   date: 2019-11-19
-  slides: 
-  title: Clustering and Neural Networks
-  recording: 
-  readings:   
-    - 
-      title: Neural Networks and Deep Learning (Chapter 1 "Using Neural Nets to Recognize Handwritten Digits")
-      authors: Michael Nielsen
-      url: http://neuralnetworksanddeeplearning.com/chap1.html
-      optional: false       
-  videos:
-    - 
-      authors: 3Blue1Brown
-      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
-      title: Neural Networks
--
-  date: 2019-11-19
   title:  HW8 due (Generate a Novel)
   type: exam
 -
@@ -563,11 +567,20 @@
   recording: 
   readings:
     - 
+      title: Neural Networks and Deep Learning (Chapter 1 "Using Neural Nets to Recognize Handwritten Digits")
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap1.html
+      optional: false       
+    - 
       title: Neural Networks and Deep Learning (Chapter 2 "How the Backpropagation Algorithm Works")
       authors: Michael Nielsen
       url: http://neuralnetworksanddeeplearning.com/chap2.html
       optional: true 
   videos:
+    - 
+      authors: 3Blue1Brown
+      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+      title: Neural Networks
     - 
       authors: Andrew Ng
       url: https://www.coursera.org/learn/neural-networks-deep-learning
