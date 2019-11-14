@@ -527,8 +527,31 @@ To calculate how similar two sentences are, we are going to leverage word embedd
 
     Here $$\Theta$$ represents the angle between $$\vec{v}$$ and $$\vec{w}$$.
     
-    Implement a cosine similarity function `cosineSimilarity(vector1, vector2)`, where given two numpy vectors of similar length (feel free to use the [numpy library](https://numpy.org), you return the cosine of the angles between them. 
+    Implement a cosine similarity function `cosineSimilarity(vector1, vector2)`, where `vector1` and `vector2` are [numpy arrays](https://docs.scipy.org/doc/numpy/user/quickstart.html).  Your function should you return the cosine of the angles between them. You are welcome to use any of [the](https://docs.scipy.org/doc/numpy/reference/generated/numpy.dot.html#numpy.dot) [built-in](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html#numpy.sumsum) [numpy](https://docs.scipy.org/doc/numpy/reference/generated/numpy.square.html) [functions](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)[.](https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html) If you don't have numpy installed on your computer already, you should run `pip install numpy`.
 
+    Here are some examples of what your method should output:
+
+    ```python
+    import numpy as np 
+    ```
+
+    ```python
+    >>> cosineSimilarity(np.array([2, 0]), np.array([0, 1])) 
+    0.0
+    
+    >>> cosineSimilarity(np.array([1, 1]), np.array([1, 1]))
+    0.9999999999999998. # It's actually 1.0, but this is close enough.  
+
+    >>> cosineSimilarity(np.array([10, 1]), np.array([1, 10]))
+    0.19801980198019803
+
+    >>> v1 = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    >>> v2 = np.array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+    >>> cosineSimilarity(v1, v2)
+    0.4210526315789473
+    ```
+
+<!--
     You can compare your implementation against the similarity method that the Magnitude library uses like this:
    
     ```python
@@ -544,9 +567,15 @@ To calculate how similar two sentences are, we are going to leverage word embedd
     0.76094574
     >>> cosineSimilarity(vectors.query("cat"), vectors.query("dog")) # Your implementation
     0.76094574
-    ```
+   ```
+--> 
 
-3. **[5 points]** Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` that takes a sentence and returns a vector embedding for that sentence. You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosine similarity.
+3. **[5 points]** Next, we're going to compute the similarity of word vectors.  For this part, we'll use a pythong package Magnitude package. 
+
+Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` that takes a sentence and returns a vector embedding for that sentence. 
+
+
+You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosine similarity.
 
 4. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]Sentences` which map to a list of the sentences belonging to that category.
 
