@@ -403,11 +403,7 @@
   slides: 15-Naive-Bayes-and-Perceptron.pdf
   title:  Machine Learning&colon; Naieve Bayes and Perceptrons
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c019251a-9eb1-4a5d-b55e-aab501264b45
-  readings:     
-    - 
-      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
-      authors: Russell and Norvig
-      optional: false 
+  readings: 
     - 
       title: AIMA Chapter 18 "Learning from Examples" (18.6.3)
       authors: Russell and Norvig
@@ -457,10 +453,6 @@
       title: Chapter 6 "Vector Semantics"
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
-    - 
-      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
-      authors: Russell and Norvig
-      optional: false 
   videos:
     - 
       title: Overview of distributed word representations
