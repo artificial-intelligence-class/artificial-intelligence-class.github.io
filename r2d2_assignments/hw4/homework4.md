@@ -577,15 +577,15 @@ Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` 
 
 You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosine similarity.
 
-4. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]Sentences` which map to a list of the sentences belonging to that category.
+4. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]` which map to a list of the sentences belonging to that category.
 
     ```python
     >>> trainingSentences = loadTrainingSentences("data/r2d2TrainingSentences.txt")
-    >>> trainingSentences['animationSentences']
+    >>> trainingSentences['animation']
     ['Fall over', 'Scream', 'Make some noise', 'Laugh', 'Play an alarm']
     ```
 
-    Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding. Row i of the array should contain the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is a category, such as “direction”. The order of the indices does not matter, but the indices of the matrix and the dictionary should match i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary. The category should not contain the substring `Sentences`.
+    Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding. Row i of the array should contain the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is a category, such as “direction”. The order of the indices does not matter, but the indices of the matrix and the dictionary should match i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary.
     
     ```python
     >>> trainingSentences = loadTrainingSentences("data/r2d2TrainingSentences.txt")
@@ -629,17 +629,18 @@ You can assume that all the words in the sentence have the same importance, so a
     'no'
     ```
 
-    To help you with your implementation of `getCategory`, we require that you fill out the code stub for `accuracy(training_file_path, dev_file_path)` **[5 points]**. This function should test your implementation of `getCategory` faithfully using paths to training and development sets as input. Located in the `data` folder is a development set `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation of `getCategory` locally.
+    Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
+
+    **[5 points]** To help you with your implementation of `getCategory`, we require that you fill out the code stub for `accuracy(training_file_path, dev_file_path)`. This function should test your implementation of `getCategory` faithfully using paths to training and development sets as input. Located in the `data` folder is a development set `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation of `getCategory` locally.
 
     ```python
     >>> accuracy("data/r2d2TrainingSentences.txt", "data/r2d2DevelopmentSentences.txt")
     0.75
     ```
 
-    Your implementation for `getCategory` can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set `r2d2DevelopmentSentences.txt` (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
-    
+
 <!--
-    Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
+    Your implementation for `getCategory` can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set `r2d2DevelopmentSentences.txt` (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
 -->
 
 <!--
