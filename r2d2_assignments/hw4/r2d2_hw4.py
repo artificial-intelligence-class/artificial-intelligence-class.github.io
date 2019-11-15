@@ -98,6 +98,22 @@ def getCategory(sentence, file_path):
     '''
     pass
 
+def accuracy(training_file_path, dev_file_path):
+    '''Returns the accuracy of your implementation of getCategory
+
+    Inputs:
+        training_file_path: path to training set
+
+        dev_file_path: path to development set
+
+    Let c = number of correctly categorized sentences in the development set.
+    Let s = total number of sentences in the development set.
+
+    Returns:
+        A float equal to c/s.
+    '''
+    pass
+
 ############################################################
 # Section 4: Slot filling
 ############################################################
