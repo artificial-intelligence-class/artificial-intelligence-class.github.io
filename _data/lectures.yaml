@@ -587,6 +587,10 @@
   title:  HW9 released (Neural Networks)
   type: exam
 -
+  date: 2019-11-26
+  title:  Practice Exam 3 released on Gradescope
+  type: exam
+-
   date: 2019-11-28
   title: Thanksgiving Break (no classes)
   type: no_lecture
@@ -598,6 +602,10 @@
 -
   date: 2019-12-03
   title:  HW9 due (Neural Networks), study for exam
+  type: exam
+-
+  date: 2019-12-03
+  title:  Practice Exam 3 is due on Gradescope
   type: exam
 -
   date: 2019-12-05
