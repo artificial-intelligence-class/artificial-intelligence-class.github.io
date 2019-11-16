@@ -502,7 +502,7 @@ To calculate how similar two sentences are, we are going to leverage word embedd
     ['really']
     ```
 -->
-1. **[5 points]** Write a tokenization function `sentenceToWords(text)` which takes as input a string of text and returns a list of tokens derived from that text. Here, we define a token to be a contiguous sequence of non-whitespace characters.  We will remove punctuation marks and convert the text to lowercase. *Hint: Use the built-in constant `string.punctuation`, found in the `string` module.*
+1. **[5 points]** Write a tokenization function `tokenize(text)` which takes as input a string of text and returns a list of tokens derived from that text. Here, we define a token to be a contiguous sequence of non-whitespace characters.  We will remove punctuation marks and convert the text to lowercase. *Hint: Use the built-in constant `string.punctuation`, found in the `string` module, and/or python's regex library, `re`.*
     
     ```python
     >>> tokenize("  This is an example.  ")
@@ -573,7 +573,7 @@ To calculate how similar two sentences are, we are going to leverage word embedd
 
 3. **[5 points]** Next, we're going to compute the similarity of word vectors.  For this part, we'll use a pythong package Magnitude package. 
 
-Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` that takes a sentence and returns a vector embedding for that sentence. 
+Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` that takes a sentence and returns a vector embedding for that sentence. If the sentence has no words, you should return a vector of all zeros with similar dimensions as the word2vec vectors.
 
 
 You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosine similarity.
@@ -632,7 +632,7 @@ You can assume that all the words in the sentence have the same importance, so a
 
     Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
 
-    **[5 points]** To help you with your implementation of `getCategory`, we require that you fill out the code stub for `accuracy(training_file_path, dev_file_path)`. This function should test your implementation of `getCategory` faithfully using paths to training and development sets as input. Located in the `data` folder is a development set `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation of `getCategory` locally.
+    **[5 points]** To help you with your implementation of `getCategory`, we require that you fill out the code stub for `accuracy(training_file_path, dev_file_path)`. This function should test your implementation of `getCategory` faithfully using paths to training and development sets as input. Don't worry about the efficiency of this function! Located in the `data` folder is a development set `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation of `getCategory` locally.
 
     ```python
     >>> accuracy("data/r2d2TrainingSentences.txt", "data/r2d2DevelopmentSentences.txt")
@@ -701,20 +701,6 @@ Have fun! Try not to be too mean to your robot :).
 
 *For More Extra Extra Credit* Integrate Google Cloud Platform speech-to-text module so that you can command your robot using voice!
 
-Put robot_com.py and audio_io.py under the src folder. robot_com.py supports command line IO to control your robot using natural English language. With the addition of audio_io.py, you are able to control your robot using voice!
-
-To run command line IO, you need to install matplotlib:
-
-```
-pip3 install matplotlib
-```
-
-You also need to uncomment code in robot_com.py, change the robot serial ID with your own, start the server in one Terminal, cd into the src folder in another Terminal and type:
-
-```
-python3 robot_com.py
-```
-
 To run audio IO, you will need to install portaudio and pyaudio:
 
 ```
@@ -722,11 +708,19 @@ brew install portaudio
 pip3 install pyaudio
 ```
 
-Next, you need to [sign up for a [Google Cloud Platform (GCP) account](https://cloud.google.com/gcp/). When you register a new account, you'll get $300 of free credits. You need to enable speech-to-text module, set up a new project and service account in your GCP account and get a service account key file (this is going to be in .json format). Rename it credentials.json and put it under the src folder. You may also need to install and set up Google Cloud SDK locally. Look up GCP's documentation for more details.
+Next, you need to [sign up for a [Google Cloud Platform (GCP) account](https://cloud.google.com/gcp/). When you register a new account, you'll get $300 of free credits. You have to enter your credit card information to sign up, but you will not be billed unless you exceed the $300 limit, so make sure you keep your account information secure! (You may need to use a non-upenn Google account for this part.)
 
-As before, change the robot serial ID with your own in audio_io.py. Make sure you recomment the code in robot_com.py if you decide to use voice IO.
+To enable the speech-to-text API, type 'speech' in the search bar, and select "Cloud Speech-to-Text API" from the drop-down menu. Click to enable the API, then click on the "Create Credentials" button. Select the "Cloud Speech-to-Text API" (you do not need the App Engine API), and when setting up roles, make yourself the role administrator. Then, you should be able to get a service account key file (this is going to be in .json format). Rename it `credentials.json` and put it under the `sphero-project/src` folder.
 
-To run voice IO, you need to start the server in one Terminal, cd into the src folder in another Terminal and type:
+You may also need to install and set up Google Cloud SDK locally. To do this, follow the instructions located in the Quickstart documentation [here](https://cloud.google.com/sdk/docs/quickstarts). Make sure to follow all steps until you are finished with the `Initialize the SDK` section. If during initialization you are asked which project to choose, choose the project that contains the API for speech-to-text.
+
+Then, just install the Python client for the Google API, using:
+
+```
+pip3 install google-cloud-speech
+```
+
+Now, you should be able to run voice IO on your robot. As before, change the robot serial ID with your own in audio_io.py. Setup the R2D2 server as in previous homeworks, cd into the `sphero-project/src` folder in another Terminal and type:
 
 ```
 python3 audio_io.py
@@ -737,7 +731,7 @@ Notes:
 
 2. If you are able to successfully run audio_io.py, say your command (using voice!) and see if text appears in the Terminal. To end the session, simply say any sentence containing one of the following keywords: "exit", "quit", "bye" or "goodbye".
 
-
+To receive extra credit for this portion, please come into office hours and show off your project to us!
 
 
 

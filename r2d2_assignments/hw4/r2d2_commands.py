@@ -57,6 +57,8 @@ class Robot:
                 else:
                     print(subcommand + " not a valid category.")
             return
+        elif commandType == "no"
+            return
 
         result = getattr(self, commandType + "Parser")(command.lower())
         if result:

@@ -10,6 +10,7 @@ student_name = "Type your full name here."
 
 from pymagnitude import *
 import numpy as np
+import string
 import re
 
 ############################################################
@@ -41,7 +42,7 @@ def loadTrainingSentences(file_path):
 path = "/Volumes/SD/hw4_2019/vectors/"
 vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude")
 
-def sentenceToWords(sentence):
+def tokenize(sentence):
     pass
 
 def cosineSimilarity(vector1, vector2):

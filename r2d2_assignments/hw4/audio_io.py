@@ -12,7 +12,7 @@ from google.cloud.speech import enums
 from google.cloud.speech import types
 import pyaudio
 from six.moves import queue
-from robot_com import *
+from r2d2_commands import *
 
 # Adapted from https://cloud.google.com/speech-to-text/docs/streaming-recognize
 
@@ -133,15 +133,34 @@ def listen_execute_loop(responses, robot):
             num_chars_printed = len(transcript)
 
         else:
-            # Your code below
-            pass
+            cmd = (transcript + overwrite_chars).lower()
+            print(cmd)
+
+            # Exit recognition if any of the transcribed phrases could be
+            # one of our keywords.
+            if re.search(r"\b(exit|quit|bye|goodbye)\b", cmd, re.I):
+                print('Exiting...')
+
+                # Reset and disconnect the robot
+                robot.reset()
+                robot.disconnect()
+
+                break
+
+            # Process transcribed text command
+            if len(cmd) == 0:
+                print("Please type something")
+            robot.inputCommand(cmd)
+
+            print("\nSay your instruction: ")
+            num_chars_printed = 0
 
 def main():
     # See http://g.co/cloud/speech/docs/languages
     # for a list of supported languages.
 
     # Replace this with your own robot serial ID
-    robot = Robot("XX-XXXX", 0.85, True)
+    robot = Robot("XX-XXXX", 0.70, True)
 
     language_code = "en-US" # a BCP-47 language tag
 
