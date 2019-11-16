@@ -455,7 +455,8 @@ One of the amazing thing about language is that there are many different ways of
 "waddle",
 "totter",
 "todder",
-"teater"
+"teater",
+"wobble",
 "start to waddle"
 "start waddling",
 "begin waddling",
