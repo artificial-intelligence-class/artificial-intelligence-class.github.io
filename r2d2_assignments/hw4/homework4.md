@@ -190,7 +190,7 @@ droid.connect_to_droid('D2-55A2') # Replace D2-55A2 with your droid's ID
 help(droid)
 ````
 
-Let's put the API commands that help lists into different groups.  We'll also list natural langauge commands that might be associated with each group.  For the first part of this assignment, you will brainstrom 10 unique language commands for each group.  You will submit your sentences along with your code.
+Let's put the API commands that `help` lists into different groups.  We'll also list natural language commands that might be associated with each group.  For the first part of this assignment, you will brainstrom 10 unique language commands for each group.  You will submit your sentences along with your code.
 
 <div class="container-fluid">
 <div class="row">
@@ -488,7 +488,7 @@ The goal of this part of the assignment is to enumerate as many ways of saying a
 
 ## 2. Intent Detection [65 points]
 
-In this section, we will take in a new sentence that we have never seen before and try to classify what type of command the user wants to have the the robot execute.  To do so, we will measure the similarity of the user's new sentence with each of our training sentences.  We know what command group each of our training sentences belongs to, so we will find the nearest command sentences to the new sentence, and use their labels as the label of new sentence.  This is called $k$-nearest neighbor classification.   The label that we will assign will be `driving`, `light`, `head`, `state`, `connection`, `stance`, `animation`, or `grid`.
+In this section, we will take in a new sentence that we have never seen before and try to classify what type of command the user wants to have the the robot execute.  To do so, we will measure the similarity of the user's new sentence with each of our training sentences.  We know what command group each of our training sentences belongs to, so we will find the nearest command sentences to the new sentence, and use their labels as the label of the new sentence.  This is called $k$-nearest neighbor classification.   The label that we will assign will be `driving`, `light`, `head`, `state`, `connection`, `stance`, `animation`, or `grid`.
 
 To calculate how similar two sentences are, we are going to leverage word embeddings that we dicussed in lecture (and that are described in the [Vector Semantics and Embeddings chapter of the Jurafsky and Martin textbook]).  We will use with pre-trained word2vec embeddings, and use the Magnitude python package work with the word embeddings.  We will create sentence embeddings out of the word embeddings for the words in the sentence.
 
@@ -514,7 +514,7 @@ To calculate how similar two sentences are, we are going to leverage word embedd
     ['medium', 'rare', 'she', 'said']
     ```
 
-2. **[5 points]** Implement the cosine similarity fuction to compute how similar two  vectors. Here is the mathmatical definition of the different parts of the cosine function.  The __dot product__ between two vectors $$\vec{v}$$ and $$\vec{w}$$ is:
+2. **[5 points]** Implement the cosine similarity fuction to compute how similar two vectors are. Here is the mathmatical definition of the different parts of the cosine function.  The __dot product__ between two vectors $$\vec{v}$$ and $$\vec{w}$$ is:
     
     $$\text{dot-product}(\vec{v}, \vec{w}) = \vec{v} \cdot \vec{w} = \sum_{i=1}^{N}{v_iw_i} = v_1w_1 +v_2w_2 +...+v_Nw_N$$
   
@@ -528,7 +528,7 @@ To calculate how similar two sentences are, we are going to leverage word embedd
 
     Here $$\Theta$$ represents the angle between $$\vec{v}$$ and $$\vec{w}$$.
     
-    Implement a cosine similarity function `cosineSimilarity(vector1, vector2)`, where `vector1` and `vector2` are [numpy arrays](https://docs.scipy.org/doc/numpy/user/quickstart.html).  Your function should you return the cosine of the angles between them. You are welcome to use any of [the](https://docs.scipy.org/doc/numpy/reference/generated/numpy.dot.html#numpy.dot) [built-in](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html#numpy.sumsum) [numpy](https://docs.scipy.org/doc/numpy/reference/generated/numpy.square.html) [functions](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)[.](https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html) If you don't have numpy installed on your computer already, you should run `pip install numpy`.
+    Implement a cosine similarity function `cosineSimilarity(vector1, vector2)`, where `vector1` and `vector2` are [numpy arrays](https://docs.scipy.org/doc/numpy/user/quickstart.html).  Your function should return the cosine of the angles between them. You are welcome to use any of [the](https://docs.scipy.org/doc/numpy/reference/generated/numpy.dot.html#numpy.dot) [built-in](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html#numpy.sumsum) [numpy](https://docs.scipy.org/doc/numpy/reference/generated/numpy.square.html) [functions](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)[.](https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html) If you don't have numpy installed on your computer already, you should run `pip install numpy`.
 
     Here are some examples of what your method should output:
 
@@ -578,15 +578,15 @@ Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` 
 
 You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosine similarity.
 
-4. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]Sentences` which map to a list of the sentences belonging to that category.
+4. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]` which map to a list of the sentences belonging to that category.
 
     ```python
     >>> trainingSentences = loadTrainingSentences("data/r2d2TrainingSentences.txt")
-    >>> trainingSentences['animationSentences']
+    >>> trainingSentences['animation']
     ['Fall over', 'Scream', 'Make some noise', 'Laugh', 'Play an alarm']
     ```
 
-    Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding. Row i of the array should contain the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is a category, such as “direction”. The order of the indices does not matter, but the indices of the matrix and the dictionary should match i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary. The category should not contain the substring `Sentences`.
+    Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding. Row i of the array should contain the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is a category, such as “direction”. The order of the indices does not matter, but the indices of the matrix and the dictionary should match i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary.
     
     ```python
     >>> trainingSentences = loadTrainingSentences("data/r2d2TrainingSentences.txt")
@@ -617,7 +617,7 @@ You can assume that all the words in the sentence have the same importance, so a
     32
     ```
 
-6. **[30 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
+6. **[25 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
 
     Simply finding the closest sentence and outputting that category may not be enough for this function. We suggest trying out a k-nearest neighbors approach, and scoring the neighbors in some way to find which category is the best fit. You can write new helper functions to help out. Also, which kind of words appear in almost all sentences and so are not a good way to distinguish between sentence meanings?
         
@@ -629,8 +629,20 @@ You can assume that all the words in the sentence have the same importance, so a
     >>> getCategory("Do not laugh at me.", "data/r2d2TrainingSentences.txt")
     'no'
     ```
-    
-    Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers (30 points).
+
+    Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
+
+    **[5 points]** To help you with your implementation of `getCategory`, we require that you fill out the code stub for `accuracy(training_file_path, dev_file_path)`. This function should test your implementation of `getCategory` faithfully using paths to training and development sets as input. Located in the `data` folder is a development set `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation of `getCategory` locally.
+
+    ```python
+    >>> accuracy("data/r2d2TrainingSentences.txt", "data/r2d2DevelopmentSentences.txt")
+    0.75
+    ```
+
+
+<!--
+    Your implementation for `getCategory` can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set `r2d2DevelopmentSentences.txt` (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
+-->
 
 <!--
 *For Extra Extra Credit*
@@ -639,9 +651,11 @@ Take a look at this [online service](https://github.com/hanxiao/bert-as-service)
 -->
 
 
+<!--
 ## 3. How good is your intent detection [5 points]
 
 TODO - write an accuracy function, evaluate your intent detection module on a test set.
+-->
 
 
 ## 4. Slot filling [15 points]

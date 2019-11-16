@@ -25,6 +25,7 @@ def loadTrainingSentences(file_path):
             if len(line.strip()) == 0 or "##" == line.strip()[0:2]:
                 continue
             commandType, command = line.split(' :: ')
+            commandType = commandType[:-9]
             if commandType not in commandTypeToSentences:
                 commandTypeToSentences[commandType] = [command]
             else:
@@ -55,7 +56,7 @@ def sentenceToEmbeddings(commandTypeToSentences):
 
     Inputs:
         commandTypeToSentences: A dictionary in the form returned by
-        loadTrainingSentences. Each key is a string '[category]Sentences' which
+        loadTrainingSentences. Each key is a string '[category]' which
         maps to a list of the sentences belonging to that category.
 
     Let m = number of sentences.
@@ -95,6 +96,22 @@ def getCategory(sentence, file_path):
     Returns:
         a string 'command', where 'command' is the category that the sentence
         should belong to.
+    '''
+    pass
+
+def accuracy(training_file_path, dev_file_path):
+    '''Returns the accuracy of your implementation of getCategory
+
+    Inputs:
+        training_file_path: path to training set
+
+        dev_file_path: path to development set
+
+    Let c = number of correctly categorized sentences in the development set.
+    Let s = total number of sentences in the development set.
+
+    Returns:
+        A float equal to c/s.
     '''
     pass
 
