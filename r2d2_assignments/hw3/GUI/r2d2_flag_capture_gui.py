@@ -677,6 +677,8 @@ class PlayGround(tk.Frame):
                         t = True if self.current_team == 'D2' else False
                         print(self.current_team, t)
                         moves = self.graph.get_best_move(D2=t, limit=p)
+                        print("V", self.graph.vertics)
+                        print("E", self.graph.edges)
                         print(moves)
                         moves = moves[0]
                         if not isinstance(moves, dict):
