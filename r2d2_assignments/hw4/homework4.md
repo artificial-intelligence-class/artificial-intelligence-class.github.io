@@ -490,7 +490,7 @@ The goal of this part of the assignment is to enumerate as many ways of saying a
 
 In this section, we will take in a new sentence that we have never seen before and try to classify what type of command the user wants to have the the robot execute.  To do so, we will measure the similarity of the user's new sentence with each of our training sentences.  We know what command group each of our training sentences belongs to, so we will find the nearest command sentences to the new sentence, and use their labels as the label of the new sentence.  This is called $k$-nearest neighbor classification.   The label that we will assign will be `driving`, `light`, `head`, `state`, `connection`, `stance`, `animation`, or `grid`.
 
-To calculate how similar two sentences are, we are going to leverage word embeddings that we dicussed in lecture (and that are described in the [Vector Semantics and Embeddings chapter of the Jurafsky and Martin textbook]).  We will use with pre-trained word2vec embeddings, and use the Magnitude python package work with the word embeddings.  We will create sentence embeddings out of the word embeddings for the words in the sentence.
+To calculate how similar two sentences are, we are going to leverage word embeddings that we dicussed in lecture (and that are described in the [Vector Semantics and Embeddings chapter of the Jurafsky and Martin textbook](http://web.stanford.edu/~jurafsky/slp3/6.pdf)).  We will use with pre-trained word2vec embeddings, and use the Magnitude python package work with the word embeddings.  We will create sentence embeddings out of the word embeddings for the words in the sentence.
 
 <!--
 1. **[5 points]** Write a function `sentenceToWords(sentence)` that returns a list of the words in a sentence, given a string `sentence` as input. The words in the list should all be **lower case**. Note that some words commonly have punctuation marks inside them, such as “accident-prone”. Our function should treat hyphenated words as **one** word. However, when passing in sentences you can assume that hyphenated words will come in the form of “accident_prone”, where an underscore separates the word instead. There is also one more case where punctuation can be “inside” a word. Your function should work like so:
@@ -552,31 +552,71 @@ To calculate how similar two sentences are, we are going to leverage word embedd
     0.4210526315789473
     ```
 
+
+3. **[5 points]** Next, we're going to use word vectors to compute the similarity of sentences.  For this part, we'll use the [Magnitude package](https://github.com/plasticityai/magnitude), which is a fast, efficient Python package for manipulating pre-trained word embeddings.  It was written by former Penn students Ajay Patel and Alex Sands.  You can install it with pip by typing this command into your terminal:
+```bash
+pip3 install pymagnitude
+```
+Next, you'll need to download a pre-trained set of word embeddings.  We'll get a set trained with Google's word2vec algorithm, which we discussed in class.  You can download them by clicking on [this link](http://magnitude.plasticity.ai/word2vec/heavy/GoogleNews-vectors-negative300.magnitude) or by using this command in your terminal:
+```bash
+wget http://magnitude.plasticity.ai/word2vec/heavy/GoogleNews-vectors-negative300.magnitude
+```
+Warning the file is very large (11GB).  If you'd like to experiment with another set of word vectors that is smaller, you can [download these GloVE embeddings](http://magnitude.plasticity.ai/glove/heavy/glove.6B.300d.magnitude) which are only 1.4GB.
+
+After the file downloads, you can access the vectors like this:
+
+```python
+from pymagnitude import *
+path = '/Users/ccb/Downloads/' # Change this to where you downloaded the file.
+vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude") 
+v = vectors.query("cat") # vector representing the word 'cat'
+w = vectors.query("dog") # vector representing the word 'dog'
+
+# calculate the cosine similarity with your implementation
+sim = cosineSimilarity(v, w) 
+print(sim)
+```
+If you implemented the cosine similarity function properly, and if you loaded the vectors from the `GoogleNews-vectors-negative300.magnitude` file, you should get **0.76094574**. If you loaded the vectors from the `glove.6B.300d.magnitude` file you should get **0.6816747**.
+
+
+
+You job is to implement a function `calcSentenceEmbeddingBaseline(sentence, vectors)` that takes in a sentence and the Magnitude vectors that you loaded.  It will return a vector embedding for that sentence. If the sentence has no words, you should return a vector of all zeros with the same number of dimensions as a word in the Magnitude vectors.
+
+For `calcSentenceEmbeddingBaseline(sentence, vectors)` you should return a component-wise addition of all of the vectors.  All the word vectors will be equal in length.  You will return a sentence vector that is also that length.  The first component of your sentence vector will be the addition of the the first component of each of the words.   Easy right?
+
+Here's an example of the output you would get
+```python
+from pymagnitude import *
+path = '/Users/ccb/Downloads/' # Change this to where you downloaded the file.
+vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude") 
+
+>>> svec1 = calcSentenceEmbeddingBaseline("drive forward", vectors)
+>>> svec2 = calcSentenceEmbeddingBaseline("roll ahead", vectors)
+>>> svec3 = calcSentenceEmbeddingBaseline("set your lights to purple", vectors)
+>>> svec4 = calcSentenceEmbeddingBaseline("turn your lights to be blue", vectors)
+>>> cosineSimilarity(svec1, svec2)
+0.4255210604304939
+>>> cosineSimilarity(svec1, svec3)
+0.20958250895677447
+>>> cosineSimilarity(svec1, svec4)
+0.30474097280886364
+>>> cosineSimilarity(svec2, svec3)
+0.24962558300148688
+>>> cosineSimilarity(svec2, svec4)
+0.27946534951158214
+>>> cosineSimilarity(svec3, svec4)
+0.8081137933660256
+```
+
+
+
+The baseline sentence embedding method assumes that all the words in the sentence have the same importance.  
 <!--
-    You can compare your implementation against the similarity method that the Magnitude library uses like this:
-   
-    ```python
-    >>> from pymagnitude import *
-    >>> vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude")
-    ...
-    ```
-    
-    ```python
-    >>> cosineSimilarity(np.array([2, 0]), np.array([0, 1])) # Your implementation
-    0.0
-    >>> vectors.similarity("cat", "dog") # Magnitude's implementation
-    0.76094574
-    >>> cosineSimilarity(vectors.query("cat"), vectors.query("dog")) # Your implementation
-    0.76094574
-   ```
---> 
-
-3. **[5 points]** Next, we're going to compute the similarity of word vectors.  For this part, we'll use a pythong package Magnitude package. 
-
-Now, given a sentence, implement the function `calcSentenceEmbedding(sentence)` that takes a sentence and returns a vector embedding for that sentence. If the sentence has no words, you should return a vector of all zeros with similar dimensions as the word2vec vectors.
+Later on you can implement your own `calcSentenceEmbedding(sentence, vectors)` function that does something more sophisticated if you like.
+-->
 
 
-You can assume that all the words in the sentence have the same importance, so addition of individual word vectors is fine. Your function should use the minimum amount of arithmetic necessary to achieve a vector representation for the sentence, where meanings can be compared accurately using cosine similarity.
+
 
 4. **[10 points]** We have provided a txt file of training sentences for the R2D2s in a file named r2d2TrainingSentences.txt, as well as a function, `loadTrainingSentences(file_path)`, which reads the file and returns a dictionary with keys `[category]` which map to a list of the sentences belonging to that category.
 
