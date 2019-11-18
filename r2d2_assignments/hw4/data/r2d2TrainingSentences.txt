@@ -11,25 +11,25 @@ stateSentences :: What is your current heading?
 stateSentences :: How much battery do you have left?
 stateSentences :: What is your battery status?
 
-## Direction commands
+## Driving commands
 
-directionSentences :: North is at heading 50 degrees.
-directionSentences :: Go North.
-directionSentences :: Go East.
-directionSentences :: Go South-by-southeast
-directionSentences :: Run away!
-directionSentences :: There’s a storm trooper to your left!  Run away from the storm trooper!
-directionSentences :: Turn to heading 30 degrees.
-directionSentences :: Reset your heading to 0
-directionSentences :: Turn to face North.
-directionSentences :: Start rolling forward.
-directionSentences :: Increase your speed by 50%.
-directionSentences :: Turn to your right.
-directionSentences :: Stop.
-directionSentences :: Set speed to be 0.
-directionSentences :: Set speed to be 20%
-directionSentences :: Go forward for 2 feet, then turn right.
-directionSentences :: Turn around
+drivingSentences :: North is at heading 50 degrees.
+drivingSentences :: Go North.
+drivingSentences :: Go East.
+drivingSentences :: Go South-by-southeast
+drivingSentences :: Run away!
+drivingSentences :: There’s a storm trooper to your left!  Run away from the storm trooper!
+drivingSentences :: Turn to heading 30 degrees.
+drivingSentences :: Reset your heading to 0
+drivingSentences :: Turn to face North.
+drivingSentences :: Start rolling forward.
+drivingSentences :: Increase your speed by 50%.
+drivingSentences :: Turn to your right.
+drivingSentences :: Stop.
+drivingSentences :: Set speed to be 0.
+drivingSentences :: Set speed to be 20%
+drivingSentences :: Go forward for 2 feet, then turn right.
+drivingSentences :: Turn around
 
 ## Light commands
 

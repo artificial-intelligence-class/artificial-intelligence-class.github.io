@@ -128,7 +128,7 @@ we are going to implement an NLP system that will allow you to say
 
 Our NLP system will have three main components:
 
-1. __An intent detection module__ that will take in a natural language command, and determine what type of command that a user wants the droid to do.  These will include things like direction commands, light commands, changing the position of its head, making sounds, etc.)
+1. __An intent detection module__ that will take in a natural language command, and determine what type of command that a user wants the droid to do.  These will include things like driving commands, light commands, changing the position of its head, making sounds, etc.)
 2. __A slot-filler module__ will take the command, and extract the arguments that need to be included when translating the natural language command into its Python equivalent. For example, light comands will need arguments like *which light* to set, and *what color* to change it to.
 3. __A speech to text module__ that will allow you to speak into your computer’s microphone and have your voice command converted to text.  For this, we will use an API provided by Google.
 
@@ -626,7 +626,7 @@ Later on you can implement your own `calcSentenceEmbedding(sentence, vectors)` f
     ['Fall over', 'Scream', 'Make some noise', 'Laugh', 'Play an alarm']
     ```
 
-    Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding. Row i of the array should contain the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is a category, such as “direction”. The order of the indices does not matter, but the indices of the matrix and the dictionary should match i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary.
+    Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding. Row i of the array should contain the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is a category, such as “driving”. The order of the indices does not matter, but the indices of the matrix and the dictionary should match i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary.
     
     ```python
     >>> trainingSentences = loadTrainingSentences("data/r2d2TrainingSentences.txt")
@@ -646,7 +646,7 @@ Later on you can implement your own `calcSentenceEmbedding(sentence, vectors)` f
            [ 0.18705991, -0.02135478,  0.36185202, ..., -0.30548167,
              0.04913769, -0.20094341]])
     >>> indexToSentence[14]
-    ('Turn to heading 30 degrees.', 'direction')
+    ('Turn to heading 30 degrees.', 'driving')
     ```
 
 5. **[10 points]** Now, given an arbitrary input sentence, and an m by n matrix of sentence embeddings, write a function `closestSentence(sentence, sentenceEmbeddings)` that returns the index of the closest sentence to the input. This should be the row vector which is closest to the sentence vector of the input. Depending on the indices of your implementation of `sentenceToEmbeddings(commandTypeToSentences)`, the following output may vary.
@@ -665,7 +665,7 @@ Later on you can implement your own `calcSentenceEmbedding(sentence, vectors)` f
     >>> getCategory("Turn your lights green.", "data/r2d2TrainingSentences.txt")
     'light'
     >>> getCategory("Drive forward for two feet.", "data/r2d2TrainingSentences.txt")
-    'direction'
+    'driving'
     >>> getCategory("Do not laugh at me.", "data/r2d2TrainingSentences.txt")
     'no'
     ```
@@ -702,11 +702,11 @@ TODO - write an accuracy function, evaluate your intent detection module on a te
 
 Now that we have a good idea which categories our commands belong to, we have to find a way to convert these commands to actions. This can be done via slot-filling, which fills slots in the natural language command corresponding to important values. For example, given the slots NAME, RESTAURANT, TIME and HAS_RESERVED, and a command to a chat-bot such as "John wants to go to Olive Garden", the chat-bot should fill out the slots with values: {NAME: John, RESTAURANT: Olive Garden, TIME: N/A, HAS_RESERVED: False}, and then it can decide to either execute the command or ask for more information given the slot-values.
 
-1. **[15 points]** Using regex or word2vec vectors, populate the functions `lightParser(command)` and `directionParser(command)` to perform slot-filling for the predefined slots, given string input `command`. We will test these functions and give you full credit if you get above a 50% accuracy. These functions do not have to be perfect, but the better these functions are, the better your R2D2 will respond to your commands.
+1. **[15 points]** Using regex or word2vec vectors, populate the functions `lightParser(command)` and `drivingParser(command)` to perform slot-filling for the predefined slots, given string input `command`. We will test these functions and give you full credit if you get above a 50% accuracy. These functions do not have to be perfect, but the better these functions are, the better your R2D2 will respond to your commands.
 
     For `lightParser`, the `holoEmit` and `logDisp` indicate whether the command references the holoemitter or the logic display. If the command wants to add (increase), or subtract (decrease) RGB values, those slots should be true. The `on` and `off` fields correspond to whether the lights should be turned on or off, and should also respond to words like "maximum." The `lights` slot should be a list of which lights the command refers to, either `front` or `back`, or both if you believe your command refers to both lights.
 
-    For `directionParser`, `increase` and `decrease` correspond to whether the command wants you to increase/decrease the speed, and `directions` correspond to a list of directions that appear in the command, in order. Directions should be one of `forward`, `back`, `left`, or `right`. Cardinal directions like "South" should map onto `back`, and "East" should map onto `right`, etc.
+    For `drivingParser`, `increase` and `decrease` correspond to whether the command wants you to increase/decrease the speed, and `directions` correspond to a list of directions that appear in the command, in order. Directions should be one of `forward`, `back`, `left`, or `right`. Cardinal directions like "South" should map onto `back`, and "East" should map onto `right`, etc.
 
     Your functions should work like so:
 
@@ -718,9 +718,9 @@ Now that we have a good idea which categories our commands belong to, we have to
     ```
    
     ```python
-    >>> directionParser("Increase your speed!")
+    >>> drivingParser("Increase your speed!")
     {'increase': True, 'decrease': False, 'directions': []}
-    >>> directionParser("Go forward, left, right, and then East.")
+    >>> drivingParser("Go forward, left, right, and then East.")
     {'increase': False, 'decrease': False, 'directions': ['forward', 'left', 'right', 'right']}
     ```
 
@@ -765,6 +765,14 @@ Now, you should be able to run voice IO on your robot. As before, change the rob
 ```
 python3 audio_io.py
 ```
+
+**Note** Depending on how you set up the SDK, you may need to run the following on the command line:
+
+```
+export GOOGLE_APPLICATION_CREDENTIALS="/[Path to sphero-project/src]/credentials.json"
+```
+
+before you can run audio_io.py.
 
 Notes:
 1. If you want to try audio IO, please try command line IO first.

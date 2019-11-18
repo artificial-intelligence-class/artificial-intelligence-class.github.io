@@ -14,20 +14,20 @@ lightSentences :: Set your lights to minimum.
 lightSentences :: Set your lights to blue.
 lightSentences :: Weaken your lights.
 
-directionSentences :: Drive forward
-directionSentences :: Go right.
-directionSentences :: Roll backward.
-directionSentences :: Head east.
-directionSentences :: Go forward.
-directionSentences :: Southeast is at 60 degrees.
-directionSentences :: Run!
-directionSentences :: Turn to heading 50.
-directionSentences :: Halt.
-directionSentences :: Start rolling.
-directionSentences :: Lower your speed by 20%.
-directionSentences :: Increase speed by 70%.
-directionSentences :: Turn right, and then go forward for 1 foot.
-directionSentences :: Darth Vader is behind you! Run away from Darth Vader!
+drivingSentences :: Drive forward
+drivingSentences :: Go right.
+drivingSentences :: Roll backward.
+drivingSentences :: Head east.
+drivingSentences :: Go forward.
+drivingSentences :: Southeast is at 60 degrees.
+drivingSentences :: Run!
+drivingSentences :: Turn to heading 50.
+drivingSentences :: Halt.
+drivingSentences :: Start rolling.
+drivingSentences :: Lower your speed by 20%.
+drivingSentences :: Increase speed by 70%.
+drivingSentences :: Turn right, and then go forward for 1 foot.
+drivingSentences :: Darth Vader is behind you! Run away from Darth Vader!
 
 animationSentences :: Sing.
 animationSentences :: Speak.
