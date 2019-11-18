@@ -8,7 +8,7 @@ def tokenize(sentence):
     words = re.findall(r"[\w]+", sentence)
     return [x.lower() for x in words]
 
-def calcSentenceEmbedding(sentence):
+def calcSentenceEmbeddingBaseline(sentence):
     words = tokenize(sentence)
     return X.vectors.query(words).sum(axis = 0)
 
@@ -26,7 +26,7 @@ def sentenceToEmbeddings(commandTypeToSentences):
 
     for i in range(len(indexToSentence)):
         sentence = indexToSentence[i][0]
-        sentenceEmbedding = calcSentenceEmbedding(sentence)
+        sentenceEmbedding = calcSentenceEmbeddingBaseline(sentence)
 
         sentenceEmbeddings[i, :] = sentenceEmbedding
 
@@ -106,28 +106,28 @@ class TestSolution(unittest.TestCase):
 
     @weight(1)
     @timeout_decorator.timeout(10)
-    def test_calcSentenceEmbedding_1(self):
-        self.assertTrue(np.allclose(X.calcSentenceEmbedding("  This is an example.  "), calcSentenceEmbedding("  This is an example.  ")))
+    def test_calcSentenceEmbeddingBaseline_1(self):
+        self.assertTrue(np.allclose(X.calcSentenceEmbeddingBaseline("  This is an example.  "), calcSentenceEmbeddingBaseline("  This is an example.  ")))
 
     @weight(1)
     @timeout_decorator.timeout(10)
-    def test_calcSentenceEmbedding_2(self):
-        self.assertTrue(np.array_equal(X.calcSentenceEmbedding("    "), np.zeros(300)))
+    def test_calcSentenceEmbeddingBaseline_2(self):
+        self.assertTrue(np.array_equal(X.calcSentenceEmbeddingBaseline("    "), np.zeros(300)))
 
     @weight(1)
     @timeout_decorator.timeout(10)
-    def test_calcSentenceEmbedding_3(self):
-        self.assertTrue(np.allclose(X.calcSentenceEmbedding("Drive forward and turn left."), calcSentenceEmbedding("Drive forward and turn left.")))
+    def test_calcSentenceEmbeddingBaseline_3(self):
+        self.assertTrue(np.allclose(X.calcSentenceEmbeddingBaseline("Drive forward and turn left."), calcSentenceEmbeddingBaseline("Drive forward and turn left.")))
 
     @weight(1)
     @timeout_decorator.timeout(10)
-    def test_calcSentenceEmbedding_4(self):
-        self.assertTrue(np.allclose(X.calcSentenceEmbedding("REALLY?!"), calcSentenceEmbedding("REALLY?!")))
+    def test_calcSentenceEmbeddingBaseline_4(self):
+        self.assertTrue(np.allclose(X.calcSentenceEmbeddingBaseline("REALLY?!"), calcSentenceEmbeddingBaseline("REALLY?!")))
 
     @weight(1)
     @timeout_decorator.timeout(10)
-    def test_calcSentenceEmbedding_5(self):
-        self.assertTrue(np.allclose(X.calcSentenceEmbedding("I'm an apostrophe."), calcSentenceEmbedding("I'm an apostrophe.")))
+    def test_calcSentenceEmbeddingBaseline_5(self):
+        self.assertTrue(np.allclose(X.calcSentenceEmbeddingBaseline("I'm an apostrophe."), calcSentenceEmbeddingBaseline("I'm an apostrophe.")))
 
 # Section 3, Problem 4 [10 points]
 

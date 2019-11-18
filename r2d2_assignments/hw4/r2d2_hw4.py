@@ -48,7 +48,7 @@ def tokenize(sentence):
 def cosineSimilarity(vector1, vector2):
     pass
 
-def calcSentenceEmbedding(sentence):
+def calcSentenceEmbeddingBaseline(sentence):
     pass
 
 def sentenceToEmbeddings(commandTypeToSentences):
