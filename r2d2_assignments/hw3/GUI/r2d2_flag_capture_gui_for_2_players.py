@@ -1,3 +1,13 @@
+
+'''
+
+  File name:r2d2_flag_capture_gui_for_2_players.py
+
+  Author: Yue Yang
+
+  Date: 10/20/2019
+
+'''
 import tkinter as tk
 import tkinter.messagebox
 import tkinter.ttk
