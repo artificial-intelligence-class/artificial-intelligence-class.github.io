@@ -516,38 +516,13 @@
 -
   date: 2019-11-19
   slides: 
-  title: Machine Learning&colon; Nearest Neighbors and Clustering
+  title: Logistic Regression and Stochastic Gradient Descent
   recording: 
   readings:   
     - 
-      title: AIMA Chapter 18 "Learning from Examples" (18.8)
-      authors: Russell and Norvig
-      optional: false
-    - 
-      title: k-nearest neighbors algorithm
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
-      optional: false  
-    - 
-      title: Nearest neighbors search
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/Nearest_neighbor_search
-      optional: false  
-    - 
-      title: Cluster analysis
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/Cluster_analysis
-      optional: false  
-    - 
-      title: k-Means Clustering
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/K-means_clustering
-      optional: false  
-    - 
-      title: Agglomerative Clustering
-      authors: Wikipedia
-      url: https://en.wikipedia.org/wiki/Hierarchical_clustering
-      optional: false  
+      title: Chapter 5 "Logistic Regression"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/.pdf 
 -
   date: 2019-11-19
   title:  HW8 due (Generate a Novel)
@@ -559,15 +534,9 @@
   recording: 
   readings:
     - 
-      title: Neural Networks and Deep Learning (Chapter 1 "Using Neural Nets to Recognize Handwritten Digits")
-      authors: Michael Nielsen
-      url: http://neuralnetworksanddeeplearning.com/chap1.html
-      optional: false       
-    - 
-      title: Neural Networks and Deep Learning (Chapter 2 "How the Backpropagation Algorithm Works")
-      authors: Michael Nielsen
-      url: http://neuralnetworksanddeeplearning.com/chap2.html
-      optional: true 
+      title: Chapter 7 "Neural Networks and Neural Language Models"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf 
   videos:
     - 
       authors: 3Blue1Brown
@@ -580,8 +549,12 @@
 -
   date: 2019-11-26
   slides: 
-  title: Neural Networks&colon; CNN
+  title: Neural Networks&colon; RNNs and Deep NNs
   recording: 
+    - 
+      title: Chapter 9 "Sequence Processing with Recurrent Networks"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/9.pdf 
 -
   date: 2019-11-26
   title:  HW9 released (Neural Networks)
@@ -597,7 +570,12 @@
 -
   date: 2019-12-03
   slides: 
-  title: Catch-up
+  title: Neural Networks&colon; Encoder-Decoder Models and Attention
+  recording: 
+    - 
+      title: Chapter 10 "Encoder-Decoder Models, Attention, and Contextual Embeddings"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/10.pdf 
   recording:
 -
   date: 2019-12-03
