@@ -747,7 +747,7 @@ brew install portaudio
 pip3 install pyaudio
 ```
 
-Next, you need to [sign up for a [Google Cloud Platform (GCP) account](https://cloud.google.com/gcp/). When you register a new account, you'll get $300 of free credits. You have to enter your credit card information to sign up, but you will not be billed unless you exceed the $300 limit, so make sure you keep your account information secure! (You may need to use a non-upenn Google account for this part.)
+Next, you need to sign up for a [Google Cloud Platform (GCP) account](https://cloud.google.com/gcp/). When you register a new account, you'll get 300 dollars of free credits. You have to enter your credit card information to sign up, but you will not be billed unless you exceed the 300 dollars limit, so make sure you keep your account information secure! (You may need to use a non-upenn Google account for this part.)
 
 To enable the speech-to-text API, type 'speech' in the search bar, and select "Cloud Speech-to-Text API" from the drop-down menu. Click to enable the API, then click on the "Create Credentials" button. Select the "Cloud Speech-to-Text API" (you do not need the App Engine API), and when setting up roles, make yourself the role administrator. Then, you should be able to get a service account key file (this is going to be in .json format). Rename it `credentials.json` and put it under the `sphero-project/src` folder.
 
