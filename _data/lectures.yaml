@@ -523,6 +523,11 @@
       title: Chapter 5 "Logistic Regression"
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/.pdf 
+  videos:
+    - 
+      authors: 3Blue1Brown
+      url: https://www.youtube.com/watch?v=sULa9Lc4pck-3pi
+      title: Forget how logarithms work?  Try out this notation instead.
 -
   date: 2019-11-19
   title:  HW8 due (Generate a Novel)
@@ -551,6 +556,7 @@
   slides: 
   title: Neural Networks&colon; RNNs and Deep NNs
   recording: 
+  readings:
     - 
       title: Chapter 9 "Sequence Processing with Recurrent Networks"
       authors: Jurafsky and Martin
@@ -572,6 +578,7 @@
   slides: 
   title: Neural Networks&colon; Encoder-Decoder Models and Attention
   recording: 
+  readings:
     - 
       title: Chapter 10 "Encoder-Decoder Models, Attention, and Contextual Embeddings"
       authors: Jurafsky and Martin
