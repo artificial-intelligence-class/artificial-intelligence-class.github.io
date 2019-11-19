@@ -12,7 +12,7 @@ submission_link: https://www.gradescope.com/courses/59562
 materials:
     - 
       name: r2d2_hw4.zip
-      url: r2d2_hw4.zip
+      url: r2d2_assignments/hw4/r2d2_hw4.zip
 readings:
 -
    title: Dialogue Systems and Chatbots 
@@ -103,7 +103,7 @@ Robot Excercise 4: Commanding Robots with Natural Language [100 points]
 
 ## Setup and Submission
 
-The code for this homework can be found [here](r2d2_hw4.zip).
+The code for this homework can be found [here](r2d2_hw4.zip). The file you will edit and submit for this homework is `r2d2_hw4.py`.
 
 ## Instructions
 
@@ -169,7 +169,7 @@ We have provided a file called `part2.txt` for you to submit answers to the ques
 
 -->
 
-## 1. Natural Language Commands for R2D2 [10 points]
+## 1. Natural Language Commands for R2D2 [15 points]
 
 We're going to begin this assignment by brainstorming different commands that we might like to give to our robot.  We'll take several factors into account:
 1. What actions can the robot perform?
@@ -548,7 +548,7 @@ To calculate how similar two sentences are, we are going to leverage word embedd
     ```
 
 
-3. **[5 points]** Next, we're going to use word vectors to compute the similarity of sentences.  For this part, we'll use the [Magnitude package](https://github.com/plasticityai/magnitude), which is a fast, efficient Python package for manipulating pre-trained word embeddings.  It was written by former Penn students Ajay Patel and Alex Sands.  You can install it with pip by typing this command into your terminal:
+3. **[10 points]** Next, we're going to use word vectors to compute the similarity of sentences.  For this part, we'll use the [Magnitude package](https://github.com/plasticityai/magnitude), which is a fast, efficient Python package for manipulating pre-trained word embeddings.  It was written by former Penn students Ajay Patel and Alex Sands.  You can install it with pip by typing this command into your terminal:
 ```bash
 pip3 install pymagnitude
 ```
@@ -573,8 +573,9 @@ Warning the file is very large (11GB).  If you'd like to experiment with another
    ```
    If you implemented the cosine similarity function properly, and if you loaded the vectors from the `GoogleNews-vectors-negative300.magnitude` file, you should get **0.76094574**. If you loaded the vectors from the `glove.6B.300d.magnitude` file you should get **0.6816747**.
 
+   **[0 points]** In the `Vectors` class, write an initialization method `__init__(self, vectors)` that stores an input `Magnitude` object called vectors internally for future use.
 
-   You job is to implement a function `calcSentenceEmbeddingBaseline(sentence, vectors)` that takes in a sentence and the Magnitude vectors that you loaded.  It will return a vector embedding for that sentence. If the sentence has no words, you should return a vector of all zeros with the same number of dimensions as a word in the Magnitude vectors.
+   **[10 points]** Your job is to implement a function `calcSentenceEmbeddingBaseline(sentence, vectors)` that takes in a sentence and the Magnitude vectors that you loaded.  It will return a vector embedding for that sentence. If the sentence has no words, you should return a vector of all zeros with the same number of dimensions as a word in the Magnitude vectors.
 
    For `calcSentenceEmbeddingBaseline(sentence, vectors)` you should return a component-wise addition of all of the vectors.  All the word vectors will be equal in length.  You will return a sentence vector that is also that length.  The first component of your sentence vector will be the addition of the the first component of each of the words.   Easy right?
 
