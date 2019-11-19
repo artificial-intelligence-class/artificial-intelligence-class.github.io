@@ -563,57 +563,56 @@ wget http://magnitude.plasticity.ai/word2vec/heavy/GoogleNews-vectors-negative30
 ```
 Warning the file is very large (11GB).  If you'd like to experiment with another set of word vectors that is smaller, you can [download these GloVE embeddings](http://magnitude.plasticity.ai/glove/heavy/glove.6B.300d.magnitude) which are only 1.4GB.
 
-After the file downloads, you can access the vectors like this:
+   After the file downloads, you can access the vectors like this:
 
-```python
-from pymagnitude import *
-path = '/Users/ccb/Downloads/' # Change this to where you downloaded the file.
-vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude") 
-v = vectors.query("cat") # vector representing the word 'cat'
-w = vectors.query("dog") # vector representing the word 'dog'
+   ```python
+   from pymagnitude import *
+   path = '/Users/ccb/Downloads/' # Change this to where you downloaded the file.
+   vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude") 
+   v = vectors.query("cat") # vector representing the word 'cat'
+   w = vectors.query("dog") # vector representing the word 'dog'
 
-# calculate the cosine similarity with your implementation
-sim = cosineSimilarity(v, w) 
-print(sim)
-```
-If you implemented the cosine similarity function properly, and if you loaded the vectors from the `GoogleNews-vectors-negative300.magnitude` file, you should get **0.76094574**. If you loaded the vectors from the `glove.6B.300d.magnitude` file you should get **0.6816747**.
-
-
-
-You job is to implement a function `calcSentenceEmbeddingBaseline(sentence, vectors)` that takes in a sentence and the Magnitude vectors that you loaded.  It will return a vector embedding for that sentence. If the sentence has no words, you should return a vector of all zeros with the same number of dimensions as a word in the Magnitude vectors.
-
-For `calcSentenceEmbeddingBaseline(sentence, vectors)` you should return a component-wise addition of all of the vectors.  All the word vectors will be equal in length.  You will return a sentence vector that is also that length.  The first component of your sentence vector will be the addition of the the first component of each of the words.   Easy right?
-
-Here's an example of the output you would get
-```python
-from pymagnitude import *
-path = '/Users/ccb/Downloads/' # Change this to where you downloaded the file.
-vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude") 
-
->>> svec1 = calcSentenceEmbeddingBaseline("drive forward", vectors)
->>> svec2 = calcSentenceEmbeddingBaseline("roll ahead", vectors)
->>> svec3 = calcSentenceEmbeddingBaseline("set your lights to purple", vectors)
->>> svec4 = calcSentenceEmbeddingBaseline("turn your lights to be blue", vectors)
->>> cosineSimilarity(svec1, svec2)
-0.4255210604304939
->>> cosineSimilarity(svec1, svec3)
-0.20958250895677447
->>> cosineSimilarity(svec1, svec4)
-0.30474097280886364
->>> cosineSimilarity(svec2, svec3)
-0.24962558300148688
->>> cosineSimilarity(svec2, svec4)
-0.27946534951158214
->>> cosineSimilarity(svec3, svec4)
-0.8081137933660256
-```
+   # calculate the cosine similarity with your implementation
+   sim = cosineSimilarity(v, w) 
+   print(sim)
+   ```
+   If you implemented the cosine similarity function properly, and if you loaded the vectors from the `GoogleNews-vectors-negative300.magnitude` file, you should get **0.76094574**. If you loaded the vectors from the `glove.6B.300d.magnitude` file you should get **0.6816747**.
 
 
+   You job is to implement a function `calcSentenceEmbeddingBaseline(sentence, vectors)` that takes in a sentence and the Magnitude vectors that you loaded.  It will return a vector embedding for that sentence. If the sentence has no words, you should return a vector of all zeros with the same number of dimensions as a word in the Magnitude vectors.
 
-The baseline sentence embedding method assumes that all the words in the sentence have the same importance.  
-<!--
-Later on you can implement your own `calcSentenceEmbedding(sentence, vectors)` function that does something more sophisticated if you like.
--->
+   For `calcSentenceEmbeddingBaseline(sentence, vectors)` you should return a component-wise addition of all of the vectors.  All the word vectors will be equal in length.  You will return a sentence vector that is also that length.  The first component of your sentence vector will be the addition of the the first component of each of the words.   Easy right?
+
+   Here's an example of the output you would get
+   ```python
+   from pymagnitude import *
+   path = '/Users/ccb/Downloads/' # Change this to where you downloaded the file.
+   vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude") 
+
+   >>> svec1 = calcSentenceEmbeddingBaseline("drive forward", vectors)
+   >>> svec2 = calcSentenceEmbeddingBaseline("roll ahead", vectors)
+   >>> svec3 = calcSentenceEmbeddingBaseline("set your lights to purple", vectors)
+   >>> svec4 = calcSentenceEmbeddingBaseline("turn your lights to be blue", vectors)
+   >>> cosineSimilarity(svec1, svec2)
+   0.4255210604304939
+   >>> cosineSimilarity(svec1, svec3)
+   0.20958250895677447
+   >>> cosineSimilarity(svec1, svec4)
+   0.30474097280886364
+   >>> cosineSimilarity(svec2, svec3)
+   0.24962558300148688
+   >>> cosineSimilarity(svec2, svec4)
+   0.27946534951158214
+   >>> cosineSimilarity(svec3, svec4)
+   0.8081137933660256
+   ```
+
+
+
+   The baseline sentence embedding method assumes that all the words in the sentence have the same importance.  
+   <!--
+   Later on you can implement your own `calcSentenceEmbedding(sentence, vectors)` function that does something more sophisticated if you like.
+   -->
 
 
 
@@ -698,7 +697,7 @@ TODO - write an accuracy function, evaluate your intent detection module on a te
 -->
 
 
-## 4. Slot filling [15 points]
+## 3. Slot filling [15 points]
 
 Now that we have a good idea which categories our commands belong to, we have to find a way to convert these commands to actions. This can be done via slot-filling, which fills slots in the natural language command corresponding to important values. For example, given the slots NAME, RESTAURANT, TIME and HAS_RESERVED, and a command to a chat-bot such as "John wants to go to Olive Garden", the chat-bot should fill out the slots with values: {NAME: John, RESTAURANT: Olive Garden, TIME: N/A, HAS_RESERVED: False}, and then it can decide to either execute the command or ask for more information given the slot-values.
 
@@ -724,7 +723,7 @@ Now that we have a good idea which categories our commands belong to, we have to
     {'increase': False, 'decrease': False, 'directions': ['forward', 'left', 'right', 'right']}
     ```
 
-## 5. Try it out!
+## 4. Try it out!
 
 Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, just change the ID in line 14 of `robot_com.py` to the ID of your robot, and on the command line run `python3 robot_com.py`.
 
@@ -737,7 +736,7 @@ Try out commands like:
 Have fun! Try not to be too mean to your robot :).
 
 
-## 6. Voice Input [Extra Extra Credit: 15 points]
+## 5. Voice Input [Extra Extra Credit: 15 points]
 
 *For More Extra Extra Credit* Integrate Google Cloud Platform speech-to-text module so that you can command your robot using voice!
 
