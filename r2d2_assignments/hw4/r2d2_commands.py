@@ -24,6 +24,7 @@ class Robot:
         self.grid = [[]]
         self.speed = 0.5
         self.pos = (-1, -1)
+        self.happiness = 0 # from -1 to 1
 
         self.colorToRGB = {}
         with open('data/colors.csv') as csvfile:
@@ -38,17 +39,26 @@ class Robot:
     def createSentenceEmbeddings(self):
         trainingSentences = loadTrainingSentences("data/r2d2TrainingSentences.txt")
 
-        self.categories = ["state", "direction", "light", "animation", "head", "grid"]
-
-        self.indexToSentence, self.sentenceEmbeddings = sentenceToEmbeddings(trainingSentences)
+        self.categories = [x for x in trainingSentences]
 
     def inputCommand(self, command):
         commandType = getCategory(command, "data/r2d2TrainingSentences.txt")
 
+        if "i like you" in command.lower():
+            self.happiness = 1
+            choice = random.choice([0, 1, 2, 3])
+            if choice == 0: self.droid.play_sound(30)
+            elif choice == 1: self.droid.animate(5)
+            elif choice == 2: self.droid.play_sound(34)
+            else: self.droid.animate(24)
+            time.sleep(1)
+        elif "i hate you" in command.lower():
+            self.happiness = -1
+
         if commandType == "no" and not self.voice:
             subcommand = input(self.name + ": I could not understand your command. Do you want to add this command to the training set? (yes/no): ")
             if "yes" in subcommand.lower():
-                subcommand = input("What category do you want to add it to? Choices are state, direction, light, animation, head, or grid: ")
+                subcommand = input("What category do you want to add it to? Choices are state, driving, light, animation, head, or grid: ")
                 subcommand = subcommand.lower()
                 if subcommand in self.categories:
                     with open("data/r2d2TrainingSentences.txt", 'a') as the_file:
@@ -56,15 +66,41 @@ class Robot:
                     print("Command added. Changes will be present on restart.")
                 else:
                     print(subcommand + " not a valid category.")
+            else:
+                self.happiness = max(-1, self.happiness - 0.1)
             return
-        elif commandType == "no"
+        elif commandType == "no":
+            self.happiness = max(-1, self.happiness - 0.1)
+            subcommand = print(self.name + ": I could not understand your command.")
+            self.commandNotUnderstood()
             return
 
+        if self.happiness < 0:
+            if random.random() < abs(self.happiness):
+                print(self.name + ": I'm angry at you! I will not execute your "  + commandType + " command. (Say I like you to make me happy.)")
+                self.droid.play_sound(random.choice([4, 12]))
+                return
         result = getattr(self, commandType + "Parser")(command.lower())
         if result:
             print(self.name + ": Done executing "  + commandType + " command.")
+            self.droid.play_sound(random.choice([20, 29]))
         else:
             print(self.name + ": I could not understand your " + commandType + " command.")
+            self.happiness = max(-1, self.happiness - 0.1)
+            self.commandNotUnderstood()
+
+    def commandNotUnderstood(self):
+        if self.happiness <= -0.8:
+            self.droid.play_sound(7)
+        elif self.happiness <= -0.6:
+            self.droid.play_sound(2)
+            time.sleep(1)
+        elif self.happiness <= -0.3:
+            self.droid.play_sound(random.choice([4, 12]))
+        elif self.happiness <= 0:
+            choice = random.choice([0, 1])
+            if choice == 0: self.droid.animate(0)
+            if choice == 1: self.droid.play_sound(1)
 
     def reset(self):
         self.droid.roll(0, 0, 0)
@@ -211,6 +247,7 @@ class Robot:
             lights = slots["lights"]
 
             if not slots["increment/seconds"]:
+                if self.voice: return False
                 command = input("Percent not found in command, please input percent to change by here: ")
                 try:
                     command = command.replace("%", "")
@@ -252,6 +289,7 @@ class Robot:
             lights = slots["lights"]
 
             if not slots["increment/seconds"]:
+                if self.voice: return False
                 command = input("Increment not found in command, please input amount to change by here: ")
                 try:
                     slots["increment/seconds"] = int(command)
@@ -388,11 +426,48 @@ class Robot:
 
         return False
 
-    def directionParser(self, command):
-        slots = directionParser(command)
+    def drivingParser(self, command):
+        slots = {"increase": False, "decrease": False, "shape": [], "reverse": False,
+        "percent": False, "directions": [], "increment/seconds": False, "speedModifier": []}
+
+        solutionSlots = drivingParser(command)
+
+        slots["increase"] = solutionSlots["increase"]
+        slots["decrease"] = solutionSlots["decrease"]
+        slots["directions"] = solutionSlots["directions"]
 
         if re.search(r"\b(circle|donut)\b", command, re.I):
-            if re.search(r"\b(counter)\b", command, re.I):
+            slots["shape"].append("circle")
+        if re.search(r"\b(square)\b", command, re.I):
+            slots["shape"].append("square")
+        if re.search(r"\b(counter)\b", command, re.I):
+            slots["reverse"] = True
+
+        if "half" in command:
+            slots["speedModifier"].append("half")
+        if "twice" in command or "two" in command:
+            slots["speedModifier"].append("twice")
+
+        if "%" in command:
+            slots["percent"] = True
+
+        words = re.split('\W+', command)
+        words = [x for x in words if x != ""]
+
+        for word in words:
+            if vectors.similarity("percent", word) > self.wordSimilarityCutoff:
+                slots["percent"] = True
+            try:
+                increment = int(word)
+                slots["increment/seconds"] = increment
+            except ValueError:
+                continue
+
+        return self.drivingSlotsToActions(slots)
+
+    def drivingSlotsToActions(self, slots):
+        if "circle" in slots["shape"]:
+            if slots["counter"]:
                 for heading in range(360, 0, -30):
                     self.droid.roll(self.speed, heading % 360, 0.6)
             else:
@@ -400,8 +475,8 @@ class Robot:
                     self.droid.roll(self.speed, heading, 0.6)
             self.droid.roll(0, 0, 0)
             return True
-        elif re.search(r"\b(square)\b", command, re.I):
-            if re.search(r"\b(counter)\b", command, re.I):
+        elif "square" in slots["shape"]:
+            if slots["counter"]:
                 for heading in range(360, 0, -90):
                     self.droid.roll(0, heading % 360, 0)
                     time.sleep(0.35)
@@ -414,35 +489,56 @@ class Robot:
             self.droid.roll(0, 0, 0)
             return True
         elif slots["increase"] or slots["decrease"]:
-            if slots["increase"]:
+            if slots["percent"] and slots["increment/seconds"]:
+                if slots["increase"]:
+                    self.speed = self.speed * (1 + slots["increment/seconds"]/100)
+                elif slots["decrease"]:
+                    self.speed = self.speed * (1 - slots["increment/seconds"]/100)
+                else:
+                    self.speed = self.speed * slots["increment/seconds"]/100
+            elif slots["increase"]:
+                if slots["increment/seconds"]:
+                    self.speed += slots["increment/seconds"]
                 self.speed += 0.25
             else:
+                if slots["increment/seconds"]:
+                    self.speed -= slots["increment/seconds"]
                 self.speed -= 0.25
-            self.droid.animate(1)
             return True
         else:
             flag = False
             tokens = slots["directions"]
+            seconds = 0.6
+            speedModifier = 1
+
+            if "half" in slots["speedModifier"]:
+                speedModifier = speedModifier / 2
+            elif "twice" in slots["speedModifier"]:
+                speedModifier = speedModifier * 2
+
+            if slots["increment/seconds"]:
+                seconds = slots["increment/seconds"]
+
             for token in tokens:
                 if token in {"up", "forward", "ahead", "straight", "north"}:
                     self.droid.roll(0, 0, 0)
                     time.sleep(0.35)
-                    self.droid.roll(self.speed, 0, 0.6)
+                    self.droid.roll(self.speed * speedModifier, 0, seconds)
                     flag = True
                 elif token in {"down", "back", "south"}:
                     self.droid.roll(0, 180, 0)
                     time.sleep(0.35)
-                    self.droid.roll(self.speed, 180, 0.6)
+                    self.droid.roll(self.speed * speedModifier, 180, seconds)
                     flag = True
                 elif token in {"left", "west"}:
                     self.droid.roll(0, 270, 0)
                     time.sleep(0.35)
-                    self.droid.roll(self.speed, 270, 0.6)
+                    self.droid.roll(self.speed * speedModifier, 270, seconds)
                     flag = True
                 elif token in {"right", "east"}:
                     self.droid.roll(0, 90, 0)
                     time.sleep(0.35)
-                    self.droid.roll(self.speed, 90, 0.6)
+                    self.droid.roll(self.speed * speedModifier, 90, seconds)
                     flag = True
             self.droid.roll(0, 0, 0)
             return flag

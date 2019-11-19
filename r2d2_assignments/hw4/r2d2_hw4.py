@@ -48,7 +48,7 @@ def tokenize(sentence):
 def cosineSimilarity(vector1, vector2):
     pass
 
-def calcSentenceEmbedding(sentence):
+def calcSentenceEmbeddingBaseline(sentence):
     pass
 
 def sentenceToEmbeddings(commandTypeToSentences):
@@ -130,8 +130,8 @@ def lightParser(command):
 
     return slots
 
-def directionParser(command):
-    '''Slots for directional command
+def drivingParser(command):
+    '''Slots for driving commands
     Directions should support sequential directional commands in one sentence, such as "go straight and turn left". 
     You may ignore special cases such as "make a left before you come back"
     '''
