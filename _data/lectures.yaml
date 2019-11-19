@@ -517,7 +517,7 @@
   date: 2019-11-19
   slides: 
   title: Logistic Regression and Stochastic Gradient Descent
-  recording: 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e98aa713-242e-4010-a254-aab501264bcd
   readings:   
     - 
       title: Chapter 5 "Logistic Regression"
@@ -552,6 +552,10 @@
       url: https://www.coursera.org/learn/neural-networks-deep-learning
       title: Neural Networks and Deep Learning
 -
+  date: 2019-11-22
+  title:  Practice Exam 3 released on Gradescope
+  type: exam
+-
   date: 2019-11-26
   slides: 
   title: Neural Networks&colon; RNNs and Deep NNs
@@ -564,10 +568,6 @@
 -
   date: 2019-11-26
   title:  HW9 released (Neural Networks)
-  type: exam
--
-  date: 2019-11-26
-  title:  Practice Exam 3 released on Gradescope
   type: exam
 -
   date: 2019-11-28
