@@ -35,12 +35,16 @@ def loadTrainingSentences(file_path):
     return commandTypeToSentences
 
 ############################################################
-# Section 3: Intent Detection
+# Section 1: Natural Language Commands for R2D2
 ############################################################
 
-# Change this path to the location of your magnitude file
-path = "/Volumes/SD/hw4_2019/vectors/"
-vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude")
+### YOUR CODE HERE ###
+
+
+
+############################################################
+# Section 2: Intent Detection
+############################################################
 
 def tokenize(sentence):
     pass
@@ -48,98 +52,103 @@ def tokenize(sentence):
 def cosineSimilarity(vector1, vector2):
     pass
 
-def calcSentenceEmbeddingBaseline(sentence):
-    pass
+class Vectors:
 
-def sentenceToEmbeddings(commandTypeToSentences):
-    '''Returns a tuple of sentence embeddings and an index-to-(category, sentence)
-    dictionary.
+    def __init__(self, vectors):
+        pass
 
-    Inputs:
-        commandTypeToSentences: A dictionary in the form returned by
-        loadTrainingSentences. Each key is a string '[category]' which
-        maps to a list of the sentences belonging to that category.
+    def calcSentenceEmbeddingBaseline(self, sentence):
+        pass
 
-    Let m = number of sentences.
-    Let n = dimension of vectors.
+    def sentenceToEmbeddings(self, commandTypeToSentences):
+        '''Returns a tuple of sentence embeddings and an index-to-(category, sentence)
+        dictionary.
 
-    Returns: a tuple (sentenceEmbeddings, indexToSentence)
-        sentenceEmbeddings: A mxn numpy array where m[i:] containes the embedding
-        for sentence i.
+        Inputs:
+            commandTypeToSentences: A dictionary in the form returned by
+            loadTrainingSentences. Each key is a string '[category]' which
+            maps to a list of the sentences belonging to that category.
 
-        indexToSentence: A dictionary with key: index i, value: (category, sentence).
-    '''
-    pass
+        Let m = number of sentences.
+        Let n = dimension of vectors.
 
-def closestSentence(sentence, sentenceEmbeddings):
-    '''Returns the index of the closest sentence to the input, 'sentence'.
+        Returns: a tuple (sentenceEmbeddings, indexToSentence)
+            sentenceEmbeddings: A mxn numpy array where m[i:] containes the embedding
+            for sentence i.
 
-    Inputs:
-        sentence: A sentence
+            indexToSentence: A dictionary with key: index i, value: (category, sentence).
+        '''
+        pass
 
-        sentenceEmbeddings: An mxn numpy array, where m is the total number
-        of sentences and n is the dimension of the vectors.
+    def closestSentence(self, sentence, sentenceEmbeddings):
+        '''Returns the index of the closest sentence to the input, 'sentence'.
 
-    Returns:
-        an integer i, where i is the row index in sentenceEmbeddings 
-        that contains the closest sentence to the input
-    '''
-    pass
+        Inputs:
+            sentence: A sentence
 
-def getCategory(sentence, file_path):
-    '''Returns the supposed category of 'sentence'.
+            sentenceEmbeddings: An mxn numpy array, where m is the total number
+            of sentences and n is the dimension of the vectors.
 
-    Inputs:
-        sentence: A sentence
+        Returns:
+            an integer i, where i is the row index in sentenceEmbeddings 
+            that contains the closest sentence to the input
+        '''
+        pass
 
-        file_path: path to a file containing r2d2 commands
+    def getCategory(self, sentence, file_path):
+        '''Returns the supposed category of 'sentence'.
 
-    Returns:
-        a string 'command', where 'command' is the category that the sentence
-        should belong to.
-    '''
-    pass
+        Inputs:
+            sentence: A sentence
 
-def accuracy(training_file_path, dev_file_path):
-    '''Returns the accuracy of your implementation of getCategory
+            file_path: path to a file containing r2d2 commands
 
-    Inputs:
-        training_file_path: path to training set
+        Returns:
+            a string 'command', where 'command' is the category that the sentence
+            should belong to.
+        '''
+        pass
 
-        dev_file_path: path to development set
+    def accuracy(self, training_file_path, dev_file_path):
+        '''Returns the accuracy of your implementation of getCategory
 
-    Let c = number of correctly categorized sentences in the development set.
-    Let s = total number of sentences in the development set.
+        Inputs:
+            training_file_path: path to training set
 
-    Returns:
-        A float equal to c/s.
-    '''
-    pass
+            dev_file_path: path to development set
 
-############################################################
-# Section 4: Slot filling
-############################################################
+        Let c = number of correctly categorized sentences in the development set.
+        Let s = total number of sentences in the development set.
 
-def lightParser(command):
-    '''Slots for light command
-    The slot "lights" can have any combination of "front"/"back"
-    '''
-    slots = {"holoEmit": False, "logDisp": False, "lights": [], "add": False, "sub": False, "off": False, "on": False}
+        Returns:
+            A float equal to c/s.
+        '''
+        pass
 
-    ### YOUR CODE HERE ###
+    ############################################################
+    # Section 3: Slot filling
+    ############################################################
 
-    return slots
+    def lightParser(self, command):
+        '''Slots for light command
+        The slot "lights" can have any combination of "front"/"back"
+        '''
+        slots = {"holoEmit": False, "logDisp": False, "lights": [], "add": False, "sub": False, "off": False, "on": False}
 
-def drivingParser(command):
-    '''Slots for driving commands
-    Directions should support sequential directional commands in one sentence, such as "go straight and turn left". 
-    You may ignore special cases such as "make a left before you come back"
-    '''
-    slots = {"increase": False, "decrease": False, "directions": []}
+        ### YOUR CODE HERE ###
 
-    ### YOUR CODE HERE ###
+        return slots
 
-    return slots
+    def drivingParser(self, command):
+        '''Slots for driving commands
+        Directions should support sequential directional commands in one sentence, such as "go straight and turn left". 
+        You may ignore special cases such as "make a left before you come back"
+        '''
+        slots = {"increase": False, "decrease": False, "directions": []}
+
+        ### YOUR CODE HERE ###
+
+        return slots
 
 
 ############################################################

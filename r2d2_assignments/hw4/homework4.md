@@ -11,17 +11,8 @@ due_date: 2019-12-03 23:59:00EST
 submission_link: https://www.gradescope.com/courses/59562
 materials:
     - 
-      name: skeleton file
-      url: r2d2_hw4.py 
-    - 
-      name: part1.txt
-      url: part1.txt
-    - 
-      name: part2.txt
-      url: part2.txt
-    - 
-      name: audio_io.py
-      url: audio_io.py
+      name: r2d2_hw4.zip
+      url: r2d2_hw4.zip
 readings:
 -
    title: Dialogue Systems and Chatbots 
@@ -109,6 +100,10 @@ You can download the materials for this assignment here:
 
 Robot Excercise 4: Commanding Robots with Natural Language [100 points]
 =============================================================
+
+## Setup and Submission
+
+The code for this homework can be found [here](r2d2_hw4.zip).
 
 ## Instructions
 
