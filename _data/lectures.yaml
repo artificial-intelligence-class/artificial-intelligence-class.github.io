@@ -515,7 +515,7 @@
       url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
 -
   date: 2019-11-19
-  slides: 
+  slides: 19-logistic-regression.pdf
   title: Logistic Regression and Stochastic Gradient Descent
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e98aa713-242e-4010-a254-aab501264bcd
   readings:   
