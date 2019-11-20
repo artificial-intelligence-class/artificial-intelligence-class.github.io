@@ -12,7 +12,7 @@ submission_link: https://www.gradescope.com/courses/59562
 materials:
     - 
       name: r2d2_hw4.zip
-      url: r2d2_assignments/hw4/r2d2_hw4.zip
+      url: r2d2_hw4.zip
 readings:
 -
    title: Dialogue Systems and Chatbots 
