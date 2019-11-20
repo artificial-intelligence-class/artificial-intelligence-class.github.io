@@ -7,9 +7,9 @@ import r2d2_hw4 as X
 WE = None
 
 if X.magnitudeFile == "google":
-    WE = X.WordEmbeddings("/Volumes/SD/hw4_2019/vectors/GoogleNews-vectors-negative300.magnitude")
+    WE = X.WordEmbeddings("/data/googleSmol.magnitude")
 elif X.magnitudeFile == "glove":
-    WE = X.WordEmbeddings()
+    WE = X.WordEmbeddings("/data/gloveSmol.magnitude")
 else:
     print("The magnitudeFile you have indicated is not one of google or glove.")
 
