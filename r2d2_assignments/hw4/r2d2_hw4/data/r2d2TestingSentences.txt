@@ -1,0 +1,67 @@
+## The following sentences are all sentences manually picked to see how good the R2 is at categorization
+
+animationSentences :: Fall over
+lightSentences :: Turn on holoemitter.
+lightSentences :: Set the holoemitter to maximum.
+lightSentences :: Turn your lights on.
+lightSentences :: Change your back light to aqua.
+lightSentences :: Lower your logic display.
+lightSentences :: Change your front light to red.
+lightSentences :: Set the values on your lights to be 255,0,0.
+lightSentences :: Subtract 100 from the blue value on your backward light.
+lightSentences :: Increase the value of green on your front light by 60%.
+lightSentences :: Display the following: red, periwinkle, chocolate, yellow, magenta.
+lightSentences :: Set lights to minimum.
+lightSentences :: Set your lights to maximum.
+lightSentences :: Set your lights to green.
+lightSentences :: Weaken your lights.
+
+drivingSentences :: Drive forward
+drivingSentences :: Go left.
+drivingSentences :: Roll forward.
+drivingSentences :: Head west.
+drivingSentences :: Go backward.
+drivingSentences :: Northeast is at 60 degrees.
+drivingSentences :: Run!
+drivingSentences :: Turn to heading 50.
+drivingSentences :: Halt.
+drivingSentences :: Start rolling.
+drivingSentences :: Lower your speed by 20%.
+drivingSentences :: Turn left, and then go forward for 3 feet.
+drivingSentences :: Darth Vader is behind you! Run away from Darth Vader!
+headSentences :: Turn your head to the left
+
+animationSentences :: Sing.
+animationSentences :: Speak.
+animationSentences :: Make a noise.
+
+gridSentences :: It's not possible to go to square 4,4.
+gridSentences :: There is a car on 5,5.
+gridSentences :: On position (1,1) you are.
+
+stateSentences :: What is the color on your back light?
+stateSentences :: Are there other R2D2s nearby?
+stateSentences :: Can I ask your name?
+stateSentences :: Your name is "poop".
+stateSentences :: What is your orientation currently?
+stateSentences :: What is the status on your battery?
+
+noSentences :: Execute.
+noSentences :: MacDonald's is good.
+noSentences :: Can I have a cheeseburger please.
+noSentences :: What is the square root of negative infinity?
+noSentences :: The car is in the parking lot.
+noSentences :: If you're happy and you know it, clap your hands.
+noSentences :: Damn I have too much things to do.
+noSentences :: My brain is a bit fried, thinking of too much.
+noSentences :: That light over there is too bright.
+noSentences :: Show me your skills.
+noSentences :: Sally likes cake.
+noSentences :: I hate you.
+noSentences :: Trump can now do what he's wanted for two years.
+noSentences :: We have a lot of rain in June.
+noSentences :: Sometimes it is better to just walk away from things and go back to them later when you’re in a better frame of mind.
+noSentences :: I am never at home on Sundays.
+noSentences :: The attack on Pearl Harbor was a surprise preemptive military strike by the Imperial Japanese Navy Air Service upon the United States.
+noSentences :: Tom got a small piece of pie.
+noSentences :: I hear that Nancy is very pretty.

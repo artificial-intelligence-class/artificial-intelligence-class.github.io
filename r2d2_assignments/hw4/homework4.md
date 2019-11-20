@@ -481,7 +481,7 @@ The goal of this part of the assignment is to enumerate as many ways of saying a
 
 
 
-## 2. Intent Detection [65 points]
+## 2. Intent Detection [70 points]
 
 In this section, we will take in a new sentence that we have never seen before and try to classify what type of command the user wants to have the the robot execute.  To do so, we will measure the similarity of the user's new sentence with each of our training sentences.  We know what command group each of our training sentences belongs to, so we will find the nearest command sentences to the new sentence, and use their labels as the label of the new sentence.  This is called $k$-nearest neighbor classification.   The label that we will assign will be `driving`, `light`, `head`, `state`, `connection`, `stance`, `animation`, or `grid`.
 
@@ -552,11 +552,11 @@ To calculate how similar two sentences are, we are going to leverage word embedd
 ```bash
 pip3 install pymagnitude
 ```
-Next, you'll need to download a pre-trained set of word embeddings.  We'll get a set trained with Google's word2vec algorithm, which we discussed in class.  You can download them by clicking on [this link](http://magnitude.plasticity.ai/word2vec/heavy/GoogleNews-vectors-negative300.magnitude) or by using this command in your terminal:
+Next, you'll need to download a pre-trained set of word embeddings.  We'll get a set trained with Google's word2vec algorithm, which we discussed in class.  You can download them by clicking on [this link](http://magnitude.plasticity.ai/word2vec/medium/GoogleNews-vectors-negative300.magnitude) or by using this command in your terminal:
 ```bash
-wget http://magnitude.plasticity.ai/word2vec/heavy/GoogleNews-vectors-negative300.magnitude
+wget http://magnitude.plasticity.ai/word2vec/medium/GoogleNews-vectors-negative300.magnitude
 ```
-Warning the file is very large (11GB).  If you'd like to experiment with another set of word vectors that is smaller, you can [download these GloVE embeddings](http://magnitude.plasticity.ai/glove/heavy/glove.6B.300d.magnitude) which are only 1.4GB.
+Warning the file is very large (5GB).  If you'd like to experiment with another set of word vectors that is smaller, you can [download these GloVE embeddings](http://magnitude.plasticity.ai/glove/heavy/glove.6B.300d.magnitude) which are only 1.4GB.
 
    After the file downloads, you can access the vectors like this:
 
@@ -573,22 +573,19 @@ Warning the file is very large (11GB).  If you'd like to experiment with another
    ```
    If you implemented the cosine similarity function properly, and if you loaded the vectors from the `GoogleNews-vectors-negative300.magnitude` file, you should get **0.76094574**. If you loaded the vectors from the `glove.6B.300d.magnitude` file you should get **0.6816747**.
 
-   **[0 points]** In the `Vectors` class, write an initialization method `__init__(self, vectors)` that stores an input `Magnitude` object called vectors internally for future use.
+   **[0 points]** In the `WordEmbeddings` class, write an initialization method `__init__(self, file_path)` that creates a `Magnitude` object from the path specified by the input, and stores it internally for future use.
 
-   **[10 points]** Your job is to implement a function `calcSentenceEmbeddingBaseline(sentence, vectors)` that takes in a sentence and the Magnitude vectors that you loaded.  It will return a vector embedding for that sentence. If the sentence has no words, you should return a vector of all zeros with the same number of dimensions as a word in the Magnitude vectors.
+   **[10 points]** Implement the function `calcSentenceEmbeddingBaseline(self, sentence)` in the `WordEmbeddings` class that takes in a sentence and returns a vector embedding for that sentence, using the `Magnitude` object stored in your initialization method. If the sentence has no words, you should return a vector of all zeros with the same number of dimensions as a word in the Magnitude vectors.
 
-   For `calcSentenceEmbeddingBaseline(sentence, vectors)` you should return a component-wise addition of all of the vectors.  All the word vectors will be equal in length.  You will return a sentence vector that is also that length.  The first component of your sentence vector will be the addition of the the first component of each of the words.   Easy right?
+   For `calcSentenceEmbeddingBaseline(self, sentence)` you should return a component-wise addition of all of the vectors.  All the word vectors will be equal in length.  You will return a sentence vector that is also that length.  The first component of your sentence vector will be the addition of the the first component of each of the words.   Easy right?
 
    Here's an example of the output you would get
    ```python
-   from pymagnitude import *
-   path = '/Users/ccb/Downloads/' # Change this to where you downloaded the file.
-   vectors = Magnitude(path + "GoogleNews-vectors-negative300.magnitude") 
-
-   >>> svec1 = calcSentenceEmbeddingBaseline("drive forward", vectors)
-   >>> svec2 = calcSentenceEmbeddingBaseline("roll ahead", vectors)
-   >>> svec3 = calcSentenceEmbeddingBaseline("set your lights to purple", vectors)
-   >>> svec4 = calcSentenceEmbeddingBaseline("turn your lights to be blue", vectors)
+   >>> X = WordEmbeddings("/Users/ccb/Downloads/GoogleNews-vectors-negative300.magnitude") # Change this to where you downloaded the file.
+   >>> svec1 = X.calcSentenceEmbeddingBaseline("drive forward")
+   >>> svec2 = X.calcSentenceEmbeddingBaseline("roll ahead")
+   >>> svec3 = X.calcSentenceEmbeddingBaseline("set your lights to purple")
+   >>> svec4 = X.calcSentenceEmbeddingBaseline("turn your lights to be blue")
    >>> cosineSimilarity(svec1, svec2)
    0.4255210604304939
    >>> cosineSimilarity(svec1, svec3)
@@ -621,11 +618,12 @@ Warning the file is very large (11GB).  If you'd like to experiment with another
     ['Fall over', 'Scream', 'Make some noise', 'Laugh', 'Play an alarm']
     ```
 
-    Write a function `sentenceToEmbeddings(commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding. Row i of the array should contain the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is a category, such as “driving”. The order of the indices does not matter, but the indices of the matrix and the dictionary should match i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary.
+    In the `WordEmbeddings` class, write a function `sentenceToEmbeddings(self, commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding. Row i of the array should contain the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is a category, such as “driving”. The order of the indices does not matter, but the indices of the matrix and the dictionary should match i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary.
     
     ```python
     >>> trainingSentences = loadTrainingSentences("data/r2d2TrainingSentences.txt")
-    >>> sentenceEmbeddings, indexToSentence = sentenceToEmbeddings(trainingSentences)
+    >>> X = WordEmbeddings("/Users/ccb/Downloads/GoogleNews-vectors-negative300.magnitude") # Change this to where you downloaded the file.
+    >>> sentenceEmbeddings, indexToSentence = X.sentenceToEmbeddings(trainingSentences)
     >>> sentenceEmbeddings[14:]
     array([[-0.05598213,  0.1943551 , -0.11834867, ..., -0.06152995,
              0.08182373, -0.09995176],
@@ -644,36 +642,37 @@ Warning the file is very large (11GB).  If you'd like to experiment with another
     ('Turn to heading 30 degrees.', 'driving')
     ```
 
-5. **[10 points]** Now, given an arbitrary input sentence, and an m by n matrix of sentence embeddings, write a function `closestSentence(sentence, sentenceEmbeddings)` that returns the index of the closest sentence to the input. This should be the row vector which is closest to the sentence vector of the input. Depending on the indices of your implementation of `sentenceToEmbeddings(commandTypeToSentences)`, the following output may vary.
+5. **[10 points]** Now, given an arbitrary input sentence, and an m by n matrix of sentence embeddings, write a function `closestSentence(self, sentence, sentenceEmbeddings)` that returns the index of the closest sentence to the input. This should be the row vector which is closest to the sentence vector of the input. Depending on the indices of your implementation of `sentenceToEmbeddings(self, commandTypeToSentences)`, the following output may vary.
 
     ```python
-    >>> sentenceEmbeddings, _ = sentenceToEmbeddings(loadTrainingSentences("data/r2d2TrainingSentences.txt"))
-    >>> closestSentence("Lights on.", sentenceEmbeddings)
+    >>> sentenceEmbeddings, _ = X.sentenceToEmbeddings(loadTrainingSentences("data/r2d2TrainingSentences.txt"))
+    >>> X.closestSentence("Lights on.", sentenceEmbeddings)
     32
     ```
 
-6. **[25 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
+6. **[25 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(self, sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
 
     Simply finding the closest sentence and outputting that category may not be enough for this function. We suggest trying out a k-nearest neighbors approach, and scoring the neighbors in some way to find which category is the best fit. You can write new helper functions to help out. Also, which kind of words appear in almost all sentences and so are not a good way to distinguish between sentence meanings?
         
     ```python
-    >>> getCategory("Turn your lights green.", "data/r2d2TrainingSentences.txt")
+    >>> X.getCategory("Turn your lights green.", "data/r2d2TrainingSentences.txt")
     'light'
-    >>> getCategory("Drive forward for two feet.", "data/r2d2TrainingSentences.txt")
+    >>> X.getCategory("Drive forward for two feet.", "data/r2d2TrainingSentences.txt")
     'driving'
-    >>> getCategory("Do not laugh at me.", "data/r2d2TrainingSentences.txt")
+    >>> X.getCategory("Do not laugh at me.", "data/r2d2TrainingSentences.txt")
     'no'
     ```
 
     Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
 
-    **[5 points]** To help you with your implementation of `getCategory`, we require that you fill out the code stub for `accuracy(training_file_path, dev_file_path)`. This function should test your implementation of `getCategory` faithfully using paths to training and development sets as input. Don't worry about the efficiency of this function! Located in the `data` folder is a development set `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation of `getCategory` locally.
+    **[5 points]** To help you with your implementation of `getCategory`, we require that you fill out the code stub for `accuracy(self, training_file_path, dev_file_path)`. This function should test your implementation of `getCategory` faithfully using paths to training and development sets as input. Don't worry about the efficiency of this function! Located in the `data` folder is a development set `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation of `getCategory` locally.
 
     ```python
-    >>> accuracy("data/r2d2TrainingSentences.txt", "data/r2d2DevelopmentSentences.txt")
+    >>> X.accuracy("data/r2d2TrainingSentences.txt", "data/r2d2DevelopmentSentences.txt")
     0.75
     ```
 
+    **Note** Before you submit, you need to indicate which Magnitude file you decide to use for your `getCategory` function. If you decide on using the Google Word2Vec vectors, change the `magnitudeFile` variable at the beginning of Section 2 to `"google"`. If you decide that you like the GloVE vectors better, change the `magnitudeFile` variable to `"glove"`. Doing so is **very important**, as this may change how accurate your `getCategory` function is.
 
 <!--
     Your implementation for `getCategory` can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set `r2d2DevelopmentSentences.txt` (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
@@ -697,7 +696,7 @@ TODO - write an accuracy function, evaluate your intent detection module on a te
 
 Now that we have a good idea which categories our commands belong to, we have to find a way to convert these commands to actions. This can be done via slot-filling, which fills slots in the natural language command corresponding to important values. For example, given the slots NAME, RESTAURANT, TIME and HAS_RESERVED, and a command to a chat-bot such as "John wants to go to Olive Garden", the chat-bot should fill out the slots with values: {NAME: John, RESTAURANT: Olive Garden, TIME: N/A, HAS_RESERVED: False}, and then it can decide to either execute the command or ask for more information given the slot-values.
 
-1. **[15 points]** Using regex or word2vec vectors, populate the functions `lightParser(command)` and `drivingParser(command)` to perform slot-filling for the predefined slots, given string input `command`. We will test these functions and give you full credit if you get above a 50% accuracy. These functions do not have to be perfect, but the better these functions are, the better your R2D2 will respond to your commands.
+1. **[15 points]** Using regex or word2vec vectors, populate the functions `lightParser(self, command)` and `drivingParser(self, command)` in the `WordEmbeddings` class to perform slot-filling for the predefined slots, given string input `command`. We will test these functions and give you full credit if you get above a 50% accuracy. These functions do not have to be perfect, but the better these functions are, the better your R2D2 will respond to your commands.
 
     For `lightParser`, the `holoEmit` and `logDisp` indicate whether the command references the holoemitter or the logic display. If the command wants to add (increase), or subtract (decrease) RGB values, those slots should be true. The `on` and `off` fields correspond to whether the lights should be turned on or off, and should also respond to words like "maximum." The `lights` slot should be a list of which lights the command refers to, either `front` or `back`, or both if you believe your command refers to both lights.
 
@@ -706,22 +705,22 @@ Now that we have a good idea which categories our commands belong to, we have to
     Your functions should work like so:
 
     ```python
-    >>> lightParser("Set your lights to maximum")
+    >>> X.lightParser("Set your lights to maximum")
     {'holoEmit': False, 'logDisp': False, 'lights': ['front', 'back'], 'add': False, 'sub': False, 'off': False, 'on': True}
-    >>> lightParser("Increase the red RGB value of your front light by 50.")
+    >>> X.lightParser("Increase the red RGB value of your front light by 50.")
     {'holoEmit': False, 'logDisp': False, 'lights': ['front'], 'add': True, 'sub': False, 'off': False, 'on': False}
     ```
    
     ```python
-    >>> drivingParser("Increase your speed!")
+    >>> X.drivingParser("Increase your speed!")
     {'increase': True, 'decrease': False, 'directions': []}
-    >>> drivingParser("Go forward, left, right, and then East.")
+    >>> X.drivingParser("Go forward, left, right, and then East.")
     {'increase': False, 'decrease': False, 'directions': ['forward', 'left', 'right', 'right']}
     ```
 
 ## 4. Try it out!
 
-Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, just change the ID in line 14 of `robot_com.py` to the ID of your robot, and on the command line run `python3 robot_com.py`.
+Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, change the ID in line 14 of `robot_com.py` to the ID of your robot, the path on line 15 of r2d2_commands.py to the path of your Magnitude file of choice (from this new directory), and on the command line run `python3 robot_com.py`.
 
 Try out commands like:
 

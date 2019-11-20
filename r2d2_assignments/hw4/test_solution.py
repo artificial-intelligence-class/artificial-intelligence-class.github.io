@@ -4,13 +4,25 @@ import numpy as np
 import re
 import r2d2_hw4 as X
 
+WE = None
+
+if X.magnitudeFile == "google":
+    WE = X.WordEmbeddings("/Volumes/SD/hw4_2019/vectors/GoogleNews-vectors-negative300.magnitude")
+elif X.magnitudeFile == "glove":
+    WE = X.WordEmbeddings()
+else:
+    print("The magnitudeFile you have indicated is not one of google or glove.")
+
+trainingSentences = X.loadTrainingSentences("data/r2d2TrainingSentences.txt")
+sentenceEmbeddings, indexToSentence = WE.sentenceToEmbeddings(trainingSentences)
+
 def tokenize(sentence):
     words = re.findall(r"[\w]+", sentence)
     return [x.lower() for x in words]
 
 def calcSentenceEmbeddingBaseline(sentence):
     words = tokenize(sentence)
-    return X.vectors.query(words).sum(axis = 0)
+    return WE.vectors.query(words).sum(axis = 0)
 
 def sentenceToEmbeddings(commandTypeToSentences):
     indexToSentence = {}
@@ -22,7 +34,7 @@ def sentenceToEmbeddings(commandTypeToSentences):
             indexToSentence[i] = (sentence, category)
             i += 1
 
-    sentenceEmbeddings = np.zeros((len(indexToSentence), X.vectors.dim))
+    sentenceEmbeddings = np.zeros((len(indexToSentence), WE.vectors.dim))
 
     for i in range(len(indexToSentence)):
         sentence = indexToSentence[i][0]
@@ -39,21 +51,142 @@ def accuracy():
     for category in testSentences:
         for sentence in testSentences[category]:
             countTotal += 1
-            if X.getCategory(sentence, "data/r2d2TrainingSentences.txt") == category:
+            if WE.getCategory(sentence, "data/r2d2TrainingSentences.txt") == category:
                 countRight += 1
 
     return countRight / countTotal
 
-trainingSentences = X.loadTrainingSentences("data/r2d2TrainingSentences.txt")
-sentenceEmbeddings, indexToSentence = sentenceToEmbeddings(trainingSentences)
-
 class TestSolution(unittest.TestCase):
 
 ############################################################
-# Section 3: Intent Detection [65 points]
+# Section 1: Natural Language Commands for R2D2 [15 points]
 ############################################################
 
-# Section 3, Problem 1 [5 points]
+    @weight(2)
+    @timeout_decorator.timeout(5)
+    def test_driving_sentences(self):
+        varPresent = False
+        try: X.my_driving_sentences
+        except NameError: varPresent = True
+        self.assertTrue(varPresent, "You have not created a variable my_driving_sentences.")
+
+        if varPresent:
+            self.assertTrue(len(set(X.my_driving_sentences)) >= 10, "You have not created 10 distinct sentences in my_driving_sentences.")
+            for i in X.my_driving_sentences:
+                if type(i) != str:
+                    self.assertTrue(False, "You must only have string sentences.")
+                    break
+
+    @weight(2)
+    @timeout_decorator.timeout(5)
+    def test_light_sentences(self):
+        varPresent = False
+        try: X.my_light_sentences
+        except NameError: varPresent = True
+        self.assertTrue(varPresent, "You have not created a variable my_light_sentences.")
+
+        if varPresent:
+            self.assertTrue(len(set(X.my_light_sentences)) >= 10, "You have not created 10 distinct sentences in my_light_sentences.")
+            for i in X.my_light_sentences:
+                if type(i) != str:
+                    self.assertTrue(False, "You must only have string sentences.")
+                    break
+
+    @weight(2)
+    @timeout_decorator.timeout(5)
+    def test_head_sentences(self):
+        varPresent = False
+        try: X.my_head_sentences
+        except NameError: varPresent = True
+        self.assertTrue(varPresent, "You have not created a variable my_head_sentences.")
+
+        if varPresent:
+            self.assertTrue(len(set(X.my_head_sentences)) >= 10, "You have not created 10 distinct sentences in my_head_sentences.")
+            for i in X.my_head_sentences:
+                if type(i) != str:
+                    self.assertTrue(False, "You must only have string sentences.")
+                    break
+
+    @weight(2)
+    @timeout_decorator.timeout(5)
+    def test_state_sentences(self):
+        varPresent = False
+        try: X.my_state_sentences
+        except NameError: varPresent = True
+        self.assertTrue(varPresent, "You have not created a variable my_state_sentences.")
+
+        if varPresent:
+            self.assertTrue(len(set(X.my_state_sentences)) >= 10, "You have not created 10 distinct sentences in my_state_sentences.")
+            for i in X.my_state_sentences:
+                if type(i) != str:
+                    self.assertTrue(False, "You must only have string sentences.")
+                    break
+
+    @weight(2)
+    @timeout_decorator.timeout(5)
+    def test_connection_sentences(self):
+        varPresent = False
+        try: X.my_connection_sentences
+        except NameError: varPresent = True
+        self.assertTrue(varPresent, "You have not created a variable my_connection_sentences.")
+
+        if varPresent:
+            self.assertTrue(len(set(X.my_connection_sentences)) >= 10, "You have not created 10 distinct sentences in my_connection_sentences.")
+            for i in X.my_connection_sentences:
+                if type(i) != str:
+                    self.assertTrue(False, "You must only have string sentences.")
+                    break
+
+    @weight(2)
+    @timeout_decorator.timeout(5)
+    def test_stance_sentences(self):
+        varPresent = False
+        try: X.my_stance_sentences
+        except NameError: varPresent = True
+        self.assertTrue(varPresent, "You have not created a variable my_stance_sentences.")
+
+        if varPresent:
+            self.assertTrue(len(set(X.my_stance_sentences)) >= 10, "You have not created 10 distinct sentences in my_stance_sentences.")
+            for i in X.my_stance_sentences:
+                if type(i) != str:
+                    self.assertTrue(False, "You must only have string sentences.")
+                    break
+
+    @weight(1)
+    @timeout_decorator.timeout(5)
+    def test_animation_sentences(self):
+        varPresent = False
+        try: X.my_animation_sentences
+        except NameError: varPresent = True
+        self.assertTrue(varPresent, "You have not created a variable my_animation_sentences.")
+
+        if varPresent:
+            self.assertTrue(len(set(X.my_animation_sentences)) >= 10, "You have not created 10 distinct sentences in my_animation_sentences.")
+            for i in X.my_animation_sentences:
+                if type(i) != str:
+                    self.assertTrue(False, "You must only have string sentences.")
+                    break
+
+    @weight(2)
+    @timeout_decorator.timeout(5)
+    def test_grid_sentences(self):
+        varPresent = False
+        try: X.my_grid_sentences
+        except NameError: varPresent = True
+        self.assertTrue(varPresent, "You have not created a variable my_grid_sentences.")
+
+        if varPresent:
+            self.assertTrue(len(set(X.my_grid_sentences)) >= 10, "You have not created 10 distinct sentences in my_grid_sentences.")
+            for i in X.my_grid_sentences:
+                if type(i) != str:
+                    self.assertTrue(False, "You must only have string sentences.")
+                    break
+
+############################################################
+# Section 2: Intent Detection [70 points]
+############################################################
+
+# Section 2, Problem 1 [5 points]
 
     @weight(1)
     @timeout_decorator.timeout(10)
@@ -75,7 +208,7 @@ class TestSolution(unittest.TestCase):
     def test_tokenize_4(self):
         self.assertTrue(X.tokenize("") == [])
 
-# Section 3, Problem 2 [5 points]
+# Section 2, Problem 2 [5 points]
 
     @weight(1)
     @timeout_decorator.timeout(10)
@@ -85,7 +218,7 @@ class TestSolution(unittest.TestCase):
     @weight(1)
     @timeout_decorator.timeout(10)
     def test_cosineSimilarity_2(self):
-        self.assertEqual(X.cosineSimilarity(X.vectors.query("cat"), X.vectors.query("dog")), X.vectors.similarity("cat", "dog"))
+        self.assertEqual(X.cosineSimilarity(WE.vectors.query("cat"), WE.vectors.query("dog")), WE.vectors.similarity("cat", "dog"))
 
     @weight(1)
     @timeout_decorator.timeout(10)
@@ -102,55 +235,55 @@ class TestSolution(unittest.TestCase):
     def test_cosineSimilarity_5(self):
         self.assertAlmostEqual(X.cosineSimilarity(np.array([2, 4]), np.array([-4, -8])), -1, delta = 0.000001)
 
-# Section 3, Problem 3 [5 points]
+# Section 2, Problem 3 [10 points]
 
-    @weight(1)
+    @weight(2)
     @timeout_decorator.timeout(10)
     def test_calcSentenceEmbeddingBaseline_1(self):
-        self.assertTrue(np.allclose(X.calcSentenceEmbeddingBaseline("  This is an example.  "), calcSentenceEmbeddingBaseline("  This is an example.  ")))
+        self.assertTrue(np.allclose(WE.calcSentenceEmbeddingBaseline("  This is an example.  "), calcSentenceEmbeddingBaseline("  This is an example.  ")))
 
-    @weight(1)
+    @weight(2)
     @timeout_decorator.timeout(10)
     def test_calcSentenceEmbeddingBaseline_2(self):
-        self.assertTrue(np.array_equal(X.calcSentenceEmbeddingBaseline("    "), np.zeros(300)))
+        self.assertTrue(np.array_equal(WE.calcSentenceEmbeddingBaseline("    "), np.zeros(300)))
 
-    @weight(1)
+    @weight(2)
     @timeout_decorator.timeout(10)
     def test_calcSentenceEmbeddingBaseline_3(self):
-        self.assertTrue(np.allclose(X.calcSentenceEmbeddingBaseline("Drive forward and turn left."), calcSentenceEmbeddingBaseline("Drive forward and turn left.")))
+        self.assertTrue(np.allclose(WE.calcSentenceEmbeddingBaseline("Drive forward and turn left."), calcSentenceEmbeddingBaseline("Drive forward and turn left.")))
 
-    @weight(1)
+    @weight(2)
     @timeout_decorator.timeout(10)
     def test_calcSentenceEmbeddingBaseline_4(self):
-        self.assertTrue(np.allclose(X.calcSentenceEmbeddingBaseline("REALLY?!"), calcSentenceEmbeddingBaseline("REALLY?!")))
+        self.assertTrue(np.allclose(WE.calcSentenceEmbeddingBaseline("REALLY?!"), calcSentenceEmbeddingBaseline("REALLY?!")))
 
-    @weight(1)
+    @weight(2)
     @timeout_decorator.timeout(10)
     def test_calcSentenceEmbeddingBaseline_5(self):
-        self.assertTrue(np.allclose(X.calcSentenceEmbeddingBaseline("I'm an apostrophe."), calcSentenceEmbeddingBaseline("I'm an apostrophe.")))
+        self.assertTrue(np.allclose(WE.calcSentenceEmbeddingBaseline("I'm an apostrophe."), calcSentenceEmbeddingBaseline("I'm an apostrophe.")))
 
-# Section 3, Problem 4 [10 points]
+# Section 2, Problem 4 [10 points]
 
     @weight(1)
     @timeout_decorator.timeout(10)
     def test_sentenceToEmbeddings_1(self):
-        self.assertEqual(X.sentenceToEmbeddings({})[0], sentenceToEmbeddings({})[0])
-        self.assertEqual(X.sentenceToEmbeddings({})[1], sentenceToEmbeddings({})[1])
+        self.assertEqual(WE.sentenceToEmbeddings({})[0].shape, (0, 300))
+        self.assertEqual(WE.sentenceToEmbeddings({})[1], sentenceToEmbeddings({})[1])
 
     @weight(2)
     @timeout_decorator.timeout(10)
     def test_sentenceToEmbeddings_2(self):
         sentenceDictionary = {'unseenCommand': ["Become bipedal."]}
 
-        self.assertTrue(np.allclose(X.sentenceToEmbeddings(sentenceDictionary)[0], sentenceToEmbeddings(sentenceDictionary)[0]))
-        self.assertEqual(X.sentenceToEmbeddings(sentenceDictionary)[1], {0: ("Become bipedal.", 'unseenCommand')})
+        self.assertTrue(np.allclose(WE.sentenceToEmbeddings(sentenceDictionary)[0], sentenceToEmbeddings(sentenceDictionary)[0]))
+        self.assertEqual(WE.sentenceToEmbeddings(sentenceDictionary)[1], {0: ("Become bipedal.", 'unseenCommand')})
 
     @weight(2)
     @timeout_decorator.timeout(10)
     def test_sentenceToEmbeddings_3(self):
         sentenceDictionary = {'state': ["What is your speed at this moment?"], 'head': ["Turn your head to the left."]}
 
-        studentAnswer = X.sentenceToEmbeddings(sentenceDictionary)
+        studentAnswer = WE.sentenceToEmbeddings(sentenceDictionary)
         correctAnswer = sentenceToEmbeddings(sentenceDictionary)
 
         self.assertEqual(studentAnswer[0].shape, correctAnswer[0].shape)
@@ -172,7 +305,7 @@ class TestSolution(unittest.TestCase):
     @weight(5)
     @timeout_decorator.timeout(10)
     def test_sentenceToEmbeddings_4(self):
-        studentAnswer = X.sentenceToEmbeddings(trainingSentences)
+        studentAnswer = WE.sentenceToEmbeddings(trainingSentences)
 
         self.assertEqual(studentAnswer[0].shape, sentenceEmbeddings.shape)
 
@@ -190,22 +323,22 @@ class TestSolution(unittest.TestCase):
                         break
             self.assertTrue(foundSentence)
 
-# Section 3, Problem 5 [10 points]
+# Section 2, Problem 5 [10 points]
 
     @weight(2)
     @timeout_decorator.timeout(10)
     def test_closestSentence_1(self):
-        self.assertEqual(X.closestSentence("Lights on.", sentenceEmbeddings), 32)
+        self.assertEqual(WE.closestSentence("Lights on.", sentenceEmbeddings), 32)
 
     @weight(2)
     @timeout_decorator.timeout(10)
     def test_closestSentence_2(self):
-        self.assertEqual(X.closestSentence("The chair was over there.", sentenceEmbeddings), 51)
+        self.assertEqual(WE.closestSentence("The chair was over there.", sentenceEmbeddings), 51)
 
     @weight(2)
     @timeout_decorator.timeout(10)
     def test_closestSentence_3(self):
-        self.assertEqual(X.closestSentence("Drive in a forward direction.", sentenceEmbeddings), 23)
+        self.assertEqual(WE.closestSentence("Drive in a forward direction.", sentenceEmbeddings), 23)
 
     @weight(4)
     @timeout_decorator.timeout(10)
@@ -213,9 +346,9 @@ class TestSolution(unittest.TestCase):
         x = np.zeros((2, 300))
         x[1, 50] = 1
         x[0, 49] = 1
-        self.assertEqual(X.closestSentence("Can you test me.", x), 1)
+        self.assertEqual(WE.closestSentence("Can you test me.", x), 1)
 
-# Section 3, Problem 6a [25 points]
+# Section 2, Problem 6a [25 points]
 
     @partial_credit(25)
     @timeout_decorator.timeout(30)
@@ -230,19 +363,19 @@ class TestSolution(unittest.TestCase):
     def test_score(self, set_leaderboard_value = None):
         self.set_leaderboard_value(accuracy())
 
-# Section 3, Problem 6b [5 points]
+# Section 2, Problem 6b [5 points]
 
     @weight(5)
     @timeout_decorator.timeout(30)
     def test_accuracy(self):
         studentAccuracy = accuracy()
-        self.assertEqual(X.accuracy("data/r2d2TrainingSentences.txt", "data/r2d2TestingSentences.txt"), studentAccuracy)
+        self.assertEqual(WE.accuracy("data/r2d2TrainingSentences.txt", "data/r2d2TestingSentences.txt"), studentAccuracy)
 
 ############################################################
-# Section 4: Slot Filling [15 points]
+# Section 3: Slot Filling [15 points]
 ############################################################
 
-# Section 4, Problem 1 [7.5 points]
+# Section 3, Problem 1 [7.5 points]
 
     @weight(7.5)
     @timeout_decorator.timeout(10)
@@ -251,7 +384,7 @@ class TestSolution(unittest.TestCase):
         "Change your back light to aqua.", "Turn off your logic display.", "Set the green value on your back light to 0.", "Change your forward light to red.",
         "Reduce the green value on your lights by 50."]
 
-        studentAnswers = [X.lightParser(x) for x in sentences]
+        studentAnswers = [WE.lightParser(x) for x in sentences]
 
         correctAnswers = [
         {'holoEmit': False, 'logDisp': False, 'lights': ['front', 'back'], 'add': False, 'sub': False, 'off': False, 'on': True}, 
@@ -274,7 +407,7 @@ class TestSolution(unittest.TestCase):
         self.assertTrue(countCorrect/len(studentAnswers) >= 0.5, "You did not achieve 50 percent accuracy on our test set. The sentence: '" + sentences[i] + 
             "' was marked incorrectly.")
 
-# Section 4, Problem 2 [7.5 points]
+# Section 3, Problem 2 [7.5 points]
 
     @weight(7.5)
     @timeout_decorator.timeout(10)
@@ -282,7 +415,7 @@ class TestSolution(unittest.TestCase):
         sentences = ["Increase your speed!", "Go forward, left, right, and then East.", "Go North and then South at California Boulevard", "Speed", 
         "Decrease how fast you are going", "Go backward at the next corner", "Don't increase your speed, decrease it!"]
 
-        studentAnswers = [X.drivingParser(x) for x in sentences]
+        studentAnswers = [WE.drivingParser(x) for x in sentences]
 
         correctAnswers = [
         {'increase': True, 'decrease': False, 'directions': []}, 
