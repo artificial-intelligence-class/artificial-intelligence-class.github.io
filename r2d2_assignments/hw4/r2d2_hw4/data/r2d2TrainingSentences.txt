@@ -1,0 +1,72 @@
+## The following lines are all pre-developed sentences
+
+## Questions about the state of the droid
+
+stateSentences :: What color is your front light?
+stateSentences :: Are there any other droids nearby?
+stateSentences :: What is your name?
+stateSentences :: I want to call you 'Artoo'.
+stateSentences :: What is your orientation?
+stateSentences :: What is your current heading?
+stateSentences :: How much battery do you have left?
+stateSentences :: What is your battery status?
+
+## Driving commands
+
+drivingSentences :: North is at heading 50 degrees.
+drivingSentences :: Go North.
+drivingSentences :: Go East.
+drivingSentences :: Go South-by-southeast
+drivingSentences :: Run away!
+drivingSentences :: There’s a storm trooper to your left!  Run away from the storm trooper!
+drivingSentences :: Turn to heading 30 degrees.
+drivingSentences :: Reset your heading to 0
+drivingSentences :: Turn to face North.
+drivingSentences :: Start rolling forward.
+drivingSentences :: Increase your speed by 50%.
+drivingSentences :: Turn to your right.
+drivingSentences :: Stop.
+drivingSentences :: Set speed to be 0.
+drivingSentences :: Set speed to be 20%
+drivingSentences :: Go forward for 2 feet, then turn right.
+drivingSentences :: Turn around
+
+## Light commands
+
+lightSentences :: Change the intensity on the holoemitter to maximum.
+lightSentences :: Turn off the holoemitter.
+lightSentences :: Blink your logic display.
+lightSentences :: Change the back LED to green.
+lightSentences :: Turn your back light green.
+lightSentences :: Dim your lights holoemitter.
+lightSentences :: Turn off all your lights.
+lightSentences :: Lights out.
+lightSentences :: Set the RGB values on your lights to be 255,0,0.
+lightSentences :: Add 100 to the red value of your front LED.
+lightSentences :: Increase the blue value of your back LED by 50%.
+lightSentences :: Display the following colors for 2 seconds each: red, orange, yellow, green, blue, purple.
+lightSentences :: Change the color on both LEDs to be green.
+
+## Animations/sound
+
+animationSentences :: Fall over
+animationSentences :: Scream
+animationSentences :: Make some noise
+animationSentences :: Laugh
+animationSentences :: Play an alarm
+
+## Head rotation
+
+headSentences :: turn your head to face forward
+headSentences :: look behind you
+
+## Relationships on a grid.
+
+gridSentences :: You are on a 4 by 5 grid.
+gridSentences :: Each square is 1 foot large.
+gridSentences :: You are at position (0,0).
+gridSentences :: Go to position (3,3).
+gridSentences :: There is an obstacle at position 2,1.
+gridSentences :: There is a chair at position 3,3
+gridSentences :: Go to the left of the chair.
+gridSentences :: It’s not possible to go from 2,2 to 2,3.

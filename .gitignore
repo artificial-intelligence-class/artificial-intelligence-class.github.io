@@ -6,3 +6,4 @@ assets/slides/~*.pptx
 *.mp4
 */.DS_Store
 */*/.DS_Store
+assets/slides/old/*
