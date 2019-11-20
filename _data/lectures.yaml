@@ -530,7 +530,7 @@
       title: Forget how logarithms work?  Try out this notation instead.
 -
   date: 2019-11-19
-  title:  HW8 due (Generate a Novel)
+  title:  HW8 due (Generate a Novel), HW9 released (Neural Networks)
   type: exam
 -
   date: 2019-11-21
@@ -564,11 +564,7 @@
     - 
       title: Chapter 9 "Sequence Processing with Recurrent Networks"
       authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/9.pdf 
--
-  date: 2019-11-26
-  title:  HW9 released (Neural Networks)
-  type: exam
+      url: https://web.stanford.edu/~jurafsky/slp3/9.pdf
 -
   date: 2019-11-28
   title: Thanksgiving Break (no classes)

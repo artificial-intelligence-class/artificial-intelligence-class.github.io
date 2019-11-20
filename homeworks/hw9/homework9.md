@@ -5,7 +5,7 @@ img_link: https://xkcd.com/2173/
 caption: Technically you trained a neural net
 title: CIS 521 Homework 9 "Neural Networks"
 active_tab: homework
-release_date: 2019-11-26
+release_date: 2019-11-19
 due_date: 2019-12-03 23:59:00EDT
 materials:
     - 
