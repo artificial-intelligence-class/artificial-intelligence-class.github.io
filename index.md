@@ -86,8 +86,9 @@ Office hours
 : Thursday 3-4pm in 3401 Walnut room 463C
 : Friday 1:30-3 pm in Moore 100A
 
-Textbook
+Textbooks
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
+: [Speech and Language Processing (3rd ed. draft) by Jurafsky and Martin](https://web.stanford.edu/~jurafsky/slp3/)
 
 
 Grading
