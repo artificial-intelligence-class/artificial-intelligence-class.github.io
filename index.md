@@ -55,7 +55,7 @@ R2D2 ***Extra Credit*** Assignments (late submission not allowed):
 * [Robot Excercise 4: Commanding Robots with Natural Language](r2d2_assignments/hw4/homework4.html)
 
 Extra Credit Bounty Items:
-* Get the Python API that we developed working on Windows
+* ~~Get the Python API that we developed working on Windows~~ (solved by Hanbang with Raspberry Pi)
 * Find a way to communicate the robot's gyroscopic sensor info back to Python
 * Develop a Python collision detection protocol 
 </div>
