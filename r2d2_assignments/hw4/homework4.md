@@ -556,7 +556,7 @@ Next, you'll need to download a pre-trained set of word embeddings.  We'll get a
 ```bash
 wget http://magnitude.plasticity.ai/word2vec/medium/GoogleNews-vectors-negative300.magnitude
 ```
-Warning the file is very large (5GB).  If you'd like to experiment with another set of word vectors that is smaller, you can [download these GloVE embeddings](http://magnitude.plasticity.ai/glove/heavy/glove.6B.300d.magnitude) which are only 1.4GB.
+**Warning:** the file is very large (5GB).  If you'd like to experiment with another set of word vectors that is smaller, you can [download these GloVE embeddings](http://magnitude.plasticity.ai/glove/heavy/glove.6B.300d.magnitude) which are only 1.4GB.
 
    After the file downloads, you can access the vectors like this:
 
