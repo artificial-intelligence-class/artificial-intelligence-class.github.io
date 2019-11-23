@@ -1,19 +1,25 @@
-from gradescope_utils.autograder_utils.decorators import weight, visibility, partial_credit
-import unittest
 import numpy as np
+from gradescope_utils.autograder_utils.decorators import weight, visibility, partial_credit, leaderboard
+import unittest
+import os.path
+import timeout_decorator
 import re
 import r2d2_hw4 as X
+
+def relpath(*args):
+    current_dir = os.path.dirname(os.path.realpath(__file__))
+    return os.path.join(current_dir, *args)
 
 WE = None
 
 if X.magnitudeFile == "google":
-    WE = X.WordEmbeddings("/data/googleSmol.magnitude")
+    WE = X.WordEmbeddings(relpath("data/googleSmol.magnitude"))
 elif X.magnitudeFile == "glove":
-    WE = X.WordEmbeddings("/data/gloveSmol.magnitude")
+    WE = X.WordEmbeddings(relpath("data/gloveSmol.magnitude"))
 else:
     print("The magnitudeFile you have indicated is not one of google or glove.")
 
-trainingSentences = X.loadTrainingSentences("data/r2d2TrainingSentences.txt")
+trainingSentences = X.loadTrainingSentences(relpath("data/r2d2TrainingSentences.txt"))
 sentenceEmbeddings, indexToSentence = WE.sentenceToEmbeddings(trainingSentences)
 
 def tokenize(sentence):
@@ -47,11 +53,11 @@ def sentenceToEmbeddings(commandTypeToSentences):
 def accuracy():
     countTotal = 0
     countRight = 0
-    testSentences = X.loadTrainingSentences("data/r2d2TestingSentences.txt")
+    testSentences = X.loadTrainingSentences(relpath("data/r2d2TestingSentences.txt"))
     for category in testSentences:
         for sentence in testSentences[category]:
             countTotal += 1
-            if WE.getCategory(sentence, "data/r2d2TrainingSentences.txt") == category:
+            if WE.getCategory(sentence, relpath("data/r2d2TrainingSentences.txt")) == category:
                 countRight += 1
 
     return countRight / countTotal
@@ -65,9 +71,9 @@ class TestSolution(unittest.TestCase):
     @weight(2)
     @timeout_decorator.timeout(5)
     def test_driving_sentences(self):
-        varPresent = False
+        varPresent = True
         try: X.my_driving_sentences
-        except NameError: varPresent = True
+        except NameError: varPresent = False
         self.assertTrue(varPresent, "You have not created a variable my_driving_sentences.")
 
         if varPresent:
@@ -80,9 +86,9 @@ class TestSolution(unittest.TestCase):
     @weight(2)
     @timeout_decorator.timeout(5)
     def test_light_sentences(self):
-        varPresent = False
+        varPresent = True
         try: X.my_light_sentences
-        except NameError: varPresent = True
+        except NameError: varPresent = False
         self.assertTrue(varPresent, "You have not created a variable my_light_sentences.")
 
         if varPresent:
@@ -95,9 +101,9 @@ class TestSolution(unittest.TestCase):
     @weight(2)
     @timeout_decorator.timeout(5)
     def test_head_sentences(self):
-        varPresent = False
+        varPresent = True
         try: X.my_head_sentences
-        except NameError: varPresent = True
+        except NameError: varPresent = False
         self.assertTrue(varPresent, "You have not created a variable my_head_sentences.")
 
         if varPresent:
@@ -110,9 +116,9 @@ class TestSolution(unittest.TestCase):
     @weight(2)
     @timeout_decorator.timeout(5)
     def test_state_sentences(self):
-        varPresent = False
+        varPresent = True
         try: X.my_state_sentences
-        except NameError: varPresent = True
+        except NameError: varPresent = False
         self.assertTrue(varPresent, "You have not created a variable my_state_sentences.")
 
         if varPresent:
@@ -125,9 +131,9 @@ class TestSolution(unittest.TestCase):
     @weight(2)
     @timeout_decorator.timeout(5)
     def test_connection_sentences(self):
-        varPresent = False
+        varPresent = True
         try: X.my_connection_sentences
-        except NameError: varPresent = True
+        except NameError: varPresent = False
         self.assertTrue(varPresent, "You have not created a variable my_connection_sentences.")
 
         if varPresent:
@@ -140,9 +146,9 @@ class TestSolution(unittest.TestCase):
     @weight(2)
     @timeout_decorator.timeout(5)
     def test_stance_sentences(self):
-        varPresent = False
+        varPresent = True
         try: X.my_stance_sentences
-        except NameError: varPresent = True
+        except NameError: varPresent = False
         self.assertTrue(varPresent, "You have not created a variable my_stance_sentences.")
 
         if varPresent:
@@ -155,9 +161,9 @@ class TestSolution(unittest.TestCase):
     @weight(1)
     @timeout_decorator.timeout(5)
     def test_animation_sentences(self):
-        varPresent = False
+        varPresent = True
         try: X.my_animation_sentences
-        except NameError: varPresent = True
+        except NameError: varPresent = False
         self.assertTrue(varPresent, "You have not created a variable my_animation_sentences.")
 
         if varPresent:
@@ -170,9 +176,9 @@ class TestSolution(unittest.TestCase):
     @weight(2)
     @timeout_decorator.timeout(5)
     def test_grid_sentences(self):
-        varPresent = False
+        varPresent = True
         try: X.my_grid_sentences
-        except NameError: varPresent = True
+        except NameError: varPresent = False
         self.assertTrue(varPresent, "You have not created a variable my_grid_sentences.")
 
         if varPresent:
@@ -353,7 +359,7 @@ class TestSolution(unittest.TestCase):
     @partial_credit(25)
     @timeout_decorator.timeout(30)
     def test_getCategory(self, set_score=None):
-        studentAccuracy = accuracy()
+        studentAccuracy = accuracy() * 100
         score = round(max((min(15, studentAccuracy - 60)), 0) * 25/15)
         set_score(score)
         message = "getCategory test set accuracy: %g%%" % studentAccuracy
@@ -361,7 +367,7 @@ class TestSolution(unittest.TestCase):
 
     @leaderboard("Test Set Score")
     def test_score(self, set_leaderboard_value = None):
-        self.set_leaderboard_value(accuracy())
+        set_leaderboard_value(accuracy()*100)
 
 # Section 2, Problem 6b [5 points]
 
@@ -369,7 +375,7 @@ class TestSolution(unittest.TestCase):
     @timeout_decorator.timeout(30)
     def test_accuracy(self):
         studentAccuracy = accuracy()
-        self.assertEqual(WE.accuracy("data/r2d2TrainingSentences.txt", "data/r2d2TestingSentences.txt"), studentAccuracy)
+        self.assertEqual(WE.accuracy(relpath("data/r2d2TrainingSentences.txt"), relpath("data/r2d2TestingSentences.txt")), studentAccuracy)
 
 ############################################################
 # Section 3: Slot Filling [15 points]
