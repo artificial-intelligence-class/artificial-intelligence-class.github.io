@@ -7,3 +7,4 @@ assets/slides/~*.pptx
 */.DS_Store
 */*/.DS_Store
 assets/slides/old/*
+r2d2_assignments/hw1/autograder/
