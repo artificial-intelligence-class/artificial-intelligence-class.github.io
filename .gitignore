@@ -8,3 +8,4 @@ assets/slides/~*.pptx
 */*/.DS_Store
 assets/slides/old/*
 r2d2_assignments/hw1/autograder/
+r2d2_assignments/hw2/autograder/
