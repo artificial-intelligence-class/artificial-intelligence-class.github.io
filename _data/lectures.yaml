@@ -557,14 +557,23 @@
   type: exam
 -
   date: 2019-11-26
-  slides: 
-  title: Neural Networks&colon; RNNs and Deep NNs
+  slides: 21-neural-networks-2
+  title: Neural Networks part 2&colon; Neural Language Models
   recording: 
   readings:
+    - 
+      title: Chapter 7 "Neural Networks and Neural Language Models"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf 
     - 
       title: Chapter 9 "Sequence Processing with Recurrent Networks"
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/9.pdf
+  videos:
+    - 
+      authors: Andrew Ng
+      url: https://www.coursera.org/learn/neural-networks-deep-learning
+      title: Neural Networks and Deep Learning    
 -
   date: 2019-11-28
   title: Thanksgiving Break (no classes)
@@ -572,13 +581,13 @@
 -
   date: 2019-12-03
   slides: 
-  title: Neural Networks&colon; Encoder-Decoder Models and Attention
+  title: Neural Networks part 3
   recording: 
   readings:
     - 
-      title: Chapter 10 "Encoder-Decoder Models, Attention, and Contextual Embeddings"
+      title: Chapter 9 "Sequence Processing with Recurrent Networks"
       authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/10.pdf 
+      url: https://web.stanford.edu/~jurafsky/slp3/9.pdf
   recording:
 -
   date: 2019-12-03
