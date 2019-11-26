@@ -6,8 +6,8 @@ img_link: https://xkcd.com/149/
 caption: Natural Language Commands
 title: CIS 521 Robot Excercise 4 "Commanding Robots with Natural Language" (Extra Credit)
 attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2019 John Zhang, Calvin Zhenghua Chen, and Chris Callison-Burch with help from Yrvine Thelusma.
-release_date: 2019-12-09
-due_date: 2019-12-03 23:59:00EST
+release_date: 2019-11-19
+due_date: 2019-12-09 23:59:00EST
 submission_link: https://www.gradescope.com/courses/59562
 materials:
     - 
