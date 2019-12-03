@@ -318,7 +318,7 @@ state_sentences = [
 "What color is your front light?",
 "Tell me what color your front light is set to.",
 "Is your logic display on?",
-"What is your stance?"
+"What is your stance?",
 "What is your orientation?",
 "What direction are you facing?",
 "Are you standing on 2 feet or 3?",
