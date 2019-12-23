@@ -13,7 +13,6 @@ The Fall 2019 class is full.  There are currently 150 students enrolled in the c
  
 -->
 
-
 <!-- Display an alert about upcoming homework assignments -->
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
 {% for page in site.pages %}
