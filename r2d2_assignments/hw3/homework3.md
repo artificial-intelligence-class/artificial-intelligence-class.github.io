@@ -3,7 +3,8 @@ layout: default
 img: Darth_Vader.png
 img_link: https://www.pinterest.com/pin/341851427962125071/?nic=1
 caption: Darth Vader Copyright&#58; Pinterest
-title: CIS 521 Robot Excercise 3 "Flag Capture Game" (Extra Credit)
+title: CIS 521 Robot Excercise 3 "Capture The Flag" (Extra Credit)
+attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2019 by Yue Yang and Chris Callison-Burch.
 active_tab: homework
 release_date: 2019-10-24
 due_date: 2019-11-14 23:59:00EDT

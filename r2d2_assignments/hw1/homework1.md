@@ -4,6 +4,7 @@ img: new_robot_2x.png
 img_link: http://xkcd.com/2128/
 caption: New Robot
 title: CIS 521 Robot Excercise 1 "Using Python to Control R2D2" (Extra Credit)
+attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2019 Joe Cappadona and Chris Callison-Burch with help from Danni Ma and Emily Hilman.
 active_tab: homework
 release_date: 2019-10-03
 due_date: 2019-10-24 23:59:00EDT
