@@ -4,7 +4,7 @@ img: new_pet.png
 img_link: https://xkcd.com/413/
 caption: import soul
 title: CIS 521 Robot Excercise 2 "Robot Navigation" (Extra Credit)
-attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2019 by Yue Yang, Joe Cappadona and Chris Callison-Burch.
+attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2019 by Joe Cappadona, Yue Yang and Chris Callison-Burch.
 active_tab: homework
 release_date: 2019-10-10
 due_date: 2019-10-24 23:59:00EDT
