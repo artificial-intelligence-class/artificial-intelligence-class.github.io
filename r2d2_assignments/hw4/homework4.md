@@ -5,9 +5,9 @@ img: new_robot_2x.png
 img_link: https://xkcd.com/149/
 caption: Natural Language Commands
 title: CIS 521 Robot Excercise 4 "Commanding Robots with Natural Language" (Extra Credit)
-attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2019 by John Zhang, Calvin Zhenghua Chen, and Chris Callison-Burch with help from Yrvine Thelusma.
+attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2019 John Zhang, Calvin Zhenghua Chen, and Chris Callison-Burch with help from Yrvine Thelusma.
 release_date: 2019-11-19
-due_date: 2019-12-09 23:59:00EST
+due_date: 2019-12-03 23:59:00EST
 submission_link: https://www.gradescope.com/courses/59562
 materials:
     - 
@@ -318,7 +318,7 @@ state_sentences = [
 "What color is your front light?",
 "Tell me what color your front light is set to.",
 "Is your logic display on?",
-"What is your stance?",
+"What is your stance?"
 "What is your orientation?",
 "What direction are you facing?",
 "Are you standing on 2 feet or 3?",
@@ -615,7 +615,7 @@ wget http://magnitude.plasticity.ai/word2vec/medium/GoogleNews-vectors-negative3
     ```python
     >>> trainingSentences = loadTrainingSentences("data/r2d2TrainingSentences.txt")
     >>> trainingSentences['animation']
-    ['Fall over', 'Scream', 'Make some noise', 'Laugh', 'Play an alarm']
+    ['make a gesture', 'speak', 'Play sound number 3.', 'Stop dancing.', 'set off your alarm', ... ]
     ```
 
     In the `WordEmbeddings` class, write a function `sentenceToEmbeddings(self, commandTypeToSentences)` that converts every sentence in the dictionary returned by `loadTrainingSentences(file_path)` to an embedding. You should return a tuple of two elements. The first element is an m by n numpy array, where m is the number of sentences and n is the length of the vector embedding. Row i of the array should contain the embedding for sentence i. The second element is a dictionary mapping from the index of the sentence to a tuple where the first element is the original sentence, and the second element is a category, such as “driving”. The order of the indices does not matter, but the indices of the matrix and the dictionary should match i.e., sentence j should have an embedding in the jth row of the matrix, and should have itself and its category mapped onto by key j in the dictionary.
@@ -625,21 +625,21 @@ wget http://magnitude.plasticity.ai/word2vec/medium/GoogleNews-vectors-negative3
     >>> X = WordEmbeddings("/Users/ccb/Downloads/GoogleNews-vectors-negative300.magnitude") # Change this to where you downloaded the file.
     >>> sentenceEmbeddings, indexToSentence = X.sentenceToEmbeddings(trainingSentences)
     >>> sentenceEmbeddings[14:]
-    array([[-0.05598213,  0.1943551 , -0.11834867, ..., -0.06152995,
-             0.08182373, -0.09995176],
-           [ 0.08825371,  0.11762686,  0.13814032, ..., -0.08913179,
-            -0.01735716, -0.11799385],
-           [ 0.0267941 ,  0.07393055,  0.16094553, ...,  0.01224081,
-             0.30259034, -0.27123183],
+    array([[ 0.08058001,  0.21676847, -0.06604716, ..., -0.03767369,
+             0.15602297, -0.07835222],
+           [ 0.0350151 ,  0.07319701,  0.0894349 , ..., -0.0442058 ,
+            -0.0910254 ,  0.00273301],
+           [-0.04938643,  0.2280895 ,  0.24541894, ..., -0.16277108,
+             0.00430368, -0.45862231],
            ...,
-           [ 0.10430418, -0.1844649 ,  0.23166019, ...,  0.03172258,
-             0.01876774,  0.08740467],
-           [ 0.35799584,  0.15163158,  0.20712882, ..., -0.02359562,
-             0.14265963, -0.31631052],
-           [ 0.18705991, -0.02135478,  0.36185202, ..., -0.30548167,
-             0.04913769, -0.20094341]])
-    >>> indexToSentence[14]
-    ('Turn to heading 30 degrees.', 'driving')
+           [ 0.25111231,  0.33453143,  0.18835592, ..., -0.05870331,
+            -0.02659047, -0.47405607],
+           [ 0.20804575,  0.07450815,  0.21608222, ...,  0.09974989,
+             0.38724095, -0.41757214],
+           [ 0.1263006 , -0.2014823 ,  0.17403649, ..., -0.01363612,
+            -0.1347626 ,  0.0201975 ]])
+    >>> indexToSentence[239]
+    ('Turn to heading 50 degrees.', 'driving')
     ```
 
 5. **[10 points]** Now, given an arbitrary input sentence, and an m by n matrix of sentence embeddings, write a function `closestSentence(self, sentence, sentenceEmbeddings)` that returns the index of the closest sentence to the input. This should be the row vector which is closest to the sentence vector of the input. Depending on the indices of your implementation of `sentenceToEmbeddings(self, commandTypeToSentences)`, the following output may vary.
@@ -647,7 +647,7 @@ wget http://magnitude.plasticity.ai/word2vec/medium/GoogleNews-vectors-negative3
     ```python
     >>> sentenceEmbeddings, _ = X.sentenceToEmbeddings(loadTrainingSentences("data/r2d2TrainingSentences.txt"))
     >>> X.closestSentence("Lights on.", sentenceEmbeddings)
-    32
+    301
     ```
 
 6. **[25 points]** Now, given an arbitrary input sentence, and a file path to r2d2 commands, write a function `getCategory(self, sentence, file_path)` that returns the category that that sentence should belong to. You should also map sentences that don’t really fit into any of the categories to a new category, “no”, and return “no” if the input sentence does not really fit into any of the categories.
@@ -663,13 +663,15 @@ wget http://magnitude.plasticity.ai/word2vec/medium/GoogleNews-vectors-negative3
     'no'
     ```
 
-    Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 75% accuracy on the test set will receive a 100%, and anything lower than a 60% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
+    Your implementation for this function can be as free as you want. We will test your function on a test set of sentences. Our training set will be ` r2d2TrainingSentences.txt `, and our test set will be similar to the development set called `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation locally (however, there will be differences, so try not to overfit!). Your accuracy will be compared to scores which we believe are relatively achievable. Anything greater than or equal to a 90% accuracy on the test set will receive a 100%, and anything lower than a 80% accuracy will receive no partial credit. To encourage friendly competition, we have also set up a leaderboard so that you can see how well you are doing against peers.
+
+    When testing this function, we will be passing the same `file_path` over and over again to `getCategory`. We do not want our function to have to calculate the sentence embeddings of sentences in `file_path` repeatedly. Thus, modify `getCategory` so that we do not have to perform repeat operations when passing in the same `file_path` (you can change the `__init__` function as well). We will test this by setting strict runtime bounds for our `getCategory` and `accuracy` tests.
 
     **[5 points]** To help you with your implementation of `getCategory`, we require that you fill out the code stub for `accuracy(self, training_file_path, dev_file_path)`. This function should test your implementation of `getCategory` faithfully using paths to training and development sets as input. Don't worry about the efficiency of this function! Located in the `data` folder is a development set `r2d2DevelopmentSentences.txt` which we have provided for testing your implementation of `getCategory` locally.
 
     ```python
     >>> X.accuracy("data/r2d2TrainingSentences.txt", "data/r2d2DevelopmentSentences.txt")
-    0.75
+    0.9041095890410958
     ```
 
     **Note** Before you submit, you need to indicate which Magnitude file you decide to use for your `getCategory` function. If you decide on using the Google Word2Vec vectors, change the `magnitudeFile` variable at the beginning of Section 2 to `"google"`. If you decide that you like the GloVE vectors better, change the `magnitudeFile` variable to `"glove"`. Doing so is **very important**, as this may change how accurate your `getCategory` function is.
@@ -698,29 +700,37 @@ Now that we have a good idea which categories our commands belong to, we have to
 
 1. **[15 points]** Using regex or word2vec vectors, populate the functions `lightParser(self, command)` and `drivingParser(self, command)` in the `WordEmbeddings` class to perform slot-filling for the predefined slots, given string input `command`. We will test these functions and give you full credit if you get above a 50% accuracy. These functions do not have to be perfect, but the better these functions are, the better your R2D2 will respond to your commands.
 
-    For `lightParser`, the `holoEmit` and `logDisp` indicate whether the command references the holoemitter or the logic display. If the command wants to add (increase), or subtract (decrease) RGB values, those slots should be true. The `on` and `off` fields correspond to whether the lights should be turned on or off, and should also respond to words like "maximum." The `lights` slot should be a list of which lights the command refers to, either `front` or `back`, or both if you believe your command refers to both lights.
+    For `lightParser`, the `lights` slot refers to which lights the command refers to. It is a list with a combination of the strings `"front"`, `"back"`, `"holoEmit"`, and `"logDisp"`, corresponding to whether you believe the command refers to the front light, back light, holoemitter, or logic display, respectively. The order of these values does not matter. If the command wants to increase an RGB value, set the `add` slot to true. If it wants to decrease an RGB value, set the `sub` slot to true. The `on` and `off` fields correspond to whether the lights should be turned on or off (if the command is just changing the color of one of the RGB lights, these slots should not be changed), and should also respond to words like "maximum."
 
-    For `drivingParser`, `increase` and `decrease` correspond to whether the command wants you to increase/decrease the speed, and `directions` correspond to a list of directions that appear in the command, in order. Directions should be one of `forward`, `back`, `left`, or `right`. Cardinal directions like "South" should map onto `back`, and "East" should map onto `right`, etc.
+    For `drivingParser`, `add` and `sub` correspond to whether the command wants you to increase/decrease the speed. This should be similar to the add and sub slots from the above `lightParser`, except here you should also make sure these slots respond to words such as `faster` and `slower`. The `directions` slot corresponds to an ordered list of all direction relevant words. Values in the directions list can only be one of `"go"`, `"turn"`, `"by"`, all cardinal directions (`"north"`, `"southwest"`, etc.), and relative directions (out of `"forward"`, `"back"`, `"left"`, and `"right"`). Cardinal combinations found in the command, such as "South-by-southeast", should be parsed to the `directions` slot as `[..., "south", "by", "southeast",...]`. The `"go"` value in this list should also respond to word like `"drive"` and `"roll"`, but be careful when using Word Embeddings here. (What other value in the directions list can be confused with `"go"` is using cosine similarity on embeddings? Is regex a better idea here?)
+
+    All string values should be lower-case.
 
     Your functions should work like so:
 
     ```python
     >>> X.lightParser("Set your lights to maximum")
-    {'holoEmit': False, 'logDisp': False, 'lights': ['front', 'back'], 'add': False, 'sub': False, 'off': False, 'on': True}
+    {'lights': [], 'add': False, 'sub': False, 'on': True, 'off': False}
     >>> X.lightParser("Increase the red RGB value of your front light by 50.")
-    {'holoEmit': False, 'logDisp': False, 'lights': ['front'], 'add': True, 'sub': False, 'off': False, 'on': False}
+    {'lights': ['front'], 'add': True, 'sub': False, 'on': False, 'off': False}
+    >>> X.lightParser("Turn your holoemitter on.")
+    {'lights': ['holoEmit'], 'add': False, 'sub': False, 'on': True, 'off': False}
     ```
    
     ```python
-    >>> X.drivingParser("Increase your speed!")
-    {'increase': True, 'decrease': False, 'directions': []}
-    >>> X.drivingParser("Go forward, left, right, and then East.")
-    {'increase': False, 'decrease': False, 'directions': ['forward', 'left', 'right', 'right']}
+    >>> X.drivingParser("Make your speed faster.")
+    {'add': True, 'sub': False, 'directions': []}
+    >>> X.drivingParser("Decrease your speed by 50%.")
+    {'add': False, 'sub': True, 'directions': ["by"]}
+    >>> X.drivingParser("Drive north-by-northwest.")
+    {'add': False, 'sub': False, 'directions': ['go', 'north', 'by', 'northwest']}
+    >>> X.drivingParser("Go forward for 2 seconds, then turn right.")
+    {'add': False, 'sub': False, 'directions': ['go', 'forward', 'turn', 'right']}
     ```
 
 ## 4. Try it out!
 
-Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, change the ID in line 14 of `robot_com.py` to the ID of your robot, the path on line 15 of r2d2_commands.py to the path of your Magnitude file of choice (from this new directory), and on the command line run `python3 robot_com.py`.
+Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, change the ID in line 15 of `robot_com.py` to the ID of your robot, the path on line 16 of r2d2_commands.py to the path of your Magnitude file of choice (from this new directory), and on the command line run `python3 robot_com.py`.
 
 Try out commands like:
 
@@ -728,7 +738,7 @@ Try out commands like:
 "Change your lights to red, periwinkle, azure, green, and magenta."
 ```
 
-Have fun! Try not to be too mean to your robot :).
+Have fun! Try not to be too mean to your robot :). (Do not add sentences to the training data if you have not already finished the above sections, as this may change the local behavior of `getCategory`. If you find sentences here that are parsed wrongly, feel free to add them to your example sentences as well!)
 
 
 ## 5. Voice Input [Extra Extra Credit: 15 points]

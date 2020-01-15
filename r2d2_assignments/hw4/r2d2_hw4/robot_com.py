@@ -6,12 +6,13 @@ import re
 from r2d2_commands import *
 
 def main():
+    print("***********************************************")
     print("Welcome to CommandDroid, where we will try our best to understand what you want our R2D2 to do.")
     print("In this environment, type 'exit', 'quit', 'bye', or 'goodbye' to quit.")
     print("***********************************************")
 
     # Replace this with your own robot serial ID
-    robot = Robot('D2-152E', 0.70, False)
+    robot = Robot('XX-XXXX', 0.70, False)
 
     while(True):
         command = input("You: ").lower()

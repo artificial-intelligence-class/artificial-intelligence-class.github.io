@@ -2,8 +2,6 @@
 Allow user to control robot using natural English language via voice IO
 """
 
-from __future__ import division
-
 import re
 import sys
 
@@ -86,15 +84,12 @@ class MicrophoneStream(object):
 
 def listen_execute_loop(responses, robot):
     """Iterates through server responses, prints and executes them.
-
     The responses passed is a generator that will block until a response
     is provided by the server.
-
     Each response may contain multiple results, and each result may contain
     multiple alternatives; for details, see https://goo.gl/tjCPAU.  Here we
     print and execute only the transcription for the top alternative of the top
     result.
-
     In this case, responses are provided for interim results as well. If the
     response is an interim one, print a line feed at the end of it, to allow
     the next result to overwrite it, until the response is a final one. For the
@@ -102,7 +97,7 @@ def listen_execute_loop(responses, robot):
     finalized transcriptions are executed.
     """
 
-    print("\nSay your instruction: ")
+    print("\nPlease say your instruction: ")
 
     num_chars_printed = 0
     for response in responses:
@@ -138,28 +133,28 @@ def listen_execute_loop(responses, robot):
 
             # Exit recognition if any of the transcribed phrases could be
             # one of our keywords.
-            if re.search(r"\b(exit|quit|bye|goodbye)\b", cmd, re.I):
-                print('Exiting...')
-
-                # Reset and disconnect the robot
-                robot.reset()
+            if re.search("(exit|quit|bye)", cmd):
+                print("Exiting...")
+                # Disconnect the robot
                 robot.disconnect()
-
                 break
 
-            # Process transcribed text command
+            # Process finalized transcribed text command
             if len(cmd) == 0:
-                print("Please type something")
-            robot.inputCommand(cmd)
+                print("Please say something")
+            else:
+                robot.inputCommand(cmd)
 
-            print("\nSay your instruction: ")
+            print("\nPlease say your instruction: ")
             num_chars_printed = 0
 
 def main():
     # See http://g.co/cloud/speech/docs/languages
     # for a list of supported languages.
 
-    # Replace this with your own robot serial ID
+    # 1st param: replace this with your own robot ID
+    # 2nd param: wordSimCutoff, range: 0.0 - 1.0.
+    # 3rd param: voiceIO?
     robot = Robot("XX-XXXX", 0.70, True)
 
     language_code = "en-US" # a BCP-47 language tag

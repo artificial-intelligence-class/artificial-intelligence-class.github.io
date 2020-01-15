@@ -1,5 +1,21 @@
 ## The following sentences are all sentences manually picked to see how good the R2 is at categorization
 
+drivingSentences :: Drive forward
+drivingSentences :: Go right.
+drivingSentences :: Roll backward.
+drivingSentences :: Head east.
+drivingSentences :: Go forward.
+drivingSentences :: Southeast is at 60 degrees.
+drivingSentences :: Run!
+drivingSentences :: Turn to heading 50.
+drivingSentences :: Turn Southwest.
+drivingSentences :: Halt.
+drivingSentences :: Start rolling.
+drivingSentences :: Lower your speed by 20%.
+drivingSentences :: Increase speed by 70%.
+drivingSentences :: Turn right, and then go forward for 1 foot.
+drivingSentences :: Darth Vader is behind you! Run away from Darth Vader!
+
 lightSentences :: Turn on holoemitter.
 lightSentences :: Set the holoemitter to minimum.
 lightSentences :: Turn your lights off.
@@ -14,20 +30,27 @@ lightSentences :: Set your lights to minimum.
 lightSentences :: Set your lights to blue.
 lightSentences :: Weaken your lights.
 
-drivingSentences :: Drive forward
-drivingSentences :: Go right.
-drivingSentences :: Roll backward.
-drivingSentences :: Head east.
-drivingSentences :: Go forward.
-drivingSentences :: Southeast is at 60 degrees.
-drivingSentences :: Run!
-drivingSentences :: Turn to heading 50.
-drivingSentences :: Halt.
-drivingSentences :: Start rolling.
-drivingSentences :: Lower your speed by 20%.
-drivingSentences :: Increase speed by 70%.
-drivingSentences :: Turn right, and then go forward for 1 foot.
-drivingSentences :: Darth Vader is behind you! Run away from Darth Vader!
+headSentences :: Turn your head to the right
+headSentences :: Look forward
+headSentences :: Look around.
+
+stateSentences :: What is the color on your back light?
+stateSentences :: Can I ask your name?
+stateSentences :: Your name is "man".
+stateSentences :: What is your orientation currently?
+stateSentences :: What is the status on your battery?
+stateSentences :: What is your speed currently?
+stateSentences :: Are you alive?
+stateSentences :: Are you waddling?
+
+connectionSentences :: Connect to robot D2-152E.
+connectionSentences :: Are there other droids near you?
+connectionSentences :: Disconnect now.
+
+stanceSentences :: Bring up your third wheel.
+stanceSentences :: Set stance to be biped.
+stanceSentences :: Waddle off.
+stanceSentences :: Stop waddling.
 
 animationSentences :: Sing.
 animationSentences :: Speak.
@@ -37,16 +60,8 @@ animationSentences :: Fall over
 gridSentences :: It's not possible to go to square 4,4.
 gridSentences :: There is a car on 5,5.
 gridSentences :: On position (1,1) you are.
-
-stateSentences :: What is the color on your back light?
-stateSentences :: Are there other R2D2s nearby?
-stateSentences :: Can I ask your name?
-stateSentences :: Your name is "man".
-stateSentences :: What is your orientation currently?
-stateSentences :: What is the status on your battery?
-
-headSentences :: Turn your head to the right
-headSentences :: Look forward
+gridSentences :: Each grid is 2 feet wide.
+gridSentences :: Go to the right of the storm trooper.
 
 noSentences :: Execute.
 noSentences :: MacDonald's is good.

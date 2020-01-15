@@ -133,9 +133,9 @@ class WordEmbeddings:
 
     def lightParser(self, command):
         '''Slots for light command
-        The slot "lights" can have any combination of "front"/"back"
+        The slot "lights" can have any combination of "front"/"back"/"holoEmit"/"logDisp"
         '''
-        slots = {"holoEmit": False, "logDisp": False, "lights": [], "add": False, "sub": False, "off": False, "on": False}
+        slots = {"lights": [], "add": False, "sub": False, "on": False, "off": False}
 
         ### YOUR CODE HERE ###
 
@@ -143,10 +143,9 @@ class WordEmbeddings:
 
     def drivingParser(self, command):
         '''Slots for driving commands
-        Directions should support sequential directional commands in one sentence, such as "go straight and turn left". 
-        You may ignore special cases such as "make a left before you come back"
+        Directions should support sequential directional commands in one sentence, such as "Go straight and turn left".
         '''
-        slots = {"increase": False, "decrease": False, "directions": []}
+        slots = {"add": False, "sub": False, "directions": []}
 
         ### YOUR CODE HERE ###
 

@@ -1,72 +1,2043 @@
-## The following lines are all pre-developed sentences
-
-## Questions about the state of the droid
-
-stateSentences :: What color is your front light?
-stateSentences :: Are there any other droids nearby?
-stateSentences :: What is your name?
-stateSentences :: I want to call you 'Artoo'.
-stateSentences :: What is your orientation?
-stateSentences :: What is your current heading?
-stateSentences :: How much battery do you have left?
-stateSentences :: What is your battery status?
+## The following examples are derived from student responses to the previous version of this homework
 
 ## Driving commands
 
-drivingSentences :: North is at heading 50 degrees.
+drivingSentences :: Reset heading to 0.
+drivingSentences :: Spin
+drivingSentences :: Move fast!
+drivingSentences :: Decrease your speed by 60%.
+drivingSentences :: Turn to North.
 drivingSentences :: Go North.
-drivingSentences :: Go East.
-drivingSentences :: Go South-by-southeast
-drivingSentences :: Run away!
-drivingSentences :: There’s a storm trooper to your left!  Run away from the storm trooper!
-drivingSentences :: Turn to heading 30 degrees.
+drivingSentences :: Turn around.
+drivingSentences :: Turn 180 degrees
+drivingSentences :: please set speed to be 43%
 drivingSentences :: Reset your heading to 0
-drivingSentences :: Turn to face North.
-drivingSentences :: Start rolling forward.
-drivingSentences :: Increase your speed by 50%.
-drivingSentences :: Turn to your right.
-drivingSentences :: Stop.
+drivingSentences :: Head North, then go east for 2 seconds.
+drivingSentences :: speed up by 50%
+drivingSentences :: Look at South.
+drivingSentences :: Turn away.
+drivingSentences :: Move Forward.
+drivingSentences :: Turn 30 degrees.
+drivingSentences :: Reset your heading to 45 degrees
+drivingSentences :: Be ready for driving.
+drivingSentences :: Move left
+drivingSentences :: Move to the North.
+drivingSentences :: Moving for 10 seconds at speed of 1.
+drivingSentences :: Set your speed to 30%.
+drivingSentences :: Move north
+drivingSentences :: Turn to face backward.
+drivingSentences :: halt march
+drivingSentences :: Decrease speed by 50%.
+drivingSentences :: U-turn
+drivingSentences :: Rolling forward
 drivingSentences :: Set speed to be 0.
-drivingSentences :: Set speed to be 20%
+drivingSentences :: Move faster
+drivingSentences :: Go forward for one second
+drivingSentences :: Turn to face East.
+drivingSentences :: Turn left then go forward.
+drivingSentences :: turn right
+drivingSentences :: Reset your orientation.
+drivingSentences :: Go South and then east.
+drivingSentences :: You are driving too slow
+drivingSentences :: North is at heading 50 degrees.
+drivingSentences :: run!
+drivingSentences :: Increase speed to 30%
+drivingSentences :: head west
+drivingSentences :: head 90 degrees
+drivingSentences :: Go fast!
+drivingSentences :: turn east, and then go forward for 10 feet.
+drivingSentences :: Move forward.
+drivingSentences :: Go towards South.
+drivingSentences :: Drive.
+drivingSentences :: Turn left
+drivingSentences :: Change direction to heading 180 degrees
+drivingSentences :: turn to be east
+drivingSentences :: Drive forward.
+drivingSentences :: Turn 30 degrees counter-clockwise
+drivingSentences :: Slowly go forward
+drivingSentences :: speed up 20%
+drivingSentences :: Move to your right.
+drivingSentences :: Move backwards.
+drivingSentences :: Drive North
+drivingSentences :: Turn to face North.
+drivingSentences :: Set speed to be 80%
+drivingSentences :: Move back 1 feet.
+drivingSentences :: Run!
+drivingSentences :: Run away as maximum speed!
+drivingSentences :: Move faster.
+drivingSentences :: Set speed to be 1.
+drivingSentences :: Walk North.
+drivingSentences :: Drive north.
+drivingSentences :: Turn left.
+drivingSentences :: Turn to heading 90 degrees.
+drivingSentences :: North-East is at heading 45 degrees
+drivingSentences :: Halt
+drivingSentences :: Go full speed
+drivingSentences :: Turn to your left.
+drivingSentences :: Freeze.
+drivingSentences :: Warp speed ahead.
+drivingSentences :: go to the east direction
+drivingSentences :: Turn to face West.
+drivingSentences :: Set speed to be 30%
+drivingSentences :: Keep rolling.
+drivingSentences :: Move around
+drivingSentences :: Turn Right.
+drivingSentences :: Drive forwards.
+drivingSentences :: dance by spinning around
+drivingSentences :: Stop moving
+drivingSentences :: Turn around, then stop.
+drivingSentences :: Don't Move
+drivingSentences :: Go forward for 10 feet then stop.
+drivingSentences :: Decrease speed by 25%.
+drivingSentences :: Go forward for 2 feet, then turn left.
+drivingSentences :: Turn to face heading 100 degrees
+drivingSentences :: Stop moving.
+drivingSentences :: march south
+drivingSentences :: Don't move.
+drivingSentences :: Set speed to 50
+drivingSentences :: Turn now
+drivingSentences :: Go South-by-southeast
+drivingSentences :: Slow down by 25%.
+drivingSentences :: full speed ahead
+drivingSentences :: Turn left, then go forward for 1 feet.
+drivingSentences :: Set speed to be 50%
+drivingSentences :: Go forward for 3 feet, then turn left.
+drivingSentences :: move forward
+drivingSentences :: Stop.
+drivingSentences :: Start rolling backward.
+drivingSentences :: decrease your speed by 30%
+drivingSentences :: Moving stop
+drivingSentences :: Start driving.
+drivingSentences :: Slow down
+drivingSentences :: North-West is at heading 315 degrees
+drivingSentences :: Turn Right
+drivingSentences ::  turn in the opposite direction
+drivingSentences :: stop march
+drivingSentences :: Turn clockwise by 180 degrees.
+drivingSentences :: It is a trap! Run!
+drivingSentences :: Set speed to be 25%
+drivingSentences :: Run away!
 drivingSentences :: Go forward for 2 feet, then turn right.
+drivingSentences :: Slow down speed to 10%
+drivingSentences :: Go forward for 2 feet.
+drivingSentences :: Turn to heading 0 degrees.
+drivingSentences :: march east
+drivingSentences :: Walk Left
+drivingSentences :: halt.
+drivingSentences :: Go forward for 3 feet and turn left.
+drivingSentences :: Go left.
+drivingSentences :: Set speed to be 90%
+drivingSentences :: North is at heading 60 degrees.
+drivingSentences :: Move South-by-southeast
+drivingSentences :: Set speed to be 60%
+drivingSentences :: Set your moving speed to be 0.
+drivingSentences :: Run at max speed!
+drivingSentences :: Go West.
+drivingSentences :: Stop Moving
+drivingSentences :: Move south
+drivingSentences :: Move west
+drivingSentences :: stop driving
+drivingSentences :: North is heading 50 degrees.
+drivingSentences :: Increase speed to max speed.
+drivingSentences :: Stop driving
+drivingSentences :: Head East.
+drivingSentences :: Increase speed by 80%.
+drivingSentences :: Go forward for 2 meters, then turn right and then left.
+drivingSentences :: march forward
+drivingSentences :: halt!
+drivingSentences :: march backwards
+drivingSentences :: Make a U Turn
+drivingSentences :: Set speed to be 10%
+drivingSentences :: Move slower
+drivingSentences :: Stop for 3 secs. Then head north.
+drivingSentences :: Escape!
+drivingSentences :: Turn to heading 45 degrees.
+drivingSentences :: speed zero
+drivingSentences :: CCB says roll South.
+drivingSentences :: Move in circle.
+drivingSentences :: change your speed to 1.5.
+drivingSentences :: Stop moving!
+drivingSentences :: Mission aborted! Run away!
+drivingSentences :: Head South, then go west 2 feet.
+drivingSentences :: Freeze mister.
+drivingSentences :: Increase your speed by 100%.
+drivingSentences :: Stop right now!
+drivingSentences :: Turn to face South, then turn to face west.
+drivingSentences :: Set speed to be 40%
 drivingSentences :: Turn around
+drivingSentences :: South is at heading 90 degrees.
+drivingSentences :: Go faster
+drivingSentences :: Go faster.
+drivingSentences :: drive forward
+drivingSentences :: Begin driving.
+drivingSentences :: Run away please!
+drivingSentences :: reverse yourself.
+drivingSentences :: Increase your speed by 75%.
+drivingSentences :: North is at heading 90 degrees.
+drivingSentences :: go forward for five feet, then turn right
+drivingSentences :: Roll forward
+drivingSentences :: Restart rolling.
+drivingSentences :: Turn to a heading of 75 degrees.
+drivingSentences :: Reset your heading to 90
+drivingSentences :: Brake.
+drivingSentences :: Reverse.
+drivingSentences :: Turn 180 degrees.
+drivingSentences :: Run away droid!
+drivingSentences :: slow down 10%
+drivingSentences :: Turn to heading 20 degrees.
+drivingSentences :: go ahead
+drivingSentences :: Go East direction.
+drivingSentences :: Start going in reverse direction
+drivingSentences :: Go South
+drivingSentences :: increase the speed by 50%
+drivingSentences :: Go into drive mode
+drivingSentences :: Move forward for 5 seconds.
+drivingSentences :: Go straight
+drivingSentences :: Turn to your left
+drivingSentences :: make a left turn
+drivingSentences :: roll to the right.
+drivingSentences :: Half your speed.
+drivingSentences :: Turn to heading 30 degrees.
+drivingSentences :: Double your speed.
+drivingSentences :: Go forward, then turn right.
+drivingSentences :: Turn to heading your north.
+drivingSentences :: South-West is at heading 225 degrees
+drivingSentences :: Decrease your speed by 10%.
+drivingSentences :: Go North-by-northeast
+drivingSentences :: Reset your speed to 0.
+drivingSentences :: Turn left, then go forward for 3 feet.
+drivingSentences :: Move right
+drivingSentences :: lower your speed
+drivingSentences :: Go North direction.
+drivingSentences :: Go North-by-northwest.
+drivingSentences :: Start rolling forward.
+drivingSentences :: march north
+drivingSentences :: Stop
+drivingSentences :: North is at heading 20 degrees.
+drivingSentences :: East is at heading 30 degrees.
+drivingSentences :: Reset your heading.
+drivingSentences :: Rolling for 3 seconds
+drivingSentences :: speed march
+drivingSentences :: Rotate 180 degrees.
+drivingSentences :: Move east
+drivingSentences :: Run for it!
+drivingSentences :: cease movement
+drivingSentences :: Face right.
+drivingSentences :: Stop now
+drivingSentences :: Face South.
+drivingSentences :: Stop rolling
+drivingSentences :: Run away young bull
+drivingSentences :: spin around 360 degrees
+drivingSentences :: darth vader is behind you! run away!
+drivingSentences :: turn to be south
+drivingSentences :: go backward
+drivingSentences :: start rolling.
+drivingSentences :: Decrease your speed by 50%.
+drivingSentences :: Turn around and head South
+drivingSentences :: Go forward for 3 feet, then go west.
+drivingSentences :: Move forward 2 units, and turn left.
+drivingSentences :: Move 2 meters to your left in 10 seconds.
+drivingSentences :: go left
+drivingSentences :: Run forward
+drivingSentences :: There is a storm trooper to your right. Run away!
+drivingSentences :: Head North-by-northwast
+drivingSentences :: Turn to heading 50 degrees.
+drivingSentences :: Lower your speed.
+drivingSentences :: Set speed to be 70%
+drivingSentences :: Set speed to be 100%
+drivingSentences :: GO West
+drivingSentences :: freeze march
+drivingSentences :: Roll.
+drivingSentences :: Go East.
+drivingSentences :: Change the speed to 20%
+drivingSentences :: Move at speed 50%.
+drivingSentences :: Increase speed to 50%.
+drivingSentences :: Go South-by-southeast and then turn around
+drivingSentences :: Moving forward for 10 feet, then turn left.
+drivingSentences :: march west
+drivingSentences :: Go North and then south.
+drivingSentences :: Reset the direction of travel.
+drivingSentences :: You are driving too fast
+drivingSentences :: Slow down when you see yellow light
+drivingSentences :: Increase speed by 20%.
+drivingSentences :: There is a speed limit ahead
+drivingSentences :: Go as fast as you can forward
+drivingSentences :: Turn to your right.
+drivingSentences :: Increase your speed by 60%.
+drivingSentences :: Set speed to half of current speed.
+drivingSentences :: Set speed to be 20%
+drivingSentences :: Go straight and don't stop.
+drivingSentences :: Move northward.
+drivingSentences :: Start rolling backwards.
+drivingSentences :: Turn right 80 degrees.
+drivingSentences :: Go South.
+drivingSentences :: Move at speed of 1.0.
+drivingSentences :: South-East is at heading 135 degrees
+drivingSentences :: Go backwards
+drivingSentences :: Start rolling back.
+drivingSentences :: Move forward for 3 seconds.
+drivingSentences :: Turn right
+drivingSentences :: Turn to face South.
+drivingSentences :: Set your speed to 0.
+drivingSentences :: North is at heading 40 degrees.
+drivingSentences :: Increase your speed by 50%.
+drivingSentences :: Go slower
+drivingSentences :: Move backwards
+drivingSentences :: Move 2 feet to North.
+drivingSentences :: Enter drive mode.
+drivingSentences :: go straight 2 feet
+drivingSentences :: Restart.
+drivingSentences :: Reset heading to zero degree
+drivingSentences :: Stop rolling.
+drivingSentences :: move north
 
 ## Light commands
 
-lightSentences :: Change the intensity on the holoemitter to maximum.
+lightSentences :: Turn orange
 lightSentences :: Turn off the holoemitter.
-lightSentences :: Blink your logic display.
+lightSentences :: Set the RGB values on your lights to be 0,255,0.
+lightSentences :: Change the color on both LEDs to be red.
+lightSentences :: Turn lights on.
+lightSentences :: back lights red
 lightSentences :: Change the back LED to green.
-lightSentences :: Turn your back light green.
-lightSentences :: Dim your lights holoemitter.
-lightSentences :: Turn off all your lights.
-lightSentences :: Lights out.
+lightSentences :: Display the following colors for 3 seconds each:  green, blue, purple, red, orange, yellow.
+lightSentences :: Turn on front light.
+lightSentences :: Dim lights
+lightSentences :: Decrease the blue value of your back LED by 50%.
+lightSentences :: display something intresting
+lightSentences :: Add 10 to red value to your front led.
+lightSentences :: Lights on
+lightSentences :: Turn off all the back lights
+lightSentences :: change all of your lights to pink
+lightSentences :: Set both lights to green.
+lightSentences :: Set RGB values on lights to 0,255,0.
+lightSentences :: dim down the lights
+lightSentences :: Set the RGB values on your lights to be 255,255,255.
+lightSentences :: Subtract 50 from the green value of your front LED.
+lightSentences :: decrease the red value of your rear lights
+lightSentences :: Set the RBG value of your back LED to 200,200,200
+lightSentences :: change the back light to red
+lightSentences :: Change the back LED to blue.
+lightSentences :: Dim your lights holoemitter for 10 seconds.
+lightSentences :: Turn your back light yellow.
+lightSentences :: Change the front LED to red.
+lightSentences :: Change all lights to green for 5 seconds.
+lightSentences :: Lights off now
+lightSentences :: Blink logic display.
+lightSentences :: Set display intensity to 50 percent.
+lightSentences :: green
+lightSentences :: Lights off.
+lightSentences :: red
+lightSentences :: Change all light intensities to maximum
+lightSentences :: Set front and back lights to blue.
+lightSentences :: flash your lights one at a time
+lightSentences :: Turn the front light yellow.
+lightSentences :: turn white light on
+lightSentences :: Set RGB on back light to 0, 0, 255.
+lightSentences :: Set your RGB on front light to 0,0,155.
+lightSentences :: stealth mode
+lightSentences :: Add 50 to the green value of your back LED.
+lightSentences :: Change color to green.
+lightSentences :: Increase blue value in front light by 100.
+lightSentences :: disco lights
+lightSentences :: Display colors in the following sequence: red, yellow, green.
+lightSentences :: set both lights to yellow
+lightSentences :: only green lights
+lightSentences :: Switch the black lED to green and the front LED to blue
+lightSentences :: set the holoemitter to minimum.
+lightSentences :: Turn your front LED green.
+lightSentences :: Set the RBGs on your lights to be 0, 255, 0.
+lightSentences :: Set the RGB values on your lights to be 0,0,0.
+lightSentences :: Shut off your rear light
+lightSentences :: Stop shining your light
+lightSentences :: Blink all of your lights twice.
+lightSentences :: only orange lights
+lightSentences :: Blink your logic display for 2 seconds.
+lightSentences :: turn on all lights for 2 seconds
+lightSentences :: Change color to orange.
+lightSentences :: Set the RGB values on your lights to be (0,255,0).
+lightSentences :: Dim the lights 50%
 lightSentences :: Set the RGB values on your lights to be 255,0,0.
+lightSentences :: Turn off all lights.
+lightSentences :: Change your front light to blue.
+lightSentences :: Turn all lights off.
+lightSentences :: Set back light to blue.
+lightSentences :: Turn your back light red
+lightSentences :: lights brighter
+lightSentences :: blue
+lightSentences :: Change your back light to blue.
+lightSentences :: Blink twice.
+lightSentences :: Turn off all your lights.
+lightSentences :: Turn on the back light
+lightSentences :: no lights at all
+lightSentences :: Decrease the red intensity by 20%.
+lightSentences :: brighten up the lights
+lightSentences :: Turn off your holoemitter logic.
+lightSentences :: Blink your logic display various times 
+lightSentences :: Turn on all your lights.
+lightSentences :: Change color to blue.
+lightSentences :: display something
+lightSentences :: Turn blue
+lightSentences :: Add 100 to the blue value of your front LED.
+lightSentences :: Change the intensity on the holoemitter to max.
+lightSentences :: favorite light
+lightSentences :: Increase the red value of your back LED by 20%.
+lightSentences :: Raise holoemitter intensity to maximum.
+lightSentences :: Turn purple
+lightSentences :: Turn on the front light only
+lightSentences :: Set RGB of all lights to 255,0,0.
+lightSentences :: turn off your lights
+lightSentences :: Turn on all lights.
+lightSentences :: Halt your front and back lights
+lightSentences :: Turn off your holoemitter.
+lightSentences :: Display blue for 2 seconds, followed by red for another 2 seconds
+lightSentences :: Set colors of both LEDs to be purple.
+lightSentences :: make the back light to blue
+lightSentences :: Change color to purple.
+lightSentences :: Lights up!
+lightSentences :: Set the back color to be black.
+lightSentences :: Turn off the lights.
+lightSentences :: Set the RGB values on your lights to be 255, 255,0.
+lightSentences :: turn off the lights
+lightSentences :: Turn on the logic display.
+lightSentences :: Display rainbow lights on the front LED for 10 seconds.
+lightSentences :: Set holoemitter intensity to max.
+lightSentences :: Turn your red light blue.
+lightSentences :: Increase the blue value of your back LED by 2%.
+lightSentences :: Alternate between red and blue lights
+lightSentences :: Turn front light to green.
+lightSentences :: lights on
+lightSentences :: Turn off your logic display.
+lightSentences :: Decrease the the intensity on the holoemitter by 100%.
+lightSentences :: Switch the colors of the LEDs.
+lightSentences :: Display the following colors for 2 seconds each: red, orange, blue, green, blue, purple.
+lightSentences :: turn down the lights
+lightSentences :: Lights on.
+lightSentences :: all lights
+lightSentences :: Dim holoemitter projector.
+lightSentences :: Turn off both of your lights.
+lightSentences :: Increase the intensity on the holoemitter by 50%.
+lightSentences :: weaken your all the lights
+lightSentences :: Change back light to blue.
+lightSentences :: change the front LED to green
 lightSentences :: Add 100 to the red value of your front LED.
-lightSentences :: Increase the blue value of your back LED by 50%.
+lightSentences :: increase the back light by 50%
+lightSentences :: Turn back light to red.
+lightSentences :: Change front light to blue, and back light to yellow.
+lightSentences :: Blink red light twice
+lightSentences :: Blink one of your lights.
+lightSentences :: Put off your front light
+lightSentences :: turn off your back lights
 lightSentences :: Display the following colors for 2 seconds each: red, orange, yellow, green, blue, purple.
+lightSentences :: Dim the holoemitter.
+lightSentences :: Max brightness.
+lightSentences :: Decrease your logic display's brightness by 50%.
+lightSentences :: Set the RGB values on your lights to be 200, 100, 100.
+lightSentences :: Turn your front light green.
+lightSentences :: only blue lights
 lightSentences :: Change the color on both LEDs to be green.
-
-## Animations/sound
-
-animationSentences :: Fall over
-animationSentences :: Scream
-animationSentences :: Make some noise
-animationSentences :: Laugh
-animationSentences :: Play an alarm
+lightSentences :: display random colors
+lightSentences :: Let me see your logic display
+lightSentences :: Flash your logic display.
+lightSentences :: lights maximum
+lightSentences :: Change all lights to blue.
+lightSentences :: Turn off back light.
+lightSentences :: turn on your red light
+lightSentences :: Make your lights green.
+lightSentences :: only yellow lights
+lightSentences :: Dim your lights holoemitter.
+lightSentences :: Flicker the front LED lights for two seconds.
+lightSentences :: Display the colors for 1 seconds each: green, red, yellow, orange, blue.
+lightSentences :: Half the intensity on the holoemitter.
+lightSentences :: Change color to yellow.
+lightSentences :: Set the blue value of the front light to 255.
+lightSentences :: party mode
+lightSentences :: only red lights
+lightSentences :: Change the front LED to green.
+lightSentences :: Show these colors for 1 second each: red, purple, blue.
+lightSentences :: Lights full intensity
+lightSentences :: Decrease the red value of your front light by 10%.
+lightSentences :: Change the back LED to red.
+lightSentences :: Lights off
+lightSentences :: Turn your back light green.
+lightSentences :: Blink the lights.
+lightSentences :: Turn green
+lightSentences :: turn off all the lights
+lightSentences :: Dim your holoemitter.
+lightSentences :: let there be light
+lightSentences :: Change the back LED to yellow.
+lightSentences :: Add 110 to the red value of your front LED.
+lightSentences :: Maximize your holoemitter intensity.
+lightSentences :: Add 50 to your G value of your back LED.
+lightSentences :: Set front LED color to red.
+lightSentences :: Turn off your lights.
+lightSentences :: shine the following colors for 2 seconds each: red, orange, yellow, green, blue, purple
+lightSentences :: Blick both of your light.
+lightSentences :: Set the RGB values to 30, 30, 30
+lightSentences :: black out
+lightSentences :: Turn lights off.
+lightSentences :: dim your lights
+lightSentences :: Set the RGB values on both LEDs to be 100,100,0.
+lightSentences :: mood lighting
+lightSentences :: Dim the lights.
+lightSentences :: Disengage the logic display.
+lightSentences :: Brighten your lights holoemitter
+lightSentences :: Turn on the front lights.
+lightSentences :: Switch the lights on both LEDs to red
+lightSentences :: Turn your front light green
+lightSentences :: turn off your light
+lightSentences :: Set the RGB values of the lights to 0, 0, 255
+lightSentences :: Turn off the back light
+lightSentences :: Turn your lights as bright as possible!
+lightSentences :: Blink
+lightSentences :: Full logic display intensity
+lightSentences :: blink your lights
+lightSentences :: Turn up the lights
+lightSentences :: Turn your back light blue.
+lightSentences :: Blink your lights.
+lightSentences :: Set holoemitter projector intensity to maximum.
+lightSentences :: Turn the back light red.
+lightSentences :: Only turn on the front light.
+lightSentences :: Set the Red,Green,Blue light values to 50,100,150
+lightSentences :: Make your lights blue.
+lightSentences :: Change colors
+lightSentences :: set the rgb values of your lights to be 100, 100, 100
+lightSentences :: Change the intensity on the holoemitter to maximum.
+lightSentences :: turn your lights red
+lightSentences :: display exciting
+lightSentences :: lights up r2
+lightSentences :: Set back LED color rgb value to 255, 255, 255.
+lightSentences :: set the holoemit to maximum.
+lightSentences :: Blink your logic display.
+lightSentences :: Increase all RGB values on the front lights by 50.
+lightSentences :: 50% holoemitter intensity
+lightSentences :: dim your holoemitter
+lightSentences :: blink for 2 seconds
+lightSentences :: Make your holoemitter logic blink.
+lightSentences :: Make the lights brighter.
+lightSentences :: Turn off the logic display
+lightSentences :: Lights out.
+lightSentences :: Turn off the front light.
+lightSentences :: Turn on the holoemitter.
+lightSentences :: Cycle through lights.
+lightSentences :: Change the back light to green
+lightSentences :: Brighten your lights holoemitter.
+lightSentences :: Turn on all your lights
+lightSentences :: Turn your front light green and your back light red.
+lightSentences :: Change the intensity on the holoemitter to minimum.
+lightSentences :: Increase the blue value of your back LED by 50%.
+lightSentences :: Turn your back light red.
+lightSentences :: Turn your back LED to red
+lightSentences :: Switch off your holoemitter
+lightSentences :: Low brightness.
+lightSentences :: start shining with yellow
+lightSentences :: Increase green value of back LED
+lightSentences :: Randomly change the front LED color
+lightSentences :: Make your back light a random color.
+lightSentences :: random light
+lightSentences :: Add 50 to the red value of your front LED.
+lightSentences :: Change intensity of holoemitter to 50%
+lightSentences :: Turn lights off
+lightSentences :: Show the following colors for 3 seocnds in your lights each: purple, blue, green, yellow, orange, red.
+lightSentences :: flash all of your lights red
+lightSentences :: Turn red
+lightSentences :: Blink.
+lightSentences :: Change the color on both LEDs to be blue.
+lightSentences :: turn on all the lights
+lightSentences :: change the colour of your light
 
 ## Head rotation
 
-headSentences :: turn your head to face forward
+headSentences :: Look right then left.
+headSentences :: Turn your head to face forward.
+headSentences :: Eyes at front!
+headSentences :: lift your head
+headSentences :: Turn around.
+headSentences :: Turn head to 90 degrees
+headSentences :: spin to look north
+headSentences :: face west
+headSentences :: Look to the right.
+headSentences :: Look immediately in front of you
+headSentences :: Turn 180
+headSentences :: turn your head North
+headSentences :: Turn your head 40 degrees to your right.
+headSentences :: Look northwest at 315 degrees
+headSentences :: Turn your head to your left
+headSentences :: Look left
+headSentences :: Look to your right
+headSentences :: Set angle to be 180 degrees.
+headSentences :: Turn 70 degrees right.
+headSentences :: See front
+headSentences :: rotate head 270 degrees west
+headSentences :: 180 spin
+headSentences :: Tilt your head up 30%
+headSentences :: turn around!
+headSentences :: look foward.
+headSentences :: Look left.
+headSentences :: Rotate your head for a full circle.
+headSentences :: Look North.
+headSentences :: turn right
+headSentences :: Turn head to face west.
+headSentences :: Turn your head clockwise by 45 degrees.
+headSentences :: Rotate head to 90 degrees.
+headSentences :: head to north
+headSentences :: Turn your head 0 degrees.
+headSentences :: Turn left 90
+headSentences :: Look at another random robot.
+headSentences :: Turn head 30 degrees.
+headSentences :: look west
+headSentences :: do a 360
+headSentences :: Look behind
+headSentences :: look at the right
+headSentences :: Can you see anything behind you?
+headSentences :: Turn left
+headSentences :: look ahead
+headSentences :: Look around.
+headSentences :: Stop spinning your head.
+headSentences :: Swivel your head to see behind you
+headSentences :: Turn your head 180 degrees.
+headSentences :: Turn right 270
+headSentences :: Turn your head to face backward.
+headSentences :: Turn your head at 180 degree angle.
+headSentences :: rotate head 90 degrees east
+headSentences :: Move your head to the right.
+headSentences :: look right.
+headSentences :: Turn your head to the right by 20 degrees.
+headSentences :: stop turning
+headSentences :: Look down
+headSentences :: Rotate your head 20 degrees to your left.
+headSentences :: look to your right
+headSentences :: Turn left.
+headSentences :: face front
+headSentences :: turn your head to the right
+headSentences :: Turn 45
+headSentences :: turn head to west
+headSentences :: look down
+headSentences :: Spin your head completely
+headSentences :: Turn your head to face backwards
+headSentences :: turn your head around
+headSentences :: look to your left
+headSentences :: Look behind you.
+headSentences :: Turn your head to where you're going
+headSentences :: watch out behind
+headSentences :: Look around
+headSentences :: check your sides
+headSentences :: Turn southwest
+headSentences :: look backward
+headSentences :: About face.
+headSentences :: Turn to look backwards,
+headSentences :: turn to your left
+headSentences :: Turn head to 60 degrees.
+headSentences :: Turn your head to the left.
+headSentences :: heading towads east
+headSentences :: Look to the right
+headSentences :: Turn your head to face left.
+headSentences :: Turn to the left
+headSentences :: look south
+headSentences :: look around
+headSentences :: Turn your head at 75 degree angle.
+headSentences :: Face north.
+headSentences :: Turn head 30% clockwise
+headSentences :: Look backward
+headSentences :: Turn to face backwards.
+headSentences :: Look right
+headSentences :: To your right.
+headSentences :: Turn your head by 80 degree.
+headSentences :: wiggle your head.
+headSentences :: Look around you.
+headSentences :: Watch out behind you!
+headSentences :: Look behind you
+headSentences :: keep facing forard
+headSentences :: Turn your head to face first forward and then backward.
+headSentences :: Turn your head 10 degrees to the right
+headSentences :: Turn head 90% counter clockwise
+headSentences :: Rotate to East.
+headSentences :: spin around
+headSentences :: Turn your head at 45 degree angle.
+headSentences :: Swing around your head 180 degrees
+headSentences :: Watch your back.
+headSentences :: Turn your head 50 degree.
+headSentences :: face your left
+headSentences :: Rotate head by 90 degree.
+headSentences :: Look to the left
+headSentences :: Turn head to face back.
+headSentences :: face your right
+headSentences :: Turn your head right
+headSentences :: look north
+headSentences :: Look right.
+headSentences :: Head left.
+headSentences :: Spin your head around
+headSentences :: look forward
+headSentences :: Turn head 90% clockwise
+headSentences :: face south
+headSentences :: Look where you're going.
+headSentences :: Spin your head 60 degrees.
+headSentences :: What is your heading?
+headSentences :: Turn your head clockwise.
+headSentences :: attention
+headSentences :: Set heading to 40 degrees.
+headSentences :: Look straight ahead
+headSentences :: rotate your head all around
+headSentences :: face east
+headSentences :: do a 180
+headSentences :: Turn left 270
+headSentences :: Turn your head to face forward three times.
+headSentences :: There's someone behind you
+headSentences :: move to any direction
+headSentences :: Turn your head to face back.
+headSentences :: Turn your head backward.
+headSentences :: Keep rotating head.
+headSentences :: Look ahead
+headSentences :: Rotate head to 45 degrees.
+headSentences :: Look south
+headSentences :: Turn your head all the way around.
+headSentences :: Look to the left.
+headSentences :: Look not towards the back.
+headSentences :: Turn around
+headSentences :: turn back
+headSentences :: Turn your head to the North
+headSentences :: Rotate head to face forward.
+headSentences :: Look south.
+headSentences :: look east
+headSentences :: Look North for 2 seconds then look East.
+headSentences :: Turn head to face east.
+headSentences :: face forward
+headSentences :: look back
+headSentences :: Turn your head side to side.
+headSentences :: Rotate to see north which is at 40 degrees
+headSentences :: Spin your head to face forward.
+headSentences :: Turn your head at 90 degree angle.
+headSentences :: turn your head to face right.
+headSentences :: look up
+headSentences :: Turn your head to face backward
+headSentences :: turn your head to the left
+headSentences :: face north
+headSentences :: Turn your head to north
+headSentences :: Rotate your head left for 30 degrees.
+headSentences :: Turn head to 30 degrees.
+headSentences :: Turn your head South
+headSentences :: head to northeast direction
+headSentences :: look left.
+headSentences :: Look ahead.
+headSentences :: Turn your head to the opposite direction.
+headSentences :: turn to 30 degrees
+headSentences :: Turn head right
+headSentences :: back up!
+headSentences :: rotate head 360 degrees
+headSentences :: Look to your side.
+headSentences :: Face forward.
+headSentences :: Turn your head to see what is in front of you
+headSentences :: Look to the South
+headSentences :: watch your six
+headSentences :: make a full spin
+headSentences :: Spin your head once.
+headSentences :: Turn your head by 45 degrees.
+headSentences :: Turn your head around
+headSentences :: Look forward
+headSentences :: see at the back
+headSentences :: Look in front of you.
+headSentences :: Turn right.
+headSentences :: Turn your head to face right.
+headSentences :: Look to the front.
+headSentences :: Face to 3 o'clock direction.
 headSentences :: look behind you
+headSentences :: Look at an obstacle, if you can.
+headSentences :: Turn head to face north.
+headSentences :: Stop turning your head.
+headSentences :: Turn your head to the left
+headSentences :: Turn your head forward.
+headSentences :: Turn your head to the right
+headSentences :: Look ahead in front.
+headSentences :: Turn to the right
+headSentences :: Face right.
+headSentences :: Face South.
+headSentences :: Turn around your head.
+headSentences :: Head to 30 degrees.
+headSentences :: Look left then right.
+headSentences :: Face backward.
+headSentences :: look over there!
+headSentences :: Look back.
+headSentences :: Rotate 40 degrees left.
+headSentences :: Start spinning your head.
+headSentences :: Turn to look behind you.
+headSentences :: Look behind.
+headSentences :: Look backwards.
+headSentences :: Rotate head to face backward.
+headSentences :: Look out behind you.
+headSentences :: Turn head to face 45 degrees
+headSentences :: Turn your head 90 degrees.
+headSentences :: Spin your head for 10 seconds.
+headSentences :: Turn slightly left
+headSentences :: Turn head to the east
+headSentences :: turn to the forward
+headSentences :: Revolve your head for an angle bigger than 90 degrees.
+headSentences :: look to the left
+headSentences :: Which direction are you currently looking?
+headSentences :: Look behind yourself.
+headSentences :: look to the right
+headSentences :: Look where you're rolling
+headSentences :: Focus on your right.
+headSentences :: Turn head to face south.
+headSentences :: Turn your head 360 degrees.
+headSentences :: head towards south
+headSentences :: turn to the west direction
+headSentences :: Rotate your head counterclockwise by 30 degrees.
+headSentences :: look behind
+headSentences :: Reset.
+headSentences :: Turn your head at 60 degree angle.
+headSentences :: Look to your left.
+headSentences :: head to east
+headSentences :: rotate head 90 degrees west
+headSentences :: Look at your left.
+headSentences :: Spin your head.
+headSentences :: turn you head to face left.
+headSentences :: Turn right
+headSentences :: keep turning
+headSentences :: Pay attention to your left.
+headSentences :: move your head.
+headSentences :: Spin your head all the way around
+headSentences :: How many times have you looked at an obstacle?
+headSentences :: Turn your head anti-clockwise.
+headSentences :: Look to your right.
+headSentences :: Look 90 degrees to the right.
+
+## Questions about the state of the droid
+
+stateSentences :: sup with your logic display?
+stateSentences :: Where are you going?
+stateSentences :: Are you connected to a droid?
+stateSentences :: How much power do you left?
+stateSentences :: What color is your back LED light?
+stateSentences :: what is your current orientation
+stateSentences :: What is my continuous roll timer?
+stateSentences :: What is your current heading?
+stateSentences :: your name is dodo
+stateSentences :: Are you off?
+stateSentences :: Are you in driving mode?
+stateSentences :: what colors are your lights?
+stateSentences :: Tell me what color your front light is set to.
+stateSentences :: How many wheels are standing?
+stateSentences :: What's your name?
+stateSentences :: What is the intensity of your logic display
+stateSentences :: how many feet are you on?
+stateSentences :: what color are the lights?
+stateSentences :: Are you driving?
+stateSentences :: Is the back LED on?
+stateSentences :: Are you moving to the north?
+stateSentences :: Is the holo projector on?
+stateSentences :: How bright is your holo projector?
+stateSentences :: How much battery do you have?
+stateSentences :: What is the color of the back light?
+stateSentences :: Is your holoemitter on?
+stateSentences :: How much red is in your front LED?
+stateSentences :: whats your stance?
+stateSentences :: where are you going?
+stateSentences :: Is your light on now?
+stateSentences :: diagnostics
+stateSentences :: How fast are you moving now?
+stateSentences :: What is your projector intensity?
+stateSentences :: Are you facing South?
+stateSentences :: Is your logic board on?
+stateSentences :: What is your current stance?
+stateSentences :: which way are you facing
+stateSentences :: What's the status of your battery?
+stateSentences :: What direction are you heading to?
+stateSentences :: What is the intensity on your logic display?
+stateSentences :: Am I waddling?
+stateSentences :: Are you currently standing still?
+stateSentences :: Is your light on?
+stateSentences :: What direction are you facing now?
+stateSentences :: Are you on?
+stateSentences :: which way are you facing?
+stateSentences :: Orientation
+stateSentences :: what is the color of your front light?
+stateSentences :: Is my blue value in my back light 255?
+stateSentences :: What is my battery?
+stateSentences :: What is your current driving speed?
+stateSentences :: What's your stance?
+stateSentences :: Can you tell me how much barrery is left?
+stateSentences :: Are you moving?
+stateSentences :: What color is your front LED?
+stateSentences :: are you on?
+stateSentences :: What is your battery level?
+stateSentences :: Am I facing forward?
+stateSentences :: what's your speed?
+stateSentences :: What color is your back light?
+stateSentences :: send me your location
+stateSentences :: on how many legs you arestanding right now
+stateSentences :: What is your orientation?
+stateSentences :: what is the color of te back light?
+stateSentences :: What is your battery status?
+stateSentences :: Are you alive?
+stateSentences :: Is your logic display on?
+stateSentences :: send me your speed
+stateSentences :: Is drive mode on?
+stateSentences :: Current direction.
+stateSentences :: Are your lights purple?
+stateSentences :: What heading are you facing?
+stateSentences :: Are you moving now?
+stateSentences :: What color is your back LED?
+stateSentences :: Are you there?
+stateSentences :: How much battery is left?
+stateSentences :: What are the RGB values of your back light?
+stateSentences :: what is your battery status
+stateSentences :: What color is your front light?
+stateSentences :: what is the front light color?
+stateSentences :: Connected?
+stateSentences :: What is your front LED color?
+stateSentences :: Tell me what color your back light is set to.
+stateSentences :: What is the angle you are driving at?
+stateSentences :: What is your current drive mode?
+stateSentences :: Is your back light red?
+stateSentences :: Is your back light blue?
+stateSentences :: Are you driving right now?
+stateSentences :: What is the status of the battery?
+stateSentences :: What is your current direction?
+stateSentences :: What direction are you looking at?
+stateSentences :: what color are you?
+stateSentences :: How fast are you driving?
+stateSentences :: Are you ready to drive?
+stateSentences :: where did you come from?
+stateSentences :: what is your goal?
+stateSentences :: How fast are you going?
+stateSentences :: Show me the heading degrees.
+stateSentences :: Current Speed.
+stateSentences :: What is the color of your back light?
+stateSentences :: What's your direction?
+stateSentences :: Are you sleeping?
+stateSentences :: Tell me what the speed setting is.
+stateSentences :: Are you connected?
+stateSentences :: Are you standing on 3 feet or 2?
+stateSentences :: What is your current battery voltage?
+stateSentences :: Are you currently moving north?
+stateSentences :: How long have you been awake?
+stateSentences :: Tell me your speed.
+stateSentences :: are you moving right now?
+stateSentences :: Is my back light on?
+stateSentences :: Am I awake?
+stateSentences :: what is your orientation?
+stateSentences :: What's your current heading?
+stateSentences :: Are you conscious?
+stateSentences :: What is your stance?
+stateSentences :: Is your headlight on?
+stateSentences :: what's your name?
+stateSentences :: What is your current facing direction?
+stateSentences :: What is your holoemitter projection intensity?
+stateSentences :: Are you waddling?
+stateSentences :: What color are you?
+stateSentences :: Are you a D2 or a Q5?
+stateSentences :: How much battery do you have left?
+stateSentences :: Are there other R2D2s nearby?
+stateSentences :: Where are you looking?
+stateSentences :: Show me your battery level.
+stateSentences :: Tell me your drive mode.
+stateSentences :: What is on your logic display?
+stateSentences :: What speed are you moving?
+stateSentences :: How intensely are you displaying logic?
+stateSentences :: where are you?
+stateSentences :: what's your condition?
+stateSentences :: Back light color
+stateSentences :: do you have red lights on?
+stateSentences :: are you charged?
+stateSentences :: How fast are you moving?
+stateSentences :: sup with your battery?
+stateSentences :: What's your orientation?
+stateSentences :: What is your speed?
+stateSentences :: What is your back light color?
+stateSentences :: Are you facing North?
+stateSentences :: Is your off the holoemitter on?
+stateSentences :: What is your current speed?
+stateSentences :: Remain battery.
+stateSentences :: Which of your lights are currently on?
+stateSentences :: How much blue is in your back LED
+stateSentences :: What is my RGB value in my back light?
+stateSentences :: What is the color of your front LED?
+stateSentences :: Status report, please.
+stateSentences :: What is the currect heading?
+stateSentences :: what direction are you facing?
+stateSentences :: what is the color of your back light?
+stateSentences :: Your battery status
+stateSentences :: are you asleep?
+stateSentences :: Is your light off?
+stateSentences :: are you alive?
+stateSentences :: Are you standing on 5 feet or 6?
+stateSentences :: How fast is your current move?
+stateSentences :: Is waddle mode active?
+stateSentences :: At what speed are you driving?
+stateSentences :: What is your front light's color?
+stateSentences :: Is your front LED blue?
+stateSentences :: What color is your light?
+stateSentences :: Is your stance 2?
+stateSentences :: are your lights on?
+stateSentences :: What is your logic display intensity?
+stateSentences :: How many of your lights are currently on?
+stateSentences :: what direction are you moving
+stateSentences :: Are both LEDs set to the same color?
+stateSentences :: In which direction your head is?
+stateSentences :: how are you?
+stateSentences :: tell me the colour of your all the lights
+stateSentences :: Are you in logic display mode?
+stateSentences :: at what speed are you moving
+stateSentences :: What is orientation?
+stateSentences :: What are the RGB values of your front light?
+stateSentences :: What is your speed now?
+stateSentences :: How many feet are you standing on?
+stateSentences :: What is your speed right now?
+stateSentences :: stable?
+stateSentences :: Is your back light on?
+stateSentences :: What angle are you driving in?
+stateSentences :: Waddling?
+stateSentences :: where are you headed?
+stateSentences :: How much better is left?
+stateSentences :: whats your lights colour?
+stateSentences :: Is your logic display off?
+stateSentences :: Are you not awake?
+stateSentences :: What direction is your body facing?
+stateSentences :: What is your id?
+stateSentences :: do you have green lights on?
+stateSentences :: what is the heading?
+stateSentences :: What is the color of your front light?
+stateSentences :: What is the color on your front light?
+stateSentences :: Battery status?
+stateSentences :: Where are you heading?
+stateSentences :: what is your speed?
+stateSentences :: what is the direction?
+stateSentences :: Are you wadding?
+stateSentences :: Are your connected?
+stateSentences :: is your holoemitter on?
+stateSentences :: How much battery power do you have now?
+stateSentences :: How intense is your holoemitter?
+stateSentences :: What is the intensity of you holoemitter?
+stateSentences :: Is your battery at least half charged?
+stateSentences :: Is your continuous roll timer set?
+stateSentences :: Are your lights green?
+stateSentences :: Can I knwo the back light's color?
+stateSentences :: how much battery life do you have?
+stateSentences :: tell me your name
+stateSentences :: How much time until you run out of power?
+stateSentences :: Are you awake?
+stateSentences :: What is your current angle?
+stateSentences :: what speed are you at?
+stateSentences :: do you have blue lights on?
+stateSentences :: What direction are you facing?
+stateSentences :: Battery?
+stateSentences :: How's your battery doing?
+stateSentences :: what is the speed?
+stateSentences :: How much battery do you have left right now?
+stateSentences :: Are you standing on 2 feet or 3?
+
+## Connection sentences
+
+connectionSentences :: disconnect
+connectionSentences :: Connect D2-55A2.
+connectionSentences :: Exit the server.
+connectionSentences :: Exit the server
+connectionSentences :: Search for other droids.
+connectionSentences :: Connect to a R2D2 droid.
+connectionSentences :: Connect to R2D2.
+connectionSentences :: Connect and then disconnect
+connectionSentences :: link up
+connectionSentences :: Who else is connected?
+connectionSentences :: find nearby droids?
+connectionSentences :: Disconnect yourself from the server.
+connectionSentences :: Exit.
+connectionSentences :: disconnect droid from server
+connectionSentences :: check if there are other droids
+connectionSentences :: Connect yourself to a server.
+connectionSentences :: Connect D2-55A6 to the server
+connectionSentences :: Connect again.
+connectionSentences :: Say goodbye to the server.
+connectionSentences :: Connect to r2q5
+connectionSentences :: Stop connection of Q5-4547 with the server
+connectionSentences :: Leave.
+connectionSentences :: Disconnect me now.
+connectionSentences :: are there enemies nearby?
+connectionSentences :: Connect r2d2 to the server
+connectionSentences :: Scan for other robots.
+connectionSentences :: Close all connections.
+connectionSentences :: quit the server
+connectionSentences :: How much time until a robot disconnects from inactivity?
+connectionSentences :: connect r2d2
+connectionSentences :: Establish a connection with Q5-4547
+connectionSentences :: Connect this robot to the server.
+connectionSentences :: Disconnect now.
+connectionSentences :: make sure server is disconnected
+connectionSentences :: scan the server
+connectionSentences :: What other droids are connected to server?
+connectionSentences :: Connect D2-82S1 to the server
+connectionSentences :: Connect to R2Q5.
+connectionSentences :: connect to the server
+connectionSentences :: connect r2q5
+connectionSentences :: Lets sleep.
+connectionSentences :: Do you find any other droids nearby?
+connectionSentences :: Connect D2-43A2 to the server.
+connectionSentences :: Are there any droids connected?
+connectionSentences :: how many droids are there near by?
+connectionSentences :: Is anyone nearby?
+connectionSentences :: Halt connection
+connectionSentences :: make a disconnection
+connectionSentences :: Connect yourself to the server.
+connectionSentences :: Disconnect robot.
+connectionSentences :: Are there other droids around?
+connectionSentences :: Scan.
+connectionSentences :: Are there any other droids nearby?
+connectionSentences :: Other connections?
+connectionSentences :: connect
+connectionSentences :: Shut down.
+connectionSentences :: stop the robot
+connectionSentences :: Disconnect from server.
+connectionSentences :: Connect the Q5-4547 robot
+connectionSentences :: Who else is near?
+connectionSentences :: try to connect to the server
+connectionSentences :: Search for drone.
+connectionSentences :: Disconnect D2-55A2 from the server.
+connectionSentences :: Connect D2-55A2 to the server
+connectionSentences :: Are there droid nearby?
+connectionSentences :: Disconnect.
+connectionSentences :: are there droids nearby?
+connectionSentences :: connect to the mainframe
+connectionSentences :: Connect D2-55A3 to the server.
+connectionSentences :: Connect D2-55A4 to the server
+connectionSentences :: connect the R2D2 D2-55A2
+connectionSentences :: Connect to the server.
+connectionSentences :: Disconnect yourself.
+connectionSentences :: Disconnect this robot.
+connectionSentences :: Connect to D2-66B3.
+connectionSentences :: are there other droids nearby?
+connectionSentences :: Connect a random robot to the server.
+connectionSentences :: full environment scan
+connectionSentences :: Can you connect to the server?
+connectionSentences :: Have a great day!
+connectionSentences :: are there any robots nearby?
+connectionSentences :: Depart from the server
+connectionSentences :: Find nearby droids
+connectionSentences :: Scan for other droids.
+connectionSentences :: Connect D2-FF2.
+connectionSentences :: Connect D2-55A1 to the server
+connectionSentences :: connect droid to the server
+connectionSentences :: Scan surrounding
+connectionSentences :: Connect D2-88A2 to the server
+connectionSentences :: Are there any other robots on the server?
+connectionSentences :: Connect D2-66A2 to the server
+connectionSentences :: Stop.
+connectionSentences :: name of nearby droids please
+connectionSentences :: what’s the number of nearby robots?
+connectionSentences :: Connect D2-33CS to the server.
+connectionSentences :: Are there other droids?
+connectionSentences :: disconnect from the computer
+connectionSentences :: Scan and connect D2-55A2.
+connectionSentences :: Connect D2-55A2 to a server.
+connectionSentences :: Any robots available?
+connectionSentences :: Disconnect droid.
+connectionSentences :: Connect Q5-D009 to server.
+connectionSentences :: Disconnect from nearby droid
+connectionSentences :: Disconnect again
+connectionSentences :: make a connection with D2-55A2
+connectionSentences :: Connect please
+connectionSentences :: Check if connected.
+connectionSentences :: Are there droids next to me?
+connectionSentences :: uplink to the server
+connectionSentences :: Disconnect me from server.
+connectionSentences :: Connect to server
+connectionSentences :: Search for R2Q5 droids.
+connectionSentences :: Reconnect to server
+connectionSentences :: Disconnect one of the Q5 robots.
+connectionSentences :: Link to the server.
+connectionSentences :: If possible, connect to the server.
+connectionSentences :: Scan droids.
+connectionSentences :: Check connection
+connectionSentences :: Find nearby robots.
+connectionSentences :: Scan for droids nearby.
+connectionSentences :: Disconnect D2-55A2.
+connectionSentences :: disconnect droid
+connectionSentences :: reconnect to server
+connectionSentences :: Do you see a Q5 nearby?
+connectionSentences :: Are there other droids connected?
+connectionSentences :: Scan for droids.
+connectionSentences :: Can you disconnect?
+connectionSentences :: Scan robots.
+connectionSentences :: Are there any other droids?
+connectionSentences :: exit the server
+connectionSentences :: disconnect to server
+connectionSentences :: Disengage yourself.
+connectionSentences :: reconnect droid again
+connectionSentences :: Connect back to the server.
+connectionSentences :: connect to second closest robot
+connectionSentences :: Disconnect from the server.
+connectionSentences :: Have all D2 robots been disconnected from the server?
+connectionSentences :: who's near us?
+connectionSentences :: No connection
+connectionSentences :: Disconnect from server
+connectionSentences :: Mission start.
+connectionSentences :: Disconnect from device
+connectionSentences :: permission granted to connect to D2-D4C0
+connectionSentences :: Is there a droid connected to the server?
+connectionSentences :: Are there other bots nearby?
+connectionSentences :: You can stop.
+connectionSentences :: half connection
+connectionSentences :: Connect to the server
+connectionSentences :: Connect to device
+connectionSentences :: Connect D2-55A2 to server.
+connectionSentences :: Connect D2-55A3 to the server
+connectionSentences :: Droids here?
+connectionSentences :: Look for droids near you.
+connectionSentences :: Scan for server.
+connectionSentences :: Connect to server D2-55A2.
+connectionSentences :: How long does connecting usually take?
+connectionSentences :: Are there other droids nearby?
+connectionSentences :: Connect D2-55A8 to the server
+connectionSentences :: connect the robot D2-55A2 to the computer
+connectionSentences :: Connect droid Q5-D009.
+connectionSentences :: Test the connection
+connectionSentences :: quit your connection
+connectionSentences :: Check nearby droid
+connectionSentences :: Connect.
+connectionSentences :: Check for droids nearby.
+connectionSentences :: Link to Q5-4547
+connectionSentences :: Are there any other droids near?
+connectionSentences :: Disconnect Q5-55A2.
+connectionSentences :: Detach yourself from the server.
+connectionSentences :: Close connection.
+connectionSentences :: try to connect the robot D2-55A2
+connectionSentences :: Find nearby droids.
+connectionSentences :: Scan for R2D2s.
+connectionSentences :: Disconnect me from the server.
+connectionSentences :: Connect D2-55A2 to the server.
+connectionSentences :: Are there others around?
+connectionSentences :: Are 4 robots connected to the server?
+connectionSentences :: Connect D2-FF2 to yarn server.
+connectionSentences :: connect to server
+connectionSentences :: interface with the server
+connectionSentences :: end connection
+connectionSentences :: Connect Q5-55A2 to the server.
+connectionSentences :: hay server! connect my droid
+connectionSentences :: How many robots can be detected by this server?
+connectionSentences :: System start.
+connectionSentences :: Are any other droids connected?
+connectionSentences :: Connect one of the D2 robots.
+connectionSentences :: Scan
+connectionSentences :: Exit
+connectionSentences :: Connect D2-59A1 to the server
+connectionSentences :: disconnect all
+connectionSentences :: Terminate connection.
+connectionSentences :: Is connected.
+connectionSentences :: Are there any droids around?
+connectionSentences :: how many droids nearby?
+connectionSentences :: Connect to a R2Q5 droid.
+connectionSentences :: Bye bye!
+connectionSentences :: Are there any robots nearby?
+connectionSentences :: Disconnect from Q5-4547
+connectionSentences :: scan for Q5 robots.
+connectionSentences :: Shut down connection
+connectionSentences :: How many robots are currently connected to the server?
+connectionSentences :: Stop the connection to Q5-4547
+connectionSentences :: Connect D2-D4C0 to the server
+connectionSentences :: Have all Q5 robots been disconnected from the server?
+connectionSentences :: Which droids are currently connected?
+connectionSentences :: How many droids are nearby?
+connectionSentences :: don't disconnect r2d2
+connectionSentences :: Connect
+connectionSentences :: Reconnect.
+connectionSentences :: Scan your perimeter.
+connectionSentences :: Scan nearby devices
+connectionSentences :: Reconnect
+connectionSentences :: scan for robots.
+connectionSentences :: connect and then disconnect
+connectionSentences :: Connect this robot.
+connectionSentences :: Disconnect from yarn server.
+connectionSentences :: Connect D2-D4C0
+connectionSentences :: Turn on.
+connectionSentences :: Disconnect
+connectionSentences :: are there friends nearby?
+connectionSentences :: do you see other droids?
+connectionSentences :: connect to nearby robot
+connectionSentences :: Report connection status
+connectionSentences :: exit connection
+connectionSentences :: disconnect the robot
+connectionSentences :: Connect to nearby droid
+connectionSentences :: Look for drones.
+connectionSentences :: connect to the server now
+connectionSentences :: Disconnect to server
+connectionSentences :: Are there any connections available?
+connectionSentences :: any other droid nearby
+connectionSentences :: Are there any droids in your scanning perimeter?
+connectionSentences :: establish connection
+connectionSentences :: Leave the server
+connectionSentences :: Quit.
+connectionSentences :: join the server connection
+connectionSentences :: scan for D2 robots.
+connectionSentences :: Disconnect a random robot.
+connectionSentences :: Get rid of your connection.
+connectionSentences :: Connect then disconnect
+
+## Stance sentences
+
+stanceSentences :: pull your third leg up
+stanceSentences :: Could you start rocking?
+stanceSentences :: Biped mode
+stanceSentences :: Stop walking like a duck.
+stanceSentences :: Put down your third wheel.
+stanceSentences :: Put down your wheel
+stanceSentences :: at ease
+stanceSentences :: put down your second wheel
+stanceSentences :: lie down
+stanceSentences :: raise second wheel
+stanceSentences :: Reset your stance.
+stanceSentences :: Jump.
+stanceSentences :: Put down all wheels
+stanceSentences :: Put down the third wheel.
+stanceSentences :: begin waddling
+stanceSentences :: prepare to waddle
+stanceSentences :: Walk on two legs.
+stanceSentences :: Use three legs.
+stanceSentences :: Roll like a biped human
+stanceSentences :: Please take out your third wheel.
+stanceSentences :: Tilt your body right
+stanceSentences :: Set stance to Triped
+stanceSentences :: Waddle
+stanceSentences :: try to stand on your tiptoes
+stanceSentences :: Walk like a ducky.
+stanceSentences :: Set stance to waddle.
+stanceSentences :: use all of your wheels
+stanceSentences :: itty bitty tippy toesies
+stanceSentences :: Waddle in biped mode
+stanceSentences :: Make your stance biped
+stanceSentences :: can you stand on one leg?
+stanceSentences :: stand still
+stanceSentences :: Set stance to two
+stanceSentences :: stand on your third wheel
+stanceSentences :: Stand up straight.
+stanceSentences :: Unfold third wheel
+stanceSentences :: Put down your last wheel
+stanceSentences :: Set your stance to tripod.
+stanceSentences :: Set stance to single.
+stanceSentences :: lift all the legs up
+stanceSentences :: Set stance to be biped
+stanceSentences :: Set stance to stand.
+stanceSentences :: Get ready to run
+stanceSentences :: Put on first wheel
+stanceSentences :: let the robot waddle
+stanceSentences :: stand on two legs
+stanceSentences :: Stand flat on your feet.
+stanceSentences :: Put down your second wheel
+stanceSentences :: put your feet flat on the ground
+stanceSentences :: don't walk like a duck
+stanceSentences :: Stop standing.
+stanceSentences :: Stand with your heel
+stanceSentences :: Start waddle.
+stanceSentences :: Imitate a duck's walking.
+stanceSentences :: put down second wheel
+stanceSentences :: on your toes
+stanceSentences :: Start wobbling and tottering
+stanceSentences :: prepare to march
+stanceSentences :: Waddle around
+stanceSentences :: Act like a duck.
+stanceSentences :: Stand on tippy toes
+stanceSentences :: Rock from side to side on your toes.
+stanceSentences :: Move on two feet.
+stanceSentences :: Waddle from now on
+stanceSentences :: Fold fourth wheel
+stanceSentences :: Transition back to bipod.
+stanceSentences :: Retract your third wheel.
+stanceSentences :: waddle slowly
+stanceSentences :: fix your posture
+stanceSentences :: put your third leg down
+stanceSentences :: Stand on tiptoes.
+stanceSentences :: Set stance to three
+stanceSentences :: Tiptoes stand.
+stanceSentences :: start to waddle
+stanceSentences :: Begin wobbling
+stanceSentences :: Set a random stance.
+stanceSentences :: Put down your second wheel.
+stanceSentences :: Set waddling to false.
+stanceSentences :: Stand on two legs.
+stanceSentences :: Waddle for 5 seconds.
+stanceSentences :: Walk clumsily
+stanceSentences :: Stand against the empire.
+stanceSentences :: set your stance to waddle
+stanceSentences :: Put down the first wheel.
+stanceSentences :: Todder.
+stanceSentences :: waddle harder
+stanceSentences :: raise your third whell
+stanceSentences :: Teater.
+stanceSentences :: use all wheels
+stanceSentences :: stop teetering like that
+stanceSentences :: How many of your wheels are touching the ground?
+stanceSentences :: Put down your first wheel.
+stanceSentences :: put down your forth wheel
+stanceSentences :: Stand up
+stanceSentences :: can you remove your third leg?
+stanceSentences :: be triped
+stanceSentences :: Turn off biped mode
+stanceSentences :: Stand with your two legs.
+stanceSentences :: Set stance to triped.
+stanceSentences :: put up your both the wheels
+stanceSentences :: Undulate on your toes
+stanceSentences :: Get off tiptoes
+stanceSentences :: bring down third wheel
+stanceSentences :: Stop tiptoeing.
+stanceSentences :: Raise your third wheel
+stanceSentences :: Stand solid
+stanceSentences :: Step out your extra leg.
+stanceSentences :: Put down first wheel.
+stanceSentences :: put down first wheel
+stanceSentences :: Wobble and stand on your tiptoes
+stanceSentences :: go on tiptoes
+stanceSentences :: Walk like a man.
+stanceSentences :: regular stance
+stanceSentences :: Use two legs for walking.
+stanceSentences :: Rock from left to right.
+stanceSentences :: stand with all wheels
+stanceSentences :: put down your first wheel
+stanceSentences :: Wobble
+stanceSentences :: use no wheels
+stanceSentences :: try to use only one wheel
+stanceSentences :: make the droids stop waddling
+stanceSentences :: stop standing on your toes
+stanceSentences :: Tiptoe.
+stanceSentences :: Lift the third wheel.
+stanceSentences :: Put down third wheel, please.
+stanceSentences :: Unfold fourth wheel
+stanceSentences :: dont be biped.
+stanceSentences :: stand on your toes
+stanceSentences :: go bipedal
+stanceSentences :: teater
+stanceSentences :: wobble
+stanceSentences :: make the stance to waddle
+stanceSentences :: Make your stance like a tripod
+stanceSentences :: Set stance to 2.
+stanceSentences :: cease waddling
+stanceSentences :: Change the stance to biped.
+stanceSentences :: Raise your hand
+stanceSentences :: lift the third wheels
+stanceSentences :: can you drive dirty.
+stanceSentences :: Pick a random stance.
+stanceSentences :: Wobble.
+stanceSentences :: Stand on three feet!
+stanceSentences :: Tilt your head
+stanceSentences :: Imitate a duck's walk.
+stanceSentences :: use three wheels
+stanceSentences :: Turn.
+stanceSentences :: keep down
+stanceSentences :: Set your stance to 2 limbs
+stanceSentences :: Stand on three feet.
+stanceSentences :: put all of your wheels on the ground
+stanceSentences :: Roll on 3 wheels
+stanceSentences :: Get up.
+stanceSentences :: Set your waddle to be false.
+stanceSentences :: end your waddle
+stanceSentences :: Set waddle to true.
+stanceSentences :: roll-time for 5 seconds.
+stanceSentences :: Move on three.
+stanceSentences :: Put your third wheel down.
+stanceSentences :: Start waddling.
+stanceSentences :: get down!
+stanceSentences :: waddle away
+stanceSentences :: Walk like an old man.
+stanceSentences :: Please sit down.
+stanceSentences :: go tripedal
+stanceSentences :: use one wheel
+stanceSentences :: Stop rocking.
+stanceSentences :: put up your third wheel.
+stanceSentences :: Start to waddle
+stanceSentences :: stop acting like a duck
+stanceSentences :: stop the robot from waddling
+stanceSentences :: use only two wheels
+stanceSentences :: Raise your leg
+stanceSentences :: Set to waddle
+stanceSentences :: Place your third wheel on the floor.
+stanceSentences :: put all your legs down
+stanceSentences :: Stand straight.
+stanceSentences :: Put down third wheel
+stanceSentences :: put down all wheels
+stanceSentences :: Stop waddle.
+stanceSentences :: Dance.
+stanceSentences :: Set to the normal stance.
+stanceSentences :: Stand on your tiptoes.
+stanceSentences :: use four wheels
+stanceSentences :: don't waddle anymore
+stanceSentences :: stand on your tiptoes.
+stanceSentences :: stand on the tiptoes
+stanceSentences :: put down your thrid wheel
+stanceSentences :: Lean forward into biped stance.
+stanceSentences :: Use 3 limbs to move
+stanceSentences :: stand straight
+stanceSentences :: start waddling
+stanceSentences :: raise first wheel
+stanceSentences :: get on your tippy toes
+stanceSentences :: Set stance
+stanceSentences :: Begin waddling
+stanceSentences :: Stand on tiptoes
+stanceSentences :: Set the stance to waddle.
+stanceSentences :: Set stance to be triped.
+stanceSentences :: Down.
+stanceSentences :: Set your stance to be biped.
+stanceSentences :: Stand on 2 wheels.
+stanceSentences :: Third wheel down
+stanceSentences :: totter
+stanceSentences :: try to stand on your any one leg
+stanceSentences :: Switch stance.
+stanceSentences :: stand on 2 legs
+stanceSentences :: Stop waddling
+stanceSentences :: stop toddering
+stanceSentences :: Become a Biped
+stanceSentences :: Lift your middle leg.
+stanceSentences :: Pick up your third wheel
+stanceSentences :: Set stance to be biped.
+stanceSentences :: full stance
+stanceSentences :: lower your stance
+stanceSentences :: Stand on your tiptoes then stand flat on your feet.
+stanceSentences :: Stop waddling.
+stanceSentences :: put down your wheels.
+stanceSentences :: stand well
+stanceSentences :: Don't walk like a duck.
+stanceSentences :: Set the stance to biped.
+stanceSentences :: jump
+stanceSentences :: keep waddling
+stanceSentences :: Get on your toes.
+stanceSentences :: Put down second wheel
+stanceSentences :: Put your wheel away.
+stanceSentences :: March!
+stanceSentences :: use a random number of wheels
+stanceSentences :: lift your third leg
+stanceSentences :: Sit.
+stanceSentences :: Don't waddle.
+stanceSentences :: stop waddling
+stanceSentences :: get off of your tiptoes
+stanceSentences :: stick to three feet
+stanceSentences :: tip-toe around.
+stanceSentences :: Use all 3 wheels.
+stanceSentences :: Become a duck.
+stanceSentences :: Stand.
+stanceSentences :: 3 feet
+stanceSentences :: Change your stance.
+stanceSentences :: Put down all your wheels.
+stanceSentences :: waddle with two wheels
+stanceSentences :: Change stance to tripod.
+stanceSentences :: walk like a duck
+stanceSentences :: Pull up the third wheel.
+stanceSentences :: waddle towards the front.
+stanceSentences :: try to use only two wheels
+stanceSentences :: Get off your third wheel
+stanceSentences :: be biped
+stanceSentences :: Tiptoes
+stanceSentences :: Tiptoe
+stanceSentences :: waddle
+stanceSentences :: Roll steadily
+stanceSentences :: Look Alive!
+stanceSentences :: Walk like a duck.
+stanceSentences :: Stand on heels.
+stanceSentences :: use five wheels
+stanceSentences :: Stand on two feet.
+stanceSentences :: Reset stance to standing.
+stanceSentences :: Tilt body left
+stanceSentences :: Stand still.
+stanceSentences :: Waddle and wobble
+stanceSentences :: sit down
+stanceSentences :: stop your waddle
+stanceSentences :: move up and down on your toes
+stanceSentences :: todder
+stanceSentences :: ready-set-go.
+stanceSentences :: Change your stance to be biped.
+stanceSentences :: rock from side to side on your toes
+stanceSentences :: Use two legs.
+stanceSentences :: Totter.
+stanceSentences :: 2 feet only
+stanceSentences :: Begin waddling.
+stanceSentences :: Set waddle
+stanceSentences :: Fold your third wheel
+stanceSentences :: Switch stance to the other one.
+stanceSentences :: Stand
+stanceSentences :: Stand with one foot
+stanceSentences :: imitate a duck's walk
+stanceSentences :: Waddle.
+stanceSentences :: put down your wheel.
+stanceSentences :: Spin.
+stanceSentences :: Balance on two wheels.
+stanceSentences :: Attention!
+stanceSentences :: Don't wobble.
+
+## Animations/sound
+
+animationSentences :: make a gesture
+animationSentences :: speak
+animationSentences :: Play sound number 3.
+animationSentences :: Stop dancing.
+animationSentences :: set off your alarm
+animationSentences :: make some sounds
+animationSentences :: Emergency mode
+animationSentences :: ROFL
+animationSentences :: Laugh out loud.
+animationSentences :: play alarm
+animationSentences :: talk
+animationSentences :: do a situup
+animationSentences :: alert the surroundings
+animationSentences :: Laugh
+animationSentences :: call for help
+animationSentences :: Scream
+animationSentences :: Beep please.
+animationSentences :: Move head.
+animationSentences :: LOL
+animationSentences :: Fall.
+animationSentences :: Make a screeching noise.
+animationSentences :: Stop playing the song
+animationSentences :: lay down
+animationSentences :: Stop screaming.
+animationSentences :: scream for help.
+animationSentences :: Make some noise.
+animationSentences :: Play some music.
+animationSentences :: Walk down
+animationSentences :: Play a song.
+animationSentences :: Play the alarm.
+animationSentences :: Perform an action.
+animationSentences :: Giggle softly
+animationSentences :: Shake your head
+animationSentences :: Cry like a monkey.
+animationSentences :: Smile
+animationSentences :: do a pushup
+animationSentences :: fall over
+animationSentences :: scream
+animationSentences :: giggle
+animationSentences :: Play some noise.
+animationSentences :: be a noisy droids
+animationSentences :: play music
+animationSentences :: Fall over.
+animationSentences :: Make any noise in 1 minute.
+animationSentences :: Pretend to trip.
+animationSentences :: Play random sound.
+animationSentences :: Cry.
+animationSentences :: Play a random sound.
+animationSentences :: Fall down.
+animationSentences :: mute
+animationSentences :: make noise
+animationSentences :: it is my birthday
+animationSentences :: Make noise.
+animationSentences :: Animate yourself
+animationSentences :: Tip over
+animationSentences :: Make noise!
+animationSentences :: dance
+animationSentences :: say something
+animationSentences :: LOL.
+animationSentences :: Start screaming.
+animationSentences :: Yell it out!
+animationSentences :: Show me you are alive.
+animationSentences :: Walk left
+animationSentences :: get on the floor
+animationSentences :: slide
+animationSentences :: Speak.
+animationSentences :: hit me
+animationSentences :: laugh
+animationSentences :: Fall over
+animationSentences :: Sound the alarm
+animationSentences :: Sing a song for me.
+animationSentences :: Smile.
+animationSentences :: Activate the alarm
+animationSentences :: fall over and die.
+animationSentences :: Roar.
+animationSentences :: Begin to waddle.
+animationSentences :: Play some sound
+animationSentences :: Todder.
+animationSentences :: sing
+animationSentences :: Begin screaming.
+animationSentences :: sing a song.
+animationSentences :: Play an alarm.
+animationSentences :: Scream in a minute
+animationSentences :: be quiet
+animationSentences :: Wiggle.
+animationSentences :: make some noise
+animationSentences :: Fall over in 5 seconds
+animationSentences :: make a noise
+animationSentences :: lay on the ground
+animationSentences :: Squeak!
+animationSentences :: get up
+animationSentences :: Play dead.
+animationSentences :: Make as much noise as possible.
+animationSentences :: Swivel head
+animationSentences :: Scream as loud as you can!
+animationSentences :: Stay on the ground!
+animationSentences :: Make a racket
+animationSentences :: bird sounds
+animationSentences :: Fall over immediately.
+animationSentences :: Play an alarm
+animationSentences :: fall
+animationSentences :: Create a sound
+animationSentences :: Yell!
+animationSentences :: Walk back
+animationSentences :: Howl.
+animationSentences :: karoake
+animationSentences :: Make any noise indefinitely.
+animationSentences :: Make a howling sound.
+animationSentences :: laugh out loud,
+animationSentences :: Say hi.
+animationSentences :: Make any noise
+animationSentences :: become noisy
+animationSentences :: Play dead
+animationSentences :: Play a song
+animationSentences :: Say ‘ouch’ and fall over.
+animationSentences :: Play some noise
+animationSentences :: Music.
+animationSentences :: Hi
+animationSentences :: Beep twice.
+animationSentences :: play sound
+animationSentences :: exercise in place
+animationSentences :: try out for american idol.
+animationSentences :: Make some noise
+animationSentences :: Play music
+animationSentences :: Chirp.
+animationSentences :: play noise
+animationSentences :: Get up.
+animationSentences :: Turn around
+animationSentences :: Move like a duck.
+animationSentences :: Bring the cup on the table
+animationSentences :: Show animation.
+animationSentences :: play a quiet alarm
+animationSentences :: Scream!
+animationSentences :: Don’t make any noise.
+animationSentences :: Laugh and scream
+animationSentences :: Play an alarm in 3 minutes.
+animationSentences :: Ring an alarm.
+animationSentences :: Where are you
+animationSentences :: yell
+animationSentences :: Start running
+animationSentences :: cry
+animationSentences :: Dance for me
+animationSentences :: Dance.
+animationSentences :: Play sound for a minute.
+animationSentences :: Fall down
+animationSentences :: Dance
+animationSentences :: Cry!
+animationSentences :: noise
+animationSentences :: Dance!
+animationSentences :: Stand up.
+animationSentences :: Make sad noises.
+animationSentences :: Tweet.
+animationSentences :: Make a noise.
+animationSentences :: Fall
+animationSentences :: Create some noise.
+animationSentences :: Start laughing.
+animationSentences :: Making beeping noises.
+animationSentences :: Stop making noise.
+animationSentences :: Walk funny.
+animationSentences :: Go around in circles
+animationSentences :: Sing a song
+animationSentences :: Be quiet.
+animationSentences :: Boop boop beep.
+animationSentences :: Fall and laugh
+animationSentences :: Animate 5 seconds.
+animationSentences :: jump!
+animationSentences :: Walk right
+animationSentences :: Play your alarm.
+animationSentences :: hammer time
+animationSentences :: Show off your dance.
+animationSentences :: shut up
+animationSentences :: exclaim
+animationSentences :: Any sound
+animationSentences :: jump
+animationSentences :: start making noise
+animationSentences :: play dead
+animationSentences :: Walk forward
+animationSentences :: Stop wiggling.
+animationSentences :: Make any noise.
+animationSentences :: start laughing
+animationSentences :: Talk to me.
+animationSentences :: Collapse to the ground.
+animationSentences :: Squeak.
+animationSentences :: Play an alarm in 5 seconds
+animationSentences :: Make noise for 3 seconds.
+animationSentences :: Laugh.
+animationSentences :: search the room and find the fridge
+animationSentences :: What does the droid say?
+animationSentences :: start screaming
+animationSentences :: make laughing sounds
+animationSentences :: Get shaking
+animationSentences :: Make a laughing sound
+animationSentences :: Shake your third wheel.
+animationSentences :: go crazy
+animationSentences :: Walk like a duck.
+animationSentences :: Fall over after 3 seconds.
+animationSentences :: Jump
+animationSentences :: make your loudest noise
+animationSentences :: couch
+animationSentences :: Laugh out loud
+animationSentences :: Sing a song.
+animationSentences :: Make noise
+animationSentences :: Laugh as loud as you can.
+animationSentences :: Shout.
+animationSentences :: get backup
+animationSentences :: Make any noise for 10 seconds.
+animationSentences :: Scream out loud.
+animationSentences :: Make some noises!
+animationSentences :: Fall!
+animationSentences :: Waddle.
+animationSentences :: Dance to Justin Bieber's newest song
+animationSentences :: Spin for 10 seconds.
+animationSentences :: Pick a song to play.
+animationSentences :: play a sound
+animationSentences :: Shout!
+animationSentences :: talk to me
+animationSentences :: sound the alarm
+animationSentences :: Sound an alarm.
+animationSentences :: alarm on
+animationSentences :: Turn off the alarm.
+animationSentences :: Stop laughing.
+animationSentences :: Laugh for 3 seconds.
+animationSentences :: Scream.
 
 ## Relationships on a grid.
 
-gridSentences :: You are on a 4 by 5 grid.
-gridSentences :: Each square is 1 foot large.
-gridSentences :: You are at position (0,0).
-gridSentences :: Go to position (3,3).
-gridSentences :: There is an obstacle at position 2,1.
+gridSentences :: You cannot go from 2,2 to 2,1.
+gridSentences :: Go to square (4,1)
+gridSentences :: You cannot go to position 2,1.
+gridSentences :: You are at position (3,7).
+gridSentences :: There is a chair at position 3,2
+gridSentences :: Go to position (2,2)
+gridSentences :: squares are 2 feet
+gridSentences :: Move forward to (3,4).
+gridSentences :: There is a barrier between (4,9) and (4,8).
+gridSentences :: go to location (2,2)
+gridSentences :: go to (2,2)
+gridSentences :: Stay still.
+gridSentences :: Object at (2,2)
+gridSentences :: What cell is your flag on?
+gridSentences :: Itâ€™s possible to go from 2,2 to 2,3.
+gridSentences :: An barrier is set on (1, 1)
+gridSentences :: there is a chair at (3,3)
+gridSentences :: There is a fridge on position (3,3)
+gridSentences :: Each square is 12 inches long.
+gridSentences :: Your current position is (2,2).
+gridSentences :: You cannot go through (3,6).
+gridSentences :: there is another robot at 2,2
+gridSentences :: It's not possible to go to square 5,4.
+gridSentences :: Go to slot (1, 1)
+gridSentences :: You are at position (2,0).
+gridSentences :: There is a table at position 3,4
+gridSentences :: Run to (4,2)
+gridSentences :: Obstacle at (4,1).
+gridSentences :: You are on a 5 by 7 grid.
+gridSentences :: You are at (0,0).
+gridSentences :: Go to the right of the lamp.
+gridSentences :: Go back to position (3,1).
+gridSentences :: each rectangle is one foot long
+gridSentences :: Proceed to position (4,2)
+gridSentences :: Find the shortest path from (0,0) to (3,5).
+gridSentences :: Go to the right of the table.
+gridSentences :: You are on a 10 by 10 grid
+gridSentences :: It's possible to go to square 5,5.
+gridSentences :: This is a 3 x 5 grid.
+gridSentences :: There is an edge from (9,4) to all of its neighboring squares in the grid.
+gridSentences :: It is not possible to go from 1,2 to 2,2.
+gridSentences :: Go around the lamp.
+gridSentences :: Move to grid (1,2).
+gridSentences :: Move to position 2,5
+gridSentences :: go to the right of the refrigerator
+gridSentences :: You are on position (2,1)
+gridSentences :: you are starting at (1,1)
+gridSentences :: your grid is a 3 by 3 grid
+gridSentences :: There is an obstacle right in front of you
+gridSentences :: you can not on (1, 1)
+gridSentences :: Go to (6,2).
+gridSentences :: go to north of obstacle
+gridSentences :: There is a table at 3, 3.
+gridSentences :: Move along the path (0,0), (0,1), (0,2).
+gridSentences :: Position (4,2) has an obstacle
+gridSentences :: Move to your goal (0,0) with shortest path
+gridSentences :: go to (2,1)
+gridSentences :: you are at (1,1)
+gridSentences :: there is an obstacle at (2,2)
+gridSentences :: Every square is the same size of 1 foot
+gridSentences :: Go to (1, 1)
+gridSentences :: There is a lamp at position (2,1).
+gridSentences :: You are at position (5,4).
+gridSentences :: theres obstacles from 2,2 to 3,3
+gridSentences :: There is an obstacle at position 2,3.
+gridSentences :: each square is a square foot
+gridSentences :: go to origin
+gridSentences :: Head to the flag.
+gridSentences :: How many cells are in the grid?
+gridSentences :: Are you at the edge of the grid?
+gridSentences :: Go around the barrier between (4,9) and (4,8).
+gridSentences :: There is an edge from (4,9) to (5,9).
+gridSentences :: arrive (3, 3)
+gridSentences :: There is a gift at position 3,3
+gridSentences :: Move to (1, 1)
+gridSentences :: go to (3, 2)
+gridSentences :: Go to (3,4)
+gridSentences :: there is a baby at position (3,4)
+gridSentences :: each square is 1 foot wide
+gridSentences :: youre on a 3 by 3 grid
+gridSentences :: How many cells have you visited?
+gridSentences :: You are at position (1,1).
+gridSentences :: youre positioned at (5,3)
+gridSentences :: Itâ€™s not possible to go from 2,2 to 2,3.
+gridSentences :: go 2 steps forward
+gridSentences :: Go to position (3,2)
+gridSentences :: you cant go (1,1)
+gridSentences :: You are on a 10 by 10 square.
 gridSentences :: There is a chair at position 3,3
-gridSentences :: Go to the left of the chair.
+gridSentences :: Don't go to 1,1
+gridSentences :: Go right then up then down.
+gridSentences :: You are at position (5,5).
+gridSentences :: It’s not possible to go from 3,2 to 2,3.
+gridSentences :: Are you at your flag?
+gridSentences :: You are on a 10 by 10 grid.
+gridSentences :: you can't waddle from 1,1 to 2,1
+gridSentences :: The gird is 4 boxes by 2 boxes
+gridSentences :: There is a truck on 6,6.
+gridSentences :: A square on the grid is 1 foot long.
+gridSentences :: Go right three squares.
+gridSentences :: Go to (1,2)
+gridSentences :: There is an obstacle at position 1,1.
+gridSentences :: obstacle behind you
+gridSentences :: Go to initial position
+gridSentences :: move to position (3,2)
+gridSentences :: Your world is 4 by 5
+gridSentences :: Each square is 2 feet large.
+gridSentences :: No way to (3,4) from current position.
+gridSentences :: Is another robot in the cell in front of you?
+gridSentences :: Follow the optimal path from (4,9) to (9,4), if possible.
+gridSentences :: your position is (2, 2)
+gridSentences :: You are on a 6 by 6 grid.
+gridSentences :: There is something at 6,2.
+gridSentences :: beware of the obstacle at (2,3).
+gridSentences :: Go to 1,1.
+gridSentences :: Go to position (3,3).
+gridSentences :: Go to cell (0,0).
+gridSentences :: Your current position is (5,5).
+gridSentences :: you are at position (5,5)
+gridSentences :: Droid to (4,2)
+gridSentences :: The grid is 4x4.
+gridSentences :: Cannot go to 2,1
+gridSentences :: you can't go from (1,1) to (1,2)
+gridSentences :: go around the obstacle
+gridSentences :: You are on a 3 by 3 grid.
+gridSentences :: go to (2,3)
+gridSentences :: Each square is one foot in length.
+gridSentences :: Go to the right of the obstacle.
 gridSentences :: It’s not possible to go from 2,2 to 2,3.
+gridSentences :: The grid is 4 by 4.
+gridSentences :: It is not possible to reach 2,3 from 2,2.
+gridSentences :: There is an obstacle at position (2,2).
+gridSentences :: The grid is 10 feet big
+gridSentences :: You are on (6,6) grid.
+gridSentences :: go to south of obstacle
+gridSentences :: There is obstacle to your left.
+gridSentences :: there is a wall right behind you
+gridSentences :: Go to position (9,4), if possible.
+gridSentences :: You are on a 4 by 5 grid.
+gridSentences :: You are placed in a 5-by-5 grid.
+gridSentences :: It’s is possible to go from 2,2 to 2,3.
+gridSentences :: obstacle ahead
+gridSentences :: There is no way to move from (3,3) to (2,2).
+gridSentences :: Go to position (2,1)
+gridSentences :: Go under the high chair
+gridSentences :: Go stand behind the chair
+gridSentences :: grid sizes are 1 foot
+gridSentences :: go below the chair
+gridSentences :: You can't go from (3,3) to (2,2).
+gridSentences :: You are on a 5 by 4 grid.
+gridSentences :: Find the shortest path from (4,9) to (9,4).
+gridSentences :: It’s not possible to go from 1,2 to 2,3.
+gridSentences :: You can't move from (1,1) to (2,1)
+gridSentences :: You start at (1, 1) on the grid.
+gridSentences :: go to (3,3)
+gridSentences :: It’s not possible to go from 2,5 to 2,5.
+gridSentences :: Go to position (1,2)
+gridSentences :: go to (0,1)
+gridSentences :: 4,3 is blocked from 4,2
+gridSentences :: your position is (0,0)
+gridSentences :: get to position (0,1)
+gridSentences :: Go to position (5,5)
+gridSentences :: There is a chair at position 2,3
+gridSentences :: Follow the given path.
+gridSentences :: Go to position 3,5.
+gridSentences :: Go get the gift
+gridSentences :: go to the west of the chair
+gridSentences :: go 2 steps back
+gridSentences :: It's not possible to go from 2,2 to 2,3.
+gridSentences :: start at position (0,0)
+gridSentences :: You are on 10 by 9 grid.
+gridSentences :: Advance to position (4,2)
+gridSentences :: Your are in (3,4).
+gridSentences :: There is an obstacle 1 square in front of you.
+gridSentences :: There is an obstacle at (3,2).
+gridSentences :: Go to grid 1,2
+gridSentences :: Go to position (2,2).
+gridSentences :: The squares are 1 foot each.
+gridSentences :: Go east.
+gridSentences :: Go to position (1,1) in 3 minutes
+gridSentences :: the step unit is one
+gridSentences :: go from your position to (3,2)
+gridSentences :: Get to (3,3).
+gridSentences :: This is a 10 by 10 grid.
+gridSentences :: Go to position (0,0).
+gridSentences :: It’s not possible to go from (3,5) to (4,6).
+gridSentences :: You are on a rectangle with height 5 and width 8.
+gridSentences :: Each slot is a 1 foot.
+gridSentences :: Get to (2,1) without (1,1)
+gridSentences :: There are two tables on position (4,1) and (4,2)
+gridSentences :: There's something 2 squares behind you.
+gridSentences :: move around the dog at (2,2)
+gridSentences :: Which cell are you currently on?
+gridSentences :: Please move around the grid.
+gridSentences :: Go forward to position (0,0).
+gridSentences :: What is the shortest path to (4,6)?
+gridSentences :: there is an obstacle at (5,7)
+gridSentences :: you are at position (1,1)
+gridSentences :: reset position to (0,0)
+gridSentences :: the edge of the square is 1
+gridSentences :: Someone took (2,2).
+gridSentences :: Move to position (3,3).
+gridSentences :: Go to position (4,3).
+gridSentences :: There is a chair at position (3,3)
+gridSentences :: The grid is a 4 by 2 rectangle
+gridSentences :: You are at position (0,0).
+gridSentences :: There is a person at position 5, 7.
+gridSentences :: you are on (2, 3)
+gridSentences :: you are on 2 times 2 grid
+gridSentences :: go to square (2,2)
+gridSentences :: you cannot move from 7,7 to 7,8 or 7,6
+gridSentences :: The grid is 4 rows and 5 columns
+gridSentences :: Go to the right of the chair.
+gridSentences :: Obstacle at (1,1)
+gridSentences :: You are at position (4,9).
+gridSentences :: You are standing on (4,2)
+gridSentences :: you can now move from 1,1 to 2,1
+gridSentences :: you can't pass (1, 2) to (1, 1)
+gridSentences :: Move to (2, 4).
+gridSentences :: you are at position (0,0)
+gridSentences :: The goal is at (3,4).
+gridSentences :: go to position (11,5)
+gridSentences :: Go to position (2,10)
+gridSentences :: There is an obstacle at position (5,5).
+gridSentences :: Move around the 4x4 grid.
+gridSentences :: Each square is 1 foot large.
+gridSentences :: You must go around (1,1)
+gridSentences :: the grid is 2 by 2
+gridSentences :: There is an obstacle at 2, 1.
+gridSentences :: There is an obstacle at position 2,1.
+gridSentences :: Go to the left of the chair.
+gridSentences :: A blocker is on (1,1)
+gridSentences :: go to left of obstacle
+gridSentences :: go to (3,2)
+gridSentences :: You are on a 4 by 4 grid.
+gridSentences :: go to destination (2,2)
+gridSentences :: You are on a 3 by 5 grid.
+gridSentences :: go to the origin
+gridSentences :: Move to start.
+gridSentences :: The grid is 5 by 5.
+gridSentences :: youre at (3,3)
+gridSentences :: Each square is 2 foot large.
+gridSentences :: go the right of obstacle
+gridSentences :: It's impossible to move up from (4,7).
+gridSentences :: there's a trap at position (2,3)
+gridSentences :: You can't go on (2,1).
+gridSentences :: Go back to previous position
+gridSentences :: You are on a 5 by 5 grid.
+gridSentences :: Move to (1,1)
+gridSentences :: Go to the position in front of the table
+gridSentences :: Go to the east of the chair.
+gridSentences :: Watch out for (2,1)
+
+## Sentences added by the R2D2:
+
+
