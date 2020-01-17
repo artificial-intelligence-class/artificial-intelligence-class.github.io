@@ -730,7 +730,7 @@ Now that we have a good idea which categories our commands belong to, we have to
 
 ## 4. Try it out!
 
-Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to try to talk to your R2D2! Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, change the ID in line 15 of `robot_com.py` to the ID of your robot, the path on line 16 of r2d2_commands.py to the path of your Magnitude file of choice (from this new directory), and on the command line run `python3 robot_com.py`.
+Now that you are finished with the intent detection and slot filling sections, you can now use the code you have written to talk to your R2D2. Perform the R2D2 server setup instructions found in previous R2D2 homeworks, and move all your files over to your `sphero-project/src` directory. Then, change the ID in line 15 of `robot_com.py` to the ID of your robot, the path on line 16 of r2d2_commands.py to the path of your Magnitude file of choice (from this new directory), and on the command line run `python3 robot_com.py`.
 
 Try out commands like:
 
@@ -738,7 +738,7 @@ Try out commands like:
 "Change your lights to red, periwinkle, azure, green, and magenta."
 ```
 
-Have fun! Try not to be too mean to your robot :). (Do not add sentences to the training data if you have not already finished the above sections, as this may change the local behavior of `getCategory`. If you find sentences here that are parsed wrongly, feel free to add them to your example sentences as well!)
+Have fun! Try not to be too mean to your robot :). ( Do not add sentences to the training data if you have not already finished the above sections, as this may change the local behavior of `getCategory`. If you find sentences here that are parsed wrongly, feel free to add them to your example sentences as well! )
 
 
 ## 5. Voice Input [Extra Extra Credit: 15 points]
