@@ -5,13 +5,11 @@ img: R2D2.png
 active_tab: main_page 
 ---
 
-<!--
+
 
 <div class="alert alert-danger" markdown="1">
-The Fall 2019 class is full.  There are currently 150 students enrolled in the class, and another 170 students on the waitlist. [You can sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) if you'd like to try to get a spot, but it unlikely that you will get in unless you are in Category 1+ or Category 1. 
+I’m going to be granting permits through the CIS waitlist system.  You should [sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) when it opens (around April 12).   After you've added yourself to the waitlist, I can issue you a permit.  You will receive an email saying permit available. You will receive another email when the permit is issued. At that point, you may register on CoursesInTouch.   You don't need to email me in order to get a permit.
 </div>
- 
--->
 
 <!-- Display an alert about upcoming homework assignments -->
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
