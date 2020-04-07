@@ -8,7 +8,7 @@ active_tab: main_page
 
 
 <div class="alert alert-danger" markdown="1">
-I’m going to be granting permits through the CIS waitlist system.  You should [sign yourself up for the waitlist](https://forms.cis.upenn.edu/waitlist/index.php) when it opens (around April 12).   After you've added yourself to the waitlist, I can issue you a permit.  You will receive an email saying permit available. You will receive another email when the permit is issued. At that point, you may register on CoursesInTouch.   You don't need to email me in order to get a permit.
+To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php) when it opens on April 30.   After you've added yourself to the waitlist, I can issue you a permit.  You will receive an email saying permit available. You will receive another email when the permit is issued. At that point, you may register on CoursesInTouch.   You don't need to email me in order to get a permit.  Permits aren't available during advance registration. 
 </div>
 
 <!-- Display an alert about upcoming homework assignments -->
