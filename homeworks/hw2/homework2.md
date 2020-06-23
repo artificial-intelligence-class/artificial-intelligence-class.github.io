@@ -79,15 +79,21 @@ You may submit as many times as you would like before the deadline, but only the
 
 ## 1. N-Queens [25 points]
 
-In this section, you will develop a solver for the $n$-queens problem, wherein $n$ queens are to be placed on an $n \\times n$ chessboard so that no pair of queens can attack each other. Recall that in chess, a queen can attack any piece that lies in the same row, column, or diagonal as itself.
+In this section, you will develop a solver for the $n$-queens problem, wherein $n$ queens are to be placed on an $n \times n$ chessboard so that no pair of queens can attack each other. Recall that in chess, a queen can attack any piece that lies in the same row, column, or diagonal as itself.
 
 A brief treatment of this problem for the case where $n = 8$ is given in Section 3.2 of the textbook, which you may wish to consult for additional information.
 
-1. **[5 points]** Rather than performing a search over all possible placements of queens on the board, it is sufficient to consider only those configurations for which each row contains exactly one queen. Without taking any of the chess-specific constraints between queens into account, implement the pair of functions `num_placements_all(n)` and `num_placements_one_per_row(n)` that return the number of possible placements of $n$ queens on an $n \\times n$ board without or with this additional restriction. Think carefully about why this restriction is valid, and note the extent to which it reduces the size of the search space. You should assume that all queens are indistinguishable for the purposes of your calculations.
-    
-2. **[5 points]** With the answer to the previous question in mind, a sensible representation for a board configuration is a list of numbers between $0$ and $n - 1$, where the $i$th number designates the column of the queen in row $i$ for $0 \\le i \\lt n$. A complete configuration is then specified by a list containing $n$ numbers, and a partial configuration is specified by a list containing fewer than $n$ numbers. Write a function `n_queens_valid(board)` that accepts such a list and returns `True` if no queen can attack another, or `False` otherwise. Note that the board size need not be included as an additional argument to decide whether a particular list is valid.
-    
-        
+1. **[5 points]** Rather than performing a search over all possible placements of queens on the board, it is sufficient to consider only those configurations for which each row contains exactly one queen. 
+   
+   Therefore, without taking any of the chess-specific constraints between queens into account, we want to first consider the number of possible placements of $n$ queens on an $n \times n$ board without or with the restriction that each row contains exactly one queen. 
+   
+   Implement the function `num_placements_all(n)`, which returns the number of **all** possible placements of $n$ queens on an $n \times n$ board, and the function `num_placements_one_per_row(n)` that  calculate the number of possible placements of $n$ queens on an $n \times n$ board such that each row contains exactly one queen.
+   
+   Think carefully about why this restriction is valid, and note the extent to which it reduces the size of the search space. You should assume that all queens are indistinguishable for the purposes of your calculations.
+   
+2. **[5 points]** With the answer to the previous question in mind, a sensible representation for a board configuration is a list of numbers between $0$ and $n - 1$, where the $i$th number designates the column of the queen in row $i$ for $0 \le i \lt n$. A complete configuration is then specified by a list containing $n$ numbers, and a partial configuration is specified by a list containing fewer than $n$ numbers. Write a function `n_queens_valid(board)` that accepts such a list and returns `True` if no queen can attack another, or `False` otherwise. Note that the board size need not be included as an additional argument to decide whether a particular list is valid.
+
+
     ```python
     >>> n_queens_valid([0, 0])
     False
@@ -102,17 +108,7 @@ A brief treatment of this problem for the case where $n = 8$ is given in Section
     True
     ```
 
-3. **[15 points]** Write a function `n_queens_solutions(n)` that yields all valid placements of $n$ queens on an $n \\times n$ board, using the representation discussed above. The output may be generated in any order you see fit. Your solution should be implemented as a depth-first search, where queens are successively placed in empty rows until all rows have been filled. You may find it helpful to define a helper function `n_queens_helper(n, board)` that yields all valid placements which extend the partial solution denoted by `board`.
-    
-    Though our discussion of search in class has primarily covered algorithms that return just a single solution, the extension to a generator which yields all solutions is relatively simple. Rather than using a `return` statement when a solution is encountered, `yield` that solution instead, and then continue the search.
-    
-    ```python
-    >>> solutions = n_queens_solutions(4)
-    >>> next(solutions)
-    [1, 3, 0, 2]
-    >>> next(solutions)
-    [2, 0, 3, 1]
-    ```
+3. **[15 points]** Write a function `n_queens_solutions(n)` that returns a list of all valid placements of $n$ queens on an $n \times n$ board, using the representation discussed above. The output may be in any order you see fit. Your solution should be implemented as a depth-first search, where queens are successively placed in empty rows until all rows have been filled. You may find it helpful to define a helper function `n_queens_helper(n, board)` that yields all valid placements which extend the partial solution denoted by `board`.
 
     ```python
     >>> list(n_queens_solutions(6))
@@ -124,12 +120,12 @@ A brief treatment of this problem for the case where $n = 8$ is given in Section
 
 ## 2. Lights Out [40 points]
 
-The Lights Out puzzle consists of an $m \\times n$ grid of lights, each of which has two states: on and off. The goal of the puzzle is to turn all the lights off, with the caveat that whenever a light is toggled, its neighbors above, below, to the left, and to the right will be toggled as well. If a light along the edge of the board is toggled, then fewer than four other lights will be affected, as the missing neighbors will be ignored.
+The Lights Out puzzle consists of an $m \times n$ grid of lights, each of which has two states: on and off. The goal of the puzzle is to turn all the lights off, with the caveat that whenever a light is toggled, its neighbors above, below, to the left, and to the right will be toggled as well. If a light along the edge of the board is toggled, then fewer than four other lights will be affected, as the missing neighbors will be ignored.
 
 In this section, you will investigate the behavior of Lights Out puzzles of various sizes by implementing a `LightsOutPuzzle` class. Once you have completed the problems in this section, you can test your code in an interactive setting using the provided GUI. See the end of the section for more details.
 
 1. **[2 points]** A natural representation for this puzzle is a two-dimensional list of Boolean values, where `True` corresponds to the on state and `False` corresponds to the off state. In the `LightsOutPuzzle` class, write an initialization method `__init__(self, board)` that stores an input board of this form for future use. Also write a method `get_board(self)` that returns this internal representation. You additionally may wish to store the dimensions of the board as separate internal variables, though this is not required.
-    
+   
 
     ```python
     >>> b = [[True, False], [False, True]]
@@ -144,10 +140,9 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     >>> p.get_board()
     [[True, True], [True, True]]
     ```
-        
     
 2. **[3 points]** Write a top-level function `create_puzzle(rows, cols)` that returns a new `LightsOutPuzzle` of the specified dimensions with all lights initialized to the off state.
-    
+   
     ```python
     >>> p = create_puzzle(2, 2)
     >>> p.get_board()
@@ -162,7 +157,7 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     ```
     
 3. **[5 points]** In the `LightsOutPuzzle` class, write a method `perform_move(self, row, col)` that toggles the light located at the given row and column, as well as the appropriate neighbors.
-    
+   
     ```python
     >>> p = create_puzzle(3, 3)
     >>> p.perform_move(1, 1)
@@ -182,9 +177,9 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     ```
 
 4. **[5 points]** In the `LightsOutPuzzle` class, write a method `scramble(self)` which scrambles the puzzle by calling `perform_move(self, row, col)` with probability $1/2$ on each location on the board. This guarantees that the resulting configuration will be solvable, which may not be true if lights are flipped individually. After importing the `random` module with the statement `import random`, the expression `random.random() < 0.5` generates the values `True` and `False` with equal probability.
-    
+   
 5. **[2 points]** In the `LightsOutPuzzle` class, write a method `is_solved(self)` that returns whether all lights on the board are off.
-    
+   
     ```python
     >>> b = [[True, False], [False, True]]
     >>> p = LightsOutPuzzle(b)
@@ -200,7 +195,7 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     ```
     
 6. **[3 points]** In the `LightsOutPuzzle` class, write a method `copy(self)` that returns a new `LightsOutPuzzle` object initialized with a deep copy of the current board. Changes made to the original puzzle should not be reflected in the copy, and vice versa.
-    
+   
     ```python
     >>> p = create_puzzle(3, 3)
     >>> p2 = p.copy()
@@ -217,7 +212,7 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     ```
     
 7. **[5 points]** In the `LightsOutPuzzle` class, write a method `successors(self)` that yields all successors of the puzzle as (move, new-puzzle) tuples, where moves themselves are (row, column) tuples. The second element of each successor should be a new `LightsOutPuzzle` object whose board is the result of applying the corresponding move to the current board. The successors may be generated in whichever order is most convenient.
-    
+   
     ```python
     >>> p = create_puzzle(2, 2)
     >>> for move, new_p in p.successors():
@@ -241,7 +236,7 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     ```
     
 8. **[15 points]** In the `LightsOutPuzzle` class, write a method `find_solution(self)` that returns an optimal solution to the current board as a list of moves, represented as (row, column) tuples. If more than one optimal solution exists, any of them may be returned. Your solver should be implemented using a breadth-first graph search, which means that puzzle states should not be added to the frontier if they have already been visited, or are currently in the frontier. If the current board is not solvable, the value `None` should be returned instead. You are highly encouraged to reuse the methods defined in the previous exercises while developing your solution.
-    
+   
     *Hint:* For efficient testing of duplicate states, consider using tuples representing the boards of the `LightsOutPuzzle` objects being explored rather than their internal list-based representations. You will then be able to use the built-in `set` data type to check for the presence or absence of a particular state in near-constant time.
     
     ```python
@@ -278,7 +273,7 @@ In this section, you will investigate the movement of disks on a linear grid.
 The starting configuration of this puzzle is a row of $\\ell$ cells, with disks located on cells $0$ through $n - 1$. The goal is to move the disks to the end of the row using a constrained set of actions. At each step, a disk can only be moved to an adjacent empty cell, or to an empty cell two spaces away, provided another disk is located on the intervening square. Given these restrictions, it can be seen that in many cases, no movements will be possible for the majority of the disks. For example, from the starting position, the only two options are to move the last disk from cell $n - 1$ to cell $n$, or to move the second-to-last disk from cell $n - 2$ to cell $n$.
 
 1. **[15 points]** Write a function `solve_identical_disks(length, n)` that returns an optimal solution to the above problem as a list of moves, where `length` is the number of cells in the row and `n` is the number of disks. Each move in the solution should be a two-element tuple of the form (from, to) indicating a disk movement from the first cell to the second. As suggested by its name, this function should treat all disks as being identical.
-    
+   
     Your solver for this problem should be implemented using a breadth-first graph search. The exact solution produced is not important, as long as it is of minimal length.
     
     Unlike in the previous two sections, no requirement is made with regards to the manner in which puzzle configurations are represented. Before you begin, think carefully about which data structures might be best suited for the problem, as this choice may affect the efficiency of your search.
@@ -298,7 +293,7 @@ The starting configuration of this puzzle is a row of $\\ell$ cells, with disks 
     ```
     
 2. **[15 points]** Write a function `solve_distinct_disks(length, n)` that returns an optimal solution to the same problem with a small modification: in addition to moving the disks to the end of the row, their final order must be the reverse of their initial order. More concretely, if we abbreviate `length` as $\\ell$, then a desired solution moves the first disk from cell $0$ to cell $\\ell - 1$, the second disk from cell $1$ to cell $\\ell - 2$, $\\cdots$, and the last disk from cell $n - 1$ to cell $\\ell - n$.
-    
+   
     Your solver for this problem should again be implemented using a breadth-first graph search. As before, the exact solution produced is not important, as long as it is of minimal length.
     
     ```python
