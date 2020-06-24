@@ -12,8 +12,8 @@ materials:
         name: skeleton file
         url: homework2.py 
     - 
-        name: Lights Out GUI
-        url: homework2_lights_out_gui.py 
+        name: GUI file
+        url: homework2_gui.py 
 submission_link: https://www.gradescope.com/courses/59562
 ---
 
@@ -65,7 +65,7 @@ Homework 2: Uninformed Search [100 points]
 
 In this assignment, you will explore three classic puzzles from the perspective of uninformed search.
 
-A skeleton file [homework2.py](homework2.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [`homework2.py`](homework2.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in cases where you find yourself reinventing the wheel. If you are unsure where to start, consider taking a look at the data structures and functions defined in the `collections`, `itertools`, `math`, and `random` modules.
 
@@ -81,7 +81,7 @@ You may submit as many times as you would like before the deadline, but only the
 
 In this section, you will develop a solver for the $n$-queens problem, wherein $n$ queens are to be placed on an $n \times n$ chessboard so that no pair of queens can attack each other. Recall that in chess, a queen can attack any piece that lies in the same row, column, or diagonal as itself.
 
-A brief treatment of this problem for the case where $n = 8$ is given in Section 3.2 of the textbook, which you may wish to consult for additional information.
+A brief treatment of this problem for the case where $n = 8$ is given in *Section 3.2* of the textbook, which you may wish to consult for additional information.
 
 1. **[5 points]** Rather than performing a search over all possible placements of queens on the board, it is sufficient to consider only those configurations for which each row contains exactly one queen. 
    
@@ -100,7 +100,7 @@ A brief treatment of this problem for the case where $n = 8$ is given in Section
     >>> n_queens_valid([0, 2])
     True
     ```
-
+    
     ```python
     >>> n_queens_valid([0, 1])
     False
@@ -258,22 +258,18 @@ In this section, you will investigate the behavior of Lights Out puzzles of vari
     True
     ```
 
-Once you have implemented the functions and methods described in this section, you can play with an interactive version of the Lights Out puzzle using the GUI provided in the file [homework2_lights_out_gui.py](homework2_lights_out_gui.py) by running the following command:
-
-    python3 homework2_lights_out_gui.py rows cols
-
-The arguments `rows` and `cols` are positive integers designating the size of the puzzle.
-
-In the GUI, you can click on a light to perform a move at that location, and use the side menu to scramble or solve the puzzle. The GUI is merely a wrapper around your implementations of the relevant functions, and may therefore serve as a useful visual tool for debugging.
+Once you have implemented the functions and methods described in this section, you can play with an interactive version of the Lights Out puzzle using the GUI provided.
 
 ## 3. Linear Disk Movement [30 points]
 
 In this section, you will investigate the movement of disks on a linear grid.
 
-The starting configuration of this puzzle is a row of $\\ell$ cells, with disks located on cells $0$ through $n - 1$. The goal is to move the disks to the end of the row using a constrained set of actions. At each step, a disk can only be moved to an adjacent empty cell, or to an empty cell two spaces away, provided another disk is located on the intervening square. Given these restrictions, it can be seen that in many cases, no movements will be possible for the majority of the disks. For example, from the starting position, the only two options are to move the last disk from cell $n - 1$ to cell $n$, or to move the second-to-last disk from cell $n - 2$ to cell $n$.
+The starting configuration of this puzzle is a row of $\ell$ cells, with disks located on cells $0$ through $n - 1$. The goal is to move the disks to the end of the row using a constrained set of actions. At each step, a disk can only be moved to an adjacent empty cell, or to an empty cell two spaces away if another disk is located on the intervening square. Given these restrictions, it can be seen that in many cases, no movements will be possible for the majority of the disks. For example, from the starting position, the only two options are to move the last disk from cell $n - 1$ to cell $n$, or to move the second-to-last disk from cell $n - 2$ to cell $n$.
 
-1. **[15 points]** Write a function `solve_identical_disks(length, n)` that returns an optimal solution to the above problem as a list of moves, where `length` is the number of cells in the row and `n` is the number of disks. Each move in the solution should be a two-element tuple of the form (from, to) indicating a disk movement from the first cell to the second. As suggested by its name, this function should treat all disks as being identical.
+1. **[15 points]** Write a function `solve_identical_disks(length, n)` that returns an optimal solution to the above problem as a list of moves, where `length` is the number of cells in the row and `n` is the number of disks. Each move in the solution should be a two-element tuple of the form `(from, to)` indicating a disk movement from the cell `from` to the cell `to`. 
    
+    As suggested by its name, this function should treat all disks as being identical.
+    
     Your solver for this problem should be implemented using a breadth-first graph search. The exact solution produced is not important, as long as it is of minimal length.
     
     Unlike in the previous two sections, no requirement is made with regards to the manner in which puzzle configurations are represented. Before you begin, think carefully about which data structures might be best suited for the problem, as this choice may affect the efficiency of your search.
@@ -284,7 +280,7 @@ The starting configuration of this puzzle is a row of $\\ell$ cells, with disks 
     >>> solve_identical_disks(5, 2)
     [(0, 2), (1, 3), (2, 4)]
     ```
-
+    
     ```python
     >>> solve_identical_disks(4, 3)
     [(1, 3), (0, 1)]
@@ -292,10 +288,10 @@ The starting configuration of this puzzle is a row of $\\ell$ cells, with disks 
     [(1, 3), (0, 1), (2, 4), (1, 2)]
     ```
     
-2. **[15 points]** Write a function `solve_distinct_disks(length, n)` that returns an optimal solution to the same problem with a small modification: in addition to moving the disks to the end of the row, their final order must be the reverse of their initial order. More concretely, if we abbreviate `length` as $\\ell$, then a desired solution moves the first disk from cell $0$ to cell $\\ell - 1$, the second disk from cell $1$ to cell $\\ell - 2$, $\\cdots$, and the last disk from cell $n - 1$ to cell $\\ell - n$.
-   
+2. **[15 points]** Write a function `solve_distinct_disks(length, n)` that returns an optimal solution to the same problem with a small modification: in addition to moving the disks to the end of the row, their final order must be the reverse of their initial order. More concretely, if we abbreviate `length` as $\ell$, then a desired solution moves the first disk from cell $0$ to cell $\ell - 1$, the second disk from cell $1$ to cell $\ell - 2$, $\cdots$, and the last disk from cell $n - 1$ to cell $\ell - n$.
+
     Your solver for this problem should again be implemented using a breadth-first graph search. As before, the exact solution produced is not important, as long as it is of minimal length.
-    
+
     ```python
     >>> solve_distinct_disks(4, 2)
     [(0, 2), (2, 3), (1, 2)]
@@ -305,8 +301,7 @@ The starting configuration of this puzzle is a row of $\\ell$ cells, with disks 
 
     ```python
     >>> solve_distinct_disks(4, 3)
-    [(1, 3), (0, 1), (2, 0), (3, 2), (1, 3),
-     (0, 1)]
+    [(1, 3), (0, 1), (2, 0), (3, 2), (1, 3), (0, 1)]
     >>> solve_distinct_disks(5, 3)
     [(1, 3), (2, 1), (0, 2), (2, 4), (1, 2)]
     ```
