@@ -69,19 +69,13 @@ Discussion Forum
 : [Piazza](http://piazza.com/upenn/fall2019/cis521)
 
 Time and place
-: Tuesdays and Thursdays from noon-1:30pm in Wu and Chen Auditorium (Levine Hall room 101)
+: In Fall 2020, the course will be all online.
+: Lectures will be broadcast live on Tuesdays and Thursdays from noon-1:30pm. Recordings will be made available shortly after the live lectures. 
+: The first day of class is Tuesday, September 1, 2020.
+: The final day of class is Tuesday, December 22, 2020.
 
 Office hours
-: Monday 3-5pm in GRW 5th Floor Bump Space
-: Monday 6-8pm in 268 GRW
-: Tuesday 9-10am in GRW 5th Floor Bump Space
-: Tuesday 9-11am in GRW 5th Floor Bump Space
-: Tuesday 3-4pm in 3401 Walnut room 463C
-: Wednesday 2-4pm in GRW 5th Floor Bump Space
-: Thursday 9-10am in GRW 5th Floor Bump Space
-: Thursday 9-11am in in GRW 5th Floor Bump Space
-: Thursday 3-4pm in 3401 Walnut room 463C
-: Friday 1:30-3 pm in Moore 100A
+: TBD
 
 Textbooks
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
@@ -89,6 +83,7 @@ Textbooks
 
 
 Grading
+: (TO BE UPDATED)
 : 55% Homework Assignments
 : 15% Midterm 1
 : 15% Midterm 2
@@ -101,5 +96,6 @@ Collaboration Policy
 
 
 Late Day Policy
+: (TO BE UPDATED)
 : Each student has five free "late days".  Homeworks can be submitted at most two days late.  If you are out of late days, then you will not be able to get credit for subsequent late assignments. One "day" is defined as anytime between 1 second and 24 hours after the homework deadline. The intent of the late day policy it to allow you to take extra time due to unforseen circumstances like illnesses or family emergencies, and for forseeable interruptions like on campus interviewing and religious holidays.  You do not need to ask permission to use your late days.  No additional late days are granted. 
 
