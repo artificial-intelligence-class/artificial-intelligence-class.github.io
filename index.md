@@ -37,6 +37,7 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 <!-- End alert for upcoming homework assignments -->
 
 
+<!--
 
 <div class="alert alert-success" markdown="1">
 [When you borrow one of the programmable toy R2D2s for the semester, please fill out this Robot Checkout Form.](https://docs.google.com/forms/d/e/1FAIpQLSeVrCvG_2zcb2bPdn0bor61EOTzzqesI748l1pG4u9TqJ_GgQ/viewform?usp=sf_link)
@@ -57,6 +58,8 @@ Extra Credit Bounty Items:
 * Develop a Python collision detection protocol 
 </div>
 
+-->
+
 
 
 Course number
@@ -66,7 +69,7 @@ Instructor
 : [Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/)
 
 Discussion Forum
-: [Piazza](http://piazza.com/upenn/fall2019/cis521)
+: [Piazza](https://piazza.com/upenn/fall2020/cis521)
 
 Time and place
 : In Fall 2020, the course will be all online.
