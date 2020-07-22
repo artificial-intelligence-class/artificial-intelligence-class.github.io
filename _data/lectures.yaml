@@ -1,5 +1,5 @@
 -
-  date: 2019-08-27
+  date: 2020-09-01
   title: Introduction / AI in Science Fiction and Philosophy 
   slides: 00-Course-Intro.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f6c7095a-fe41-46cb-aa76-aab5012647c8
@@ -19,12 +19,12 @@
       title: Artificial Intelligence & Personhood
       length: 9.5 minutes 
 -
-  date: 2019-08-27
+  date: 2020-09-01
   title:  HW 1 released (Python)
   type: exam
 -
-  date: 2019-08-29
-  title: Python Review - part 1
+  date: 2020-09-03
+  title: Python Review 
   slides: 01-Python3-review1.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4a27eb8a-3607-4c63-b852-a9460066cfe9
   videos:
@@ -49,7 +49,7 @@
       length: 11 minutes 
 
 -
-  date: 2019-09-03
+  date: 2020-09-05
   title: Python Review - part 2
   slides: 02-Python3-review2.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=80a6b20e-031f-4eea-8778-aab501264837
@@ -66,7 +66,11 @@
       length: 17 minutes 
 
 -
-  date: 2019-09-05
+  date: 2020-09-10
+  title:  HW 1 due (Python), HW2 released (Uninformed Search) 
+  type: exam
+-
+  date: 2020-09-10
   slides: 03-Agents-Search-Problems-and-Uninformed-Search.pdf
   title:  Intelligent Agents, Search Problem Formulation and Uninformed Search
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=15e64ea2-3d3b-4942-9e91-aab501264858
@@ -86,19 +90,7 @@
       title: Shakey the Robot&colon; The First Robot to Embody Artificial Intelligence
       length: 6 minutes 
 -
-  date: 2019-09-10
-  title:  HW 1 due (Python), HW2 released (Uninformed Search) 
-  type: exam
--
-  date: 2019-09-10
-  title: No Class (Prof. Callison-Burch is traveling to DARPA)
-  type: no_lecture
--
-  date: 2019-09-10
-  title: Course Selection Period Ends
-  type: no_lecture
--
-  date: 2019-09-12
+  date: 2020-09-12
   slides: 04-informed-search.pdf
   title:  A* Search and Heuristics
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e515335f-4a98-453d-b9bb-aab50126489e
@@ -129,7 +121,11 @@
       title: Animation of BFS Algorithm set to music
       length: 1.5 minutes 
 -
-  date: 2019-09-17
+  date: 2020-09-15
+  title: Course Selection Period Ends
+  type: no_lecture
+-
+  date: 2020-09-17
   slides: 05-CSPs.pdf
   title:  Constraint Satifaction Problems 
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96eb332f-9391-46f8-af55-aab5012648bf
@@ -144,11 +140,11 @@
       title: David Waltz - Constraint Propagation
       length: 2.5 minutes (no sound)
 -
-  date: 2019-09-17
+  date: 2020-09-17
   title:  HW2 due (Uninformed Search), HW3 released (Informed Search) 
   type: exam
 -
-  date: 2019-09-19
+  date: 2020-09-19
   slides: 06-Games-and-Adversarial-Search.pdf
   title: Games and Adversarial Search
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b3e7f15b-7d1a-4449-bf8d-aab5012648e4
@@ -183,15 +179,15 @@
       title: Step-by-step Example&colon; Alpha-Beta
       length: 14 minutes 
 -
-  date: 2019-09-24
-  title: No Class 
-  type: no_lecture
--
-  date: 2019-09-24
+  date: 2020-09-24
   title:  HW3 due (Informed Search), HW4 released (Sudoku and Games) 
   type: exam
+  -
+  date: 2020-09-24
+  title:  Practice Exam released on Gradescope
+  type: exam
 -
-  date: 2019-09-26
+  date: 2020-09-24
   slides: 07-Expectimax-and-Utilities.pdf
   title:  Game Trees&colon; Expectimax and Utilities
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=601142a0-302f-4705-8431-aab501264928
@@ -218,11 +214,7 @@
       url: https://www.youtube.com/watch?v=lFIW8KphZo0
       title: How the "Most Human Human" passed the Turing Test
 -
-  date: 2019-09-26
-  title:  Practice Exam released on Gradescope
-  type: exam
--
-  date: 2019-10-01
+  date: 2020-09-29
   slides: 08-MDPs.pdf
   title:  Markov Decision Processes
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7d673336-f708-41d4-aa8a-aab5012649b0
@@ -236,19 +228,19 @@
       authors: Sutton and Barto
       url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
 -
-  date: 2019-10-01
+  date: 2020-10-01
   title:  Practice Exam is due on Gradescope
   type: exam
 -
-  date: 2019-10-03
+  date: 2020-10-01
   title:  Midterm exam 1 (in class).  An alternate date is available for a makeup exam for students who cannot attend class.  The make up exam is Wednesday, Oct 9, 2019 in the morning from 10-11:30am.
   type: exam
 -
-  date: 2019-10-07
+  date: 2020-10-07
   title: Drop Period Ends
   type: no_lecture
 -
-  date: 2019-10-08
+  date: 2020-10-06
   slides: 09-MDPs-wrapup-and-reinforcement-learning.pdf
   title: MDPs Wrapup and Reinforcement Learning
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d38a701-365b-4f71-9802-aab501264a1c
@@ -270,19 +262,11 @@
       title: Textworld
       authors: Microsoft Research Montreal 
 -
-  date: 2019-10-08
+  date: 2020-10-08
   title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
   type: exam
 -
-  date: 2019-10-09
-  title:  Make up date for midterm exam 1 (10am-11:30am in Hayden Hall room 358).  
-  type: exam
--
-  date: 2019-10-10
-  title:  Fall Term Break (no classes)
-  type: no_lecture
--
-  date: 2019-10-15
+  date: 2020-10-08
   slides: 10-Reinforcement-Learning-2.pdf
   title:  Reinforcement Learning - part 2
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
@@ -305,10 +289,9 @@
       url: https://www.youtube.com/watch?v=M-QUkgk3HyE
       title: Autonomous Helicopters Teach Themselves to Fly Stunts
 -
-  date: 2019-10-17
+  date: 2020-10-10
   slides: 11-Probabilities.pdf 
-  title:  No class today.  CCB is traveling for the HLTCOE.  Please read AIMA chapter 13.1-13.5. 
-  type: no_lecture
+  title:  Probabilies
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=02d25e7b-5be9-48de-a513-aa7f0110399a
   readings:   
     - 
@@ -321,7 +304,11 @@
       url: https://www.youtube.com/watch?v=BcvLAw-JRss
       title: Everything You Ever Wanted to Know About Bayes' Theorem But Were Afraid To Ask
 -
-  date: 2019-10-22
+  date: 2020-10-12
+  title:  Drop Period Ends
+  type: no_lecture
+-
+  date: 2020-10-15
   slides: 12-Markov-Models.pdf
   title:  Markov Models 
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f27b7438-ad1f-48a3-a337-aab501264aa5
@@ -336,15 +323,15 @@
       url: https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication
       title: A mathematical theory of communication
 -
-  date: 2019-10-22
+  date: 2020-10-15
   title:  HW5 due (MDPs and GridWorld), HW6 released (Reinforcement Learning)
   type: exam
 -
-  date: 2019-10-23
+  date: 2020-10-15
   title:  Practice Exam 2 released on Gradescope
   type: exam
 -
-  date: 2019-10-24
+  date: 2020-10-17
   slides: 13-Bayes-Nets.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=06b4ceba-09e6-4abe-a26d-aab501264ac6
   title:  Bayes' Nets
@@ -359,7 +346,7 @@
       url: https://www.youtube.com/playlist?list=PLBAGcD3siRDjiQ5VZQ8t0C7jkHQ8fhuq8
       title: Probabilistic Graphical Models online course
 -
-  date: 2019-10-29
+  date: 2020-10-22
   slides: 14-BN-wrapup-Naive-Bayes.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9428cfd3-a134-4b3a-b2c5-aab501264af0
   title: Bayes' Nets wrap up and Naieve Bayes
@@ -382,24 +369,15 @@
       url: https://www.youtube.com/watch?v=cFrtpT1mKy8
       title: SPAM
 -
-  date: 2019-10-29
+  date: 2020-10-22
   title:  Practice Exam 2 is due on Gradescope
   type: exam
 -
-  date: 2019-10-31
-  title:  Midterm exam 2 (in class)
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=766968f6-61d2-4dae-86b2-aab501264b11
+  date: 2020-10-24
+  title:  Midterm exam 2 
   type: exam 
 -
-  date: 2019-11-01
-  title:  Make up date for midterm exam 2 (9:30am-11am in 3401 Walnut room 401B).  
-  type: exam
--
-  date: 2019-11-04
-  title: Last day to withdraw from a course
-  type: no_lecture
--
-  date: 2019-11-05
+  date: 2020-10-29
   slides: 15-Naive-Bayes-and-Perceptron.pdf
   title:  Machine Learning&colon; Naieve Bayes and Perceptrons
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c019251a-9eb1-4a5d-b55e-aab501264b45
@@ -436,11 +414,15 @@
       url: https://www.youtube.com/watch?v=cFrtpT1mKy8
       title: SPAM
 -
-  date: 2019-11-05
+  date: 2020-10-29
   title: HW6 due (Reinforcement Learning), HW7 released (Perceptrons)
   type: exam
 -
-  date: 2019-11-07
+  date: 2020-10-30
+  title: Grade Type Change Deadline
+  type: no_lecture
+-
+  date: 2020-11-03
   slides: 16-Vector-Space-Semantics.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b426d17e-a201-4f2d-bb3a-aab501264b66
   title: NLP (Natural Language Processing)
@@ -470,7 +452,7 @@
       url: https://www.youtube.com/watch?v=WFySbJ3FGcM&index=3&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
       length: 16 minutes
 -
-  date: 2019-11-12
+  date: 2020-11-05
   slides: 17-Vector-Space-Semantics-part-2.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee27afd4-35ee-40e3-832f-aab501264b82
   title: NLP part 2
@@ -500,11 +482,15 @@
       url: https://www.youtube.com/watch?v=WFySbJ3FGcM&index=3&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
       length: 16 minutes
 -
-  date: 2019-11-12
+  date: 2020-11-05
   title:  HW7 due (Perceptrons), HW8 released (Generate a Novel)
   type: exam
 -
-  date: 2019-11-14
+  date: 2020-11-09
+  title: Last day to withdraw from a course
+  type: no_lecture
+-
+  date: 2020-11-10
   slides: 18-Vector-Space-Semantics-part-3.pdf
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aab22f66-9cb4-413b-82bd-aab501264bac
   title: NLP part 3
@@ -514,7 +500,7 @@
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
 -
-  date: 2019-11-19
+  date: 2020-11-12
   slides: 19-logistic-regression.pdf
   title: Logistic Regression and Stochastic Gradient Descent
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e98aa713-242e-4010-a254-aab501264bcd
@@ -529,11 +515,11 @@
       url: https://www.youtube.com/watch?v=sULa9Lc4pck-3pi
       title: Forget how logarithms work?  Try out this notation instead.
 -
-  date: 2019-11-19
+  date: 2020-11-12
   title:  HW8 due (Generate a Novel), HW9 released (Neural Networks)
   type: exam
 -
-  date: 2019-11-21
+  date: 2020-11-17
   slides: 20-neural-networks.pdf
   title: Neural Networks
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=11e3f835-4d9e-4e34-90f1-aab501264bf7
@@ -552,11 +538,11 @@
       url: https://www.coursera.org/learn/neural-networks-deep-learning
       title: Neural Networks and Deep Learning
 -
-  date: 2019-11-22
+  date: 2020-11-17
   title:  Practice Exam 3 released on Gradescope
   type: exam
 -
-  date: 2019-11-26
+  date: 2020-11-19
   slides: 21-neural-networks-2.pdf
   title: Neural Networks part 2&colon; Neural Language Models
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=69e95d5a-01a0-48ca-9f65-aab501264c22
@@ -575,11 +561,11 @@
       url: https://www.coursera.org/learn/neural-networks-deep-learning
       title: Neural Networks and Deep Learning    
 -
-  date: 2019-11-28
-  title: Thanksgiving Break (no classes)
+  date: 2020-11-20
+  title: Last Day of In-Person Instruction
   type: no_lecture
 -
-  date: 2019-12-03
+  date: 2020-11-24
   slides: 22-neural-networks-3.pdf
   title: Neural Networks part 3
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c8998341-aad0-48fe-a9e5-aab501264caf
@@ -589,19 +575,34 @@
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/9.pdf
 -
-  date: 2019-12-03
+  date: 2020-11-24
   title:  HW9 due (Neural Networks), study for exam
   type: exam
 -
-  date: 2019-12-03
+  date: 2020-11-24
   title:  Practice Exam 3 is due on Gradescope
   type: exam
 -
-  date: 2019-12-05
-  title:  Midterm exam 3 (in class)
-  type: exam
+  date: 2020-11-26
+  title: No Lecture (Thanksgiving Break)
+  type: no_lecture
 -
-  date: 2019-12-06
-  title:  Make up date for midterm exam 3 (9:30am-11am in 3401 Walnut room 401B).  
+  date: 2020-12-01
+  slides: 
+  title: TBD - computer vision? SLAM?
+  recording: 
+-
+  date: 2020-12-03
+  slides: 
+  title: TBD - computer vision? SLAM?
+  recording: 
+-
+  date: 2020-12-08
+  slides: 
+  title: TBD - computer vision? SLAM?
+  recording: 
+-
+  date: 2020-12-10
+  title:  Midterm exam 3
   type: exam
 
