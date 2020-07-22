@@ -83,6 +83,7 @@ Office hours
 Textbooks
 : [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
 : [Speech and Language Processing (3rd ed. draft) by Jurafsky and Martin](https://web.stanford.edu/~jurafsky/slp3/)
+: Optional extra reading – [Data Mining and Machine Learning: Fundamental Concepts and Algorithms (2nd edition) by Mohammed J. Zaki and Wagner Meira](https://dataminingbook.info/book_html/) 
 
 
 Grading
