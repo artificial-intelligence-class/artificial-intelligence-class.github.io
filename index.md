@@ -8,7 +8,7 @@ active_tab: main_page
 
 
 <div class="alert alert-danger" markdown="1">
-To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php) when it opens on April 30.   After you've added yourself to the waitlist, I can issue you a permit.  You will receive an email saying permit available. You will receive another email when the permit is issued. At that point, you may register on CoursesInTouch.   You don't need to email me in order to get a permit.  Permits aren't available during advance registration. 
+To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php).  After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  Currently, only Category 2+ or better have been issued.  
 </div>
 
 <!-- Display an alert about upcoming homework assignments -->
