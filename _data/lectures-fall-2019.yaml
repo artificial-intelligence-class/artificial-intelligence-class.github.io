@@ -1,0 +1,607 @@
+-
+  date: 2019-08-27
+  title: Introduction / AI in Science Fiction and Philosophy 
+  slides: 00-Course-Intro.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f6c7095a-fe41-46cb-aa76-aab5012647c8
+  readings:   
+    - 
+      title: AIMA Chapter 1 "Introduction"
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA Chapter 26 "Philosophical Foundations"
+      authors: Russell and Norvig
+      optional: true
+  videos:
+    -  
+      authors: PBS Crash Course in Philosophy
+      url: https://www.youtube.com/watch?v=39EdqUbj92U
+      title: Artificial Intelligence & Personhood
+      length: 9.5 minutes 
+-
+  date: 2019-08-27
+  title:  HW 1 released (Python)
+  type: exam
+-
+  date: 2019-08-29
+  title: Python Review - part 1
+  slides: 01-Python3-review1.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4a27eb8a-3607-4c63-b852-a9460066cfe9
+  videos:
+    -  
+      url: https://www.youtube.com/watch?v=X2xlQaimsGg
+      title: Monty Python and the Holy Grail (witch buring scene)
+      length: 4 minutes 
+    -  
+      authors: Krohn - Education
+      url: https://www.youtube.com/watch?v=xLovcfIugy8
+      title: Learn Python in 60 Minutes from Java
+      length: 60 minutes 
+    - 
+      authors: Dan Bader
+      url: https://www.youtube.com/watch?v=1HlyKKiGg-4
+      title: Python List Comprehensions Step-By-Step
+      length: 15 minutes 
+    - 
+      authors: Corey Schafer
+      url: https://www.youtube.com/watch?v=bD05uGo_sVI
+      title: Python Generators - How to use them and the benefits you receive
+      length: 11 minutes 
+
+-
+  date: 2019-09-03
+  title: Python Review - part 2
+  slides: 02-Python3-review2.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=80a6b20e-031f-4eea-8778-aab501264837
+  videos:
+    -  
+      authors: Piet Hoenderdos, Daniel Dennett and others
+      url: https://www.youtube.com/watch?v=U_8yo5hacKM
+      title: Victim of the Brain clip Dennett's brain gets removed
+      length: 10 minutes 
+    - 
+      authors: Sebastiaan Mathôt
+      url: https://www.youtube.com/watch?v=8qEnExGLZfY
+      title: Profiling and optimizing your Python code
+      length: 17 minutes 
+
+-
+  date: 2019-09-05
+  slides: 03-Agents-Search-Problems-and-Uninformed-Search.pdf
+  title:  Intelligent Agents, Search Problem Formulation and Uninformed Search
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=15e64ea2-3d3b-4942-9e91-aab501264858
+  readings:   
+    - 
+      title: AIMA Chapter 2 "Intelligent Agents" (2.1-2.3)
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA Chapter 3 "Solving Problems by Search" (3.1-3.4)
+      authors: Russell and Norvig
+      optional: false
+  videos:
+    -  
+      authors: SRI International 
+      url: https://www.youtube.com/watch?v=7bsEN8mwUB8
+      title: Shakey the Robot&colon; The First Robot to Embody Artificial Intelligence
+      length: 6 minutes 
+-
+  date: 2019-09-10
+  title:  HW 1 due (Python), HW2 released (Uninformed Search) 
+  type: exam
+-
+  date: 2019-09-10
+  title: No Class (Prof. Callison-Burch is traveling to DARPA)
+  type: no_lecture
+-
+  date: 2019-09-10
+  title: Course Selection Period Ends
+  type: no_lecture
+-
+  date: 2019-09-12
+  slides: 04-informed-search.pdf
+  title:  A* Search and Heuristics
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e515335f-4a98-453d-b9bb-aab50126489e
+  readings:   
+    - 
+      title: AIMA Chapter 3 "Solving Problems by Search"  (3.5-3.6)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: Introduction to the A* Algorithm
+      authors: Amit Patel of Red Blob Games
+      optional: true
+      url: https://www.redblobgames.com/pathfinding/a-star/introduction.html 
+  videos:
+    -  
+      authors: Nils Nilsson 
+      url: https://www.youtube.com/watch?v=mQ7M-zhiu7U
+      title: Story of A* and STRIPS
+      length: 6 minutes 
+    -  
+      authors: Gerry Jenkins
+      url: https://www.youtube.com/watch?v=NUgMa5coCoE
+      title: Animation of DFS Algorithm set to music
+      length: 1.5 minutes 
+    -  
+      authors: Gerry Jenkins
+      url: https://www.youtube.com/watch?v=x-VTfcmrLEQ
+      title: Animation of BFS Algorithm set to music
+      length: 1.5 minutes 
+-
+  date: 2019-09-17
+  slides: 05-CSPs.pdf
+  title:  Constraint Satifaction Problems 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96eb332f-9391-46f8-af55-aab5012648bf
+  readings:   
+    - 
+      title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
+      authors: Russell and Norvig
+      optional: false
+  videos:
+    -  
+      url: https://www.youtube.com/watch?v=AcDVVnyRk8Y
+      title: David Waltz - Constraint Propagation
+      length: 2.5 minutes (no sound)
+-
+  date: 2019-09-17
+  title:  HW2 due (Uninformed Search), HW3 released (Informed Search) 
+  type: exam
+-
+  date: 2019-09-19
+  slides: 06-Games-and-Adversarial-Search.pdf
+  title: Games and Adversarial Search
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b3e7f15b-7d1a-4449-bf8d-aab5012648e4
+  readings:   
+    - 
+      title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: Programming a Computer for PLaying Chess (1950)
+      authors: Claude Shannon
+      optional: true
+      url: http://artificial-intelligence-class.org/assets/readings/Shanning-1950-Programming-a-Computer-for-Playing-Chess.pdf
+    - 
+      title: Reconstructing Turing's "Paper Machine"
+      authors: Frederic Friedel
+      optional: true
+      url: https://en.chessbase.com/post/reconstructing-turing-s-paper-machine
+  videos:    
+    -  
+      authors: BBC 
+      url: https://www.youtube.com/watch?v=KF6sLCeBj0s
+      title: Deep Blue vs Kasparov&colon; How a computer beat best chess player in the world
+      length: 4 minutes 
+    -
+      url: https://www.youtube.com/watch?v=HT-UZkiOLv8
+      title: Lee Sedol vs AlphaGo Move 37 reactions and analysis
+      length: 4 minutes 
+    -  
+      authors: Pieter Abbeel 
+      url: https://www.youtube.com/watch?v=jvpWtwVSvjA
+      title: Step-by-step Example&colon; Alpha-Beta
+      length: 14 minutes 
+-
+  date: 2019-09-24
+  title: No Class 
+  type: no_lecture
+-
+  date: 2019-09-24
+  title:  HW3 due (Informed Search), HW4 released (Sudoku and Games) 
+  type: exam
+-
+  date: 2019-09-26
+  slides: 07-Expectimax-and-Utilities.pdf
+  title:  Game Trees&colon; Expectimax and Utilities
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=601142a0-302f-4705-8431-aab501264928
+  readings:   
+    - 
+      title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: AIMA Chapter 16 "Making Simple Decisions" (16.1-16.3)
+      authors: Russell and Norvig
+      optional: false 
+  videos: 
+    -
+      authors: CrashCourse 
+      url: https://www.youtube.com/watch?v=dqxQ3E1bubI
+      title: Behavioral Economics&colon; Crash Course Economics
+    -
+      authors: Jodi Beggs, Northeaster University 
+      url: https://www.youtube.com/watch?v=q-aUroyt1v8
+      title: Behaviroal Economics - Expected Utility Review
+    -
+      authors: Machines with Brains 
+      url: https://www.youtube.com/watch?v=lFIW8KphZo0
+      title: How the "Most Human Human" passed the Turing Test
+-
+  date: 2019-09-26
+  title:  Practice Exam released on Gradescope
+  type: exam
+-
+  date: 2019-10-01
+  slides: 08-MDPs.pdf
+  title:  Markov Decision Processes
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7d673336-f708-41d4-aa8a-aab5012649b0
+  readings:   
+    - 
+      title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: Chapter 3 - Finite Markov Decision Processes
+      authors: Sutton and Barto
+      url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
+-
+  date: 2019-10-01
+  title:  Practice Exam is due on Gradescope
+  type: exam
+-
+  date: 2019-10-03
+  title:  Midterm exam 1 (in class).  An alternate date is available for a makeup exam for students who cannot attend class.  The make up exam is Wednesday, Oct 9, 2019 in the morning from 10-11:30am.
+  type: exam
+-
+  date: 2019-10-07
+  title: Drop Period Ends
+  type: no_lecture
+-
+  date: 2019-10-08
+  slides: 09-MDPs-wrapup-and-reinforcement-learning.pdf
+  title: MDPs Wrapup and Reinforcement Learning
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d38a701-365b-4f71-9802-aab501264a1c
+  readings:   
+    - 
+      title: AIMA Chapter 21 "Reinforcement Learning"
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: Chapter 6 "Temporal-Difference Learning" (6.1, 6.2 and 6.5)
+      authors: Sutton and Barto
+      url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
+  videos: 
+    -
+      url: https://www.youtube.com/watch?v=s93KC4AGKnY
+      title: End of the 1983 movie Wargames
+    -
+      url: https://www.youtube.com/watch?v=WVIIigrPUJs
+      title: Textworld
+      authors: Microsoft Research Montreal 
+-
+  date: 2019-10-08
+  title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
+  type: exam
+-
+  date: 2019-10-09
+  title:  Make up date for midterm exam 1 (10am-11:30am in Hayden Hall room 358).  
+  type: exam
+-
+  date: 2019-10-10
+  title:  Fall Term Break (no classes)
+  type: no_lecture
+-
+  date: 2019-10-15
+  slides: 10-Reinforcement-Learning-2.pdf
+  title:  Reinforcement Learning - part 2
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
+  readings:   
+    - 
+      title: AIMA Chapter 21 "Reinforcement Learning"
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: Chapter 6 "Temporal-Difference Learning" (6.1, 6.2 and 6.5)
+      authors: Sutton and Barto
+      url: https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view
+  videos:
+    -
+      authors: OpenAI 
+      url: https://www.youtube.com/watch?v=kopoLzvh5jY
+      title: Multi-Agent Hide and Seek q
+    -
+      authors: Stanford University 
+      url: https://www.youtube.com/watch?v=M-QUkgk3HyE
+      title: Autonomous Helicopters Teach Themselves to Fly Stunts
+-
+  date: 2019-10-17
+  slides: 11-Probabilities.pdf 
+  title:  No class today.  CCB is traveling for the HLTCOE.  Please read AIMA chapter 13.1-13.5. 
+  type: no_lecture
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=02d25e7b-5be9-48de-a513-aa7f0110399a
+  readings:   
+    - 
+      title: AIMA Chapter 13 "Quantifying Uncertainty" (13.1-13.5)
+      authors: Russell and Norvig
+      optional: false 
+  videos:
+    -
+      authors: World Science Festival 
+      url: https://www.youtube.com/watch?v=BcvLAw-JRss
+      title: Everything You Ever Wanted to Know About Bayes' Theorem But Were Afraid To Ask
+-
+  date: 2019-10-22
+  slides: 12-Markov-Models.pdf
+  title:  Markov Models 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f27b7438-ad1f-48a3-a337-aab501264aa5
+  readings:  
+    - 
+      title: AIMA Chapter 15 "Probabilistic Reasoning Over Time" (15.2-15.5)
+      authors: Russell and Norvig
+      optional: false 
+  videos:
+    -
+      authors: Khan Academy 
+      url: https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication
+      title: A mathematical theory of communication
+-
+  date: 2019-10-22
+  title:  HW5 due (MDPs and GridWorld), HW6 released (Reinforcement Learning)
+  type: exam
+-
+  date: 2019-10-23
+  title:  Practice Exam 2 released on Gradescope
+  type: exam
+-
+  date: 2019-10-24
+  slides: 13-Bayes-Nets.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=06b4ceba-09e6-4abe-a26d-aab501264ac6
+  title:  Bayes' Nets
+  readings:   
+    - 
+      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
+      authors: Russell and Norvig
+      optional: false 
+  videos:
+    -
+      authors: Daphne Koller 
+      url: https://www.youtube.com/playlist?list=PLBAGcD3siRDjiQ5VZQ8t0C7jkHQ8fhuq8
+      title: Probabilistic Graphical Models online course
+-
+  date: 2019-10-29
+  slides: 14-BN-wrapup-Naive-Bayes.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9428cfd3-a134-4b3a-b2c5-aab501264af0
+  title: Bayes' Nets wrap up and Naieve Bayes
+  readings:   
+    - 
+      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
+      authors: Russell and Norvig
+      optional: false 
+  videos:
+    - 
+      authors: Name Explain
+      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
+      title: Why is Junk Email Called Spam?
+    -
+      authors: Monty Python 
+      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
+      title: SPAM
+-
+  date: 2019-10-29
+  title:  Practice Exam 2 is due on Gradescope
+  type: exam
+-
+  date: 2019-10-31
+  title:  Midterm exam 2 (in class)
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=766968f6-61d2-4dae-86b2-aab501264b11
+  type: exam 
+-
+  date: 2019-11-01
+  title:  Make up date for midterm exam 2 (9:30am-11am in 3401 Walnut room 401B).  
+  type: exam
+-
+  date: 2019-11-04
+  title: Last day to withdraw from a course
+  type: no_lecture
+-
+  date: 2019-11-05
+  slides: 15-Naive-Bayes-and-Perceptron.pdf
+  title:  Machine Learning&colon; Naieve Bayes and Perceptrons
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c019251a-9eb1-4a5d-b55e-aab501264b45
+  readings: 
+    - 
+      title: AIMA Chapter 18 "Learning from Examples" (18.6.3)
+      authors: Russell and Norvig
+      optional: false  
+    - 
+      title: Neural Networks and Deep Learning Chapter 1 "Using Neural Nets to Recognize Handwritten Digits" 
+      authors: Michael Nielsen
+      url: http://neuralnetworksanddeeplearning.com/chap1.html
+      optional: true  
+    - 
+      title: Electronic 'Brain' Teaches Itself
+      authors: New York Times (July 13, 1958)
+      url: https://timesmachine.nytimes.com/timesmachine/1958/07/13/91396361.html?action=click&contentCollection=Archives&module=LedeAsset&region=ArchiveBody&pgtype=article&pageNumber=116
+      optional: true  
+  videos:
+    - 
+      authors: Paul Anderson
+      url: https://www.youtube.com/watch?v=HZh0A-lWSmY
+      title: The Neuron
+    - 
+      authors: 3Blue1Brown
+      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+      title: Essence of Linear Algebra
+    - 
+      authors: Name Explain
+      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
+      title: Why is Junk Email Called Spam?
+    -
+      authors: Monty Python 
+      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
+      title: SPAM
+-
+  date: 2019-11-05
+  title: HW6 due (Reinforcement Learning), HW7 released (Perceptrons)
+  type: exam
+-
+  date: 2019-11-07
+  slides: 16-Vector-Space-Semantics.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b426d17e-a201-4f2d-bb3a-aab501264b66
+  title: NLP (Natural Language Processing)
+  readings:
+    -
+      title: Chapter 3 "Language Modeling with N-Grams"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/3.pdf
+    -
+      title: Chapter 6 "Vector Semantics"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
+  videos:
+    - 
+      title: Overview of distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=gtuhPq0Xyno&index=1&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 10 minutes
+    - 
+      title: Vector comparison for distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=LYH93YnhuyQ&t=304s&index=2&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 10 minutes
+    - 
+      title: Matrix reweighting for distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=WFySbJ3FGcM&index=3&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 16 minutes
+-
+  date: 2019-11-12
+  slides: 17-Vector-Space-Semantics-part-2.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee27afd4-35ee-40e3-832f-aab501264b82
+  title: NLP part 2
+  readings:
+    -
+      title: Chapter 3 "Language Modeling with N-Grams"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/3.pdf
+    -
+      title: Chapter 6 "Vector Semantics"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
+  videos:
+    - 
+      title: Overview of distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=gtuhPq0Xyno&index=1&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 10 minutes
+    - 
+      title: Vector comparison for distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=LYH93YnhuyQ&t=304s&index=2&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 10 minutes
+    - 
+      title: Matrix reweighting for distributed word representations
+      authors: Chris Potts
+      url: https://www.youtube.com/watch?v=WFySbJ3FGcM&index=3&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
+      length: 16 minutes
+-
+  date: 2019-11-12
+  title:  HW7 due (Perceptrons), HW8 released (Generate a Novel)
+  type: exam
+-
+  date: 2019-11-14
+  slides: 18-Vector-Space-Semantics-part-3.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aab22f66-9cb4-413b-82bd-aab501264bac
+  title: NLP part 3
+  readings:
+    -
+      title: Chapter 6 "Vector Semantics"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
+-
+  date: 2019-11-19
+  slides: 19-logistic-regression.pdf
+  title: Logistic Regression and Stochastic Gradient Descent
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e98aa713-242e-4010-a254-aab501264bcd
+  readings:   
+    - 
+      title: Chapter 5 "Logistic Regression"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/5.pdf 
+  videos:
+    - 
+      authors: 3Blue1Brown
+      url: https://www.youtube.com/watch?v=sULa9Lc4pck-3pi
+      title: Forget how logarithms work?  Try out this notation instead.
+-
+  date: 2019-11-19
+  title:  HW8 due (Generate a Novel), HW9 released (Neural Networks)
+  type: exam
+-
+  date: 2019-11-21
+  slides: 20-neural-networks.pdf
+  title: Neural Networks
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=11e3f835-4d9e-4e34-90f1-aab501264bf7
+  readings:
+    - 
+      title: Chapter 7 "Neural Networks and Neural Language Models"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf 
+  videos:
+    - 
+      authors: 3Blue1Brown
+      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+      title: Neural Networks
+    - 
+      authors: Andrew Ng
+      url: https://www.coursera.org/learn/neural-networks-deep-learning
+      title: Neural Networks and Deep Learning
+-
+  date: 2019-11-22
+  title:  Practice Exam 3 released on Gradescope
+  type: exam
+-
+  date: 2019-11-26
+  slides: 21-neural-networks-2.pdf
+  title: Neural Networks part 2&colon; Neural Language Models
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=69e95d5a-01a0-48ca-9f65-aab501264c22
+  readings:
+    - 
+      title: Chapter 7 "Neural Networks and Neural Language Models"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf 
+    - 
+      title: Chapter 9 "Sequence Processing with Recurrent Networks"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/9.pdf
+  videos:
+    - 
+      authors: Andrew Ng
+      url: https://www.coursera.org/learn/neural-networks-deep-learning
+      title: Neural Networks and Deep Learning    
+-
+  date: 2019-11-28
+  title: Thanksgiving Break (no classes)
+  type: no_lecture
+-
+  date: 2019-12-03
+  slides: 22-neural-networks-3.pdf
+  title: Neural Networks part 3
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c8998341-aad0-48fe-a9e5-aab501264caf
+  readings:
+    - 
+      title: Chapter 9 "Sequence Processing with Recurrent Networks"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/9.pdf
+-
+  date: 2019-12-03
+  title:  HW9 due (Neural Networks), study for exam
+  type: exam
+-
+  date: 2019-12-03
+  title:  Practice Exam 3 is due on Gradescope
+  type: exam
+-
+  date: 2019-12-05
+  title:  Midterm exam 3 (in class)
+  type: exam
+-
+  date: 2019-12-06
+  title:  Make up date for midterm exam 3 (9:30am-11am in 3401 Walnut room 401B).  
+  type: exam
+
