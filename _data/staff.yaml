@@ -3,55 +3,81 @@
   email: ccb@upenn.edu 
   url: https://www.cis.upenn.edu/~ccb/
   extra_title: Instructor
-  office_hours: Tuesday & Thursday, 3-4 pm
-  location: 3401 Walnut room 463C
+  office_hours: 
+  location: 
 
-- name: Danni Ma
-  pic: danni.jpg
-  email: dannima@seas.upenn.edu
-  url: /
-  office_hours: Tuesday & Thursday, 9-10 am
-  location: GRW 5th Floor Bump Space
 
-- name: Diana Marsala
-  pic: marsalad.jpg
-  email: marsalad@sas.upenn.edu
-  url: /
-  office_hours: Friday, 1:30-3 pm
-  location: Moore 100A
-  
-- name: Emily Hilman
-  pic: emily.jpg
-  email: ehilman@sas.upenn.edu
-  url: /
-  office_hours: Wednesday, 2-4 pm
-  location: GRW 5th Floor Bump Space
+- name: Aditya Kashyap
+  pic: aditya_kashyap.jpg
+  email: kashyap@seas
+  url: 
+  office_hours: 
+  location: 
 
-- name: Jasmine Lee
-  pic: jasmine_sun_jae_lee.jpg
-  email: leesunj@sas.upenn.edu
-  url: /
-  office_hours: Monday, 3-5 pm
-  location: GRW 5th Floor Bump Space
+- name: Bharath Jaladi 
+  pic: kermit.png
+  email: bjaladi@seas
+  url: 
+  office_hours: 
+  location: 
 
-- name: Jie Gao
-  pic: jie.jpg
-  email: jiegao@seas.upenn.edu
-  url: https://jiegaopoc.me
-  location: Piazza
+- name: Chenyu Liu 
+  pic: chenyu_liu.png
+  email: liucy@seas
+  url: 
+  office_hours: 
+  location: 
 
-- name: John Zhang
-  pic: johnzhang.jpg
-  email: johnzh@sas.upenn.edu
-  url: /
-  office_hours: Monday, 6-8 pm
-  location: 268 GRW
+- name: Daniel Stekol
+  pic: daniel_stekol.jpg
+  email: dstekol@seas
+  url: 
+  office_hours: 
+  location: 
+
+- name: Eddie Cohen
+  pic: kermit.png
+  email: edcohen@seas
+  url: 
+  office_hours: 
+  location: 
+
+- name: Halley Young
+  pic: kermit.png
+  email: halleyy@seas
+  url: 
+  office_hours: 
+  location: 
+
+- name: Hanbang Wang
+  pic: kermit.png
+  email: hanbangw@seas
+  url: 
+  office_hours: 
+  location: 
+
+- name: Joe Cappadona
+  pic: joe_cappadona.jpg
+  email: josephcappadona27@gmail
+  url: 
+  office_hours: 
+  location: 
+
+
+- name: Lisa Zhao
+  pic: lisa_zhao.png
+  email: zhaoyij@seas
+  url: 
+  office_hours: 
+  location: 
+
 
 - name: Yue Yang
-  pic: yueyang.png
+  pic: yue_yang.png
   email: yueyang1@seas.upenn.edu
   url: http://www.yueyang.host
-  office_hours: Tuesday, 9-11 am
-  location: GRW 5th Floor Bump Space
+  office_hours: 
+  location: 
+  extra_title: Head TA
 
   
