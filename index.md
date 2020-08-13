@@ -81,10 +81,12 @@ Office hours
 : TBD
 
 Textbooks
-: [Artificial Intelligence: A Modern Approach (3rd edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-Approach-Stuart-Russell/dp/9332543518/)
+: [Artificial Intelligence: A Modern Approach (4th edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-A-Modern-Approach/dp/0134610997/)
 : [Speech and Language Processing (3rd ed. draft) by Jurafsky and Martin](https://web.stanford.edu/~jurafsky/slp3/)
-: Optional extra reading – [Data Mining and Machine Learning: Fundamental Concepts and Algorithms (2nd edition) by Mohammed J. Zaki and Wagner Meira](https://dataminingbook.info/book_html/) 
 
+Course Materials
+: [Sphero R2D2](https://www.google.com/search?q=Sphero+R2D2&safe=active&rls=en&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjr_Mr2gJnrAhUdknIEHT17A78Q_AUoAXoECA0QAw&biw=1440&bih=814) - Don't get the Disney or Hasbro R2D2s.  They look similar, but won't support our APIs.
+: Raspberry Pi Sensor Pack – we will send you one
 
 Grading
 : (TO BE UPDATED)
