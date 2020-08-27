@@ -8,7 +8,7 @@ active_tab: main_page
 
 
 <div class="alert alert-danger" markdown="1">
-To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php).  After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  Currently, only Category 2+ or better have been issued.  If you have a question about the waitlist system you can email Lee Dukes ldukes@seas.upenn.edu.
+To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php).  After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  If you have a question about the waitlist system you can email Lee Dukes ldukes@seas.upenn.edu.
 </div>
 
 <!-- Display an alert about upcoming homework assignments -->
@@ -81,10 +81,10 @@ Office hours
 : TBD
 
 Textbooks
-: [Artificial Intelligence: A Modern Approach (4th edition) by Russel and Norvig](https://www.amazon.com/Artificial-Intelligence-A-Modern-Approach/dp/0134610997/)
+: Artificial Intelligence: A Modern Approach (4th edition) by Russel and Norvig.  You can [buy the textbook on Amazon](https://www.amazon.com/Artificial-Intelligence-A-Modern-Approach/dp/0134610997/) of from the [UPenn bookstore](https://upenn.bncollege.com/shop/upenn/page/find-textbooks), where you can rent the digital version for $40.
 : [Speech and Language Processing (3rd ed. draft) by Jurafsky and Martin](https://web.stanford.edu/~jurafsky/slp3/)
 
-Course Materials
+Materials for Extra Credit Assignments
 : [Sphero R2D2](https://www.google.com/search?q=Sphero+R2D2&safe=active&rls=en&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjr_Mr2gJnrAhUdknIEHT17A78Q_AUoAXoECA0QAw&biw=1440&bih=814) - Don't get the Disney or Hasbro R2D2s.  They look similar, but won't support our APIs.
 : Raspberry Pi Sensor Pack – we will send you one
 
