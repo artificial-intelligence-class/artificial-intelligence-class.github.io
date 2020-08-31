@@ -8,7 +8,7 @@ active_tab: main_page
 
 
 <div class="alert alert-danger" markdown="1">
-To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php).  After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  If you have a question about the waitlist system you can email Lee Dukes ldukes@seas.upenn.edu.
+To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php).  After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  If you have a question about the waitlist system you can email Lee Dukes $$<$$ldukes@seas.upenn.edu$$>$$.
 </div>
 
 <!-- Display an alert about upcoming homework assignments -->
@@ -73,44 +73,60 @@ Discussion Forum
 
 Time and place
 : In Fall 2020, the course will be all online.
-: Lectures will be broadcast live on Tuesdays and Thursdays from noon-1:30pm. Recordings will be made available shortly after the live lectures. 
+: Lectures will be [broadcast live on Zoom](https://upenn.zoom.us/j/97517317746?pwd=dlZSZTZXd1ZXaDhqeUhDK251TTFndz09) on Tuesdays and Thursdays from noon-1:30pm Eastern. Recordings will be made available shortly after the live lectures. 
 : The first day of class is Tuesday, September 1, 2020.
 : The final day of class is Tuesday, December 22, 2020.
 
-Office hours (Eastern)
-: Monday 11am-1pm - Chris
-: Monday 4:30pm-6:30pm – Eddie
-: Tuesday 3am-5am Eastern / 3pm-5pm (China) - Hanbang 
-: Tuesday 9am-11am - Yue
-: Tuesday noon-2pm - Joe
-: Tuesday 2pm-4pm - Chenyu
-: Tuesday 4pm-6pm - Aditya
-: Wednesday 12:30pm-2:30pm - Daniel
-: Wednesday 2:30pm-4:30pm - Halley
-: Friday 3pm-5pm - Lisa
+Office hours 
+: Office hours will be held in [Gather Town](https://gather.town/aQMGI0l1R8DP0Ovv/penn-cis) in 3401 Walnut outside of room 463C.
+: The first day of office hours will be Monday, September 7.
+: Monday 11am-1pm Eastern - Chris
+: Monday 4:30pm-6:30pm Eastern – Eddie
+: Tuesday 3am-5am Eastern / 3pm-5pm China - Hanbang 
+: Tuesday 9am-11am Eastern - Yue
+: Tuesday noon-2pm Eastern - Joe
+: Tuesday 2pm-4pm Eastern- Chenyu
+: Tuesday 4pm-6pm Eastern - Aditya
+: Wednesday 12:30pm-2:30pm Eastern - Daniel
+: Wednesday 2:30pm-4:30pm Eastern - Halley
+: Friday 3pm-5pm Eastern - Lisa
 
 
 Textbooks
 : Required: __Artificial Intelligence: A Modern Approach (4th edition) by Russel and Norvig.__ Note that the 4th edition adds substantial new material over the 3rd edition, so you should buy the 4th edition.  You can [buy the textbook on Amazon](https://www.amazon.com/Artificial-Intelligence-A-Modern-Approach/dp/0134610997/) or from the [UPenn bookstore](https://upenn.bncollege.com/shop/upenn/page/find-textbooks), where you can rent the digital version for $40.  
-: [Speech and Language Processing (3rd ed. draft) by Jurafsky and Martin](https://web.stanford.edu/~jurafsky/slp3/).  This textbook is currently free online while the textbook authors are revising it to write their 3rd edition.  We will use it in the last third of the course. 
+: Supplemental: __Speech and Language Processing (3rd ed. draft) by Jurafsky and Martin__.  This textbook is currently [free online](https://web.stanford.edu/~jurafsky/slp3/) while the textbook authors are revising it to write their 3rd edition.  We will use it in the last third of the course. 
 
 
 
 Materials for Extra Credit Assignments
 : In addition to the normal homework assignments, we will have a series of optional extra credit assignments that use programmable toy R2D2s.  These assignments can be done in pairs.  Each extra credit homework assignment if worth up to about 1% of your overall grade.
 : If you are in Philadelphia, you can borrow one of the R2D2 robots from us.  It must be returned at the end of the semester in good working order, or you will have to pay $100 to replace it. 
-: If you are outside of Philadelphia, you can purchase a __Sphero R2D2__.  Currently you can buy the robot for about $100 on [Amazon](https://www.amazon.com/Sphero-R201ROW-R2-D2-App-Enabled-Droid/dp/B071KSR86B/) or $80 from [Walmart.com](https://www.walmart.com/ip/Sphero-R2-D2-App-Enabled-Droid/707617540).  
+: If you are outside of Philadelphia, you can purchase a __Sphero R2D2__.  Currently, you can buy the robot for about $100 on [Amazon](https://www.amazon.com/Sphero-R201ROW-R2-D2-App-Enabled-Droid/dp/B071KSR86B/) or $80 from [Walmart.com](https://www.walmart.com/ip/Sphero-R2-D2-App-Enabled-Droid/707617540).  If you live outside the USA, you may need to use a [3rd party shipping service](https://planetexpress.com/stores/walmart/).
 : If you live outside of Philadelphia, you will also need a Raspberry Pi Sensor Pack that the TAs assembled from parts. We will send it to you if [you provide your address on this form](https://docs.google.com/forms/d/e/1FAIpQLSdGu_0Qms_RxA42QCZY0A_PrJFPNgXrVENYmZTAclrj5ZKoww/viewform?usp=sf_link).
 
 
 
-Grading
-: (TO BE UPDATED)
-: 55% Homework Assignments
-: 15% Midterm 1
-: 15% Midterm 2
-: 15% Midterm 3 <br/>
-There is roughly one homework assignment per week, aside from weeks with exams.  Students enrolled in CIS 421 may skip one HW assignment, or they may discard their lowest scoring HW assignment.  You do not get late days back on the homework that you discard.  Students enrolled in CIS 521 must complete all HW assignments and cannot discard their lowest scoring assignment.
+Grading 
+: 70% Homework Assignments
+: 30% Exams and Quizzes
+: Up to 3-5% in Optional Extra Credit
+: The course is not curved.  Your overall score is computed as _0.3 * exam score + 0.7 * homework score_.  All homeworks are equally weighted. Here is  how letter grades are assigned based on your overall score:
+: | Score	| Grade   |
+|-------|---------| 
+|$$>$$97 | A+| 
+| 93-97	| A| 
+| 90-93	| A-| 
+| 87-90	| B+| 
+| 83-87	| B| 
+| 80-83	| B-| 
+| 75-80	| C+| 
+| 70-75	| C| 
+| 65-70	| C-| 
+| 50-65	| D| 
+| below 50	| F |
+
+Differences between 421 and 521
+: There is roughly one homework assignment per week, aside from weeks with exams.  Students enrolled in CIS 421 may skip one HW assignment, or they may discard their lowest scoring HW assignment.  You do not get late days back on the homework that you discard.  Students enrolled in CIS 521 must complete all HW assignments and cannot discard their lowest scoring assignment.
 
 
 Collaboration Policy
