@@ -77,16 +77,32 @@ Time and place
 : The first day of class is Tuesday, September 1, 2020.
 : The final day of class is Tuesday, December 22, 2020.
 
-Office hours
-: TBD
+Office hours (Eastern)
+: Monday 11am-1pm - Chris
+: Monday 4:30pm-6:30pm – Eddie
+: Tuesday 3am-5am Eastern / 3pm-5pm (China) - Hanbang 
+: Tuesday 9am-11am - Yue
+: Tuesday noon-2pm - Joe
+: Tuesday 2pm-4pm - Chenyu
+: Tuesday 4pm-6pm - Aditya
+: Wednesday 12:30pm-2:30pm - Daniel
+: Wednesday 2:30pm-4:30pm - Halley
+: Friday 3pm-5pm - Lisa
+
 
 Textbooks
-: Artificial Intelligence: A Modern Approach (4th edition) by Russel and Norvig.  You can [buy the textbook on Amazon](https://www.amazon.com/Artificial-Intelligence-A-Modern-Approach/dp/0134610997/) of from the [UPenn bookstore](https://upenn.bncollege.com/shop/upenn/page/find-textbooks), where you can rent the digital version for $40.
-: [Speech and Language Processing (3rd ed. draft) by Jurafsky and Martin](https://web.stanford.edu/~jurafsky/slp3/)
+: Required: __Artificial Intelligence: A Modern Approach (4th edition) by Russel and Norvig.__ Note that the 4th edition adds substantial new material over the 3rd edition, so you should buy the 4th edition.  You can [buy the textbook on Amazon](https://www.amazon.com/Artificial-Intelligence-A-Modern-Approach/dp/0134610997/) or from the [UPenn bookstore](https://upenn.bncollege.com/shop/upenn/page/find-textbooks), where you can rent the digital version for $40.  
+: [Speech and Language Processing (3rd ed. draft) by Jurafsky and Martin](https://web.stanford.edu/~jurafsky/slp3/).  This textbook is currently free online while the textbook authors are revising it to write their 3rd edition.  We will use it in the last third of the course. 
+
+
 
 Materials for Extra Credit Assignments
-: [Sphero R2D2](https://www.google.com/search?q=Sphero+R2D2&safe=active&rls=en&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjr_Mr2gJnrAhUdknIEHT17A78Q_AUoAXoECA0QAw&biw=1440&bih=814) - Don't get the Disney or Hasbro R2D2s.  They look similar, but won't support our APIs.
-: Raspberry Pi Sensor Pack – we will send you one
+: In addition to the normal homework assignments, we will have a series of optional extra credit assignments that use programmable toy R2D2s.  These assignments can be done in pairs.  Each extra credit homework assignment if worth up to about 1% of your overall grade.
+: If you are in Philadelphia, you can borrow one of the R2D2 robots from us.  It must be returned at the end of the semester in good working order, or you will have to pay $100 to replace it. 
+: If you are outside of Philadelphia, you can purchase a __Sphero R2D2__.  Currently you can buy the robot for about $100 on [Amazon](https://www.amazon.com/Sphero-R201ROW-R2-D2-App-Enabled-Droid/dp/B071KSR86B/) or $80 from [Walmart.com](https://www.walmart.com/ip/Sphero-R2-D2-App-Enabled-Droid/707617540).  
+: If you live outside of Philadelphia, you will also need a Raspberry Pi Sensor Pack that the TAs assembled from parts. We will send it to you if [you provide your address on this form](https://docs.google.com/forms/d/e/1FAIpQLSdGu_0Qms_RxA42QCZY0A_PrJFPNgXrVENYmZTAclrj5ZKoww/viewform?usp=sf_link).
+
+
 
 Grading
 : (TO BE UPDATED)
