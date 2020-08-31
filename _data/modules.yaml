@@ -1,0 +1,49 @@
+-
+  module_number: 1
+  start_date: 2020-09-01
+  end_date: 2020-09-01
+  title: Course Introduction / AI in Science Fiction and Philosophy 
+  description: In this module I will give an overview of what to expect in the course and how it differs from other related courses at Penn.  We will also discuss the philosophical foundations of artificial intelligence – what great thinkers like Rene Descartes and Alan Turing thought about how artificial intelligence could be defied, and how we could test whether a non-human agent were truly intelligent.  We’ll also review portrayals of AI in Science Fiction, and see discuss what is science fiction and what has become science fact.  
+  learning_objectives:
+    - Framing AI as thinking like people, acting like people, thinking rationally, acting rationally 
+    - Understanding philosophical arguments about AI from René Descartes, Alan Turing, John Searle and Dan Dennett
+    - Science Fiction and Science Fact
+  lessons:
+    - 
+      title: Course overview
+      topics:
+        - Course instructor
+        - What this course will cover
+        - Can you get a permit?
+        - R2D2 extra credit assignments
+      readings:
+        - 
+          title: Course website
+          link: http://artificial-intelligence-class.org
+      slides: xxx
+      video: video-url
+    - 
+      title: Philosophy and AI
+      topics:
+        - Rene Descartes - Mind body dualism, people are just complex machines
+        - Alan Turing - the imitation game
+        - John Searle - The Chinese Room
+        - Daniel Dennett - Brain in a Vat
+      reading: AIMA chapter 1.XXX
+      reading_url: none
+      slides: xxx
+      video: video-url
+      quiz: 
+    - 
+      title: SciFi and AI
+      topics:
+        - Acting Human
+        - Voight-Kampff Test
+        - Science Fiction and Science Fact
+      readings:
+        - 
+          title: Blade Runner
+          optional: true
+      slides: xxx
+      video: video-url
+      
