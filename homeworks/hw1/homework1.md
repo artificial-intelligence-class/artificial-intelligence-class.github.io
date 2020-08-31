@@ -11,7 +11,7 @@ materials:
     - 
         name: skeleton file
         url: homework1.py 
-submission_link: https://www.gradescope.com/courses/59562
+submission_link: https://www.gradescope.com/courses/160263
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -518,8 +518,8 @@ Write a `__str__(self)` method that returns a human-readable string representing
 
 ## 7. Feedback [3 points]
 
-1. Approximately how long did you spend on this assignment?
+1. **[1 points]** Approximately how long did you spend on this assignment?
 
-2. Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+2. **[1 points]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
-3. Which aspects of this assignment did you like? Is there anything you would have changed?
+3. **[1 points]** Which aspects of this assignment did you like? Is there anything you would have changed?
