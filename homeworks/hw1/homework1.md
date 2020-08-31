@@ -65,7 +65,7 @@ In this assignment, you will answer some conceptual questions about Python and w
 
 A skeleton file [homework1.py](homework1.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
-Unless explicitly stated otherwise, you may not import any of the standard Python modules, meaning your solutions should not include any lines of the form `import x` or `from x import y`. Accordingly, you may find it helpful to refresh yourself on Python's built-in functions and data types.
+Unless explicitly stated otherwise, you may not import any of the standard Python modules (except for section 7), meaning your solutions should not include any lines of the form `import x` or `from x import y`. Accordingly, you may find it helpful to refresh yourself on Python's built-in functions and data types.
 
 You will find that in addition to a problem specification, each programming question also includes a pair of examples from the Python interpreter. These are meant to illustrate typical use cases, and should not be taken as comprehensive test suites.
 
@@ -460,6 +460,8 @@ Write a `__str__(self)` method that returns a human-readable string representing
 
 ## 7. Python Packages [4 points]
 
+In this section, you are allowed to use external python packages which are widely used in Artificial Intelligence.
+
 1. **[2 point]** **Numpy**
 	
 	Install the numpy first:
@@ -516,7 +518,7 @@ Write a `__str__(self)` method that returns a human-readable string representing
 	```
 	
 
-## 7. Feedback [3 points]
+## 8. Feedback [3 points]
 
 1. **[1 points]** Approximately how long did you spend on this assignment?
 
