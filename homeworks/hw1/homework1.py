@@ -4,6 +4,18 @@
 
 student_name = "Type your full name here."
 
+# This is where your grade report will be sent.
+student_email = "Type your preferred email address here." 
+
+############################################################
+# Section 1: Python Concepts
+############################################################
+
+python_concepts_question_1 = "..."
+
+python_concepts_question_2 = "..."
+
+python_concepts_question_3 = "..."
 
 ############################################################
 # Section 2: Working with Lists
