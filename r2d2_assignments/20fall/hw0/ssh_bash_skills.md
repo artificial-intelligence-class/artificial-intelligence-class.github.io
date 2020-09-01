@@ -7,7 +7,7 @@ The [Raspberry Pi Zero](https://en.wikipedia.org/wiki/Raspberry_Pi#Pi_Zero) uses
 * Flash the image to the SD card, here we recommend a free software [balenaEtcher](https://www.balena.io/etcher/) which is available for all platforms.
 
 ### 2. Connect the Raspberry Pi to Wi-Fi
-After the SD card is flashed, you need to set up the Wi-Fi. Download this [configuration file](wpa_supplicant.conf) which contains the following details:
+After the SD card is flashed, you need to set up the Wi-Fi. Download this [configuration file](wpa_supplicant.conf) (keep the filename as `wpa_supplicant.conf`) which contains the following details:
 
 ```shell
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
