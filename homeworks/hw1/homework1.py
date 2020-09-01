@@ -113,7 +113,7 @@ def sort_array(list_of_matrices):
 	pass
 
 import nltk
-def POS_tag(sentece):
+def POS_tag(sentence):
 	pass
 
 ############################################################
