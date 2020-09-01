@@ -4,30 +4,6 @@
 
 student_name = "Type your full name here."
 
-############################################################
-# Section 1: Python Concepts - Study Questions
-############################################################
-
-python_concepts_question_1 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-This question will not be graded.
-"""
-
-python_concepts_question_2 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-This question will not be graded.
-"""
-
-python_concepts_question_3 = """
-Type your response here.
-Your response may span multiple lines.
-Do not include these instructions in your response.
-This question will not be graded.
-"""
 
 ############################################################
 # Section 2: Working with Lists
@@ -118,26 +94,34 @@ class Polynomial(object):
         pass
 
 ############################################################
-# Section 7: Feedback
+# Section 7: Python Packages
+############################################################
+import numpy
+def sort_array(list_of_matrices):
+	pass
+
+import nltk
+def POS_tag(sentece):
+	pass
+
+############################################################
+# Section 8: Feedback
 ############################################################
 
 feedback_question_1 = """
 Type your response here.
 Your response may span multiple lines.
 Do not include these instructions in your response.
-This question will not be graded.
 """
 
 feedback_question_2 = """
 Type your response here.
 Your response may span multiple lines.
 Do not include these instructions in your response.
-This question will not be graded.
 """
 
 feedback_question_3 = """
 Type your response here.
 Your response may span multiple lines.
 Do not include these instructions in your response.
-This question will not be graded.
 """

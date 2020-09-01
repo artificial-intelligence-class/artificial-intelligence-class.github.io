@@ -5,13 +5,13 @@ img_link: http://xkcd.com/353/
 caption: Hello world!
 title: CIS 521 Homework 1 "Python Skills"
 active_tab: homework
-release_date: 2019-08-27
-due_date: 2019-09-10 23:59:00EDT
+release_date: 2020-09-02
+due_date: 2020-09-15 23:59:00EDT
 materials:
     - 
         name: skeleton file
         url: homework1.py 
-submission_link: https://www.gradescope.com/courses/59562
+submission_link: https://www.gradescope.com/courses/160263
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -65,7 +65,7 @@ In this assignment, you will answer some conceptual questions about Python and w
 
 A skeleton file [homework1.py](homework1.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
-Unless explicitly stated otherwise, you may not import any of the standard Python modules, meaning your solutions should not include any lines of the form `import x` or `from x import y`. Accordingly, you may find it helpful to refresh yourself on Python's built-in functions and data types.
+Unless explicitly stated otherwise, you may not import any of the standard Python modules (except for section 7), meaning your solutions should not include any lines of the form `import x` or `from x import y`. Accordingly, you may find it helpful to refresh yourself on Python's built-in functions and data types.
 
 You will find that in addition to a problem specification, each programming question also includes a pair of examples from the Python interpreter. These are meant to illustrate typical use cases, and should not be taken as comprehensive test suites.
 
@@ -458,10 +458,70 @@ Write a `__str__(self)` method that returns a human-readable string representing
     '-x^2 - 2x^4 - 2x^4 - 4x^6'
     ```
 
-## 7. Feedback [5 points]
+## 7. Python Packages [4 points]
 
-1. **[1 point]** Approximately how long did you spend on this assignment?
+In this section, you are allowed to use external python packages which are widely used in Artificial Intelligence.
 
-2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+1. **[2 point]** **Numpy**
+	
+	Install the numpy first:
+	
+	```shell
+	pip3 install numpy
+	```
 
-3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+	Use [numpy](https://numpy.org) package to implement the `sort_array(list_of_matrics)` which takes in a list of matrices with various dimensions and return a sorted **1D** array with **decreasing** order contains all the values in these matrices. The data type of the returned array is **int**.
+
+	```python
+	>>> import numpy as np
+	>>> matrix1 = np.array([[1, 2], [3, 4]])
+	>>> matrix2 = np.array([[5, 6, 7], [7, 8, 9], [0, -1, -2]])
+	>>> sort_array([matrix1, matrix2])
+	array([ 9,  8,  7,  7,  6,  5,  4,  3,  2,  1,  0, -1, -2])
+	```
+	
+	Check this [tutorial](https://numpy.org/devdocs/user/quickstart.html) for some hints.
+	
+2. **[2 points]** **NLTK**
+	Install the [nltk](https://www.nltk.org/index.html) first:
+	
+	```shell
+	pip3 install nltk
+	```
+	
+	You may also need to download some extra data:
+	
+	```python
+	>>> import nltk
+	>>> nltk.download('stopwords')
+	>>> nltk.download('punkt')
+	>>> nltk.download('averaged_perceptron_tagger')
+	```
+	
+	Implement the `POS_tag(sentence)` function which takes in a string and return the Part-of-Speech(POS) tag of each word in the sentence. To complete this task, you need to fulfill the requirements shown below:
+	
+	1) Convert all the characters in the sentence to lower case.
+	
+	2) Tokenize the sentence.
+	
+	3) Remove the stop words and punctuation.
+	
+	4) Conduct the pos tagging and return a list of tuples.
+	
+	Here is a test case:
+	
+	```python
+	>>> import nltk
+	>>> sentence = 'The Force will be with you. Always.'
+	>>> POS_tag(sentence)
+	[('force', 'NN'), ('always', 'RB')]
+	```
+	
+
+## 8. Feedback [3 points]
+
+1. **[1 points]** Approximately how long did you spend on this assignment?
+
+2. **[1 points]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
+
+3. **[1 points]** Which aspects of this assignment did you like? Is there anything you would have changed?

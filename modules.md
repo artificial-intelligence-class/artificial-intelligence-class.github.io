@@ -32,6 +32,7 @@ active_tab: lectures
 {% endfor %}
 </ul>
 
+
 {% endfor %}
 
 
