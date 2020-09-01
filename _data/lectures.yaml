@@ -25,7 +25,7 @@
 -
   date: 2020-09-03
   title: Python Review 
-  slides: 01-Python3-review1.pdf
+  slides_old: 01-Python3-review1.pdf
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4a27eb8a-3607-4c63-b852-a9460066cfe9
   videos:
     -  
@@ -51,7 +51,7 @@
 -
   date: 2020-09-05
   title: Python Review - part 2
-  slides: 02-Python3-review2.pdf
+  slides_old: 02-Python3-review2.pdf
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=80a6b20e-031f-4eea-8778-aab501264837
   videos:
     -  
@@ -71,7 +71,7 @@
   type: exam
 -
   date: 2020-09-10
-  slides: 03-Agents-Search-Problems-and-Uninformed-Search.pdf
+  slides_old: 03-Agents-Search-Problems-and-Uninformed-Search.pdf
   title:  Intelligent Agents, Search Problem Formulation and Uninformed Search
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=15e64ea2-3d3b-4942-9e91-aab501264858
   readings:   
@@ -91,7 +91,7 @@
       length: 6 minutes 
 -
   date: 2020-09-12
-  slides: 04-informed-search.pdf
+  slides_old: 04-informed-search.pdf
   title:  A* Search and Heuristics
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e515335f-4a98-453d-b9bb-aab50126489e
   readings:   
@@ -126,7 +126,7 @@
   type: no_lecture
 -
   date: 2020-09-17
-  slides: 05-CSPs.pdf
+  slides_old: 05-CSPs.pdf
   title:  Constraint Satifaction Problems 
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96eb332f-9391-46f8-af55-aab5012648bf
   readings:   
@@ -145,7 +145,7 @@
   type: exam
 -
   date: 2020-09-19
-  slides: 06-Games-and-Adversarial-Search.pdf
+  slides_old: 06-Games-and-Adversarial-Search.pdf
   title: Games and Adversarial Search
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b3e7f15b-7d1a-4449-bf8d-aab5012648e4
   readings:   
@@ -188,7 +188,7 @@
   type: exam
 -
   date: 2020-09-24
-  slides: 07-Expectimax-and-Utilities.pdf
+  slides_old: 07-Expectimax-and-Utilities.pdf
   title:  Game Trees&colon; Expectimax and Utilities
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=601142a0-302f-4705-8431-aab501264928
   readings:   
@@ -215,7 +215,7 @@
       title: How the "Most Human Human" passed the Turing Test
 -
   date: 2020-09-29
-  slides: 08-MDPs.pdf
+  slides_old: 08-MDPs.pdf
   title:  Markov Decision Processes
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7d673336-f708-41d4-aa8a-aab5012649b0
   readings:   
@@ -241,7 +241,7 @@
   type: no_lecture
 -
   date: 2020-10-06
-  slides: 09-MDPs-wrapup-and-reinforcement-learning.pdf
+  slides_old: 09-MDPs-wrapup-and-reinforcement-learning.pdf
   title: MDPs Wrapup and Reinforcement Learning
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d38a701-365b-4f71-9802-aab501264a1c
   readings:   
@@ -267,7 +267,7 @@
   type: exam
 -
   date: 2020-10-08
-  slides: 10-Reinforcement-Learning-2.pdf
+  slides_old: 10-Reinforcement-Learning-2.pdf
   title:  Reinforcement Learning - part 2
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
   readings:   
@@ -290,7 +290,7 @@
       title: Autonomous Helicopters Teach Themselves to Fly Stunts
 -
   date: 2020-10-10
-  slides: 11-Probabilities.pdf 
+  slides_old: 11-Probabilities.pdf 
   title:  Probabilies
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=02d25e7b-5be9-48de-a513-aa7f0110399a
   readings:   
@@ -309,7 +309,7 @@
   type: no_lecture
 -
   date: 2020-10-15
-  slides: 12-Markov-Models.pdf
+  slides_old: 12-Markov-Models.pdf
   title:  Markov Models 
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f27b7438-ad1f-48a3-a337-aab501264aa5
   readings:  
@@ -332,7 +332,7 @@
   type: exam
 -
   date: 2020-10-17
-  slides: 13-Bayes-Nets.pdf
+  slides_old: 13-Bayes-Nets.pdf
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=06b4ceba-09e6-4abe-a26d-aab501264ac6
   title:  Bayes' Nets
   readings:   
@@ -347,7 +347,7 @@
       title: Probabilistic Graphical Models online course
 -
   date: 2020-10-22
-  slides: 14-BN-wrapup-Naive-Bayes.pdf
+  slides_old: 14-BN-wrapup-Naive-Bayes.pdf
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9428cfd3-a134-4b3a-b2c5-aab501264af0
   title: Bayes' Nets wrap up and Naieve Bayes
   readings:   
@@ -378,7 +378,7 @@
   type: exam 
 -
   date: 2020-10-29
-  slides: 15-Naive-Bayes-and-Perceptron.pdf
+  slides_old: 15-Naive-Bayes-and-Perceptron.pdf
   title:  Machine Learning&colon; Naieve Bayes and Perceptrons
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c019251a-9eb1-4a5d-b55e-aab501264b45
   readings: 
@@ -423,7 +423,7 @@
   type: no_lecture
 -
   date: 2020-11-03
-  slides: 16-Vector-Space-Semantics.pdf
+  slides_old: 16-Vector-Space-Semantics.pdf
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b426d17e-a201-4f2d-bb3a-aab501264b66
   title: NLP (Natural Language Processing)
   readings:
@@ -453,7 +453,7 @@
       length: 16 minutes
 -
   date: 2020-11-05
-  slides: 17-Vector-Space-Semantics-part-2.pdf
+  slides_old: 17-Vector-Space-Semantics-part-2.pdf
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee27afd4-35ee-40e3-832f-aab501264b82
   title: NLP part 2
   readings:
@@ -491,7 +491,7 @@
   type: no_lecture
 -
   date: 2020-11-10
-  slides: 18-Vector-Space-Semantics-part-3.pdf
+  slides_old: 18-Vector-Space-Semantics-part-3.pdf
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aab22f66-9cb4-413b-82bd-aab501264bac
   title: NLP part 3
   readings:
@@ -501,7 +501,7 @@
       url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
 -
   date: 2020-11-12
-  slides: 19-logistic-regression.pdf
+  slides_old: 19-logistic-regression.pdf
   title: Logistic Regression and Stochastic Gradient Descent
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e98aa713-242e-4010-a254-aab501264bcd
   readings:   
@@ -520,7 +520,7 @@
   type: exam
 -
   date: 2020-11-17
-  slides: 20-neural-networks.pdf
+  slides_old: 20-neural-networks.pdf
   title: Neural Networks
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=11e3f835-4d9e-4e34-90f1-aab501264bf7
   readings:
@@ -543,7 +543,7 @@
   type: exam
 -
   date: 2020-11-19
-  slides: 21-neural-networks-2.pdf
+  slides_old: 21-neural-networks-2.pdf
   title: Neural Networks part 2&colon; Neural Language Models
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=69e95d5a-01a0-48ca-9f65-aab501264c22
   readings:
@@ -566,7 +566,7 @@
   type: no_lecture
 -
   date: 2020-11-24
-  slides: 22-neural-networks-3.pdf
+  slides_old: 22-neural-networks-3.pdf
   title: Neural Networks part 3
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c8998341-aad0-48fe-a9e5-aab501264caf
   readings:
@@ -588,17 +588,17 @@
   type: no_lecture
 -
   date: 2020-12-01
-  slides: 
+  slides_old: 
   title: TBD - computer vision? SLAM?
   recording_old: 
 -
   date: 2020-12-03
-  slides: 
+  slides_old: 
   title: TBD - computer vision? SLAM?
   recording_old: 
 -
   date: 2020-12-08
-  slides: 
+  slides_old: 
   title: TBD - computer vision? SLAM?
   recording_old: 
 -
