@@ -23,7 +23,7 @@
     - 
       title: AIMA 4th Edition, Chapter 27 "Philosophical Foundations", Sections 27.1 "The Limits of AI" and 27.2 "Can Machines Really Think?"
       authors: Russell and Norvig
-      optional: true
+      optional: false
   videos:
     -  
       authors: PBS Crash Course in Philosophy
