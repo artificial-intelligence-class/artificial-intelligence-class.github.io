@@ -84,9 +84,9 @@ Office hours
 : Monday 4:30pm-6:30pm Eastern – Eddie
 : Tuesday 3am-5am Eastern / 3pm-5pm China - Hanbang 
 : Tuesday 9am-11am Eastern - Yue
-: Tuesday noon-2pm Eastern - Joe
 : Tuesday 2pm-4pm Eastern- Chenyu
 : Tuesday 4pm-6pm Eastern - Aditya
+: Tuesday 6pm-8pm Eastern - Joe
 : Wednesday 12:30pm-2:30pm Eastern - Daniel
 : Wednesday 2:30pm-4:30pm Eastern - Halley
 : Friday 3pm-5pm Eastern - Lisa
