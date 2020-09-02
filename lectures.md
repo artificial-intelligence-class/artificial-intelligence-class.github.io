@@ -60,17 +60,14 @@ The lecture schedule will be updated as the term progresses.
          <ul>
         {% for part in lecture.parts %}
           <li> {{part.title}} 
-          <a href="assets/slides/{{part.slides }}">[slides]</a> 
-          {% if part.recording %}
-          <a href="{{part.recording }}">[video]</a> 
-          {% endif %} </li>
+          <a href="assets/slides/{{part.slides }}">[slides]</a> </li>
         {% endfor %}
          </ul>
-
         {% if lecture.recording %}
-        <br />
-          Video: <a href="{{ lecture.recording }}">Recording </a>
-        {% endif %}
+          <a href="{{lecture.recording }}">[video]</a> 
+          {% endif %} 
+
+
 
 	    {% if lecture.speaker %}
           {% if lecture.speaker_url %}
