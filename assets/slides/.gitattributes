@@ -1,0 +1,5 @@
+00-AI-In-Philosophy.pptx filter=lfs diff=lfs merge=lfs -text
+00-AI-In-SciFi.pptx filter=lfs diff=lfs merge=lfs -text
+00-Course-Intro-ALL.pptx filter=lfs diff=lfs merge=lfs -text
+00-Course-Policies.pptx filter=lfs diff=lfs merge=lfs -text
+00-R2D2-Assignments.pptx filter=lfs diff=lfs merge=lfs -text
