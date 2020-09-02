@@ -190,7 +190,6 @@ For each of the following questions, write your answers as triply-quoted strings
     [1, 3, 5]
     >>> every_other("abcde")
     'ace'
-    []
     ```
 
     ```python
