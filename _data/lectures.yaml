@@ -1,20 +1,23 @@
 -
   date: 2020-09-01
   title: Introduction / AI in Science Fiction and Philosophy 
-  slides: 
+  parts: 
     -
       title: Course Policies 
-      link: 00-Course-Policies.pdf
+      slides: 00-Course-Policies.pdf
+      recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db1b8d98-37a1-4a42-a553-ac29010858cc&start=0.6569999999999999
     -
       title: Artificial Intelligence in Philosophy 
-      link: 00-AI-In-Philosophy.pdf
+      slides: 00-AI-In-Philosophy.pdf
+      recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db1b8d98-37a1-4a42-a553-ac29010858cc&start=1456.9689999999998
     -
       title: Artificial Intelligence in Science Fiction 
-      link: 00-AI-In-SciFi.pdf
+      slides: 00-AI-In-SciFi.pdf
+      recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db1b8d98-37a1-4a42-a553-ac29010858cc&start=2917.999
     -
       title: R2D2 Assignments
-      link: 00-R2D2-Assignments.pdf
-  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db1b8d98-37a1-4a42-a553-ac29010858cc
+      slides: 00-R2D2-Assignments.pdf
+      recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db1b8d98-37a1-4a42-a553-ac29010858cc&start=4326.87
   readings:   
     - 
       title: AIMA Chapter 1 "Introduction"

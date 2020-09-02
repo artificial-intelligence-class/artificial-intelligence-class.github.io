@@ -57,14 +57,15 @@ The lecture schedule will be updated as the term progresses.
       <td width="30%">
          {{ lecture.title }} 
 
-        {% if lecture.slides %}
-        Slides:
-        {% endif %}
-
-        {% for slides in lecture.slides %}
-          <a href="assets/slides/{{slides.link }}">{{slides.title}}</a>, 
+         <ul>
+        {% for part in lecture.parts %}
+          <li> {{part.title}} 
+          <a href="assets/slides/{{part.slides }}">[slides]</a> 
+          {% if part.recording %}
+          <a href="assets/slides/{{part.recording }}">[video]</a> 
+          {% endif %} </li>
         {% endfor %}
-
+         </ul>
 
         {% if lecture.recording %}
         <br />
