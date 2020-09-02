@@ -17,11 +17,11 @@
   recording: https://upenn.zoom.us/rec/play/ucEuJen-rT83GNWW4QSDA6V-W9W1evms1HVP_PoMyx60VyIFZFWiYrQTNqAgq-7Fpkv1EvaMsJSeiQ
   readings:   
     - 
-      title: AIMA Chapter 1 "Introduction"
+      title: AIMA 4th Edition, Chapter 1 "Introduction", Section 1.1 "What is AI"
       authors: Russell and Norvig
       optional: false
     - 
-      title: AIMA Chapter 26 "Philosophical Foundations"
+      title: AIMA 4th Edition, Chapter 27 "Philosophical Foundations", Sections 27.1 "The Limits of AI" and 27.2 "Can Machines Really Think?"
       authors: Russell and Norvig
       optional: true
   videos:
@@ -403,6 +403,10 @@
       authors: Michael Nielsen
       url: http://neuralnetworksanddeeplearning.com/chap1.html
       optional: true  
+    - 
+      title: Tinker With a Neural Network in Your Browser
+      url: http://playground.tensorflow.org/
+      optional: true
     - 
       title: Electronic 'Brain' Teaches Itself
       authors: New York Times (July 13, 1958)
