@@ -8,7 +8,9 @@ active_tab: main_page
 
 
 <div class="alert alert-danger" markdown="1">
-To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php).  After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  If you have a question about the waitlist system you can email Lee Dukes ldukes@seas.upenn.edu.
+To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php).  After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  If you have a question about the waitlist system you can email Lee Dukes ldukes@seas.upenn.edu.  
+
+In order to be considered for a permit for the course, you must complete the first assignment by its due date.
 </div>
 
 <!-- Display an alert about upcoming homework assignments -->
