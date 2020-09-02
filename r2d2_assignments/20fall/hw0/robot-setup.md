@@ -36,11 +36,24 @@ Before beginning, you'll need these materials:
 
 These instructions will walk you through how to install the software on your Raspberry Pi Sensor Pack so that you can control your R2D2 with our Python API.
 
-### 0. Charging your R2D2 and your Sensor Pack
+### Charge your R2D2 and your Sensor Pack
+
+To charge your R2D2, you should plug a micro USB cable into its charging port, which is on the back of the robot in the bottom lefthand corner.  If the sensor pack has already been glued onto your robot, then you'll find the robot's charging port just below the batter on its lefhand side.	You can plug the other end of the USB cable into a phone charger or your computer.
+
+<img src="images/setup/R2D2-charging-port.jpg" alt="Location of the charging port on the Sphero R2D2" class="img-responsive" width="75%" halign="center"/>
+
+To charge your sensor pack, plug a micro USB cable into its charging port.  There are three micro USB ports on the Raspberry Pi sensor pack – two on the front and one on the bac. Only the one on the back will charge the battery.   There are a set of blue LED lights on the sensor pack located just behind the camera ribbon.  These blue lights indicate the charge level of the battery. 
+
+<img src="images/setup/raspberry-pi-charger.jpg" alt="Location of the charging port on the sensor pack" class="img-responsive" width="50%" />
 
 
 
-### 1. Installing Software on the Raspberry Pi
+### Update your R2D2's Firmware
+
+If you purchased a R2D2 yourself, rather than borrowing one from us, you may need to update its firmware.  To do this, you should install the Star Wars Droids App by Sphero on your smartphone.  The first time you run it, it will update your R2D2's firmware to the latest version. 
+
+### Install Software on the Raspberry Pi
+
 The sensor pack uses the [Raspberry Pi Zero](https://en.wikipedia.org/wiki/Raspberry_Pi#Pi_Zero).  The Raspberry Pi Zero uses a [micro SD card](https://en.wikipedia.org/wiki/SD_card#Micro) as its storage space.  We will install an operating system for the Raspberry Pi Zero, along with all of the software that we'll need to control the robot, by writing a disk image file to your micro SD card. 
 
 Here is how to put an image file on your Micro SD card:
@@ -48,7 +61,7 @@ Here is how to put an image file on your Micro SD card:
 * Download the [image file](https://drive.google.com/file/d/1XCulQIJeKBYETBc-63kWurN-2qw5MeHO/view?usp=sharing) from our Google drive.
 * Flash the image onto the SD card.  We recommend using [balenaEtcher](https://www.balena.io/etcher/) which is  free software that is available for all platforms.
 
-### 2. Connect the Raspberry Pi to Wi-Fi
+### Connect the Raspberry Pi to Wi-Fi
 
 After the SD card is flashed, you need to set up access to your Wi-Fi network. Download this [configuration file](wpa_supplicant.conf).  Make sure you don't rename the file – it needs to be `wpa_supplicant.conf` in order for the Raspberry Pi's operating system to find it.  The file contents contain the following details:
 
@@ -75,7 +88,7 @@ For students who don't have a private Wi-Fi network, you can use a Wi-Fi Hotspot
 For students that don't have a SD card reader and wants to start immediately, you can try out the more advanced method to temporarily connect to your Rapberry Pi via USB serial. Simply plug a micro USB cable from the USB OTG port on the Rapberry Pi to your computer, and there should be a new serial TTY/COM device pops up. Connect using PuTTY on Windows or `screen` command line tool on Linux/MacOS. You can look for more information online.
 -->
 
-### 3. SSH into Raspberry Pi
+### SSH into the Raspberry Pi
 
 If your Raspberry Pi successfully connected to your Wi-Fi network, then we can remotely access the Raspberry Pi from your computer using Secure Shell (SSH).
 
