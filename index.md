@@ -65,7 +65,7 @@ Extra Credit Bounty Items:
 
 
 Course number
-: CIS 421/521 - Artificial Intelligence 
+: CIS 421/521 - Artificial Intelligence
 
 Instructor
 : [Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/)
