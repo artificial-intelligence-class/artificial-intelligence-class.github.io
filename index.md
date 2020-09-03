@@ -115,7 +115,7 @@ Grading
 : The course is not curved.  Your overall score is computed as _0.3 * exam score + 0.7 * homework score_.  All homeworks are equally weighted. Here is  how letter grades are assigned based on your overall score:
 : | Score	| Grade   |
 |-------|---------| 
-|$$>$$97 | A+| 
+|$$>$$ 97 | A+| 
 | 93-97	| A| 
 | 90-93	| A-| 
 | 87-90	| B+| 
