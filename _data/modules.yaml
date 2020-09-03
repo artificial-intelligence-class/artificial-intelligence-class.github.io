@@ -10,17 +10,15 @@
     - Science Fiction and Science Fact
   lessons:
     - 
-      title: Course overview
+      title: Course Policies
       topics:
-        - Course instructor
-        - What this course will cover
-        - Can you get a permit?
-        - R2D2 extra credit assignments
+        - Course staff
+        
       readings:
         - 
           title: Course website
           link: http://artificial-intelligence-class.org
-      slides: xxx
+      slides: 00-Course-Policies.pdf
       video: video-url
     - 
       title: Philosophy and AI
