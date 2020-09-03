@@ -38,7 +38,6 @@ The lecture schedule will be updated as the term progresses.
       {% assign anchor_created = true %}
       id="now" 
     {% endif %}
-    
     {% if lecture.type %}
       {% if lecture.type and lecture.type == 'exam' %}
         class="info" 
@@ -51,22 +50,27 @@ The lecture schedule will be updated as the term progresses.
       {% endif %}
     {% endif %}
     >
-
     <!-- End create a HTML anchor for the most recent lecture -->
       <td width="14%">{{ lecture.date | date: '%a, %b %-d, %Y' }}</td>
       <td width="30%">
          {{ lecture.title }} 
 
+        {% if lecture.parts %}
          <ul>
         {% for part in lecture.parts %}
           <li> {{part.title}} 
           <a href="assets/slides/{{part.slides }}">[slides]</a> </li>
         {% endfor %}
          </ul>
+		{% else %}
+         {% if lecture.slides %}
+         <a href="assets/slides/{{lecture.slides }}">[slides]</a> 
+         {% endif %}
+        {% endif %}
+
         {% if lecture.recording %}
           <a href="{{lecture.recording }}">[video]</a> 
-          {% endif %} 
-
+          {% endif %}
 
 
 	    {% if lecture.speaker %}
