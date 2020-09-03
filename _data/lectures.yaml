@@ -36,8 +36,8 @@
   type: exam
 -
   date: 2020-09-03
-  title: Python Review 
-  slides_old: 01-Python3-review1.pdf
+  title: Python Review - part 1
+  slides: 01-Python-review.pdf
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4a27eb8a-3607-4c63-b852-a9460066cfe9
   videos:
     -  
