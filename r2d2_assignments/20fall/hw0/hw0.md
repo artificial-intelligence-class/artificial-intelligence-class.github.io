@@ -7,6 +7,19 @@ title: CIS 521 Robot Excercise 0 "Using Python to Control R2D2" (Extra Credit)
 active_tab: homework
 release_date: 2020-09-08
 due_date: 2020-09-30 23:59:00EDT
+supplies:
+    - 
+      name: Sphero R2D2
+      url: https://www.amazon.com/Sphero-R201ROW-R2-D2-App-Enabled-Droid/dp/B071KSR86B
+    - 
+      name: Micro SD card (16GB is enough)
+      url: https://www.amazon.com/s?k=micro+sd+card&i=electronics&crid=2MH0X8C5G9YJF&sprefix=micro+%2Celectronics%2C136&ref=nb_sb_ss_i_1_6
+    - 
+      name: Micro SD card reader
+      url: https://www.amazon.com/s?k=micro+sd+card+reader&i=electronics&crid=2QODV9HKIHZA1&sprefix=micro+sd+card+re%2Celectronics%2C152&ref=nb_sb_ss_i_1_16
+    - 
+      name: Raspberry Pi Sensor Pack (provided)
+      url: 
 materials:
     - 
       name: skeleton file
@@ -43,6 +56,19 @@ Warning: this assignment is out of date.  It may still need to be updated for th
 This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
 </div>
 
+{% if page.supplies %}
+<div class="alert alert-info">
+Before beginning, you'll need these supplies:
+<ul>
+{% for item in page.supplies %}
+<li><a href="{{item.url}}">{{ item.name }}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+
+
 {% if page.materials %}
 <div class="alert alert-info">
 You can download the materials for this assignment here:
@@ -57,7 +83,27 @@ You can download the materials for this assignment here:
 # Robot Exercise 0: Use Python to Control R2D2
 
 ## Part 1: Setup Instructions
-First make sure your Python version is greater than or equal to 3.7. Then install the Python library written for Sphero robots [spherov2.py](https://github.com/artificial-intelligence-class/spherov2.py):
+
+These instructions will walk you through how to install the software computer so that you can control your R2D2 with our Python API.
+
+### Charge your R2D2 
+
+To turn on your R2D2, you should plug a micro USB cable into its charging port, which is on the back of the robot in the bottom lefthand corner.  If the sensor pack has already been glued onto your robot, then you'll find the robot's charging port just below the batter on its lefhand side. You can plug the other end of the USB cable into a phone charger or your computer.  The indicator light will turn green when the battery is fully charged.
+When you're ready to use your robot, you should unplug it.
+
+<center>
+<img src="images/setup/R2D2-charging-port.jpg" alt="Location of the charging port on the Sphero R2D2" class="img-responsive" width="100%" />
+</center>
+
+
+### Update your R2D2's Firmware
+
+If you purchased an R2D2 yourself, rather than borrowing one from us, you may need to update its firmware.  To do this, you should install the Star Wars Droids App by Sphero on your smartphone.  The first time you run it, it will update your R2D2's firmware to the latest version. 
+
+### Install the Python API on your Computer
+
+First make sure your Python version is greater than or equal to 3.7. 
+Then install the Python library written for Sphero robots [spherov2.py](https://github.com/artificial-intelligence-class/spherov2.py):
 
 ```shell
 pip3 install spherov2
@@ -82,32 +128,8 @@ with SpheroEduAPI(toy) as droid:
 ```
 The robot should roll forward with speed 100 for 3 seconds. The `scanner` will find the Bluetooth address of the R2D2/R2Q5. You can also find toys using specific filters such as the ID tag on the back of the droids.
 
-`SpheroEduAPI` is a high level API used in sending commands to the droid. Please refer to the [document](https://spherov2.readthedocs.io/en/latest/sphero_edu.html) for more information.
+`SpheroEduAPI` is a high level API used in sending commands to the droid. Please refer to [this documentation](https://spherov2.readthedocs.io/en/latest/sphero_edu.html) for more information.
 
-### Using other machines (Raspberry Pi) to control the robot
-For devices that do not have Bluetooth, you can use another device (for example, the Raspberry Pi that comes with the robot) as a backup option to connect to the robot. The machine acts as a relay server between the robot and the client that runs the actual code.
-
-To use this method, you may need some basic `ssh` knowledge, here is a [**guide**](ssh_bash_skills.md) on how to connect to the Raspberry pi.
-
-You will need to `pip3 install bleak` on the target machine first. We have already done this for you on the RPi.
-
-To start the server on the target server machine, run:
-
-```shell
-sudo -E python3 -m spherov2.adapter.tcp_server
-```
-
-After you have successfully launched the server, go to the python IDE and add an extra TCP adapter to the previous code:
-
-```python
-from spherov2 import scanner
-from spherov2.sphero_edu import SpheroEduAPI
-from spherov2.adapter.tcp_adapter import get_tcp_adapter
-
-toy = scanner.find_toy(adapter=get_tcp_adapter('xxx.xxx.x.xxx')) # The IP Address of the server machine
-with SpheroEduAPI(toy) as api:
-    api.roll(0, 100, 3)
-```
 
 ## Part 2: Let's get rolling (Practice Python Skills via R2D2) [25 points]
 Now it's your turn to practice! We have provided some functions for you to implement, which will also enhance your python skills. Download the skeleton file for this section [here](r2d2_hw0.py). Please refer to this [document](https://spherov2.readthedocs.io/en/latest/sphero_edu.html) for more details of the R2-D2's API.
@@ -194,124 +216,10 @@ def play_message(droid, message, dot_duration, dash_duration, time_between_blips
 ```
 Hint: To set holo-projector on/off, do `droid.set_holo_projector_led(255)`, and `droid.set_holo_projector_led(0)`.
 
-## Part 3: Sensor Systems
-### 1. Mechanical Design
-To let R2-D2 better train us to become a master in AI, we made a great upgrade to the droid which includes 3D printed armor and a strong sensor system. The diagrams shown below demonstrate the mechanical structure of the reinforced R2-D2. We add an ultrasonic sensor for detecting the obstacles ahead, an IR obstacle sensor to detect a cliff, and a camera on its head to perceive the world.
-<center>
-<img src="images/mechanical.png" class="img-responsive"/>
-</center>
 
-* **3D Print Mount**: It contains three parts, front mount, back mount and top hat. The front mount is connected to the R2-D2 using magnets which means you could easily remove it when necessary. The back mount and top hat are attached to the R2-D2 by glue. There is an [AprilTag](https://roboticsknowledgebase.com/wiki/sensing/apriltags/) stuck to the hat for position tracking.
-* **Raspberry Pi**: The Raspberry Pi is connected to the front mount via magnets and it is powered by the LiPo battery.
-* **Power Management Board**: This board is closely attached to the Raspberry Pi with screws to control the power from the LiPo battery and prevent damage caused by a short circuit.
-* **LiPo Battery**: The LiPo battery is equipped on the back mount using magnets. There also exists a tiny AprilTag for position tracking.
-* **Ultrasonic Sensor**: The ultrasonic sensor uses sound waves to measure the distance to obstacles, here is an [introduction](https://www.maxbotix.com/articles/how-ultrasonic-sensors-work.htm) on how it works. In our design, the ultrasonic sensor is mounted on the front armor with glue to detect the obstacles in front of the R2-D2.
-* **IR Obstacle Sensor**: Instead of utilizing sound waves, the Infrared Transmitter (IR) obstacle sensor uses light radiation to perceive the obstacles. Please refer [here](https://www.electronicshub.org/ir-sensor/) for details. The IR sensor is linked to the front mount using screws and points to the ground to detect cliffs.
-* **Camera**: The camera is mounted on the hat with screws which can be easily dismounted. The camera has a high resolution of 1080p/30fps. A detailed description of the camera specs can be found [here](https://www.amazon.com/Camera-Module-Raspberry-Webcam-Megapixel/dp/B07QNSJ32M/ref=pd_lpo_147_img_2/131-5121704-3399433?_encoding=UTF8&pd_rd_i=B07QNSJ32M&pd_rd_r=db2bf780-0d92-4bb7-baac-a6c85ef80149&pd_rd_w=jpCCk&pd_rd_wg=66dxv&pf_rd_p=7b36d496-f366-4631-94d3-61b87b52511b&pf_rd_r=CM3XAE7MQVH2XWJ8T55C&refRID=CM3XAE7MQVH2XWJ8T55C&th=1).
-* **How to turn it on?**: There is a small button on the power management board. Press it once to start the system and double click to shut down the system.
-* **How to charge?**: To charge the R2-D2, there is a micro-USB port on the lower left corner at the rear of R2-D2. To charge the Raspberry Pi, there are three micro-USB ports, two on the Raspberry Pi and one on the power management board. You should charge the battery via the one on the power management board.
+## Part 3: Using the Sensor Pack
 
-### 2. Circuit Design and Control Logic
-The figure below shows the circuit diagram of the sensor system. If you unplug any of these wires by mistake, you could easily fix them by following this diagram. The control logic is also demonstrated below for you to understand how the system works.
-
-<table><tr>
-<td> <img src="images/diagram.jpg" alt="Drawing" style="width: 300px;" /> </td>
-<td> <img src="images/architecture.jpg" alt="Drawing" style="width: 500px;"/> </td>
-</tr>
-<tr>
-<td style="text-align:center">Circuit Diagram</td>
-<td style="text-align:center">Control Logic</td>
-</tr>
-</table>
-
-#### Circuit
-Here are some descriptions of the circuit diagram, refer [here](https://raspberrypi.stackexchange.com/questions/83610/gpio-pinout-orientation-raspberypi-zero-w) for the PIN layout of Raspberry Pi zero.
-
-* **Ultrasonic Sensor** : Vcc - PIN 2, Gnd - perfboard - PIN6, Trig - PIN7 (GPIO 4), ECHO - perfboard - PIN 11 (GPIO 17).
-* **IR Obstacle Sensor** : Vcc - PIN 4, Gnd - PIN 39, Out - PIN 40 (GPIO 21)
-
-#### Control Logic
-
-* **Raspberry Pi**: Handles signals sent from the camera and the sensors, and sends them to the PC when requested. The RPi could also work as the server to send commands to the R2-D2 if your PC does not have a Bluetooth adapter.
-* **PC**: Your PC could generate target commands to the R2-D2 based on the sensor data sent from Raspberry Pi.
-* **R2-D2 & Sensors**: Joined by the 3D print mount as the terminal equipment to show the functions. 
-
-### 3. Receive the Sensor Data
-
-Before starting this section, make sure to have successfully SSHed into the Raspberry Pi unit on the R2D2 following this [`document`](ssh_bash_skills.md). Once you've successfully SSHed into the R2D2s RPi unit, run the `ls` command. It should show you two files; `camera_server.py` and `sensor_server.py`.
-
-
-Download [`rpi_sensor.py`](rpi_sensor.py) to your computer, which contains some utility functions required to receive the sensor data.
-
-#### Camera
-
-**On the RPI's shell terminal:**
-
-Run the following code to start the video server.
-
-```shell
-python3 camera_server.py
-```
-You should see the message `Waiting for a TCP connection on x.x.x.x:65433...`.
-
-**On your computer's shell terminal:**
-
-Install [OpenCV](https://github.com/skvark/opencv-python) on your computer using the following command:
-
-```shell
-pip3 install opencv-python
-```
-
-Then use the given function in `rpi_sensor.py` to create and run a python script as follows:
-
-```python
-from rpi_sensor import RPiCamera
-import cv2
-
-if __name__ == '__main__':
-    with RPiCamera('tcp://IP_ADDRESS:65433') as camera: # Replace IP_ADDRESS with the IP address of your Raspberry Pi
-        while True:
-            cv2.imshow('frame', camera.get_frame())
-            key = cv2.waitKey(1)
-            if key == ord('q'):
-                cv2.destroyAllWindows()
-                break
-```
-
-If every thing goes well, you will be able to see a real time video streaming window pop on your screen.
-
-**Note:** It should be noticed that you have to start the server before running the client code.
-
-#### Sensors
-
-In addition to the built-in sensors [API](https://spherov2.readthedocs.io/en/latest/sphero_edu.html#sensors), we provide a server to obtain data from the ultrasonic sensor and cliff detection sensor. To start the sensor server, run the following command on the Raspberry Pi shell terminal:
-
-```shell
-python3 sensor_server.py
-```
-
-We provide an `RPiSensor` class in `rpi_sensor.py`. You could connect to the sensor server with the following code:
-
-```python
-from rpi_sensor import SensorClient
-
-with RPiSensor('IP_ADDRESS') as sensor: # IP address of Raspberry Pi
-    print(sensor.get_obstacle_distance())  # Distance to the obstacle in terms of centimeters
-    print(sensor.get_cliff())  # 0 - no cliff, 1 - detected cliff
-```
-
-To fetch the ultrasonic sensor data, use the method `.get_obstacle_distance()`. Similarly, use `.get_cliff()` for cliff detection.
-
-### Combine R2D2 with the Camera & Sensors (Surveillance Mode) [25 points]
-
-Now it's your turn to complete the second part of the script, in which you are required to combine the `drive_with_keyboard()` function with the sensor/camera system. Inspired by the head-up display (HUD) system of jet fighter, we could display the sensor information on the video streaming window shown below.
-
-<p float="left">
-  <img src="images/HUD.jpg" width="50%" />
-  <img src="images/R2D2_HUD.gif" width="49%" /> 
-</p>
-
-
+If you've got the sensor pack, you can [continue on to set it up and get data from the sensors.](sensor-pack-setup.html) 
 **Requirements**
 
 1. Modify the `drive_with_keyboard()` function in the last section and add new commands `tab` and `return` to rotate R2-D2's head by `dome_delta` and `space` to switch between tripod and bipod modes.
