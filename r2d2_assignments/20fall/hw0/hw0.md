@@ -9,17 +9,11 @@ release_date: 2020-09-08
 due_date: 2020-09-30 23:59:00EDT
 supplies:
     - 
-      name: Sphero R2D2
-      url: https://www.amazon.com/Sphero-R201ROW-R2-D2-App-Enabled-Droid/dp/B071KSR86B
+      name: Sphero R2D2 (purchase on Amazon)
+      url: https://www.amazon.com/Sphero-R201ROW-R2-D2-App-Enabled-Droid/dp/B071KSR86B 
     - 
-      name: Micro SD card (16GB is enough)
-      url: https://www.amazon.com/s?k=micro+sd+card&i=electronics&crid=2MH0X8C5G9YJF&sprefix=micro+%2Celectronics%2C136&ref=nb_sb_ss_i_1_6
-    - 
-      name: Micro SD card reader
-      url: https://www.amazon.com/s?k=micro+sd+card+reader&i=electronics&crid=2QODV9HKIHZA1&sprefix=micro+sd+card+re%2Celectronics%2C152&ref=nb_sb_ss_i_1_16
-    - 
-      name: Raspberry Pi Sensor Pack (provided)
-      url: 
+      name: Sphero R2D2 (purchase on Walmart.com)
+      url: https://www.walmart.com/ip/Sphero-R2-D2-App-Enabled-Droid/56081736
 materials:
     - 
       name: skeleton file
