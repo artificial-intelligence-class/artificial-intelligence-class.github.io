@@ -56,7 +56,7 @@ Here is how to put the disk image file on your Micro SD card:
 
 ### Connect the Raspberry Pi to Wi-Fi
 
-After the SD card is flashed, you need to set up access to your Wi-Fi network. Download this [configuration file](wpa_supplicant.conf).  Make sure you don't rename the file – it needs to be `wpa_supplicant.conf` in order for the Raspberry Pi's operating system to find it.  The file contents contain the following details:
+After the SD card is flashed, you need to set up access to your Wi-Fi network. Please make sure the frequency of your WI-FI is **2.4G Hz** not 5G Hz. Then, download this [configuration file](wpa_supplicant.conf).  Make sure you don't rename the file – it needs to be `wpa_supplicant.conf` in order for the Raspberry Pi's operating system to find it.  The file contents contain the following details:
 
 ```shell
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
