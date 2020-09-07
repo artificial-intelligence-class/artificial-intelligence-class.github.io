@@ -163,7 +163,7 @@ Python dictionaries are hash tables that let us store key-value pairs. Let's use
   <img src="images/rgb_fade.gif" width="55%" /> 
 </p>
 
-* We provide such a dictionary in the skeleton code. Your task is to implement the function `set_lights(color, which_light='both')` which uses the API `set_main_led()` and `set_back_led()` to change the lights of the R2D2 according to the input color. 
+* We provide such a dictionary in the skeleton code. Your task is to implement the function `set_lights(color, which_light='both')` which uses the API `set_front_led()` and `set_back_led()` to change the lights of the R2D2 according to the input color. 
 
 * It should be noted that the `color` argument could either be the color name or the hexadecimal color which means you have to write a helper function `hex2rgb()` to convert HEX to RGB. 
 
