@@ -281,7 +281,7 @@ import cv2
 if __name__ == '__main__':
     with RPiCamera('tcp://IP_ADDRESS:65433') as camera: # Replace IP_ADDRESS with the IP address of your Raspberry Pi
         while True:
-            cv2.imshow('frame', camera.get_frame())
+            cv2.imshow('R2D2 camera', camera.get_frame())
             key = cv2.waitKey(1)
             if key == ord('q'):
                 cv2.destroyAllWindows()
@@ -290,7 +290,7 @@ if __name__ == '__main__':
 
 If every thing goes well, you will be able to see a real time video streaming window pop on your screen.
 
-**Note:** It should be noticed that you have to start the server before running the client code.
+**Note:** Remember that you have to start the camera server on your Raspberry Pi before running the client code.
 
 #### Sensors
 
