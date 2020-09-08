@@ -86,6 +86,7 @@ Office hours
 : Monday 4:30pm-6:30pm Eastern – Eddie
 : Tuesday 3am-5am Eastern / 3pm-5pm China - Hanbang 
 : Tuesday 9am-11am Eastern - Yue
+: Tuesday 10am-12pm Eastern - Bharath
 : Tuesday 2pm-4pm Eastern- Chenyu
 : Tuesday 4pm-6pm Eastern - Aditya
 : Tuesday 6pm-8pm Eastern - Joe
