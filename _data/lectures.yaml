@@ -156,10 +156,7 @@
       url: https://www.youtube.com/watch?v=AcDVVnyRk8Y
       title: David Waltz - Constraint Propagation
       length: 2.5 minutes (no sound)
--
-  date: 2020-09-17
-  title:  HW2 due (Uninformed Search), HW3 released (Informed Search) 
-  type: exam
+
 -
   date: 2020-09-19
   slides_old: 06-Games-and-Adversarial-Search.pdf
@@ -194,11 +191,13 @@
       authors: Pieter Abbeel 
       url: https://www.youtube.com/watch?v=jvpWtwVSvjA
       title: Step-by-step Example&colon; Alpha-Beta
-      length: 14 minutes 
+      length: 14 minutes
+
 -
-  date: 2020-09-24
-  title:  HW3 due (Informed Search), HW4 released (Sudoku and Games) 
+  date: 2020-09-22
+  title:  HW2 due (Uninformed Search), HW3 released (Informed Search) 
   type: exam
+  
 -
   date: 2020-09-24
   title:  Practice Exam released on Gradescope
@@ -230,6 +229,11 @@
       authors: Machines with Brains 
       url: https://www.youtube.com/watch?v=lFIW8KphZo0
       title: How the "Most Human Human" passed the Turing Test
+-
+  date: 2020-09-29
+  title:  HW3 due (Informed Search), HW4 released (Sudoku and Games) 
+  type: exam
+  
 -
   date: 2020-09-29
   slides_old: 08-MDPs.pdf
