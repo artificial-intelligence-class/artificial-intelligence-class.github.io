@@ -90,15 +90,11 @@
 -
   date: 2020-09-10
   slides: 02-Rational-Agents.pdf
-  title:  Ratiional Agents, Search Problem Formulation and Uninformed Search
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=15e64ea2-3d3b-4942-9e91-aab501264858
+  title:  Rational Agents
+  recording: https://upenn.zoom.us/rec/share/i0JyWZycFIT79IHJzBkYCBHhlQ_aVspGpsccT-9lqN_iZsraE0-1fkH3kD8LWCUN.-EMQlPJqum-7Gm_s
   readings:   
     - 
       title: AIMA Chapter 2 "Intelligent Agents" (2.1-2.4)
-      authors: Russell and Norvig
-      optional: false
-    - 
-      title: AIMA Chapter 3 "Solving Problems by Search" (3.1-3.4)
       authors: Russell and Norvig
       optional: false
     - 
@@ -113,11 +109,33 @@
       title: Shakey the Robot&colon; The First Robot to Embody Artificial Intelligence
       length: 6 minutes 
 -
-  date: 2020-09-12
+  date: 2020-09-15
+  title: Course Selection Period Ends
+  type: no_lecture
+-
+  date: 2020-09-15
+  slides_old: 03-search-problems.pdf
+  title:  Search Problems and Uninformed Search
+  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e515335f-4a98-453d-b9bb-aab50126489e
+  readings:   
+    - 
+      title: AIMA Chapter 3 "Solving Problems by Search" (3.1-3.4)
+      authors: Russell and Norvig
+      optional: false
+-
+  date: 2020-09-15
+  title: Course Selection Period Ends
+  type: no_lecture
+-
+  date: 2020-09-17
   slides_old: 04-informed-search.pdf
   title:  A* Search and Heuristics
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e515335f-4a98-453d-b9bb-aab50126489e
   readings:   
+    - 
+      title: AIMA Chapter 3 "Solving Problems by Search" (3.1-3.4)
+      authors: Russell and Norvig
+      optional: false
     - 
       title: AIMA Chapter 3 "Solving Problems by Search"  (3.5-3.6)
       authors: Russell and Norvig
@@ -144,11 +162,7 @@
       title: Animation of BFS Algorithm set to music
       length: 1.5 minutes 
 -
-  date: 2020-09-15
-  title: Course Selection Period Ends
-  type: no_lecture
--
-  date: 2020-09-17
+  date: 2020-09-19
   slides_old: 05-CSPs.pdf
   title:  Constraint Satifaction Problems 
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96eb332f-9391-46f8-af55-aab5012648bf
