@@ -111,10 +111,10 @@ A brief treatment of this problem for the case where $n = 8$ is given in *Sectio
 3. **[15 points]** Write a function `n_queens_solutions(n)` that returns a list of all valid placements of $n$ queens on an $n \times n$ board, using the representation discussed above. The output may be in any order you see fit. Your solution should be implemented as a depth-first search, where queens are successively placed in empty rows until all rows have been filled. You may find it helpful to define a helper function `n_queens_helper(n, board)` that yields all valid placements which extend the partial solution denoted by `board`.
 
     ```python
-    >>> list(n_queens_solutions(6))
+    >>> n_queens_solutions(6)
     [[1, 3, 5, 0, 2, 4], [2, 5, 1, 4, 0, 3],
      [3, 0, 4, 1, 5, 2], [4, 2, 0, 5, 3, 1]]
-    >>> len(list(n_queens_solutions(8)))
+    >>> len(n_queens_solutions(8))
     92
     ```
 
