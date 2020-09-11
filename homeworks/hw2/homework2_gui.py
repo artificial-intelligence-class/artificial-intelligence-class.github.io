@@ -299,10 +299,12 @@ class GUI(tk.Tk):
         self.minsize(300, 200)
         self.resizable(height=False, width=False)
         self.__menu = tk.Menu(self)
+        second_menu = tk.Menu(self.__menu)
+        second_menu.add_command(label='N-Queens', command=self.n_queens)
+        second_menu.add_command(label='Lights Out', command=self.lights_out)
+        second_menu.add_command(label='Linear Disks', command=self.linear_disks)
+        self.__menu.add_cascade(label='New', menu=second_menu)
         self.config(menu=self.__menu)
-        self.__menu.add_command(label='N-Queens', command=self.n_queens)
-        self.__menu.add_command(label='Lights Out', command=self.lights_out)
-        self.__menu.add_command(label='Linear Disks', command=self.linear_disks)
         self.__cur = None
 
     def draw_rect(self, i, j, size, color):
