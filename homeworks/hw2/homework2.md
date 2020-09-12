@@ -85,9 +85,9 @@ A brief treatment of this problem for the case where $n = 8$ is given in *Sectio
 
 1. **[5 points]** Rather than performing a search over all possible placements of queens on the board, it is sufficient to consider only those configurations for which each row contains exactly one queen. 
    
-   Therefore, without taking any of the chess-specific constraints between queens into account, we want to first consider the number of possible placements of $n$ queens on an $n \times n$ board without or with the restriction that each row contains exactly one queen. 
+   Therefore, **without taking any of the chess-specific constraints between queens into account**, we want to first consider the number of possible placements of $n$ queens on an $n \times n$ board without or with the restriction that each row contains exactly one queen. 
    
-   Implement the function `num_placements_all(n)`, which returns the number of **all** possible placements of $n$ queens on an $n \times n$ board, and the function `num_placements_one_per_row(n)` that  calculate the number of possible placements of $n$ queens on an $n \times n$ board such that each row contains exactly one queen.
+   Implement the function `num_placements_all(n)`, which returns the number of **all** possible placements of $n$ queens on an $n \times n$ board, and the function `num_placements_one_per_row(n)` that  calculates the number of possible placements of $n$ queens on an $n \times n$ board such that each row contains exactly one queen.
    
    Think carefully about why this restriction is valid, and note the extent to which it reduces the size of the search space. You should assume that all queens are indistinguishable for the purposes of your calculations.
    
@@ -122,7 +122,7 @@ A brief treatment of this problem for the case where $n = 8$ is given in *Sectio
 
 The Lights Out puzzle consists of an $m \times n$ grid of lights, each of which has two states: on and off. The goal of the puzzle is to turn all the lights off, with the caveat that whenever a light is toggled, its neighbors above, below, to the left, and to the right will be toggled as well. If a light along the edge of the board is toggled, then fewer than four other lights will be affected, as the missing neighbors will be ignored.
 
-In this section, you will investigate the behavior of Lights Out puzzles of various sizes by implementing a `LightsOutPuzzle` class. Once you have completed the problems in this section, you can test your code in an interactive setting using the provided GUI. See the end of the section for more details.
+In this section, you will investigate the behavior of Lights Out puzzles of various sizes by implementing a `LightsOutPuzzle` class. Once you have completed the problems in this section, you can test your code in an interactive setting using the provided GUI. See the last section for more details.
 
 1. **[2 points]** A natural representation for this puzzle is a two-dimensional list of Boolean values, where `True` corresponds to the on state and `False` corresponds to the off state. In the `LightsOutPuzzle` class, write an initialization method `__init__(self, board)` that stores an input board of this form for future use. Also write a method `get_board(self)` that returns this internal representation. You additionally may wish to store the dimensions of the board as separate internal variables, though this is not required.
    
@@ -313,3 +313,10 @@ The starting configuration of this puzzle is a row of $\ell$ cells, with disks l
 2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
 3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
+
+
+## 5. Using the GUI to test out your implementations:
+
+Once you've filled in the functions for any of the problems (`N-Queens`,`Lights Out` & `Linear Disk Movement`), you can test out your implementation using the [`homework2_gui.py`](homework2_gui.py) file provided. Simply run the script using `python homework2_gui.py`.  Once you run this command, Mac users should see a window pop up that is completely white. On the menu bar, go to *New* and select the problem you are trying to test out. If your implementation is correct, you should be able to obtain solutions for the problem.
+
+
