@@ -4,14 +4,14 @@ layout: default
 img: R2D2.png
 active_tab: main_page 
 ---
-
-
-
+<!--
 <div class="alert alert-danger" markdown="1">
 To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php).  After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  If you have a question about the waitlist system you can email Lee Dukes ldukes@seas.upenn.edu.  
 
 In order to be considered for a permit for the course, you must complete the first assignment by its due date.
 </div>
+-->
+
 
 <!-- Display an alert about upcoming homework assignments -->
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
@@ -137,6 +137,5 @@ Collaboration Policy
 
 
 Late Day Policy
-: (TO BE UPDATED)
-: Each student has five free "late days".  Homeworks can be submitted at most two days late.  If you are out of late days, then you will not be able to get credit for subsequent late assignments. One "day" is defined as anytime between 1 second and 24 hours after the homework deadline. The intent of the late day policy it to allow you to take extra time due to unforseen circumstances like illnesses or family emergencies, and for forseeable interruptions like on campus interviewing and religious holidays.  You do not need to ask permission to use your late days.  No additional late days are granted. 
+: Each student has ten free "late days".  Homeworks can be submitted at most two days late.  If you are out of late days, then you will not be able to get credit for subsequent late assignments. One "day" is defined as anytime between 1 second and 24 hours after the homework deadline. The intent of the late day policy it to allow you to take extra time due to unforseen circumstances like illnesses or family emergencies, and for forseeable interruptions like on campus interviewing and religious holidays.  You do not need to ask permission to use your late days.  No additional late days are granted. 
 
