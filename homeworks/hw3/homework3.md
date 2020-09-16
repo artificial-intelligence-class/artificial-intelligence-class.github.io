@@ -5,8 +5,8 @@ img_link: https://www.explainxkcd.com/wiki/index.php/1002:_Game_AIs
 caption: Difficulty of Various Games For Computers
 title: CIS 521 Homework 3 "Informed Search"
 active_tab: homework
-release_date: 2019-09-17
-due_date: 2019-09-24 23:59:00EDT
+release_date: 2020-09-20
+due_date: 2020-09-29 23:59:00EDT
 materials:
     - 
         name: skeleton file
@@ -26,7 +26,7 @@ materials:
     - 
         name: random 50x50 scene
         url: homework3_scene_random.txt
-submission_link: https://www.gradescope.com/courses/59562
+submission_link: https://www.gradescope.com/courses/160263
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -157,7 +157,7 @@ A natural representation for this puzzle is a two-dimensional list of integer va
     False
     ```
     
-    In the `TilePuzzle` class, write a method `copy(self)` that returns a new `TilePuzzle` object initialized with a deep copy of the current board. Changes made to the original puzzle should not be reflected in the copy, and vice versa.
+    In the `TilePuzzle` class, write a method `copy(self)` that returns a new `TilePuzzle` object initialized with a **deep copy** of the current board. Changes made to the original puzzle should not be reflected in the copy, and vice versa.
     
     ```python
     >>> p = create_tile_puzzle(3, 3)
@@ -199,7 +199,7 @@ A natural representation for this puzzle is a two-dimensional list of integer va
     
 3. **[25 points]** In the `TilePuzzle` class, write a method `find_solutions_iddfs(self)` that yields all optimal solutions to the current board, represented as lists of moves. Valid moves include the four strings `"up"`, `"down"`, `"left"`, and `"right"`, where each move indicates a single swap of the empty tile with its neighbor in the indicated direction. Your solver should be implemented using an iterative deepening depth-first search (IDDFS), consisting of a series of depth-first searches limited at first to $0$ moves, then $1$ move, then $2$ moves, and so on. You may assume that the board is solvable. The order in which the solutions are produced is unimportant, as long as all optimal solutions are present in the output.
     
-    *Hint: This method is most easily implemented using recursion. First define a recursive helper method `iddfs_helper(self, limit, moves)` that yields all solutions to the current board of length no more than `limit` which are continuations of the provided move list. Your main method will then call this helper function in a loop, increasing the depth limit by one at each iteration, until one or more solutions have been found.*
+    *Hint: This method is most easily implemented using recursion. First define a recursive helper method `iddfs_helper(self, limit, moves)` that yields all solutions to the current board of length no more than `limit` which are continuations of the provided move list. Your main method will then call this helper function in a loop, increasing the depth limit by one at each iteration, until one or more solutions have been found. Note that this helper function should find all solutions within the step `limit` based on the `moves` already taken.*
     
     ```python
     >>> b = [[4,1,2], [0,5,3], [7,8,6]]
