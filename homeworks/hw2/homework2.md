@@ -14,7 +14,7 @@ materials:
     - 
         name: GUI file
         url: homework2_gui.py 
-submission_link: https://www.gradescope.com/courses/59562
+submission_link: https://www.gradescope.com/courses/160263
 ---
 
 <!-- Check whether the assignment is ready to release -->
