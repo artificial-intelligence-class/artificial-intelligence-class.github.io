@@ -129,7 +129,7 @@
   type: no_lecture
 -
   date: 2020-09-17
-  slides_old: 03-Informed-Search.pdf
+  slides: 03-Informed-Search.pdf
   title:  A* Search and Heuristics
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e515335f-4a98-453d-b9bb-aab50126489e
   readings:   
