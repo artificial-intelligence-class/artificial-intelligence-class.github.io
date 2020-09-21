@@ -171,18 +171,18 @@ Python dictionaries are hash tables that let us store key-value pairs. Let's use
 >>> print(hex2rgb('#B4FBB8'))
 Color(r=180, g=251, b=184)
 ```
-### 4. Driving with the Keyboard Arrow Keys [10 points]
+### 4. Driving with the Keyboard Arrow Keys [5 points]
 Let’s design a video game style controller for the robot, where we can use the arrow keys to change its speed (by pressing up or down) and its orientation (by pressing left or right)
 
 * We give you a function for reading in a keystroke from the keyboard called `getkey()` and your task is to complete the `drive_with_keyboard()` function which continuously reads in the keyboard input and uses it to drive the robot. (<em>Hint: Use [`set_heading()`](https://spherov2.readthedocs.io/en/latest/sphero_edu.html#spherov2.sphero_edu.SpheroEduAPI.set_heading) and [`set_speed()`](https://spherov2.readthedocs.io/en/latest/sphero_edu.html#spherov2.sphero_edu.SpheroEduAPI.set_speed)</em>)
 * Press the `up` arrow key to increase the speed by `speed_delta`, press the `down` arrow key to decrease the speed by `speed_delta`; press the `left` arrow key to decrease the heading by `heading_delta`, and press the `right` arrow key to increase the heading by `heading_delta`. Press the `esc` button to exit the keyboard driving mode.
-* You are required to make a short video as a demonstration of this function. We will grade you based on the performance.
+* You need to add code to this function for Part 3.
 
 <center>
 <img src="images/drive_with_keyboard.gif" class="img-responsive"/>
 </center>
 
-### 5. Sending a Message via Morse Code
+### 5. Sending a Message via Morse Code [5 points]
 In Star Wars, R2-D2 delivers a message from Princess Leia to Obi-Wan Kenobi.  Our robots can only play pre-programmed sounds, so we will use the robot's lights to blink out the message "Help me, Obi-Wan Kenobi. You're my only hope." in [Morse Code](https://en.wikipedia.org/wiki/Morse_code). See a demo below:
 
 <center>
@@ -202,7 +202,7 @@ def encode_in_morse_code(message):
     # TODO - yield a string of morse code (dots and dashes) for each encodable character in the message
 
 def blink(droid, duration):
-    # TODO - make the holo projector blink
+    # TODO - make the holo projector blink (turn on for duration and then off)
 
 def play_message(droid, message, dot_duration, dash_duration, time_between_blips, time_between_letters):
     # TODO - blink out the message on the holo projector
@@ -211,14 +211,17 @@ def play_message(droid, message, dot_duration, dash_duration, time_between_blips
 Hint: To set holo-projector on/off, do `droid.set_holo_projector_led(255)`, and `droid.set_holo_projector_led(0)`.
 
 
-## Part 3: Using the Sensor Pack
+## Part 3: Using the Sensor Pack [5 points + 5 points]
 
 If you've got the sensor pack, you can [continue on to set it up and get data from the sensors.](sensor-pack-setup.html) 
+
+You can still implement 1. and 2. without the sensor pack.
+
 **Requirements**
 
-1. Modify the `drive_with_keyboard()` function in the last section and add new commands `tab` and `return` to rotate R2-D2's head by `dome_delta` and `space` to switch between tripod and bipod modes.
-2. Implement the `get_droid_info()` function which updates a global dictionary `droid_info` which contains the velocity, heading, acceleration, etc. Refer [here](https://spherov2.readthedocs.io/en/latest/sphero_edu.html#sensors) for the details of the API. Notice that the API does not provide dome angle `dome` (which is an integer) and the stance of the droid `tripod` (which is `True` if the droid is in tripod mode and `False` if it's in bipod mode). You have to record the state somewhere in your code, and update them accordingly with the keyboard commands.
+1. Modify the `drive_with_keyboard()` function in the last section and add new commands `tab` and `return` to rotate R2-D2's head by `dome_delta` and `space` to switch between tripod and bipod modes. [4 points]
+2. Implement the `get_droid_info()` function which updates a global dictionary `droid_info` which contains the velocity, heading, acceleration, etc. Refer [here](https://spherov2.readthedocs.io/en/latest/sphero_edu.html#sensors) for the details of the API. Notice that the API does not provide dome angle `dome` (which is an integer) and the stance of the droid `tripod` (which is `True` if the droid is in tripod mode and `False` if it's in bipod mode). You have to record the state somewhere in your code, and update them accordingly with the keyboard commands. [1 points]
 3. Display the sensor data on the video streaming window. (We have done this step for you in `plot_info`, but feel free to modify it)
-4. To show the performance of your implementation, you could use the save video option in the skeleton code to record the video stream. This task is graded based on the video. In order to get full credit, you have to use each command (key) **at least** once and the robot's action corresponding to the commands should be shown in the video clearly.
+4. To show the performance of your implementation, you could use the save video option in the skeleton code to record the video stream. This task is graded based on the video. In order to get full credit, you have to use each command (key) **at least** once and the robot's action corresponding to the commands should be shown in the video clearly. [5 points, only doable if you have the sensor pack]
 
-Once you've finished filling in these functions, you can use `start_surveillance(droid)` to start the surveillance mode and test out your implementation.
+Once you've finished filling in these functions, you can use `start_surveillance(droid)` to start the surveillance mode and test out your implementation. Upload the HUD video to a video platform and submit the link [here](https://forms.gle/C5d3VBA3CbNfcF7A8).

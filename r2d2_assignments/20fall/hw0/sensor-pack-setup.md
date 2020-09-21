@@ -359,7 +359,7 @@ with RPiSensor('IP_ADDRESS') as sensor: # IP address of Raspberry Pi
 
 To fetch the ultrasonic sensor data, use the method `.get_obstacle_distance()`. Similarly, use `.get_cliff()` for cliff detection.
 
-### Combine R2D2 with the Camera & Sensors (Surveillance Mode) [25 points]
+### Combine R2D2 with the Camera & Sensors (Surveillance Mode) [5 points]
 
 Now it's your turn to complete the second part of the script, in which you are required to combine the `drive_with_keyboard()` function with the sensor/camera system. Inspired by the head-up display (HUD) system of jet fighter, we could display the sensor information on the video streaming window shown below.
 
@@ -367,3 +367,5 @@ Now it's your turn to complete the second part of the script, in which you are r
   <img src="images/HUD.jpg" width="50%" />
   <img src="images/R2D2_HUD.gif" width="49%" /> 
 </p>
+
+Implementation details are in the main assignment writeup.

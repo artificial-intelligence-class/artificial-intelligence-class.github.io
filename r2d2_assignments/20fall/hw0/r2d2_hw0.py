@@ -100,11 +100,11 @@ morse_code_dict = {
 
 
 # 1. Lists and For loops [5 points]
-def drive_with_commands(droid: SpheroEduAPI, roll_commands: List[Tuple[int, int, int]]):
+def drive_with_commands(droid: SpheroEduAPI, roll_commands: List[Tuple[int, int, float]]):
     ...  # TODO
 
 
-def sort_lambda(roll_commands: List[Tuple[int, int, int]]):
+def sort_lambda(roll_commands: List[Tuple[int, int, float]]):
     ...  # TODO
 
 
@@ -129,7 +129,7 @@ def hex2rgb(hex_code: str) -> Color:
     ...  # TODO
 
 
-# 4. Driving with the Keyboard Arrow Keys [10 points]
+# 4. Driving with the Keyboard Arrow Keys [5 points]
 def drive_with_keyboard(droid: SpheroEduAPI, speed_delta: int = 10, heading_delta: int = 30, dome_delta: int = 20):
     print('Press ESC key to exit...')
     while True:
@@ -147,7 +147,7 @@ def drive_with_keyboard(droid: SpheroEduAPI, speed_delta: int = 10, heading_delt
             ...
 
 
-# 5. Sending a Message via Morse Code
+# 5. Sending a Message via Morse Code [5 points]
 def encode_in_morse_code(message: str) -> Iterator[str]:
     ...  # TODO
 
@@ -161,7 +161,7 @@ def play_message(droid: SpheroEduAPI, message: str, dot_duration: float = 0.1, d
     ...  # TODO
 
 
-# Part 3: Sensor Systems
+# Part 3: Sensor Systems [10 points]
 def get_droid_info(droid: SpheroEduAPI) -> Dict[str, Any]:
     return {
         'velocity': droid.get_velocity(),
