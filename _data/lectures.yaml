@@ -164,24 +164,8 @@
       title: Animation of BFS Algorithm set to music
       length: 1.5 minutes 
 -
-  date: 2020-09-19
-  slides_old: 05-CSPs.pdf
-  title:  Constraint Satifaction Problems 
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96eb332f-9391-46f8-af55-aab5012648bf
-  readings:   
-    - 
-      title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
-      authors: Russell and Norvig
-      optional: false
-  videos:
-    -  
-      url: https://www.youtube.com/watch?v=AcDVVnyRk8Y
-      title: David Waltz - Constraint Propagation
-      length: 2.5 minutes (no sound)
-
--
-  date: 2020-09-19
-  slides_old: 06-Games-and-Adversarial-Search.pdf
+  date: 2020-09-22
+  slides: 03-Adversarial-Search.pdf
   title: Games and Adversarial Search
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b3e7f15b-7d1a-4449-bf8d-aab5012648e4
   readings:   
@@ -219,11 +203,7 @@
   date: 2020-09-22
   title:  HW2 due (Uninformed Search), HW3 released (Informed Search) 
   type: exam
-  
--
-  date: 2020-09-24
-  title:  Practice Exam released on Gradescope
-  type: exam
+
 -
   date: 2020-09-24
   slides_old: 07-Expectimax-and-Utilities.pdf
@@ -255,7 +235,23 @@
   date: 2020-09-29
   title:  HW3 due (Informed Search), HW4 released (Sudoku and Games) 
   type: exam
-  
+
+-
+  date: 2020-09-29
+  slides_old: 05-CSPs.pdf
+  title:  Constraint Satifaction Problems 
+  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96eb332f-9391-46f8-af55-aab5012648bf
+  readings:   
+    - 
+      title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
+      authors: Russell and Norvig
+      optional: false
+  videos:
+    -  
+      url: https://www.youtube.com/watch?v=AcDVVnyRk8Y
+      title: David Waltz - Constraint Propagation
+      length: 2.5 minutes (no sound)
+
 -
   date: 2020-09-29
   slides_old: 08-MDPs.pdf
