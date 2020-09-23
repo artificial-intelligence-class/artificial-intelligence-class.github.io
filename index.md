@@ -111,9 +111,12 @@ Materials for Extra Credit Assignments
 
 
 Grading 
-: 70% Homework Assignments
-: 30% Exams and Quizzes
-: Up to 3-5% in Optional Extra Credit
+: * 70% Homework Assignments
+* 30% Exams and Quizzes 
+	* 10% for weekly quizzes (equally weighted)
+	* 10% for midterm 1
+	* 10% for midterm 2
+* Up to 3-5% in Optional Extra Credit
 : The course is not curved.  Your overall score is computed as _0.3 * exam score + 0.7 * homework score_.  All homeworks are equally weighted. Here is  how letter grades are assigned based on your overall score:
 : | Score	| Grade   |
 |-------|---------| 
