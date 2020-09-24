@@ -5,22 +5,28 @@ img_link: https://xkcd.com/74/
 caption: Binary Sudoku
 title: CIS 521 Homework 4 "Sudoku Solver and Games"
 active_tab: homework
-release_date: 2019-09-24
-due_date: 2019-10-8 23:59:00EDT
+release_date: 2020-09-29
+due_date: 2020-10-6 23:59:00EDT
 materials:
     - 
         name: skeleton file
         url: homeworks/hw4/homework4.py 
+    - 
+        name: sudoku GUI
+        url: homeworks/hw4/sudokuGUI.py
     - 
         name: test puzzles (zip file)
         url: homeworks/hw4/homework4_sudoku.zip 
     - 
         name: test puzzle solutions (PDF file)
         url: homeworks/hw4/homework4_sudoku_solutions.pdf
+    - 
+        name: 1 million sudoku
+        url: https://drive.google.com/file/d/1j_4siiL_H0IYExmUdTMBNi5uHgTx_OvT/view?usp=sharing
     -
         name: Dominoes Game GUI 
         url: homeworks/hw4/homework4_dominoes_game_gui.py
-submission_link: https://www.gradescope.com/courses/59562
+submission_link: https://www.gradescope.com/courses/160263
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -1190,6 +1196,10 @@ An example puzzle originally from the Daily Pennsylvanian, available as `medium1
         </tr>
     </table>
 
+8. **Sudoku GUI** 
+
+	We provided a [GUI](sudokuGUI.py) for you to test your algorithms. The interface is shown below. You could try different solvers you implemented and reset the puzzle using the text input. The text input allows for two different puzzle formats (empty block with '*' or '0'). You could just directly copy and paste from the given text and csv file to reset the puzzle.
+<center><img src="sudokuGUI.png" width="600"></center>
 
 ## 2. Dominoes Games [20 points]
 
