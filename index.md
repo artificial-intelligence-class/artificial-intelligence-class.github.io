@@ -93,6 +93,7 @@ Office hours
 : Wednesday 2:30pm-4:30pm Eastern - Halley
 : Thursday 2pm-3pm Eastern - Yue (Extra Credit Only)
 : Friday 3pm-5pm Eastern - Lisa
+: Friday 2:30pm-4pm Eastern Halley (Python tutorial only)
 : Sunday 2pm-4pm Eastern - Yue
 
 
