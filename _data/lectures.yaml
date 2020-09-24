@@ -165,7 +165,7 @@
       length: 1.5 minutes 
 -
   date: 2020-09-22
- parts: 
+  parts: 
     -
       title: A* Wrap-Up 
       slides: 03-A-Star-wrap-up.pdf
