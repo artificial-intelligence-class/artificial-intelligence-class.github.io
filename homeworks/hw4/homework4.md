@@ -20,9 +20,6 @@ materials:
     - 
         name: test puzzle solutions (PDF file)
         url: homeworks/hw4/homework4_sudoku_solutions.pdf
-    - 
-        name: 1 million sudoku
-        url: https://drive.google.com/file/d/1j_4siiL_H0IYExmUdTMBNi5uHgTx_OvT/view?usp=sharing
     -
         name: Dominoes Game GUI 
         url: homeworks/hw4/homework4_dominoes_game_gui.py
@@ -62,6 +59,7 @@ You can download the materials for this assignment here:
 {% for item in page.materials %}
 <li><a href="{{site.baseurl}}/{{item.url}}">{{ item.name }}</a></li>
 {% endfor %}
+<li><a href="{{https://drive.google.com/file/d/1j_4siiL_H0IYExmUdTMBNi5uHgTx_OvT/view?usp=sharing}}">{{ 1 million sudoku }}</a></li>
 </ul>
 </div>
 {% endif %}
