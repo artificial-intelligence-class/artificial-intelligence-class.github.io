@@ -85,14 +85,16 @@ Office hours
 : Monday 11am-1pm Eastern - Chris
 : Monday 4:30pm-6:30pm Eastern – Eddie
 : Tuesday 3am-5am Eastern / 3pm-5pm China - Hanbang 
-: Tuesday 9am-11am Eastern - Yue
 : Tuesday 10am-12pm Eastern - Bharath
 : Tuesday 2pm-4pm Eastern- Chenyu
 : Tuesday 4pm-6pm Eastern - Aditya
 : Tuesday 6pm-8pm Eastern - Joe
 : Wednesday 12:30pm-2:30pm Eastern - Daniel
 : Wednesday 2:30pm-4:30pm Eastern - Halley
+: Thursday 2pm-3pm Eastern - Yue (Extra Credit Only)
 : Friday 3pm-5pm Eastern - Lisa
+: Friday 2:30pm-4pm Eastern Halley (Python tutorial only)
+: Sunday 2pm-4pm Eastern - Yue
 
 
 Textbooks
@@ -110,9 +112,12 @@ Materials for Extra Credit Assignments
 
 
 Grading 
-: 70% Homework Assignments
-: 30% Exams and Quizzes
-: Up to 3-5% in Optional Extra Credit
+: * 70% Homework Assignments
+* 30% Exams and Quizzes 
+	* 10% for weekly quizzes (equally weighted)
+	* 10% for midterm 1
+	* 10% for midterm 2
+* Up to 3-5% in Optional Extra Credit
 : The course is not curved.  Your overall score is computed as _0.3 * exam score + 0.7 * homework score_.  All homeworks are equally weighted. Here is  how letter grades are assigned based on your overall score:
 : | Score	| Grade   |
 |-------|---------| 

@@ -164,25 +164,15 @@
       title: Animation of BFS Algorithm set to music
       length: 1.5 minutes 
 -
-  date: 2020-09-19
-  slides_old: 05-CSPs.pdf
-  title:  Constraint Satifaction Problems 
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96eb332f-9391-46f8-af55-aab5012648bf
-  readings:   
+  date: 2020-09-22
+  parts: 
+    -
+      title: A* Wrap-Up 
+      slides: 03-A-Star-wrap-up.pdf
     - 
-      title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
-      authors: Russell and Norvig
-      optional: false
-  videos:
-    -  
-      url: https://www.youtube.com/watch?v=AcDVVnyRk8Y
-      title: David Waltz - Constraint Propagation
-      length: 2.5 minutes (no sound)
-
--
-  date: 2020-09-19
-  slides_old: 06-Games-and-Adversarial-Search.pdf
-  title: Games and Adversarial Search
+      slides: 03-Adversarial-Search.pdf
+      title: Games and Adversarial Search
+  recording: https://upenn.zoom.us/rec/share/ksS8cUmcVQbi6Lru4RNwPFKO0dD6H9mK-Ps8YPqRy9IB8jaSubkejls2nDS1UMCE.56nQyu-XnTlZRIfd
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b3e7f15b-7d1a-4449-bf8d-aab5012648e4
   readings:   
     - 
@@ -219,15 +209,12 @@
   date: 2020-09-22
   title:  HW2 due (Uninformed Search), HW3 released (Informed Search) 
   type: exam
-  
+
 -
   date: 2020-09-24
-  title:  Practice Exam released on Gradescope
-  type: exam
--
-  date: 2020-09-24
-  slides_old: 07-Expectimax-and-Utilities.pdf
+  slides: 03-Expectimax-and-Utilities.pdf
   title:  Game Trees&colon; Expectimax and Utilities
+  recording: https://upenn.zoom.us/rec/share/xvSSt6sc7LeROmvenm9GW-DohqVwS1A2QXWwyvoB684Aba8pvka5_xqJPf7q89IX.24iHKzTx34igvQkk
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=601142a0-302f-4705-8431-aab501264928
   readings:   
     - 
@@ -255,7 +242,23 @@
   date: 2020-09-29
   title:  HW3 due (Informed Search), HW4 released (Sudoku and Games) 
   type: exam
-  
+
+-
+  date: 2020-09-29
+  slides_old: 05-CSPs.pdf
+  title:  Constraint Satifaction Problems 
+  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96eb332f-9391-46f8-af55-aab5012648bf
+  readings:   
+    - 
+      title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
+      authors: Russell and Norvig
+      optional: false
+  videos:
+    -  
+      url: https://www.youtube.com/watch?v=AcDVVnyRk8Y
+      title: David Waltz - Constraint Propagation
+      length: 2.5 minutes (no sound)
+
 -
   date: 2020-09-29
   slides_old: 08-MDPs.pdf

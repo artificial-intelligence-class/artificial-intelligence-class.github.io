@@ -1,3 +1,4 @@
+### Author: Yue Yang ###
 import argparse
 import copy
 import numpy as np
@@ -48,13 +49,17 @@ class SudokuGame(object):
         self.puzzle = copy.deepcopy(self.start_puzzle)
 
     def check_valid(self):
-        row_valid = self.check_row()
-        col_valid = self.check_col()
-        box_valid = self.check_box()
-        if row_valid == False or col_valid == False or box_valid == False:
+        try:
+            row_valid = self.check_row()
+            col_valid = self.check_col()
+            box_valid = self.check_box()
+            if row_valid == False or col_valid == False or box_valid == False:
+                return False
+            else:
+                return True
+        except:
             return False
-        else:
-            return True
+
 
     def check_row(self):
         row_valid = True
@@ -114,21 +119,36 @@ class SudokuUI(Frame):
         self.clear_button.pack()
         self.clear_button.place(bordermode=OUTSIDE, height=30, width=100, x = 550, y = 100)
 
-        self.solve_button = Button(self,
-                              text="Find Solutions",
-                              command=self.solve_click)
-        self.solve_button.pack()
-        self.solve_button.place(bordermode=OUTSIDE, height=30, width=100, x = 550, y = 150)
+        # AC3
+        self.solve_button_infer_ac3 = Button(self,
+                              text="Solve (infer_ac3)",
+                              command=self.solve_click_infer_ac3)
+        self.solve_button_infer_ac3.pack()
+        self.solve_button_infer_ac3.place(bordermode=OUTSIDE, height=30, width=200, x = 495, y = 150)
 
-        self.puzzleEntry = Entry(self, width=10)
+        # AC3 IMPROVE
+        self.solve_button_infer_improved = Button(self,
+                              text="Solve (infer_improved)",
+                              command=self.solve_click_infer_improved)
+        self.solve_button_infer_improved.pack()
+        self.solve_button_infer_improved.place(bordermode=OUTSIDE, height=30, width=200, x = 495, y = 185)
+
+        # AC3 GUESSING
+        self.solve_button_infer_with_guessing = Button(self,
+                              text="Solve (infer_with_guessing)",
+                              command=self.solve_click_infer_with_guessing)
+        self.solve_button_infer_with_guessing.pack()
+        self.solve_button_infer_with_guessing.place(bordermode=OUTSIDE, height=30, width=200, x = 495, y = 220)
+
+        self.puzzleEntry = Entry(self, width=20)
         self.puzzleEntry.pack()
-        self.puzzleEntry.place(x = 550, y = 200)
+        self.puzzleEntry.place(x = 500, y = 270)
 
         self.setpuzzle_button = Button(self,
                               text="Reset Puzzle",
                               command=self.get_puzzle)
         self.setpuzzle_button.pack()
-        self.setpuzzle_button.place(bordermode=OUTSIDE, height=30, width=100, x = 550, y = 230)
+        self.setpuzzle_button.place(bordermode=OUTSIDE, height=30, width=100, x = 550, y = 300)
 
 
 
@@ -179,9 +199,28 @@ class SudokuUI(Frame):
 
     def dict2list(self, board_dict):
         for key, value in board_dict.items():
-            self.game.puzzle[key[0]][key[1]] = list(value)[0]
+            if len(value) == 1:
+                self.game.puzzle[key[0]][key[1]] = list(value)[0]
+            else:
+                self.game.puzzle[key[0]][key[1]] = list(value)
 
-    def solve_click(self):
+    def solve_click_infer_ac3(self):
+        board_dict = self.list2dict()
+        SUDOKU = Sudoku(board_dict)
+        SUDOKU.infer_ac3()
+        self.dict2list(SUDOKU.board)
+        self.draw_puzzle()
+        self.draw_victory()
+
+    def solve_click_infer_improved(self):
+        board_dict = self.list2dict()
+        SUDOKU = Sudoku(board_dict)
+        SUDOKU.infer_improved()
+        self.dict2list(SUDOKU.board)
+        self.draw_puzzle()
+        self.draw_victory()
+
+    def solve_click_infer_with_guessing(self):
         board_dict = self.list2dict()
         SUDOKU = Sudoku(board_dict)
         SUDOKU.infer_with_guessing()
@@ -197,6 +236,16 @@ class SudokuUI(Frame):
 
     def get_puzzle(self):
         board_string = self.puzzleEntry.get()
+        if len(board_string.split('\n')) > 1:
+            board_list = board_string.split('\n')
+            board_string_new = ''.join(board_list)
+            board_string = ''
+            for i in board_string_new:
+                if i == '*':
+                    board_string += '0'
+                else:
+                    board_string += i
+
         if len(board_string) != 81:
             print('Invalid Puzzle')
         else:
