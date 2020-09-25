@@ -59,7 +59,7 @@ You can download the materials for this assignment here:
 {% for item in page.materials %}
 <li><a href="{{site.baseurl}}/{{item.url}}">{{ item.name }}</a></li>
 {% endfor %}
-<li><a href="{{https://drive.google.com/file/d/1j_4siiL_H0IYExmUdTMBNi5uHgTx_OvT/view?usp=sharing}}">{{ 1_million_sudoku }}</a></li>
+<li><a href="{{https://drive.google.com/file/d/1j_4siiL_H0IYExmUdTMBNi5uHgTx_OvT/view?usp=sharing}}">{{ "1_million_sudoku" }}</a></li>
 </ul>
 </div>
 {% endif %}
