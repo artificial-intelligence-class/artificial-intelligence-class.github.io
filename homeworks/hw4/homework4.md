@@ -457,9 +457,9 @@ An example puzzle originally from the Daily Pennsylvanian, available as `medium1
 <br/>
 
 
-1. **[3 points]** In this section, we will view a Sudoku puzzle not from the perspective of its grid layout, but more abstractly as a collection of cells. Accordingly, we will represent it internally as a dictionary mapping from cells, i.e. (row, column) pairs, to sets of possible values.
+1. **[3 points]** In this section, we will view a Sudoku puzzle not from the perspective of its grid layout, but more abstractly as a collection of cells. Accordingly, we will represent it internally as a dictionary mapping from cells, i.e. (row, column) pairs, to sets of possible values.  This dictionary should have a fixed (9 \\times 9=81) set of pairs of keys, but the number of elements in each set corresponding to a key will change as the board is being manipulated.
     
-    In the `Sudoku` class, write an initialization method `__init__(self, board)` that stores such a mapping for future use. Also write a method `get_values(self, cell)` that returns the set of values currently available at a particular cell.
+    In the `Sudoku` class, write an initialization method `__init__(self, board)` that stores such a mapping for future use. Also write a method `get_values(self, cell)` that returns the set of values currently available at a particular cell.  
     
     In addition, write a function `read_board(path)` that reads the board specified by the file at the given path and returns it as a dictionary. Sudoku puzzles will be represented textually as 9 lines of 9 characters each, corresponding to the rows of the board, where a digit between `"1"` and `"9"` denotes a cell containing a fixed value, and an asterisk `"*"` denotes a blank cell that could contain any digit.
     
@@ -475,14 +475,14 @@ An example puzzle originally from the Daily Pennsylvanian, available as `medium1
     set([1])
     ```
     
-2. **[2 points]** Write a function `sudoku_cells()` that returns the list of all cells in a Sudoku puzzle as (row, column) pairs. The line `CELLS = sudoku_cells()` in the `Sudoku` class then creates a class-level constant `Sudoku.CELLS` that can be used wherever the full list of cells is needed. Although the function `sudoku_cells()` could still be called each time in its place, that approach results in a large amount of repeated computation and is therefore highly inefficient. The ordering of the cells within the list is not important, as long as they are all present.
+2. **[2 points]** Write a function `sudoku_cells()` that returns the list of all cells in a Sudoku puzzle as (row, column) pairs. The line `CELLS = sudoku_cells()` in the `Sudoku` class then creates a class-level constant `Sudoku.CELLS` that can be used wherever the full list of cells is needed. Although the function `sudoku_cells()` could still be called each time in its place, that approach results in a large amount of repeated computation and is therefore highly inefficient. The ordering of the cells within the list is not important, as long as they are all present. (For more information on the difference between class-level constants and fields of a class, see [this helpful guide](https://www.python-course.eu/python3_class_and_instance_attributes.php)).
     
     ```python
     >>> sudoku_cells()
     [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), ..., (8, 5), (8, 6), (8, 7), (8, 8)]
     ```
     
-3. **[3 points]** Write a function `sudoku_arcs()` that returns the list of all arcs between cells in a Sudoku puzzle corresponding to inequality constraints. In other words, each arc should be a pair of cells whose values cannot be equal in a solved puzzle. The arcs should be represented a two-tuples of cells, where cells themselves are (row, column) pairs. The line `ARCS = sudoku_arcs()` in the `Sudoku` class then creates a class-level constant `Sudoku.ARCS` that can be used wherever the full list of arcs is needed. The ordering of the arcs within the list is not important, as long as they are all present.
+3. **[3 points]** Write a function `sudoku_arcs()` that returns the list of all arcs between cells in a Sudoku puzzle corresponding to inequality constraints. In other words, each arc should be a pair of cells whose values cannot be equal in a solved puzzle. The arcs should be represented a two-tuples of cells, where cells themselves are (row, column) pairs. The line `ARCS = sudoku_arcs()` in the `Sudoku` class then creates a class-level constant `Sudoku.ARCS` that can be used wherever the full list of arcs is needed. The ordering of the arcs within the list is not important, as long as they are all present.  Note that this is asking not for the arcs in a particular board, but all of the arcs that exist on an empty board.
     
     ```python
     >>> ((0, 0), (0, 8)) in sudoku_arcs()
@@ -504,7 +504,7 @@ An example puzzle originally from the Daily Pennsylvanian, available as `medium1
     ```
         
     
-4. **[7 points]** In the `Sudoku` class, write a method `remove_inconsistent_values(self, cell1, cell2)` that removes any value in the set of possibilities for `cell1` for which there are no values in the set of possibilities for `cell2` satisfying the corresponding inequality constraint. Each cell argument will be a (row, column) pair. If any values were removed, return `True`; otherwise, return `False`.
+4. **[7 points]** In the `Sudoku` class, write a method `remove_inconsistent_values(self, cell1, cell2)` that removes any value in the set of possibilities for `cell1` for which there are no values in the set of possibilities for `cell2` satisfying the corresponding inequality constraint (which we have represented as an arc). Each cell argument will be a (row, column) pair. If any values were removed, return `True`; otherwise, return `False`.  Note that this question is asking you both to change the class attributes (i.e., change the dictionary representing the board) and to return a boolean value - in Python one can do both in the same method!
     
     *Hint: Think carefully about what this exercise is asking you to implement. How many values can be removed during a single invocation of the function?*
     
@@ -971,7 +971,7 @@ An example puzzle originally from the Daily Pennsylvanian, available as `medium1
 
     However, if we consider the possible placements of the digit 7 in the upper-right block, we observe that the 7 in the third row and the 7 in the final column rule out all but one square, meaning we can safely place a 7 in the indicated cell despite AC-3 being unable to make such an inference.
         
-    In the `Sudoku` class, write a method `infer_improved(self)` that runs this improved version of AC-3, using `infer_ac3(self)` as a subroutine (perhaps multiple times). You should consider what deductions can be made about a specific cell by examining the possible values for other cells in the same row, column, or block. Using this technique, you should be able to solve all of the medium-difficulty puzzles.
+    In the `Sudoku` class, write a method `infer_improved(self)` that runs this improved version of AC-3, using `infer_ac3(self)` as a subroutine (perhaps multiple times). You should consider what deductions can be made about a specific cell by examining the possible values for other cells in the same row, column, or block. Using this technique, you should be able to solve all of the medium-difficulty puzzles.  Note that this goes beyond the typical AC3 approach because it involves constraints that relate more than 2 variables.
     
 7. **[25 points]** Although the previous inference algorithm is an improvement over the ordinary AC-3 algorithm, it is still not powerful enough to solve all Sudoku puzzles. In the `Sudoku` class, write a method `infer_with_guessing(self)` that calls `infer_improved(self)` as a subroutine, picks an arbitrary value for a cell with multiple possibilities if one remains, and repeats. You should implement a backtracking search which reverts erroneous decisions if they result in unsolvable puzzles. For efficiency, the improved inference algorithm should be called once after each guess is made. This method should be able to solve all of the hard-difficulty puzzles, such as the one shown below.
     
@@ -1201,7 +1201,7 @@ An example puzzle originally from the Daily Pennsylvanian, available as `medium1
 
 ## 2. Dominoes Games [20 points]
 
-In this section, you will develop an AI for a game in which two players take turns placing $1 \\times 2$ dominoes on a rectangular grid. One player must always place his dominoes vertically, and the other must always place his dominoes horizontally. The last player who successfully places a domino on the board wins.
+In this section, you will develop an AI for a game in which two players take turns placing $1 \\times 2$ dominoes on a rectangular grid.  There are no labels on the dominoes; each one can be considered identical to the others.  One player must always place his dominoes vertically, and the other must always place his dominoes horizontally. The last player who successfully places a domino on the board wins.
 
 As with the Tile Puzzle, an infrastructure that is compatible with the provided GUI has been suggested. However, only the search method will be tested, so you are free to choose a different approach if you find it more convenient to do so.
 
@@ -1288,7 +1288,7 @@ The representation used for this puzzle is a two-dimensional list of Boolean val
     False
     ```
     
-    In the `DominoesGame` class, write a method `legal_moves(self, vertical)` which yields the legal moves available to the current player as (row, column) tuples. The moves should be generated in row-major order (i.e. iterating through the rows from top to bottom, and within rows from left to right), starting from the top-left corner of the board.
+    In the `DominoesGame` class, write a method `legal_moves(self, vertical)` which yields the legal moves available to the current player (vertical player if vertical = True, otherwise the horizontal player) as (row, column) tuples. The moves should be generated in row-major order - When looking at the board as a 2-d array, your method should be visualizable as iterating through the rows from top to bottom, and within rows from left to right), starting from the top-left corner of the board.
     
     ```python
     >>> g = create_dominoes_game(3, 3)
@@ -1327,7 +1327,7 @@ The representation used for this puzzle is a two-dimensional list of Boolean val
      [False, False, False]]
     ```
     
-    In the `DominoesGame` class, write a method `game_over(self, vertical)` that returns whether the current player is unable to place any dominoes.
+    In the `DominoesGame` class, write a method `game_over(self, vertical)` that returns whether the current player (the vertical player if vertical = True, otherwise the horizontal player) is unable to place any dominoes.
     
     ```python
     >>> b = [[False, False], [False, False]]
@@ -1347,7 +1347,7 @@ The representation used for this puzzle is a two-dimensional list of Boolean val
     True
     ```
     
-    In the `DominoesGame` class, write a method `copy(self)` that returns a new `DominoesGame` object initialized with a deep copy of the current board. Changes made to the original puzzle should not be reflected in the copy, and vice versa.
+    In the `DominoesGame` class, write a method `copy(self)` that returns a new `DominoesGame` object initialized with a deep copy of the current board. Changes made to the original puzzle should not be reflected in the copy, and vice versa.  For more information about the different types of copy available in standard python, see [this guide](https://docs.python.org/3/library/copy.html).
     
     ```python
     >>> g = create_dominoes_game(4, 4)
@@ -1389,9 +1389,9 @@ The representation used for this puzzle is a two-dimensional list of Boolean val
     
     In the `DominoesGame` class, write a method `get_random_move(self, vertical)` which returns a random legal move for the current player as a (row, column) tuple. *The `random` module contains a function `random.choice(seq)` which returns a random element from its input sequence.*
     
-3. **[20 points]** In the `DominoesGame` class, write a method `get_best_move(self, vertical, limit)` which returns a $3$-element tuple containing the best move for the current player as a (row, column) tuple, its associated value, and the number of leaf nodes visited during the search. Recall that if the `vertical` parameter is `True`, then the current player intends to place a domino on squares `(row, col)` and `(row + 1, col)`, and if the `vertical` parameter is `False`, then the current player intends to place a domino on squares `(row, col)` and `(row, col + 1)`. Moves should be explored row-major order, described in further detail above, to ensure consistency.
+3. **[20 points]** In the `DominoesGame` class, write a method `get_best_move(self, vertical, limit)` which returns a $3$-element tuple containing the best move for the current player as a (row, column) tuple, its associated value (defined below), and the number of leaf nodes visited during the search. Recall that if the `vertical` parameter is `True`, then the current player intends to place a domino on squares `(row, col)` and `(row + 1, col)`, and if the `vertical` parameter is `False`, then the current player intends to place a domino on squares `(row, col)` and `(row, col + 1)`. Moves should be explored row-major order, described in further detail above, to ensure consistency.
     
-    Your search should be a faithful implementation of the alpha-beta search given on page 170 of the course textbook, with the restriction that you should look no further than `limit` moves into the future. To evaluate a board, you should compute the number of moves available to the current player, then subtract the number of moves available to the opponent.
+    Your search should be a faithful implementation of the alpha-beta search given on page 170 of the course textbook, with the restriction that you should look no further than `limit` moves into the future. To find a board's value, you should compute the number of moves available to the current player, then subtract the number of moves available to the opponent.
     
     ```python
     >>> b = [[False] * 3 for i in range(3)]
