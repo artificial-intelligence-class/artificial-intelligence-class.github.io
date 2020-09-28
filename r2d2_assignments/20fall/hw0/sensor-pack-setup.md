@@ -350,7 +350,7 @@ python3 sensor_server.py
 We provide an `RPiSensor` class in `rpi_sensor.py`. You could connect to the sensor server with the following code:
 
 ```python
-from rpi_sensor import SensorClient
+from rpi_sensor import RPiSensor
 
 with RPiSensor('IP_ADDRESS') as sensor: # IP address of Raspberry Pi
     print(sensor.get_obstacle_distance())  # Distance to the obstacle in terms of centimeters
