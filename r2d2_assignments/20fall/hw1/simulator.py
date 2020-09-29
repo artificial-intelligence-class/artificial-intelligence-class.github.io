@@ -120,15 +120,13 @@ class Simulator:
         self.droid = VirtualDroid(location)
         self.sensor = VirtualSensor(self.droid, obstacles, cliffs)
         self.__warning = None
-        self.__last = time.time()
 
-    def update_location(self):
+    def update_location(self, delta):
+        time.sleep(delta)
+        delta = delta * 5
         plt.ion()
         plt.figure('Simulation')
         stopped = False
-        last = self.__last
-        self.__last = time.time()
-        delta = self.__last - last
         speed = self.droid.get_speed()
         if self.sensor.get_obstacle_distance() < speed * delta:
             self.__warning = 'Hit obstacle!'

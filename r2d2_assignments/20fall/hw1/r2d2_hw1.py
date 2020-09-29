@@ -41,17 +41,19 @@ def cliff_obstacle_avoidance(droid: SpheroEduAPI, sensor: RPiSensor):
 
 
 def droid_explore():
-    sim = simulator.test_maze1()  # replace with test_maze1, 2, 3, or 4
+    sim = simulator.test_maze4()  # replace with test_maze1, 2, 3, or 4
     droid, sensor = sim.droid, sim.sensor
     # replace the above lines with the line below to use the real droid
     #     with RPiSensor('IP_ADDRESS') as sensor, SpheroEduAPI(scanner.find_toy()) as droid:
     droid.register_event(EventType.on_collision, on_collision)
-    droid.set_heading(-90)  # init heading
-    droid.set_speed(20)  # init speed
+    droid.set_heading(-90)  # init heading, modify it for different maze
+    droid.set_speed(50)  # init speed
+    delay_sim = 0.01 # delay for simulator 
+    delay_real = 0.1 # add delay for receiving sensor data (suggest 0.1 - 0.5 s)
     while True:
-        obstacle_avoidance(droid, sensor)  # replace with control functions you implemented
-        time.sleep(0.1)  # delay
-        sim.update_location()  # comment out this line if you are using a real droid
+        cliff_obstacle_avoidance(droid, sensor)  # replace with control functions you implemented
+        sim.update_location(delay_sim)  # comment out this line if you are using a real droid
+        # time.sleep(delay_real) # remember to add delay when experimenting on real robots
 
 
 # Part 2: Maximize Performance Measure - AprilTag Tracking
