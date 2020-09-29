@@ -3,7 +3,7 @@ layout: default
 img: new_robot_2x.png
 img_link: http://xkcd.com/2128/
 caption: New Robot
-title: CIS 521 Robot Excercise 0 "Using Python to Control R2D2" (Extra Credit)
+title: CIS 521 Robot Excercise 1 "R2-D2 as an Intelligent Agent" (Extra Credit)
 active_tab: homework
 release_date: 2020-09-30
 due_date: 2020-10-15 23:59:00EDT
@@ -80,7 +80,7 @@ You can download the materials for this assignment here:
 Luke and R2-D2 were shot down by the enemy while driving the X-wing fighter, falling to a barren planet full of rocks and cracks. R2-D2 has to avoid hitting obstacles and falling off cliffs, while following Luke closely. To achieve these goals, R2-D2 must take advantage of its new sensors and camera to act rationally and prevent getting lost.
 
 ## Instructions
-In this assignment, you will use the external sensor system controlled by the Raspberry Pi and learn how to let the robot act rationally according to the environment. If you've forgotten how to use it, please refer to [hw0]() for details. 
+In this assignment, you will use the external sensor system controlled by the Raspberry Pi and learn how to let the robot act rationally according to the environment. If you've forgotten how to use it, please refer to [hw0](http://artificial-intelligence-class.org/r2d2_assignments/20fall/hw0/sensor-pack-setup.html) for details. 
 
 A skeleton file [r2d2_hw1.py](r2d2_hw1.py) containing empty definitions for each question has been provided. Some helper functions required for [sensors](rpi_sensor.py) and [simulators](simulator.py) are also provided. Please do not change any of the helper functions. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
@@ -89,7 +89,7 @@ You are strongly encouraged to follow the Python style guidelines set forth in P
 Once you have completed the assignment, you should submit your file on [Gradescope]().
 
 ## Part 1: Acting Rationally - Cliff & Obstacle Detection [30 points]
-An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment through actuators. In this part, the R2-D2 uses the ultrasonic sensor and the IR obstacle sensor as introduced in [Homework 0]() to perceive the environment and make decisions based on the sensor data.
+An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment through actuators. In this part, the R2-D2 uses the ultrasonic sensor and the IR obstacle sensor as introduced in [Homework 0](http://artificial-intelligence-class.org/r2d2_assignments/20fall/hw0/sensor-pack-setup.html) to perceive the environment and make decisions based on the sensor data.
 
 We provide a [simulator](simulator.py) for you to test out your functions before applying them on the real robot. To use the simulator, run the  function `droid_explore()` (which is provided in the skeleton file). There are several test mazes in the simulator file for you to validate the algorithms. Remember to add the line `droid.update_location()` to display a real time plot.
 
@@ -114,16 +114,16 @@ Notice that the built-in sensor only reports an obstacle when the droid collides
 
 * **Implement `obstacle_avoidance()`** 
 
-This function allows the R2-D2 to turn around after detecting any obstacle. The following image outlines the logic:
+  This function allows the R2-D2 to turn around after detecting any obstacle. The following image outlines the logic:
 
 <center>
-<img src="images/obstacle_avoidance.png" class="img-responsive"/>
+<img src="images/obstacle_avoidance.png" class="img-responsive" width="650"/>
 </center>
 
 Notice that the function only acquires the sensor data and does the checking once. In order for it to avoid obstacles successfully, we need to do this checking every once in a while, as shown in the following figure:
 
 <center>
-<img src="images/sensor_polling.png" class="img-responsive"/>
+<img src="images/sensor_polling.png" class="img-responsive" width="550"/>
 </center>
 
 We have implemented a `while` loop inside the `droid_explore()` function in the skeleton code, which will call on the corresponding check every 0.1 seconds. You can use this function to test out your implementation of `obstacle_avoidance()`. Please note that you will have to similarly test out the following functions (`obstacle_avoidance_improved()`,`cliff_avoidance()` and `cliff_obstacle_avoidance()`) using the `droid_explore()` function.
@@ -150,7 +150,7 @@ It is obvious that the algorithm we implemented above is not perfect as the droi
 A flow chart of this logic is shown below:
 
 <center>
-<img src="images/obstacle_avoidance_improved.png" class="img-responsive"/>
+<img src="images/obstacle_avoidance_improved.png" class="img-responsive" width="650"/>
 </center>
 
 
@@ -167,12 +167,11 @@ To avoid falling off a cliff on some barren planet, R2-D2 will use the IR obstac
 
 * **Turn the knob to adjust the detection distance**
 
-First, we must adjust the detection range of the IR obstacle sensor to achieve the desired performance. There is a small screw on the IR sensor that you will have to turn (using a sharp tool or a screwdriver) to change the detection distance. To achieve the desired range, first switch the R2-D2 to Tripod mode. The light on the IR sensor should be on when there's no cliff, and off when the droid is on the edge of a cliff. Take a look at [this video](https://youtu.be/f59R8tjP3ks) as an example.
-
+  First, we must adjust the detection range of the IR obstacle sensor to achieve the desired performance. There is a small screw on the IR sensor that you will have to turn (using a sharp tool or a screwdriver) to change the detection distance. To achieve the desired range, first switch the R2-D2 to Tripod mode. The light on the IR sensor should be on when there's no cliff, and off when the droid is on the edge of a cliff. Take a look at [this video](https://youtu.be/f59R8tjP3ks) as an example.
 
 * **Implement `cliff_avoidance()`**
 
-Similar to `obstacle_avoidance()`, the R2-D2 should turn around when a cliff is detected. The logic is shown as follows:
+  Similar to `obstacle_avoidance()`, the R2-D2 should turn around when a cliff is detected. The logic is shown as follows:
 
 <center>
 <img src="images/cliff_avoidance.png" class="img-responsive"/>
@@ -245,7 +244,7 @@ We have pre-tuned the parameters in the skeleton code but feel free to fine tune
 5. Set P and D to the last stable values.
 6. Increase the I gain until it brings you to the setpoint with the number of oscillations desired (normally zero but a quicker response can be had if you don't mind a couple oscillations of overshoot)
 
-### 3. AprilTag Tracking
+### 3. AprilTag Tracking [5 points]
 
 Luke captured a Stormtrooper and asked R2-D2 to guard him. R2-D2 has to keep changing its heading to track the AprilTag held by the prisoner. In this task, you are required to complete the `april_tag_tracking()` function which takes in the `x` and `y` coordinates of the April Tag as input, processes the `x` coordinate through the PID controller, and sets the heading of the R2-D2 based on the PID output. Please use the `rolling_with_u()` function to test out your implementation of this function. Use this [April Tag](AprilTag.pdf) to guide your R2D2. The figure below gives you an idea of the performance expected.
 
@@ -254,7 +253,7 @@ Luke captured a Stormtrooper and asked R2-D2 to guard him. R2-D2 has to keep cha
 	<img src="images/apriltag_tracking.gif" width="49%" />
 </p>
 
-### 4. AprilTag Following
+### 4. AprilTag Following [5 points]
 
 Luke interrogated the Stormtrooper and obtained information that would help him escape this planet. R2-D2 must follow Luke closely to prevent getting lost. To achieve this goal, R2-D2 has to keep changing its speed based on the distance to the AprilTag. In this task, you need to complete the `april_tag_following()` function, in which the average side length of the April tag is fed as input to the PID controller, and the corresponding output is used to set the speed of the R2-D2. Again, please use the `rolling_with_u()` function to test out your implementation of this function. The figure below gives you an idea of the performance expected.
 
@@ -264,7 +263,7 @@ Luke interrogated the Stormtrooper and obtained information that would help him 
 </p>
 
 
-**Optional** After you finish this part, you could find a partner and conduct a robot chasing application. We attached a small tag on the backpack battery which belongs to the family `tag16h5`. You just need to change the tag family of the detector to get this working.
+**Optional** After you finish this part, you could find a partner who also has a R2D2 and you could conduct a robot chasing application. You could attached a small Apriltag on the backpack battery of one R2D2 and use `drive_with_keyboard` you implemented in hw0 to drive this R2D2. The second R2D2 will just run `rolling_with_u`  to follow the first R2D2. Here is a [demo](https://www.youtube.com/watch?v=aHuZVwZAsAM). 
 
 ## Recommended Readings
 [A robust and flexible visual fiducial system](https://april.eecs.umich.edu/media/pdfs/olson2011tags.pdf), Edwin Olson, Proceedings of the IEEE International Conference on Robotics and Automation (ICRA), May 2011.
