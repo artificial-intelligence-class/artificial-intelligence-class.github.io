@@ -84,7 +84,7 @@ Office hours
 : The first day of office hours will be Monday, September 7.
 : Monday 11am-1pm Eastern - Chris
 : Monday 4:30pm-6:30pm Eastern – Eddie
-: Tuesday 3am-5am Eastern / 3pm-5pm China - Hanbang 
+: Monday 9pm-11pm Eastern - Hanbang 
 : Tuesday 10am-12pm Eastern - Bharath
 : Tuesday 2pm-4pm Eastern- Chenyu
 : Tuesday 4pm-6pm Eastern - Aditya
