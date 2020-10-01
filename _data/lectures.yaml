@@ -259,7 +259,20 @@
       url: https://www.youtube.com/watch?v=AcDVVnyRk8Y
       title: David Waltz - Constraint Propagation
       length: 2.5 minutes (no sound)
+-
+  date: 2020-10-01
+  slides: 04-Logical-Agents.pdf
+  title:  Logical Agents
+  readings:   
+    - 
+      title: AIMA Chapter 7 "Logical Agents"
+      authors: Russell and Norvig
+      optional: false 
 
+-
+  date: 2020-10-07
+  title: Drop Period Ends
+  type: no_lecture
 -
   date: 2020-09-29
   slides_old: 08-MDPs.pdf
