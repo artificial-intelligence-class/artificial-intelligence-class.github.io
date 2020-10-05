@@ -67,6 +67,11 @@ Extra Credit Bounty Items:
 Course number
 : CIS 421/521 - Artificial Intelligence
 
+Prerequeisites
+: CIS 121 (for undergraduates)
+: CIT 594 (for MCIT students)
+: A data structure and algorithms course, plus substantial programming experience (for everyone)
+
 Instructor
 : [Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/)
 
