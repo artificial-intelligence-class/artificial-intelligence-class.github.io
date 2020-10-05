@@ -6,7 +6,7 @@ caption: Binary Sudoku
 title: CIS 521 Homework 4 "Sudoku Solver and Games"
 active_tab: homework
 release_date: 2020-09-28
-due_date: 2020-10-6 23:59:00EDT
+due_date: 2020-10-13 23:59:00EDT
 materials:
     - 
         name: skeleton file
