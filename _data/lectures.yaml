@@ -280,19 +280,15 @@
       authors: Russell and Norvig
       optional: false 
 -
+  date: 2020-10-06
+  title:  Date change&colon; HW4 is now due on Oct 13, HW5 will be released then.
+  type: exam
+-
   date: 2020-10-07
   title: Drop Period Ends
   type: no_lecture
 -
-  date: 2020-10-06
-  title:  Date change&colon HW4 is now due on Oct 13, HW5 will be released then.
-  type: exam
--
   date: 2020-10-13
-  title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
-  type: exam
--
-  date: 2020-10-29
   slides_old: 08-MDPs.pdf
   title:  Markov Decision Processes
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7d673336-f708-41d4-aa8a-aab5012649b0
@@ -302,7 +298,11 @@
       authors: Russell and Norvig
       optional: false 
 -
-  date: 2020-10-06
+  date: 2020-10-13
+  title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
+  type: exam
+-
+  date: 2020-10-15
   slides_old: 09-MDPs-wrapup-and-reinforcement-learning.pdf
   title: MDPs Wrapup and Reinforcement Learning
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d38a701-365b-4f71-9802-aab501264a1c
@@ -320,7 +320,7 @@
       title: Textworld
       authors: Microsoft Research Montreal 
 -
-  date: 2020-10-08
+  date: 2020-10-20
   slides_old: 10-Reinforcement-Learning-2.pdf
   title:  Reinforcement Learning - part 2
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
@@ -339,7 +339,11 @@
       url: https://www.youtube.com/watch?v=M-QUkgk3HyE
       title: Autonomous Helicopters Teach Themselves to Fly Stunts
 -
-  date: 2020-10-10
+  date: 2020-10-20
+  title:  HW5 due (MDPs and GridWorld), Practice Midterm Released
+  type: exam
+-
+  date: 2020-10-22
   slides_old: 11-Probabilities.pdf 
   title:  Probabilies
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=02d25e7b-5be9-48de-a513-aa7f0110399a
