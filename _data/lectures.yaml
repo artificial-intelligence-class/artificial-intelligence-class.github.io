@@ -292,6 +292,7 @@
   slides: 05-MDPs.pdf
   title:  Markov Decision Processes
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7d673336-f708-41d4-aa8a-aab5012649b0
+  recording: https://upenn.zoom.us/rec/share/X77ThLeryu7fFAlBhXHLpCnuQbiuIb-JO120pkBrvj3YUXxDj0WlrZ859yDZZP6O.RIaTOvaDKDmkazrh
   readings:   
     - 
       title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
@@ -302,7 +303,7 @@
   title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
   type: exam
 -
-  date: 2020-10-15
+  date: 2020-10-13
   slides_old: 09-MDPs-wrapup-and-reinforcement-learning.pdf
   title: MDPs Wrapup and Reinforcement Learning
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d38a701-365b-4f71-9802-aab501264a1c
@@ -320,7 +321,7 @@
       title: Textworld
       authors: Microsoft Research Montreal 
 -
-  date: 2020-10-20
+  date: 2020-10-15
   slides_old: 10-Reinforcement-Learning-2.pdf
   title:  Reinforcement Learning - part 2
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
