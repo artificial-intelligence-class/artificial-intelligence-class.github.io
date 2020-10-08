@@ -82,11 +82,11 @@ Time and place
 : In Fall 2020, the course will be all online.
 : Lectures will be [broadcast live on Zoom](https://upenn.zoom.us/j/97517317746?pwd=dlZSZTZXd1ZXaDhqeUhDK251TTFndz09) on Tuesdays and Thursdays from noon-1:30pm Eastern. Recordings will be made available shortly after the live lectures. 
 : The first day of class is Tuesday, September 1, 2020.
+: The first day of office hours will be Monday, September 7, 2020.
 : The final day of class is Tuesday, December 22, 2020.
 
 Office hours 
-: Office hours will be held in [Gather Town](https://gather.town/aQMGI0l1R8DP0Ovv/penn-cis) in 3401 Walnut outside of room 463C.
-: The first day of office hours will be Monday, September 7.
+: Office hours will be held using [OHQ.io](https://ohq.io/courses/122).
 : Monday 11am-1pm Eastern - Chris
 : Monday 4:30pm-6:30pm Eastern – Eddie
 : Monday 9pm-11pm Eastern - Hanbang 
@@ -98,7 +98,7 @@ Office hours
 : Wednesday 2:30pm-4:30pm Eastern - Halley
 : Thursday 2pm-3pm Eastern - Yue (Extra Credit Only)
 : Friday 3pm-5pm Eastern - Lisa
-: Friday 2:30pm-4pm Eastern Halley (Python tutorial only)
+: Friday 2:30pm-4pm Eastern Halley (Python tutorial only.  Held on [Gather Town](https://gather.town/aQMGI0l1R8DP0Ovv/penn-cis) in 3401 Walnut outside of room 463C.)
 : Sunday 2pm-4pm Eastern - Yue
 
 
