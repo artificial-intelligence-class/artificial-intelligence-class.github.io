@@ -289,7 +289,7 @@
   type: no_lecture
 -
   date: 2020-10-13
-  slides_old: 08-MDPs.pdf
+  slides: 05-MDPs.pdf
   title:  Markov Decision Processes
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7d673336-f708-41d4-aa8a-aab5012649b0
   readings:   
