@@ -86,7 +86,7 @@ Time and place
 : The final day of class is Tuesday, December 22, 2020.
 
 Office hours 
-: To attend office hours, please logon to [OHQ.io](https://ohq.io/courses/122).
+: To join the office hour queue, please go to [OHQ.io](https://ohq.io/courses/122).
 : Monday 11am-1pm Eastern - Chris
 : Monday 4:30pm-6:30pm Eastern – Eddie
 : Monday 9pm-11pm Eastern - Hanbang 
