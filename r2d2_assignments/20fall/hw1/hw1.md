@@ -244,7 +244,7 @@ We have pre-tuned the parameters in the skeleton code but feel free to fine tune
 5. Set P and D to the last stable values.
 6. Increase the I gain until it brings you to the setpoint with the number of oscillations desired (normally zero but a quicker response can be had if you don't mind a couple oscillations of overshoot)
 
-### 3. AprilTag Tracking [5 points]
+### 3. AprilTag Tracking [2.5 points]
 
 Luke captured a Stormtrooper and asked R2-D2 to guard him. R2-D2 has to keep changing its heading to track the AprilTag held by the prisoner. In this task, you are required to complete the `april_tag_tracking()` function which takes in the `x` and `y` coordinates of the April Tag as input, processes the `x` coordinate through the PID controller, and sets the heading of the R2-D2 based on the PID output. Please use the `rolling_with_u()` function to test out your implementation of this function. Use this [April Tag](AprilTag.pdf) to guide your R2D2. The figure below gives you an idea of the performance expected.
 
@@ -253,7 +253,7 @@ Luke captured a Stormtrooper and asked R2-D2 to guard him. R2-D2 has to keep cha
 	<img src="images/apriltag_tracking.gif" width="49%" />
 </p>
 
-### 4. AprilTag Following [5 points]
+### 4. AprilTag Following [2.5 points]
 
 Luke interrogated the Stormtrooper and obtained information that would help him escape this planet. R2-D2 must follow Luke closely to prevent getting lost. To achieve this goal, R2-D2 has to keep changing its speed based on the distance to the AprilTag. In this task, you need to complete the `april_tag_following()` function, in which the average side length of the April tag is fed as input to the PID controller, and the corresponding output is used to set the speed of the R2-D2. Again, please use the `rolling_with_u()` function to test out your implementation of this function. The figure below gives you an idea of the performance expected.
 
