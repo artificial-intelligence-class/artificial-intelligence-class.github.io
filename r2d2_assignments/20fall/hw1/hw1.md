@@ -105,7 +105,7 @@ def on_collision(droid: SpheroEduAPI):
 droid.register_event(EventType.on_collision, on_collision)
 ```
 
-When a collision is detected, this function should immediately stop the droid from rolling and change the droid's main LED to red (RGB 255, 0, 0) by using the `set_main_led` function. Then it should continue to make the droid roll in the opposite direction with a speed of 80 after a 1 second sleep. Don't forget to turn the LED off (set it back to black) when the droid starts rolling again. Take a short video demonstrating this function based on which you will be graded. As stated earlier, please use the `droid_explore()` function to test out your implementation.
+When a collision is detected, this function should immediately stop the droid from rolling and change the droid's main LED to red (RGB 255, 0, 0) by using the `set_main_led` function. Then it should continue to make the droid roll in the opposite direction with a speed of 80 after a 1 second sleep. Don't forget to turn the LED off (set it back to black) when the droid starts rolling again. As stated earlier, please use the `droid_explore()` function to test out your implementation.
 
 #### Ultrasonic Sensor for Avoidances [10 points]
 
@@ -262,6 +262,9 @@ Luke interrogated the Stormtrooper and obtained information that would help him 
 	<img src="images/apriltag_following.gif" width="49%" />
 </p>
 
+### Video Submission for this part [5 points]
+
+Please record a short video to demonstrate the performance of your AprilTag Tracker.
 
 **Optional** After you finish this part, you could find a partner who also has a R2D2 and you could conduct a robot chasing application. You could attached a small Apriltag on the backpack battery of one R2D2 and use `drive_with_keyboard` you implemented in hw0 to drive this R2D2. The second R2D2 will just run `rolling_with_u`  to follow the first R2D2. Here is a [demo](https://www.youtube.com/watch?v=aHuZVwZAsAM). 
 
