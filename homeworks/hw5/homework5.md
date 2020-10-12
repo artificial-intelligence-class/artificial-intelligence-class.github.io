@@ -107,6 +107,7 @@ Value iteration computes k-step estimates of the optimal values, Vk. In addition
 + `getValue(state)` returns the value of a state.
 + `getPolicy(state)` returns the best action according to computed values.
 + `getQValue(state, action)` returns the q-value of the (state, action) pair. 
+
 These quantities are all displayed in the GUI: values are numbers in squares, q-values are numbers in square quarters, and policies are arrows out from each square.
 
 ___Important:___ Use the "batch" version of value iteration where each vector Vk is computed from a fixed vector Vk-1 (like in lecture), not the "online" version where one single weight vector is updated in place. The difference is discussed in [Sutton & Barto](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf) in the 6th paragraph of chapter 4.1.
