@@ -159,8 +159,8 @@ python gridworld.py -a value -i 100 -g DiscountGrid --discount 0.9 --noise 0.2 -
 Here are the optimal policy types you should attempt to produce:
 
 <ol type="a">
-	<li>Prefer the close exit (+1), risking the cliff (-10)</li>
-	<li>Prefer the close exit (+1), but avoiding the cliff (-10)</li>
+	<li>Prefer the closer exit (+1), risking the cliff (-10)</li>
+	<li>Prefer the closer exit (+1), but avoiding the cliff (-10)</li>
 	<li>Prefer the distant exit (+10), risking the cliff (-10)</li>
 	<li>Prefer the distant exit (+10), avoiding the cliff (-10)</li>
 	<li>Avoid both exits and the cliff (so an episode should never terminate)</li>
