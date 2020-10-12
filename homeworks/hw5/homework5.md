@@ -134,14 +134,14 @@ Hint: Use the `util.Counter` class in __util.py__, which is a dictionary with a 
 
 BridgeGrid is a grid world map with the a low-reward terminal state and a high-reward terminal state separated by a narrow "bridge", on either side of which is a chasm of high negative reward. The agent starts near the low-reward state. With the default discount of 0.9 and the default noise of 0.2, the optimal policy does not cross the bridge. Change only ONE of the discount and noise parameters so that the optimal policy causes the agent to attempt to cross the bridge. Put your answer in question2() of analysis.py. (Noise refers to how often an agent ends up in an unintended successor state when they perform an action.) The default corresponds to:
 
+```
+python gridworld.py -a value -i 100 -g BridgeGrid --discount 0.9 --noise 0.2
+```
+
 <center>
 <img src="value-q2.png" alt="Grid World bridge challenge" class="img-responsive" />
 </center>
 <br/>
-
-```
-python gridworld.py -a value -i 100 -g BridgeGrid --discount 0.9 --noise 0.2
-```
 
 ## 3. Policies [40 Points]
 Consider the DiscountGrid layout, shown below. This grid has two terminal states with positive payoff (in the middle row), a close exit with payoff +1 and a distant exit with payoff +10. The bottom row of the grid consists of terminal states with negative payoff (shown in red); each state in this "cliff" region has payoff -10. The starting state is the yellow square. We distinguish between two types of paths: (1) paths that "risk the cliff" and travel near the bottom row of the grid; these paths are shorter but risk earning a large negative payoff, and are represented by the red arrow in the figure below. (2) paths that "avoid the cliff" and travel along the top edge of the grid. These paths are longer but are less likely to incur huge negative payoffs. These paths are represented by the green arrow in the figure below.
