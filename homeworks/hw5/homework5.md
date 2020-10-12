@@ -5,7 +5,7 @@ img_link: https://xkcd.com/1801/
 caption: Someone needs value iteration 
 title: CIS 521 Homework 5 "Markov Decision Processes"
 active_tab: homework
-release_date: 2020-10-12
+release_date: 2020-10-13
 due_date: 2020-10-20 23:59:00EDT
 materials:
     - 
