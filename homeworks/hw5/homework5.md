@@ -117,12 +117,7 @@ The following command loads your `ValueIterationAgent`, which will compute a pol
 python gridworld.py -a value -i 100 -k 10
 ```
 
-Hint: On the default BookGrid, running value iteration for 5 iterations should give you this output:
-```
-python gridworld.py -a value -i 5
-```
-
-When you run the iterations, the parameter `-s` will let you change the speed at which the simiulation runs. Using a value lower than `1` will slow down the speed of animation. This will come in handy for all problems when you need to visualize the end results. See
+Hint: On the default BookGrid, running value iteration for 5 iterations should give you the output below. When you run the iterations, the parameter `-s` will let you change the speed at which the simiulation runs. Using a value lower than `1` will slow down the speed of animation. This will come in handy for all problems when you need to visualize the end results. 
 ```
 python gridworld.py -a value -i 5 -s 0.2
 ```
