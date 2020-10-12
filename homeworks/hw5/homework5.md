@@ -78,7 +78,7 @@ The code for this project contains the following files, which are available in a
 	* textGridworldDisplay.py: Plug-in for the Gridworld text interface.
 	* graphicsCrawlerDisplay.py: GUI for the crawler robot.
 
-Your code will be autograded for technical correctness. Please ___do not___ change the names of any provided functions or classes within the code, ___do not___ change any file that is not one of the two files for submission explained in 1 above. Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
+Your code will be autograded for technical correctness. Please ___do not___ change the names of any provided functions or classes within the code, ___do not___ change any file that is not one of the two files for submission explained above. Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
 ## MDPs [0 points]
 To get started, run Gridworld in manual control mode, which uses the arrow keys:
