@@ -306,24 +306,21 @@
   date: 2020-10-13
   slides: 05-MDPs-part-2.pdf
   title: MDPs - part 2 
+  recording: https://upenn.zoom.us/rec/share/5BbrIvi87bJGW1mavNMKH1lpK0IWwQtSAzJoYJQOqtY2UcAZGQH_729jSJWnQxLR.NJKFvWQF_2tBR1Ik
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d38a701-365b-4f71-9802-aab501264a1c
   readings:   
     - 
-      title: AIMA Chapter 21 "Reinforcement Learning"
+      title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
       authors: Russell and Norvig
       optional: false 
-  videos: 
-    -
-      url: https://www.youtube.com/watch?v=s93KC4AGKnY
-      title: End of the 1983 movie Wargames
-    -
-      url: https://www.youtube.com/watch?v=WVIIigrPUJs
-      title: Textworld
-      authors: Microsoft Research Montreal 
 -
   date: 2020-10-15
+  title:  Lecture canceled for today
+  type: no_lecture
+-
+  date: 2020-10-20
   slides_old: 10-Reinforcement-Learning-2.pdf
-  title:  Reinforcement Learning - part 2
+  title:  Reinforcement Learning 
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
   readings:   
     - 
@@ -331,6 +328,13 @@
       authors: Russell and Norvig
       optional: false 
   videos:
+    -
+      url: https://www.youtube.com/watch?v=s93KC4AGKnY
+      title: End of the 1983 movie Wargames
+    -
+      url: https://www.youtube.com/watch?v=WVIIigrPUJs
+      title: Textworld
+      authors: Microsoft Research Montreal 
     -
       authors: OpenAI 
       url: https://www.youtube.com/watch?v=kopoLzvh5jY
