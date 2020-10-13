@@ -304,8 +304,8 @@
   type: exam
 -
   date: 2020-10-13
-  slides_old: 09-MDPs-wrapup-and-reinforcement-learning.pdf
-  title: MDPs Wrapup and Reinforcement Learning
+  slides: 05-MDPs-part-2.pdf
+  title: MDPs - part 2 
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d38a701-365b-4f71-9802-aab501264a1c
   readings:   
     - 
