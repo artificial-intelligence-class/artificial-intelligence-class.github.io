@@ -90,13 +90,13 @@ Office hours
 : Monday 11am-1pm Eastern - Chris
 : Monday 4:30pm-6:30pm Eastern – Eddie
 : Monday 9pm-11pm Eastern - Hanbang 
-: Tuesday 10am-12pm Eastern - Bharath
 : Tuesday 2pm-4pm Eastern- Chenyu
 : Tuesday 4pm-6pm Eastern - Aditya
 : Tuesday 6pm-8pm Eastern - Joe
 : Wednesday 12:30pm-2:30pm Eastern - Daniel
 : Wednesday 2:30pm-4:30pm Eastern - Halley
 : Thursday 2pm-3pm Eastern - Yue (Extra Credit Only)
+: Friday 1pm-3pm Eastern - Bharath
 : Friday 3pm-5pm Eastern - Lisa
 : Friday 2:30pm-4pm Eastern - Halley (Python tutorial only.  Halley's Python tutorials will be group sessions held on [Gather Town](https://gather.town/aQMGI0l1R8DP0Ovv/penn-cis) in 3401 Walnut outside of room 463C.)
 : Sunday 2pm-4pm Eastern - Yue
