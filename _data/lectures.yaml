@@ -319,7 +319,8 @@
   type: no_lecture
 -
   date: 2020-10-20
-  title: Wrapup of MDPs, Utilities and (maybe Reinforcement Learning)
+  title: Wrapup of MDPs and Utilities
+  recording: https://upenn.zoom.us/rec/share/WfFDpyIIjVW9LuuB39Bq7YLdxYPMYOjKrp-hIk00uLQ92f-EMzU_CGl8wJr9_Pw2.HQs21bG9aPdSjwPN
   parts: 
     -
       title: MDPs and Utilities 
