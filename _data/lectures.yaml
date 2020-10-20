@@ -319,9 +319,29 @@
   type: no_lecture
 -
   date: 2020-10-20
+  title: Wrapup of MDPs, Utilities and (maybe Reinforcement Learning)
+  parts: 
+    -
+      title: MDPs and Utilities 
+      slides: 05-MDPs-part-3.pdf
+    -
+      title: Reinforcement Learning 
+      slides: 05-Reinforcement-Learning.pdf
+  readings:
+    - 
+      title: AIMA Chapter 16 "Making Simple Decisions" (16.1-16.3)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
+      authors: Russell and Norvig
+      optional: false 
+
+-
+  date: 2020-10-22
+  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
   slides_old: 10-Reinforcement-Learning-2.pdf
   title:  Reinforcement Learning 
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
   readings:   
     - 
       title: AIMA Chapter 21 "Reinforcement Learning"
