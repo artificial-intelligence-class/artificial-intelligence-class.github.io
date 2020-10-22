@@ -341,11 +341,15 @@
 -
   date: 2020-10-22
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
-  slides_old: 10-Reinforcement-Learning-2.pdf
+  slides: 05-Reinforcement-Learning.pdf
   title:  Reinforcement Learning 
   readings:   
     - 
-      title: AIMA Chapter 21 "Reinforcement Learning"
+      title: AIMA Chapter 22 "Reinforcement Learning" (Sections 22.1-22.5)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: AIMA Section 17.3 "Bandit Problems" 
       authors: Russell and Norvig
       optional: false 
   videos:
