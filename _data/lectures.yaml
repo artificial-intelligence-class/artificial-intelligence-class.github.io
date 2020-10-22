@@ -321,13 +321,7 @@
   date: 2020-10-20
   title: Wrapup of MDPs and Utilities
   recording: https://upenn.zoom.us/rec/share/WfFDpyIIjVW9LuuB39Bq7YLdxYPMYOjKrp-hIk00uLQ92f-EMzU_CGl8wJr9_Pw2.HQs21bG9aPdSjwPN
-  parts: 
-    -
-      title: MDPs and Utilities 
-      slides: 05-MDPs-part-3.pdf
-    -
-      title: Reinforcement Learning 
-      slides: 05-Reinforcement-Learning.pdf
+  slides: 05-MDPs-part-3.pdf
   readings:
     - 
       title: AIMA Chapter 16 "Making Simple Decisions" (16.1-16.3)
@@ -345,11 +339,11 @@
   title:  Reinforcement Learning 
   readings:   
     - 
-      title: AIMA Chapter 22 "Reinforcement Learning" (Sections 22.1-22.5)
+      title: AIMA Section 17.3 "Bandit Problems" 
       authors: Russell and Norvig
       optional: false 
     - 
-      title: AIMA Section 17.3 "Bandit Problems" 
+      title: AIMA Chapter 22 "Reinforcement Learning" (Sections 22.1-22.5)
       authors: Russell and Norvig
       optional: false 
   videos:
