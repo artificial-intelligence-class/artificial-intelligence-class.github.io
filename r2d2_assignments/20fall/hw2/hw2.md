@@ -69,7 +69,7 @@ You can download the materials for this assignment here:
 ## Preface
 During a reconnaissance mission gone wrong, R2-D2 was attacked by Stormtroopers, leaving his executive control unit disconnected from his motor control unit. Luckily, R2-D2's motor control unit can still access his 9G-capable network card. He just needs you to SSH into his motor control unit and guide him to the rendezvous with C-3PO and Luke, but time is of the essence, so you must use A\* search to get him there as fast as possible. He just needs you to program and run the A\* search algorithm and integrate motor controls via his motor control unit API.
 
-## Part 1: Compare Different Searching Algorithms [75 points]
+## Part 1: Compare Different Searching Algorithms [72 points]
 
 ## Instructions
 In this assignment, you'll learn the differences between "uninformed" search algorithms like BFS and DFS, and "informed" search algorithms like A\*. You will use both types of algorithms to solve multi-dimensional mazes and see how their performance compares (and save R2-D2!). 
@@ -82,7 +82,7 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 
 Since this is an extra credit assignment, late submissions will not be accepted (you cannot use late days on this assignment).
 
-## 1. Implement a Graph [10 points]
+## 1. Implement a Graph [7 points]
 In order to solve a maze, we first need to create a representation of a maze to run our algorithms on. We will implement our maze as a graph, where each vertex represents a grid cell, and an edge between vertices represents the ability to traverse between those grid cells.
 
 There are many different ways we can implement a graph, and these design decisions will impact the running time of our algorithms. For this part, we will implement a directed, unweighted graph with its edges stored as an adjacency list.
@@ -117,9 +117,9 @@ class Graph:
            in an order such that the path is the shortest."""
         ...
 ```
-1. **[2 points]** The initialization of `Graph(V, E)` should take in a set of vertices `V = {v_1, v_2, ...}` and a set of edges `E = {(v_1, v_2), (v_3, v_4), ...}`.
+1. The initialization of `Graph(V, E)` should take in a set of vertices `V = {v_1, v_2, ...}` and a set of edges `E = {(v_1, v_2), (v_3, v_4), ...}`.
 
-2. **[8 points]** `neighbors(u)` should take in a vertex `u` and return the set of vertices such that there is a path from `u` to every vertex in that set (you don't need to include `u` in that set). Try to avoid recomputing neighborhoods every time the function is called since for large graphs this can waste a lot of time. *Hint*: You should convert the list of edges into an **adjacency list** representation.
+2. **[7 points]** `neighbors(u)` should take in a vertex `u` and return the set of vertices such that there is a path from `u` to every vertex in that set (you don't need to include `u` in that set). Try to avoid recomputing neighborhoods every time the function is called since for large graphs this can waste a lot of time. *Hint*: You should convert the list of edges into an **adjacency list** representation.
 
 For example, for this 2x2 graph,
 
@@ -199,7 +199,7 @@ If you finish all the steps above, you are able to use the provided GUI to displ
 <img width="500" height="330" src="images/test_gui.gif" class="img-responsive"/>
 </p>
 
-## Part 2. Let your R2-D2 rolling in Augment Reality (AR) Environment [30 points]
+## Part 2. Let your R2-D2 rolling in Augment Reality (AR) Environment [28 points]
 
 Now it's time for R2-D2 to show off the path planning skills in real world. In this part, we will use the camera system mounted on the R2-D2. If you forget how to use the Raspberry Pi to control the camera, please go back to the hw0 for reference. The camera and front mount is connected to the hat via magnet and could be easily removed. Remove the front mount, battery and camera and regroup them as the configuration shown below.
 
@@ -254,7 +254,7 @@ It should launch a video streaming window showing grids. Left click on the block
 
 ### 3. Rolling in AR
 
-* `path_to_moves(path)` **[5 points]** take in a calculated path and return a list of tuples which are commands for R2-D2 with the first element being the heading and the second element being the distance to move. The direction range from 0 - 360, and you should use the provided `heading_mapping`. The output should look like this:
+* `path_to_moves(path)` **[8 points]** take in a calculated path and return a list of tuples which are commands for R2-D2 with the first element being the heading and the second element being the distance to move. The direction range from 0 - 360, and you should use the provided `heading_mapping`. The output should look like this:
 
 	```shell
 	>>> path = [(0, 0), (0, 1), (0, 2), (1, 2), (2, 2)]
@@ -262,7 +262,7 @@ It should launch a video streaming window showing grids. Left click on the block
 	[(90, 2), (180, 2)]
 	```
 
-* Finally implement `droid_roll` **[5 points]** which takes in a path and execute the path on the droid by first converting it to movements using `path_to_moves`. You can use `droid.roll(speed, direction, time)` method for the droid to roll. The speed and time combination may varies according to the size of real world map.
+* Finally implement `droid_roll` which takes in a path and execute the path on the droid by first converting it to movements using `path_to_moves`. You can use `droid.roll(speed, direction, time)` method for the droid to roll. The speed and time combination may varies according to the size of real world map.
 
 After implementing everything, put your R2-D2 at the center of the starting point you chose in the AR maze, make sure it is heading the same direction with the AprilTag. Press **'r'** in AR maze to execute the path using the robot. 
 
