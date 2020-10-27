@@ -319,6 +319,10 @@
   type: no_lecture
 -
   date: 2020-10-20
+  title:  HW5 due (MDPs and GridWorld), Practice Midterm Released
+  type: exam
+-
+  date: 2020-10-20
   title: Wrapup of MDPs and Utilities
   recording: https://upenn.zoom.us/rec/share/WfFDpyIIjVW9LuuB39Bq7YLdxYPMYOjKrp-hIk00uLQ92f-EMzU_CGl8wJr9_Pw2.HQs21bG9aPdSjwPN
   slides: 05-MDPs-part-3.pdf
@@ -364,321 +368,33 @@
       url: https://www.youtube.com/watch?v=M-QUkgk3HyE
       title: Autonomous Helicopters Teach Themselves to Fly Stunts
 -
-  date: 2020-10-20
-  title:  HW5 due (MDPs and GridWorld), Practice Midterm Released
-  type: exam
--
-  date: 2020-10-22
-  slides_old: 11-Probabilities.pdf 
-  title:  Probabilies
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=02d25e7b-5be9-48de-a513-aa7f0110399a
-  readings:   
-    - 
-      title: AIMA Chapter 13 "Quantifying Uncertainty" (13.1-13.5)
-      authors: Russell and Norvig
-      optional: false 
-  videos:
-    -
-      authors: World Science Festival 
-      url: https://www.youtube.com/watch?v=BcvLAw-JRss
-      title: Everything You Ever Wanted to Know About Bayes' Theorem But Were Afraid To Ask
--
-  date: 2020-10-15
-  slides_old: 12-Markov-Models.pdf
-  title:  Markov Models 
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f27b7438-ad1f-48a3-a337-aab501264aa5
-  readings:  
-    - 
-      title: AIMA Chapter 15 "Probabilistic Reasoning Over Time" (15.2-15.5)
-      authors: Russell and Norvig
-      optional: false 
-  videos:
-    -
-      authors: Khan Academy 
-      url: https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication
-      title: A mathematical theory of communication
--
-  date: 2020-10-17
-  slides_old: 13-Bayes-Nets.pdf
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=06b4ceba-09e6-4abe-a26d-aab501264ac6
-  title:  Bayes' Nets
-  readings:   
-    - 
-      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
-      authors: Russell and Norvig
-      optional: false 
-  videos:
-    -
-      authors: Daphne Koller 
-      url: https://www.youtube.com/playlist?list=PLBAGcD3siRDjiQ5VZQ8t0C7jkHQ8fhuq8
-      title: Probabilistic Graphical Models online course
--
-  date: 2020-10-20
-  title:  HW6 due (Reinforcement Learning), no homework this week. Study for midterm.
-  type: exam
--
-  date: 2020-10-22
-  slides_old: 14-BN-wrapup-Naive-Bayes.pdf
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9428cfd3-a134-4b3a-b2c5-aab501264af0
-  title: Bayes' Nets wrap up and Naieve Bayes
-  readings:   
-    - 
-      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
-      authors: Russell and Norvig
-      optional: false
-    - 
-      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
-      authors: Russell and Norvig
-      optional: false 
-  videos:
-    - 
-      authors: Name Explain
-      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
-      title: Why is Junk Email Called Spam?
-    -
-      authors: Monty Python 
-      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
-      title: SPAM
-
--
   date: 2020-10-26
   title:  Midterm exam released  
   type: exam 
 -
   date: 2020-10-27
-  title:  Midterm exam due  
-  type: exam 
--
-  date: 2020-10-29
-  slides_old: 15-Naive-Bayes-and-Perceptron.pdf
-  title:  Machine Learning&colon; Naieve Bayes and Perceptrons
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c019251a-9eb1-4a5d-b55e-aab501264b45
-  readings: 
-    - 
-      title: AIMA Chapter 18 "Learning from Examples" (18.6.3)
-      authors: Russell and Norvig
-      optional: false  
-    - 
-      title: Neural Networks and Deep Learning Chapter 1 "Using Neural Nets to Recognize Handwritten Digits" 
-      authors: Michael Nielsen
-      url: http://neuralnetworksanddeeplearning.com/chap1.html
-      optional: true  
-    - 
-      title: Tinker With a Neural Network in Your Browser
-      url: http://playground.tensorflow.org/
-      optional: true
-    - 
-      title: Electronic 'Brain' Teaches Itself
-      authors: New York Times (July 13, 1958)
-      url: https://timesmachine.nytimes.com/timesmachine/1958/07/13/91396361.html?action=click&contentCollection=Archives&module=LedeAsset&region=ArchiveBody&pgtype=article&pageNumber=116
-      optional: true  
-  videos:
-    - 
-      authors: Paul Anderson
-      url: https://www.youtube.com/watch?v=HZh0A-lWSmY
-      title: The Neuron
-    - 
-      authors: 3Blue1Brown
-      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
-      title: Essence of Linear Algebra
-    - 
-      authors: Name Explain
-      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
-      title: Why is Junk Email Called Spam?
-    -
-      authors: Monty Python 
-      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
-      title: SPAM
--
-  date: 2020-10-29
-  title: HW6 due (Reinforcement Learning), HW7 released (Perceptrons)
-  type: exam
--
-  date: 2020-10-30
-  title: Grade Type Change Deadline
-  type: no_lecture
--
-  date: 2020-11-03
-  slides_old: 16-Vector-Space-Semantics.pdf
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b426d17e-a201-4f2d-bb3a-aab501264b66
-  title: NLP (Natural Language Processing)
-  readings:
-    -
-      title: Chapter 3 "Language Modeling with N-Grams"
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/3.pdf
-    -
-      title: Chapter 6 "Vector Semantics"
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
-  videos:
-    - 
-      title: Overview of distributed word representations
-      authors: Chris Potts
-      url: https://www.youtube.com/watch?v=gtuhPq0Xyno&index=1&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
-      length: 10 minutes
-    - 
-      title: Vector comparison for distributed word representations
-      authors: Chris Potts
-      url: https://www.youtube.com/watch?v=LYH93YnhuyQ&t=304s&index=2&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
-      length: 10 minutes
-    - 
-      title: Matrix reweighting for distributed word representations
-      authors: Chris Potts
-      url: https://www.youtube.com/watch?v=WFySbJ3FGcM&index=3&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
-      length: 16 minutes
--
-  date: 2020-11-05
-  slides_old: 17-Vector-Space-Semantics-part-2.pdf
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee27afd4-35ee-40e3-832f-aab501264b82
-  title: NLP part 2
-  readings:
-    -
-      title: Chapter 3 "Language Modeling with N-Grams"
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/3.pdf
-    -
-      title: Chapter 6 "Vector Semantics"
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
-  videos:
-    - 
-      title: Overview of distributed word representations
-      authors: Chris Potts
-      url: https://www.youtube.com/watch?v=gtuhPq0Xyno&index=1&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
-      length: 10 minutes
-    - 
-      title: Vector comparison for distributed word representations
-      authors: Chris Potts
-      url: https://www.youtube.com/watch?v=LYH93YnhuyQ&t=304s&index=2&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
-      length: 10 minutes
-    - 
-      title: Matrix reweighting for distributed word representations
-      authors: Chris Potts
-      url: https://www.youtube.com/watch?v=WFySbJ3FGcM&index=3&list=PLfmUaIBTH8exY7fZnJss508Bp8k1R8ASG
-      length: 16 minutes
--
-  date: 2020-11-05
-  title:  HW7 due (Perceptrons), HW8 released (Generate a Novel)
-  type: exam
--
-  date: 2020-11-09
-  title: Last day to withdraw from a course
-  type: no_lecture
--
-  date: 2020-11-10
-  slides_old: 18-Vector-Space-Semantics-part-3.pdf
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aab22f66-9cb4-413b-82bd-aab501264bac
-  title: NLP part 3
-  readings:
-    -
-      title: Chapter 6 "Vector Semantics"
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
--
-  date: 2020-11-12
-  slides_old: 19-logistic-regression.pdf
-  title: Logistic Regression and Stochastic Gradient Descent
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e98aa713-242e-4010-a254-aab501264bcd
+  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
+  slides: 05-Reinforcement-Learning-part-2.pdf
+  title:  Reinforcement Learning Part 2
+  recording: https://upenn.zoom.us/rec/share/jCElX4fCkHGuudzQKMka-rW0VEQNOSZdwix6aP-BWbo7P_fDZCWwxZ4UgsI45Hbu.hWrtsnj03IPn4SG0
   readings:   
     - 
-      title: Chapter 5 "Logistic Regression"
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/5.pdf 
+      title: AIMA Chapter 22 "Reinforcement Learning" (Sections 22.1-22.5)
+      authors: Russell and Norvig
+      optional: false 
   videos:
-    - 
-      authors: 3Blue1Brown
-      url: https://www.youtube.com/watch?v=sULa9Lc4pck-3pi
-      title: Forget how logarithms work?  Try out this notation instead.
--
-  date: 2020-11-12
-  title:  HW8 due (Generate a Novel), HW9 released (Neural Networks)
-  type: exam
--
-  date: 2020-11-17
-  slides_old: 20-neural-networks.pdf
-  title: Neural Networks
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=11e3f835-4d9e-4e34-90f1-aab501264bf7
-  readings:
-    - 
-      title: Chapter 7 "Neural Networks and Neural Language Models"
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf 
-  videos:
-    - 
-      authors: 3Blue1Brown
-      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
-      title: Neural Networks
-    - 
-      authors: Andrew Ng
-      url: https://www.coursera.org/learn/neural-networks-deep-learning
-      title: Neural Networks and Deep Learning
--
-  date: 2020-11-17
-  title:  Practice Exam 3 released on Gradescope
-  type: exam
--
-  date: 2020-11-19
-  slides_old: 21-neural-networks-2.pdf
-  title: Neural Networks part 2&colon; Neural Language Models
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=69e95d5a-01a0-48ca-9f65-aab501264c22
-  readings:
-    - 
-      title: Chapter 7 "Neural Networks and Neural Language Models"
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf 
-    - 
-      title: Chapter 9 "Sequence Processing with Recurrent Networks"
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/9.pdf
-  videos:
-    - 
-      authors: Andrew Ng
-      url: https://www.coursera.org/learn/neural-networks-deep-learning
-      title: Neural Networks and Deep Learning    
--
-  date: 2020-11-20
-  title: Last Day of In-Person Instruction
-  type: no_lecture
--
-  date: 2020-11-24
-  slides_old: 22-neural-networks-3.pdf
-  title: Neural Networks part 3
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c8998341-aad0-48fe-a9e5-aab501264caf
-  readings:
-    - 
-      title: Chapter 9 "Sequence Processing with Recurrent Networks"
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/9.pdf
--
-  date: 2020-11-24
-  title:  HW9 due (Neural Networks), study for exam
-  type: exam
--
-  date: 2020-11-24
-  title:  Practice Exam 3 is due on Gradescope
-  type: exam
--
-  date: 2020-11-26
-  title: No Lecture (Thanksgiving Break)
-  type: no_lecture
--
-  date: 2020-12-01
-  slides_old: 
-  title: TBD - computer vision? SLAM?
-  recording_old: 
--
-  date: 2020-12-03
-  slides_old: 
-  title: TBD - computer vision? SLAM?
-  recording_old: 
--
-  date: 2020-12-08
-  slides_old: 
-  title: TBD - computer vision? SLAM?
-  recording_old: 
--
-  date: 2020-12-10
-  title:  Midterm exam 3
-  type: exam
-
+    -
+      url: https://www.youtube.com/watch?v=s93KC4AGKnY
+      title: End of the 1983 movie Wargames
+    -
+      url: https://www.youtube.com/watch?v=WVIIigrPUJs
+      title: Textworld
+      authors: Microsoft Research Montreal 
+    -
+      authors: OpenAI 
+      url: https://www.youtube.com/watch?v=kopoLzvh5jY
+      title: Multi-Agent Hide and Seek q
+    -
+      authors: Stanford University 
+      url: https://www.youtube.com/watch?v=M-QUkgk3HyE
+      title: Autonomous Helicopters Teach Themselves to Fly Stunts
