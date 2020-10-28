@@ -51,7 +51,7 @@ class Graph:
         """Use A* algorithm to find the path that begins at start and passes through all the goals in the given graph,
         in an order such that the path is the shortest.
 
-        :return: an optional tuple (shortest_path, optimal_order),
+        :return: a tuple (optimal_order, shortest_path),
                  where shortest_path is a list of vertices that represents the path from start that goes through all the
                  goals such that the path is the shortest; optimal_order is an ordering of goals that you visited in
                  order that results in the above shortest_path. Return (None, None) if no such path exists."""

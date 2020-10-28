@@ -7,7 +7,7 @@ title: CIS 521 Robot Excercise 2 "Robot Navigation" (Extra Credit)
 attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2020 by Yue Yang, Hanbang Wang, Joe Cappadona, and Chris Callison-Burch.
 active_tab: homework
 release_date: 2020-10-15
-due_date: 2020-10-29 23:59:00EDT
+due_date: 2020-10-31 23:59:00EDT
 materials:
     - 
         name: skeleton file
