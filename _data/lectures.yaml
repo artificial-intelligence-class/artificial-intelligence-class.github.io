@@ -373,11 +373,9 @@
   type: exam 
 -
   date: 2020-10-27
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
-  recording: https://upenn.zoom.us/rec/share/KGxeCl4Fb9HgOEHoEGfiFYeAkiGyFOP6NKOHAe-g_5jRpCBKK5glyKwpRPfoD0MA.uwN-ngZvJ05d0Mtd
   slides: 05-Reinforcement-Learning-part-2.pdf
   title:  Reinforcement Learning Part 2
-  recording: https://upenn.zoom.us/rec/share/jCElX4fCkHGuudzQKMka-rW0VEQNOSZdwix6aP-BWbo7P_fDZCWwxZ4UgsI45Hbu.hWrtsnj03IPn4SG0
+  recording: https://upenn.zoom.us/rec/share/G7whnr2CvuMLGTSv-usjNYmGe2L1dqt2Jo-07c3x7Jp1y1jPWUSCHM3gc7BOlBB1.KkbqZPAOp92-6sav
   readings:   
     - 
       title: AIMA Chapter 22 "Reinforcement Learning" (Sections 22.1-22.5)
@@ -399,3 +397,140 @@
       authors: Stanford University 
       url: https://www.youtube.com/watch?v=M-QUkgk3HyE
       title: Autonomous Helicopters Teach Themselves to Fly Stunts
+
+-
+  date: 2020-10-28
+  title:  Midterm due, HW6 released (Reinforcement Learning)
+  type: exam
+-
+  date: 2020-10-29
+  recording:
+  slides: 
+  title: Machine Learning&colon; Perceptrons and Logistic Regression
+  readings:   
+    - 
+      title: AIMA Chapter 19 "Learning from Examples" (Sections 19.1-19.6)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: Speech and Language Processing Chapter 5 "Logistic Regression" 
+      authors: Jurafsky and Martin
+      optional: false 
+      url: https://web.stanford.edu/~jurafsky/slp3/5.pdf
+  videos:
+    - 
+      authors: Paul Anderson
+      url: https://www.youtube.com/watch?v=HZh0A-lWSmY
+      title: The Neuron
+    - 
+      authors: 3Blue1Brown
+      url: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+      title: Essence of Linear Algebra
+    - 
+      authors: Name Explain
+      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
+      title: Why is Junk Email Called Spam?
+    -
+      authors: Monty Python 
+      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
+      title: SPAM
+-
+  date: 2020-11-03
+  title:  HW6 due, HW7 released 
+  type: exam
+-
+  date: 2020-11-03
+  title:  No lecture today (Go vote!)
+  type: no_lecture
+-
+  date: 2020-11-05
+  recording:
+  slides: 
+  title: Pre-Recorded Lecture
+  readings:   
+-
+  date: 2020-11-10
+  title:  HW7 due, HW8 released
+  type: exam
+-
+  date: 2020-11-10
+  recording:
+  slides: 
+  title: Lecture
+  readings:
+-
+  date: 2020-11-12
+  recording:
+  slides: 
+  title: Lecture
+  readings:    
+-
+  date: 2020-11-17
+  title:  HW8 due, HW9 released
+  type: exam
+-
+  date: 2020-11-17
+  recording:
+  slides: 
+  title: Lecture
+  readings:    
+-
+  date: 2020-11-19
+  recording:
+  slides: 
+  title: Lecture
+  readings:    
+-
+  date: 2020-11-24
+  title:  HW9 due
+  type: exam
+-
+  date: 2020-11-24
+  recording:
+  slides: 
+  title: Lecture
+  readings:    
+-
+  date: 2020-11-26
+  title:  No lecture today (Thanksgiving)
+  type: no_lecture
+-
+  date: 2020-12-01
+  title:  Practice midterm released
+  type: exam
+-
+  date: 2020-12-01
+  recording:
+  slides: 
+  title: Lecture
+  readings:    
+-
+  date: 2020-12-03
+  recording:
+  slides: 
+  title: Lecture
+  readings:    
+-
+  date: 2020-12-05
+  title:  Practice midterm due
+  type: exam
+-
+  date: 2020-12-08
+  title:  Midterm 2 released
+  type: exam
+-
+  date: 2020-12-08
+  recording:
+  slides: 
+  title: Lecture
+  readings:    
+-
+  date: 2020-12-10
+  recording:
+  slides: 
+  title: Final class
+  readings:    
+-
+  date: 2020-12-10
+  title:  Midterm 2 due
+  type: exam
