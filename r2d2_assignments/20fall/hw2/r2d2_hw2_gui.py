@@ -55,7 +55,7 @@ class Grid(tk.Canvas):
                 self.create_polygon(lx, by, rx, by, (lx + rx) / 2, by + TRI_HEIGHT, fill='#2683F5')
 
         self.bind('<Button-1>', self.click)
-        self.bind('<Button-3>', self.click)
+        self.bind('<Button-2>', self.click)
 
     def __draw_end(self, x, y):
         self.tag_lower(self.create_oval(
@@ -85,7 +85,7 @@ class Grid(tk.Canvas):
                 (x + 1) * SQUARE_SIZE - MARGIN, (y + 1) * SQUARE_SIZE - MARGIN,
                 fill='red', tags='start', outline=''))
             self.__start = (y, x)
-        elif event.num == 3:
+        elif event.num == 2:
             put_tag = True
             if self.__method == 'tsp':
                 for item in self.find_overlapping(event.x - 1, event.y - 1, event.x + 1, event.y + 1):
