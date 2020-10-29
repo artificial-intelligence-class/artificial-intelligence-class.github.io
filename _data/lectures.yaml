@@ -403,10 +403,34 @@
   title:  Midterm due, HW6 released (Reinforcement Learning)
   type: exam
 -
+  date: 2020-11-05
+  recording:
+  slides: 06-language-models-and-probabilities.pdf
+  title: Probabilities and Language Models 
+  readings:
+    - 
+      title: AIMA Chapter 12 "Quantifying Uncertainty" (Sections 12.1-12.7)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: Speech and Language Processing Chapter 3 "N-Gram Language Models" 
+      authors: Jurafsky and Martin
+      optional: false 
+      url: https://web.stanford.edu/~jurafsky/slp3/3.pdf
+  videos:
+-
+  date: 2020-11-03
+  title:  HW6 due, HW7 released 
+  type: exam
+-
+  date: 2020-11-03
+  title:  No lecture today (Go vote!)
+  type: no_lecture
+-
   date: 2020-10-29
   recording:
   slides: 
-  title: Machine Learning&colon; Perceptrons and Logistic Regression
+  title: (Pre-Recorded) Machine Learning&colon; Perceptrons and Logistic Regression
   readings:   
     - 
       title: AIMA Chapter 19 "Learning from Examples" (Sections 19.1-19.6)
@@ -434,20 +458,6 @@
       authors: Monty Python 
       url: https://www.youtube.com/watch?v=cFrtpT1mKy8
       title: SPAM
--
-  date: 2020-11-03
-  title:  HW6 due, HW7 released 
-  type: exam
--
-  date: 2020-11-03
-  title:  No lecture today (Go vote!)
-  type: no_lecture
--
-  date: 2020-11-05
-  recording:
-  slides: 
-  title: Pre-Recorded Lecture
-  readings:   
 -
   date: 2020-11-10
   title:  HW7 due, HW8 released
