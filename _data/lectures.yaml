@@ -404,7 +404,7 @@
   type: exam
 -
   date: 2020-11-05
-  recording:
+  recording: https://upenn.zoom.us/rec/share/HTounDiz50-ubK37gb1imk_ufsJY8x8CEro261pIPYIE7d_sRwuBu4pEVTbQHEul.BzxZjp3lyKMjC9sW
   slides: 06-language-models-and-probabilities.pdf
   title: Probabilities and Language Models 
   readings:
