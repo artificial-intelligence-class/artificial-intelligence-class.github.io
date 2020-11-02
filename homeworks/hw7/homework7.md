@@ -1,20 +1,20 @@
 ---
 layout: default
-img: machine_learning.png
-img_link: http://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning
-caption: Machine Learning
-title: CIS 521 Homework 7 "Perceptrons"
+img: ios_keyboard.png
+img_link: http://www.explainxkcd.com/wiki/index.php/1427:_iOS_Keyboard
+caption: Movie quotes according to autocomplete
+title: CIS 521 Homework 7 "Generate a Novel"
 active_tab: homework
-release_date: 2019-11-05
-due_date: 2019-11-12 23:59:00EDT
+release_date: 2020-11-3
+due_date: 2020-11-10 23:59:00EDT
 materials:
     - 
         name: skeleton file
         url: homeworks/hw7/homework7.py 
     - 
-        name: data sets (python file)
-        url: homeworks/hw7/homework7_data.py
-submission_link: https://www.gradescope.com/courses/59562
+        name: Frankenstein (text file)
+        url: homeworks/hw7/frankenstein.txt
+submission_link: https://www.gradescope.com/courses/160263
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -55,21 +55,13 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-<style>
-    div.algorithm {
-        width: 90%;
-        margin: 1em auto;
-        font-family: Georgia,Times,Times New Roman,serif; 
-    }
-</style>
 
-
-Homework 7: Perceptrons [100 points]
+Homework 7: Generate a Novel [100 points]
 =============================================================
 
 ## Instructions
 
-In this assignment, you will gain experience working with binary and multiclass perceptrons.
+In this assignment, you will gain experience working with Markov models on text.
 
 A skeleton file [homework7.py](homework7.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
@@ -82,170 +74,172 @@ You are strongly encouraged to follow the Python style guidelines set forth in [
 Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
+## 1. Markov Models [95 points]
 
-## 1. Perceptrons [35 points]
+In this section, you will build a simple language model that can be used to generate random text resembling a source document. Your use of external code should be limited to built-in Python modules, which excludes, for example, NumPy and NLTK.
 
-In this section, you will implement two varieties of the standard perceptron: one which performs binary classification, distinguishing between positive and negative instances, and one which performs multiclass classification, distinguishing between an arbitrary number of labeled groups.
-
-As in previous assignments, your use of external code should be limited to built-in Python modules, which excludes packages such as NumPy and NLTK.
-
-1. **[15 points]** A binary perceptron is one of the simplest examples of a linear classifier. Given a set of data points each associated with a positive or negative label, the goal is to learn a vector $\vec{w}$  such that $\vec{w} \cdot \vec{x}\_+ > 0$ for positive instances $\vec{x}\_+$ and $\vec{w} \cdot \vec{x}\_- \le 0$ for negative instances $\vec{x}\_-$.
-
-    One learning algorithm for this problem initializes the weight vector $\vec{w}$ to the zero vector, then loops through the training data for a fixed number of iterations, adjusting the weight vector whenever a sample is misclassified.
-
-    <div class="algorithm">
-        <p><b>Input:</b></p>
-        <p>A list $T$ of training examples $(\vec{x}_1, y_1), \cdots, (\vec{x}_n, y_n)$, where $y_i \in \{+, -\}$; the number of passes $N$ to make over the data set.</p>
-        <p><b>Output:</b></p>
-        <p>The weight vector $\vec{w}$.</p>
-        <p><b>Procedure:</b></p>
-        <ol>
-            <li>Initialize the weight vector as $\vec{w} \gets 0$.</li>
-            <li><b>for</b> iteration $= 1$ <b>to</b> $N$ <b>do</b></li>
-            <li style="text-indent: 1em"><b>for</b> each example $(\vec{x}_i, y_i) \in T$ <b>do</b></li>
-            <li style="text-indent: 2em">Compute the predicted class as $\hat{y}_i = \text{sign}(\vec{w} \cdot \vec{x}_i)$.</li>
-            <li style="text-indent: 2em"><b>if</b> $\hat{y}_i \ne y_i$ <b>then</b></li>
-            <li style="text-indent: 3em">Set $\vec{w} \gets \vec{w} + \vec{x}_i$ if $y_i$ is positive, or $\vec{w} \gets \vec{w} - \vec{x}_i$ if $y_i$ is negative.</li>
-            <li style="text-indent: 2em"><b>end if</b></li>
-            <li style="text-indent: 1em"><b>end for</b></li>
-            <li><b>end for</b></li>
-        </ol>
-    </div>
-
-    Implement the initialization and prediction methods `__init__(self, examples, iterations)` and `predict(self, x)` in the `BinaryPerceptron class` according to the above specification.
-
-    During initialization, you should train the weight vector $\vec{w}$ on the input data using iterations passes over the data set, then store $\vec{w}$ as an internal variable for future use. Each example in the examples list will be a 2-tuple $(\vec{x} , y)$ of a data point paired with its binary label `True` or `False`.
-
-    The prediction method should take as input an unlabeled example $\vec{x}$ and compute the predicted label as sign($\vec{w} \cdot \vec{x}$), returning `True` if $\vec{w} \cdot \vec{x} > 0$ or `False` if $\vec{w} \cdot \vec{x} \le 0$.
-
-    In this assignment, we will represent vectors such as $\vec{w}$ and $\vec{x}$ in Python as dictionary mappings from feature names to values. If a feature is absent from a vector, then its value is assumed to be zero. This allows for efficient storage of sparse, high-dimensional vectors, and encourages efficient implementations which consider only non-zero elements when computing dot products. Note that in general, the weight vector $\vec{w}$ will have a non-zero value associated with every feature, whereas individual instances $\vec{x}$ will have only a handful of non-zero values. You are encouraged to keep this asymmetry in mind when writing your code, as it can impact performance if not taken into account.
-
-
+1. **[5 points]** Write a simple tokenization function `tokenize(text)` which takes as input a string of text and returns a list of tokens derived from that text. Here, we define a token to be a contiguous sequence of non-whitespace characters, with the exception that any punctuation mark should be treated as an individual token. *Hint: Use the built-in constant `string.punctuation`, found in the `string` module.*
+    
     ```python
-    # Define the training and test data
-    >>> train = [({"x1": 1}, True), ({"x2": 1}, True), ({"x1": -1}, False),
-    ...         ({"x2": -1}, False)]
-    >>> test = [{"x1": 1}, {"x1": 1, "x2": 1}, {"x1": -1, "x2": 1.5},
-    ...         {"x1": -0.5, "x2": -2}]
-
-    # Train the classifier for one iteration
-    >>> p = BinaryPerceptron(train, 1)
-
-    # Make predictions on the test data
-    >>> [p.predict(x) for x in test]
-    [True, True, True, False]
-    ```
-
-2. **[20 points]** A multiclass perceptron uses the same linear classification framework as a binary perceptron, but can accommodate an arbitrary number of classes rather than just two. Given a set of data points and associated labels, where the labels are assumed to be drawn from some set {$\mathscr{l}\_1, \cdots,\mathscr{l}\_m$}, the goal is to learn a collection of weight vectors $\vec{w}\_{\mathscr{l}\_1}, \cdots, \vec{w}\_{\mathscr{l}\_m}$ such that $\text{argmax}\_{\mathscr{l}\_k} (\vec{w}\_{\mathscr{l}\_k}\cdot \vec{x})$ equals the correct label $\mathscr{l}$ for each input pair $(\vec{x}, \mathscr{l})$.
-
-
-    The learning algorithm for this problem is similar to the one for the binary case. All weight vectors are first initialized to zero vectors, and then several passes are made over the training data, with the appropriate weight vectors being adjusted whenever a sample is misclassified.
-
-
-    <div class="algorithm">
-        <p><b>Input:</b></p>
-        <p>A list $T$ of training examples $(\vec{x}_1, y_1), \cdots, (\vec{x}_n, y_n)$, where the labels $y_i$ are drawn from the set $\{\ell_1, \cdots, \ell_m\}$; the number of passes $N$ to make over the data set.</p>
-        <p><b>Output:</b></p>
-        <p>The weight vectors $\vec{w}_{\ell_1}, \cdots, \vec{w}_{\ell_m}$.</p>
-        <p><b>Procedure:</b></p>
-        <ol>
-            <li>Initialize the weight vectors as $\vec{w}_{\ell_k} \gets 0$ for $k = 1, \cdots, m$.</li>
-            <li><b>for</b> iteration $= 1$ <b>to</b> $N$ <b>do</b></li>
-            <li style="text-indent: 1em"><b>for</b> each example $(\vec{x}_i, y_i) \in T$ <b>do</b></li>
-            <li style="text-indent: 2em">Compute the predicted label as $\hat{y}_i = \text{argmax}_{\ell_k} (\vec{w}_{\ell_k} \cdot \vec{x}_i)$.</li>
-            <li style="text-indent: 2em"><b>if</b> $\hat{y}_i \ne y_i$ <b>then</b></li>
-            <li style="text-indent: 3em">Increase the score for the correct class by setting $\vec{w}_{y_i} \gets \vec{w}_{y_i} + \vec{x}_i$.</li>
-            <li style="text-indent: 3em">Decrease the score for the predicted class by setting $\vec{w}_{\hat{y}_i} \gets \vec{w}_{\hat{y}_i} - \vec{x}_i$.</li>
-            <li style="text-indent: 2em"><b>end if</b></li>
-            <li style="text-indent: 1em"><b>end for</b></li>
-            <li><b>end for</b></li>
-        </ol>
-    </div>
-
-    Implement the initialization and prediction methods `__init__(self, examples, iterations)` and  `predict(self, x)` in the `MulticlassPerceptron` class according to the above specification.
-
-    During initialization, you should train the weight vectors $\vec{w}\_{\ell_k}$ on the input data using iterations passes over the data set, then store them as internal variables for future use. Each example in the examples list will be a 2-tuple $(\vec{x} , y)$ of a data point paired with its label. You will have to perform a single pass over the data set at the beginning to determine the set of labels which appear in the training examples. Do not make any assumptions about the form taken on by the labels; they might be numbers, strings, or other Python values.
-
-    The prediction method should take as input an unlabeled example $\vec{x}$  and return the predicted label $\ell = \text{argmax}\_{\ell_k}(\vec{w}\_{\ell_k} \cdot \vec{x})$.
-
-
-    ```python
-    # Define the training data to be the corners and edge midpoints of the unit square
-    >>> train = [({"x1": 1}, 1), ({"x1": 1, "x2": 1}, 2), ({"x2": 1}, 3),
-    ...         ({"x1": -1, "x2": 1}, 4), ({"x1": -1}, 5), ({"x1": -1, "x2": -1}, 6),
-    ...         ({"x2": -1}, 7), ({"x1": 1, "x2": -1}, 8)]
-
-    # Train the classifier for 10 iterations so that it can learn each class
-    >>> p = MulticlassPerceptron(train, 10)
-
-    # Test whether the classifier correctly learned the training data
-    >>> [p.predict(x) for x, y in train]
-    [1, 2, 3, 4, 5, 6, 7, 8]
-    ```
-
-
-## 2. Applications [60 points]
-
-
-In this section, you will use the general-purpose perceptrons implemented above to create classification systems for a number of specific problems. In each case, you will be responsible for creating feature vectors from the raw data, determining which type of perceptron should be used, and deciding how many passes over the training data should be performed. You will likely require some experimentation to achieve good results. The requisite data sets have been provided as Python objects in [homework7_data.py](homework7_data.py), which has been pre-imported under the module name data in the skeleton file.
-
-
-1. **[10 points]** Ronald Fisher's iris flower data set has been a benchmark for statistical analysis and machine learning since it was first released in 1936. It contains 50 samples from each of three species of the iris flower: iris setosa, iris versicolor, and iris virginica. Each sample consists of four measurements: the length and width of the sepals and petals of the specimen, in centimeters.
-
-    Your task is to implement the `__init__(self, data)` and `classify(self, instance)` methods in the `IrisClassifier` class, which should perform training and classification on this data set. Example data will be provided as a list of 2-tuples $(\vec{x}, y)$, where $\vec{x}$ is a 4-tuple of real-valued measurements and $y$ is the name of a species. Test instances will be provided in the same format as the $\vec{x}$ components of the training examples.
-
-    ```python
-    >>> c = IrisClassifier(data.iris)
-    >>> c.classify((5.1, 3.5, 1.4, 0.2))
-    'iris-setosa'
+    >>> tokenize("  This is an example.  ")
+    ['This', 'is', 'an', 'example', '.']
     ```
     
     ```python
-    >>> c = IrisClassifier(data.iris)
-    >>> c.classify((7.0, 3.2, 4.7, 1.4))
-    'iris-versicolor'
+    >>> tokenize("'Medium-rare,' she said.")
+    ["'", 'Medium', '-', 'rare', ',', "'", 'she', 'said', '.']
     ```
     
-2. **[10 points]** The National Institute of Standards and Technology has released a collection of bitmap images depicting thousands of handwritten digits from different authors. Though originally presented as $32\times32$ blocks of binary pixels, the data has been pre-processed by dividing the images into nonoverlapping blocks of $4\times4$ pixels and counting the number of activated pixels in each block. This reduces the dimensionality of the data, making it easier to work with, and also provides some robustness against minor distortions. Each processed image is therefore represented by a list of $8\times 8=64$ values between 0 and 16 (inclusive), along with a label between 0 and 9 corresponding to the digit which was origially written.    
-    Your task is to implement the `__init__(self, data)` and `classify(self, instance)` methods in the `DigitClassifier` class, which should perform training and classification on this data set. Example data will be provided as a list of 2-tuples $(\vec{x}, y)$, where $\vec{x}$ is a 64-tuple of pixel counts between 0 and 16 and $y$ is the digit represented by the image. Test instances will be provided in the same format as the $\vec{x}$ components of the training examples.
-
+2. **[10 points]** Write a function `ngrams(n, tokens)` that produces a list of all $n$-grams of the specified size from the input token list. Each $n$-gram should consist of a 2-element tuple (context, token), where the context is itself an $(n−1)$-element tuple comprised of the $n−1$ words preceding the current token. The sentence should be padded with $n−1$ `"<START>"` tokens at the beginning and a single `"<END>"` token at the end. If $n=1$, all contexts should be empty tuples. You may assume that $n\ge1$.
+    
     ```python
-    >>> c = DigitClassifier(data.digits)
-    >>> c.classify((0,0,5,13,9,1,0,0,0,0,13,15,10,15,5,0,0,3,15,2,0,11,8,0,0,4,12,0,0,
-    ...  8,8,0,0,5,8,0,0,9,8,0,0,4,11,0,1,12,7,0,0,2,14,5,10,12,0,0,0,0,6,13,10,0,0,0))
-    0
+    >>> ngrams(1, ["a", "b", "c"])
+    [((), 'a'), ((), 'b'), ((), 'c'), ((), '<END>')]
     ```
 
-3. **[10 points]** A simple data set of one-dimensional data is given in `data.bias`, where each example consists of a single positive real-valued feature paired with a binary label. Because the binary perceptron discussed in the previous section contains no bias term, a classifier will not be able to directly distinguish between the two classes of points, despite them being linearly separable. To see why, we observe that if the weight vector (consisting of a single component) is positive, then all instances will be labeled as positive, and if the weight vector is negative, then all instances will be labeled as negative. It is therefore necessary to augment the input data with an additional feature in order to allow a constant bias term to be learned.
-
-    Your task is to implement the `__init__(self, data)` and `classify(self, instance)` methods in the `BiasClassifier` class to perform training and classification on this data set. Example data will be provided as a list of 2-tuples $(\vec{x}, y)$ of real numbers paired with binary labels. Test instances will be single numbers, and should be classified as either `True` or `False`. As discussed above, instances will have to be augmented with an additional feature before being fed into a perceptron in order for proper learning and classification to take place.
+    ```python
+    >>> ngrams(2, ["a", "b", "c"])
+    [(('<START>',), 'a'), (('a',), 'b'), (('b',), 'c'), (('c',), '<END>')]
+     ```
 
     ```python
-    >>> c = BiasClassifier(data.bias)
-    >>> [c.classify(x) for x in (-1, 0, 0.5, 1.5, 2)]
-    [False, False, False, True, True]
+    >>> ngrams(3, ["a", "b", "c"])
+    [(('<START>', '<START>'), 'a'), (('<START>', 'a'), 'b'), (('a', 'b'), 'c'), (('b', 'c'), '<END>')]
     ```
+    
+3. **[10 points]** In the `NgramModel` class, write an initialization method `__init__(self, n)` which stores the order $n$ of the model and initializes any necessary internal variables. Then write a method `update(self, sentence)` which computes the $n$-grams for the input sentence and updates the internal counts. Lastly, write a method `prob(self, context, token)` which accepts an $(n−1)$-tuple representing a context and a token, and returns the probability of that token occuring, given the preceding context.
+    
+    ```python
+    >>> m = NgramModel(1)
+    >>> m.update("a b c d")
+    >>> m.update("a b a b")
+    >>> m.prob((), "a")
+    0.3
+    >>> m.prob((), "c")
+    0.1
+    >>> m.prob((), "<END>")
+    0.2
+    ```
+        
+    
+    ```python
+    >>> m = NgramModel(2)
+    >>> m.update("a b c d")
+    >>> m.update("a b a b")
+    >>> m.prob(("<START>",), "a")
+    1.0
+    >>> m.prob(("b",), "c")
+    0.3333333333333333
+    >>> m.prob(("a",), "x")
+    0.0
+    ```
+        
+    
+4. **[20 points]** In the `NgramModel` class, write a method `random_token(self, context)` which returns a random token according to the probability distribution determined by the given context. Specifically, let $T=\langle t_1,t_2, \cdots, t_n \rangle$ be the set of tokens which can occur in the given context, sorted according to Python's natural lexicographic ordering, and let $0\le r<1$ be a random number between 0 and 1. Your method should return the token $t_i$ such that
 
-4. **[15 points]** A mystery data set of two-dimensional data is given in `data.mystery1`, where each example consists of a pair of real-valued features and a binary label. As in the previous problem, this data set is not linearly separable on its own, but each instance can be augmented with one or more additional features derived from the two original features so that linear separation is possible in the new higher-dimensional space.
+    $$\sum_{j=1}^{i-1} P(t_j\ |\ \text{context}) \le r < \sum_{j=1}^i P(t_j\ | \ \text{context}).$$
 
 
-    Your task is to implement the `__init__(self, data)` and `classify(self, instance)` methods in the `MysteryClassifier1` class to perform training and classification on this data set. Example data will be provided as a list of 2-tuples $(\vec{x}, y)$ of pairs of real numbers and their associated binary labels. Test instances will be pairs of real numbers, and should be classified as either `True` or `False`. Instances will have to be augmented with one or more additional features before being fed into a perceptron in order for proper learning and classification to take place. We recommend first visualizing the data using your favorite plotting software in order to understand its structure, which should help make the appropriate transformation(s) more apparent.
+    You should use a single call to the `random.random()` function to generate $r$.
 
     ```python
-    >>> c = MysteryClassifier1(data.mystery1)
-    >>> [c.classify(x) for x in ((0, 0), (0, 1), (-1, 0), (1, 2), (-3, -4))]
-    [False, False, False, True, True]
+    >>> m = NgramModel(1)
+    >>> m.update("a b c d")
+    >>> m.update("a b a b")
+    >>> random.seed(1)
+    >>> [m.random_token(())
+         for i in range(25)]
+    ['<END>', 'c', 'b', 'a', 'a', 'a', 'b', 'b', '<END>', '<END>', 'c', 'a', 'b', '<END>', 'a', 'b', 'a', 'd', 'd', '<END>', '<END>', 'b', 'd', 'a', 'a']
     ```
-
-5. **[15 points]** Another mystery data set of three-dimensional data is given in `data.mystery2`, where each example consists of a triple of real-valued features paired with a binary label. As in the previous few problems, this data set is not linearly separable on its own, but each instance can be augmented with one or more additional features so that linear separation is possible in the new higher-dimensional space.
-
-    Your task is to implement the `__init__(self, data)` and `classify(self, instance)` methods in the `MysteryClassifier2` class to perform training and classification on this data set. Example data will be provided as a list of 2-tuples $(\vec{x}, y)$ of triples of real numbers paired with binary labels. Test instances will be triples of real numbers, and should be classified as either `True` or `False`. Instances will again have to be augmented with one or more additional features before being fed into a perceptron in order for proper learning and classification to take place. As before, we recommend first visualizing the data using your favorite plotting software in order to understand its structure, then thinking about what transformation(s) might help separate the two classes of data.
 
     ```python
-    >>> c = MysteryClassifier2(data.mystery2)
-    >>> [c.classify(x) for x in ((1, 1, 1), (-1, -1, -1), (1, 2, -3), (-1, -2, 3))]
-    [True, False, False, True]
+    >>> m = NgramModel(2)
+    >>> m.update("a b c d")
+    >>> m.update("a b a b")
+    >>> random.seed(2)
+    >>> [m.random_token(("<START>",)) for i in range(6)]
+    ['a', 'a', 'a', 'a', 'a', 'a']
+    >>> [m.random_token(("b",)) for i in range(6)]
+    ['c', '<END>', 'a', 'a', 'a', '<END>']
     ```
+    
+5. **[20 points]** In the `NgramModel` class, write a method `random_text(self, token_count)` which returns a string of space-separated tokens chosen at random using the `random_token(self, context)` method. Your starting context should always be the $(n−1)$-tuple `("<START>", ..., "<START>")`, and the context should be updated as tokens are generated. If $n=1$, your context should always be the empty tuple. Whenever the special token `"<END>"` is encountered, you should reset the context to the starting context.
+
+    ```python
+    >>> m = NgramModel(1)
+    >>> m.update("a b c d")
+    >>> m.update("a b a b")
+    >>> random.seed(1)
+    >>> m.random_text(13)
+    '<END> c b a a a b b <END> <END> c a b'
+    ```
+
+    ```python
+    >>> m = NgramModel(2)
+    >>> m.update("a b c d")
+    >>> m.update("a b a b")
+    >>> random.seed(2)
+    >>> m.random_text(15)
+    'a b <END> a b c d <END> a b a b a b c'
+    ```
+
+6. **[15 points]** Write a function `create_ngram_model(n, path)` which loads the text at the given path and creates an $n$-gram model from the resulting data. Each line in the file should be treated as a separate sentence.
+
+    ```python
+    # No random seeds, so your results may vary
+    >>> m = create_ngram_model(1, "frankenstein.txt"); m.random_text(15)
+    'beat astonishment brought his for how , door <END> his . pertinacity to I felt'
+    >>> m = create_ngram_model(2, "frankenstein.txt"); m.random_text(15)
+    'As the great was extreme during the end of being . <END> Fortunately the sun'
+    >>> m = create_ngram_model(3, "frankenstein.txt"); m.random_text(15)
+    'I had so long inhabited . <END> You were thrown , by returning with greater'
+    >>> m = create_ngram_model(4, "frankenstein.txt"); m.random_text(15)
+    'We were soon joined by Elizabeth . <END> At these moments I wept bitterly and'
+    ```
+
+7. **[15 points]** Suppose we define the perplexity of a sequence of m tokens $\langle w_1, w_2, \cdots, w_m \rangle$ to be
+
+    $$\sqrt[m]{\frac{1}{P(w_1, w_2, \cdots, w_m)}}.$$
+
+    For example, in the case of a bigram model under the framework used in the rest of the assignment, we would generate the bigrams $\langle (w_0=\langle \text{START} \rangle , w_1), (w_1, w_2), \cdots,(w_{m−1}, w_m), (w_m, w_{m+1} = \langle \text{END}\rangle)\rangle$, and would then compute the perplexity as
+
+    $$\sqrt[m+1]{\prod_{i=1}^{m+1} \frac{1}{P(w_i\ | \ w_{i-1})}}.$$
+
+    Intuitively, the lower the perplexity, the better the input sequence is explained by the model. Higher values indicate the input was "perplexing" from the model's point of view, hence the term perplexity.
+
+    In the `NgramModel` class, write a method `perplexity(self, sentence)` which computes the $n$-grams for the input sentence and returns their perplexity under the current model. *Hint: Consider performing an intermediate computation in log-space and re-exponentiating at the end, so as to avoid numerical overflow.*
+
+    ```python
+    >>> m = NgramModel(1)
+    >>> m.update("a b c d")
+    >>> m.update("a b a b")
+    >>> m.perplexity("a b")
+    3.815714141844439
+    ```
+
+    ```python
+    >>> m = NgramModel(2)
+    >>> m.update("a b c d")
+    >>> m.update("a b a b")
+    >>> m.perplexity("a b")
+    1.4422495703074083
+    ```
+
+## 2. Use AI to Write Harry Potter Fanfiction [0 points - just for fun]
+
+Botnik Studios used text prediction to create three pages of Harry Potter Fanfiction entitled [“Harry Potter and the Portrait of What Looked Like a Large Pile of Ash,”](https://www.theverge.com/2017/12/12/16768582/harry-potter-ai-fanfiction).  I think that we should try too.  So I downloaded an archive of Harry Potter fanfiction.  There is *a lot* of Harry Potter fanfiction.  There is more than a quarter of a billion words of it.  
+
+You can find the archive on Eniac. To download it, you must connect to Penn's network, which you can do by following the instructions [here](https://www.isc.upenn.edu/how-to/university-vpn-getting-started-guide). Then run the following command (replacing "PENN-KEY" with your Penn key):
+
+```
+scp PENN-KEY@eniac.seas.upenn.edu:~cis521/data/HarryPotterFanfiction.com.sentences.utf8.txt.gz .
+```
+
+This file may contain copyrighted materials, so please don't redistrbute it. We are using for non-commerical research purposes, which is fair use.  
+
+How well did your automatically generated Harry Potter sentences turn out?  Post your favorites to Piazza.
+
+
 
 ## 3. Feedback [5 points]
 
