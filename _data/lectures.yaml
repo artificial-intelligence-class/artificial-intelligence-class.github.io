@@ -420,12 +420,16 @@
   videos:
 -
   date: 2020-11-03
-  title:  HW6 due, HW7 released 
+  title:  HW7 released (Language Models)
   type: exam
 -
   date: 2020-11-03
   title:  No lecture today (Go vote!)
   type: no_lecture
+-
+  date: 2020-11-04
+  title:  HW6 due
+  type: exam
 -
   date: 2020-10-29
   recording:
@@ -460,7 +464,7 @@
       title: SPAM
 -
   date: 2020-11-10
-  title:  HW7 due, HW8 released
+  title:  HW7 due, HW8 released (Perceptrons)
   type: exam
 -
   date: 2020-11-10
@@ -476,7 +480,7 @@
   readings:    
 -
   date: 2020-11-17
-  title:  HW8 due, HW9 released
+  title:  HW8 due, HW9 released (Neural Networks)
   type: exam
 -
   date: 2020-11-17
