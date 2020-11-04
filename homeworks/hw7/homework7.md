@@ -3,7 +3,7 @@ layout: default
 img: ios_keyboard.png
 img_link: http://www.explainxkcd.com/wiki/index.php/1427:_iOS_Keyboard
 caption: Movie quotes according to autocomplete
-title: CIS 521 Homework 7 "Generate a Novel"
+title: CIS 521 Homework 7 "Language Models"
 active_tab: homework
 release_date: 2020-11-04
 due_date: 2020-11-11 23:59:00EDT
