@@ -235,7 +235,19 @@ You can find the archive on Eniac. To download it, you must connect to Penn's ne
 scp PENN-KEY@eniac.seas.upenn.edu:~cis521/data/HarryPotterFanfiction.com.sentences.utf8.txt.gz .
 ```
 
-This file may contain copyrighted materials, so please don't redistrbute it. We are using for non-commerical research purposes, which is fair use.  
+Then, locally, you can unzip it by running
+
+```
+gunzip HarryPotterFanfiction.com.sentences.utf8.txt.gz
+```
+
+The file is large (1.4GB) and contains 25 million lines and 279,000,000 words. For testing purposes, you might want to take the first 1 million lines:
+
+```
+head -1000000 HarryPotterFanfiction.com.sentences.utf8.txt > smaller-HarryPotterFanfiction.com.sentences.utf8.txt
+```
+
+This file may contain copyrighted materials, so please don't redistrbute it. We are using it for non-commerical research purposes, which is fair use.  
 
 How well did your automatically generated Harry Potter sentences turn out?  Post your favorites to Piazza.
 
