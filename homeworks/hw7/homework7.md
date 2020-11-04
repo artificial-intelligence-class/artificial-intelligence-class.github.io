@@ -5,8 +5,8 @@ img_link: http://www.explainxkcd.com/wiki/index.php/1427:_iOS_Keyboard
 caption: Movie quotes according to autocomplete
 title: CIS 521 Homework 7 "Generate a Novel"
 active_tab: homework
-release_date: 2020-11-3
-due_date: 2020-11-10 23:59:00EDT
+release_date: 2020-11-05
+due_date: 2020-11-11 23:59:00EDT
 materials:
     - 
         name: skeleton file
