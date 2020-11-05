@@ -432,9 +432,24 @@
   type: exam
 -
   date: 2020-10-29
+  slides: 06-Bayes-Nets.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=06b4ceba-09e6-4abe-a26d-aab501264ac6
+  title:  (Pre-Recorded) Bayes' Nets
+  readings:   
+    - 
+      title: AIMA Chapter 13 "Probabilistic Reasoning" (13.1, 13.2, 13.4)
+      authors: Russell and Norvig
+      optional: false 
+  videos:
+    -
+      authors: Daphne Koller 
+      url: https://www.youtube.com/playlist?list=PLBAGcD3siRDjiQ5VZQ8t0C7jkHQ8fhuq8
+      title: Probabilistic Graphical Models online course
+-
+  date: 2020-11-10
   recording:
   slides: 
-  title: (Pre-Recorded) Machine Learning&colon; Perceptrons and Logistic Regression
+  title: Machine Learning&colon; Perceptrons and Logistic Regression
   readings:   
     - 
       title: AIMA Chapter 19 "Learning from Examples" (Sections 19.1-19.6)
@@ -445,6 +460,11 @@
       authors: Jurafsky and Martin
       optional: false 
       url: https://web.stanford.edu/~jurafsky/slp3/5.pdf
+    - 
+      title: Electronic 'Brain' Teaches Itself
+      authors: New York Times (July 13, 1958)
+      url: https://timesmachine.nytimes.com/timesmachine/1958/07/13/91396361.html?action=click&contentCollection=Archives&module=LedeAsset&region=ArchiveBody&pgtype=article&pageNumber=116
+      optional: true  
   videos:
     - 
       authors: Paul Anderson
@@ -463,15 +483,9 @@
       url: https://www.youtube.com/watch?v=cFrtpT1mKy8
       title: SPAM
 -
-  date: 2020-11-10
+  date: 2020-11-11
   title:  HW7 due, HW8 released (Perceptrons)
   type: exam
--
-  date: 2020-11-10
-  recording:
-  slides: 
-  title: Lecture
-  readings:
 -
   date: 2020-11-12
   recording:
