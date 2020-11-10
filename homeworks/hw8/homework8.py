@@ -1,5 +1,5 @@
 ############################################################
-# CIS 521: Homework 7
+# CIS 521: Homework 8
 ############################################################
 
 student_name = "Type your full name here."
@@ -8,7 +8,7 @@ student_name = "Type your full name here."
 # Imports
 ############################################################
 
-import homework7_data as data
+import homework8_data as data
 
 # Include your imports here, if any are used.
 
