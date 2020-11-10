@@ -447,8 +447,34 @@
       title: Probabilistic Graphical Models online course
 -
   date: 2020-11-10
+  slides: 06-BN-wrapup-Naive-Bayes.pdf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9428cfd3-a134-4b3a-b2c5-aab501264af0
+  title: Bayes' Nets wrap up and Naieve Bayes
+  readings:   
+    - 
+      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
+      authors: Russell and Norvig
+      optional: false 
+  videos:
+    - 
+      authors: Name Explain
+      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
+      title: Why is Junk Email Called Spam?
+    -
+      authors: Monty Python 
+      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
+      title: SPAM
+-
+  date: 2020-11-11
+  title:  HW7 due, HW8 released (Perceptrons)
+  type: exam
+-
+  date: 2020-11-12
   recording:
-  slides: 
   title: Machine Learning&colon; Perceptrons and Logistic Regression
   readings:   
     - 
@@ -481,18 +507,7 @@
     -
       authors: Monty Python 
       url: https://www.youtube.com/watch?v=cFrtpT1mKy8
-      title: SPAM
--
-  date: 2020-11-11
-  title:  HW7 due, HW8 released (Perceptrons)
-  type: exam
--
-  date: 2020-11-12
-  recording:
-  slides: 
-  title: Lecture
-  readings:    
--
+      title: SPAM-
   date: 2020-11-17
   title:  HW8 due, HW9 released (Neural Networks)
   type: exam
