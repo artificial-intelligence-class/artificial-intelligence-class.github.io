@@ -447,9 +447,10 @@
       title: Probabilistic Graphical Models online course
 -
   date: 2020-11-10
-  slides: 06-BN-wrapup-Naive-Bayes.pdf
+  slides: 06-Bayes-Nets-part-2.pdf
+  recording: https://upenn.zoom.us/rec/share/C8QteDEgzPrTzHjtuuFCR-VusS2SMOW6n8J4FqfDrt5qKIkVemWjawy0EWqxw4cc.3NElgUtdnEiCx7Qp
   recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9428cfd3-a134-4b3a-b2c5-aab501264af0
-  title: Bayes' Nets wrap up and Naieve Bayes
+  title: Bayes' Nets wrap up
   readings:   
     - 
       title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
