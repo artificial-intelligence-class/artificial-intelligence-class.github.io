@@ -456,19 +456,6 @@
       title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4)
       authors: Russell and Norvig
       optional: false
-    - 
-      title: AIMA Chapter 20 "Learning Probabilistic Models" (20.1-20.2)
-      authors: Russell and Norvig
-      optional: false 
-  videos:
-    - 
-      authors: Name Explain
-      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
-      title: Why is Junk Email Called Spam?
-    -
-      authors: Monty Python 
-      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
-      title: SPAM
 -
   date: 2020-11-11
   title:  HW7 due, HW8 released (Perceptrons)
@@ -476,7 +463,7 @@
 -
   date: 2020-11-12
   recording:
-  title: Machine Learning&colon; Perceptrons and Logistic Regression
+  title: Naive Bayes' and Perceptrons
   readings:   
     - 
       title: AIMA Chapter 19 "Learning from Examples" (Sections 19.1-19.6)
@@ -508,10 +495,7 @@
     -
       authors: Monty Python 
       url: https://www.youtube.com/watch?v=cFrtpT1mKy8
-      title: SPAM-
-  date: 2020-11-17
-  title:  HW8 due, HW9 released (Neural Networks)
-  type: exam
+      title: SPAM
 -
   date: 2020-11-17
   recording:
@@ -524,6 +508,10 @@
   slides: 
   title: Lecture
   readings:    
+-
+  date: 2020-11-19
+  title:  HW8 due, HW9 released (Neural Networks)
+  type: exam
 -
   date: 2020-11-24
   title:  HW9 due
@@ -540,14 +528,18 @@
   type: no_lecture
 -
   date: 2020-12-01
-  title:  Practice midterm released
-  type: exam
--
-  date: 2020-12-01
   recording:
   slides: 
   title: Lecture
   readings:    
+-
+  date: 2020-12-01
+  title:  HW9 due
+  type: exam
+-
+  date: 2020-12-01
+  title:  Practice midterm released
+  type: exam
 -
   date: 2020-12-03
   recording:
