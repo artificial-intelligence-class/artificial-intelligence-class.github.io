@@ -462,8 +462,9 @@
   type: exam
 -
   date: 2020-11-12
+  slides: 07-Naive-Bayes-and-Perceptron.pdf
   recording:
-  title: Naive Bayes' and Perceptrons
+  title: Naive Bayes and Perceptrons
   readings:   
     - 
       title: AIMA Chapter 19 "Learning from Examples" (Sections 19.1-19.6)
@@ -488,14 +489,6 @@
       authors: 3Blue1Brown
       url: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
       title: Essence of Linear Algebra
-    - 
-      authors: Name Explain
-      url: https://www.youtube.com/watch?v=Syr-oNr4IUQ
-      title: Why is Junk Email Called Spam?
-    -
-      authors: Monty Python 
-      url: https://www.youtube.com/watch?v=cFrtpT1mKy8
-      title: SPAM
 -
   date: 2020-11-17
   recording:
@@ -548,7 +541,7 @@
   readings:    
 -
   date: 2020-12-05
-  title:  Practice midterm due
+  title:
   type: exam
 -
   date: 2020-12-08
