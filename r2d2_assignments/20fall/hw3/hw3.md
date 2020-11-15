@@ -6,7 +6,7 @@ caption: Darth Vader Copyright&#58; Pinterest
 title: CIS 521 Robot Exercise 3 "R2-D2 Battle" (Extra Credit)
 active_tab: homework
 release_date: 2020-11-1
-due_date: 2020-11-15 23:59:00EST
+due_date: 2020-11-22 23:59:00EST
 materials:
     - 
         name: skeleton file
@@ -51,7 +51,7 @@ You can download the materials for this assignment here:
 </div>
 {% endif %}
 
-Robot Exercise 3: R2-D2 Battle [100 points]
+Robot Exercise 3: R2-D2 Battle [75 points]
 =============================================================
 ## Preface
 The First Galactic Empire dispatched Darth Vader and their evil robot R2-Q5 to destroy the base of Rebel Alliance. Our brave R2-D2s will battle with the dark robots and reclaim the land of Rebellion. May the force be with you, R2-D2s. 
@@ -208,7 +208,7 @@ You should be defining your own learning rate, discount factor, explore epsilon.
 
 1. **[5 pts, manually graded]** You are defining what is a state for your agent. Should you consider maybe the absolute location of your droid, or the relative distance from your droid and the opponent's droid. You might also want to encode the number of shots the droid left, or the remaining rounds of the game into the state.
 
-Notice that for each information you encode into your state, the size of the Q-Table increases exponentially, and the time it needs to train your agent also increases exponentially. But if you encode to little information into your state, it might not generalize well. Any reasonably sized state should get you full points.
+   Notice that for each information you encode into your state, the size of the Q-Table increases exponentially, and the time it needs to train your agent also increases exponentially. But if you encode to little information into your state, it might not generalize well. Any reasonably sized state should get you full points.
 
 2. **[5 pts, manually graded]** You also have to define your own reward function. A very naive reward function is just how much points your droid gets, but it can also be very complicated. For example, if you want to incentivize your droid to drive the other droid into the corner, then you can reward your droid more if it chooses to go to the corners. Any reasonably good reward function should get you full points.
 
