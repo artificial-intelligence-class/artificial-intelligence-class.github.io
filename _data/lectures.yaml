@@ -482,7 +482,7 @@
       optional: true  
 -
   date: 2020-11-17
-  recording_old:
+  recording: https://upenn.zoom.us/rec/share/J4ZtH9OjhkBkNlBobeIdDgEINwiGNVCLdhP8OSWFR9Uv8AE7L6A6qfguKF66DVXo.__LxmMls8D36VMpj?startTime=1605632197000
   slides: 07-Perceptrons.pdf
   title: Perceptrons
   readings:    
