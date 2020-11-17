@@ -464,8 +464,28 @@
   date: 2020-11-12
   slides: 07-Naive-Bayes-and-Perceptron.pdf
   recording: https://upenn.zoom.us/rec/share/GCV4IXJzu1UuMZ1IqXYcAuu_aMPlatUGigyXdGum17cpxB7uBz6pfn-3BuUfw3e6.kto3x6s772Xp-jAP
-  title: Naive Bayes and Perceptrons
+  title: Naive Bayes 
   readings:   
+    - 
+      title: AIMA Chapter 19 "Learning from Examples" (Sections 19.1-19.6)
+      authors: Russell and Norvig
+      optional: false 
+    - 
+      title: Speech and Language Processing Chapter 5 "Logistic Regression" 
+      authors: Jurafsky and Martin
+      optional: false 
+      url: https://web.stanford.edu/~jurafsky/slp3/5.pdf
+    - 
+      title: Electronic 'Brain' Teaches Itself
+      authors: New York Times (July 13, 1958)
+      url: https://timesmachine.nytimes.com/timesmachine/1958/07/13/91396361.html?action=click&contentCollection=Archives&module=LedeAsset&region=ArchiveBody&pgtype=article&pageNumber=116
+      optional: true  
+-
+  date: 2020-11-17
+  recording_old:
+  slides: 07-Perceptron.pdf
+  title: Perceptrons
+  readings:    
     - 
       title: AIMA Chapter 19 "Learning from Examples" (Sections 19.1-19.6)
       authors: Russell and Norvig
@@ -489,12 +509,6 @@
       authors: 3Blue1Brown
       url: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
       title: Essence of Linear Algebra
--
-  date: 2020-11-17
-  recording:
-  slides: 
-  title: Lecture
-  readings:    
 -
   date: 2020-11-19
   recording:
