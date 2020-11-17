@@ -226,7 +226,7 @@ Notice that this game is different from your normal Minimax games, in a way that
 
 **[5 pts, manually graded]** You should be defining your own evaluation function when the depth has reached or the game has ended. This can be quite similar to the reward function of the Q-Learning Agent, or it can be totally different. Any reasonably good evaluation function should get you full points.
 
-**[20 points]** Your droid will play with our pre-trained Q-Learning Agent for 5 minutes or 100 games, whichever comes first, and a minimum of 20 games must be played (otherwise you get 0 points). You should tune your search depth to be reasonable so that it won't take too long for each round (you can also make it adaptive by having a timer). The number of **winning** games over the total games played are the percentage of the total 20 points you get. For example, if you finished 100 games in 5 minutes, you won for 80 games, drew for 8 games and lost for 12 games, then you get $$20 \times .8 = 16$$ points.
+**[20 points]** Your droid will play with our pre-trained Q-Learning Agent for 5 minutes or 100 games, whichever comes first, and a minimum of 20 games must be played (otherwise you get 0 points). You should tune your search depth to be reasonable so that it won't take too long for each round (you can also make it adaptive by having a timer). The games you **won** worth 1, and the games you **drawn** worth .5, that over the total games played is the percentage of the total 20 points you get. For example, if you finished 100 games in 5 minutes, you won for 80 games, drew for 8 games and lost for 12 games, then you get $$20 \times (80 + 8 \times .5 ) /100 = 16.8$$ points.
 
 You will be seeing your score in the autograder after you submit.
 
@@ -268,4 +268,4 @@ python3 r2d2_hw3.py KeyboardAgent QAgent 100000 MinimaxAgent
 
 Meaning you first train the `QAgent` with a `MinimaxAgent` for 100,000 episodes, and then when the GUI pops up you can play against it with your keyboard.
 
-To use `KeyboardAgent`, use WASD to move up, down, left, and right respectively, and use space to shoot.
+To use `KeyboardAgent`, use WASD to move up, left, down, and right respectively, and use space to shoot.
