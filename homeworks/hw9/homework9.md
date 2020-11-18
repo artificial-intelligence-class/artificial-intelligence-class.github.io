@@ -6,7 +6,7 @@ caption: Technically you trained a neural net
 title: CIS 521 Homework 9 "Neural Networks"
 active_tab: homework
 release_date: 2020-11-19
-due_date: 2019-12-01 23:59:00EDT
+due_date: 2020-12-01 23:59:00EDT
 materials:
     - 
         name: skeleton file 1 - cnn_functions.py
