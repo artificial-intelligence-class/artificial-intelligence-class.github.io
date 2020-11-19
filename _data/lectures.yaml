@@ -491,11 +491,6 @@
       authors: Russell and Norvig
       optional: false 
     - 
-      title: Speech and Language Processing Chapter 5 "Logistic Regression" 
-      authors: Jurafsky and Martin
-      optional: false 
-      url: https://web.stanford.edu/~jurafsky/slp3/5.pdf
-    - 
       title: Electronic 'Brain' Teaches Itself
       authors: New York Times (July 13, 1958)
       url: https://timesmachine.nytimes.com/timesmachine/1958/07/13/91396361.html?action=click&contentCollection=Archives&module=LedeAsset&region=ArchiveBody&pgtype=article&pageNumber=116
@@ -512,9 +507,14 @@
 -
   date: 2020-11-19
   recording:
-  slides: 
-  title: Lecture
+  slides: 08-Logistic-Regression.pdf
+  title: Logistic Regression and Stochastic Gradient Descent
   readings:    
+    - 
+      title: Speech and Language Processing Chapter 5 "Logistic Regression" 
+      authors: Jurafsky and Martin
+      optional: false 
+      url: https://web.stanford.edu/~jurafsky/slp3/5.pdf
 -
   date: 2020-11-19
   title:  HW8 due, HW9 released (Neural Networks)
