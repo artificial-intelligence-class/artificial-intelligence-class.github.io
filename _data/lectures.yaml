@@ -506,7 +506,7 @@
       title: Essence of Linear Algebra
 -
   date: 2020-11-19
-  recording:
+  recording: https://upenn.zoom.us/rec/share/L25bCR2Ws7wC1ac0zM8nf5jLX33rRc70vjmVFM74xaj8dhlhzW1DQn6RvMT_Ks8k.rDXp_M2n0wZD113E?startTime=1605805268000
   slides: 08-Logistic-Regression.pdf
   title: Logistic Regression and Stochastic Gradient Descent
   readings:    
