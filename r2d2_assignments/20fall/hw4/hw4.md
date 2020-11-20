@@ -303,6 +303,6 @@ Here are what you need to submit for this homework:
 * eigenfaces.p
 * perceptron.p
 * cnn.p
-* best.p (also upload this to the leaderboard)
+* best.p (It will be uploaded to the leaderboard)
 
 For the leaderboad, we will give top 1 extra 5 points for this assigenment, top 2-3: 3 points, top 5 - 10: 1 point.
