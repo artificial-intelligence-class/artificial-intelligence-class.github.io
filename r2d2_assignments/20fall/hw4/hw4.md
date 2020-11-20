@@ -1,3 +1,74 @@
+---
+layout: default
+img: wear_mask.png
+img_link: https://me.me/i/never-take-off-your-mask-a0dd567eaa6841d2b636ce50836beb81
+caption: Never take off your mask Copyright&#58; me.me
+title: CIS 521 Robot Exercise 3 "R2-D2 Battle" (Extra Credit)
+active_tab: homework
+release_date: 2020-11-22
+due_date: 2020-12-5 23:59:00EST
+materials:
+    - 
+        name: notebook
+        url: r2d2_hw4.ipynb
+    - 
+        name: detector
+        url: detector.py
+    - 
+        name: face data
+        url: faces.p
+    - 
+        name: mask data
+        url: train_data.p
+    - 
+        name: mask test images
+        url: test_images.p
+    - 
+        name: sensor
+        url: rpi_sensor.py
+    
+        
+submission_link: https://www.gradescope.com/courses/160263
+---
+
+<!-- Check whether the assignment is ready to release -->
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
+
+
+<!-- Check whether the assignment is up to date -->
+{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
+{% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
+{% if this_year != due_year %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
+
+
+<div class="alert alert-info">
+This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
+</div>
+
+{% if page.materials %}
+<div class="alert alert-info">
+You can download the materials for this assignment here:
+<ul>
+{% for item in page.materials %}
+<li><a href="{{item.url}}">{{ item.name }}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+
 # Robot Excercise 4: Deep Learning Application
 
 ## Preface
@@ -10,7 +81,11 @@ In part 2, you will combine the Qlearning knowledge introduced in the lecture an
 
 While for part 3, you will utlize the Convolutional Neural Network (CNN) to conduct a mask classification which is closely related to the pandemic we are experiencing.
 
-The skeleton codes are provided in [r2d2_hw4.py](r2d2_hw4.py) and [notebook](). You could use the [Google Colab](https://colab.research.google.com/) to edit the notebook file and conduct the training using the free GPU from Google. 
+A skeleton notebook [r2d2_hw4.ipynb](r2d2_hw4.ipynb) containing empty definitions for each question has been provided. Please do not change any of that. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed. You could use the [Google Colab](https://colab.research.google.com/) to edit the notebook file and conduct the training using the free GPU from Google. 
+
+You are strongly encouraged to follow the Python style guidelines set forth in PEP 8, which was written in part by the creator of Python. However, your code will not be graded for style.
+
+Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}).
 
 ## Part 1: PCA Face Recognition
 
@@ -150,7 +225,7 @@ After we get the eigenfaces, we could project any image to the face space. We co
 
 #### 4. Real-Time Face Detector
 
-If everything goes well so far, you could now use the Raspberry pi camera system to bulid a face detector. We provide a function called `pca_face_detection(camera, k, threshold)` in the skeleton code, and please make sure you put the **eigenfaces.p** and **averageface.p** in the same directory of the skeleton file. The argument `k` represents the number of eigenfaces you want to use and the `threshold` stands for the boundary of distinguish human face. The TA used k=20 and threshold=50000 which works well. You may need to fine tune these parameters to get better performance.
+If everything goes well so far, you could now use the Raspberry pi camera system to bulid a face detector. We provide a function in the [detector.py](detector.py) called `pca_face_detection(camera, k, THRESHOLD)` in the skeleton code, and please make sure you put the **eigenfaces.p** and **averageface.p** in the same directory of the skeleton file. The argument `k` represents the number of eigenfaces you want to use and the `threshold` stands for the boundary of distinguish human face. The TA used k=20 and threshold=50000 which works well. You may need to fine tune these parameters to get better performance.
 
 ```
 with RPiCamera('tcp://IP_ADDRESS:65433') as camera:
@@ -161,23 +236,13 @@ with RPiCamera('tcp://IP_ADDRESS:65433') as camera:
   <img width="450" height="350" src="images/pca.gif">
 </p>
 
-## Part 2: Face Tracking via Q-learning
-
-In part 1, we constructed a very simple face detector, but it is not robust and cannot tracking the position of the face. However, with the help of deep learning, there are various of face detection methods now. [Harr Feature-based Cascade face detection](https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html) is one of the most famous methods which has already been implemented in OpenCV, you could use it by downloading this [xml](haarcascade_frontalface_default.xml) file and run the following code:
-
-```python
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
-```
-It will return a list of bounding box coordinates of the faces detected in the image.
-
-## Part 3. Mask Detection
+## Part 2. Mask Detection
 > “We need, as a nation, to show a degree of consistency of everybody following public-health recommendations on wearing masks or other face coverings”, said Dr. Fauci.
 
-Now it's time to apply the machine learning skills to deal with the big challeng we are facing now! In this part, we will implement a real time mask detector using the camera system and the R2D2 will change it's main light according to the detection results. This homework is mainly described in this [notebook](), you could directly edit it in Google Colab.
+Now it's time to apply the machine learning skills to deal with the big challeng we are facing now! In this part, we will implement a real time mask detector using the camera system. This homework is mainly described in this [notebook](r2d2_hw4.ipynb), you could directly edit it in Google Colab.
 
 ### 1. Data Preprocessing
-We use the dataset from kaggle, [here]() is the original dataset in xml type. We have preprocessed the original dataset into a dictionary with the format {'image': np.array, 'label': 'good'/'bad'}.
+We use the dataset from kaggle, [here](https://www.kaggle.com/andrewmvd/face-mask-detection) is the original dataset in xml type. We have preprocessed the original dataset into a dictionary with the format {'image': np.array, 'label': 'good'/'bad'}.
 
 **TODO**
 
@@ -192,7 +257,7 @@ For the baseline model, we simply flatten the image data and utlize Perceptron a
 **TODO**
 
 * Implement the `flatten(images)` which convert the 2D images to 1D vector.
-* Conduct a perceptron classification on the dataset.
+* Conduct a perceptron classification on the dataset using `sklearn` API.
 
 ### 3. Build Your Own CNN Model
 
@@ -218,10 +283,26 @@ Build a neural network (show below) according to the following descriptions:
 
 To get better performance, we could use more complicated networks. There are various of architectures available in [keras](https://keras.io/api/applications/) like [VGG](https://keras.io/api/applications/vgg/), [InceptionV3](https://keras.io/api/applications/vgg/), etc.
 
+Feel free to experiment on different model architecture and find your best model. Evaluate your model on the test images and upload to the leaderboard to compete with your classmates.
+
 ### 5. Real-Time Mask Detector
 
-After finding the most appropriate face detector and you fine tuned mask classifier. It's the time to apply these on the R2D2. First, save your model with the weights. Then use the given scripts and follow the instructions on the course website, you will be able to let the R2D2 follow your face and identify whether you are wearing a mask.
+After finding the most appropriate face detector and you fine tuned mask classifier. It's the time to apply these on the R2D2. First, save your model with the weights. Then use the `mask_detection(camera)` in the [detector.py](detector.py) and you will be able to implement a real time mask detector.
 
 <p align="center">
   <img width="450" height="350" src="images/mask.gif">
 </p>
+
+### Submission
+
+Here are what you need to submit for this homework:
+
+* r2d2_hw4.ipynb
+* detector.py
+* average_face.p
+* eigenfaces.p
+* perceptron.p
+* cnn.p
+* best.p (also upload this to the leaderboard)
+
+For the leaderboad, we will give top 1 extra 5 points for this assigenment, top 2-3: 3 points, top 5 - 10: 1 point.
