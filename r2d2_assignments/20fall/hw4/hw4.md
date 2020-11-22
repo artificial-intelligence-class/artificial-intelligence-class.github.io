@@ -75,11 +75,9 @@ You can download the materials for this assignment here:
 The COVID-19 spreads to the whole Galaxy, the planet where R2D2 lives included. To slow down the propagation speed of the virus, R2D2 has a new mission to recognize the faces and find people who don't wear masks. R2D2 will take advantage of its new deep learning module to learn from the dataset gathered from other planets.
 
 ## Instruction
-This assignment consists of 3 parts. In part 1, you will learn how to use [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis) to implement a face detector. 
+This assignment consists of 2 parts. In part 1, you will learn how to use [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis) to implement a face detector. 
 
-In part 2, you will combine the Qlearning knowledge introduced in the lecture and the OpenCV face detector to complete a face tracking task. 
-
-While for part 3, you will utlize the Convolutional Neural Network (CNN) to conduct a mask classification which is closely related to the pandemic we are experiencing.
+While for part 2, you will utlize the Convolutional Neural Network (CNN) to conduct a mask classification which is closely related to the pandemic we are experiencing.
 
 A skeleton notebook [r2d2_hw4.ipynb](r2d2_hw4.ipynb) containing empty definitions for each question has been provided. Please do not change any of that. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed. You could use the [Google Colab](https://colab.research.google.com/) to edit the notebook file and conduct the training using the free GPU from Google. 
 
@@ -93,8 +91,8 @@ Principle Component Analysis (PCA) is a widely used approach for dimension reduc
 
 PCA consists of two main steps:
 
-1. Compute the [covariance matrix]() of the dataset.
-2. Compute the [eigenvalue]() and [eigenvector]() of the covariance matrix.
+1. Compute the [covariance matrix](https://en.wikipedia.org/wiki/Covariance_matrix) of the dataset.
+2. Compute the [eigenvalue](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) and [eigenvector](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) of the covariance matrix.
 
 These are basic linear algebra concepts and if you are unfamiliar with these terms, please click the Wiki link for reference.
 
