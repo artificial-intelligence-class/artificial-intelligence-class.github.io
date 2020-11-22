@@ -3,7 +3,7 @@ layout: default
 img: wear_mask.png
 img_link: https://me.me/i/never-take-off-your-mask-a0dd567eaa6841d2b636ce50836beb81
 caption: Never take off your mask Copyright&#58; me.me
-title: CIS 521 Robot Exercise 3 "R2-D2 Battle" (Extra Credit)
+title: CIS 521 Robot Exercise 4 "R2-D2 Face & Mask Detection" (Extra Credit)
 active_tab: homework
 release_date: 2020-11-22
 due_date: 2020-12-5 23:59:00EST
