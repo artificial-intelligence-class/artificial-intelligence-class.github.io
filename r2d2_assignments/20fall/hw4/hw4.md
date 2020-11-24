@@ -3,7 +3,7 @@ layout: default
 img: wear_mask.png
 img_link: https://me.me/i/never-take-off-your-mask-a0dd567eaa6841d2b636ce50836beb81
 caption: Never take off your mask Copyright&#58; me.me
-title: CIS 521 Robot Exercise 3 "R2-D2 Battle" (Extra Credit)
+title: CIS 521 Robot Exercise 4 "R2-D2 Face & Mask Detection" (Extra Credit)
 active_tab: homework
 release_date: 2020-11-22
 due_date: 2020-12-5 23:59:00EST
@@ -102,7 +102,7 @@ Now swith to our face detection task, just like the eigenvector, we could also u
   <img width="700" height="330" src="images/pca.png">
 </p>
 
-### 1. Data Preprocess
+### 1. Data Preprocess [5 points]
 
 To find the effective eigenfaces, we need a large amount of real human faces as our dataset. The [Labeled Faces in the Wild Home (LFW)](https://devconnected.com/how-to-count-files-in-directory-on-linux/) provides over 13,000 faces and we selected the first 2,000 faces which are large enought for our task. You could download the dataset [here](faces.p) or just run the cell in the notebook to fetch the data.
 
@@ -154,7 +154,7 @@ This array contains 2000 rows, each row represents a face with the size of 64 by
 	>>> pickle.dump(average_face, open('average_face.p', 'wb'))
 	```
 
-### 2. Compute the Eigenface
+### 2. Compute the Eigenface [10 points]
 Now we could start to compute the eigenfaces, as mentioned before, we need two steps to get the eigenfaces - compute the covariance matrix and take the eigenvector of this matrix. The math theory part is shown below, you could also read this [instruction](http://www.vision.jhu.edu/teaching/vision08/Handouts/case_study_pca1.pdf) from JHU for details.
 
 **TODO**
@@ -200,7 +200,7 @@ Now we could start to compute the eigenfaces, as mentioned before, we need two s
 	pickle.dump(eigenfaces, open('eigenfaces.p', 'wb'))
 	```
 
-### 3. Projection on Face Space
+### 3. Projection on Face Space [10 points]
 After we get the eigenfaces, we could project any image to the face space. We could calculate the distance between original image and the projected image to indentify whether it is a human face and thus the face detector is bulit. The figure shown below demonstrates how we could use the approach to detect human face. The distance of CCB's is mush smaller than the kitten's which means it is more likely to be a human face.
 
 <p align="center">
@@ -221,7 +221,7 @@ After we get the eigenfaces, we could project any image to the face space. We co
 
 * Implement the `dist2face_space(target_vector, face_space_vector)` which returns the euclidean distance between the two vectors. You may use the [np.linalg](https://numpy.org/doc/stable/reference/routines.linalg.html) API.
 
-#### 4. Real-Time Face Detector
+#### 4. Real-Time Face Detector [5 points]
 
 If everything goes well so far, you could now use the Raspberry pi camera system to bulid a face detector. We provide a function in the [detector.py](detector.py) called `pca_face_detection(camera, k, THRESHOLD)` in the skeleton code, and please make sure you put the **eigenfaces.p** and **averageface.p** in the same directory of the skeleton file. The argument `k` represents the number of eigenfaces you want to use and the `threshold` stands for the boundary of distinguish human face. The TA used k=20 and threshold=50000 which works well. You may need to fine tune these parameters to get better performance.
 
@@ -233,6 +233,8 @@ with RPiCamera('tcp://IP_ADDRESS:65433') as camera:
 <p align="center">
   <img width="450" height="350" src="images/pca.gif">
 </p>
+
+Record a **short video** to show the performance of your face detector and submit the link of your video through this [form](https://forms.gle/DNiHhYS4BLH6JCuL7).
 
 ## Part 2. Mask Detection
 > “We need, as a nation, to show a degree of consistency of everybody following public-health recommendations on wearing masks or other face coverings”, said Dr. Fauci.
@@ -249,7 +251,7 @@ We use the dataset from kaggle, [here](https://www.kaggle.com/andrewmvd/face-mas
 	* Resize the image to 128 * 128
 	* Scale the value of each pixel from [0, 255] to [-1, 1]
 
-### 2. Baseline - Perceptron
+### 2. Baseline - Perceptron [10 points]
 For the baseline model, we simply flatten the image data and utlize Perceptron as our classifier.
 
 **TODO**
@@ -257,7 +259,7 @@ For the baseline model, we simply flatten the image data and utlize Perceptron a
 * Implement the `flatten(images)` which convert the 2D images to 1D vector.
 * Conduct a perceptron classification on the dataset using `sklearn` API.
 
-### 3. Build Your Own CNN Model
+### 3. Build Your Own CNN Model [10 points]
 
 In this section, you are required to construct a nerual network using the [keras](https://keras.io) platform.
 
@@ -277,13 +279,13 @@ Build a neural network (show below) according to the following descriptions:
   <img width="750" height="300" src="images/architecture.png">
 </p>
 
-### 4. Advanced CNN Model using ImageNet
+### 4. Advanced CNN Model using ImageNet [10 points]
 
 To get better performance, we could use more complicated networks. There are various of architectures available in [keras](https://keras.io/api/applications/) like [VGG](https://keras.io/api/applications/vgg/), [InceptionV3](https://keras.io/api/applications/vgg/), etc.
 
 Feel free to experiment on different model architecture and find your best model. Evaluate your model on the test images and upload to the leaderboard to compete with your classmates.
 
-### 5. Real-Time Mask Detector
+### 5. Real-Time Mask Detector [5 points]
 
 After finding the most appropriate face detector and you fine tuned mask classifier. It's the time to apply these on the R2D2. First, save your model with the weights. Then use the `mask_detection(camera)` in the [detector.py](detector.py) and you will be able to implement a real time mask detector.
 
@@ -291,12 +293,14 @@ After finding the most appropriate face detector and you fine tuned mask classif
   <img width="450" height="350" src="images/mask.gif">
 </p>
 
+Record a **short video** to show the performance of your mask detector and submit the link of your video through this [form](https://forms.gle/DNiHhYS4BLH6JCuL7).
+
 ### Submission
 
 Here are what you need to submit for this homework:
 
 * r2d2_hw4.ipynb
-* detector.py
+* detector.py (comment keras import and all functions except for `preprocess`, `proj2face_space` and `dist2face_space`)
 * average_face.p
 * eigenfaces.p
 * perceptron.p

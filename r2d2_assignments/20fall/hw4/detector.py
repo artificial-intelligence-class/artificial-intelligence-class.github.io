@@ -1,8 +1,9 @@
 import cv2
 import pickle
 import numpy as np
-import matplotlib.pyplot as plt
 from rpi_sensor import RPiCamera
+
+### Comment all keras import before submission ###
 from keras.models import Sequential, load_model
 from keras.preprocessing.image import img_to_array
 from keras.models import model_from_json
@@ -29,6 +30,7 @@ def dist2face_space(target_vector, face_space_vector):
     # Copy and paste your code from notebook
     pass
 
+### Comment all functions below before submission ###
 def pca_face_detection(camera, k, THRESHOLD):
     # Find the best k
     eigenfaces = pickle.load(open('eigenfaces.p', 'rb'))[:k,:]
