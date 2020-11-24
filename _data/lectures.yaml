@@ -521,14 +521,26 @@
   type: exam
 -
   date: 2020-11-24
-  title:  HW9 due
-  type: exam
--
-  date: 2020-11-24
   recording:
-  slides: 
-  title: Lecture
-  readings:    
+  old_recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=11e3f835-4d9e-4e34-90f1-aab501264bf7
+  title: Stochastic Gradient Descent / Neural Networks 
+  parts: 
+    -
+      title: Stochastic Gradient Descent 
+      slides: 08-Stochastic-Gradient-Descent.pdf
+    -
+      title: Neural Networks 
+      slides: 08-Neural-Networks.pdf
+  readings:
+    - 
+      title: Speech and Language Processing Chapter 5 "Logistic Regression" 
+      authors: Jurafsky and Martin
+      optional: false 
+      url: https://web.stanford.edu/~jurafsky/slp3/5.pdf
+    - 
+      title: Chapter 7 "Neural Networks and Neural Language Models"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf  
 -
   date: 2020-11-26
   title:  No lecture today (Thanksgiving)
