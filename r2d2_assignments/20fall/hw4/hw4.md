@@ -300,7 +300,7 @@ Record a **short video** to show the performance of your mask detector and submi
 Here are what you need to submit for this homework:
 
 * r2d2_hw4.ipynb
-* detector.py
+* detector.py (comment keras import and all functions except for `preprocess`, `proj2face_space` and `dist2face_space`)
 * average_face.p
 * eigenfaces.p
 * perceptron.p
