@@ -508,7 +508,7 @@
   date: 2020-11-19
   recording: https://upenn.zoom.us/rec/share/L25bCR2Ws7wC1ac0zM8nf5jLX33rRc70vjmVFM74xaj8dhlhzW1DQn6RvMT_Ks8k.rDXp_M2n0wZD113E?startTime=1605805268000
   slides: 08-Logistic-Regression.pdf
-  title: Logistic Regression and Stochastic Gradient Descent
+  title: Logistic Regression 
   readings:    
     - 
       title: Speech and Language Processing Chapter 5 "Logistic Regression" 
@@ -521,7 +521,7 @@
   type: exam
 -
   date: 2020-11-24
-  recording:
+  recording: https://upenn.zoom.us/rec/share/JhO9SrRPNct0fV1E-EAjDJm-a5XkWQOkq_BH3WL3qzHQ0SZbnPDwIuZDr24VHZ6k.rWJBuY999j5QZtk3?startTime=1606237368000
   old_recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=11e3f835-4d9e-4e34-90f1-aab501264bf7
   title: Stochastic Gradient Descent / Neural Networks 
   parts: 
@@ -541,6 +541,11 @@
       title: Chapter 7 "Neural Networks and Neural Language Models"
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/7.pdf  
+  videos:
+    - 
+      authors: Andrew Ng
+      url: https://www.coursera.org/learn/neural-networks-deep-learning
+      title: Neural Networks and Deep Learning    
 -
   date: 2020-11-26
   title:  No lecture today (Thanksgiving)
