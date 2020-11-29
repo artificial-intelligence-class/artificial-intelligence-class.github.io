@@ -210,7 +210,7 @@ After we get the eigenfaces, we could project any image to the face space. We co
 **TODO**
 
 * Implement the `proj2face_space(target_vector, eigenfaces)` which takes in the target vector whe want to analyze and the eigenfaces and return its projection vector on the face space. It includes two steps:
-	* Compute the weights of each eigenfaces, $$weight = eigenfaces \cdot targetvector^T$$, and **normalize** it to a unit vector.
+	* Compute the weights of each eigenfaces, $$weight = eigenfaces \cdot targetvector^T$$, and **normalize** it using L1 Norm.
 	* Mutiple the weight with the eigenfaces using $$weight^T \cdot eigenfaces$$
 
 	```python
