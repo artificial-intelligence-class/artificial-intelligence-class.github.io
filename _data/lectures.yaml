@@ -552,7 +552,7 @@
   type: no_lecture
 -
   date: 2020-12-01
-  recording: 
+  recording: https://upenn.zoom.us/rec/share/oRaetRefCcY4c3GLMziUHSJopyI9NokpXLiSg_ugfdYszHvrvMJmJN8rT4YtK3RT.aDB1PD6bUVRXi2XW?startTime=1606842278000
   title: Neural Network Language Models
   slides: 08-Neural-Language-Models.pdf
   readings:    
