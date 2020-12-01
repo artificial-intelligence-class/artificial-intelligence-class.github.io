@@ -552,10 +552,20 @@
   type: no_lecture
 -
   date: 2020-12-01
-  recording:
-  slides: 
+  recording: 
+  old_recording: 
+  title: Neural Network Language Models
+  slides: 08-Neural-Language-Models.pdf
   title: Lecture
   readings:    
+    - 
+      title: Chapter 7 "Neural Networks and Neural Language Models"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf  
+    - 
+      title: Chapter 9 "Sequence Processing with Recurrent Networks"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/9.pdf  
 -
   date: 2020-12-01
   title:  HW9 due
