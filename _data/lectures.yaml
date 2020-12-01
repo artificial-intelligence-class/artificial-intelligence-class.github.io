@@ -553,10 +553,8 @@
 -
   date: 2020-12-01
   recording: 
-  old_recording: 
   title: Neural Network Language Models
   slides: 08-Neural-Language-Models.pdf
-  title: Lecture
   readings:    
     - 
       title: Chapter 7 "Neural Networks and Neural Language Models"
