@@ -574,13 +574,17 @@
   type: exam
 -
   date: 2020-12-03
-  recording:
-  slides: 
-  title: Lecture
+  recording: 
+  title: Natural Language Processing&colon; Vector Semantics
+  slides: 09-Vector-Semantics.pdf
   readings:    
+    - 
+      title: Chapter 6 "Vector Semantics and Embeddings"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf   
 -
   date: 2020-12-05
-  title:
+  title: Practice midterm due
   type: exam
 -
   date: 2020-12-08
@@ -589,14 +593,18 @@
 -
   date: 2020-12-08
   recording:
+  title: Natural Language Processing&colon; Vector Semantics - part 2
   slides: 
-  title: Lecture
   readings:    
+    - 
+      title: Chapter 6 "Vector Semantics and Embeddings"
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf   
 -
   date: 2020-12-10
   recording:
   slides: 
-  title: Final class
+  title: Bonus class (guest lecturer)
   readings:    
 -
   date: 2020-12-10
