@@ -594,7 +594,7 @@
   date: 2020-12-08
   recording:
   title: Natural Language Processing&colon; Vector Semantics - part 2
-  slides: 
+  slides: 09-Vector-Semantics-part-2.pdf
   readings:    
     - 
       title: Chapter 6 "Vector Semantics and Embeddings"
