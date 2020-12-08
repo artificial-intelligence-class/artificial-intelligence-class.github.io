@@ -37,7 +37,7 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 {% endif %}
 {% endfor %}
 <!-- End alert for upcoming homework assignments -->
-
+ 
 
 <!--
 
