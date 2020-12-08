@@ -592,7 +592,7 @@
   type: exam
 -
   date: 2020-12-08
-  recording:
+  recording: https://upenn.zoom.us/rec/share/vm0wvE7etPL0R2myXpPcNpRY2GvpphC02OmOHlcxwkX0glGQC58kk6Lp2PXs72NF.8QCoVLjqdEjXpU38?startTime=1607446624000
   title: Natural Language Processing&colon; Vector Semantics - part 2
   slides: 09-Vector-Semantics-part-2.pdf
   readings:    
