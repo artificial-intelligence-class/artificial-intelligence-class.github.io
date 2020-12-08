@@ -40,7 +40,7 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
  
 
 <div class="alert alert-success" markdown="1">
-[Please fill out this end of semester course survey.](https://docs.google.com/forms/d/e/1FAIpQLSeLV3JQVNs4EUIq8xmq9h6nmraiQjLVADEIbQpQngSYMp4wtA/viewform?usp=sf_link)
+[Please fill out this end of semester course evaluation survey.](https://docs.google.com/forms/d/e/1FAIpQLSeLV3JQVNs4EUIq8xmq9h6nmraiQjLVADEIbQpQngSYMp4wtA/viewform?usp=sf_link)
 </div>
 
 
