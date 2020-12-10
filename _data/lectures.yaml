@@ -607,6 +607,14 @@
 -
   date: 2020-12-10
   recording: https://upenn.zoom.us/rec/share/DqfK9TcVG12QVhQPucnQz2ZnUQzWdkFNO4OrFo8rZqWF8C7rcHQLIFwJc57cjjc.vg-PFphc5j78wjLE?startTime=1607619099000
-  slides: 
-  title: Machine Learning as a tool of opression (guest lecture by Skyler Wharton)
-  readings:    
+  slides: https://drive.google.com/file/d/13x0U3mtS-_B5HTzXwGtip6OW8Y-eo9kg/view
+  title: Machine Learning as as tools of oppression (guest lecture by Skyler Wharton)
+  readings:   
+    - 
+      title: Machine learning systems as tools of oppression
+      authors: Skyler Wharton
+      url: https://skylerwharton.medium.com/machine-learning-systems-as-tools-of-oppression-d83c23d57136
+    - 
+      title: Tech For Social Good Opportunities
+      authors: Skyler Wharton
+      url: https://skylerwharton.com/tech-4-good-opportunities/
