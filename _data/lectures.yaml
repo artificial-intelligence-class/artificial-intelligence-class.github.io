@@ -602,11 +602,11 @@
       url: https://web.stanford.edu/~jurafsky/slp3/6.pdf   
 -
   date: 2020-12-10
-  recording:
-  slides: 
-  title: Bonus class (guest lecturer)
-  readings:    
--
-  date: 2020-12-10
   title:  Midterm 2 due
   type: exam
+-
+  date: 2020-12-10
+  recording: https://upenn.zoom.us/rec/share/DqfK9TcVG12QVhQPucnQz2ZnUQzWdkFNO4OrFo8rZqWF8C7rcHQLIFwJc57cjjc.vg-PFphc5j78wjLE?startTime=1607619099000
+  slides: 
+  title: Machine Learning as a tool of opression (guest lecture by Skyler Wharton)
+  readings:    
