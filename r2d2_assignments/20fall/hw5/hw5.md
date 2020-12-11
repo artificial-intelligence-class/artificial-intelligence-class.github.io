@@ -242,9 +242,9 @@ Then we could use the tokenized data to construct a vocabulary. You need to firs
  'beeping': 3,
  'noises': 7,...
 >>> word2ind
-{'making': 0,
- 'beeping': 1,
- 'noises': 2,...
+{'making': 1,
+ 'beeping': 2,
+ 'noises': 3,...
 ```
 Then we assign the size of the vocabulary to `vocab_size` which will be used for building the Recurrent Neural Network.
 
