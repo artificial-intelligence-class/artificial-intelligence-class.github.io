@@ -1,6 +1,7 @@
 -
   date: 2020-09-01
   title: Introduction / AI in Science Fiction and Philosophy 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=33bfee95-d6d2-42fb-b576-acbd010d0778
   parts: 
     -
       title: Course Policies 
@@ -14,7 +15,6 @@
     -
       title: R2D2 Assignments
       slides: 00-R2D2-Assignments.pdf
-  recording: https://upenn.zoom.us/rec/play/ucEuJen-rT83GNWW4QSDA6V-W9W1evms1HVP_PoMyx60VyIFZFWiYrQTNqAgq-7Fpkv1EvaMsJSeiQ
   readings:   
     - 
       title: AIMA 4th Edition, Chapter 1 "Introduction", Section 1.1 "What is AI"
@@ -38,7 +38,7 @@
   date: 2020-09-03
   title: Python Review - part 1
   slides: 01-Python-review.pdf
-  recording: https://upenn.zoom.us/rec/share/m9MXlJdAATHTQN-UAgXZdN054AWMfllvqsMacu7m93iNKzv9m-vviLKIMnQd81qg.S6eJHNFdzbZ1nJmE
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=43aa2787-443e-45b3-98b7-acbd010c9220
   videos:
     -  
       url: https://www.youtube.com/watch?v=X2xlQaimsGg
@@ -64,8 +64,7 @@
   date: 2020-09-05
   title: Python Review - part 2
   slides: 01-Python-review-part-2.pdf
-  recording: https://upenn.zoom.us/rec/share/gBUBndJKJHgFZJHcnLttkWxtas_ee3SQPEz_ciBSIJDHkPnIR5jw89VK5o-rj2om.IWE4-edB8eznPo0R
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=80a6b20e-031f-4eea-8778-aab501264837
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b793f79-0440-4c0a-a87c-ac30012c48bc
   videos:
     -  
       authors: Piet Hoenderdos, Daniel Dennett and others
@@ -91,7 +90,7 @@
   date: 2020-09-10
   slides: 02-Rational-Agents.pdf
   title:  Rational Agents
-  recording: https://upenn.zoom.us/rec/share/i0JyWZycFIT79IHJzBkYCBHhlQ_aVspGpsccT-9lqN_iZsraE0-1fkH3kD8LWCUN.-EMQlPJqum-7Gm_s
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=454cb1f6-9269-40eb-9481-ac3201285ebf
   readings:   
     - 
       title: AIMA Chapter 2 "Intelligent Agents" (2.1-2.4)
@@ -116,8 +115,7 @@
   date: 2020-09-15
   slides: 03-Search-Problems.pdf
   title:  Search Problems and Uninformed Search
-  recording: https://upenn.zoom.us/rec/share/zne4dzRvsHdgxpWYgnhBj-1Luj-KtlB0BGJRW3mM41sCADNV993en8MhaeCoex8m.xq3hc9riOBCLMnob
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e515335f-4a98-453d-b9bb-aab50126489e
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8a5e5755-deab-425b-abd9-ac37012b2b8d
   readings:   
     - 
       title: AIMA Chapter 3 "Solving Problems by Search" (3.1-3.4)
@@ -131,8 +129,7 @@
   date: 2020-09-17
   slides: 03-Informed-Search.pdf
   title:  Uniform Cost Search, A* Search, and Heuristics
-  recording: https://upenn.zoom.us/rec/share/bzJEkLK8Y-Js28KXOTy9QA_g3jiivBV6ObU88_srdXnCb0eJE5u9md6-5Z7miBcw.JMQNQpKi-uP_-kQu
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e515335f-4a98-453d-b9bb-aab50126489e
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4590be21-5edd-4b20-875a-ac390128330a
   readings:   
     - 
       title: AIMA Chapter 3 "Solving Problems by Search" (3.1-3.4)
@@ -172,8 +169,7 @@
     - 
       slides: 03-Adversarial-Search.pdf
       title: Games and Adversarial Search
-  recording: https://upenn.zoom.us/rec/share/ksS8cUmcVQbi6Lru4RNwPFKO0dD6H9mK-Ps8YPqRy9IB8jaSubkejls2nDS1UMCE.56nQyu-XnTlZRIfd
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b3e7f15b-7d1a-4449-bf8d-aab5012648e4
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=41d3f698-b539-4c25-ba38-ac3e012e8e19
   readings:   
     - 
       title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
@@ -214,8 +210,7 @@
   date: 2020-09-24
   slides: 03-Expectimax-and-Utilities.pdf
   title:  Game Trees&colon; Expectimax and Utilities
-  recording: https://upenn.zoom.us/rec/share/xvSSt6sc7LeROmvenm9GW-DohqVwS1A2QXWwyvoB684Aba8pvka5_xqJPf7q89IX.24iHKzTx34igvQkk
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=601142a0-302f-4705-8431-aab501264928
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=521cda82-c7f9-4810-825d-ac40012584a2
   readings:   
     - 
       title: AIMA Chapter 5 "Adversarial Search" (5.2-5.5)
