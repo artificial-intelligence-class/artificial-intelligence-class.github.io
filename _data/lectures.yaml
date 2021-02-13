@@ -242,8 +242,7 @@
   date: 2020-09-29
   slides: 03-CSPs.pdf
   title:  Constraint Satifaction Problems 
-  recording: https://upenn.zoom.us/rec/share/mPeGxOH1GSfQudfBx0JAO7cBhJeOMoi5cLAzBH8iqWfCC3PtofeGGE9ac4h_wBSY.fitAOeIWqVayVBtJ
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96eb332f-9391-46f8-af55-aab5012648bf
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6338a0c9-1fc0-47e0-ad0a-ac450125fab4
   readings:   
     - 
       title: AIMA Chapter 6 "Constraint Satifaction Problems" (6.1-6.5)
@@ -258,7 +257,7 @@
   date: 2020-10-01
   slides: 04-Logical-Agents.pdf
   title:  Logical Agents
-  recording: https://upenn.zoom.us/rec/share/OqXUCQcSMWUp_G7RZ4Otuy_7X29by0buqKiPIh8bG1O4eAXUJ3hD7gIbGUmUfcCW.zyW0xG4AX-D9ULg_
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e7069c74-3a2b-4f77-963a-ac47012d5dc6
   readings:   
     - 
       title: AIMA Chapter 7 "Logical Agents"
@@ -268,16 +267,12 @@
   date: 2020-10-06
   slides: 04-Logical-Agents.pdf
   title:  Logical Agents Wrap-Up
-  recording: https://upenn.zoom.us/rec/share/_j406AeQURVUSDzS4DaLnvzhn76xxouSozSJ5qWwMA8F2NojrJX0mjbjIW-iCsVh.q4xhjt3xGPrNCR-n
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=441d80cd-0fa5-4109-be7f-ac4c012b66d2
   readings:   
     - 
       title: AIMA Chapter 7 "Logical Agents"
       authors: Russell and Norvig
       optional: false 
--
-  date: 2020-10-06
-  title:  Date change&colon; HW4 is now due on Oct 13, HW5 will be released then.
-  type: exam
 -
   date: 2020-10-07
   title: Drop Period Ends
@@ -286,8 +281,7 @@
   date: 2020-10-08
   slides: 05-MDPs.pdf
   title:  Markov Decision Processes
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7d673336-f708-41d4-aa8a-aab5012649b0
-  recording: https://upenn.zoom.us/rec/share/X77ThLeryu7fFAlBhXHLpCnuQbiuIb-JO120pkBrvj3YUXxDj0WlrZ859yDZZP6O.RIaTOvaDKDmkazrh
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=95fd917c-7a03-4ae2-8cdf-ac4e012677d8
   readings:   
     - 
       title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
@@ -301,8 +295,7 @@
   date: 2020-10-13
   slides: 05-MDPs-part-2.pdf
   title: MDPs - part 2 
-  recording: https://upenn.zoom.us/rec/share/5BbrIvi87bJGW1mavNMKH1lpK0IWwQtSAzJoYJQOqtY2UcAZGQH_729jSJWnQxLR.NJKFvWQF_2tBR1Ik
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d38a701-365b-4f71-9802-aab501264a1c
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a8692491-f920-4cea-bded-ac53012822cb
   readings:   
     - 
       title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
@@ -319,7 +312,7 @@
 -
   date: 2020-10-20
   title: Wrapup of MDPs and Utilities
-  recording: https://upenn.zoom.us/rec/share/WfFDpyIIjVW9LuuB39Bq7YLdxYPMYOjKrp-hIk00uLQ92f-EMzU_CGl8wJr9_Pw2.HQs21bG9aPdSjwPN
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0d4658e2-8c74-49b2-9ad9-ac5a012d36dc
   slides: 05-MDPs-part-3.pdf
   readings:
     - 
@@ -333,10 +326,9 @@
 
 -
   date: 2020-10-22
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8728f132-b84d-4016-8e3c-aab501264a68
   slides: 05-Reinforcement-Learning.pdf
   title:  Reinforcement Learning 
-  recording: https://upenn.zoom.us/rec/share/jCElX4fCkHGuudzQKMka-rW0VEQNOSZdwix6aP-BWbo7P_fDZCWwxZ4UgsI45Hbu.hWrtsnj03IPn4SG0
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6a621e9c-d8b7-4d91-a4b6-ac5c01278c6a
   readings:   
     - 
       title: AIMA Section 17.3 "Bandit Problems" 
@@ -370,7 +362,7 @@
   date: 2020-10-27
   slides: 05-Reinforcement-Learning-part-2.pdf
   title:  Reinforcement Learning Part 2
-  recording: https://upenn.zoom.us/rec/share/G7whnr2CvuMLGTSv-usjNYmGe2L1dqt2Jo-07c3x7Jp1y1jPWUSCHM3gc7BOlBB1.KkbqZPAOp92-6sav
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=73314b45-3f69-4afa-83e6-ac6101257cbf
   readings:   
     - 
       title: AIMA Chapter 22 "Reinforcement Learning" (Sections 22.1-22.5)
@@ -398,8 +390,8 @@
   title:  Midterm due, HW6 released (Reinforcement Learning)
   type: exam
 -
-  date: 2020-11-05
-  recording: https://upenn.zoom.us/rec/share/HTounDiz50-ubK37gb1imk_ufsJY8x8CEro261pIPYIE7d_sRwuBu4pEVTbQHEul.BzxZjp3lyKMjC9sW
+  date: 2020-10-29
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7ac8def7-fdda-4099-bd3d-ac63012eaf12
   slides: 06-language-models-and-probabilities.pdf
   title: Probabilities and Language Models 
   readings:
@@ -443,8 +435,7 @@
 -
   date: 2020-11-10
   slides: 06-Bayes-Nets-part-2.pdf
-  recording: https://upenn.zoom.us/rec/share/C8QteDEgzPrTzHjtuuFCR-VusS2SMOW6n8J4FqfDrt5qKIkVemWjawy0EWqxw4cc.3NElgUtdnEiCx7Qp
-  recording_old: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9428cfd3-a134-4b3a-b2c5-aab501264af0
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5e554ca4-b6c6-4db9-b374-ac6f0141e256
   title: Bayes' Nets wrap up
   readings:   
     - 
@@ -458,7 +449,7 @@
 -
   date: 2020-11-12
   slides: 07-Naive-Bayes-and-Perceptron.pdf
-  recording: https://upenn.zoom.us/rec/share/GCV4IXJzu1UuMZ1IqXYcAuu_aMPlatUGigyXdGum17cpxB7uBz6pfn-3BuUfw3e6.kto3x6s772Xp-jAP
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=73457205-d65f-4f1f-89c7-ac71014320a4
   title: Naive Bayes 
   readings:   
     - 
@@ -477,7 +468,7 @@
       optional: true  
 -
   date: 2020-11-17
-  recording: https://upenn.zoom.us/rec/share/J4ZtH9OjhkBkNlBobeIdDgEINwiGNVCLdhP8OSWFR9Uv8AE7L6A6qfguKF66DVXo.__LxmMls8D36VMpj?startTime=1605632197000
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=af494686-8d71-4fee-b8fd-ac76013a93b7
   slides: 07-Perceptrons.pdf
   title: Perceptrons
   readings:    
@@ -501,7 +492,7 @@
       title: Essence of Linear Algebra
 -
   date: 2020-11-19
-  recording: https://upenn.zoom.us/rec/share/L25bCR2Ws7wC1ac0zM8nf5jLX33rRc70vjmVFM74xaj8dhlhzW1DQn6RvMT_Ks8k.rDXp_M2n0wZD113E?startTime=1605805268000
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f8c14857-a870-4c9d-a332-ac780137f3fb
   slides: 08-Logistic-Regression.pdf
   title: Logistic Regression 
   readings:    
@@ -516,8 +507,7 @@
   type: exam
 -
   date: 2020-11-24
-  recording: https://upenn.zoom.us/rec/share/JhO9SrRPNct0fV1E-EAjDJm-a5XkWQOkq_BH3WL3qzHQ0SZbnPDwIuZDr24VHZ6k.rWJBuY999j5QZtk3?startTime=1606237368000
-  old_recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=11e3f835-4d9e-4e34-90f1-aab501264bf7
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ac325752-2fbe-47e7-818f-ac7d013ad9bf
   title: Stochastic Gradient Descent / Neural Networks 
   parts: 
     -
@@ -547,7 +537,7 @@
   type: no_lecture
 -
   date: 2020-12-01
-  recording: https://upenn.zoom.us/rec/share/oRaetRefCcY4c3GLMziUHSJopyI9NokpXLiSg_ugfdYszHvrvMJmJN8rT4YtK3RT.aDB1PD6bUVRXi2XW?startTime=1606842278000
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7be70516-2b19-461d-a89c-ac8401348547
   title: Neural Network Language Models
   slides: 08-Neural-Language-Models.pdf
   readings:    
@@ -569,7 +559,7 @@
   type: exam
 -
   date: 2020-12-03
-  recording: https://upenn.zoom.us/rec/share/7SLvVIXW-9yosdgp7D237M4uiWFdnGm8p12UUQYtFDGv9clPIy2XGgeBNwRG3xzd.eXteNogxH8V2ThQO?startTime=1607014660000
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f4dfb6f0-de99-48fb-9c35-ac86013d8760
   title: Natural Language Processing&colon; Vector Semantics
   slides: 09-Vector-Semantics.pdf
   readings:    
@@ -587,7 +577,7 @@
   type: exam
 -
   date: 2020-12-08
-  recording: https://upenn.zoom.us/rec/share/vm0wvE7etPL0R2myXpPcNpRY2GvpphC02OmOHlcxwkX0glGQC58kk6Lp2PXs72NF.8QCoVLjqdEjXpU38?startTime=1607446624000
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6762f1d8-4c64-4c3f-9c95-ac8b013e1f48
   title: Natural Language Processing&colon; Vector Semantics - part 2
   slides: 09-Vector-Semantics-part-2.pdf
   readings:    
@@ -601,7 +591,7 @@
   type: exam
 -
   date: 2020-12-10
-  recording: https://upenn.zoom.us/rec/share/DqfK9TcVG12QVhQPucnQz2ZnUQzWdkFNO4OrFo8rZqWF8C7rcHQLIFwJc57cjjc.vg-PFphc5j78wjLE?startTime=1607619099000
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9b5239e5-ba25-4ae1-9757-ac8d013af709
   slides: https://drive.google.com/file/d/13x0U3mtS-_B5HTzXwGtip6OW8Y-eo9kg/view
   title: Machine Learning as as tools of oppression (guest lecture by Skyler Wharton)
   readings:   
