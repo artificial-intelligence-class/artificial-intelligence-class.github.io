@@ -4,11 +4,20 @@ layout: default
 img: R2D2.png
 active_tab: main_page 
 ---
-<!--
 <div class="alert alert-danger" markdown="1">
-To get a permit for CIS 421/521, you should [sign yourself up for the CIS waitlist](https://forms.cis.upenn.edu/waitlist/index.php).  After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  If you have a question about the waitlist system you can email Lee Dukes ldukes@seas.upenn.edu.  
+To register for CIS 421/521 you should sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php). For questions about the waitlist, you may contact Lee Dukes - ldukes@seas.upenn.edu.
+</div>
 
+<!--
+	If you have a question about the waitlist system you can email Lee Dukes ldukes@seas.upenn.edu.  
 In order to be considered for a permit for the course, you must complete the first assignment by its due date.
+
+
+
+To register for CIS 421/521 you should sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) when it opens on April 30th.  Registration isn't available during advance registration, and you don't need to request permission of the instructor.
+
+After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  
+
 </div>
 -->
 
@@ -72,30 +81,17 @@ Instructor
 : [Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/)
 
 Discussion Forum
-: [Piazza](https://piazza.com/upenn/fall2020/cis521)
+: [Piazza](https://piazza.com/upenn/fall2021/cis521) 
 
 Time and place
-: In Fall 2020, the course will be all online.
-: Lectures will be [broadcast live on Zoom](https://upenn.zoom.us/j/97517317746?pwd=dlZSZTZXd1ZXaDhqeUhDK251TTFndz09) on Tuesdays and Thursdays from noon-1:30pm Eastern. Recordings will be made available shortly after the live lectures. 
-: The first day of class is Tuesday, September 1, 2020.
-: The first day of office hours will be Monday, September 7, 2020.
-: The final day of class is Tuesday, December 22, 2020.
+: In Fall 2021, the course will be in-person.  All lecture materials will be recorded and uploaded for students wishing to participate remotely.
+: Lectures will be on Tuesdays and Thursdays from noon-1:30pm Eastern.  
+: The first day of class is Tuesday, August 31, 2021.
+: The first day of office hours will be Tuesday, September 7, 2021.
+: The final day of class is Thursday, December 9, 2020.
 
 Office hours 
-: To join the office hour queue, please go to [OHQ.io](https://ohq.io/courses/122).
-: Monday 11am-1pm Eastern - Chris
-: Monday 4:30pm-6:30pm Eastern – Eddie
-: Monday 9pm-11pm Eastern - Hanbang 
-: Tuesday 2pm-4pm Eastern- Chenyu
-: Tuesday 4pm-6pm Eastern - Aditya
-: Tuesday 6pm-8pm Eastern - Joe
-: Wednesday 12:30pm-2:30pm Eastern - Daniel
-: Wednesday 2:30pm-4:30pm Eastern - Halley
-: Thursday 2pm-3pm Eastern - Yue (Extra Credit Only)
-: Friday 1pm-3pm Eastern - Bharath
-: Friday 3pm-5pm Eastern - Lisa
-: Friday 2:30pm-4pm Eastern - Halley (Python tutorial only.  Halley's Python tutorials will be group sessions held on [Gather Town](https://gather.town/aQMGI0l1R8DP0Ovv/penn-cis) in 3401 Walnut outside of room 463C.)
-: Sunday 2pm-4pm Eastern - Yue
+: TBD
 
 
 Textbooks
