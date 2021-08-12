@@ -74,6 +74,46 @@ You are strongly encouraged to follow the Python style guidelines set forth in [
 Once you have finished the assignment, you should submit both 2 completed skeleton files on [Gradescope]({{page.submission_link}}). 
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
+
+
+<div class="alert alert-success" markdown="1">
+Here are some for this assignment:
+
+1. Numpy is very useful for the CNN functions part of the assignment. For the convolve_grayscale function, the following numpy commands might be useful:
+* numpy.fliplr and numpy.flipud - useful for flipping the kernel 
+* numpy.shape - can be used to get the dimensions of a numpy array like the image or the kernel. For example:
+image_height, image_width = image.shape
+& numpy.zeros - useful for imitating the output to be the size of the image_height, image_width
+* numpy.hstack and numpy.vstack - useful for padding the image 
+* numpy.arange - useful for looping over the image. For example:
+```python
+for y in np.arange(vertical_pad, image_height + vertical_pad):
+  for x in np.arange(horizontal_pad, image_width + horizontal_pad):
+    output[y - vertical_pad, x - horizontal_pad] = // your code here
+```
+* numpy.sum - useful for summing over the values in an array (hint: will simplify the "your code here" above)
+2. Hint: After you've implemented convolve_grayscale, your convolve_rgb function can by very short. All you have to do is to call your convolve_grayscale three times - once for the red channel, once for the green channel and once for the blue channel.  The slice notation from early in the course will also be very useful. 
+```python
+output[:, :, channel] = // your code here
+```
+3. For your max_pooling and your average_pooling functions: 
+* numpy.lib.stride_tricks.as_strided - is useful for both.  [Here is a nice illustrated tutoral on how to use stride tricks.](https://towardsdatascience.com/advanced-numpy-master-stride-tricks-with-25-illustrated-exercises-923a9393ab20
+)
+* numpy.mean - useful for mean_pooling
+* numpy.maximum - useful for max_pooling
+4. PyTorch is very useful for defining your models for the Fashion MNIST part of the assignment. I recommend taking the time to walk through a tutorial on how to use it. [This tutorial uses the Fashion MNIST data set](https://pytorch.org/tutorials/beginner/basics/intro.html), and we based the assignment on parts on the tutorial. 
+
+5. Here's some documentation that for PyTorch that are used in the assignment:
+* torch.nn.Linear
+* torch.nn.ReLU - use to compute the rectified linear unit activation function
+* torch.nn.LogSoftmax - softmax
+* torch.nn.Conv2d - use in the advanced model
+* torch.nn.BatchNorm2d - use in the advanced model
+* torch.nn.MaxPool2d- use in the advanced model
+</div>
+
+
+
 ## 1. Individual Functions for CNN [50 points]
 
 The goal of this part of the assignment is to get an intuition of the underlying implementation used in Convolutional Neural Networks (CNN), specifically performing convolution and pooling, and applying an activation function.  
