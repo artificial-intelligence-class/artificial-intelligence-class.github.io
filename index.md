@@ -99,14 +99,14 @@ Textbooks
 : Supplemental: __Speech and Language Processing (3rd ed. draft) by Jurafsky and Martin__.  This textbook is currently [free online](https://web.stanford.edu/~jurafsky/slp3/) while the textbook authors are revising it to write their 3rd edition.  We will use it in the last third of the course. 
 
 
-
 Materials for Extra Credit Assignments
 : In addition to the normal homework assignments, we will have a series of optional extra credit assignments that use programmable toy R2D2s.  These assignments can be done in pairs.  Each extra credit homework assignment if worth up to about 1% of your overall grade.
-: If you are in Philadelphia, you can borrow one of the R2D2 robots from us.  It must be returned at the end of the semester in good working order, or you will have to pay $100 to replace it. 
+: You can borrow one of the R2D2 robots from us.  It must be returned at the end of the semester in good working order, or you will have to pay $100 to replace it. 
+
+<!--
 : If you are outside of Philadelphia, you can purchase a __Sphero R2D2__.  Currently, you can buy the robot for about $100 on [Amazon](https://www.amazon.com/Sphero-R201ROW-R2-D2-App-Enabled-Droid/dp/B071KSR86B/) or $80 from [Walmart.com](https://www.walmart.com/ip/Sphero-R2-D2-App-Enabled-Droid/707617540).  If you live outside the USA, you may need to use a [3rd party shipping service](https://planetexpress.com/stores/walmart/).
 : If you live outside of Philadelphia, you will also need a Raspberry Pi Sensor Pack that the TAs assembled from parts. We will send it to you if [you provide your address on this form](https://docs.google.com/forms/d/e/1FAIpQLSdGu_0Qms_RxA42QCZY0A_PrJFPNgXrVENYmZTAclrj5ZKoww/viewform?usp=sf_link).
-
-
+-->
 
 Grading 
 : * 70% Homework Assignments
@@ -139,5 +139,5 @@ Collaboration Policy
 
 
 Late Day Policy
-: Each student has ten free "late days".  Homeworks can be submitted at most two days late.  If you are out of late days, then you will not be able to get credit for subsequent late assignments. One "day" is defined as anytime between 1 second and 24 hours after the homework deadline. The intent of the late day policy it to allow you to take extra time due to unforseen circumstances like illnesses or family emergencies, and for forseeable interruptions like on campus interviewing and religious holidays.  You do not need to ask permission to use your late days.  No additional late days are granted. 
+: Each student has 5 free "late days".  Homeworks can be submitted at most two days late.  If you are out of late days, then you will not be able to get credit for subsequent late assignments. One "day" is defined as anytime between 1 second and 24 hours after the homework deadline. The intent of the late day policy it to allow you to take extra time due to unforseen circumstances like illnesses or family emergencies, and for forseeable interruptions like on campus interviewing and religious holidays.  You do not need to ask permission to use your late days.  No additional late days are granted. 
 
