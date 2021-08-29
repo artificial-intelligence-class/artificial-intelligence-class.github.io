@@ -5,8 +5,8 @@ img_link: https://www.explainxkcd.com/wiki/index.php/1002:_Game_AIs
 caption: Chess Puzzle
 title: CIS 521 Homework 2 "Uninformed Search"
 active_tab: homework
-release_date: 2020-09-13
-due_date: 2020-09-22 23:59:00EDT
+release_date: 2021-08-29
+due_date: 2021-09-14 23:59:00EDT
 materials:
     - 
         name: skeleton file
@@ -14,7 +14,7 @@ materials:
     - 
         name: GUI file
         url: homework2_gui.py 
-submission_link: https://www.gradescope.com/courses/160263
+submission_link: 
 ---
 
 <!-- Check whether the assignment is ready to release -->
