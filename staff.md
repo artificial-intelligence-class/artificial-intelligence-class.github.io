@@ -17,12 +17,12 @@ active_tab: staff
             {% endif %}
           </li>
           {% if staff.url %}
-            <li><b><a href="{{ staff.url }}">{{ staff.name }}</a></b></li>
+            <li><b><a href="{{ staff.url }}">{{ staff.name }}</a></b> {% if staff.pronouns %}({{staff.pronouns}}){% endif %}</li>
           {% else %}
-            <li><b>{{ staff.name }}</b></li>
+            <li><b>{{ staff.name }}</b> {% if staff.pronouns %}({{staff.pronouns}}){% endif %}</li>
           {% endif %}
           {% if staff.extra_title %}<li><em>{{ staff.extra_title }}</em></li>{% endif %}
-          <li><b>Email:</b><code>{{ staff.email }}</code></li>
+          {% if staff.email %}<li><b>Email:</b><code>{{ staff.email }}</code></li>{% endif %}
        	  {% if staff.office_hours %}<li><b>Office Hours:</b> {{ staff.office_hours | inline_markdownify }}</li>{% endif %}
           {% if staff.location %}<li><b>Location:</b> {{ staff.location | inline_markdownify }}</li>{% endif %}
         </ul>
