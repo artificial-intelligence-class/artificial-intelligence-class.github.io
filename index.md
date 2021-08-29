@@ -89,7 +89,7 @@ Instructor
 : [Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/)
 
 Discussion Forum
-: [Piazza](https://piazza.com/upenn/fall2021/cis521) 
+: [Piazza](piazza.com/upenn/fall2021/cis421521)
 
 Time and place
 : In Fall 2021, the course will be in-person.  All lecture materials will be recorded and uploaded for students wishing to participate remotely.
