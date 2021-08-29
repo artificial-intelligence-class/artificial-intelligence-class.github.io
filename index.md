@@ -5,7 +5,15 @@ img: R2D2.png
 active_tab: main_page 
 ---
 <div class="alert alert-danger" markdown="1">
-To register for CIS 421/521 you should sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php). For questions about the waitlist, you may contact Lee Dukes - ldukes@seas.upenn.edu.
+**Waitlist update**: The course is currently at capacity, but I'm investigating trying to expand the capacity to admit more students.  If you'd like to try to get into the course:
+1. Sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php). 
+2. Join the [Piazza for the students on the waitlist](piazza.com/upenn/fall2021/cis421521waitlist).
+3. Follow the instruction on [this post](https://piazza.com/class/ksx7s381j095c2?cid=6), which are:
+* Watch the lecture recordings (**you should not come to class in person**).
+* Complete the first two homework assignments ASAP.
+* Do the readings and take the quizzes that are announced on Piazza.
+
+For other questions about the waitlist or registration, you may contact Lee Dukes - ldukes@seas.upenn.edu.
 </div>
 
 <!--
