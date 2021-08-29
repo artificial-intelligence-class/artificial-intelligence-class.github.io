@@ -7,7 +7,7 @@ active_tab: main_page
 <div class="alert alert-danger" markdown="1">
 **Waitlist update**: The course is currently at capacity, but I'm investigating trying to expand the capacity to admit more students.  If you'd like to try to get into the course:
 1. Sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php). 
-2. Join the [Piazza for the students on the waitlist](piazza.com/upenn/fall2021/cis421521waitlist).
+2. Join the [Piazza for the students on the waitlist](https://piazza.com/upenn/fall2021/cis421521waitlist).
 3. Follow the instruction on [this post](https://piazza.com/class/ksx7s381j095c2?cid=6), which are:
 * Watch the lecture recordings (**you should not come to class in person**).
 * Complete the first two homework assignments ASAP.
