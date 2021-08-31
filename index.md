@@ -92,7 +92,8 @@ Discussion Forum
 : [Piazza](http://piazza.com/upenn/fall2021/cis521)
 
 Time and place
-: In Fall 2021, the course will be in-person.  All lecture materials will be recorded and uploaded for students wishing to participate remotely.
+: In Fall 2021, the course will be in-person and [broadcast live via Zoom](https://upenn.zoom.us/j/97772152051?pwd=NVFIbkJlemZ1Z2pvMk9oUWo0SHRYZz09).  
+: All lecture materials will be recorded and uploaded for students wishing to participate remotely.
 : Lectures will be on Tuesdays and Thursdays from noon-1:30pm Eastern.  
 : The first day of class is Tuesday, August 31, 2021.
 : The first day of office hours will be Tuesday, September 7, 2021.
