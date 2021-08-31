@@ -6,7 +6,7 @@ caption: Chess Puzzle
 title: CIS 521 Homework 2 "Uninformed Search"
 active_tab: homework
 release_date: 2021-08-29
-due_date: 2021-09-14 23:59:00EDT
+due_date: 2021-09-21 23:59:00EDT
 materials:
     - 
         name: skeleton file
