@@ -12,28 +12,27 @@ active_tab: lectures
 
 {% for module in site.data.modules %}
 
-# {{module.title}}
+# Module {{ forloop.index }}: {{module.title}}
 
 {{module.description}}
 
-## Learning Objectives
-<ul>
-{% for objective in module.learning_objectives %}
-<li>{{objective}}</li>
-{% endfor %}
-</ul>
-
 {% for lesson in module.lessons %}
-
-## {{lesson.title}}
-<ul>
-{% for topic in lesson.topics %}
-<li>{{topic}}</li>
+* **Lesson {{ forloop.index }}:** {{lesson.title}}
+{%if lesson.video %}[[Video]]({{lesson.video}}){% endif %}
+{%if lesson.slies %}[[Slides]]({{lesson.slides}}){% endif %}
 {% endfor %}
-</ul>
 
 
+{% if module.readings %} 
+Readings:
+{% for reading in module.readings %}
+{% if reading.url %}
+*  {% if reading.optional %}<b>Optional:</b> {% endif %} {{ reading.authors }}, <a href="{{ reading.url }}">{{ reading.title }}</a> 
+{% else %}
+*  {% if reading.optional %}<b>Optional</b> {% endif %} {{ reading.authors }}, {{ reading.title }} 
+{% endif %}
 {% endfor %}
+{% endif %}
 
 
 {% endfor %}
