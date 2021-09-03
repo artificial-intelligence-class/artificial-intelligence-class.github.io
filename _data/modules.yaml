@@ -1,47 +1,45 @@
 -
   module_number: 1
-  start_date: 2020-09-01
-  end_date: 2020-09-01
-  title: Course Introduction / AI in Science Fiction and Philosophy 
-  description: In this module I will give an overview of what to expect in the course and how it differs from other related courses at Penn.  We will also discuss the philosophical foundations of artificial intelligence – what great thinkers like Rene Descartes and Alan Turing thought about how artificial intelligence could be defied, and how we could test whether a non-human agent were truly intelligent.  We’ll also review portrayals of AI in Science Fiction, and see discuss what is science fiction and what has become science fact.  
-  learning_objectives:
-    - Framing AI as thinking like people, acting like people, thinking rationally, acting rationally 
-    - Understanding philosophical arguments about AI from René Descartes, Alan Turing, John Searle and Dan Dennett
-    - Science Fiction and Science Fact
+  start_date: 2021-08-31
+  end_date: 2020-09-07
+  title: Course Introduction & Rational Agents
+  description: In this module, we will introduce the course by delving into the philosophical underpinnings of artificial intelligence, integrating the work of important thinkers from Descartes to Alan Turing. We’ll also look at how Science Fiction often foretells the future of artificial intelligence, including examples of AI from hit 1970s and 1980s films that, decades later, have become a reality. This will set us up for some key considerations we’ll make when designing our own AI systems and how they should behave. Should they act like humans do, or think like humans do, or act and think rationally?
+  intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=97bacec2-6e77-4877-92ac-ad92011ca74c
   lessons:
     - 
-      title: Course Policies
-      topics:
-        - Course staff
-        
-      readings:
-        - 
-          title: Course website
-          link: http://artificial-intelligence-class.org
-      slides: 00-Course-Policies.pdf
-      video: video-url
+      title: Artificial Intelligence in Philosophy
+      slides:
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f77ce115-b6c8-404a-bb49-ad92011f91e7
     - 
-      title: Philosophy and AI
-      topics:
-        - Rene Descartes - Mind body dualism, people are just complex machines
-        - Alan Turing - the imitation game
-        - John Searle - The Chinese Room
-        - Daniel Dennett - Brain in a Vat
-      reading: AIMA chapter 1.XXX
-      reading_url: none
-      slides: xxx
-      video: video-url
-      quiz: 
+      title: Brain in a Vat Thought Experiment (YouTube)
+      video: https://www.youtube.com/watch?v=zO0sSJB1TrI
     - 
-      title: SciFi and AI
-      topics:
-        - Acting Human
-        - Voight-Kampff Test
-        - Science Fiction and Science Fact
-      readings:
-        - 
-          title: Blade Runner
-          optional: true
-      slides: xxx
-      video: video-url
-      
+      title: Artificial Intelligence in Science Fiction
+      slides: 
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6463a9ed-ebe5-4211-bd71-ad920119026d
+    - 
+      title: Intelligent Agents
+      slides:
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3439de81-6296-4e8c-8d28-ad9201191182
+    - 
+      title: Task Environments
+      slides:
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=91b4c112-e745-47cb-8468-ad9201191160
+  readings:   
+    - 
+      title: AIMA 4th Edition, Chapter 1 "Introduction", Section 1.1 "What is AI"
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA 4th Edition, Chapter 27 "Philosophical Foundations", Sections 27.1 "The Limits of AI" and 27.2 "Can Machines Really Think?"
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA 4th Edition, Chapter 27 "Philosophical Foundations", Sections 27.1 "The Limits of AI" and 27.2 "Can Machines Really Think?"
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: A Behavioral Model of Rational Choice
+      authors: Herbert A Simon
+      url: https://www.rand.org/pubs/papers/P365.html
+      optional: true
