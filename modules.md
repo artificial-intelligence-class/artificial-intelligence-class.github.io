@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Modules
-active_tab: lectures
+active_tab: recordings
 ---
 
 <!-- Create a HTML anchor for the most recent lecture -->
