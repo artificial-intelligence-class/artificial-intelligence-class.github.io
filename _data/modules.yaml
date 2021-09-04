@@ -35,11 +35,625 @@
       authors: Russell and Norvig
       optional: false
     - 
-      title: AIMA 4th Edition, Chapter 27 "Philosophical Foundations", Sections 27.1 "The Limits of AI" and 27.2 "Can Machines Really Think?"
-      authors: Russell and Norvig
-      optional: false
-    - 
       title: A Behavioral Model of Rational Choice
       authors: Herbert A Simon
       url: https://www.rand.org/pubs/papers/P365.html
       optional: true
+
+-
+  module_number: 2
+  start_date: 2021-09-06
+  end_date: 2020-09-13
+  title: Intro to Python
+  description: Python is an amazing language with a concise syntax that allows you to rapidly prototype algorithms, and we are going to use it for all the assignments in this course. This module will cover all of the fundamentals you need to get started with Python. And as we continue through the rest of the course, you’ll quickly become an expert!
+  intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4389e5d-083e-40c7-b458-ad92011c9210
+  lessons:
+    - 
+
+      title: Introduction to Python
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=92fc9c4b-4e5c-478d-806e-ad920119e77d
+      length: 11 minutes
+      slides:
+    - 
+      title: Objects and Types
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bc104345-b154-49ba-aef7-ad92011a0397
+      length: 15 minutes
+      slides:
+    - 
+      title: Functions
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7e56c590-f9ae-453e-bd8f-ad920119f330
+      length: 20 minutes
+      slides: 
+    - 
+      title: For Loops
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3a26ee4e-d570-4308-88e3-ad920119e7ea
+      length: 8 minutes
+    - 
+      title: Imports
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=de404fc3-288a-4c4c-a0b7-ad920119e7b3
+      length: 6 minutes
+      slides:
+    -
+      title: A Worked Example
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6086dffe-1699-487c-bdff-ad920119e73e
+      length: 9 minutes
+      slides: 
+  homework: Homework 1 "Python Skills"
+
+-
+  module_number: 3
+  start_date: 2021-09-13
+  end_date: 2020-09-20
+  title: Search Problems
+  description: In artificial intelligence, a surprising number of tasks that we want to solve can be cast as search problems. In this module, we will introduce the formal definition of search problems, and examine some classic algorithms for solving search problems called shortest path algorithms. These are sometimes referred to as “uninformed” search algorithms or “blind” search algorithms, because they are run without any additional knowledge of where our goal lies. We’ll also look at some variants of these algorithms that have computational complexity guarantees.
+  intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96480a11-edaa-4762-b5bb-ad92011c993e
+  lessons:
+    - 
+
+      title: Search Problems
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f8a55d36-0397-49ae-b24f-ad92011a2e8e
+      length: 12 minutes
+      slides:
+    - 
+      title: Search Problem Formulation
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=227c1da8-8a21-4649-86ec-ad92011a4fd4
+      length: 14 minutes
+      slides:
+    - 
+      title: Basic Search Algorithms
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5ca17958-bbf1-4683-921a-ad92011a45ad
+      length: 10 minutes
+      slides: 
+    - 
+      title: Uniformed Search Strategies
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4e4404b6-5b12-423e-9362-ad92011a2ec9
+      length: 5 minutes
+    - 
+      title: Review of BFS and DFS
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6edba822-310d-4c18-bec0-ad92011a2eff
+      length: 9 minutes
+      slides:
+    -
+      title: Depth Limited Search and Iterative Deepening Search
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=463bcac3-7fac-42f3-82d7-ad92011a2f41
+      length: 5 minutes
+      slides: 
+  homework: Homework 2
+  readings:
+    - 
+      title: AIMA 4th Edition, AIMA Chapter 3 "Problem Solving by Search" (3.1-3.4)
+      authors: Russell and Norvig
+      optional: false
+-
+  module_number: 4
+  start_date: 2021-09-20
+  end_date: 2020-09-27
+  title: Search Problems
+  description: We can often find a solution to a search problem more quickly if we have some knowledge about how close we are to a goal state. In this module we’ll look at the process of incorporating such knowledge into search algorithms, which, when used optimally, can help focus our search efforts so that we avoid exploring actions that move us further away from the goal. We’ll examine the most famous informed search algorithm, A* search, which is guaranteed to find an optimal solution first.
+  intro_video: 
+  lessons:
+    -
+      title: Uniform-cost Search
+      video: 
+      length: 6 minutes
+      slides: 
+    -
+      title: Heuristic Functions
+      video: 
+      length: 5 minutes
+      slides: 
+    -
+      title: Greedy Best-first Search
+      video: 
+      length: 9 minutes
+      slides: 
+    -
+      title: A* Search - part 1
+      video: 
+      length: 13 minutes
+      slides: 
+    -
+      title: A* Search - part 2
+      video: 
+      length: 19 minutes
+      slides: 
+  homework: Homework 3
+  readings:
+    - 
+      title: AIMA Chapter 3 "Problem Solving by Search" (3.5-3.6)
+      authors: Russell and Norvig
+      optional: false
+-
+  module_number: 5
+  start_date: 2021-09-27
+  end_date: 2020-10-04
+  title: Games and Adversarial Search
+  description: Games present an interesting challenge for artificial intelligence because they involve reasoning about what actions your opponent is likely to take. In this module we’ll talk about how to represent games as adversarial search problems, using a search tree, which assumes that your opponent is a rational actor that is trying to use the best strategy. We will also investigate a number of helpful algorithms and concepts that apply in the context of games, such as minimax and expectimax.
+  intro_video: 
+  lessons:
+    -
+      title: Game Formulation
+      video: 
+      length: 14 minutes
+      slides: 
+    -
+      title: Game Tree
+      video: 
+      length: 17 minutes
+      slides: 
+    -
+      title: Minimax Rules
+      video: 
+      length: 6 minutes
+      slides: 
+    -
+      title: Alpha-Beta Pruning
+      video: 
+      length: 9 minutes
+      slides: 
+    -
+      title: Expectimax
+      video: 
+      length: 13 minutes
+      slides: 
+  homework: Homework 4
+  readings:
+    - 
+      title: AIMA chapter 5 "Adversairal Search" (5.2-5.5).
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA Chapter 16 "Making Simple Decisions" (16.1-16.3) 
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title:  Programming a Computer for Playing Chess (1950) 
+      authors: Claude Shannon
+      url: http://artificial-intelligence-class.org/assets/readings/Shanning-1950-Programming-a-Computer-for-Playing-Chess.pdf
+      optional: true
+    - 
+      title: Reconstructing Turing's "Paper Machine" 
+      authors: Frederic Friedel
+      url: https://en.chessbase.com/post/reconstructing-turing-s-paper-machine
+      optional: true
+-
+  module_number: 6
+  start_date: 2021-10-04
+  end_date: 2020-10-11
+  title: Constraint Satisfaction Problems
+  description: In this module, we’ll look at constraint satisfaction problems (CSPs), a kind of search problem that allows us to take advantage of the problem structure. In CSPs, we have a set of variables, each of which we need to assign a value to, subject to some constraints. Through examples like map coloring and sudoku puzzles, we’ll discuss how we represent CSPs as a graph, how we propagate constraints on a partially solved graph, and how we check for consistency in nodes, arcs and paths. This will also introduce us to new concepts including inference and backtracking search.
+  intro_video: 
+  lessons:
+    -
+      title: Intro to CSPs
+      video: 
+      length: 9 minutes
+      slides: 
+    -
+      title: Deeper into CPSs
+      video: 
+      length: 13 minutes
+      slides: 
+    -
+      title: CSPs as a Search Problem
+      video: 
+      length: 9 minutes
+      slides: 
+    -
+      title: Heuristics to Improve Backtracking Efficiency
+      video: 
+      length: 17 minutes
+      slides: 
+    -
+      title: Arc Consistency and AC3
+      video: 
+      length: 13 minutes
+      slides: 
+  homework: Homework 4
+  readings:
+    - 
+      title: AIMA, Chapter 6 "Constraint Satisfaction Problems" (6.1-6.5)
+      authors: Russell and Norvig
+      optional: false
+-
+  module_number: 7
+  start_date: 2021-10-11
+  end_date: 2020-10-18
+  title: Logical Agents
+  description: In this module, we will introduce a new kind of agent&colon; Knowledge-based Agents that are able to create and update a representation of the world in a knowledge base, and use inference rules and logical reasoning to draw conclusions about how the world works. This necessitates a knowledge base, a set of sentences that are written in a knowledge representation language that contain some assertions about the world. In our course, we will talk about Propositional Logic as a knowledge representation language.
+  intro_video: 
+  lessons:
+    -
+      title: Knowledge-based Agents 1
+      video: 
+      length: 8 minutes
+      slides: 
+    -
+      title: Hunt the Wampas
+      video: 
+      length: 16 minutes
+      slides: 
+    -
+      title: Knowledge-based Agents 2
+      video: 
+      length: 8 minutes
+      slides: 
+    -
+      title: Propositional Logic
+      video: 
+      length: 10 minutes
+      slides: 
+    -
+      title: Knowledge Bases
+      video: 
+      length: 15 minutes
+      slides: 
+    -
+      title: Theorem Proving 1
+      video: 
+      length: 20 minutes
+      slides: 
+    -
+      title: Theorem Proving 2
+      video: 
+      length: 17 minutes
+      slides: 
+  homework:
+  readings:
+    - 
+      title: AIMA Chapter 7 "Logical Agents" 
+      authors: Russell and Norvig
+      optional: false
+
+-
+  module_number: 8
+  start_date: 2021-10-18
+  end_date: 2020-10-25
+  title: Markov Decision Process
+  description: So far, we have examined deterministic problem settings, but in this module will now turn to stochastic or probabilistic task environments. We’ll start by introducing a new kind of formalization called Markov Decision Processes (MDPs) which are useful for fully observable task environments where we have to make a sequence of decisions, and where the outcome for actions we take are non-deterministic. Looking at MDPs will also look into new algorithms, such as Policy Iteration and Value Iteration, and the important concepts v and additive rewards.
+  intro_video: 
+  lessons:
+    -
+      title: Introduction to MDPs
+      video: 
+      length: 11 minutes
+      slides: 
+    -
+      title: MDP Formulation (part 1)
+      video: 
+      length: 11 minutes
+      slides: 
+    -
+      title: MDP Formulation (part 2)
+      video: 
+      length: 8 minutes
+      slides: 
+    -
+      title: MDP Examples
+      video: 
+      length: 12 minutes
+      slides: 
+    -
+      title: Value Iteration Algorithm
+      video: 
+      length: 21 minutes
+      slides: 
+    -
+      title: Policy Evaluation
+      video: 
+      length: 9 minutes
+      slides: 
+    -
+      title: Policy Iteration Algorithm
+      video: 
+      length: 8 minutes
+      slides: 
+    -
+      title: Maximum Expected Utility
+      video: 
+      length: 22 minutes
+      slides: 
+  homework: Homework 5
+  readings:
+    - 
+      title: AIMA Chapter 16 "Making Simple Decisions" (16.1-16.3) 
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA Chapter 17 "Making Complex Decision" (17.1-17.3) 
+      authors: Russell and Norvig
+      optional: false
+
+-
+  module_number: 9
+  start_date: 2021-10-25
+  end_date: 2020-11-01
+  title: Reinforcement Learning
+  description: In this module, we will explore situations where a transition and a reward function are not given to us, but must be learned through interaction with the world. In reinforcement learning, every time an agent takes an action in the world, it receives feedback in the form of a reward, and so the agent wants to maximize its expected rewards. We’ll look at several different learning techniques for reinforcement learning&colon; including model-based learning and temporal difference learning. Finally, we’ll be able to quantify how good different exploration strategies are using regret.
+  intro_video: 
+  lessons:
+    -
+      title: Introduction to Reinforcement Learning 1
+      video: 
+      length: 12 minutes
+      slides: 
+    -
+      title: Introduction to Reinforcement Learning 2
+      video: 
+      length: 12 minutes
+      slides: 
+    -
+      title: Passive Reinforcement Learning
+      video: 
+      length: 14 minutes
+      slides: 
+    -
+      title: Temporal Difference Learning
+      video: 
+      length: 11 minutes
+      slides: 
+    -
+      title: Active Reinforcement Learning (Q-Learning)
+      video: 
+      length: 14 minutes
+      slides: 
+    -
+      title: Exploration vs. Exploitation
+      video: 
+      length: 11 minutes
+      slides: 
+    -
+      title: Exploration vs. Exploitation
+      video: 
+      length: 11 minutes
+      slides: 
+  homework: Homework 6
+  readings:
+    - 
+      title: AIMA Section 17.3 "Bandit Problems" 
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: AIMA Chapter 22 "Reinforcement Learning" (Sections 22.1-22.5) 
+      authors: Russell and Norvig
+      optional: false
+
+-
+  module_number: 10
+  start_date: 2021-11-01
+  end_date: 2020-11-08
+  title: Probabilities and Language Models
+  description: In this module, we’ll review the basics of probability, an extremely important concept to master in artificial intelligence. We’ll review the basics of probability theory, including the axioms of probability, what an event is, what a probabilistic model is, and much more. To show some practical applications of these concepts, we’ll take a look at something called probabilistic language models, which power things like autocomplete on your smartphone.
+  intro_video: 
+  lessons:
+    -
+      title: Review of Probabilities
+      video: 
+      length: 9 minutes
+      slides: 
+    -
+      title: Distributions
+      video: 
+      length: 13 minutes
+      slides: 
+    -
+      title: Probabilistic inference and Rules
+      video: 
+      length: 13 minutes
+      slides: 
+    -
+      title: Probabilistic Language Models
+      video: 
+      length: 14 minutes
+      slides: 
+  homework: Homework 7
+  readings:
+    - 
+      title: AIMA Chapter 12 "Quantifying Uncertainty" (Sections 12.1-12.7)
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: Speech and Language Processing Chapter 3 "N-Gram Language Models" 
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/3.pdf
+      optional: false
+
+
+-
+  module_number: 11
+  start_date: 2021-11-08
+  end_date: 2020-11-17
+  title: Probabilistic Reasoning and Bayes' Nets
+  description: In this module we will build on last week by reviewing a kind of probabilistic model called a Bayes Net, where the nodes represent variables in our probability model, and the arcs encode our assumption about how the events are related to each other. Bayes Nets are compact representations that allow us to encode independence assumptions between variables. We will revisit independence and look at an algorithm for enumerating the independence assumptions in a Bayes Net called the d-separation algorithm.
+  intro_video: 
+  lessons:
+    -
+      title: Review of Independence
+      video: 
+      length: 9 minutes
+      slides: 
+    -
+      title: Bayes Net Properties
+      video: 
+      length: 15 minutes
+      slides: 
+    -
+      title: Reachability and Paths
+      video: 
+      length: 6 minutes
+      slides: 
+    -
+      title: The D-Separation Algorithm
+      video: 
+      length: 11 minutes
+      slides: 
+    -
+      title: Inference
+      video: 
+      length: 11 minutes
+      slides: 
+  readings:
+    - 
+      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4) 
+      authors: Russell and Norvig
+      optional: false
+
+
+
+-
+  module_number: 12
+  start_date: 2021-11-08
+  end_date: 2020-11-17
+  title: Naive Bayes and Perceptrons
+  description: Machine learning is an important aspect of artificial intelligence. Broadly speaking machine learning addresses the question&colon; How can an agent use data to learn to make decisions? In this module we’ll look at two different machine learning algorithms&colon; Naive Bayes and perceptrons, that use a set of labeled training data in order to learn how to perform classification tasks.
+  intro_video: 
+  lessons:
+    -
+      title: Classification Tasks
+      video: 
+      length: 15 minutes
+      slides: 
+    -
+      title: Naïve Bayes
+      video: 
+      length: 26 minutes
+      slides: 
+    -
+      title: Basic Concepts in ML
+      video: 
+      length: 21 minutes
+      slides: 
+    -
+      title: Perceptron
+      video: 
+      length: 21 minutes
+      slides: 
+    -
+      title: Improvements to Perceptrons, and SVM
+      video: 
+      length: 11 minutes
+      slides: 
+  homework: Perceptron
+  readings:
+    - 
+      title: AIMA Chapter 19 "Learning from Examples" (Sections 19.1-19.6)
+      authors: Russell and Norvig
+      optional: false
+    - 
+      title: Speech and Language Processing Chapter 5 "Logistic Regression"
+      authors: Jurafsky and Martin
+      optional: false
+    - 
+      title: Electronic 'Brain' Teaches Itself 
+      authors: New York Times (July 13, 1958)
+      url: https://timesmachine.nytimes.com/timesmachine/1958/07/13/91396361.html?action=click&contentCollection=Archives&module=LedeAsset&region=ArchiveBody&pgtype=article&pageNumber=116
+      optional: false
+
+
+-
+  module_number: 13
+  start_date: 2021-11-17
+  end_date: 2020-11-25
+  title: Neural Networks
+  description: In this module we will investigate neural networks, which consist of a set of neural units that are grouped together in a network. We will look at the neural networks’ training procedure, the errors involved and their attribution, and several neural architectures. We will also look at how neural networks have been used as probabilistic language models.
+  intro_video: 
+  lessons:
+    -
+      title: Logistic Regression
+      video: 
+      length: 19 minutes
+      slides: 
+    -
+      title: Loss Functions
+      video: 
+      length: 17 minutes
+      slides: 
+    -
+      title: Stochastic Gradient Descent 1
+      video: 
+      length: 12 minutes
+      slides: 
+    -
+      title: Stochastic Gradient Descent 1
+      video: 
+      length: 21 minutes
+      slides: 
+    -
+      title: Neural Networks 1
+      video: 
+      length: 8 minutes
+      slides: 
+    -
+      title: Neural Networks 1
+      video: 
+      length: 18 minutes
+      slides: 
+  homework: Neural Networks
+  readings:
+    - 
+      title: Speech and Language Processing Chapter 5 "Logistic Regression" 
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/5.pdf
+      optional: false
+    - 
+      title: Chapter 7 "Neural Networks and Neural Language Models" 
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf
+      optional: false
+
+
+-
+  module_number: 14
+  start_date: 2021-11-17
+  end_date: 2020-11-25
+  title: Natural Language Processing
+  description: In our last content module, we will look into an application of AI called Natural Language Processing (NLP.) The goal of NLP is to enable computers to communicate in a human-like fashion. This was one of the first ideas for AI, tracing its routes all the way back to Alan Turing and the imitation game. In this module, we’ll be focusing on how to create representations of words that capture their meanings, using the concept of vector space models.
+
+  intro_video: 
+  lessons:
+    -
+      title: Neural Language Models
+      video: 
+      length: 20 minutes
+      slides: 
+    -
+      title: Lexical Semantic Models
+      video: 
+      length: 9 minutes
+      slides: 
+    -
+      title: Vector Semantic Models 1
+      video: 
+      length: 16 minutes
+      slides: 
+    -
+      title: Vector Semantic Models 2
+      video: 
+      length: 10 minutes
+      slides: 
+    -
+      title: Word Embeddings
+      video: 
+      length: 8 minutes
+      slides: 
+    -
+      title: Word Embeddings Demo
+      video: 
+      length: 10 minutes
+      slides: 
+  readings:
+    - 
+      title: Chapter 7 "Neural Networks and Neural Language Models" 
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf
+      optional: false
+    - 
+      title: Chapter 9 "Sequence Processing with Recurrent Networks" 
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/9.pdf
+      optional: false
+    - 
+      title: Chapter 6 "Vector Semantics and Embeddings" 
+      authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
+      optional: false

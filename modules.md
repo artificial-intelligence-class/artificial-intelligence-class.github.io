@@ -4,10 +4,15 @@ title: Modules
 active_tab: recordings
 ---
 
+
 <!-- Create a HTML anchor for the most recent lecture -->
 {% assign anchor_created = false %}
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
+
 <!-- End create a HTML anchor for the most recent lecture -->
+
+
 
 
 {% for module in site.data.modules %}
@@ -34,5 +39,18 @@ Readings:
 {% endfor %}
 {% endif %}
 
+{% if module.homework %} 
+Homework:
+
+<ul>
+{% for page in site.pages %}
+{% capture due_year %}{{page.due_date | date: '%Y'}}{% endcapture %}
+
+{% if page.title contains module.homework %}
+<li><a href="{{page.url}}">{{ page.title }}</a> {% if this_year == due_year %}  (due {{ page.due_date | date: "%A, %B %-d, %Y" }}) {% endif %}</li>
+{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
 
 {% endfor %}
