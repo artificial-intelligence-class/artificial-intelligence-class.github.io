@@ -21,6 +21,8 @@ active_tab: recordings
 
 {{module.description}}
 
+
+* **Intro:** Module {{ forloop.index }} [[Video]]({{module.intro_video}})
 {% for lesson in module.lessons %}
 * **Lesson {{ forloop.index }}:** {{lesson.title}}
 {%if lesson.video %}[[Video]]({{lesson.video}}){% endif %}
