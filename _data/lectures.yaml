@@ -2,31 +2,11 @@
   date: 2021-08-31
   title: Introduction / AI in Science Fiction and Philosophy 
   recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cf97c97d-568d-44c7-85e2-ad9501232319&start=313.990763026
-  parts: 
-    -
-      title: Course Policies 
-      slides: 00-Course-Policies.pdf
-    -
-      title: Artificial Intelligence in Philosophy 
-      slides: 00-AI-In-Philosophy.pdf
-    -
-      title: Artificial Intelligence in Science Fiction 
-      slides: 00-AI-In-SciFi.pdf
-    -
-      title: R2D2 Assignments
-      slides: 00-R2D2-Assignments.pdf
-  readings:   
-    - 
-      title: AIMA 4th Edition, Chapter 1 "Introduction", Section 1.1 "What is AI"
-      authors: Russell and Norvig
-      optional: false
-    - 
-      title: AIMA 4th Edition, Chapter 27 "Philosophical Foundations", Sections 27.1 "The Limits of AI" and 27.2 "Can Machines Really Think?"
-      authors: Russell and Norvig
-      optional: false
-  videos:
-    -  
-      authors: PBS Crash Course in Philosophy
-      url: https://www.youtube.com/watch?v=39EdqUbj92U
-      title: Artificial Intelligence & Personhood
-      length: 9.5 minutes 
+-
+  date: 2021-09-01
+  title: Introduction / AI in Science Fiction and Philosophy 
+  recording: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cf97c97d-568d-44c7-85e2-ad9501232319&start=313.990763026
+- 
+  date: 2021-09-02
+  title: Class canceled because of flooding.  Please watch these lecture recordings on your own - [[Intelligent Agents]](https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3439de81-6296-4e8c-8d28-ad9201191182) and [[Task Environments]](https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=91b4c112-e745-47cb-8468-ad9201191160)
+  type: no_lecture

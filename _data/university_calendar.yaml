@@ -1,7 +1,7 @@
 -
   date: 2021-08-31
   title: First day of classes
-  type: penn_calendar
+  type: university_calendar
 -
   date: 2021-09-06
   title: Labor Day 
@@ -9,7 +9,7 @@
 -
   date: 2021-10-11
   title: Drop Period Ends
-  type: penn_calendar
+  type: university_calendar
 -
   date: 2021-10-14
   title: Fall Term Break
@@ -21,11 +21,11 @@
 -
   date: 2021-10-29
   title: Grade Type Change Deadline
-  type: penn_calendar
+  type: university_calendar
 -
   date: 2021-11-08
   title: Last day to withdraw from a course
-  type: penn_calendar
+  type: university_calendar
 -
   date: 2021-11-25
   title: Thanksgiving Break
@@ -37,4 +37,4 @@
 -
   date: 2021-12-10
   title: Last day of classes
-  type: penn_calendar
+  type: university_calendar
