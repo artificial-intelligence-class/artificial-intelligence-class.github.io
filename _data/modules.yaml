@@ -447,8 +447,8 @@
 
 -
   module_number: 12
-  start_date: 2021-11-08
-  end_date: 2021-11-17
+  start_date: 2021-11-15
+  end_date: 2021-11-22
   title: Naive Bayes and Perceptrons
   description: Machine learning is an important aspect of artificial intelligence. Broadly speaking machine learning addresses the question&colon; How can an agent use data to learn to make decisions? In this module we’ll look at two different machine learning algorithms&colon; Naive Bayes and perceptrons, that use a set of labeled training data in order to learn how to perform classification tasks.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d5782a2-7448-4eec-8d52-ad92011c7d89
@@ -492,8 +492,8 @@
 
 -
   module_number: 13
-  start_date: 2021-11-17
-  end_date: 2021-11-25
+  start_date: 2021-11-22
+  end_date: 2021-12-06
   title: Neural Networks
   description: In this module we will investigate neural networks, which consist of a set of neural units that are grouped together in a network. We will look at the neural networks’ training procedure, the errors involved and their attribution, and several neural architectures. We will also look at how neural networks have been used as probabilistic language models.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c3f50379-2195-4393-b015-ad92011c859c
@@ -538,8 +538,8 @@
 
 -
   module_number: 14
-  start_date: 2021-11-17
-  end_date: 2021-11-25
+  start_date: 2021-12-06
+  end_date: 2021-12-14
   title: Natural Language Processing
   description: In our last content module, we will look into an application of AI called Natural Language Processing (NLP.) The goal of NLP is to enable computers to communicate in a human-like fashion. This was one of the first ideas for AI, tracing its routes all the way back to Alan Turing and the imitation game. In this module, we’ll be focusing on how to create representations of words that capture their meanings, using the concept of vector space models.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee63f3dc-7d87-435f-8898-ad9a002270c1

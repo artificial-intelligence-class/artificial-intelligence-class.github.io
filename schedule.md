@@ -2,60 +2,128 @@
 layout: default
 title: Schedule
 active_tab: items
+term_start: 2021-08-31
+term_end: 2021-12-10
+lecture_days: Tuesdays and Thursdays
 ---
 
 
 
+<div class="alert alert-info" markdown="1">
+The schedule below shows the schedule section XXX, which meets on Tuesday/Thursday.  [Click here for the XXX Monday/Wednesday section.]()
+</div>
+
+
+<table class="table table-striped" >
+  <thead>
+    <tr>
+      <th>Date</th> 
+      <th>Topic</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<!-- Walk through the days in the semester -->
+<!-- Capture the current day -->
+{% capture start_date %}{{page.term_start  | date: '%s'}}{% endcapture %}
+{% capture end_date %}{{page.term_end  |  date: "%Y-%m-%d" }}{% endcapture %}
+{% for i in (1..365) %}
+
+{% assign seconds = {i} | times: 24 | times: 60 | times: 60 %}
+{% capture curr_date %}{{ start_date | date: "%s" | plus: seconds | date: "%Y-%m-%d" }}{% endcapture %}
+
+{% capture day_of_week %}{{ curr_date | date: "%A" }}{% endcapture %}
+
+{% if curr_date > end_date %}
+ {% break %}
+{% endif %}
+<!-- End of Capture the current day -->
+
+<!-- Check to see if today is a lecture day -->
+{% assign is_lecture_day = false %}
+{% if page.lecture_days contains day_of_week %} 
+{% assign is_lecture_day = true %}
+{% endif %}
+<!-- End check to see if today is a lecture day -->
+
+<!-- Check for university calendar events -->
+{% for ucal in site.data.university_calendar %}
+
+{% capture ucal_date %}{{ucal.date | date: "%Y-%m-%d"}}{% endcapture %}
+{% if ucal_date == curr_date %}
+<!-- Display university calendar item -->
+<tr><td>{{ ucal.date | date: '%a, %b %-d, %Y' }} </td><td>{{ ucal.title | markdownify }}
+<!-- End display university calendar -->
+<!-- Override lecture days for university vacation days -->
+{% if ucal.type == 'no_lecture' %} (No lecture)
+{% assign is_lecture_day = false %}
+{% endif %}
+</td></tr>
+<!-- End override lecture days  -->
+
+{% endif %}
+{% endfor %}
+<!-- End check for university calendar events -->
+
+
+<!-- Check for module starts -->
 {% for module in site.data.modules %}
-
-<!-- Create an HTML anchor for the current module -->
-{% assign anchor_created = false %}
-{% capture now %}{{'now' | date: '%s'}}{% endcapture %}
-
-{% capture module_start_date %}{{module.start_date  | date: '%s'}}{% endcapture %}
-
-{% capture module_end_date %}{{module.end_date  | date: '%s'}}{% endcapture %}
-
-
-
-{% if module_start_date <= now and module_end_date > now %}
-<a name="now"></a>
+{% capture module_start_date %}{{ module.start_date | date: "%Y-%m-%d"}}{% endcapture %}
+{% if module_start_date == curr_date %}
+<!-- Display module info -->
+<tr><td>{{ module.start_date | date: '%a, %b %-d, %Y' }}</td><td>Start of Module {{module.module_number}} - {{module.title}}</td></tr>
+<!-- End display module  -->
 {% endif %}
-
-<!-- End create an HTML anchor for the current module -->
-
-
-## Module {{module.module_number}} - {{module.title}} 
-{% assign curr_date = module_start_date %}
-
-
-
-
-<!-- Begin university calendar -->
-{% for cal_item in site.data.university_calendar %}
-
-{% capture cal_date %}{{cal_item.date | date: '%s'}}{% endcapture %}
-
-{% if curr_date <= cal_date  and cal_date < module_end_date %}
-* {{ cal_item.date | date: '%a, %b %-d, %Y' }} - {{ cal_item.title }}
-{% endif %}
-
 {% endfor %}
-<!-- End university calendar -->
+<!-- End check for module starts -->
 
 
-<!-- Assign lectures to modules based on date -->
+<!-- Check for homework due dates -->
+{% for page in site.pages %}
+{% if page.active_tab == "homework" %}
+
+{% capture hw_due_date %}{{ page.due_date | date: "%Y-%m-%d"}}{% endcapture %}
+
+{% if hw_due_date == curr_date %}
+<tr><td>{{ hw_due_date | date: '%a, %b %-d, %Y' }}</td><td><span markdown="1">[{{page.title}}]({{page.url}}) is due</span></td></tr>
+{% endif %}
+
+{% endif %}
+{% endfor %}
+<!-- Check for homework due dates -->
+
+
+
+
+
+
+<!-- Display lecture info  -->
+{% if is_lecture_day == true %}
+{% assign displyed_lecture_info = false %}
 {% for lecture in site.data.lectures %}
+{% capture lecture_date %}{{lecture.date | date: "%Y-%m-%d"}}{% endcapture %}
 
-{% capture lecture_date %}{{lecture.date | date: '%s'}}{% endcapture %}
+{% if lecture_date == curr_date %}
+<tr><td>{{ lecture_date | date: '%a, %b %-d, %Y' }}</td><td><span markdown="1">{{lecture.title}} [[recording]]({{lecture.recording}}) </span></td></tr>
+{% assign displyed_lecture_info = true %}
+{% endif %}
+{% endfor %}
 
-{% if curr_date <= lecture_date  and lecture_date < module_end_date %}
-* {{ lecture.date | date: '%a, %b %-d, %Y' }} - {{ lecture.title }}
-{% assign curr_date = lecture_date %}
+
+<!-- Placeholder if no lecture exists in the YAML -->
+{% if displyed_lecture_info == false %}
+<tr><td>{{ curr_date | date: '%a, %b %-d, %Y' }} </td><td>Lecture</td></tr>
+<!-- End no lecture placeholder -->
 {% endif %}
 
-{% endfor %}
+{% endif %}
+<!-- End display lecture info -->
 
-<!-- End assign lectures to modules based on date -->
+
+
 
 {% endfor %}
+<!-- End of walk through the days in the semester -->
+
+  </tbody>
+</table>
