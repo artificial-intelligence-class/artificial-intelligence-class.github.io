@@ -26,8 +26,12 @@ active_tab: recordings
 {% for lesson in module.lessons %}
 * **Lesson {{ forloop.index }}:** {{lesson.title}}
 {%if lesson.video %}[[Video]]({{lesson.video}}){% endif %}
-{%if lesson.slies %}[[Slides]]({{lesson.slides}}){% endif %}
 {% endfor %}
+
+
+{% if module.slides %}
+Slides: [[Slides]](slides/{{module.slides}})
+{% endif %}
 
 
 {% if module.readings %} 

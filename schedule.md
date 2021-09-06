@@ -73,6 +73,7 @@ The schedule below shows the schedule section XXX, which meets on Tuesday/Thursd
 <!-- Display module info -->
 <tr><td>{{ module.start_date | date: '%a, %b %-d, %Y' }}</td><td>Start of Module {{module.module_number}} - {{module.title}}</td></tr>
 <!-- End display module  -->
+{% capture slides %}{{module.slides}}{% endcapture %}
 {% endif %}
 {% endfor %}
 <!-- End check for module starts -->
@@ -104,7 +105,7 @@ The schedule below shows the schedule section XXX, which meets on Tuesday/Thursd
 {% capture lecture_date %}{{lecture.date | date: "%Y-%m-%d"}}{% endcapture %}
 
 {% if lecture_date == curr_date %}
-<tr><td>{{ lecture_date | date: '%a, %b %-d, %Y' }}</td><td><span markdown="1">{{lecture.title}} [[recording]]({{lecture.recording}}) </span></td></tr>
+<tr><td>{{ lecture_date | date: '%a, %b %-d, %Y' }}</td><td><span markdown="1">{{lecture.title}} [[recording]]({{lecture.recording}}) [[slides]](slides/{{slides}})</span></td></tr>
 {% assign displyed_lecture_info = true %}
 {% endif %}
 {% endfor %}
@@ -112,7 +113,7 @@ The schedule below shows the schedule section XXX, which meets on Tuesday/Thursd
 
 <!-- Placeholder if no lecture exists in the YAML -->
 {% if displyed_lecture_info == false %}
-<tr><td>{{ curr_date | date: '%a, %b %-d, %Y' }} </td><td>Lecture</td></tr>
+<tr><td>{{ curr_date | date: '%a, %b %-d, %Y' }} </td><td><span markdown="1">Lecture  [[slides]](slides/{{slides}})</span></td></tr>
 <!-- End no lecture placeholder -->
 {% endif %}
 
