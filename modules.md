@@ -59,4 +59,21 @@ Homework:
 </ul>
 {% endif %}
 
+
+
+{% if module.quiz %} 
+Quiz:
+
+<ul>
+{% for quiz in module.quiz %}
+
+{% capture due_year %}{{quiz.due_date | date: '%Y'}}{% endcapture %}
+<li> {{ quiz.title }}  {% if this_year == due_year %}  (due {{ quiz.due_date | date: "%A, %B %-d, %Y" }})  {% endif %}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+
+
+
 {% endfor %}

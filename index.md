@@ -33,7 +33,7 @@ After you've added yourself to the waitlist, you'll get assigned a category base
 {% capture due_date %}{{quiz.due_date | date: '%s'}}{% endcapture %}
 {% if release_date < now and due_date >= now %}
 <div class="alert alert-info">
-<a href="{{quiz.url}}">{{ quiz.title }}</a> is due before {{ quiz.due_date | date: "%I:%M%p" }} on {{ quiz.due_date | date: "%A, %B %-d, %Y" }}.
+<a href="{{quiz.url}}">{{ quiz.title }}</a> has been released. It is due before {{ quiz.due_date | date: "%I:%M%p" }} on {{ quiz.due_date | date: "%A, %B %-d, %Y" }}.
 </div>
 {% endif %}
 {% endfor %}

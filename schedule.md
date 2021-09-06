@@ -81,6 +81,16 @@ The schedule below shows the schedule section 401, which meets on Tuesday/Thursd
 <!-- End display module  -->
 {% capture slides %}{{module.slides}}{% endcapture %}
 {% endif %}
+
+
+<!-- Check for quizzes -->
+{% for quiz in module.quiz %}
+{% capture quiz_due_date %}{{ quiz.due_date | date: "%Y-%m-%d"}}{% endcapture %}
+{% if quiz_due_date == curr_date %}
+<tr><td>{{ quiz.due_date | date: '%a, %b %-d, %Y' }}</td><td><a href="{{quiz.url}}">{{quiz.title}}</a> is due</td></tr>
+{% endif %}
+{% endfor %}
+<!-- End check for quizzes -->
 {% endfor %}
 <!-- End check for module starts -->
 
