@@ -9,10 +9,16 @@ lecture_days: Tuesdays and Thursdays
 
 
 
-<div class="alert alert-info" markdown="1">
-The schedule below shows the schedule section XXX, which meets on Tuesday/Thursday.  [Click here for the XXX Monday/Wednesday section.]()
+
+<div class="alert alert-info">
+You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=3ab2be61-27fe-4d23-bcfe-ad90016c91f3">watch recordings of the live lectures</a>, or you can watch <a href="modules.html">pre-recorded lectures for each module</a>.
 </div>
 
+
+
+<div class="alert alert-warning" markdown="1">
+The schedule below shows the schedule section 401, which meets on Tuesday/Thursday.  [Click here for the 402 Monday/Wednesday section.](schedule2.html)
+</div>
 
 <table class="table table-striped" >
   <thead>
