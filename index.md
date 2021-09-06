@@ -24,6 +24,23 @@ After you've added yourself to the waitlist, you'll get assigned a category base
 -->
 
 
+<!-- Display an alert about upcoming quizzes -->
+{% capture now %}{{'now' | date: '%s'}}{% endcapture %}
+{% for module in site.data.modules %}
+{% if module.quiz %}
+{% for quiz in module.quiz %}
+{% capture release_date %}{{module.start_date | date: '%s'}}{% endcapture %}
+{% capture due_date %}{{quiz.due_date | date: '%s'}}{% endcapture %}
+{% if release_date < now and due_date >= now %}
+<div class="alert alert-info">
+<a href="{{quiz.url}}">{{ quiz.title }}</a> is due before {{ quiz.due_date | date: "%I:%M%p" }} on {{ quiz.due_date | date: "%A, %B %-d, %Y" }}.
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+<!-- End alert for upcoming quizzes -->
+
 <!-- Display an alert about upcoming homework assignments -->
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
 {% for page in site.pages %}
@@ -49,6 +66,9 @@ It is due before {{ page.due_date | date: "%I:%M%p" }} on {{ page.due_date | dat
 {% endfor %}
 <!-- End alert for upcoming homework assignments -->
  
+
+ 
+
 
 
 <!--
@@ -103,7 +123,7 @@ Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/246))
 : Tuesdays 9pm-11pm Eastern (Yash Upadhyay)
 : Wednesdays 10am-12pm Eastern (Xavier Lee)
 : Wednesdays noon-2pm Eastern (Anna Orosz)
-: Wednesday 8pm- 10pm Eastern (Sherry Shi)
+: Wednesday 8pm-10pm Eastern (Sherry Shi)
 : Thursdays 9am-11am Eastern (Yue Yang)
 : Thursdays 1pm-3pm Eastern (Yuxuan Huang)
 : Fridays noon-2pm Eastern (Lisa Zhao)

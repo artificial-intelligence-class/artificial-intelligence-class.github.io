@@ -6,6 +6,11 @@
   description: In this module, we will introduce the course by delving into the philosophical underpinnings of artificial intelligence, integrating the work of important thinkers from Descartes to Alan Turing. We’ll also look at how Science Fiction often foretells the future of artificial intelligence, including examples of AI from hit 1970s and 1980s films that, decades later, have become a reality. This will set us up for some key considerations we’ll make when designing our own AI systems and how they should behave. Should they act like humans do, or think like humans do, or act and think rationally?
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=97bacec2-6e77-4877-92ac-ad92011ca74c
   slides: 01-Intro-to-Artificial-Intelligence.pdf
+  quiz:
+    - 
+      title: Quiz 1&colon; Course Policies and Turing Test
+      url: https://www.gradescope.com/courses/305169/assignments/1463618/
+      due_date: 2021-09-08 23:59:00EDT
   lessons:
     - 
       title: Artificial Intelligence in Philosophy
@@ -50,6 +55,11 @@
   description: Python is an amazing language with a concise syntax that allows you to rapidly prototype algorithms, and we are going to use it for all the assignments in this course. This module will cover all of the fundamentals you need to get started with Python. And as we continue through the rest of the course, you’ll quickly become an expert!
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4389e5d-083e-40c7-b458-ad92011c9210
   slides: 02-Intro-to-Python.pdf
+  quiz:
+    - 
+      title: Quiz 2&colon; Python
+      url: https://www.gradescope.com/courses/305169/assignments/1466690/
+      due_date: 2021-09-11 23:59:00EDT
   lessons:
     - 
 
