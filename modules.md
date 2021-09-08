@@ -5,6 +5,13 @@ active_tab: recordings
 ---
 
 
+<div class="alert alert-info">
+Below, you'll find links to pre-recorded lectures. You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=3ab2be61-27fe-4d23-bcfe-ad90016c91f3">watch recordings of the live lectures from this semester</a>.
+</div>
+
+
+
+
 <!-- Create a HTML anchor for the most recent lecture -->
 {% assign anchor_created = false %}
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
