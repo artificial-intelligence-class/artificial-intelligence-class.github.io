@@ -193,7 +193,9 @@ Differences between 421 and 521
 
 
 Collaboration Policy
+: Quizzes and exams must be completed on your own without help from others.  For quizzes or exams that are open notes or allow a "cheatsheet", you must create the notes yourself and not use anyone else's notes.  Since exams are sometimes administered on different days, you should not discuss the exam with anyone else in the course until after the scores have been released.
 : Unless otherwise noted, you are not allowed to work in groups on the homework assignments. You can discuss homework problems with others (you must explicitly list who you discussed problems with on each homework submission), but   *all code must be your own independent work.*  You are not allowed to upload your code to publicly accessible places (like public github repositories), and you are not allowed to access anyone else's code.  If you discover someone else's code online, please report it to the course staff via a private note on Piazza. 
+
 
 
 Late Day Policy
