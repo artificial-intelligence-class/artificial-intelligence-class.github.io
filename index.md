@@ -4,11 +4,14 @@ layout: default
 img: R2D2.png
 active_tab: main_page 
 ---
+
+<!--
 <div class="alert alert-danger" markdown="1">
 **Waitlist update**: I added a second session with addition 200 spaces to the course.  That session meets Mondays and Wednesdays at 8:30am-10am in Heilmeier auditorium.  You can get a permit by signing up on [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) for CIS421/521-402.
 
 For  questions about the waitlist or registration, please contact Lee Dukes - ldukes@seas.upenn.edu.
 </div>
+-->
 
 <!--
 	If you have a question about the waitlist system you can email Lee Dukes ldukes@seas.upenn.edu.  
