@@ -42,6 +42,10 @@
       authors: Russell and Norvig
       optional: false
     - 
+      title: AIMA 4th Edition, Chapter 2 "Intelligent Agents" (whole chapter)
+      authors: Russell and Norvig
+      optional: false
+    - 
       title: A Behavioral Model of Rational Choice
       authors: Herbert A Simon
       url: https://www.rand.org/pubs/papers/P365.html
