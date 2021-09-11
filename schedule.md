@@ -138,6 +138,19 @@ The schedule below shows the schedule section 401, which meets on Tuesday/Thursd
 
 
 
+<!-- Display recitations / recorded group office hours -->
+{% for recitation in site.data.recitations %}
+{% capture recitation_date %}{{recitation.date | date: "%Y-%m-%d"}}{% endcapture %}
+
+{% if recitation_date == curr_date %}
+<tr><td>{{ recitation_date | date: '%a, %b %-d, %Y' }}</td><td><span markdown="1">{{recitation.title}} [[recording]]({{recitation.recording}}) 
+{% if recitation.slides %}
+[[slides]](slides/{{slides}})
+{% endif %}
+</span></td></tr>
+{% endif %}
+{% endfor %}
+<!-- End display recitations / recorded group office hours -->
 
 {% endfor %}
 <!-- End of walk through the days in the semester -->
