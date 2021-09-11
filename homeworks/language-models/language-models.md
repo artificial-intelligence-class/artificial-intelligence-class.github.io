@@ -3,18 +3,18 @@ layout: default
 img: ios_keyboard.png
 img_link: http://www.explainxkcd.com/wiki/index.php/1427:_iOS_Keyboard
 caption: Movie quotes according to autocomplete
-title: CIS 521 Homework 7 "Language Models"
+title: CIS 521 Homework 8 "Language Models"
 active_tab: homework
 release_date: 2020-11-04
 due_date: 2020-11-11 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homeworks/hw7/homework7.py 
+        url: homeworks/language-models/language-models.py 
     - 
         name: Frankenstein (text file)
-        url: homeworks/hw7/frankenstein.txt
-submission_link: https://www.gradescope.com/courses/160263
+        url: homeworks/language-models/frankenstein.txt
+submission_link: https://www.gradescope.com/courses/305169
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -63,7 +63,7 @@ Homework 7: Language Models [100 points]
 
 In this assignment, you will gain experience working with Markov models on text.
 
-A skeleton file [homework7.py](homework7.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [language-models.py](language-models.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel.
 
@@ -225,6 +225,7 @@ In this section, you will build a simple language model that can be used to gene
     1.4422495703074083
     ```
 
+<!--
 ## 2. Use AI to Write Harry Potter Fanfiction [0 points - just for fun]
 
 Botnik Studios used text prediction to create three pages of Harry Potter Fanfiction entitled [“Harry Potter and the Portrait of What Looked Like a Large Pile of Ash,”](https://www.theverge.com/2017/12/12/16768582/harry-potter-ai-fanfiction).  I think that we should try too.  So I downloaded an archive of Harry Potter fanfiction.  There is *a lot* of Harry Potter fanfiction.  There is more than a quarter of a billion words of it.  
@@ -251,9 +252,9 @@ This file may contain copyrighted materials, so please don't redistrbute it. We 
 
 How well did your automatically generated Harry Potter sentences turn out?  Post your favorites to Piazza.
 
+-->
 
-
-## 3. Feedback [5 points]
+## Feedback [5 points]
 
 1. **[1 point]** Approximately how many hours did you spend on this assignment?
 

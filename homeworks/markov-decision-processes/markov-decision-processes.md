@@ -3,16 +3,16 @@ layout: default
 img: decision_paralysis.png
 img_link: https://xkcd.com/1801/
 caption: Someone needs value iteration
-title: CIS 521 Homework 5 "Markov Decision Processes"
+title: CIS 521 Homework 6 "Markov Decision Processes"
 active_tab: homework
 release_date: 2020-10-12
 due_date: 2020-10-20 23:59:00EDT
 materials:
     - 
         name: skeleton files
-        url: homeworks/hw5/skeleton.zip 
+        url: homeworks/markov-decision-processes/skeleton.zip 
 
-submission_link: https://www.gradescope.com/courses/160263
+submission_link: https://www.gradescope.com/courses/305169
 attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
 ---
 

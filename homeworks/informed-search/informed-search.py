@@ -1,5 +1,5 @@
 ############################################################
-# CIS 521: Homework 7
+# CIS 521: Informed Search Homework
 ############################################################
 
 student_name = "Type your full name here."
@@ -13,42 +13,63 @@ student_name = "Type your full name here."
 
 
 ############################################################
-# Section 1: Markov Models
+# Section 1: Tile Puzzle
 ############################################################
 
-def tokenize(text):
+def create_tile_puzzle(rows, cols):
     pass
 
-def ngrams(n, tokens):
-    pass
-
-class NgramModel(object):
-
-    def __init__(self, n):
+class TilePuzzle(object):
+    
+    # Required
+    def __init__(self, board):
         pass
 
-    def update(self, sentence):
+    def get_board(self):
         pass
 
-    def prob(self, context, token):
+    def perform_move(self, direction):
         pass
 
-    def random_token(self, context):
+    def scramble(self, num_moves):
         pass
 
-    def random_text(self, token_count):
+    def is_solved(self):
         pass
 
-    def perplexity(self, sentence):
+    def copy(self):
         pass
 
-def create_ngram_model(n, path):
+    def successors(self):
+        pass
+
+    # Required
+    def find_solutions_iddfs(self):
+        pass
+
+    # Required
+    def find_solution_a_star(self):
+        pass
+
+############################################################
+# Section 2: Grid Navigation
+############################################################
+
+def find_path(start, goal, scene):
     pass
 
 ############################################################
-# Section 2: Feedback
+# Section 3: Linear Disk Movement, Revisited
 ############################################################
 
+def solve_distinct_disks(length, n):
+    pass
+
+############################################################
+# Section 4: Feedback
+############################################################
+
+# Just an approximation is fine.
 feedback_question_1 = 0
 
 feedback_question_2 = """

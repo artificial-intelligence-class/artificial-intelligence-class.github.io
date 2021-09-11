@@ -3,21 +3,21 @@ layout: default
 img: trained_a_neural_net.png
 img_link: https://xkcd.com/2173/
 caption: Technically you trained a neural net
-title: CIS 521 Homework 9 "Neural Networks"
+title: CIS 521 Homework 10 "Neural Networks"
 active_tab: homework
 release_date: 2020-11-19
 due_date: 2020-12-01 23:59:00EDT
 materials:
     - 
         name: skeleton file 1 - cnn_functions.py
-        url: homeworks/hw9/cnn_functions.py
+        url: homeworks/neural-nets/cnn_functions.py
     - 
         name: skeleton file 2 - fashion_mnist.py
-        url: homeworks/hw9/fashion_mnist.py
+        url: homeworks/neural-nets/fashion_mnist.py
     - 
         name: subset of the Fashion MNIST dataset (csv file)
-        url: homeworks/hw9/dataset.csv
-submission_link: https://www.gradescope.com/courses/59562
+        url: homeworks/neural-nets/dataset.csv
+submission_link: https://www.gradescope.com/courses/305169
 ---
 
 
@@ -58,7 +58,7 @@ You can download the materials for this assignment here:
 
 
 
-Homework 9: Neural Networks [100 points]
+Homework 10: Neural Networks [100 points]
 =============================================================
 
 ## Instructions

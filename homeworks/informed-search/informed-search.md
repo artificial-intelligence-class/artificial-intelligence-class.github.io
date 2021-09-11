@@ -5,28 +5,28 @@ img_link: https://www.explainxkcd.com/wiki/index.php/1002:_Game_AIs
 caption: Difficulty of Various Games For Computers
 title: CIS 521 Homework 3 "Informed Search"
 active_tab: homework
-release_date: 2020-09-20
-due_date: 2020-09-29 23:59:00EDT
+release_date: 2021-09-20
+due_date: 2021-09-28 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homework3.py 
+        url: informed-search.py 
     - 
         name: Tile Puzzle GUI
-        url: homework3_tile_puzzle_gui.py 
+        url: tile_puzzle_gui.py 
     - 
         name: Grid Navigation GUI
-        url: homework3_grid_navigation_gui.py
+        url: grid_navigation_gui.py
     - 
         name: simple scene
-        url: homework3_scene_simple.txt
+        url: scene_simple.txt
     - 
         name: barrier scene
-        url: homework3_scene_barrier.txt
+        url: scene_barrier.txt
     - 
         name: random 50x50 scene
-        url: homework3_scene_random.txt
-submission_link: https://www.gradescope.com/courses/160263
+        url: scene_random.txt
+submission_link: https://www.gradescope.com/courses/305169
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -73,7 +73,7 @@ Homework 3: Informed Search [100 points]
 
 In this assignment, you will explore a number of games and puzzles from the perspectives of informed and adversarial search.
 
-A skeleton file [homework3.py](homework3.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [informed-search.py](informed-search.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel. If you are unsure where to start, consider taking a look at the data structures and functions defined in the `collections`, `itertools`, `queue`, and `random` modules.
 

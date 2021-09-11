@@ -3,16 +3,15 @@ layout: default
 img: the_difference.png
 img_link: https://xkcd.com/242/
 caption: I was just updating my q&ndash;state values. 
-title: CIS 521 Homework 6 "Reinforcement Learning"
+title: CIS 521 Homework 7 "Reinforcement Learning"
 active_tab: homework
 release_date: 2020-10-28
 due_date: 2020-11-04 23:59:00EDT
 materials:
     - 
         name: skeleton files
-        url: homeworks/hw6/skeleton.zip 
-
-submission_link: https://www.gradescope.com/courses/160263
+        url: homeworks/reinforcement-learning/skeleton.zip 
+submission_link: https://www.gradescope.com/courses/305169
 attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
 ---
 

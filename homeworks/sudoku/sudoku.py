@@ -1,5 +1,5 @@
 ############################################################
-# CIS 521: Homework 3
+# CIS 521: Sudoku Homework 
 ############################################################
 
 student_name = "Type your full name here."
@@ -13,60 +13,44 @@ student_name = "Type your full name here."
 
 
 ############################################################
-# Section 1: Tile Puzzle
+# Section 1: Sudoku Solver
 ############################################################
 
-def create_tile_puzzle(rows, cols):
+def sudoku_cells():
     pass
 
-class TilePuzzle(object):
-    
-    # Required
+def sudoku_arcs():
+    pass
+
+def read_board(path):
+    pass
+
+class Sudoku(object):
+
+    CELLS = sudoku_cells()
+    ARCS = sudoku_arcs()
+
     def __init__(self, board):
         pass
 
-    def get_board(self):
+    def get_values(self, cell):
         pass
 
-    def perform_move(self, direction):
+    def remove_inconsistent_values(self, cell1, cell2):
         pass
 
-    def scramble(self, num_moves):
+    def infer_ac3(self):
         pass
 
-    def is_solved(self):
+    def infer_improved(self):
         pass
 
-    def copy(self):
+    def infer_with_guessing(self):
         pass
 
-    def successors(self):
-        pass
-
-    # Required
-    def find_solutions_iddfs(self):
-        pass
-
-    # Required
-    def find_solution_a_star(self):
-        pass
-
+        
 ############################################################
-# Section 2: Grid Navigation
-############################################################
-
-def find_path(start, goal, scene):
-    pass
-
-############################################################
-# Section 3: Linear Disk Movement, Revisited
-############################################################
-
-def solve_distinct_disks(length, n):
-    pass
-
-############################################################
-# Section 4: Feedback
+# Section 2: Feedback
 ############################################################
 
 # Just an approximation is fine.

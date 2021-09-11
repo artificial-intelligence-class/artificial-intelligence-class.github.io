@@ -10,11 +10,11 @@ due_date: 2020-11-19 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homeworks/hw8/homework8.py 
+        url: homeworks/perceptrons/perceptrons.py 
     - 
         name: data sets (python file)
-        url: homeworks/hw8/homework8_data.py
-submission_link: https://www.gradescope.com/courses/160263
+        url: homeworks/perceptrons/perceptrons_data.py
+submission_link: https://www.gradescope.com/courses/305169
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -71,7 +71,7 @@ Homework 8: Perceptrons [100 points]
 
 In this assignment, you will gain experience working with binary and multiclass perceptrons.
 
-A skeleton file [homework8.py](homework8.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [perceptrons.py](perceptrons.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel.
 
@@ -187,7 +187,7 @@ As in previous assignments, your use of external code should be limited to built
 ## 2. Applications [60 points]
 
 
-In this section, you will use the general-purpose perceptrons implemented above to create classification systems for a number of specific problems. In each case, you will be responsible for creating feature vectors from the raw data, determining which type of perceptron should be used, and deciding how many passes over the training data should be performed. You will likely require some experimentation to achieve good results. The requisite data sets have been provided as Python objects in [homework8_data.py](homework8_data.py), which has been pre-imported under the module name data in the skeleton file.
+In this section, you will use the general-purpose perceptrons implemented above to create classification systems for a number of specific problems. In each case, you will be responsible for creating feature vectors from the raw data, determining which type of perceptron should be used, and deciding how many passes over the training data should be performed. You will likely require some experimentation to achieve good results. The requisite data sets have been provided as Python objects in [perceptrons_data.py](perceptrons_data.py), which has been pre-imported under the module name data in the skeleton file.
 
 
 1. **[10 points]** Ronald Fisher's iris flower data set has been a benchmark for statistical analysis and machine learning since it was first released in 1936. It contains 50 samples from each of three species of the iris flower: iris setosa, iris versicolor, and iris virginica. Each sample consists of four measurements: the length and width of the sepals and petals of the specimen, in centimeters.
