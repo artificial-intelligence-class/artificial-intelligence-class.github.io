@@ -87,12 +87,29 @@ The schedule below shows the schedule section 402, which meets on Monday/Wednesd
 {% for quiz in module.quiz %}
 {% capture quiz_due_date %}{{ quiz.due_date | date: "%Y-%m-%d"}}{% endcapture %}
 {% if quiz_due_date == curr_date %}
-<tr><td>{{ quiz.due_date | date: '%a, %b %-d, %Y' }}</td><td><a href="{{quiz.url}}">{{quiz.title}}</a> is due</td></tr>
+<tr><td class="alert alert-info">{{ quiz.due_date | date: '%a, %b %-d, %Y' }}</td><td class="alert alert-info"><a href="{{quiz.url}}">{{quiz.title}}</a> is due</td></tr>
 {% endif %}
 {% endfor %}
 <!-- End check for quizzes -->
 {% endfor %}
 <!-- End check for module starts -->
+
+
+
+<!-- Check for exams -->
+{% for exam in site.data.exams %}
+{% capture exam_due_date %}{{ exam.due_date | date: "%Y-%m-%d"}}{% endcapture %}
+{% if exam_due_date == curr_date %}
+<tr><td class="alert alert-danger">{{ exam.due_date | date: '%a, %b %-d, %Y' }}</td><td class="alert alert-danger">
+{% if exam.url %}
+<a href="{{quiz.url}}">{{exam.title}}</a> is due
+{% else %}
+{{exam.title}} is due
+{% endif %}
+</td></tr>
+{% endif %}
+{% endfor %}
+<!-- End check for exams -->
 
 
 <!-- Check for homework due dates -->
@@ -102,7 +119,7 @@ The schedule below shows the schedule section 402, which meets on Monday/Wednesd
 {% capture hw_due_date %}{{ page.due_date | date: "%Y-%m-%d"}}{% endcapture %}
 
 {% if hw_due_date == curr_date %}
-<tr><td>{{ hw_due_date | date: '%a, %b %-d, %Y' }}</td><td><span markdown="1">[{{page.title}}]({{page.url}}) is due</span></td></tr>
+<tr><td class="alert alert-success">{{ hw_due_date | date: '%a, %b %-d, %Y' }}</td><td class="alert alert-success"><span markdown="1">[{{page.title}}]({{page.url}}) is due</span></td></tr>
 {% endif %}
 
 {% endif %}
