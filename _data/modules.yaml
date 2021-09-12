@@ -100,6 +100,11 @@
   description: In artificial intelligence, a surprising number of tasks that we want to solve can be cast as search problems. In this module, we will introduce the formal definition of search problems, and examine some classic algorithms for solving search problems called shortest path algorithms. These are sometimes referred to as “uninformed” search algorithms or “blind” search algorithms, because they are run without any additional knowledge of where our goal lies. We’ll also look at some variants of these algorithms that have computational complexity guarantees.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96480a11-edaa-4762-b5bb-ad92011c993e
   slides: 03-Search-Problems.pdf
+  quiz:
+    - 
+      title: Quiz 3 "Search Problems"
+      url: 
+      due_date: 2021-09-18 23:59:00EDT
   lessons:
     - 
 
@@ -140,6 +145,11 @@
   description: We can often find a solution to a search problem more quickly if we have some knowledge about how close we are to a goal state. In this module we’ll look at the process of incorporating such knowledge into search algorithms, which, when used optimally, can help focus our search efforts so that we avoid exploring actions that move us further away from the goal. We’ll examine the most famous informed search algorithm, A* search, which is guaranteed to find an optimal solution first.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0bb33744-e996-401f-b2b8-ad92011ca17a
   slides: 04-Informed-Search.pdf
+  quiz:
+    - 
+      title: Quiz 4 "Informed Search Problems"
+      url: 
+      due_date: 2021-09-25 23:59:00EDT
   lessons:
     -
       title: Uniform-cost Search
@@ -175,6 +185,11 @@
   description: Games present an interesting challenge for artificial intelligence because they involve reasoning about what actions your opponent is likely to take. In this module we’ll talk about how to represent games as adversarial search problems, using a search tree, which assumes that your opponent is a rational actor that is trying to use the best strategy. We will also investigate a number of helpful algorithms and concepts that apply in the context of games, such as minimax and expectimax.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=eb63aeeb-fecb-48c1-83ac-ad92011c8832
   slides: 05-Adversarial-Search.pdf
+  quiz:
+    - 
+      title: Quiz 5 "Games and Adversarial Search"
+      url: 
+      due_date: 2021-10-02 23:59:00EDT
   lessons:
     -
       title: Game Formulation
@@ -224,6 +239,11 @@
   description: In this module, we’ll look at constraint satisfaction problems (CSPs), a kind of search problem that allows us to take advantage of the problem structure. In CSPs, we have a set of variables, each of which we need to assign a value to, subject to some constraints. Through examples like map coloring and sudoku puzzles, we’ll discuss how we represent CSPs as a graph, how we propagate constraints on a partially solved graph, and how we check for consistency in nodes, arcs and paths. This will also introduce us to new concepts including inference and backtracking search.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=99c09c2a-6793-4055-bff1-ad92011c61cc
   slides: 06-CSPs.pdf
+  quiz:
+    - 
+      title: Quiz 6 "Constraint Satisfaction Problems"
+      url: 
+      due_date: 2021-10-09 23:59:00EDT
   lessons:
     -
       title: Intro to CSPs
@@ -259,6 +279,11 @@
   description: In this module, we will introduce a new kind of agent&colon; Knowledge-based Agents that are able to create and update a representation of the world in a knowledge base, and use inference rules and logical reasoning to draw conclusions about how the world works. This necessitates a knowledge base, a set of sentences that are written in a knowledge representation language that contain some assertions about the world. In our course, we will talk about Propositional Logic as a knowledge representation language.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f2d32758-93e6-4daf-88d1-ad92011c619a
   slides: 07-Logical-Agents.pdf
+  quiz:
+    - 
+      title: Quiz 7 "Logical Agents"
+      url: 
+      due_date: 2021-10-18 23:59:00EDT
   lessons:
     -
       title: Knowledge-based Agents 1
@@ -303,6 +328,11 @@
   description: So far, we have examined deterministic problem settings, but in this module will now turn to stochastic or probabilistic task environments. We’ll start by introducing a new kind of formalization called Markov Decision Processes (MDPs) which are useful for fully observable task environments where we have to make a sequence of decisions, and where the outcome for actions we take are non-deterministic. Looking at MDPs will also look into new algorithms, such as Policy Iteration and Value Iteration, and the important concepts v and additive rewards.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6a509bea-bd69-42a5-b3c4-ad92011c6213
   slides: 08-MDPs.pdf
+  quiz:
+    - 
+      title: Quiz 8 "MDPs"
+      url: 
+      due_date: 2021-10-23 23:59:00EDT
   lessons:
     -
       title: Introduction to MDPs
@@ -355,6 +385,11 @@
   description: In this module, we will explore situations where a transition and a reward function are not given to us, but must be learned through interaction with the world. In reinforcement learning, every time an agent takes an action in the world, it receives feedback in the form of a reward, and so the agent wants to maximize its expected rewards. We’ll look at several different learning techniques for reinforcement learning&colon; including model-based learning and temporal difference learning. Finally, we’ll be able to quantify how good different exploration strategies are using regret.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3127f7c7-6d53-41ab-a9ff-ad92011c61f1
   slides: 09-Reinforcement-Learning.pdf
+  quiz:
+    - 
+      title: Quiz 9 "Reinforcement Learning"
+      url: 
+      due_date: 2021-10-30 23:59:00EDT
   lessons:
     -
       title: Introduction to Reinforcement Learning 1
@@ -403,6 +438,11 @@
   description: In this module, we’ll review the basics of probability, an extremely important concept to master in artificial intelligence. We’ll review the basics of probability theory, including the axioms of probability, what an event is, what a probabilistic model is, and much more. To show some practical applications of these concepts, we’ll take a look at something called probabilistic language models, which power things like autocomplete on your smartphone.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=65f83e72-f842-4efa-818e-ad92011c6b9d
   slides: 10-language-models-and-probabilities.pdf
+  quiz:
+    - 
+      title: Quiz 10 "Probabilities and Language Models"
+      url: 
+      due_date: 2021-11-06 23:59:00EDT
   lessons:
     -
       title: Review of Probabilities
@@ -441,6 +481,11 @@
   description: In this module we will build on last week by reviewing a kind of probabilistic model called a Bayes Net, where the nodes represent variables in our probability model, and the arcs encode our assumption about how the events are related to each other. Bayes Nets are compact representations that allow us to encode independence assumptions between variables. We will revisit independence and look at an algorithm for enumerating the independence assumptions in a Bayes Net called the d-separation algorithm.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=758ea244-2298-49b4-a0ed-ad92011c761a
   slides: 11-Bayes-Nets.pdf
+  quiz:
+    - 
+      title: Quiz 11 "Bayes' Nets"
+      url: 
+      due_date: 2021-11-13 23:59:00EDT
   lessons:
     -
       title: Review of Independence
@@ -478,6 +523,11 @@
   description: Machine learning is an important aspect of artificial intelligence. Broadly speaking machine learning addresses the question&colon; How can an agent use data to learn to make decisions? In this module we’ll look at two different machine learning algorithms&colon; Naive Bayes and perceptrons, that use a set of labeled training data in order to learn how to perform classification tasks.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d5782a2-7448-4eec-8d52-ad92011c7d89
   slides: 12-Machine-Learning.pdf
+  quiz:
+    - 
+      title: Quiz 12 "Naive Bayes and Perceptrons"
+      url: 
+      due_date: 2021-11-20 23:59:00EDT
   lessons:
     -
       title: Classification Tasks
@@ -524,6 +574,11 @@
   description: In this module we will investigate neural networks, which consist of a set of neural units that are grouped together in a network. We will look at the neural networks’ training procedure, the errors involved and their attribution, and several neural architectures. We will also look at how neural networks have been used as probabilistic language models.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c3f50379-2195-4393-b015-ad92011c859c
   slides: 13-Neural-Networks.pdf
+  quiz:
+    - 
+      title: Quiz 13 "Nerual Nets"
+      url: 
+      due_date: 2021-12-04 23:59:00EDT
   lessons:
     -
       title: Logistic Regression
@@ -571,6 +626,11 @@
   description: In our last content module, we will look into an application of AI called Natural Language Processing (NLP.) The goal of NLP is to enable computers to communicate in a human-like fashion. This was one of the first ideas for AI, tracing its routes all the way back to Alan Turing and the imitation game. In this module, we’ll be focusing on how to create representations of words that capture their meanings, using the concept of vector space models.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee63f3dc-7d87-435f-8898-ad9a002270c1
   slides: 14-NLP.pdf
+  quiz:
+    - 
+      title: Quiz 14 "NLP"
+      url: 
+      due_date: 2021-12-10 23:59:00EDT
   lessons:
     -
       title: Neural Language Models

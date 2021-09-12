@@ -87,7 +87,13 @@ The schedule below shows the schedule section 401, which meets on Tuesday/Thursd
 {% for quiz in module.quiz %}
 {% capture quiz_due_date %}{{ quiz.due_date | date: "%Y-%m-%d"}}{% endcapture %}
 {% if quiz_due_date == curr_date %}
-<tr><td class="alert alert-info">{{ quiz.due_date | date: '%a, %b %-d, %Y' }}</td><td class="alert alert-info"><a href="{{quiz.url}}">{{quiz.title}}</a> is due</td></tr>
+<tr><td class="alert alert-info">{{ quiz.due_date | date: '%a, %b %-d, %Y' }}</td><td class="alert alert-info">
+{% if quiz.url %}
+<a href="{{quiz.url}}">{{quiz.title}}</a> is due
+{% else %}
+{{quiz.title}} is due
+{% endif %}
+</td></tr>
 {% endif %}
 {% endfor %}
 <!-- End check for quizzes -->
