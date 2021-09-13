@@ -563,7 +563,7 @@
       title: Electronic 'Brain' Teaches Itself 
       authors: New York Times (July 13, 1958)
       url: https://timesmachine.nytimes.com/timesmachine/1958/07/13/91396361.html?action=click&contentCollection=Archives&module=LedeAsset&region=ArchiveBody&pgtype=article&pageNumber=116
-      optional: false
+      optional: true
 
 
 -
