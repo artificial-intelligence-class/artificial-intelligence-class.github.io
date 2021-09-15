@@ -109,12 +109,16 @@ Discussion Forum
 : [Piazza](http://piazza.com/upenn/fall2021/cis521)
 
 Time and place
-: In Fall 2021, the course will be in-person and [broadcast live via Zoom](https://upenn.zoom.us/j/97772152051?pwd=NVFIbkJlemZ1Z2pvMk9oUWo0SHRYZz09).  
-: All lecture materials will be recorded and uploaded for students wishing to participate remotely.
-: Lectures will be on Tuesdays and Thursdays from noon-1:30pm Eastern.  
+: In Fall 2021, the course will be in-person and broadcast live via Zoom. You are not obligated to attend in person.  Everyone is welcome to watch the videos from home.
+: All lecture materials will be recorded and uploaded for students wishing to participate remotely.  We also have [pre-recorded lectures available for review](modules.html).
 : The first day of class is Tuesday, August 31, 2021.
 : The first day of office hours will be Tuesday, September 7, 2021.
 : The final day of class is Thursday, December 9, 2020.
+: There are several sections of the class:
+* The Monday/Wednesday section meets from 8:30am-10am Eastern ([Zoom link](https://upenn.zoom.us/j/98126042472?pwd=aHBPZDA2Tmd1aktZUUlDaW5BUjdHUT09))
+* The Tuesday/Thursday section meets from noon-1:30pm Eastern ([Zoom link](https://upenn.zoom.us/j/99946920962?pwd=Z0liTlhNOUgwbHVuV3R5cTFLSVFYdz09))
+
+
 
 Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/246))
 : Mondays 3**am**-5**am** Eastern (Samar Haider)
