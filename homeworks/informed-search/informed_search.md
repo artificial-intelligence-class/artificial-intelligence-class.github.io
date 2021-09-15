@@ -10,7 +10,7 @@ due_date: 2021-09-28 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: informed-search.py 
+        url: informed_search.py 
     - 
         name: Tile Puzzle GUI
         url: tile_puzzle_gui.py 
@@ -73,7 +73,7 @@ Homework 3: Informed Search [100 points]
 
 In this assignment, you will explore a number of games and puzzles from the perspectives of informed and adversarial search.
 
-A skeleton file [informed-search.py](informed-search.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [informed-search.py](informed_search.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel. If you are unsure where to start, consider taking a look at the data structures and functions defined in the `collections`, `itertools`, `queue`, and `random` modules.
 
@@ -240,7 +240,7 @@ A natural representation for this puzzle is a two-dimensional list of integer va
 
 If you implemented the suggested infrastructure described in this section, you can play with an interactive version of the Tile Puzzle using the provided GUI by running the following command:
 
-    python3 homework3_tile_puzzle_gui.py rows cols
+    python3 tile_puzzle_gui.py rows cols
 
 The arguments `rows` and `cols` are positive integers designating the size of the puzzle.
 
@@ -270,7 +270,7 @@ None
 
 Once you have implemented your solution, you can visualize the paths it produces using the provided GUI by running the following command:
 
-    python3 homework3_grid_navigation_gui.py scene_path
+    python3 grid_navigation_gui.py scene_path
 
 The argument `scene_path` is a path to a scene file storing the layout of the target grid and obstacles. We use the following format for textual scene representation: `"."` characters correspond to empty spaces, and `"X"` characters correspond to obstacles.
 
