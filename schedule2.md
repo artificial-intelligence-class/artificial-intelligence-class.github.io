@@ -89,9 +89,20 @@ The schedule below shows the schedule section 402, which meets on Monday/Wednesd
 {% if quiz_due_date == curr_date %}
 <tr><td class="alert alert-info">{{ quiz.due_date | date: '%a, %b %-d, %Y' }}</td><td class="alert alert-info">
 {% if quiz.url %}
-<a href="{{quiz.url}}">{{quiz.title}}</a> is due
+<a href="{{quiz.url}}">{{quiz.title}}</a> is due.
 {% else %}
-{{quiz.title}} is due
+{{quiz.title}} is due.
+{% endif %}
+{% if module.readings %}
+The quiz covers: 
+<ul>
+{% for reading in module.readings %}
+{% if reading.optional %}
+{% else %}
+<li>{{reading.title}}</li>
+{% endif %}
+{% endfor %}
+</ul>
 {% endif %}
 </td></tr>
 {% endif %}
