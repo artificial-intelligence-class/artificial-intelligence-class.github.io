@@ -163,7 +163,7 @@ Textbooks
 
 
 Materials for Extra Credit Assignments
-: In addition to the normal homework assignments, we will have a series of optional extra credit assignments that use programmable toy R2D2s.  These assignments can be done in pairs.  Each extra credit homework assignment if worth up to about 1% of your overall grade.
+: In addition to the normal homework assignments, we will have a series of optional extra credit assignments that use programmable toy R2D2s.  These assignments can be done in groups.  Each extra credit homework assignment if worth up to about 1% towards your final grade.  The total amount of extra credit earned will be divided among each student in a group (so students in a large group get less extra credit than students in smaller groups to refelct the effort done).
 : You can borrow one of the R2D2 robots from us.  It must be returned at the end of the semester in good working order, or you will have to pay $100 to replace it. 
 
 <!--
