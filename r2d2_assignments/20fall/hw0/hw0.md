@@ -5,8 +5,8 @@ img_link: http://xkcd.com/2128/
 caption: New Robot
 title: CIS 521 Robot Excercise 0 "Using Python to Control R2D2" (Extra Credit)
 active_tab: homework
-release_date: 2020-09-08
-due_date: 2020-09-30 23:59:00EDT
+release_date: 2021-09-20
+due_date: 2020-09-27 23:59:00EDT
 supplies:
     - 
       name: Sphero R2D2 (purchase on Amazon)
