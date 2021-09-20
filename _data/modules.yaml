@@ -146,9 +146,9 @@
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0bb33744-e996-401f-b2b8-ad92011ca17a
   slides: 04-Informed-Search.pdf
   quiz:
-    - 
-      title: Quiz 4 "Informed Search Problems"
-      url: 
+    -
+      title: Flashcards for Informed Search Problems
+      url: https://remember.school
       due_date: 2021-09-25 23:59:00EDT
   lessons:
     -
@@ -187,8 +187,8 @@
   slides: 05-Adversarial-Search.pdf
   quiz:
     - 
-      title: Quiz 5 "Games and Adversarial Search"
-      url: 
+      title: Flashcards for Games and Adversarial Search
+      url: https://remember.school
       due_date: 2021-10-02 23:59:00EDT
   lessons:
     -
@@ -241,8 +241,8 @@
   slides: 06-CSPs.pdf
   quiz:
     - 
-      title: Quiz 6 "Constraint Satisfaction Problems"
-      url: 
+      title: Flashcards for CSPs
+      url: https://remember.school
       due_date: 2021-10-09 23:59:00EDT
   lessons:
     -
@@ -281,8 +281,8 @@
   slides: 07-Logical-Agents.pdf
   quiz:
     - 
-      title: Quiz 7 "Logical Agents"
-      url: 
+      title: Flashcards for Logical Agents
+      url: https://remember.school
       due_date: 2021-10-18 23:59:00EDT
   lessons:
     -
@@ -330,8 +330,8 @@
   slides: 08-MDPs.pdf
   quiz:
     - 
-      title: Quiz 8 "MDPs"
-      url: 
+      title: Flashcards for MDPs
+      url: https://remember.school
       due_date: 2021-10-23 23:59:00EDT
   lessons:
     -
@@ -387,8 +387,8 @@
   slides: 09-Reinforcement-Learning.pdf
   quiz:
     - 
-      title: Quiz 9 "Reinforcement Learning"
-      url: 
+      title: Flashcards for Reinforcement Learning 
+      url: https://remember.school
       due_date: 2021-10-30 23:59:00EDT
   lessons:
     -
@@ -440,8 +440,8 @@
   slides: 10-language-models-and-probabilities.pdf
   quiz:
     - 
-      title: Quiz 10 "Probabilities and Language Models"
-      url: 
+      title: Flashcards for Probabilities and Language Models
+      url: https://remember.school
       due_date: 2021-11-06 23:59:00EDT
   lessons:
     -
@@ -482,9 +482,9 @@
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=758ea244-2298-49b4-a0ed-ad92011c761a
   slides: 11-Bayes-Nets.pdf
   quiz:
-    - 
-      title: Quiz 11 "Bayes' Nets"
-      url: 
+    -
+      title: Flashcards for Bayes Nets
+      url: https://remember.school
       due_date: 2021-11-13 23:59:00EDT
   lessons:
     -
@@ -525,8 +525,8 @@
   slides: 12-Machine-Learning.pdf
   quiz:
     - 
-      title: Quiz 12 "Naive Bayes and Perceptrons"
-      url: 
+      title: Flashcards for Naive Bayes and Perceptrons
+      url: https://remember.school
       due_date: 2021-11-20 23:59:00EDT
   lessons:
     -
@@ -576,8 +576,8 @@
   slides: 13-Neural-Networks.pdf
   quiz:
     - 
-      title: Quiz 13 "Nerual Nets"
-      url: 
+      title: Flashcards for Neural Nets
+      url: https://remember.school
       due_date: 2021-12-04 23:59:00EDT
   lessons:
     -
@@ -628,8 +628,8 @@
   slides: 14-NLP.pdf
   quiz:
     - 
-      title: Quiz 14 "NLP"
-      url: 
+      title: Flashcards for NLP
+      url: https://remember.school
       due_date: 2021-12-10 23:59:00EDT
   lessons:
     -
