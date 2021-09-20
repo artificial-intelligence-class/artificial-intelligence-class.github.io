@@ -1,7 +1,7 @@
 import sys
 import tkinter
 
-import homework4
+import adversarial_search
 
 class Square(tkinter.Canvas):
 

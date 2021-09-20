@@ -10,10 +10,10 @@ due_date: 2021-10-05 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homeworks/games/games.py 
+        url: homeworks/adversarial-search/adversarial_search.py 
     -
         name: Dominoes Game GUI 
-        url: homeworks/games/dominoes_game_gui.py
+        url: homeworks/adversarial-search/dominoes_game_gui.py
 submission_link: https://www.gradescope.com/courses/305169
 ---
 
@@ -62,7 +62,7 @@ Homework 4: Games and Adversarial Search [100 points]
 
 In this assignment, you will implement an adversarial search algorithm to play the game dominoes. 
 
-A skeleton file [games.py](games.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [adversarial_search.py](homeworks/adversarial-search/adversarial_search.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel. If you are unsure where to start, consider taking a look at the data structures and functions defined in the `collections`, `copy`, and `itertools` modules.
 
@@ -290,7 +290,7 @@ The representation used for this puzzle is a two-dimensional list of Boolean val
 
 If you implemented the suggested infrastructure described in this section, you can play with an interactive version of the dominoes board game using the provided GUI by running the following command:
 
-    python3 homework4_dominoes_game_gui.py rows cols
+    python3 dominoes_game_gui.py rows cols
 
 The arguments `rows` and `cols` are positive integers designating the size of the board.
 
