@@ -4,7 +4,7 @@ import copy
 import numpy as np
 from tkinter import Tk, Canvas, Frame, Button, BOTH, TOP, BOTTOM, LEFT, RIGHT, X, OUTSIDE, Label, StringVar, Entry
 import tkinter as tk
-from homework4 import Sudoku
+from sudoku import Sudoku
 
 # Define Canvas Size
 canvas_margin = 20

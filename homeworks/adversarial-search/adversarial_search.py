@@ -1,5 +1,5 @@
 ############################################################
-# CIS 521: Homework 4
+# CIS 521: adversarial_search
 ############################################################
 
 student_name = "Type your full name here."
@@ -10,46 +10,14 @@ student_name = "Type your full name here."
 
 # Include your imports here, if any are used.
 
-
-
-############################################################
-# Section 1: Sudoku Solver
-############################################################
-
-def sudoku_cells():
-    pass
-
-def sudoku_arcs():
-    pass
-
-def read_board(path):
-    pass
-
-class Sudoku(object):
-
-    CELLS = sudoku_cells()
-    ARCS = sudoku_arcs()
-
-    def __init__(self, board):
-        pass
-
-    def get_values(self, cell):
-        pass
-
-    def remove_inconsistent_values(self, cell1, cell2):
-        pass
-
-    def infer_ac3(self):
-        pass
-
-    def infer_improved(self):
-        pass
-
-    def infer_with_guessing(self):
-        pass
+import collections
+import copy
+import itertools
+import random
+import math
 
 ############################################################
-# Section 2: Dominoes Games
+# Section 1: Dominoes Game
 ############################################################
 
 def create_dominoes_game(rows, cols):
@@ -91,13 +59,16 @@ class DominoesGame(object):
     # Required
     def get_best_move(self, vertical, limit):
         pass
-        
+
 ############################################################
-# Section 3: Feedback
+# Section 2: Feedback
 ############################################################
 
-# Just an approximation is fine.
-feedback_question_1 = 0
+feedback_question_1 = """
+Type your response here.
+Your response may span multiple lines.
+Do not include these instructions in your response.
+"""
 
 feedback_question_2 = """
 Type your response here.
