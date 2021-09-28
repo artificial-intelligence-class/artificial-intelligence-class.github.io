@@ -55,7 +55,7 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-Homework 4: Games and Adversarial Search [100 points]
+Homework 4: Games and Adversarial Search [45 points]
 =============================================================
 
 ## Instructions
@@ -74,7 +74,7 @@ Once you have completed the assignment, you should submit your file on [Gradesco
 You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
 
-## 1. Dominoes Games [20 points]
+## 1. Dominoes Games [40 points]
 
 In this section, you will develop an AI for a game in which two players take turns placing $1 \\times 2$ dominoes on a rectangular grid.  There are no labels on the dominoes; each one can be considered identical to the others.  One player must always place his dominoes vertically, and the other must always place his dominoes horizontally. The last player who successfully places a domino on the board wins.
 
