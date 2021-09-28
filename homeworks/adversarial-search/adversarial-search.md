@@ -62,7 +62,7 @@ Homework 4: Games and Adversarial Search [45 points]
 
 In this assignment, you will implement an adversarial search algorithm to play the game dominoes. 
 
-A skeleton file [adversarial_search.py](homeworks/adversarial-search/adversarial_search.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [adversarial_search.py](adversarial_search.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel. If you are unsure where to start, consider taking a look at the data structures and functions defined in the `collections`, `copy`, and `itertools` modules.
 
