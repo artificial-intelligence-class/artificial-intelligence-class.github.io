@@ -5,7 +5,7 @@ img_link: https://xkcd.com/1263/
 caption: Go
 title: CIS 521 Homework 4 "Games and Adversarial Search"
 active_tab: homework
-release_date: 2021-09-28
+release_date: 2021-09-27
 due_date: 2021-10-05 23:59:00EDT
 materials:
     - 
