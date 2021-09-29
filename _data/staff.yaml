@@ -15,7 +15,6 @@
   pronouns: he/him
 
 
-
 - name: Aditya Singh 
   pic: aditya_singh.png
   url: 
@@ -45,6 +44,14 @@
   office_hours: 1 PM - 3 PM, Tuesday
   location: 
   pronouns: she/her
+
+
+- name: Brian Wong
+  pic: brian_wong.png
+  url: 
+  office_hours: 5 PM - 7 PM, Monday
+  location: 
+  pronouns: he/him
 
 
 - name: Coco Zhao  
@@ -120,6 +127,15 @@
   office_hours: noon - 2 PM, Friday
   location: 
   pronouns: she/her
+
+
+- name: Roque Soto Castaneda
+  pic: roque-soto-castaneda.png
+  url: 
+  office_hours: Monday from 5-6 PM, Saturday from 2-4 PM, and Sunday from 3-5 PM Eastern Time.
+  location: 
+  pronouns: he/him
+
 
 
 - name: Samar Haider
