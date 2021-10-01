@@ -76,7 +76,7 @@ You may submit as many times as you would like before the deadline, but only the
 
 ## 1. Dominoes Games [40 points]
 
-In this section, you will develop an AI for a game in which two players take turns placing $1 \\times 2$ dominoes on a rectangular grid.  There are no labels on the dominoes; each one can be considered identical to the others.  One player must always place his dominoes vertically, and the other must always place his dominoes horizontally. The last player who successfully places a domino on the board wins.
+In this section, you will develop an AI for a game in which two players take turns placing $1 \\times 2$ dominoes on a rectangular grid.  There are no labels on the dominoes; each one can be considered identical to the others.  One player must always place their dominoes vertically, and the other must always place their dominoes horizontally. The last player who successfully places a domino on the board wins.
 
 As with the Tile Puzzle, an infrastructure that is compatible with the provided GUI has been suggested. However, only the search method will be tested, so you are free to choose a different approach if you find it more convenient to do so.
 
