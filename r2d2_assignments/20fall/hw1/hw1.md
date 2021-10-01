@@ -5,8 +5,8 @@ img_link: http://xkcd.com/2128/
 caption: New Robot
 title: CIS 521 Robot Excercise 1 "R2-D2 as an Intelligent Agent" (Extra Credit)
 active_tab: homework
-release_date: 2020-09-30
-due_date: 2020-10-15 23:59:00EDT
+release_date: 2021-10-01
+due_date: 2021-10-14 23:59:00EDT
 supplies:
     - 
       name: skeleton file
