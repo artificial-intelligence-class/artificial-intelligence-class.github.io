@@ -266,7 +266,7 @@ The representation used for this puzzle is a two-dimensional list of Boolean val
     
 3. **[40 points]** In the `DominoesGame` class, write a method `get_best_move(self, vertical, limit)` which returns a $3$-element tuple containing the best move for the current player as a (row, column) tuple, its associated value (defined below), and the number of leaf nodes visited during the search. Recall that if the `vertical` parameter is `True`, then the current player intends to place a domino on squares `(row, col)` and `(row + 1, col)`, and if the `vertical` parameter is `False`, then the current player intends to place a domino on squares `(row, col)` and `(row, col + 1)`. Moves should be explored row-major order, described in further detail above, to ensure consistency.
     
-    Your search should be a faithful implementation of the alpha-beta search given on page 170 of the course textbook, with the restriction that you should look no further than `limit` moves into the future. To find a board's value, you should compute the number of moves available to the current player, then subtract the number of moves available to the opponent.
+    Your search should be a faithful implementation of the alpha-beta search given in the "Optimal Decisions in Games" section of the course textbook, with the restriction that you should look no further than `limit` moves into the future. To find a board's value, you should compute the number of moves available to the current player, then subtract the number of moves available to the opponent.
     
     ```python
     >>> b = [[False] * 3 for i in range(3)]
