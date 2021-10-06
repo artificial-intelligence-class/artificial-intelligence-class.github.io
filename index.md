@@ -121,7 +121,9 @@ Time and place
 
 
 Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/246))
+<!--
 : Mondays **3am-5am** Eastern (Samar Haider)
+-->
 : Mondays 10am-noon Eastern (Coco Zhao, Aditya Singh)
 : Mondays noon-2pm Eastern (Kit Wiggin)
 : Mondays 5-6pm Eastern (Roque Soto Castaneda)
@@ -136,17 +138,19 @@ Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/246))
 : Wednesday 8pm-10pm Eastern (Sherry Shi)
 : Thursdays 9am-11am Eastern (Yue Yang)
 : Thursdays 1pm-3pm Eastern (Yuxuan Huang)
+: Thursdays 5pm-7pm Eastern (Viranchi Patel)
 : Fridays 9am-11am Eastern (Zhi Zheng)
 : Fridays noon-2pm Eastern (Lisa Zhao and David Wang)
 : Fridays 2pm-4pm Eastern (Amy Guo and Harry Wang)
 : Fridays 4pm-6pm Eastern (Ruochun Wang)
 : Fridays 8pm-10pm Eastern (Enri Kina)
 : Saturdays 8am-10am Eastern (Helen Jin)
-: Saturdays 8:30am-10:30am Eastern (Songyu Yan, Aditya Singh)
+: Saturdays 8:30am-10:30am Eastern (Aditya Singh)
 : Saturdays 2pm-4pm Eastern (Roque Soto Castaneda)
 : Saturdays 7pm-9pm Eastner (Xingyu Fu)
 : Sundays 3pm-5pm Eastern (Roque Soto Castaneda)
 : Sundays 6pm-8pm (Steven Wang)
+: Sundays 7pm-9pm (Songyu Eve Yan)
 
 Group Office Hours (Recorded)
 : Fridays 2pm-3pm Eastern (Chris Callison-Burch)
