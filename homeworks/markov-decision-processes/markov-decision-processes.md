@@ -9,11 +9,13 @@ release_date: 2021-10-26
 due_date: 2021-11-02 23:59:00EDT
 materials:
     - 
-        name: skeleton files
-        url: homeworks/markov-decision-processes/skeleton.zip 
+        name: agents skeleton
+        url: homeworks/markov-decision-processes/agents.py
+    -
+        name: Gridworld game and GUI
+        url: homeworks/markov-decision-processes/gridworld.py
 
 submission_link: https://www.gradescope.com/courses/305169
-attribution: This assignment adapted from the [Reinforcement Learning assignment](http://ai.berkeley.edu/reinforcement.html) from [UC Berkeley's AI course](http://ai.berkeley.edu/home.html).
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -56,105 +58,123 @@ You can download the materials for this assignment here:
 
 Homework 5: Markov Decision Processes [100 points]
 =============================================================
- 
+
 ## Instructions
-In this project, you will implement value iteration.  You will test your agents on **Gridworld**.
-The code for this project contains the following files, which are available in a [zip](skeleton.zip) archive. It contains multiple files to help you with this homework.
+In this project, you will implement value and policy iteration. You will test your agents on **Gridworld**.
 
-+ __Files you will edit and submit:__
-	+ __valueIterationAgents.py__: A value iteration agent for solving known MDPs.
-	+ __analysis.py__: A file to put your answers to questions given in the project.
+A skeleton file [`agents.py`](agents.py) containing empty definitions for both agents is provided. You also need to download [`gridworld.py`](gridworld.py), which includes an MDP game `Gridworld` and its GUI.
 
-+ Files you should read but not edit:
-	+ mdp.py: Defines methods on general MDPs.
-	+ learningAgents.py: Defines the base classes ValueEstimationAgent and QLearningAgent, which your agents will extend.
-	+ util.py: Utilities, including util.Counter, which is particularly useful for q-learners.
-	+ gridworld.py: The Gridworld implementation
+You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel. If you are unsure where to start, consider taking a look at the data structures and functions defined in the `collections`, `copy`, and `itertools` modules.
 
-+ Files you can ignore:
-	* environment.py: Abstract class for general reinforcement learning environments. Used by gridworld.py.
-	* graphicsGridworldDisplay.py: Gridworld graphical display.
-	* graphicsUtils.py: Graphics utilities.
-	* textGridworldDisplay.py: Plug-in for the Gridworld text interface.
-	* graphicsCrawlerDisplay.py: GUI for the crawler robot.
+Your code will be autograded for technical correctness. Please ___do not___ change the names of any stub functions or classes within the code, or delete any functions we asked you to implement. You can add helper functions if needed.
 
-Your code will be autograded for technical correctness. Please ___do not___ change the names of any provided functions or classes within the code, ___do not___ change any file that is not one of the two files for submission explained above. Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
+Once you have completed the assignment, you should submit your file on [Gradescope]({{page.submission_link}}). You may submit as many times as you would like before the deadline, but only the last submission will be saved. 
 
-## MDPs [0 points]
-To get started, run Gridworld in manual control mode, which uses the arrow keys:
-```
-python gridworld.py -m
-```
-You will see the two-exit layout. The blue dot is the agent. Note that when you press ___up___, the agent only actually moves north 80% of the time. Such is the life of a Gridworld agent! 
-You can control many aspects of the simulation.  A full list of options is available by running:
-```
-python gridworld.py -h
-```
-The default agent moves randomly:
-```
-python gridworld.py -g MazeGrid
-```
-You should see the random agent bounce around the grid until it happens upon an exit.  Not the finest hour for an AI agent.
+## 0. Gridworld
 
-__Note:__ The Gridworld MDP is such that you first must enter a pre-terminal state (the double boxes shown in the GUI) and then take the special 'exit' action before the episode actually ends (in the true terminal state called `TERMINAL_STATE`, which is not shown in the GUI).  If you run an episode manually, your total return may be less than you expected, due to the discount rate (-d to change; 0.9 by default).
-Look at the console output that accompanies the graphical output (or use -t for all text). You will be told about each transition the agent experiences (to turn this off, use -q). 
-As in Pac-Man, positions are represented by (x,y) Cartesian coordinates and any arrays are indexed by `[x][y]`, with `'north'` being the direction of increasing `y`, etc.  By default, most transitions will receive a reward of zero, though you can change this with the living reward option (-r).
+Your agents will be given an MDP game, Gridworld.
+
+In a Gridworld, each state is a tuple of integers $$(x, y)$$, corresponding to the coordinates on the grid. And for each non-terminal state, there are exactly four actions, going UP, DOWN, LEFT, or RIGHT. Gridworld also has two parameters, `noise` and `living_reward`.
+
+`noise` defines the probability of the robot not doing exactly what you tell it to do. For example, if you tell the robot to go UP, the probability of it actually going up is $1-\text{noise}$; the probability of the agent going the perpendicular direction LEFT or RIGHT are both $$\frac{\text{noise}}{2}$$. Furthermore, if the robot is hitting a wall, then the outcome state will still be the same state, because the robot didn't move at all. By default, `noise` is $$0.2$$.
+
+`living_reward` defines the reward given to the robot for each action that leads to a non-terminal state. By default it's $$0$$, so no reward given to the agent before reaching the terminal states.
+
+However, your agents should be as generic as possible, and should not assume anything related to `Gridworld` in your agents. In fact, you should **not** import `gridworld.py` into your `agents.py`. Instead, you agents shall take in a generic `game` object at initialization, with `game` implementing the following interface:
+
+```python
+class MDPGame:
+    states: Set[State]
+    get_actions(state: State) -> Set[Action]
+    get_transitions(current_state: State, action: Action) -> Dict[State, float]
+    get_reward(current_state: State, action: Action, next_state: State) -> float
+```
+
+- `game.states` is a set of non-terminal `State`s in the game. A `State` is guaranteed hashable.
+- `game.get_actions(state)` takes in a `State`, and returns a set of all possible `Action`s the agent can do in that state. If the `state` is a terminal state, then an empty set will be returned.
+- `game.get_transitions(current_state, action)` takes in the current `State` and the `Action` the agent wants to execute. It then returns a mapping of the outcome states to the probability of arriving at that state. Note: you can use `.items()` on a dictionary to get a list of `(k, v)` pairs.
+- `game.get_reward(current_state, action, next_state)` takes in the current `State`, the `Action`, and the outcome `State`, and returns the reward as a real number.
 
 
 ## 1. Value Iteration [45 Points]
-Write a value iteration agent in `ValueIterationAgent`, which has been partially specified for you in __valueIterationAgents.py__.  Your value iteration agent is an offline planner, not a reinforcement agent, and so the relevant training option is the number of iterations of value iteration it should run (option `-i`) in its initial planning phase.  `ValueIterationAgent` takes an MDP on construction and runs value iteration for the specified number of iterations before the constructor returns.
-Value iteration computes k-step estimates of the optimal values, Vk. In addition to running value iteration, implement the following methods for `ValueIterationAgent` using Vk.
-+ `getValue(state)` returns the value of a state.
-+ `getPolicy(state)` returns the best action according to computed values.
-+ `getQValue(state, action)` returns the q-value of the (state, action) pair. 
+Write a value iteration agent in class `ValueIterationAgent`, which has been partially specified for you in __agents.py__. 
 
-These quantities are all displayed in the GUI: values are numbers in squares, q-values are numbers in square quarters, and policies are arrows out from each square.
+`ValueIterationAgent` takes in an MDP `game` and the `discount` factor $$\gamma$$ on construction. It then should initialize all the state values to $0$ (i.e. $$V_0(s) =0$$). You need to implement the following methods for `ValueIterationAgent` using current estimated values $$V^*$$, which is $$V_0$$ at the beginning.
 
-___Important:___ Use the "batch" version of value iteration where each vector Vk is computed from a fixed vector Vk-1 (like in lecture), not the "online" version where one single weight vector is updated in place. The difference is discussed in [Sutton & Barto](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf) in the 6th paragraph of chapter 4.4.
++ `agent.get_value(state)` returns the value of the `state`, $$V^*(s)$$.
++ `agent.get_q_value(state, action)` returns the q-state value of the `(state, action)` pair, $$Q^*(s, a)$$.
++ `agent.get_best_policy(state)` returns the best policy of the `state`, $$\pi^*(s)$$.
 
-__Note__: A policy synthesized from values of depth k (which reflect the next k rewards) will actually reflect the next k+1 rewards (i.e. you return πk+1). Similarly, the q-values will also reflect one more reward than the values (i.e. you return Qk+1). You may assume that 100 iterations is enough for convergence in the questions below.
-The following command loads your `ValueIterationAgent`, which will compute a policy and execute it 10 times. Press a key to cycle through values, q-values, and the simulation. You should find that the value of the start state (V(start)) and the empirical resulting average reward are quite close.
-```
-python gridworld.py -a value -i 100 -k 10
+Then, once you implemented these, you can implement `agent.iterate()`, which it to iterate **only once** using Bellman equations, and store the new $V_{k+1}$ in place of $V^*$.
+
+___Important:___ Use the "batch" version of value iteration where each vector $$V_{k+1}$$ is computed from a fixed previous state $$V^*$$ (like in lecture), not the "online" version where one single weight vector is updated in place. The difference is discussed in [Sutton & Barto](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf) in the 6th paragraph of chapter 4.4.
+
+For more instructions, refer to the lecture slides and comments in the skeleton file.
+
+---
+
+The following command loads your `ValueIterationAgent`:
+
+```shell
+python3 gridworld.py
 ```
 
-Hint: On the default BookGrid, running value iteration for 5 iterations should give you the output below. When you run the iterations, the parameter `-s` will let you change the speed at which the simiulation runs. Using a value lower than `1` will slow down the speed of animation. This will come in handy for all problems when you need to visualize the end results. 
-```
-python gridworld.py -a value -i 5 -s 0.2
-```
+In the GUI, you will see the current agent type displayed on the top. You should also see the current number of iteration on the top, the game board in the middle, and a selection of the current view mode on the bottom.
+
+The terminal states are displayed with a color (either green or red) and the rewards are displayed in a bold font. The block in yellow is the starting state, and the blocks in completely black are non-existing states (walls) in the game. Other blocks are non-terminal states.
+
+By changing the number of iterations on the top, you can view the state values, q-state values and policies your agent returns after running the $i$th iteration. You should expect to see all state values $$V^*(s)$$ being $0$ at the $0$th iteration.
+
+Hint: On the default BookGrid, running value iteration for 5 iterations should give you the output below. 
+
 <center>
 <img src="value.png" alt="Grid World - Values after 5 iterations" class="img-responsive" width="50%" height="50%"/>
 </center>
-<br/>
+Your value iteration agent will be graded on a new grid. We will check your values, q-state values, and policies after fixed numbers of iterations and at convergence (e.g. after 100 iterations).
 
-Your value iteration agent will be graded on a new grid. We will check your values, q-values, and policies after fixed numbers of iterations and at convergence (e.g. after 100 iterations).
-Hint: Use the `util.Counter` class in __util.py__, which is a dictionary with a default value of zero. Methods such as `totalCount` should simplify your code. However, be careful with `argMax`: the actual argmax you want may be a key not in the counter!
+## 2. Policy Iteration [25 Points]
 
-## 2. Bridge Crossing Analysis [10 Points]
+To implement `PolicyIterationAgent`, you need to fix the policy $$\pi^*$$ at the beginning of policy iteration, and then keep iterating $$V^{\pi^*}(s)$$ until it converges (the biggest difference between the current iteration $$V^{\pi^*}_{k}(s)$$ and the last iteration $$V^{\pi^*}_{k-1}(s)$$ is less than $$\epsilon = 10^{-6}$$). You then can then update $$V^*(s)$$ to the converged $$V^{\pi^*}(s)$$ and claim the end of one policy iteration.
 
-BridgeGrid is a grid world map with the a low-reward terminal state and a high-reward terminal state separated by a narrow "bridge", on either side of which is a chasm of high negative reward. The agent starts near the low-reward state. With the default discount of 0.9 and the default noise of 0.2, the optimal policy does not cross the bridge. Change only ONE of the discount and noise parameters so that the optimal policy causes the agent to attempt to cross the bridge. Put your answer in question2() of analysis.py. (Noise refers to how often an agent ends up in an unintended successor state when they perform an action.) The default corresponds to:
+All other values (Q-state values, policies) should be calculated the same way as `ValueIterationAgent`, and the only difference is at the `iterate()` method. However, if you need to implement helper functions or override `ValueIterationAgent`'s methods, you can add them as well.
+
+The following command loads your `PolicyIterationAgent`:
+
+```shell
+python3 gridworld.py -a policy
+```
+
+Hint: You should see the same value for `ValueIterationAgent` and `PolicyIterationAgent` after they converge, and `PolicyIterationAgent` should converge much faster than the `ValueIterationAgent`. 
+
+
+Your policy iteration agent will be checked the same way as your value iteration agent.
+
+## 3. Bridge Crossing Analysis [10 Points]
+
+BridgeGrid is a grid world map with a low-reward terminal state and a high-reward terminal state separated by a narrow "bridge," on either side of which is a chasm of high negative reward. The agent starts near the low-reward state (the yellow block). With the default discount of $$0.9$$ and the default noise of $$0.2$$, the optimal policy does not cross the bridge. Change only ONE of the discount or the noise parameters so that the optimal policy causes the agent to attempt to cross the bridge. Put your answer in `bridge_crossing()` of `agents.py`.
+
+To change the `discount` or `noise` in Gridworld GUI, use `--discount` or `--noise`. To use the `bridge` grid, add `bridge` to the end of the command line. The default parameter corresponds to:
 
 ```
-python gridworld.py -a value -i 100 -g BridgeGrid --discount 0.9 --noise 0.2
+python3 gridworld.py --discount 0.9 --noise 0.2 bridge
 ```
 
 <center>
 <img src="value-q2.png" alt="Grid World bridge challenge" class="img-responsive" />
 </center>
-<br/>
+## 4. Policies [15 Points]
+Consider the DiscountGrid layout, shown below. This grid has two terminal states with positive payoffs (in the middle row), a close exit with payoff +1 and a distant exit with payoff +10. The bottom row of the grid consists of terminal states with negative payoffs (shown in red); each state in this "cliff" region has payoff -10. The starting state is the yellow square. We distinguish between two types of paths: 
 
-## 3. Policies [40 Points]
-Consider the DiscountGrid layout, shown below. This grid has two terminal states with positive payoff (in the middle row), a close exit with payoff +1 and a distant exit with payoff +10. The bottom row of the grid consists of terminal states with negative payoff (shown in red); each state in this "cliff" region has payoff -10. The starting state is the yellow square. We distinguish between two types of paths: (1) paths that "risk the cliff" and travel near the bottom row of the grid; these paths are shorter but risk earning a large negative payoff, and are represented by the red arrow in the figure below. (2) paths that "avoid the cliff" and travel along the top edge of the grid. These paths are longer but are less likely to incur huge negative payoffs. These paths are represented by the green arrow in the figure below.
+1. paths that "risk the cliff" and travel near the bottom row of the grid; these paths are shorter but risk earning a large negative payoff, and are represented by the red arrow in the figure below. 
+2. paths that "avoid the cliff" and travel along the top edge of the grid. These paths are longer but are less likely to incur huge negative payoffs. These paths are represented by the green arrow in the figure below.
 
 <center>
 <img src="discountgrid.png" alt="Grid World ledge challenge" class="img-responsive" width="50%" height="50%"/>
 </center>
-<br/>
-
 In this question, you will choose settings of the discount, noise, and living reward parameters for this MDP to produce optimal policies of several different types. Your setting of the parameter values for each part should have the property that, if your agent followed its optimal policy without being subject to any noise, it would exhibit the given behavior. If a particular behavior is not achieved for any setting of the parameters, assert that the policy is impossible by returning the string 'NOT POSSIBLE'. The default corresponds to:
 
 ```
-python gridworld.py -a value -i 100 -g DiscountGrid --discount 0.9 --noise 0.2 --livingReward 0.0
+python gridworld.py --discount 0.9 --noise 0.2 --living-reward 0.0 discount
 ```
 Here are the optimal policy types you should attempt to produce:
 
@@ -166,18 +186,23 @@ Here are the optimal policy types you should attempt to produce:
 	<li>Avoid both exits and the cliff (so an episode should never terminate)</li>
 </ol>
 
-Questions 3a through question 3e should each return a 3-item tuple of (discount, noise, living reward) in analysis.py.
+Questions 4a through question 4e should each return a 3-item tuple of (discount, noise, living reward) in analysis.py, or string 'NOT POSSIBLE' if it's impossible to achieve.
 
-Note: You can check your policies in the GUI. For example, using a correct answer to 3a, the arrow in (0,1) should point east, the arrow in (1,1) should also point east, and the arrow in (2,1) should point north.
+Note: You can check your policies in the GUI. For example, using a correct answer to 4a, the policy in the starting state should point to the right, the policy to its right should also point to the right, and the policy below terminal state $$1.00$$ should point up.
 
-__Note:__ On some machines you may not see an arrow. In this case, press a button on the keyboard to switch to qValue display, and mentally calculate the policy by taking the arg max of the available qValues for each state.
+To quickly get to the converged policy, you can use `--iteration` option. For example
+
+```shell
+python gridworld.py --iteration 100 discount
+```
+
+Will begin the GUI on the 100th iteration.
 
 
-## 4. Feedback [5 points]
+## 5. Feedback [5 points]
 
 1. **[1 point]** Approximately how many hours did you spend on this assignment?
 
 2. **[2 point]** Which aspects of this assignment did you find most challenging? Were there any significant stumbling blocks?
 
 3. **[2 point]**  Which aspects of this assignment did you like? Is there anything you would have changed?
-
