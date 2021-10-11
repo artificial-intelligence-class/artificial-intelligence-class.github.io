@@ -197,7 +197,7 @@
       length: 4 minutes 
     -  
       authors: Pieter Abbeel 
-      url: https://www.youtube.com/watch?v=jvpWtwVSvjA
+      url: https://www.youtube.com/watch?v=xBXHtz4Gbdo
       title: Step-by-step Example&colon; Alpha-Beta
       length: 14 minutes
 
@@ -287,6 +287,10 @@
       title: AIMA Chapter 17 "Making Complex Decisions" (17.1-17.3)
       authors: Russell and Norvig
       optional: false 
+  videos:
+    -
+      url: https://www.youtube.com/watch?v=c8deRYotdng
+      title: Chance of Navigating an Asteroid Field
 -
   date: 2020-10-13
   title:  HW4 due (Sudoku and Games), HW5 released (MDPs and GridWorld)
