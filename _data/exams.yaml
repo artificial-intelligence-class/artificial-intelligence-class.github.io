@@ -1,12 +1,19 @@
 - 
-  title: Midterm 1 
-  topics:
+  title: Midterm 1 (Mon/Wed section) - Meyerson B1
+  topics: Modules 1-7
   url: 
-  release_date:
-  due_date: 2021-10-26 23:59:00EDT
+  due_date: 2021-10-25 8:30:00EDT
+  type: in-person
+- 
+  title: Midterm 1 (Mon/Wed section) - Meyerson B1
+  topics: Modules 1-7
+  url: 
+  due_date: 2021-10-26 12:00:00EDT
+  type: in-person
 - 
   title: Midterm 2 or Final Exam (date is not yet final)
   topics:
   url: 
   release_date:
   due_date: 2021-12-10 23:59:00EDT
+  type: 
