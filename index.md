@@ -125,7 +125,8 @@ Time and place
 -->
 
 Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/246))
-: Mondays 10am-noon Eastern (Coco Zhao, Aditya Singh)
+: Mondays 9:15am-11:15a, Eastern (Coco Zhao)
+: Mondays 10am-noon Eastern (Aditya Singh)
 : Mondays noon-2pm Eastern (Kit Wiggin)
 : Mondays 5-6pm Eastern (Roque Soto Castaneda)
 : Mondays 5-7pm Eastern (Brian Wong)
