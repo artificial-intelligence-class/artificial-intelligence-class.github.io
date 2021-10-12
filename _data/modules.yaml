@@ -320,7 +320,7 @@
   homework:
   readings:
     - 
-      title: AIMA Chapter 7 "Logical Agents" 
+      title: AIMA Chapter 7 "Logical Agents", Sections 7.1-7.5
       authors: Russell and Norvig
       optional: false
 
