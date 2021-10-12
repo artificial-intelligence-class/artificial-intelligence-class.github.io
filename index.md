@@ -120,10 +120,11 @@ Time and place
 
 
 
-Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/246))
 <!--
 : Mondays **3am-5am** Eastern (Samar Haider)
 -->
+
+Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/246))
 : Mondays 10am-noon Eastern (Coco Zhao, Aditya Singh)
 : Mondays noon-2pm Eastern (Kit Wiggin)
 : Mondays 5-6pm Eastern (Roque Soto Castaneda)
