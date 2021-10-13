@@ -56,7 +56,7 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-Homework 5: Markov Decision Processes [100 points]
+Homework 6: Markov Decision Processes [100 points]
 =============================================================
 
 ## Instructions
