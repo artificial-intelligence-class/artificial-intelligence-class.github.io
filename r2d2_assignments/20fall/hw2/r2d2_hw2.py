@@ -33,8 +33,8 @@ class Graph:
     def dfs(self, start: Vertex, goal: Vertex) -> Tuple[Optional[List[Vertex]], Set[Vertex]]:
         """Use BFS algorithm to find the path from start to goal in the given graph.
 
-        :return: a tuple (shortest_path, node_visited),
-                 where shortest_path is a list of vertices that represents the path from start to goal, and None if
+        :return: a tuple (valid_path, node_visited),
+                 where valid_path is a list of vertices that represents the path from start to goal (no need to be shortest), and None if
                  such a path does not exist; node_visited is a set of vertices that are visited during the search."""
         ...  # TODO
 
