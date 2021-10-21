@@ -383,7 +383,7 @@
 
 -
   module_number: 9
-  start_date: 2021-10-25
+  start_date: 2021-10-18
   end_date: 2021-11-01
   title: Reinforcement Learning
   description: In this module, we will explore situations where a transition and a reward function are not given to us, but must be learned through interaction with the world. In reinforcement learning, every time an agent takes an action in the world, it receives feedback in the form of a reward, and so the agent wants to maximize its expected rewards. We’ll look at several different learning techniques for reinforcement learning&colon; including model-based learning and temporal difference learning. Finally, we’ll be able to quantify how good different exploration strategies are using regret.
@@ -436,8 +436,8 @@
 
 -
   module_number: 10
-  start_date: 2021-10-18
-  end_date: 2021-10-25
+  start_date: 2021-11-01
+  end_date: 2021-11-08
   title: Probabilities and Language Models
   description: In this module, we’ll review the basics of probability, an extremely important concept to master in artificial intelligence. We’ll review the basics of probability theory, including the axioms of probability, what an event is, what a probabilistic model is, and much more. To show some practical applications of these concepts, we’ll take a look at something called probabilistic language models, which power things like autocomplete on your smartphone.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=65f83e72-f842-4efa-818e-ad92011c6b9d
