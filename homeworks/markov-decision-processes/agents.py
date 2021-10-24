@@ -21,7 +21,7 @@ class ValueIterationAgent:
     def get_q_value(self, state, action):
         """Return Q*(s,a) correspond to state and action.
         Q-state values should be computed using Bellman equation:
-        Q*(s,a) = Σ_s' T(s,a,s') [R(s,a,s') + γ V*(s)]
+        Q*(s,a) = Σ_s' T(s,a,s') [R(s,a,s') + γ V*(s')]
         """
         return 0  # TODO
 
