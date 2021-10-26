@@ -135,7 +135,7 @@ Note: Your response should be not depend on the exact tie-breaking mechanism use
 
 ## 4. Q-Learning and Pacman [10 points]
 
-Time to play some Pacman! Pacman will play games in two phases. In the first phase, training, Pacman will begin to learn about the values of positions and actions. Because it takes a very long time to learn accurate Q-values even for tiny grids, Pacman's training games run in quiet mode by default, with no GUI (or console) display. Once Pacman's training is complete, he will enter playing mode. When playing, Pacman will use `get_best_policy` and not call `update` method, effectively stopping Q-learning and disabling exploration, in order to allow Pacman to exploit its learned policy. Playing games are shown in the GUI. Without any code changes you should be able to run Q-learning Pacman for very tiny grids as follows:
+Time to play some Pacman! Pacman will play games in two phases. In the first phase, training, Pacman will begin to learn about the values of positions and actions. Because it takes a very long time to learn accurate Q-values even for tiny grids, Pacman's training games run in quiet mode by default, with no GUI (or console) display. Once Pacman's training is complete, it will enter playing mode. When playing, Pacman will use `get_best_policy` and not call `update` method, effectively stopping Q-learning and disabling exploration, in order to allow Pacman to exploit its learned policy. Playing games are shown in the GUI. Without any code changes you should be able to run Q-learning Pacman for very tiny grids as follows:
 
 ```
 python pacman.py --train 2000 --play 10 small
@@ -145,9 +145,9 @@ python pacman.py --train 2000 --play 10 small
 
 Hint: If your `QLearningAgent` works for **Gridworld** but does not seem to be learning a good policy for Pacman on smallGrid, it may be because your `get_action` and/or `get_best_policy` methods do not in some cases properly consider unseen actions. In particular, because unseen actions have by definition a Q-value of zero, if all of the actions that have been seen have negative Q-values, an unseen action may be optimal!
 
-During training, you will see output every 100 games with statistics about how Pacman is faring. Epsilon is positive during training, so Pacman will play poorly even after having learned a good policy: this is because he occasionally makes a random exploratory move into a ghost. As a benchmark, it should take no more than 1,000 episodes before Pacman's rewards for a 100 episode segment becomes positive, reflecting that he's started winning more than losing. By the end of training, it should remain positive and be fairly high (between 100 and 350).
+During training, you will see output every 100 games with statistics about how Pacman is faring. Epsilon is positive during training, so Pacman will play poorly even after having learned a good policy: this is because it occasionally makes a random exploratory move into a ghost. As a benchmark, it should take no more than 1,000 episodes before Pacman's rewards for a 100 episode segment becomes positive, reflecting that it's started winning more than losing. By the end of training, it should remain positive and be fairly high (between 100 and 350).
 
-Once Pacman is done training, he should win very reliably in test games (at least 90% of the time), since now he is exploiting its learned policy.
+Once Pacman is done training, it should win very reliably in test games (at least 90% of the time), since now it is exploiting its learned policy.
 
 However, you will find that training the same agent on the seemingly simple mediumGrid does not work well:
 
@@ -155,9 +155,9 @@ However, you will find that training the same agent on the seemingly simple medi
 python pacman.py --train 2000 --play 10 medium
 ```
 
-In our implementation, Pacman's average training rewards remain negative throughout training. At test time, he plays badly, probably losing all of its test games. Training will also take a long time, despite its ineffectiveness.
+In our implementation, Pacman's average training rewards remain negative throughout training. At test time, it plays badly, probably losing all of its test games. Training will also take a long time, despite its ineffectiveness.
 
-Pacman fails to win on larger layouts even if you increase the training time because each board configuration is a separate state with separate Q-values. He has no way to generalize that running into a ghost is bad for all positions. Obviously, this approach will not scale.
+Pacman fails to win on larger layouts even if you increase the training time because each board configuration is a separate state with separate Q-values. It has no way to generalize that running into a ghost is bad for all positions. Obviously, this approach will not scale.
 
 ## 5. Approximate Q-Learning [20 points]
 
@@ -172,11 +172,14 @@ The approximate Q-function takes the following form
 $$
 Q(s,a)=\sum_{i=1}^{n}{f_i(s,a)w_i}
 $$
+
 where each weight $$w_i$$ is associated with a particular feature $$f_i(s,a)$$. In your code, you should implement the weight vector as a dictionary mapping features (which the feature extractors will return) to weight values. You will update your weight vectors similarly to how you updated Q-values:
+
 $$
 \Delta = R + \gamma V(s') - Q(s, a)\\
 w_i\leftarrow w_i + \alpha \cdot \Delta \cdot f_i(s,a)
 $$
+
 Note that the $$\Delta$$ term is the same as in normal Q-learning, and $$R$$ is the reward for $(s, a, s')$.
 
 By default, `ApproximateQAgent` uses the `IdentityExtractor`, which assigns a single feature to every `(state, action)` pair. With this feature extractor, your Approximate Q-learning agent should work identically to `QLearningAgent`. You can test this with the following command:
