@@ -17,13 +17,13 @@ class QLearningAgent:
         """Retrieve Q-value from Q-table.
         For an never seen (s,a) pair, the Q-value is by default 0.
         """
-        ...  # TODO
+        return 0  # TODO
 
     def get_value(self, state):
         """Compute state value from Q-values using Bellman Equation.
         V(s) = max_a Q(s,a)
         """
-        ...  # TODO
+        return 0  # TODO
 
     def get_best_policy(self, state):
         """Compute the best action to take in the state using Policy Extraction.
@@ -32,7 +32,7 @@ class QLearningAgent:
         If there are ties, return a random one for better performance.
         Hint: use random.choice().
         """
-        ...  # TODO
+        return None  # TODO
 
     def update(self, state, action, next_state, reward):
         """Update Q-values using running average.
@@ -51,7 +51,7 @@ class QLearningAgent:
 
         Hint: use random.random() < ε to check if exploration is needed.
         """
-        ...  # TODO
+        return None  # TODO
 
 
 # 3. Bridge Crossing Revisited
@@ -77,13 +77,13 @@ class ApproximateQAgent(QLearningAgent):
         """Get weight of a feature.
         Never seen feature should have a weight of 0.
         """
-        ...  # TODO
+        return 0  # TODO
 
     def get_q_value(self, state, action):
         """Compute Q value based on the dot product of feature components and weights.
         Q(s,a) = w_1 * f_1(s,a) + w_2 * f_2(s,a) + ... + w_n * f_n(s,a)
         """
-        ...  # TODO
+        return 0  # TODO
 
     def update(self, state, action, next_state, reward):
         """Update weights using least-squares approximation.
