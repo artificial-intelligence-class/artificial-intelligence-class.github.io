@@ -125,7 +125,7 @@ Time and place
 -->
 
 Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/246))
-: Mondays 9:15am-11:15a, Eastern (Coco Zhao)
+: Mondays 9:15am-11:15am Eastern (Coco Zhao)
 : Mondays 10am-noon Eastern (Aditya Singh)
 : Mondays noon-2pm Eastern (Kit Wiggin)
 : Mondays 5-6pm Eastern (Roque Soto Castaneda)
@@ -137,7 +137,7 @@ Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/246))
 : Wednesdays 10am-12pm Eastern (Xavier Lee)
 : Wednesdays noon-2pm Eastern (Anna Orosz)
 : Wednesdays 4pm-6pm Eastern (Ruochun Wang)
-: Wednesday 8pm-10pm Eastern (Sherry Shi)
+: Wednesday 9:30pm-11:30pm Eastern (Sherry Shi)
 : Thursdays 9am-11am Eastern (Yue Yang)
 : Thursdays 1pm-3pm Eastern (Yuxuan Huang)
 : Thursdays 5pm-7pm Eastern (Viranchi Patel)
