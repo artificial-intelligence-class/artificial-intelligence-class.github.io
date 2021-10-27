@@ -1,585 +1,412 @@
-# gridworld.py
-# ------------
-# Licensing Information:  You are free to use or extend these projects for
-# educational purposes provided that (1) you do not distribute or publish
-# solutions, (2) you retain this notice, and (3) you provide clear
-# attribution to UC Berkeley, including a link to http://ai.berkeley.edu.
-# 
-# Attribution Information: The Pacman AI projects were developed at UC Berkeley.
-# The core projects and autograders were primarily created by John DeNero
-# (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
-# Student side autograding was added by Brad Miller, Nick Hay, and
-# Pieter Abbeel (pabbeel@cs.berkeley.edu).
-
-
+import argparse
 import random
-import sys
-import mdp
-import environment
-import util
-import optparse
+import time
+import tkinter as tk
+import tkinter.font as tk_font
+from enum import Enum, auto
+from functools import lru_cache
+from typing import *
 
-class Gridworld(mdp.MarkovDecisionProcess):
-    """
-      Gridworld
-    """
-    def __init__(self, grid):
-        # layout
-        if type(grid) == type([]): grid = makeGrid(grid)
-        self.grid = grid
-
-        # parameters
-        self.livingReward = 0.0
-        self.noise = 0.2
-
-    def setLivingReward(self, reward):
-        """
-        The (negative) reward for exiting "normal" states.
-
-        Note that in the R+N text, this reward is on entering
-        a state and therefore is not clearly part of the state's
-        future rewards.
-        """
-        self.livingReward = reward
-
-    def setNoise(self, noise):
-        """
-        The probability of moving in an unintended direction.
-        """
-        self.noise = noise
+import agents
 
 
-    def getPossibleActions(self, state):
-        """
-        Returns list of valid actions for 'state'.
+class Gridworld:
+    State = Tuple[int, int]
 
-        Note that you can request moves into walls and
-        that "exit" states transition to the terminal
-        state under the special action "done".
-        """
-        if state == self.grid.terminalState:
-            return ()
-        x,y = state
-        if type(self.grid[x][y]) == int:
-            return ('exit',)
-        return ('north','west','south','east')
+    class Action(Enum):
+        Up = auto()
+        Down = auto()
+        Left = auto()
+        Right = auto()
 
-    def getStates(self):
-        """
-        Return list of all states.
-        """
-        # The true terminal state.
-        states = [self.grid.terminalState]
-        for x in range(self.grid.width):
-            for y in range(self.grid.height):
-                if self.grid[x][y] != '#':
-                    state = (x,y)
-                    states.append(state)
-        return states
+    def __init__(self, grid: Tuple[Tuple[Any, ...], ...]):
+        self.__n = len(grid)
+        self.__m = len(grid[0])
+        self.__grid = grid
 
-    def getReward(self, state, action, nextState):
-        """
-        Get reward for state, action, nextState transition.
-
-        Note that the reward depends only on the state being
-        departed (as in the R+N book examples, which more or
-        less use this convention).
-        """
-        if state == self.grid.terminalState:
-            return 0.0
+    @lru_cache(maxsize=None)
+    def get_actions(self, state: State) -> Set[Action]:
         x, y = state
-        cell = self.grid[x][y]
-        if type(cell) == int or type(cell) == float:
-            return cell
-        return self.livingReward
-
-    def getStartState(self):
-        for x in range(self.grid.width):
-            for y in range(self.grid.height):
-                if self.grid[x][y] == 'S':
-                    return (x, y)
-        raise 'Grid has no start state'
-
-    def isTerminal(self, state):
-        """
-        Only the TERMINAL_STATE state is *actually* a terminal state.
-        The other "exit" states are technically non-terminals with
-        a single action "exit" which leads to the true terminal state.
-        This convention is to make the grids line up with the examples
-        in the R+N textbook.
-        """
-        return state == self.grid.terminalState
+        if x < 0 or x >= self.__n or y < 0 or y >= self.__m:
+            raise ValueError('not a valid state')
+        if isinstance(self.__grid[x][y], float):  # terminal
+            return set()
+        return {*Gridworld.Action}
 
 
-    def getTransitionStatesAndProbs(self, state, action):
-        """
-        Returns list of (nextState, prob) pairs
-        representing the states reachable
-        from 'state' by taking 'action' along
-        with their transition probabilities.
-        """
+@lru_cache(maxsize=None)
+def get_start_point(grid):
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if grid[i][j] == 'S':
+                return i, j
 
-        if action not in self.getPossibleActions(state):
-            raise "Illegal action!"
 
-        if self.isTerminal(state):
-            return []
+class Environment:
+    def __init__(self, agent, noise: float, living_reward: float,
+                 grid: Tuple[Tuple[Any, ...], ...]):
+        self.__grid = grid
+        self.__n = len(grid)
+        self.__m = len(grid[0])
+        self.__noise = noise
+        self.__living_reward = living_reward
 
-        x, y = state
+        self.agent = agent
+        self.position = get_start_point(grid)
 
-        if type(self.grid[x][y]) == int or type(self.grid[x][y]) == float:
-            termState = self.grid.terminalState
-            return [(termState, 1.0)]
+    def __do_action(self, action: Gridworld.Action) -> Gridworld.State:
+        x, y = self.position
 
-        successors = []
-
-        northState = (self.__isAllowed(y+1,x) and (x,y+1)) or state
-        westState = (self.__isAllowed(y,x-1) and (x-1,y)) or state
-        southState = (self.__isAllowed(y-1,x) and (x,y-1)) or state
-        eastState = (self.__isAllowed(y,x+1) and (x+1,y)) or state
-
-        if action == 'north' or action == 'south':
-            if action == 'north':
-                successors.append((northState,1-self.noise))
-            else:
-                successors.append((southState,1-self.noise))
-
-            massLeft = self.noise
-            successors.append((westState,massLeft/2.0))
-            successors.append((eastState,massLeft/2.0))
-
-        if action == 'west' or action == 'east':
-            if action == 'west':
-                successors.append((westState,1-self.noise))
-            else:
-                successors.append((eastState,1-self.noise))
-
-            massLeft = self.noise
-            successors.append((northState,massLeft/2.0))
-            successors.append((southState,massLeft/2.0))
-
-        successors = self.__aggregate(successors)
-
-        return successors
-
-    def __aggregate(self, statesAndProbs):
-        counter = util.Counter()
-        for state, prob in statesAndProbs:
-            counter[state] += prob
-        newStatesAndProbs = []
-        for state, prob in counter.items():
-            newStatesAndProbs.append((state, prob))
-        return newStatesAndProbs
-
-    def __isAllowed(self, y, x):
-        if y < 0 or y >= self.grid.height: return False
-        if x < 0 or x >= self.grid.width: return False
-        return self.grid[x][y] != '#'
-
-class GridworldEnvironment(environment.Environment):
-
-    def __init__(self, gridWorld):
-        self.gridWorld = gridWorld
-        self.reset()
-
-    def getCurrentState(self):
-        return self.state
-
-    def getPossibleActions(self, state):
-        return self.gridWorld.getPossibleActions(state)
-
-    def doAction(self, action):
-        state = self.getCurrentState()
-        (nextState, reward) = self.getRandomNextState(state, action)
-        self.state = nextState
-        return (nextState, reward)
-
-    def getRandomNextState(self, state, action, randObj=None):
-        rand = -1.0
-        if randObj is None:
-            rand = random.random()
+        if action == Gridworld.Action.Up:
+            target_x, target_y = x - 1, y
+        elif action == Gridworld.Action.Down:
+            target_x, target_y = x + 1, y
+        elif action == Gridworld.Action.Left:
+            target_x, target_y = x, y - 1
         else:
-            rand = randObj.random()
-        sum = 0.0
-        successors = self.gridWorld.getTransitionStatesAndProbs(state, action)
-        for nextState, prob in successors:
-            sum += prob
-            if sum > 1.0:
-                raise 'Total transition probability more than one; sample failure.'
-            if rand < sum:
-                reward = self.gridWorld.getReward(state, action, nextState)
-                return (nextState, reward)
-        raise 'Total transition probability less than one; sample failure.'
+            target_x, target_y = x, y + 1
 
-    def reset(self):
-        self.state = self.gridWorld.getStartState()
+        if 0 <= target_x < self.__n and 0 <= target_y < self.__m and \
+                self.__grid[target_x][target_y] != '#':
+            return target_x, target_y
+        return x, y
 
-class Grid:
-    """
-    A 2-dimensional array of immutables backed by a list of lists.  Data is accessed
-    via grid[x][y] where (x,y) are cartesian coordinates with x horizontal,
-    y vertical and the origin (0,0) in the bottom left corner.
+    def __act(self, action: Gridworld.Action):
+        if self.__noise <= 0.:
+            self.position = self.__do_action(action)
+            return
 
-    The __str__ method constructs an output that is oriented appropriately.
-    """
-    def __init__(self, width, height, initialValue=' '):
-        self.width = width
-        self.height = height
-        self.data = [[initialValue for y in range(height)] for x in range(width)]
-        self.terminalState = 'TERMINAL_STATE'
+        remaining = self.__noise / 2.
+        if action in (Gridworld.Action.Up, Gridworld.Action.Down):
+            outcomes = (
+                (self.__do_action(action), 1 - self.__noise),
+                (self.__do_action(Gridworld.Action.Left), remaining),
+                (self.__do_action(Gridworld.Action.Right), remaining)
+            )
+        else:
+            outcomes = (
+                (self.__do_action(action), 1 - self.__noise),
+                (self.__do_action(Gridworld.Action.Up), remaining),
+                (self.__do_action(Gridworld.Action.Down), remaining)
+            )
 
-    def __getitem__(self, i):
-        return self.data[i]
+        transitions = {}
+        for outcome, val in outcomes:
+            transitions[outcome] = transitions.get(outcome, 0.) + val
+        options, weights = zip(*transitions.items())
+        self.position = random.choices(options, weights)[0]
 
-    def __setitem__(self, key, item):
-        self.data[key] = item
+    def iterate(self, action=None) -> bool:
+        if isinstance(self.__grid[self.position[0]][self.position[1]], float):
+            self.position = get_start_point(self.__grid)
+            return True
 
-    def __eq__(self, other):
-        if other == None: return False
-        return self.data == other.data
+        state = self.position
+        if action is None:
+            action = self.agent.get_action(self.position)
+        self.__act(action)
+        grid_value = self.__grid[self.position[0]][self.position[1]]
+        reward = grid_value if isinstance(grid_value, float) else self.__living_reward
+        self.agent.update(state, action, self.position, reward)
 
-    def __hash__(self):
-        return hash(self.data)
-
-    def copy(self):
-        g = Grid(self.width, self.height)
-        g.data = [x[:] for x in self.data]
-        return g
-
-    def deepCopy(self):
-        return self.copy()
-
-    def shallowCopy(self):
-        g = Grid(self.width, self.height)
-        g.data = self.data
-        return g
-
-    def _getLegacyText(self):
-        t = [[self.data[x][y] for x in range(self.width)] for y in range(self.height)]
-        t.reverse()
-        return t
-
-    def __str__(self):
-        return str(self._getLegacyText())
-
-def makeGrid(gridString):
-    width, height = len(gridString[0]), len(gridString)
-    grid = Grid(width, height)
-    for ybar, line in enumerate(gridString):
-        y = height - ybar - 1
-        for x, el in enumerate(line):
-            grid[x][y] = el
-    return grid
-
-def getCliffGrid():
-    grid = [[' ',' ',' ',' ',' '],
-            ['S',' ',' ',' ',10],
-            [-100,-100, -100, -100, -100]]
-    return Gridworld(makeGrid(grid))
-
-def getCliffGrid2():
-    grid = [[' ',' ',' ',' ',' '],
-            [8,'S',' ',' ',10],
-            [-100,-100, -100, -100, -100]]
-    return Gridworld(grid)
-
-def getDiscountGrid():
-    grid = [[' ',' ',' ',' ',' '],
-            [' ','#',' ',' ',' '],
-            [' ','#', 1,'#', 10],
-            ['S',' ',' ',' ',' '],
-            [-10,-10, -10, -10, -10]]
-    return Gridworld(grid)
-
-def getBridgeGrid():
-    grid = [[ '#',-100, -100, -100, -100, -100, '#'],
-            [   1, 'S',  ' ',  ' ',  ' ',  ' ',  10],
-            [ '#',-100, -100, -100, -100, -100, '#']]
-    return Gridworld(grid)
-
-def getBookGrid():
-    grid = [[' ',' ',' ',+1],
-            [' ','#',' ',-1],
-            ['S',' ',' ',' ']]
-    return Gridworld(grid)
-
-def getMazeGrid():
-    grid = [[' ',' ',' ',+1],
-            ['#','#',' ','#'],
-            [' ','#',' ',' '],
-            [' ','#','#',' '],
-            ['S',' ',' ',' ']]
-    return Gridworld(grid)
+        return False
 
 
+class GUI(tk.Tk):
+    SQUARE_SIZE = 100
+    ANIMATION_SPEED = 0.1
 
-def getUserAction(state, actionFunction):
-    """
-    Get an action from the user (rather than the agent).
+    def __init__(self, env: Environment, grid, init_iter, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
-    Used for debugging and lecture demos.
-    """
-    import graphicsUtils
-    action = None
-    while True:
-        keys = graphicsUtils.wait_for_keys()
-        if 'Up' in keys: action = 'north'
-        if 'Down' in keys: action = 'south'
-        if 'Left' in keys: action = 'west'
-        if 'Right' in keys: action = 'east'
-        if 'q' in keys: sys.exit(0)
-        if action == None: continue
-        break
-    actions = actionFunction(state)
-    if action not in actions:
-        action = actions[0]
-    return action
+        self.__grid = grid
+        self.__rows = len(grid)
+        self.__cols = len(grid[0])
+        self.__env = env
+        self.__episode_counter = 1
+        self.__iter_backup = []
+        self.__cache_env()
 
-def printString(x): print(x)
+        width, height = GUI.SQUARE_SIZE * self.__cols, GUI.SQUARE_SIZE * self.__rows
 
-def runEpisode(agent, environment, discount, decision, display, message, pause, episode):
-    returns = 0
-    totalDiscount = 1.0
-    environment.reset()
-    if 'startEpisode' in dir(agent): agent.startEpisode()
-    message("BEGINNING EPISODE: "+str(episode)+"\n")
-    while True:
+        tk.Label(self, text=env.agent.__class__.__name__).pack(side=tk.TOP)
+        epi_frame = tk.Frame(self)
 
-        # DISPLAY CURRENT STATE
-        state = environment.getCurrentState()
-        display(state)
-        pause()
+        self.__episode = tk.Label(epi_frame)
+        self.__episode.grid(row=0, column=0)
 
-        # END IF IN A TERMINAL STATE
-        actions = environment.getPossibleActions(state)
-        if len(actions) == 0:
-            message("EPISODE "+str(episode)+" COMPLETE: RETURN WAS "+str(returns)+"\n")
-            return returns
+        tk.Button(epi_frame, text='Run Episode', command=self.__run_episode).grid(row=0, column=1)
+        epi_frame.pack(side=tk.TOP)
 
-        # GET ACTION (USUALLY FROM AGENT)
-        action = decision(state)
-        if action == None:
-            raise 'Error: Agent returned None action'
+        frame = tk.LabelFrame(self, text='Display type')
 
-        # EXECUTE ACTION
-        nextState, reward = environment.doAction(action)
-        message("Started in state: "+str(state)+
-                "\nTook action: "+str(action)+
-                "\nEnded in state: "+str(nextState)+
-                "\nGot reward: "+str(reward)+"\n")
-        # UPDATE LEARNER
-        if 'observeTransition' in dir(agent):
-            agent.observeTransition(state, action, nextState, reward)
+        self.__display_type = tk.IntVar(frame, value=0)
+        self.__display_type.trace_add('write', self.__display_mode_changed)
 
-        returns += reward * totalDiscount
-        totalDiscount *= discount
+        tk.Radiobutton(frame, text='None', variable=self.__display_type,
+                       value=0).grid(row=0, column=0)
+        tk.Radiobutton(frame, text='Q(s,a)', variable=self.__display_type,
+                       value=1).grid(row=0, column=1)
+        tk.Radiobutton(frame, text='V(s)', variable=self.__display_type,
+                       value=2).grid(row=0, column=2)
+        tk.Radiobutton(frame, text='π(s)', variable=self.__display_type,
+                       value=3).grid(row=0, column=3)
 
-    if 'stopEpisode' in dir(agent):
-        agent.stopEpisode()
+        frame.pack(side=tk.BOTTOM)
 
-def parseOptions():
-    optParser = optparse.OptionParser()
-    optParser.add_option('-d', '--discount',action='store',
-                         type='float',dest='discount',default=0.9,
-                         help='Discount on future (default %default)')
-    optParser.add_option('-r', '--livingReward',action='store',
-                         type='float',dest='livingReward',default=0.0,
-                         metavar="R", help='Reward for living for a time step (default %default)')
-    optParser.add_option('-n', '--noise',action='store',
-                         type='float',dest='noise',default=0.2,
-                         metavar="P", help='How often action results in ' +
-                         'unintended direction (default %default)' )
-    optParser.add_option('-e', '--epsilon',action='store',
-                         type='float',dest='epsilon',default=0.3,
-                         metavar="E", help='Chance of taking a random action in q-learning (default %default)')
-    optParser.add_option('-l', '--learningRate',action='store',
-                         type='float',dest='learningRate',default=0.5,
-                         metavar="P", help='TD learning rate (default %default)' )
-    optParser.add_option('-i', '--iterations',action='store',
-                         type='int',dest='iters',default=10,
-                         metavar="K", help='Number of rounds of value iteration (default %default)')
-    optParser.add_option('-k', '--episodes',action='store',
-                         type='int',dest='episodes',default=1,
-                         metavar="K", help='Number of epsiodes of the MDP to run (default %default)')
-    optParser.add_option('-g', '--grid',action='store',
-                         metavar="G", type='string',dest='grid',default="BookGrid",
-                         help='Grid to use (case sensitive; options are BookGrid, BridgeGrid, CliffGrid, MazeGrid, default %default)' )
-    optParser.add_option('-w', '--windowSize', metavar="X", type='int',dest='gridSize',default=150,
-                         help='Request a window width of X pixels *per grid cell* (default %default)')
-    optParser.add_option('-a', '--agent',action='store', metavar="A",
-                         type='string',dest='agent',default="random",
-                         help='Agent type (options are \'random\', \'value\' and \'q\', default %default)')
-    optParser.add_option('-t', '--text',action='store_true',
-                         dest='textDisplay',default=False,
-                         help='Use text-only ASCII display')
-    optParser.add_option('-p', '--pause',action='store_true',
-                         dest='pause',default=False,
-                         help='Pause GUI after each time step when running the MDP')
-    optParser.add_option('-q', '--quiet',action='store_true',
-                         dest='quiet',default=False,
-                         help='Skip display of any learning episodes')
-    optParser.add_option('-s', '--speed',action='store', metavar="S", type=float,
-                         dest='speed',default=1.0,
-                         help='Speed of animation, S > 1.0 is faster, 0.0 < S < 1.0 is slower (default %default)')
-    optParser.add_option('-m', '--manual',action='store_true',
-                         dest='manual',default=False,
-                         help='Manually control agent')
-    optParser.add_option('-v', '--valueSteps',action='store_true' ,default=False,
-                         help='Display each step of value iteration')
+        self.__canvas = tk.Canvas(
+            self, width=width + 1, height=height + 1, highlightthickness=0)
 
-    opts, args = optParser.parse_args()
+        for i in range(self.__rows + 1):
+            self.__canvas.create_line(
+                0, i * GUI.SQUARE_SIZE, width, i * GUI.SQUARE_SIZE)
+        for i in range(self.__cols + 1):
+            self.__canvas.create_line(
+                i * GUI.SQUARE_SIZE, 0, i * GUI.SQUARE_SIZE, height)
 
-    if opts.manual and opts.agent != 'q':
-        print('## Disabling Agents in Manual Mode (-m) ##')
-        opts.agent = None
+        frame = tk.Frame(self)
+        tk.Label(frame, text='# Iteration: ').grid(row=0, column=0)
 
-    # MANAGE CONFLICTS
-    if opts.textDisplay or opts.quiet:
-    # if opts.quiet:
-        opts.pause = False
-        # opts.manual = False
+        self.__iteration = tk.IntVar(frame, value=len(self.__iter_backup) - 1)
+        self.__iteration.trace_add('write', self.__iteration_changed)
+        self.__iteration.set(init_iter)
 
-    if opts.manual:
-        opts.pause = True
+        tk.Spinbox(frame, from_=0, increment=1, to=100000,
+                   textvariable=self.__iteration).grid(row=0, column=1)
+        frame.pack(side=tk.TOP)
 
-    return opts
+        self.title('Gridworld - CIS 521')
+        self.__draw_grid()
+        self.__redraw_aux()
+        self.__canvas.focus_set()
+        self.__canvas.bind('<Key>', self.__pressed_key)
+        self.__canvas.bind('<Button-1>', lambda _: self.__canvas.focus_set())
+
+    def __pressed_key(self, event):
+        action = getattr(Gridworld.Action, event.keysym, None)
+        if action is None:
+            return
+        cur_view = int(self.__iteration.get())
+        cur_iter = len(self.__iter_backup) - 1
+        self.__iteration.set(cur_iter)
+        if cur_view < cur_iter:
+            print('not latest iteration, fast-forward...')
+            return
+        if self.__env.iterate(action):
+            self.__episode_counter += 1
+        self.__cache_env()
+        self.__iteration.set(cur_iter + 1)
+        self.__redraw_aux()
+        self.__display_mode_changed()
+
+    def __run_episode(self):
+        start_with = self.__iter_backup[self.__iteration.get()][2]
+        while self.__iter_backup[self.__iteration.get()][2] == start_with:
+            self.__iteration.set(self.__iteration.get() + 1)
+            self.__iteration_changed()
+            self.update()
+            time.sleep(self.ANIMATION_SPEED)
+
+    def __draw_rectangle(self, i, j, **kwargs):
+        self.__canvas.create_rectangle(
+            j * GUI.SQUARE_SIZE, i * GUI.SQUARE_SIZE,
+            (j + 1) * GUI.SQUARE_SIZE, (i + 1) * GUI.SQUARE_SIZE, kwargs)
+
+    def __draw_grid(self):
+        font = tk_font.Font(size=self.SQUARE_SIZE // 6, weight='bold')
+        for i in range(self.__rows):
+            for j in range(self.__cols):
+                cell = self.__grid[i][j]
+                if cell == '#':
+                    self.__draw_rectangle(i, j, fill='black')
+                elif cell == 'S':
+                    self.__draw_rectangle(i, j, fill='yellow')
+                elif isinstance(cell, float):
+                    if cell > 0:
+                        self.__draw_rectangle(i, j, fill='green')
+                    elif cell < 0:
+                        self.__draw_rectangle(i, j, fill='red')
+                    self.__canvas.create_text(
+                        (j + .5) * GUI.SQUARE_SIZE, (i + .5) * GUI.SQUARE_SIZE,
+                        text=format(cell, '.2f'), font=font)
+        self.__canvas.pack()
+
+    def __draw_values(self):
+        font = tk_font.Font(size=self.SQUARE_SIZE // 6)
+        backup = self.__iter_backup[self.__iteration.get()][0]
+        for i in range(self.__rows):
+            for j in range(self.__cols):
+                if self.__grid[i][j] not in (' ', 'S'):
+                    continue
+                self.__canvas.create_text(
+                    (j + .5) * GUI.SQUARE_SIZE, (i + .5) * GUI.SQUARE_SIZE,
+                    text=format(backup[i, j][1], '.2f'),
+                    font=font, tags='display')
+
+    def __draw_q_values(self):
+        font = tk_font.Font(size=self.SQUARE_SIZE // 10)
+        backup = self.__iter_backup[self.__iteration.get()][0]
+        for i in range(self.__rows):
+            for j in range(self.__cols):
+                if self.__grid[i][j] not in (' ', 'S'):
+                    continue
+                q_values = backup[i, j][0]
+                self.__canvas.create_line(
+                    j * GUI.SQUARE_SIZE, i * GUI.SQUARE_SIZE,
+                    (j + 1) * GUI.SQUARE_SIZE, (i + 1) * GUI.SQUARE_SIZE,
+                    tags='display')
+                self.__canvas.create_line(
+                    (j + 1) * GUI.SQUARE_SIZE, i * GUI.SQUARE_SIZE,
+                    j * GUI.SQUARE_SIZE, (i + 1) * GUI.SQUARE_SIZE,
+                    tags='display')
+                self.__canvas.create_text(
+                    (j + .5) * GUI.SQUARE_SIZE, (i + .15) * GUI.SQUARE_SIZE,
+                    text=format(q_values[Gridworld.Action.Up], '.2f'),
+                    font=font, tags='display')
+                self.__canvas.create_text(
+                    (j + .2) * GUI.SQUARE_SIZE, (i + .5) * GUI.SQUARE_SIZE,
+                    text=format(q_values[Gridworld.Action.Left], '.2f'),
+                    font=font, tags='display')
+                self.__canvas.create_text(
+                    (j + .8) * GUI.SQUARE_SIZE, (i + .5) * GUI.SQUARE_SIZE,
+                    text=format(q_values[Gridworld.Action.Right], '.2f'),
+                    font=font, tags='display')
+                self.__canvas.create_text(
+                    (j + .5) * GUI.SQUARE_SIZE, (i + .85) * GUI.SQUARE_SIZE,
+                    text=format(q_values[Gridworld.Action.Down], '.2f'),
+                    font=font, tags='display')
+
+    def __draw_policy(self):
+        options = {
+            'width': GUI.SQUARE_SIZE // 10,
+            'arrow': tk.FIRST,
+            'arrowshape': (GUI.SQUARE_SIZE // 5, GUI.SQUARE_SIZE // 5, GUI.SQUARE_SIZE // 10),
+            'tags': 'display'
+        }
+        backup = self.__iter_backup[self.__iteration.get()][0]
+        for i in range(self.__rows):
+            for j in range(self.__cols):
+                if self.__grid[i][j] not in (' ', 'S'):
+                    continue
+                policy = backup[i, j][2]
+                if policy == Gridworld.Action.Up:
+                    self.__canvas.create_line(
+                        (j + .5) * GUI.SQUARE_SIZE, (i + .2) * GUI.SQUARE_SIZE,
+                        (j + .5) * GUI.SQUARE_SIZE, (i + .8) * GUI.SQUARE_SIZE,
+                        **options)
+                elif policy == Gridworld.Action.Down:
+                    self.__canvas.create_line(
+                        (j + .5) * GUI.SQUARE_SIZE, (i + .8) * GUI.SQUARE_SIZE,
+                        (j + .5) * GUI.SQUARE_SIZE, (i + .2) * GUI.SQUARE_SIZE,
+                        **options)
+                elif policy == Gridworld.Action.Right:
+                    self.__canvas.create_line(
+                        (j + .8) * GUI.SQUARE_SIZE, (i + .5) * GUI.SQUARE_SIZE,
+                        (j + .2) * GUI.SQUARE_SIZE, (i + .5) * GUI.SQUARE_SIZE,
+                        **options)
+                elif policy == Gridworld.Action.Left:
+                    self.__canvas.create_line(
+                        (j + .2) * GUI.SQUARE_SIZE, (i + .5) * GUI.SQUARE_SIZE,
+                        (j + .8) * GUI.SQUARE_SIZE, (i + .5) * GUI.SQUARE_SIZE,
+                        **options)
+
+    def __redraw_aux(self):
+        (x, y), epi = self.__iter_backup[self.__iteration.get()][1:]
+        self.__episode.configure(text='# Episode: %d' % epi)
+        self.__canvas.delete('agent')
+        self.__canvas.create_oval((y + .4) * GUI.SQUARE_SIZE, (x + .4) * GUI.SQUARE_SIZE,
+                                  (y + .6) * GUI.SQUARE_SIZE, (x + .6) * GUI.SQUARE_SIZE,
+                                  tags='agent', fill='cyan')
+
+    def __display_mode_changed(self, *_):
+        self.__canvas.delete('display')
+        typ = self.__display_type.get()
+        if typ == 1:
+            self.__draw_q_values()
+        elif typ == 2:
+            self.__draw_values()
+        elif typ == 3:
+            self.__draw_policy()
+
+    def __cache_env(self):
+        cache = dict()
+        for i in range(self.__rows):
+            for j in range(self.__cols):
+                if self.__grid[i][j] not in (' ', 'S'):
+                    continue
+                cache[i, j] = (
+                    dict(((a, self.__env.agent.get_q_value((i, j), a)) for a in Gridworld.Action)),
+                    self.__env.agent.get_value((i, j)),
+                    self.__env.agent.get_best_policy((i, j)),
+                )
+        self.__iter_backup.append((
+            cache,
+            self.__env.position,
+            self.__episode_counter))
+
+    def __iteration_changed(self, *_):
+        try:
+            it = self.__iteration.get()
+        except tk.TclError:
+            return
+        if it >= len(self.__iter_backup):
+            for __ in range(it - len(self.__iter_backup) + 1):
+                if self.__env.iterate():
+                    self.__episode_counter += 1
+                self.__cache_env()
+        self.__redraw_aux()
+        self.__display_mode_changed()
+
+
+PRESET_GRIDS = {
+    'book': (
+        (' ', ' ', ' ', 1.),
+        (' ', '#', ' ', -1.),
+        ('S', ' ', ' ', ' '),
+    ),
+    'bridge': (
+        ('#', -100., -100., -100., -100., -100., '#'),
+        (1., 'S', ' ', ' ', ' ', ' ', 10.),
+        ('#', -100., -100., -100., -100., -100., '#'),
+    ),
+}
+
+
+def main():
+    def argtype(arg):
+        try:
+            f = float(arg)
+        except ValueError:
+            raise argparse.ArgumentTypeError('must be a floating point number')
+        if 0 <= f <= 1:
+            return f
+        raise argparse.ArgumentTypeError('must be a real number between 0 and 1')
+
+    parser = argparse.ArgumentParser(
+        description='Gridworld GUI for QAgent, CIS 521, Artificial Intelligence',
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
+    parser.add_argument('grid', metavar='GRID_NAME', help='grid preset', nargs='?',
+                        choices=PRESET_GRIDS.keys(), default='book')
+    parser.add_argument('-d', '--discount', help='discount factor gamma (γ)',
+                        type=argtype, default=0.9)
+    parser.add_argument('-n', '--noise', help='probability of a noisy outcome for an action',
+                        type=argtype, default=0.2)
+    parser.add_argument('-l', '--living-reward', help='living reward for every non-terminal state',
+                        type=float, default=0.)
+    parser.add_argument('-r', '--learning-rate', help='learning reward for Q agent',
+                        type=float, default=0.5)
+    parser.add_argument('-e', '--epsilon', help='exploration probability for Q agent (ε)',
+                        type=float, default=0.3)
+    parser.add_argument('-i', '--iteration', help='initial iteration to train',
+                        type=int, default=0)
+    args = parser.parse_args()
+    grid = PRESET_GRIDS[args.grid]
+    game = Gridworld(grid)
+    agent = agents.QLearningAgent(game, args.discount, args.learning_rate, args.epsilon)
+    env = Environment(agent, args.noise, args.living_reward, grid)
+    GUI(env, grid, args.iteration).mainloop()
 
 
 if __name__ == '__main__':
-
-    opts = parseOptions()
-
-    ###########################
-    # GET THE GRIDWORLD
-    ###########################
-
-    import gridworld
-    import pdb
-    # pdb.set_trace()
-    mdpFunction = getattr(gridworld, "get"+opts.grid)
-    mdp = mdpFunction()
-    mdp.setLivingReward(opts.livingReward)
-    mdp.setNoise(opts.noise)
-    env = gridworld.GridworldEnvironment(mdp)
-
-
-    ###########################
-    # GET THE DISPLAY ADAPTER
-    ###########################
-
-    import textGridworldDisplay
-    display = textGridworldDisplay.TextGridworldDisplay(mdp)
-    if not opts.textDisplay:
-        import graphicsGridworldDisplay
-        display = graphicsGridworldDisplay.GraphicsGridworldDisplay(mdp, opts.gridSize, opts.speed)
-    try:
-        display.start()
-    except KeyboardInterrupt:
-        sys.exit(0)
-
-    ###########################
-    # GET THE AGENT
-    ###########################
-
-    import qlearningAgents
-    a = None
-    if opts.agent == 'q':
-        #env.getPossibleActions, opts.discount, opts.learningRate, opts.epsilon
-        #simulationFn = lambda agent, state: simulation.GridworldSimulation(agent,state,mdp)
-        gridWorldEnv = GridworldEnvironment(mdp)
-        actionFn = lambda state: mdp.getPossibleActions(state)
-        qLearnOpts = {'gamma': opts.discount,
-                      'alpha': opts.learningRate,
-                      'epsilon': opts.epsilon,
-                      'actionFn': actionFn}
-        a = qlearningAgents.QLearningAgent(**qLearnOpts)
-    elif opts.agent == 'random':
-        # # No reason to use the random agent without episodes
-        if opts.episodes == 0:
-            opts.episodes = 10
-        class RandomAgent:
-            def getAction(self, state):
-                return random.choice(mdp.getPossibleActions(state))
-            def getValue(self, state):
-                return 0.0
-            def getQValue(self, state, action):
-                return 0.0
-            def getPolicy(self, state):
-                "NOTE: 'random' is a special policy value; don't use it in your code."
-                return 'random'
-            def update(self, state, action, nextState, reward):
-                pass
-        a = RandomAgent()
-    else:
-        if not opts.manual: raise 'Unknown agent type: '+opts.agent
-
-
-    ###########################
-    # RUN EPISODES
-    ###########################
-    # DISPLAY Q/V VALUES BEFORE SIMULATION OF EPISODES
-    try:
-        if not opts.manual and opts.agent == 'value':
-            if opts.valueSteps:
-                for i in range(opts.iters):
-                    tempAgent = valueIterationAgents.ValueIterationAgent(mdp, opts.discount, i)
-                    display.displayValues(tempAgent, message = "VALUES AFTER "+str(i)+" ITERATIONS")
-                    display.pause()
-
-            display.displayValues(a, message = "VALUES AFTER "+str(opts.iters)+" ITERATIONS")
-            display.pause()
-            display.displayQValues(a, message = "Q-VALUES AFTER "+str(opts.iters)+" ITERATIONS")
-            display.pause()
-    except KeyboardInterrupt:
-        sys.exit(0)
-
-
-
-    # FIGURE OUT WHAT TO DISPLAY EACH TIME STEP (IF ANYTHING)
-    displayCallback = lambda x: None
-    if not opts.quiet:
-        if opts.manual and opts.agent == None:
-            displayCallback = lambda state: display.displayNullValues(state)
-        else:
-            if opts.agent == 'random': displayCallback = lambda state: display.displayValues(a, state, "CURRENT VALUES")
-            if opts.agent == 'value': displayCallback = lambda state: display.displayValues(a, state, "CURRENT VALUES")
-            if opts.agent == 'q': displayCallback = lambda state: display.displayQValues(a, state, "CURRENT Q-VALUES")
-
-    messageCallback = lambda x: printString(x)
-    if opts.quiet:
-        messageCallback = lambda x: None
-
-    # FIGURE OUT WHETHER TO WAIT FOR A KEY PRESS AFTER EACH TIME STEP
-    pauseCallback = lambda : None
-    if opts.pause:
-        pauseCallback = lambda : display.pause()
-
-    # FIGURE OUT WHETHER THE USER WANTS MANUAL CONTROL (FOR DEBUGGING AND DEMOS)
-    if opts.manual:
-        decisionCallback = lambda state : getUserAction(state, mdp.getPossibleActions)
-    else:
-        decisionCallback = a.getAction
-
-    # RUN EPISODES
-    if opts.episodes > 0:
-        print()
-        print("RUNNING", opts.episodes, "EPISODES")
-        print()
-    returns = 0
-    for episode in range(1, opts.episodes+1):
-        returns += runEpisode(a, env, opts.discount, decisionCallback, displayCallback, messageCallback, pauseCallback, episode)
-    if opts.episodes > 0:
-        print()
-        print("AVERAGE RETURNS FROM START STATE: "+str((returns+0.0) / opts.episodes))
-        print()
-        print()
-
-    # DISPLAY POST-LEARNING VALUES / Q-VALUES
-    if opts.agent == 'q' and not opts.manual:
-        try:
-            display.displayQValues(a, message = "Q-VALUES AFTER "+str(opts.episodes)+" EPISODES")
-            display.pause()
-            display.displayValues(a, message = "VALUES AFTER "+str(opts.episodes)+" EPISODES")
-            display.pause()
-        except KeyboardInterrupt:
-            sys.exit(0)
+    main()
