@@ -5,7 +5,7 @@ img_link: https://xkcd.com/242/
 caption: I was just updating my q&ndash;state values. 
 title: CIS 521 Homework 7 "Reinforcement Learning"
 active_tab: homework
-release_date: 2021-11-02
+release_date: 2021-11-01
 due_date: 2021-11-09 23:59:00EDT
 materials:
     - 
