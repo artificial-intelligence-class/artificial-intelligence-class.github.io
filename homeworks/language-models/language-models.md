@@ -5,12 +5,12 @@ img_link: http://www.explainxkcd.com/wiki/index.php/1427:_iOS_Keyboard
 caption: Movie quotes according to autocomplete
 title: CIS 521 Homework 8 "Language Models"
 active_tab: homework
-release_date: 2021-11-09
+release_date: 2021-11-9
 due_date: 2021-11-16 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homeworks/language-models/language-models.py 
+        url: homeworks/language-models/language_models.py 
     - 
         name: Frankenstein (text file)
         url: homeworks/language-models/frankenstein.txt
@@ -56,14 +56,14 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-Homework 7: Language Models [100 points]
+Homework 8: Language Models [100 points]
 =============================================================
 
 ## Instructions
 
 In this assignment, you will gain experience working with Markov models on text.
 
-A skeleton file [language-models.py](language-models.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [language_models.py](language_models.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel.
 
