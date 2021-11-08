@@ -10,7 +10,7 @@ due_date: 2021-11-16 23:59:00EDT
 materials:
     - 
         name: skeleton file
-        url: homeworks/language-models/language-models.py 
+        url: homeworks/language-models/language_models.py 
     - 
         name: Frankenstein (text file)
         url: homeworks/language-models/frankenstein.txt
@@ -63,7 +63,7 @@ Homework 8: Language Models [100 points]
 
 In this assignment, you will gain experience working with Markov models on text.
 
-A skeleton file [language-models.py](language-models.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
+A skeleton file [language_models.py](language_models.py) containing empty definitions for each question has been provided. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed.
 
 You may import definitions from any standard Python library, and are encouraged to do so in case you find yourself reinventing the wheel.
 
