@@ -5,7 +5,7 @@ img_link: http://www.explainxkcd.com/wiki/index.php/1427:_iOS_Keyboard
 caption: Movie quotes according to autocomplete
 title: CIS 521 Homework 8 "Language Models"
 active_tab: homework
-release_date: 2021-11-09
+release_date: 2021-11-9
 due_date: 2021-11-16 23:59:00EDT
 materials:
     - 
