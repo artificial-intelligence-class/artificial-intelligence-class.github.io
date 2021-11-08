@@ -56,7 +56,7 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-Homework 7: Language Models [100 points]
+Homework 8: Language Models [100 points]
 =============================================================
 
 ## Instructions
