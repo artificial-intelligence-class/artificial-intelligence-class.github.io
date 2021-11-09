@@ -513,7 +513,7 @@
       length: 11 minutes 
   readings:
     - 
-      title: AIMA Chapter 14 "Probabilistic Reasoning" (14.1, 14.2, 14.4) 
+      title: Russell and Norvig, AIMA Chapter 13 "Probabilistic Reasoning" (13.1, 13.2, 13.3)
       authors: Russell and Norvig
       optional: false
 
