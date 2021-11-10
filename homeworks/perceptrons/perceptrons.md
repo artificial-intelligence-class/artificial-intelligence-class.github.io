@@ -3,7 +3,7 @@ layout: default
 img: machine_learning.png
 img_link: http://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning
 caption: Machine Learning
-title: CIS 521 Homework 8 "Perceptrons"
+title: CIS 521 Homework 9 "Perceptrons"
 active_tab: homework
 release_date: 2021-11-09
 due_date: 2021-11-23 23:59:00EDT
@@ -64,7 +64,7 @@ You can download the materials for this assignment here:
 </style>
 
 
-Homework 8: Perceptrons [100 points]
+Homework 9: Perceptrons [100 points]
 =============================================================
 
 ## Instructions
