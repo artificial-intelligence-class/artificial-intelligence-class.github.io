@@ -612,7 +612,7 @@
   homework: Neural Networks
   readings:
     - 
-      title: Speech and Language Processing Chapter 5 "Logistic Regression" 
+      title: Speech and Language Processing Chapter 5 "Logistic Regression" (Sections 5.1-5.6)
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/5.pdf
       optional: false
@@ -663,17 +663,12 @@
       length: 10 minutes 
   readings:
     - 
-      title: Chapter 7 "Neural Networks and Neural Language Models" 
-      authors: Jurafsky and Martin
-      url: https://web.stanford.edu/~jurafsky/slp3/7.pdf
-      optional: false
-    - 
-      title: Chapter 9 "Sequence Processing with Recurrent Networks" 
+      title: Chapter 9 "Sequence Processing with Recurrent Networks" (Sections 9.1-9.3)
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/9.pdf
       optional: false
     - 
-      title: Chapter 6 "Vector Semantics and Embeddings" 
+      title: Chapter 6 "Vector Semantics and Embeddings" (Sections 6.1-6.4, 6.8, 6.10-6.12)
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
       optional: false
