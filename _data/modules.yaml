@@ -560,8 +560,9 @@
       authors: Russell and Norvig
       optional: false
     - 
-      title: Speech and Language Processing Chapter 5 "Logistic Regression"
+      title: Speech and Language Processing Chapter 4 "Naive Bayes and Sentiment Classification"
       authors: Jurafsky and Martin
+      url: https://web.stanford.edu/~jurafsky/slp3/4.pdf
       optional: false
     - 
       title: Electronic 'Brain' Teaches Itself 
