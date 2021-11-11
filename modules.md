@@ -11,20 +11,33 @@ Below, you'll find links to pre-recorded lectures. You can also <a href="https:/
 
 
 
-
-<!-- Create a HTML anchor for the most recent lecture -->
-{% assign anchor_created = false %}
+<!-- Create a HTML anchor for the most recent module -->
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
-{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
-
-<!-- End create a HTML anchor for the most recent lecture -->
+{% assign now = now | plus: 0 %}
+<!-- End create a HTML anchor for the most recent module -->
 
 
 
 
 {% for module in site.data.modules %}
 
+
+<!-- Create a HTML anchor for the most recent module -->
+{% capture module_start_date %}{{module.start_date | date: '%s'}}{% endcapture %}
+{% capture module_end_date %}{{module.end_date | date: '%s'}}{% endcapture %}
+{% assign module_start_date = module_start_date | plus: 0 %}
+{% assign module_end_date = module_end_date | plus: 0 %}
+
+
+{% if module_start_date <= now and module_end_date >= now %}
+<a name="now"></a> 
+{% endif %}
+
+
 # Module {{ forloop.index }}: {{module.title}}
+
+
+
 
 {{module.description}}
 
