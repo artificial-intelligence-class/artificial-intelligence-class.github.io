@@ -8,7 +8,7 @@ student_name = "Type your full name here."
 # Imports
 ############################################################
 
-import homework8_data as data
+import perceptrons_data as data
 
 # Include your imports here, if any are used.
 
