@@ -33,7 +33,7 @@ Below, you'll find links to pre-recorded lectures. You can also <a href="https:/
 <a name="now"></a> 
 {% endif %}
 
-
+<a name="module-{{ forloop.index }}"></a> 
 # Module {{ forloop.index }}: {{module.title}}
 
 
