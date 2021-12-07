@@ -628,7 +628,7 @@
   start_date: 2021-12-06
   end_date: 2021-12-14
   title: Natural Language Processing
-  description: In our last content module, we will look into an application of AI called Natural Language Processing (NLP.) The goal of NLP is to enable computers to communicate in a human-like fashion. This was one of the first ideas for AI, tracing its routes all the way back to Alan Turing and the imitation game. In this module, we’ll be focusing on how to create representations of words that capture their meanings, using the concept of vector space models.
+  description: In our last content module, we will look into an application of AI called Natural Language Processing (NLP.) The goal of NLP is to enable computers to communicate in a human-like fashion. This was one of the first ideas for AI, tracing its roots all the way back to Alan Turing and the imitation game. In this module, we’ll be focusing on how to create representations of words that capture their meanings, using the concept of vector space models.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee63f3dc-7d87-435f-8898-ad9a002270c1
   slides: 14-NLP.pdf
   quiz:
