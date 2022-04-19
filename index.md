@@ -1,5 +1,5 @@
 ---
-title: CIS 421/521 - Artificial Intelligence - University of Pennsylvania
+title: CIS 4210/5210 - Artificial Intelligence - University of Pennsylvania
 layout: default
 img: R2D2.png
 active_tab: main_page 
@@ -7,25 +7,19 @@ active_tab: main_page
 
 <!--
 <div class="alert alert-danger" markdown="1">
-**Waitlist update**: I added a second session with addition 200 spaces to the course.  That session meets Mondays and Wednesdays at 8:30am-10am in Heilmeier auditorium.  You can get a permit by signing up on [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) for CIS421/521-402.
+**Waitlist update**: I added a second session with addition 200 spaces to the course.  That session meets Mondays and Wednesdays at 8:30am-10am in Heilmeier auditorium.  You can get a permit by signing up on [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) for CIS4210/5210-402.
 
 For  questions about the waitlist or registration, please contact Lee Dukes - ldukes@seas.upenn.edu.
 </div>
 -->
 
-<!--
-	If you have a question about the waitlist system you can email Lee Dukes ldukes@seas.upenn.edu.  
-In order to be considered for a permit for the course, you must complete the first assignment by its due date.
-
-
-
-To register for CIS 421/521 you should sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) when it opens on April 30th.  Registration isn't available during advance registration, and you don't need to request permission of the instructor.
+To register for CIS 4210/5210 you should sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) when it opens on April 30th.  Registration isn't available during advance registration, and you don't need to request permission of the instructor.
 
 After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  
 
 </div>
--->
 
+<!--
 <div class="alert alert-info" markdown="1">
 The course is done!  Please fill out this [end of semester survey](https://docs.google.com/forms/d/e/1FAIpQLSfYzkk9MD5WOda8WgUgXeDEDy06gUunApho2Me4nYoLXzgufQ/viewform?usp=sf_link) to give us feedback on how to improve the class next year.  If you loved the class, and would like to apply to be a TA, please fill out [this application](https://docs.google.com/forms/d/e/1FAIpQLSeGM7uegYNxf0pY6T2lOhMpUosnVnH3c1woZ10IcFJ18IKN-A/viewform?usp=sf_link).  If you'd like to volunteer for activities  with my research group you can [fill out this form](https://docs.google.com/forms/d/e/1FAIpQLScWgXblpIkADdO_K3PQIgm4LAGz0o-XEByPIVJg6_ObxZVAPQ/viewform).
 </div>
@@ -99,7 +93,7 @@ Extra Credit Bounty Items:
 
 
 Course number
-: CIS 421/521 - Artificial Intelligence
+: CIS 4210/5210 - Artificial Intelligence
 
 Prerequeisites
 : CIS 121 (for undergraduates)
@@ -110,17 +104,15 @@ Instructor
 : [Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/)
 
 Discussion Forum
-: [Piazza](http://piazza.com/upenn/fall2021/cis521)
+: XXX
 
 Time and place
 : In Fall 2021, the course will be in-person and broadcast live via Zoom. You are not obligated to attend in person.  Everyone is welcome to watch the videos from home.
 : All lecture materials will be recorded and uploaded for students wishing to participate remotely.  We also have [pre-recorded lectures available for review](modules.html).
-: The first day of class is Tuesday, August 31, 2021.
-: The first day of office hours will be Tuesday, September 7, 2021.
-: The final day of class is Thursday, December 9, 2020.
-: There are several sections of the class:
-* The Monday/Wednesday section meets from 8:30am-10am Eastern ([Zoom link](https://upenn.zoom.us/j/98126042472?pwd=aHBPZDA2Tmd1aktZUUlDaW5BUjdHUT09))
-* The Tuesday/Thursday section meets from noon-1:30pm Eastern ([Zoom link](https://upenn.zoom.us/j/99946920962?pwd=Z0liTlhNOUgwbHVuV3R5cTFLSVFYdz09))
+: The first day of class is Tuesday, August 30, 2022.
+: The first day of office hours will be Tuesday, September 6, 2022.
+: The final day of class is Thursday, December 8, 2022.
+* The class meets on Tuesday/Thursday from noon-1:30pm Eastern.
 
 
 
@@ -129,41 +121,10 @@ Time and place
 -->
 
 Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/246))
-: Mondays 9:15am-11:15am Eastern (Coco Zhao)
-: Mondays 10am-noon Eastern (Aditya Singh)
-: Mondays noon-2pm Eastern (Kit Wiggin)
-: Mondays 5-6pm Eastern (Roque Soto Castaneda)
-: Mondays 5-7pm Eastern (Brian Wong)
-: Mondays 8pm-10pm  Eastern (Hanbang Wang and Will Bergstein)
-: Tuesdays 1-3pm Eastern (Artemis Panagopoulou)
-: Tuesdays 7pm-9pm Eastern (John Wallison)
-: Tuesdays 9pm-11pm Eastern (Yash Upadhyay)
-: Wednesdays 10am-12pm Eastern (Xavier Lee)
-: Wednesdays noon-2pm Eastern (Anna Orosz)
-: Wednesdays 4pm-6pm Eastern (Ruochun Wang)
-: Wednesday 9:30pm-11:30pm Eastern (Sherry Shi)
-: Thursdays 9am-11am Eastern (Yue Yang)
-: Thursdays 1pm-3pm Eastern (Yuxuan Huang)
-: Thursdays 5pm-7pm Eastern (Viranchi Patel)
-: Fridays 9am-11am Eastern (Zhi Zheng)
-: Fridays noon-2pm Eastern (Lisa Zhao and David Wang and Dinesh Jagai)
-: Fridays 2pm-4pm Eastern (Amy Guo and Harry Wang)
-: Fridays 4pm-6pm Eastern (Ruochun Wang and Dinesh Jagai)
-: Fridays 8pm-10pm Eastern (Enri Kina)
-: Saturdays 8am-10am Eastern (Helen Jin)
-: Saturdays 8:30am-10:30am Eastern (Aditya Singh)
-: Saturdays 2pm-4pm Eastern (Roque Soto Castaneda)
-: Saturdays 4pm-6pm Eastern (Harsh Goel)
-: Saturdays 7pm-9pm Eastner (Xingyu Fu)
-: Sundays 3pm-5pm Eastern (Roque Soto Castaneda)
-: Sundays 6pm-8pm (Steven Wang)
-: Sundays 7pm-9pm (Songyu Eve Yan)
+: TBD
 
 Group Office Hours (Recorded)
-: Fridays 2pm-3pm Eastern (Chris Callison-Burch)
-
-
-
+: TBD (Chris Callison-Burch)
 
 
 
@@ -207,8 +168,8 @@ Grading
 | 50-65	| D| 
 | below 50	| F |
 
-Differences between 421 and 521
-: There is roughly one homework assignment per week, aside from weeks with exams.  Students enrolled in CIS 421 may skip one HW assignment, or they may discard their lowest scoring HW assignment.  You do not get late days back on the homework that you discard.  Students enrolled in CIS 521 must complete all HW assignments and cannot discard their lowest scoring assignment.
+Differences between 4210 and 5210
+: There is roughly one homework assignment per week, aside from weeks with exams.  Students enrolled in CIS 4210 may skip one HW assignment, or they may discard their lowest scoring HW assignment.  You do not get late days back on the homework that you discard.  Students enrolled in CIS 5210 must complete all HW assignments and cannot discard their lowest scoring assignment.  **If you are an undergraduate who is considering submatriculating into the master's program then you should enroll in CIS 5210.**
 
 
 Collaboration Policy
