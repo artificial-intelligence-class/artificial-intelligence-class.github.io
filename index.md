@@ -13,6 +13,7 @@ For  questions about the waitlist or registration, please contact Lee Dukes - ld
 </div>
 -->
 
+<div class="alert alert-danger" markdown="1">
 To register for CIS 4210/5210 you should sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) when it opens on April 30th.  Registration isn't available during advance registration, and you don't need to request permission of the instructor.
 
 After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  
@@ -170,6 +171,7 @@ Grading
 
 Differences between 4210 and 5210
 : There is roughly one homework assignment per week, aside from weeks with exams.  Students enrolled in CIS 4210 may skip one HW assignment, or they may discard their lowest scoring HW assignment.  You do not get late days back on the homework that you discard.  Students enrolled in CIS 5210 must complete all HW assignments and cannot discard their lowest scoring assignment.  **If you are an undergraduate who is considering submatriculating into the master's program then you should enroll in CIS 5210.**
+
 
 
 Collaboration Policy
