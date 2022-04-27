@@ -14,10 +14,9 @@ For  questions about the waitlist or registration, please contact Lee Dukes - ld
 -->
 
 <div class="alert alert-danger" markdown="1">
-To register for CIS 4210/5210 you should sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) when it opens on April 30th.  Registration isn't available during advance registration, and you don't need to request permission of the instructor.
+To register for CIS 4210/5210 you should sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) when it opens around April 30th.  Registration isn't available during advance registration, and you don't need to request permission of the instructor.
 
-After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  
-
+After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  I have increased the enrollment to allow 400 students in the class, so hopefully there will be enough room for everyone who is interested!
 </div>
 
 <!--
