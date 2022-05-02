@@ -14,10 +14,35 @@ For  questions about the waitlist or registration, please contact Lee Dukes - ld
 -->
 
 <div class="alert alert-danger" markdown="1">
-To register for CIS 4210/5210 you should sign yourself up for the [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) when it opens around April 30th.  Registration isn't available during advance registration, and you don't need to request permission of the instructor.
+You don't need to contact the course instructor to get permissions to register for CIS 4210/5210.  Here are the steps that you should follow:
 
+**Step 1:** You should [request permission for the course in the Path@Penn tool](https://apps.srfs.upenn.edu:44306/secure/Pennant-Training/Path-Request-Permission-to-Take-a-Class.pdf) at any point in time.
+
+**Step 2:** You will be contacted via email when the CIS Waitlist opens up for the course you requested. You will need to fill out information that is requested of them in the CIS Waitlist. (This won’t begin happening until around May 11 after advance registration).
+
+**Step 3:** Be Patient. The waitlist will be reviewed and permits will be issued during the summer and closer to the beginning of the semester on a rolling basis when spaces are available.
+
+**Step 4:** If you have been approved for the course you will be contacted via email with how you can claim permission for the course in the Path@Penn tool and register.
+
+Questions about the waitlist? Please read [this overview of the CIS Waitlist System]( https://advising.cis.upenn.edu/waitlist/) or contact email ciswait@seas.upenn.edu.
+
+For more info about CIS 4210/5210, check out the [course homepage](http://artificial-intelligence-class.org).
+</div>
+
+
+
+
+<div class="alert alert-success" markdown="1">
 After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  I have increased the enrollment to allow 400 students in the class, so hopefully there will be enough room for everyone who is interested!
 </div>
+
+<div class="alert alert-info" markdown="1">
+This course is programming intensive, and requires prior Python experience and previous computer sceince courses in data structures and algorithms.  If you'd like to self-assess whether your background is appropriate, you can try out the first few homework assignments prior to the start of the class.
+</div>
+
+
+
+
 
 <!--
 <div class="alert alert-info" markdown="1">
@@ -107,7 +132,7 @@ Discussion Forum
 : XXX
 
 Time and place
-: In Fall 2021, the course will be in-person and broadcast live via Zoom. You are not obligated to attend in person.  Everyone is welcome to watch the videos from home.
+: In Fall 2022, the course will be in-person in Myerson B1 and broadcast live via Zoom. You are not obligated to attend in person.  Everyone is welcome to watch the videos from home.
 : All lecture materials will be recorded and uploaded for students wishing to participate remotely.  We also have [pre-recorded lectures available for review](modules.html).
 : The first day of class is Tuesday, August 30, 2022.
 : The first day of office hours will be Tuesday, September 6, 2022.
