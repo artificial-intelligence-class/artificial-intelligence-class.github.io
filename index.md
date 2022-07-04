@@ -122,7 +122,7 @@ Course number
 
 Prerequeisites
 : CIS 121 (for undergraduates)
-: CIT 594 (for MCIT students)
+: CIT 594 and CIT 596 (for MCIT students)
 : A data structure and algorithms course, plus substantial programming experience (for everyone)
 
 Instructor
