@@ -218,7 +218,7 @@
   homework: Homework 4
   readings:
     - 
-      title: AIMA chapter 5 "Adversairal Search" (5.2-5.5).
+      title: AIMA chapter 5 "Adversairal Search" (5.1-5.3, 5.5).
       authors: Russell and Norvig
       optional: false
     - 
