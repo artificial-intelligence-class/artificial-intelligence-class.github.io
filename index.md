@@ -21,9 +21,11 @@ You don't need to contact the course instructor to get permissions to register f
 
 **Step 2:** You should [request permission for the course in the Path@Penn tool](https://apps.srfs.upenn.edu:44306/secure/Pennant-Training/Path-Request-Permission-to-Take-a-Class.pdf).  Here's a [short video showing how to use the new Path@Penn interface](https://urldefense.com/v3/__https://drive.google.com/file/d/1zyf21DYVYWzLRsp-y09hRaqG-QhFMf-5/view?usp=sharing__;!!IBzWLUs!Q0vTJ4XhWQYBml_TICPzVBEnB-TfUKZjoxFeLDlOjoQxGJ37ptjONZf704stRJ8mXG8d7BocetPqLTKeIrEY$).
 
-**Step 3:** Be Patient. The first batch of 300 permits have been issued, but we plan on issuing another batch after the semester begins.  
+**Step 3:** The following day you'll be asked to login to the CIS Waitlist system to answer some questions.  You can read more information about the [CIS Waitlist system here](https://advising.cis.upenn.edu/waitlist/).
 
-**Step 4:** If you have been approved for the course you will be contacted via email with how you can claim permission for the course in the Path@Penn tool and register.
+**Step 4:** Be Patient. The first batch of 300 permits have been issued, but we plan on issuing another batch after the semester begins.  
+
+**Step 5:** If you have been approved for the course you will be contacted via email with how you can claim permission for the course in the Path@Penn tool and register.
 
 For more info about CIS 4210/5210, check out the [course homepage](http://artificial-intelligence-class.org).
 
