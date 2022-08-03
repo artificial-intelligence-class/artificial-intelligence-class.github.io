@@ -16,19 +16,19 @@ For  questions about the waitlist or registration, please contact Lee Dukes - ld
 <div class="alert alert-danger" markdown="1">
 You don't need to contact the course instructor to get permissions to register for CIS 4210/5210.  Here are the steps that you should follow:
 
-**Step 1:** You should [request permission for the course in the Path@Penn tool](https://apps.srfs.upenn.edu:44306/secure/Pennant-Training/Path-Request-Permission-to-Take-a-Class.pdf) at any point in time.
+**Step 1:** Decide which version of the course you want to enroll in.  4210 is for undergradutes who are not planning on doing a masters (submatting).  5210 is for master's students including students planning on submatriculating, and for PhD students.
 
-**Step 2:** You will be contacted via email when the CIS Waitlist opens up for the course you requested. You will need to fill out information that is requested of them in the CIS Waitlist. (This won’t begin happening until around May 11 after advance registration).
 
-**Step 3:** Be Patient. The waitlist will be reviewed and permits will be issued during the summer and closer to the beginning of the semester on a rolling basis when spaces are available.
+**Step 2:** You should [request permission for the course in the Path@Penn tool](https://apps.srfs.upenn.edu:44306/secure/Pennant-Training/Path-Request-Permission-to-Take-a-Class.pdf).  Here's a [short video showing how to use the new Path@Penn interface](https://urldefense.com/v3/__https://drive.google.com/file/d/1zyf21DYVYWzLRsp-y09hRaqG-QhFMf-5/view?usp=sharing__;!!IBzWLUs!Q0vTJ4XhWQYBml_TICPzVBEnB-TfUKZjoxFeLDlOjoQxGJ37ptjONZf704stRJ8mXG8d7BocetPqLTKeIrEY$).
+
+**Step 3:** Be Patient. The first batch of 300 permits have been issued, but we plan on issuing another batch after the semester begins.  
 
 **Step 4:** If you have been approved for the course you will be contacted via email with how you can claim permission for the course in the Path@Penn tool and register.
 
-Questions about the waitlist? Please read [this overview of the CIS Waitlist System]( https://advising.cis.upenn.edu/waitlist/) or contact email ciswait@seas.upenn.edu.
-
 For more info about CIS 4210/5210, check out the [course homepage](http://artificial-intelligence-class.org).
-</div>
 
+If you're hoping to take the course but do not yet have a permit, you should complete the first homework assignment and submit it before the deadline. 
+</div>
 
 
 
