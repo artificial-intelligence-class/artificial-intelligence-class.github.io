@@ -30,7 +30,7 @@ You don't need to contact the course instructor to get permissions to register f
 For more info about CIS 4210/5210, check out the [course homepage](http://artificial-intelligence-class.org).
 
 If you're hoping to take the course but do not yet have a permit, you should complete the first homework assignment and submit it before the deadline. 
-</div>
+</div> 
 
 
 
