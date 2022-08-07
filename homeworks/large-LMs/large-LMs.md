@@ -30,9 +30,16 @@ readings:
    title: Pre-train, Prompt, and Predict&colon; A Systematic Survey of Prompting Methods in Natural Language Processing
    authors: Pengfei Liu, Weizhe Yuan, Jinlan Fu, Zhengbao Jiang, Hiroaki Hayashi, Graham Neubig
    venue: arXiv
-   year: 201
+   year: 2021
    type: paper
    url: https://arxiv.org/abs/2107.13586
+-
+   title: Multitask Prompted Training Enables Zero-Shot Task Generalization
+   authors: Victor Sanh, Albert Webson, Colin Raffel, Stephen H. Bach, Lintang Sutawika, Zaid Alyafeai, Antoine Chaffin, Arnaud Stiegler, Teven Le Scao, Arun Raja, Manan Dey, M Saiful Bari, Canwen Xu, Urmish Thakker, Shanya Sharma Sharma, Eliza Szczechla, Taewoon Kim, Gunjan Chhablani, Nihal Nayak, Debajyoti Datta, Jonathan Chang, Mike Tian-Jian Jiang, Han Wang, Matteo Manica, Sheng Shen, Zheng Xin Yong, Harshit Pandey, Rachel Bawden, Thomas Wang, Trishala Neeraj, Jos Rozen, Abheesht Sharma, Andrea Santilli, Thibault Fevry, Jason Alan Fries, Ryan Teehan, Tali Bers, Stella Biderman, Leo Gao, Thomas Wolf, Alexander M. Rush
+   venue: arXiv
+   year: 2022
+   type: paper
+   url: https://arxiv.org/abs/2110.08207
 ---
 ---
 
@@ -82,7 +89,8 @@ In this homework, you will use the OpenAI API to understand the current state-of
 ## Getting Started with the OpenAI API
 
 You should [signup for the OpenAI API](https://beta.openai.com/signup), which lets you use GPT-3 a large, neural language model like the ones that we learned about in lecture.  
-The OpenAI API is a paid service.  For this assignment, the cost should be less than $20. For the first part of the assignment, we'll get warmed up by playing with the OpenAI API via its interactive [Playground](https://beta.openai.com/playground) website.  Later we'll see how to integrate it directly into our code. 
+
+The OpenAI API is a paid service.  OpenAI will give you $18 in credit when you first create your account. For this assignment, the cost should be less than that. For the first part of the assignment, we'll get warmed up by playing with the OpenAI API via its interactive [Playground](https://beta.openai.com/playground) website.  Later we'll see how to integrate it directly into our code. 
 
 
 First, let's learn some basic terminology: 
@@ -170,9 +178,6 @@ It outputs
 
 > Today I went to the store to buy some bottles of water.
 
-
-In your assignment, we'll ask you to design prompts for the following tasks:
-1. Given a business name as input, output the type of industry. 
 
 
 
