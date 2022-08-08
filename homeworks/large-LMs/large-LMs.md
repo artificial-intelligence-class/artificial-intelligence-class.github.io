@@ -65,9 +65,6 @@ Warning: this assignment is out of date.  It may still need to be updated for th
 <!-- End of check whether the assignment is up to date -->
 
 
-<div class="alert alert-info">
-This assignment is due on {{ page.due_date | date: "%A, %B %-d, %Y" }} before {{ page.due_date | date: "%I:%M%p" }}. 
-</div>
 
 {% if page.materials %}
 <div class="alert alert-info">
@@ -77,8 +74,14 @@ You can download the materials for this assignment here:
 <li><a href="{{item.url}}">{{ item.name }}</a></li>
 {% endfor %}
 </ul>
+
+
+<i>Remember to make a copy of the notebook into your own Drive by choosing “Save a Copy in Drive” from Colab’s “File” menu.</i>i>
+
 </div>
 {% endif %}
+
+
 
 
 {{page.type}} {{page.number}}: {{page.title}}
@@ -185,13 +188,40 @@ It outputs
 
 Next, we'll take a look at how to [fine-tune the OpenAI models](https://beta.openai.com/docs/guides/fine-tuning) to perform a specific task.  You can use few-shot learning when you have a few dozen training example, and you can use fine-tuning when you have several hundred examples. When we have a few hundred training examples, then it's not possible to fit them all into a prompt, since GPT-3 has a limit of 2048 tokens in the prompt.  
 
-For your homework, you'll fine-tune GPT-3 to generate biographies 
+For your homework, you'll fine-tune GPT-3 to generate biographies from  tables of information about a person. For instance, given 
+```
+notable_type: mountaineer
+name: Olev Vilhelmson
+gender: male
+nationality: Latvian
+birth_date: 07 November 1876
+birth_place: Jelgava, Latvia
+death_date: 21 February 1952
+death_place: Geneva, Switzerland
+death_cause: pneumonia
+resting_place: La Chaux-de-Fonds Cemetery
+start_age: 12
+notable_ascents: First ascent of Mt. Kebnekaise in 1894, Youngest person to climb All peaks higher than 4,000 meter 1895
+final_ascent: Highest Peak in Sweden and Scandinavia
+partnerships: Gustaf Bergmann, Björn Dunker
+mother: Emilia Vilhelmina Bartlett
+father: Gustav Vilhelmson
+partner: Anna Hulthorst
+children: Vilhelmina Bergman-Malmstroem, Elsa Bergman-Malmstroem
+```
+Your model will generate something like:
+> Olev Vilhelmson (7 November, 1876 - 21 February, 1952) was a Latvia. He was born in Jelgava, Latvia, His start age is 12. He had partnership with Gustaf Bergmann, Bjorn dunker. His father was Gustav Vilhelmson and his mother was Emilia Vilhelmina Bartlett. Olev first ascent was Mt. Kebnekaise in 1894. He was also the youngest person to climb all peaks higher than 4,000 meters in 1895. He died of pneumonia on February 21, 1952 in Geneva, Switzerland. He was buried in the cemetery of Chaux-de-Fonds. He was married to Anna Hulthorst and had two children Vilhelmina Bergman-Malmstroem, Elsa Bergman-Malmstroem.
+
+You'll also fine tune a model to do the reverse direction.  Given a Wikipedia style biography, your model will extract a table of information describing the person.
+
 
 
 ## What to submit
 
-Please submit your completed Colab Notebook to Gradescope.  The notebook has several functions marked TODO that you will need to complete. 
+Please submit your completed [Colab Notebook to Gradescope](https://colab.research.google.com/github/artificial-intelligence-class/artificial-intelligence-class.github.io/blob/master/homeworks/large-LMs/Large_Language_Models.ipynb).  The notebook has several functions marked TODO that you will need to complete. 
 
+
+**Remember to make a copy of the notebook into your own Drive by choosing “Save a Copy in Drive” from Colab’s “File” menu.**
 
 # Recommended readings
 
