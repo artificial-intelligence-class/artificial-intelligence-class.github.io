@@ -1,6 +1,7 @@
 ---
 layout: default
 img: gpt3-emily-dickinson.jpg
+img_link: https://twitter.com/xkcd/status/1514060688578260995
 caption: Emily Dickinson's thoughts on cryptocurrency as imagined by GPT3
 title: Large Language Models
 type: Homework
@@ -10,7 +11,7 @@ release_date: 2022-08-08
 due_date: 2022-08-15 23:59:00EDT
 materials:
     - 
-      name: Colab Notebook for Fine-Tuning OpenAI
+      name: Colab Notebook for Large Language Models with the OpenAI API
       url: https://colab.research.google.com/github/artificial-intelligence-class/artificial-intelligence-class.github.io/blob/master/homeworks/large-LMs/Large_Language_Models.ipynb
 submission_link: XXX
 readings:
@@ -40,7 +41,16 @@ readings:
    type: paper
    url: https://arxiv.org/abs/2110.08207
 ---
----
+
+<!-- Check whether the assignment is ready to release -->
+{% capture today %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture release_date %}{{page.release_date | date: '%s'}}{% endcapture %}
+{% if release_date > today %} 
+<div class="alert alert-danger">
+Warning: this assignment is out of date.  It may still need to be updated for this year's class.  Check with your instructor before you start working on this assignment.
+</div>
+{% endif %}
+<!-- End of check whether the assignment is up to date -->
 
 
 <!-- Check whether the assignment is up to date -->
