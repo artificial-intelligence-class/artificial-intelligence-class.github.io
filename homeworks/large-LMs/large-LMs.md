@@ -210,7 +210,7 @@ partner: Anna Hulthorst
 children: Vilhelmina Bergman-Malmstroem, Elsa Bergman-Malmstroem
 ```
 Your model will generate something like:
-> Olev Vilhelmson (7 November, 1876 - 21 February, 1952) was a Latvia. He was born in Jelgava, Latvia, His start age is 12. He had partnership with Gustaf Bergmann, Bjorn dunker. His father was Gustav Vilhelmson and his mother was Emilia Vilhelmina Bartlett. Olev first ascent was Mt. Kebnekaise in 1894. He was also the youngest person to climb all peaks higher than 4,000 meters in 1895. He died of pneumonia on February 21, 1952 in Geneva, Switzerland. He was buried in the cemetery of Chaux-de-Fonds. He was married to Anna Hulthorst and had two children Vilhelmina Bergman-Malmstroem, Elsa Bergman-Malmstroem.
+> Olev Vilhelmson (7 November, 1876 - 21 February, 1952) was a Latvia. He was born in Jelgava, Latvia, His start age is 12. He had partnership with Gustaf Bergmann and Bjorn Dunker. His father was Gustav Vilhelmson and his mother was Emilia Vilhelmina Bartlett. Vilhelmson's first ascent was Mt. Kebnekaise in 1894. He was also the youngest person to climb all peaks higher than 4,000 meters in 1895. He died of pneumonia on February 21, 1952 in Geneva, Switzerland. He was buried in the cemetery of Chaux-de-Fonds. He was married to Anna Hulthorst and had two children Vilhelmina Bergman-Malmstroem, Elsa Bergman-Malmstroem.
 
 You'll also fine tune a model to do the reverse direction.  Given a Wikipedia style biography, your model will extract a table of information describing the person.
 
