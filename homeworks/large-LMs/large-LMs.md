@@ -12,7 +12,7 @@ due_date: 2022-08-15 23:59:00EDT
 materials:
     - 
       name: Colab Notebook for Fine-Tuning OpenAI
-      url: https://colab.research.google.com/github/artificial-intelligence-class/artificial-intelligence-class.github.io/blob/master/homeworks/gpt3/Fine_Tune_OpenAI.ipynb
+      url: https://colab.research.google.com/github/artificial-intelligence-class/artificial-intelligence-class.github.io/blob/master/homeworks/large-LMs/Large_Language_Models.ipynb
 submission_link: XXX
 readings:
 - 
@@ -185,40 +185,13 @@ It outputs
 
 Next, we'll take a look at how to [fine-tune the OpenAI models](https://beta.openai.com/docs/guides/fine-tuning) to perform a specific task.  You can use few-shot learning when you have a few dozen training example, and you can use fine-tuning when you have several hundred examples. When we have a few hundred training examples, then it's not possible to fit them all into a prompt, since GPT-3 has a limit of 2048 tokens in the prompt.  
 
-For your homework, you'll fine-tune GPT-3 to generate different parts of text adventure games.  Specifically we'll train GPT-3 to
-1. Generate descriptions of locations
-2. List items that might be found in a location
-3. Describe an item
-4. Predict an item's properties
+For your homework, you'll fine-tune GPT-3 to generate biographies 
 
-### Data
-
-We are going to use a text adventure that was developed by Facebook AI Research for their paper [Learning to Speak and Act in a Fantasy Text Adventure Game](https://arxiv.org/abs/1903.03094).
-
-Here's the paper's abstract:
-
-> We introduce a large-scale crowdsourced text adventure game as a research platform for studying grounded dialogue. In it, agents can perceive, emote, and act while conducting dialogue with other agents. Models and humans can both act as characters within the game. We describe the results of training state-of-the-art generative and retrieval models in this setting. We show that in addition to using past dialogue, these models are able to effectively use the state of the underlying world to condition their predictions. In particular, we show that grounding on the details of the local environment, including location descriptions, and the objects (and their affordances) and characters (and their previous actions) present within it allows better predictions of agent behavior and dialogue. We analyze the ingredients necessary for successful grounding in this setting, and how each of these factors relate to agents that can talk and act successfully.
-
-Their data is called the LIGHT dataset (Learning in Interactive Games with Humans and Text).  It contains 663 locations, 3462 objects and 1755 characters.  I have divided this data into training/dev/test splits.  We will use this data to fine-tune GPT-3 to generate descriptions of rooms and items.
-
-
-### Colab Notebook
-
-I have written a [Colab Notebook for Fine-Tuning OpenAI on LIGHT Enviroment Data](https://colab.research.google.com/github/interactive-fiction-class/interactive-fiction-class.github.io/blob/master/homeworks/generating-descriptions/Fine_Tune_OpenAI_on_LIGHT_Text_Adventures.ipynb).  The notebook shows you how to fine-tune GPT-3 to generate descriptions.  You then will implement code to fine-tune it for several other tasks.  
-
-*Remember to make a copy of the notebook into your own Drive by choosing "Save a Copy in Drive" from Colab's "File" menu.*
-
-In addition to working your way through my Colab Notebook, I recommend reading the [OpenAI documentation](https://beta.openai.com/docs/), and trying the examples in the Playground.
 
 ## What to submit
 
-Please submit the following:
-1. Your completed Colab Notebook
-2. A set of generated game locations, items and connections in the same JSON format as the LIGHT data
-3. A zip file with all training data files that you used to fine-tune your models
-4. A PDF writeup that explains what you did in this homework.  You should say whether or not you think it's now feasible to fully generate text adventure games with AI.  What other pieces would you need to implement, in addition to what you did in this homework? Here's an [example writeup](example_writeup.pdf) that is roughly the level of quality that we expect.
+Please submit your completed Colab Notebook to Gradescope.  The notebook has several functions marked TODO that you will need to complete. 
 
-You should submit your completed homework to [Gradescope]({page.submission_link}).  You can work in pairs.  Only one partner should submit - be sure to specify who your partner was when you make your submission. 
 
 # Recommended readings
 
