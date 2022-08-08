@@ -86,11 +86,11 @@ You can download the materials for this assignment here:
 {{page.type}} {{page.number}}: {{page.title}}
 =============================================================
 
-In this homework, you will use the OpenAI API to understand the current state-of-the-art in large langauge models that have been trained using deep neural networks.   We'll get you started by introducing you to the OpenAI playground and introducing the notion of prompt design.  Then we'll show how to fine-tune the models to perform specific tasks.
+In this homework, you will use the OpenAI API to understand the current state-of-the-art in large language models that have been trained using deep neural networks.   We'll get you started by introducing you to the OpenAI playground and introducing the notion of prompt design.  Then we'll show how to fine-tune the models to perform specific tasks.
 
 ## Getting Started with the OpenAI API
 
-You should [signup for the OpenAI API](https://beta.openai.com/signup), which lets you use GPT-3 a large, neural language model like the ones that we learned about in lecture.  
+You should [sign up for the OpenAI API](https://beta.openai.com/signup), which lets you use GPT-3 a large, neural language model like the ones that we learned about in lecture.  
 
 The OpenAI API is a paid service.  OpenAI will give you $18 in credit when you first create your account. For this assignment, the cost should be less than that. For the first part of the assignment, we'll get warmed up by playing with the OpenAI API via its interactive [Playground](https://beta.openai.com/playground) website.  Later we'll see how to integrate it directly into our code. 
 
@@ -107,7 +107,7 @@ Now try changing the prompt to
 
 > My favorite professor at the University of Pennsylvania is Chris Callison-
 
-and genertaing again.  Now save its output for the end of the semester for your course reviews.  (Just kidding).  Here's an example of what it generated when I ran it. 
+and generating again.  Now save its output for the end of the semester for your course reviews.  (Just kidding).  Here's an example of what it generated when I ran it. 
 
 
 <center>
@@ -115,7 +115,7 @@ and genertaing again.  Now save its output for the end of the semester for your 
 </center>
 Here's another [impressive example of what GPT-3 knows about the field of NLP.](openai-playground-screenshot-2.png)
 
-There are several controls on the righthand side of the playground.  These are
+There are several controls on the right hand side of the playground.  These are
 * Engine - GPT-3 comes in 4 different sized models. As the model sizes increase, so does their quality and their cost.  They go in alphabetical order from smallest to largest.    
 1. Ada - smallest, least costly model.
 2. Babbage
@@ -125,15 +125,15 @@ There are several controls on the righthand side of the playground.  These are
 * Stop sequence - you can specify what tokens should cause the model to stop generating.  You can use the newline character, or any special sequence that you designate. 
 * Show probabilities - allows you to highlight the tokens giving them different colors for how probable the models think they are.
 * Temperature and Top P sampling - control how the model samples tokens from its distribution.
-1. Setting Temperature to 0 will cause the model to produce the highest probablitity output.  Setting it closer to 1 will increase its propensity to create more diverse output.
+1. Setting Temperature to 0 will cause the model to produce the highest probability output.  Setting it closer to 1 will increase its propensity to create more diverse output.
 2. Top P sampling controls the nucleus sampling, where the model samples from only the top of the distribution.
 * Frequency Penalty and Presence Penalty - two parameters that help to limit how much repetition there is in the model's output.
 
 ### Prompt design
 
-In addition to writing awesome reviews of your professors, you can design prompts to get GPT-3 to do all sorts of suprising things.  For instance, GPT-3 can perform [few-shot learning](https://arxiv.org/abs/2005.14165).  Given a few examples of a task, it can learn a pattern very quickly and then be used for classification tasks.  It often times helps to tell the model what you want it to do. 
+In addition to writing awesome reviews of your professors, you can design prompts to get GPT-3 to do all sorts of surprising things.  For instance, GPT-3 can perform [few-shot learning](https://arxiv.org/abs/2005.14165).  Given a few examples of a task, it can learn a pattern very quickly and then be used for classification tasks.  It often helps to tell the model what you want it to do. 
 
-Here's an example from the paper that introduced GPT-3.  It shows a few-show learning example for correcting grammatically incorrect English senetences
+Here's an example from the paper that introduced GPT-3.  It shows a few-show learning example for correcting grammatically incorrect English sentences.
 
 ```
 Poor English input: I eated the purple berries.
@@ -170,7 +170,7 @@ response = openai.Completion.create(
 )
 ```
 
-In addition to few shot learning, GPT-3 and other large language models do a pretty remarkable job in "zero-shot" scenarios.  You can give them instructions in natural language and often times, the produce remarkable examples.
+In addition to few shot learning, GPT-3 and other large language models do a pretty remarkable job in "zero-shot" scenarios.  You can give them instructions in natural language and they will frequently produce remarkably good output.
 
 If you input the prompt
 > Correct this English text:
@@ -185,7 +185,7 @@ It outputs
 
 ## Fine-Tuning
 
-Next, we'll take a look at how to [fine-tune the OpenAI models](https://beta.openai.com/docs/guides/fine-tuning) to perform a specific task.  You can use few-shot learning when you have a few dozen training example, and you can use fine-tuning when you have several hundred examples. When we have a few hundred training examples, then it's not possible to fit them all into a prompt, since GPT-3 has a limit of 2048 tokens in the prompt.  
+Next, we'll take a look at how to [fine-tune the OpenAI models](https://beta.openai.com/docs/guides/fine-tuning) to perform a specific task.  You can use few-shot learning when you have a few dozen training examples, and you can use fine-tuning when you have several hundred examples. When we have a few hundred training examples, then it's not possible to fit them all into a prompt, since GPT-3 has a limit of 2048 tokens in the prompt.  
 
 For your homework, you'll fine-tune GPT-3 to generate biographies from  tables of information about a person. For instance, given 
 ```
@@ -209,7 +209,7 @@ partner: Anna Hulthorst
 children: Vilhelmina Bergman-Malmstroem, Elsa Bergman-Malmstroem
 ```
 Your model will generate something like:
-> Olev Vilhelmson (7 November, 1876 - 21 February, 1952) was a Latvia. He was born in Jelgava, Latvia, His start age is 12. He had partnership with Gustaf Bergmann and Bjorn Dunker. His father was Gustav Vilhelmson and his mother was Emilia Vilhelmina Bartlett. Vilhelmson's first ascent was Mt. Kebnekaise in 1894. He was also the youngest person to climb all peaks higher than 4,000 meters in 1895. He died of pneumonia on February 21, 1952 in Geneva, Switzerland. He was buried in the cemetery of Chaux-de-Fonds. He was married to Anna Hulthorst and had two children Vilhelmina Bergman-Malmstroem, Elsa Bergman-Malmstroem.
+> Olev Vilhelmson (7 November, 1876 - 21 February, 1952) was a Latvia. He was born in Jelgava, Latvia, His start age is 12. He had partnerships with Gustaf Bergmann and with Bjorn Dunker. His father was Gustav Vilhelmson and his mother was Emilia Vilhelmina Bartlett. Vilhelmson's first ascent was Mt. Kebnekaise in 1894. He was also the youngest person to climb all peaks higher than 4,000 meters in 1895. He died of pneumonia on February 21, 1952 in Geneva, Switzerland. He was buried in the cemetery of Chaux-de-Fonds. He was married to Anna Hulthorst and had two children Vilhelmina Bergman-Malmstroem, Elsa Bergman-Malmstroem.
 
 You'll also fine tune a model to do the reverse direction.  Given a Wikipedia style biography, your model will extract a table of information describing the person.
 
