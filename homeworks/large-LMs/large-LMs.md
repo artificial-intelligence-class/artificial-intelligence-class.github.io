@@ -1,7 +1,6 @@
 ---
 layout: default
 img: gpt3-emily-dickinson.jpg
-img_link: https://twitter.com/xkcd/status/1514060688578260995
 caption: Emily Dickinson's thoughts on cryptocurrency as imagined by GPT3
 title: Large Language Models
 type: Homework
