@@ -76,7 +76,7 @@ You can download the materials for this assignment here:
 </ul>
 
 
-<i>Remember to make a copy of the notebook into your own Drive by choosing “Save a Copy in Drive” from Colab’s “File” menu.</i>i>
+<i>Remember to make a copy of the notebook into your own Drive by choosing “Save a Copy in Drive” from Colab’s “File” menu.</i>
 
 </div>
 {% endif %}
