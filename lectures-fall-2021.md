@@ -4,7 +4,7 @@ title: Schedule
 active_tab: items
 term_start: 2021-08-31
 term_end: 2021-12-10
-lecture_days: Mondays and Wednesdays
+lecture_days: Tuesdays and Thursdays
 ---
 
 
@@ -15,10 +15,6 @@ You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.as
 </div>
 
 
-
-<div class="alert alert-warning" markdown="1">
-The schedule below shows the schedule section 402, which meets on Monday/Wednesday.  [Click here for the 401 Tuesday/Thursday section.](schedule.html)
-</div>
 
 <table class="table table-striped" >
   <thead>
@@ -118,10 +114,18 @@ The quiz covers:
 {% capture exam_due_date %}{{ exam.due_date | date: "%Y-%m-%d"}}{% endcapture %}
 {% if exam_due_date == curr_date %}
 <tr><td class="alert alert-danger">{{ exam.due_date | date: '%a, %b %-d, %Y' }}</td><td class="alert alert-danger">
+{{exam.title}} 
+
+{% if exam.type == "in-person" %}
+- in person at {{ exam.due_date | date: '%H:%M%p' }}
+{% endif %}
+
+
+{% if exam.type == "online" %}
+- online.  Due by {{ exam.due_date | date: '%a, %b %-d, %Y %H:%M%p' }}
+{% endif %}
 {% if exam.url %}
-<a href="{{quiz.url}}">{{exam.title}}</a> is due
-{% else %}
-{{exam.title}} is due
+<a href="{{quiz.url}}">[link]</a> 
 {% endif %}
 </td></tr>
 {% endif %}

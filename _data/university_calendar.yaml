@@ -1,44 +1,36 @@
 -
-  date: 2021-08-31
+  date: 2022-08-30
   title: First day of classes
   type: university_calendar
 -
-  date: 2021-09-06
+  date: 2022-09-05
   title: Labor Day 
   type: no_lecture
-- 
-  date: 2021-09-02
-  title: Class canceled because of flooding.  Please watch these lecture recordings on your own - [Intelligent Agents](https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3439de81-6296-4e8c-8d28-ad9201191182) and [Task Environments](https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=91b4c112-e745-47cb-8468-ad9201191160)
+-
+  date: 2022-09-13
+  title: Course Selection Period Ends
+  type: university_calendar
+-
+  date: 2022-10-06
+  title: Fall Term Break (October 6-9, 2022)
   type: no_lecture
 -
-  date: 2021-10-11
+  date: 2022-10-10
   title: Drop Period Ends
   type: university_calendar
 -
-  date: 2021-10-14
-  title: Fall Term Break
-  type: no_lecture
--
-  date: 2021-10-15
-  title: Fall Term Break
-  type: no_lecture
--
-  date: 2021-10-29
+  date: 2022-10-28
   title: Grade Type Change Deadline
   type: university_calendar
 -
-  date: 2021-11-08
+  date: 2022-11-07
   title: Last day to withdraw from a course
   type: university_calendar
 -
-  date: 2021-11-25
-  title: Thanksgiving Break
+  date: 2022-11-24
+  title: Thanksgiving Break (November 24-27, 2022)
   type: no_lecture
 -
-  date: 2021-11-26
-  title: Thanksgiving Break
-  type: no_lecture
--
-  date: 2021-12-10
+  date: 2022-12-12
   title: Last day of classes
   type: university_calendar

@@ -1,0 +1,57 @@
+- name: Chris Callison-Burch 
+  pic: ccb.jpg
+  email: ccb@upenn.edu 
+  url: https://www.cis.upenn.edu/~ccb/
+  extra_title: Instructor
+  office_hours: Tuesday & Thursday, 3-4 pm
+  location: 3401 Walnut room 463C
+
+- name: Danni Ma
+  pic: danni.jpg
+  email: dannima@seas.upenn.edu
+  url: /
+  office_hours: Tuesday & Thursday, 9-10 am
+  location: GRW 5th Floor Bump Space
+
+- name: Diana Marsala
+  pic: marsalad.jpg
+  email: marsalad@sas.upenn.edu
+  url: /
+  office_hours: Friday, 1:30-3 pm
+  location: Moore 100A
+  
+- name: Emily Hilman
+  pic: emily.jpg
+  email: ehilman@sas.upenn.edu
+  url: /
+  office_hours: Wednesday, 2-4 pm
+  location: GRW 5th Floor Bump Space
+
+- name: Jasmine Lee
+  pic: jasmine_sun_jae_lee.jpg
+  email: leesunj@sas.upenn.edu
+  url: /
+  office_hours: Monday, 3-5 pm
+  location: GRW 5th Floor Bump Space
+
+- name: Jie Gao
+  pic: jie.jpg
+  email: jiegao@seas.upenn.edu
+  url: https://jiegaopoc.me
+  location: Piazza
+
+- name: John Zhang
+  pic: johnzhang.jpg
+  email: johnzh@sas.upenn.edu
+  url: /
+  office_hours: Monday, 6-8 pm
+  location: 268 GRW
+
+- name: Yue Yang
+  pic: yueyang.png
+  email: yueyang1@seas.upenn.edu
+  url: http://www.yueyang.host
+  office_hours: Tuesday, 9-11 am
+  location: GRW 5th Floor Bump Space
+
+  

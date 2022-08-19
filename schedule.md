@@ -2,8 +2,8 @@
 layout: default
 title: Schedule
 active_tab: items
-term_start: 2021-08-31
-term_end: 2021-12-10
+term_start: 2022-08-30
+term_end: 2022-12-12
 lecture_days: Tuesdays and Thursdays
 ---
 
@@ -15,10 +15,6 @@ You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.as
 </div>
 
 
-
-<div class="alert alert-warning" markdown="1">
-The schedule below shows the schedule section 401, which meets on Tuesday/Thursday.  [Click here for the 402 Monday/Wednesday section.](schedule2.html)
-</div>
 
 <table class="table table-striped" >
   <thead>
