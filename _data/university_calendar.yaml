@@ -34,3 +34,20 @@
   date: 2022-12-12
   title: Last day of classes
   type: university_calendar
+-
+  date: 2022-12-13
+  title: Reading Days
+  type: no_lecture
+-
+  date: 2022-12-15
+  title: Finals Week
+  type: no_lecture
+-
+  date: 2022-12-20
+  title: Finals Week
+  type: no_lecture
+-
+  date: 2022-12-22
+  title: Finals Week
+  type: no_lecture
+

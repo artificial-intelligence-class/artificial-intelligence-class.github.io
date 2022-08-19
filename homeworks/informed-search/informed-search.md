@@ -5,8 +5,8 @@ img_link: https://www.explainxkcd.com/wiki/index.php/1002:_Game_AIs
 caption: Difficulty of Various Games For Computers
 title: CIS 521 Homework 3 "Informed Search"
 active_tab: homework
-release_date: 2021-09-20
-due_date: 2021-09-28 23:59:00EDT
+release_date: 2022-09-20
+due_date: 2022-09-28 23:59:00EDT
 materials:
     - 
         name: skeleton file
