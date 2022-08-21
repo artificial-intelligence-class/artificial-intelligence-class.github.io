@@ -7,8 +7,8 @@ title: Large Language Models
 type: Homework
 number: 10
 active_tab: homework
-release_date: 2022-08-08
-due_date: 2022-08-15 23:59:00EDT
+release_date: 2022-12-12
+due_date: 2022-12-12 23:59:00EDT
 materials:
     - 
       name: Colab Notebook for Large Language Models with the OpenAI API
