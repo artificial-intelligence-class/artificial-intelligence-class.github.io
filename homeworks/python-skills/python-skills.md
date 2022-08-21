@@ -52,10 +52,6 @@ You can download the materials for this assignment here:
 {% endif %}
 
 
-<div class="alert alert-info" markdown="span">
-Links to tutorials and other Python resources are posted on the [schedule page](/lectures.html) in the Python Review parts.</div>
-
-
 Homework 1: Python Skills [100 points]
 =============================================================
 
