@@ -19,6 +19,10 @@
   title: Drop Period Ends
   type: university_calendar
 -
+  date: 2022-10-24
+  title: Last Date to [Register to Vote in PA](https://www.pavoterservices.pa.gov/pages/VoterRegistrationApplication.aspx)
+  type: university_calendar
+-
   date: 2022-10-28
   title: Grade Type Change Deadline
   type: university_calendar
@@ -26,6 +30,10 @@
   date: 2022-11-07
   title: Last day to withdraw from a course
   type: university_calendar
+-
+  date: 2022-11-08
+  title: Midterm Election Day - Go Vote!
+  type: no_lecture
 -
   date: 2022-11-24
   title: Thanksgiving Break (November 24-27, 2022)
