@@ -1,4 +1,10 @@
 -
+  name: Chris Callison-Burch
+  pronouns: he/him
+  artist: Frida Kahlo
+  pic: ccb.png
+  ai_pic: AI_ccb.png
+-
   name: Aaraddhya Vats Thakore
   pronouns: He/Him
   artist: DALL·E
@@ -10,6 +16,11 @@
   artist: John Bramblitt
   pic: Adwayt_Nadkarni.PNG
   ai_pic: AI_Adwayt_Nadkarni.png
+-
+  name: Akshay Manikandan
+  pronouns: he/him
+  artist: Ogure Ito
+  pic: kermit.png
 -
   name: Anna Orosz
   pronouns: she/her
@@ -23,17 +34,36 @@
   pic: Anran_Jiao.JPG
   ai_pic: AI_Anran_Jiao.png
 -
-  name: Chris Callison-Burch
+  name: Bharath Chandan Reddy Teegala
   pronouns: he/him
-  artist: Frida Kahlo
-  pic: ccb.png
-  ai_pic: AI_ccb.png
+  artist: Raja Ravi Varma
+  pic: kermit.png
+-
+  name: Brendan Massey
+  pronouns: he/him
+  artist: Makoto Shinkai
+  pic: kermit.png
+-
+  name: Charlene Tam
+  pronouns: she/her
+  artist: Claude Monet
+  pic: kermit.png
+-
+  name: Daniel Paik
+  pronouns: he/him
+  artist: Pablo Picasso
+  pic: kermit.png
 -
   name: Devin Ma
   pronouns: he/him
   artist: DALL·E
   pic: Devin_Ma.png
   ai_pic: AI_Devin_Ma.png
+-
+  name: Enri Kina
+  pronouns: he/him
+  artist: Michelangelo
+  pic: kermit.png
 -
   name: Fiona Feng
   pronouns: she/her
@@ -70,6 +100,11 @@
   artist: Edward Hopper
   pic: lawrence_lai.jpg
   ai_pic: AI_lawrence_lai.png
+-
+  name: Luyuan (Jen) Gao
+  pronouns: she/her
+  artist: Claude Monet
+  pic: kermit.png
 -
   name: Manni Arora
   pronouns: she/her
@@ -125,6 +160,11 @@
   pic: Thumpasery_George.jpg
   ai_pic: AI_Thumpasery_George.png
 -
+  name: Vijay Koundinya 
+  pronouns: he/him
+  artist: Da Vinci 
+  pic: kermit.png
+-
   name: Yelingzi(Lingzi) Liu
   pronouns: she/her
   artist: Edward Hopper
@@ -154,43 +194,3 @@
   artist: Zhang Daqian
   pic: Zhihao_Chen.jpg
   ai_pic: AI_Zhihao_Chen.png
--
-  name: Akshay Manikandan
-  pronouns: he/him
-  artist: Ogure Ito
-  pic: kermit.png
--
-  name: Bharath Chandan Reddy Teegala
-  pronouns: he/him
-  artist: Raja Ravi Varma
-  pic: kermit.png
--
-  name: Brendan Massey
-  pronouns: he/him
-  artist: Makoto Shinkai
-  pic: kermit.png
--
-  name: Charlene Tam
-  pronouns: she/her
-  artist: Claude Monet
-  pic: kermit.png
--
-  name: Daniel Paik
-  pronouns: he/him
-  artist: Pablo Picasso
-  pic: kermit.png
--
-  name: Enri Kina
-  pronouns: he/him
-  artist: Michelangelo
-  pic: kermit.png
--
-  name: Luyuan (Jen) Gao
-  pronouns: she/her
-  artist: Claude Monet
-  pic: kermit.png
--
-  name: Vijay Koundinya 
-  pronouns: he/him
-  artist: Da Vinci 
-  pic: kermit.png
