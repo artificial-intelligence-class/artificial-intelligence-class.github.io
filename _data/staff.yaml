@@ -20,6 +20,7 @@
   name: Akshay Manikandan
   pronouns: he/him
   artist: Ogure Ito
+  ai_pic: AI_kermit.png
   pic: kermit.png
 -
   name: Anna Orosz
@@ -37,21 +38,25 @@
   name: Bharath Chandan Reddy Teegala
   pronouns: he/him
   artist: Raja Ravi Varma
+  ai_pic: AI_kermit.png
   pic: kermit.png
 -
   name: Brendan Massey
   pronouns: he/him
   artist: Makoto Shinkai
+  ai_pic: AI_kermit.png
   pic: kermit.png
 -
   name: Charlene Tam
   pronouns: she/her
   artist: Claude Monet
-  pic: kermit.png
+  pic: Charlene_Tam.JPG
+  ai_pic: AI_Charlene_Tam.png
 -
   name: Daniel Paik
   pronouns: he/him
   artist: Pablo Picasso
+  ai_pic: AI_kermit.png
   pic: kermit.png
 -
   name: Devin Ma
@@ -63,6 +68,7 @@
   name: Enri Kina
   pronouns: he/him
   artist: Michelangelo
+  ai_pic: AI_kermit.png
   pic: kermit.png
 -
   name: Fiona Feng
@@ -104,6 +110,7 @@
   name: Luyuan (Jen) Gao
   pronouns: she/her
   artist: Claude Monet
+  ai_pic: AI_kermit.png
   pic: kermit.png
 -
   name: Manni Arora
@@ -163,6 +170,7 @@
   name: Vijay Koundinya 
   pronouns: he/him
   artist: Da Vinci 
+  ai_pic: AI_kermit.png
   pic: kermit.png
 -
   name: Yelingzi(Lingzi) Liu
