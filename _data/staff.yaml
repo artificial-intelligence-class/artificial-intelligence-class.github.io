@@ -1,33 +1,164 @@
 -
-  name: Chris Callison-Burch
-  pronouns: he/him
-  artist: Frida Kahlo
-  pic: ccb.png
--
   name: Aaraddhya Vats Thakore
   pronouns: He/Him
   artist: DALL·E
   pic: aaraddhya.png
+  ai_pic: AI_aaraddhya.png
 -
   name: Adwayt Nadkarni
   pronouns: he/him
   artist: John Bramblitt
   pic: Adwayt_Nadkarni.PNG
--
-  name: Akshay Manikandan
-  pronouns: he/him
-  artist: Ogure Ito
-  pic: kermit.png
+  ai_pic: AI_Adwayt_Nadkarni.png
 -
   name: Anna Orosz
   pronouns: she/her
   artist: Van Gogh
   pic: Anna_Orosz.JPG
+  ai_pic: AI_Anna_Orosz.png
 -
   name: Anran Jiao
   pronouns: she/her
   artist: Van Gogh
   pic: Anran_Jiao.JPG
+  ai_pic: AI_Anran_Jiao.png
+-
+  name: Chris Callison-Burch
+  pronouns: he/him
+  artist: Frida Kahlo
+  pic: ccb.png
+  ai_pic: AI_ccb.png
+-
+  name: Devin Ma
+  pronouns: he/him
+  artist: DALL·E
+  pic: Devin_Ma.png
+  ai_pic: AI_Devin_Ma.png
+-
+  name: Fiona Feng
+  pronouns: she/her
+  artist: Eric Fischl
+  pic: Fiona_Feng.jpg
+  ai_pic: AI_Fiona_Feng.png
+-
+  name: Hai Chen
+  pronouns: he/him
+  artist: Da Vinci
+  pic: Hai_Chen.png
+  ai_pic: AI_Hai_Chen.png
+-
+  name: Haitao Zhu
+  pronouns: he/him
+  artist: Da Vinci
+  pic: Haitao_Zhu.jpg
+  ai_pic: AI_Haitao_Zhu.png
+-
+  name: Hongyu Zhang
+  pronouns: he/him
+  artist: Edgar Degas
+  pic: Hongyu_Zhang.JPG
+  ai_pic: AI_Hongyu_Zhang.png
+-
+  name: Jiatai Sun
+  pronouns: he/him
+  artist: Henri Matisse
+  pic: jiatai_sun.jpg
+  ai_pic: AI_jiatai_sun.png
+-
+  name: Lawrence Lai
+  pronouns: he/him
+  artist: Edward Hopper
+  pic: lawrence_lai.jpg
+  ai_pic: AI_lawrence_lai.png
+-
+  name: Manni Arora
+  pronouns: she/her
+  artist: Jackson Pollock
+  pic: manni_arora.jpg
+  ai_pic: AI_manni_arora.png
+-
+  name: Pooja Dattatri
+  pronouns: she/her
+  artist: Da Vinci
+  pic: Pooja_Dattatri.jpg
+  ai_pic: AI_Pooja_Dattatri.png
+-
+  name: Rashmi Phadnis
+  pronouns: she/her
+  artist: Reza Farazmand
+  pic: Rashmi_Phadnis.jpg
+  ai_pic: AI_Rashmi_Phadnis.png
+-
+  name: Rebecca Maryann Dsouza
+  pronouns: she/her
+  artist: Claire Belton
+  pic: rebecca_maryann_dsouza.jpg
+  ai_pic: AI_rebecca_maryann_dsouza.png
+-
+  name: Reeda Mroue
+  pronouns: he/him
+  artist: Edvard Munch
+  pic: Reeda_Mroue.jpg
+  ai_pic: AI_Reeda_Mroue.png
+-
+  name: Revathi Vijay
+  pronouns: she/her
+  artist: James Turell
+  pic: Revathi_Vijay.jpg
+  ai_pic: AI_Revathi_Vijay.png
+-
+  name: Samar Haider
+  pronouns: he/him
+  artist: 
+  pic: samar_haider.jpg
+  ai_pic: AI_samar_haider.png
+-
+  name: Senyang Xiao
+  pronouns: he/him
+  artist: Hayao Miyazaki
+  pic: Senyang_Xiao.jpg
+  ai_pic: AI_Senyang_Xiao.png
+-
+  name: Thumpasery George (George)
+  pronouns: he/him
+  artist: Van Gogh
+  pic: Thumpasery_George.jpg
+  ai_pic: AI_Thumpasery_George.png
+-
+  name: Yelingzi(Lingzi) Liu
+  pronouns: she/her
+  artist: Edward Hopper
+  pic: Yelingzi_Liu.jpg
+  ai_pic: AI_Yelingzi_Liu.png
+-
+  name: Yixuan Meng
+  pronouns: she/her
+  artist: Giorgio de Chirico
+  pic: Yixuan_Meng.jpg
+  ai_pic: AI_Yixuan_Meng.png
+-
+  name: Yuchen Zhang
+  pronouns: she/her
+  artist: Van Gogh
+  pic: Yuchen_Zhang.jpg
+  ai_pic: AI_Yuchen_Zhang.png
+-
+  name: Yuxuan Zhang
+  pronouns: he/him
+  artist: Alexandre Arrechea
+  pic: Yuxuan_Zhang.JPG
+  ai_pic: AI_Yuxuan_Zhang.png
+-
+  name: Zhihao Chen
+  pronouns: he/him
+  artist: Zhang Daqian
+  pic: Zhihao_Chen.jpg
+  ai_pic: AI_Zhihao_Chen.png
+-
+  name: Akshay Manikandan
+  pronouns: he/him
+  artist: Ogure Ito
+  pic: kermit.png
 -
   name: Bharath Chandan Reddy Teegala
   pronouns: he/him
@@ -49,112 +180,17 @@
   artist: Pablo Picasso
   pic: kermit.png
 -
-  name: Devin Ma
-  pronouns: he/him
-  artist: DALL·E
-  pic: Devin_Ma.png
--
   name: Enri Kina
   pronouns: he/him
   artist: Michelangelo
   pic: kermit.png
--
-  name: Fiona Feng
-  pronouns: she/her
-  artist: Eric Fischl
-  pic: Fiona_Feng.jpg
--
-  name: Hai Chen
-  pronouns: he/him
-  artist: Da Vinci
-  pic: Hai_Chen.png
--
-  name: Haitao Zhu
-  pronouns: he/him
-  artist: Da Vinci
-  pic: Haitao_Zhu.jpg
--
-  name: Hongyu Zhang
-  pronouns: he/him
-  artist: Edgar Degas
-  pic: Hongyu_Zhang.JPG
--
-  name: Lawrence Lai
-  pronouns: he/him
-  artist: Edward Hopper
-  pic: lawrence_lai.jpg
 -
   name: Luyuan (Jen) Gao
   pronouns: she/her
   artist: Claude Monet
   pic: kermit.png
 -
-  name: Pooja Dattatri
-  pronouns: she/her
-  artist: Da Vinci
-  pic: Pooja_Dattatri.jpg
--
-  name: Rashmi Phadnis
-  pronouns: she/her
-  artist: Reza Farazmand
-  pic: Rashmi_Phadnis.jpg
--
-  name: Rebecca Maryann Dsouza
-  pronouns: she/her
-  artist: Claire Belton
-  pic: rebecca_maryann_dsouza.jpg
--
-  name: Reeda Mroue
-  pronouns: he/him
-  artist: Edvard Munch
-  pic: Reeda_Mroue.jpg
--
-  name: Revathi Vijay
-  pronouns: she/her
-  artist: James Turell
-  pic: Revathi_Vijay.jpg
--
-  name: Samar Haider
-  pronouns: he/him
-  artist: 
-  pic: samar_haider.jpg
--
-  name: Senyang Xiao
-  pronouns: he/him
-  artist: Hayao Miyazaki
-  pic: Senyang_Xiao.jpg
--
-  name: Thumpasery George (George)
-  pronouns: he/him
-  artist: Van Gogh
-  pic: Thumpasery_George.jpg
--
   name: Vijay Koundinya 
   pronouns: he/him
   artist: Da Vinci 
   pic: kermit.png
--
-  name: Yelingzi(Lingzi) Liu
-  pronouns: she/her
-  artist: Edward Hopper
-  pic: Yelingzi_Liu.jpg
--
-  name: Yixuan Meng
-  pronouns: she/her
-  artist: Giorgio de Chirico
-  pic: Yixuan_Meng.jpg
--
-  name: Yuchen Zhang
-  pronouns: she/her
-  artist: Van Gogh
-  pic: Yuchen_Zhang.jpg
--
-  name: Yuxuan Zhang
-  pronouns: he/him
-  artist: Alexandre Arrechea
-  pic: Yuxuan_Zhang.JPG
--
-  name: Zhihao Chen
-  pronouns: he/him
-  artist: Zhang Daqian
-  pic: Zhihao_Chen.jpg
