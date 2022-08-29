@@ -145,13 +145,14 @@ Masking policy
 : You must wear as mask during lectures and exams
 
 
-Office hours (1-on-1 on OHQ.io XXX)
-: TBD
+Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/423/))_
+: Schedule TBD - OH start Tuesday, September 6, 2022.
 
 Group Office Hours (Recorded)
-: TBD (Chris Callison-Burch)
+: Time TBD (Chris Callison-Burch). OH start Tuesday, September 6, 2022.
 
-
+Weekly Homework Recitation
+: Fridays, Time TBD
 
 
 
