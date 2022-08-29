@@ -5,11 +5,42 @@
   pic: ccb.png
   ai_pic: AI_ccb.png
 -
+  name: Charlene Tam
+  pronouns: she/her
+  artist: Claude Monet
+  pic: Charlene_Tam.JPG
+  ai_pic: AI_Charlene_Tam.png
+-
+  name: Yue Yang
+  pronouns: he/him
+  artist: 
+  pic: yue_yang.png
+  ai_pic: AI_yue_yang.png
+-
+  name: Aakash Jajoo
+  pronouns: he/him
+  artist: 
+  ai_pic: AI_kermit.png
+  pic: kermit.png
+  ai_pic: 
+-
   name: Aaraddhya Vats Thakore
   pronouns: He/Him
   artist: DALL·E
   pic: aaraddhya.png
   ai_pic: AI_aaraddhya.png
+-
+  name: Adithyakrishna Venkatesh Hanasoge
+  pronouns: He/him
+  artist: 
+  ai_pic: AI_kermit.png
+  pic: kermit.png
+-
+  name: Aditya Pratap Singh
+  pronouns: he/him
+  artist: 
+  ai_pic: AI_kermit.png
+  pic: kermit.png
 -
   name: Adwayt Nadkarni
   pronouns: he/him
@@ -20,6 +51,12 @@
   name: Akshay Manikandan
   pronouns: he/him
   artist: Ogure Ito
+  ai_pic: AI_kermit.png
+  pic: kermit.png
+-
+  name: Aman Kumar
+  pronouns: he/him
+  artist: Da Vinci
   ai_pic: AI_kermit.png
   pic: kermit.png
 -
@@ -46,12 +83,6 @@
   artist: Makoto Shinkai
   ai_pic: AI_kermit.png
   pic: kermit.png
--
-  name: Charlene Tam
-  pronouns: she/her
-  artist: Claude Monet
-  pic: Charlene_Tam.JPG
-  ai_pic: AI_Charlene_Tam.png
 -
   name: Daniel Paik
   pronouns: he/him
@@ -95,6 +126,12 @@
   pic: Hongyu_Zhang.JPG
   ai_pic: AI_Hongyu_Zhang.png
 -
+  name: Ishani Mhatre
+  pronouns: she/her
+  artist: Van Gogh
+  pic: Ishani_Mhatre.jpg
+  ai_pic: AI_Ishani_Mhatre.png
+-
   name: Jiatai Sun
   pronouns: he/him
   artist: Henri Matisse
@@ -110,8 +147,14 @@
   name: Luyuan (Jen) Gao
   pronouns: she/her
   artist: Claude Monet
-  ai_pic: AI_kermit.png
-  pic: kermit.png
+  pic: Luyuan_Gao.jpg
+  ai_pic: AI_Luyuan_Gao.png
+-
+  name: Malathy Nagalakshmi
+  pronouns: she/her
+  artist: Van Gogh
+  pic: malathy_nagalakshmi.jpg
+  ai_pic: AI_malathy_nagalakshmi.png
 -
   name: Manni Arora
   pronouns: she/her
@@ -151,7 +194,7 @@
 -
   name: Samar Haider
   pronouns: he/him
-  artist: 
+  artist: Anish Kapoor
   pic: samar_haider.jpg
   ai_pic: AI_samar_haider.png
 -
@@ -160,6 +203,12 @@
   artist: Hayao Miyazaki
   pic: Senyang_Xiao.jpg
   ai_pic: AI_Senyang_Xiao.png
+-
+  name: Shreyas Ramesh 
+  pronouns: He/him
+  artist: 
+  ai_pic: AI_kermit.png
+  pic: kermit.png
 -
   name: Thumpasery George (George)
   pronouns: he/him
@@ -170,8 +219,8 @@
   name: Vijay Koundinya 
   pronouns: he/him
   artist: Da Vinci 
-  ai_pic: AI_kermit.png
-  pic: kermit.png
+  pic: Vijay_Koundinya.jpg
+  ai_pic: AI_Vijay_Koundinya.png
 -
   name: Yelingzi(Lingzi) Liu
   pronouns: she/her
