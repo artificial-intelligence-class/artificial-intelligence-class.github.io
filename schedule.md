@@ -11,7 +11,7 @@ lecture_days: Tuesdays and Thursdays
 
 
 <div class="alert alert-info">
-You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=82b51ccf-a22c-44fb-9582-ad99000835ae">watch recordings of the live lectures</a>, or you can watch <a href="modules.html">pre-recorded lectures for each module</a>.
+You can <a href="https://upenn.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=2c9d58a6-1ad0-48c4-8e44-af0100fbe11e">watch recordings of the live lectures</a>, or you can watch <a href="modules.html">pre-recorded lectures for each module</a>.
 </div>
 
 
