@@ -135,14 +135,14 @@ Discussion Forum
 
 Time and place
 : The class meets on Tuesday/Thursday from noon-1:30pm Eastern.
-: In Fall 2022, the course will be in-person in Myerson B1 and broadcast live via Zoom. You are not obligated to attend in person.  Everyone is welcome to watch the videos from home.
+: In Fall 2022, the course will be in-person in Myerson B1. You are not obligated to attend in person.  
 : All lecture materials will be recorded and uploaded for students wishing to participate remotely.  We also have [pre-recorded lectures available for review](modules.html).
 : The first day of class is Tuesday, August 30, 2022.
 : The first day of office hours will be Tuesday, September 6, 2022.
 : The final day of class is Thursday, December 8, 2022.
 
 Masking policy
-: You must wear as mask during lectures and exams
+: You must wear a mask during lectures and exams.
 
 
 Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/423/))_
