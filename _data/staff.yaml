@@ -4,24 +4,23 @@
   artist: Frida Kahlo
   pic: ccb.png
   ai_pic: AI_ccb.png
+  extra_title: Instructor
 -
   name: Charlene Tam
   pronouns: she/her
   artist: Claude Monet
   pic: Charlene_Tam.JPG
   ai_pic: AI_Charlene_Tam.png
+  extra_title: Head TA
 -
   name: Yue Yang
   pronouns: he/him
-  artist: 
   pic: yue_yang.png
   ai_pic: AI_yue_yang.png
+  extra_title: Head TA
 -
   name: Aakash Jajoo
   pronouns: he/him
-  artist: 
-  ai_pic: AI_kermit.png
-  pic: kermit.png
 -
   name: Aaraddhya Vats Thakore
   pronouns: He/Him
@@ -31,15 +30,9 @@
 -
   name: Adithyakrishna Venkatesh Hanasoge
   pronouns: He/him
-  artist: 
-  ai_pic: AI_kermit.png
-  pic: kermit.png
 -
   name: Aditya Pratap Singh
   pronouns: he/him
-  artist: 
-  ai_pic: AI_kermit.png
-  pic: kermit.png
 -
   name: Adwayt Nadkarni
   pronouns: he/him
@@ -50,14 +43,16 @@
   name: Akshay Manikandan
   pronouns: he/him
   artist: Ogure Ito
-  ai_pic: AI_kermit.png
-  pic: kermit.png
+-
+  name: Alexander Dong
+  pronouns: he/him
+  artist: Monet
+  pic: Alex_Dong.jpg
+  ai_pic: AI_Alex_Dong.png
 -
   name: Aman Kumar
   pronouns: he/him
   artist: Da Vinci
-  ai_pic: AI_kermit.png
-  pic: kermit.png
 -
   name: Anna Orosz
   pronouns: she/her
@@ -74,14 +69,10 @@
   name: Bharath Chandan Reddy Teegala
   pronouns: he/him
   artist: Raja Ravi Varma
-  ai_pic: AI_kermit.png
-  pic: kermit.png
 -
   name: Brendan Massey
   pronouns: he/him
   artist: Makoto Shinkai
-  ai_pic: AI_kermit.png
-  pic: kermit.png
 -
   name: Daniel Paik
   pronouns: he/him
@@ -118,6 +109,11 @@
   artist: Da Vinci
   pic: Haitao_Zhu.jpg
   ai_pic: AI_Haitao_Zhu.png
+-
+  name: Hanbang Wang
+  pronouns: he/him
+  artist: Shepard Fairey
+  pic: hanbang.png
 -
   name: Hongyu Zhang
   pronouns: he/him
@@ -205,9 +201,6 @@
 -
   name: Shreyas Ramesh 
   pronouns: He/him
-  artist: 
-  ai_pic: AI_kermit.png
-  pic: kermit.png
 -
   name: Thumpasery George (George)
   pronouns: he/him
