@@ -23,7 +23,7 @@ You don't need to contact the course instructor to get permissions to register f
 
 **Step 3:** The following day you'll be asked to login to the CIS Waitlist system to answer some questions.  You can read more information about the [CIS Waitlist system here](https://advising.cis.upenn.edu/waitlist/).
 
-**Step 4:** Be Patient. The first batch of 300 permits have been issued, but we plan on issuing another batch after the semester begins.  
+**Step 4:** Be Patient. The first batch of 300 permits have been issued, but we plan on issuing a batch after the semester begins.  
 
 **Step 5:** If you have been approved for the course you will be contacted via email with how you can claim permission for the course in the Path@Penn tool and register.
 
@@ -33,11 +33,16 @@ If you're hoping to take the course but do not yet have a permit, you should com
 </div> 
 
 
+<div class="alert alert-success" markdown="1">
+Waitlist update: 350 permits have been used.  We will issue the final batch of 50 permits on Tuesday September 6, 2022.  At that point we'll notify everyone remaining on the waitlist that the class is full.
+</div>
 
+
+<!--
 <div class="alert alert-success" markdown="1">
 After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  I have increased the enrollment to allow 400 students in the class, so hopefully there will be enough room for everyone who is interested!
 </div>
-
+-->
 <div class="alert alert-info" markdown="1">
 This course is programming intensive, and requires prior Python experience and previous computer sceince courses in data structures and algorithms.  If you'd like to self-assess whether your background is appropriate, you can try out the first few homework assignments prior to the start of the class.
 </div>
