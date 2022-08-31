@@ -34,7 +34,7 @@ If you're hoping to take the course but do not yet have a permit, you should com
 
 
 <div class="alert alert-success" markdown="1">
-Waitlist update: 350 permits have been used.  We will issue the final batch of 50 permits on Tuesday September 6, 2022.  At that point we'll notify everyone remaining on the waitlist that the class is full.
+*Waitlist update:* 350 permits have been distributed.  We will issue the final batch of 50 permits on Tuesday September 6, 2022.  At that point we'll notify everyone remaining on the waitlist that the class is full.
 </div>
 
 
