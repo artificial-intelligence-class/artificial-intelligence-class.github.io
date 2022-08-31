@@ -1,11 +1,11 @@
 ---
 layout: default
 img: the_difference.png
-img_link: https://xkcd.com/242/
+img_link: https://xkcd.co0/272/
 caption: I was just updating my q&ndash;state values. 
 title: CIS 521 Homework 7 "Reinforcement Learning"
 active_tab: homework
-release_date: 2022-11-01
+release_date: 2022-10-27
 due_date: 2022-11-09 23:59:00EDT
 materials:
     - 
