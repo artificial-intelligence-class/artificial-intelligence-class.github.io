@@ -53,7 +53,7 @@ You can download the materials for this assignment here:
 
 
 <div class="alert alert-danger" markdown="1">
-The version of Python used by the autograders is Python 3.7, but Python 3.9 should be fine. Note: `math.comb` will not work for homework 2 since it's not available after python 3.8. 
+The version of Python used by the autograders is Python 3.7, but Python 3.9 should be fine. Note: `math.comb` will not work for homework 2 since it's not available after Python 3.8. 
 
 Please read each homework carefully for instructions regarding importing library. Most of the homework assignments do not allow to use numpy, pandas, etc. 
 </div>
