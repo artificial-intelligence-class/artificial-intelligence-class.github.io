@@ -15,7 +15,7 @@
 -
   name: Yue Yang
   pronouns: he/him
-  artist: 
+  artist: Jack Kirby
   pic: yue_yang.png
   ai_pic: AI_yue_yang.png
   extra_title: Head TA
@@ -28,7 +28,7 @@
 -
   name: Aaraddhya Vats Thakore
   pronouns: He/Him
-  artist: DALL·E
+  artist: Salvador Dalí
   pic: aaraddhya.png
   ai_pic: AI_aaraddhya.png
 -
@@ -41,8 +41,8 @@
   name: Aditya Pratap Singh
   pronouns: he/him
   artist: 
-  ai_pic: AI_kermit.png
-  pic: kermit.png
+  pic: Aditya_Pratap_Singh.jpg
+  ai_pic: AI_Aditya_Pratap_Singh.png
 -
   name: Adwayt Nadkarni
   pronouns: he/him
@@ -100,7 +100,7 @@
 -
   name: Devin Ma
   pronouns: he/him
-  artist: DALL·E
+  artist: Salvador Dalí
   pic: Devin_Ma.png
   ai_pic: AI_Devin_Ma.png
 -
@@ -175,6 +175,13 @@
   artist: Jackson Pollock
   pic: manni_arora.JPG
   ai_pic: AI_manni_arora.png
+-
+  name: Nagul Ulaganathan
+  pronouns: he/him
+  artist: 
+  ai_pic: AI_kermit.png
+  pic: kermit.png
+  ai_pic: 
 -
   name: Pooja Dattatri
   pronouns: she/her
