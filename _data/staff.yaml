@@ -34,13 +34,13 @@
 -
   name: Adithyakrishna Venkatesh Hanasoge
   pronouns: He/him
-  artist: 
-  ai_pic: AI_kermit.png
-  pic: kermit.png
+  artist: Claude Monet
+  pic: Adithya.jpg
+  ai_pic: AI_Adithya.png
 -
   name: Aditya Pratap Singh
   pronouns: he/him
-  artist: 
+  artist: Andy Warhol
   pic: Aditya_Pratap_Singh.jpg
   ai_pic: AI_Aditya_Pratap_Singh.png
 -
@@ -52,9 +52,9 @@
 -
   name: Akshay Manikandan
   pronouns: he/him
-  artist: Ogure Ito
-  ai_pic: AI_kermit.png
-  pic: kermit.png
+  artist: Hirohiko Araki
+  pic: Akshay_Manikandan.jpg
+  ai_pic: AI_Akshay_Manikandan.png
 -
   name: Alexander Dong
   pronouns: he/him
@@ -178,10 +178,9 @@
 -
   name: Nagul Ulaganathan
   pronouns: he/him
-  artist: 
-  ai_pic: AI_kermit.png
-  pic: kermit.png
-  ai_pic: 
+  artist: Jack Kirby
+  pic: Nagul_Ulaganathan.png
+  ai_pic: AI_Nagul_Ulaganathan.png
 -
   name: Pooja Dattatri
   pronouns: she/her
