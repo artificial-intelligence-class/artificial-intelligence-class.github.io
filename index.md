@@ -6,7 +6,7 @@ active_tab: main_page
 ---
 
 <div class="alert alert-danger" markdown="1">
-**Waitlist update**: No additional permits are available, because the class is now full. 
+**Waitlist update**: No additional permits are available, because the class is now full. The course will be offered again in Fall 2023.
 </div>
 
 
