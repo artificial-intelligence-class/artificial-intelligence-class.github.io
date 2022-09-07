@@ -54,11 +54,11 @@
   description: Python is an amazing language with a concise syntax that allows you to rapidly prototype algorithms, and we are going to use it for all the assignments in this course. This module will cover all of the fundamentals you need to get started with Python. And as we continue through the rest of the course, you’ll quickly become an expert!
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4389e5d-083e-40c7-b458-ad92011c9210
   slides: 02-Intro-to-Python.pdf
-  quiz:
-    - 
-      title: Quiz 2 "Python"
-      url: https://www.gradescope.com/courses/305169/assignments/1466690/
-      due_date: 2022-09-11 23:59:00EDT
+#  quiz:
+#    - 
+#      title: Quiz 2 "Python"
+#      url: https://www.gradescope.com/courses/305169/assignments/1466690/
+#      due_date: 2022-09-11 23:59:00EDT
   lessons:
     - 
 
@@ -95,11 +95,11 @@
   description: In artificial intelligence, a surprising number of tasks that we want to solve can be cast as search problems. In this module, we will introduce the formal definition of search problems, and examine some classic algorithms for solving search problems called shortest path algorithms. These are sometimes referred to as “uninformed” search algorithms or “blind” search algorithms, because they are run without any additional knowledge of where our goal lies. We’ll also look at some variants of these algorithms that have computational complexity guarantees.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=96480a11-edaa-4762-b5bb-ad92011c993e
   slides: 03-Search-Problems.pdf
-  quiz:
-    - 
-      title: Flashcards for Search Problems
-      url: https://remember.school
-      due_date: 2022-09-18 23:59:00EDT
+#  quiz:
+#    - 
+#      title: Flashcards for Search Problems
+#      url: https://remember.school
+#      due_date: 2022-09-18 23:59:00EDT
   lessons:
     - 
 
@@ -140,11 +140,11 @@
   description: We can often find a solution to a search problem more quickly if we have some knowledge about how close we are to a goal state. In this module we’ll look at the process of incorporating such knowledge into search algorithms, which, when used optimally, can help focus our search efforts so that we avoid exploring actions that move us further away from the goal. We’ll examine the most famous informed search algorithm, A* search, which is guaranteed to find an optimal solution first.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0bb33744-e996-401f-b2b8-ad92011ca17a
   slides: 04-Informed-Search.pdf
-  quiz:
-    -
-      title: Flashcards for Informed Search Problems
-      url: https://remember.school
-      due_date: 2022-09-25 23:59:00EDT
+#  quiz:
+#    -
+#      title: Flashcards for Informed Search Problems
+#      url: https://remember.school
+#      due_date: 2022-09-25 23:59:00EDT
   lessons:
     -
       title: Uniform-cost Search
