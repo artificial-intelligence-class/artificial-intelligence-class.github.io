@@ -5,14 +5,12 @@ img: R2D2.png
 active_tab: main_page 
 ---
 
-<!--
 <div class="alert alert-danger" markdown="1">
-**Waitlist update**: I added a second session with addition 200 spaces to the course.  That session meets Mondays and Wednesdays at 8:30am-10am in Heilmeier auditorium.  You can get a permit by signing up on [CIS Waitlist System](https://forms.cis.upenn.edu/waitlist/index.php) for CIS4210/5210-402.
-
-For  questions about the waitlist or registration, please contact Lee Dukes - ldukes@seas.upenn.edu.
+**Waitlist update**: No additional permits are available, because the class is now full. 
 </div>
--->
 
+
+<!--
 <div class="alert alert-danger" markdown="1">
 You don't need to contact the course instructor to get permissions to register for CIS 4210/5210.  Here are the steps that you should follow:
 
@@ -36,6 +34,7 @@ If you're hoping to take the course but do not yet have a permit, you should com
 <div class="alert alert-success" markdown="1">
 *Waitlist update:* 350 permits have been distributed.  We will issue the final batch of 50 permits on Tuesday September 6, 2022.  At that point we'll notify everyone remaining on the waitlist that the class is full.
 </div>
+-->
 
 
 <!--
@@ -43,10 +42,12 @@ If you're hoping to take the course but do not yet have a permit, you should com
 After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  I have increased the enrollment to allow 400 students in the class, so hopefully there will be enough room for everyone who is interested!
 </div>
 -->
+
+<!--
 <div class="alert alert-info" markdown="1">
 This course is programming intensive, and requires prior Python experience and previous computer sceince courses in data structures and algorithms.  If you'd like to self-assess whether your background is appropriate, you can try out the first few homework assignments prior to the start of the class.
 </div>
-
+-->
 
 
 
