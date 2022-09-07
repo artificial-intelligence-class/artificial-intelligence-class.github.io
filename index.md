@@ -152,37 +152,7 @@ Masking policy
 
 
 Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/423/))_
-: Monday	9-10 AM
-: Monday	7-8 PM
-: Tuesday	9-11 AM
-: Tuesday	11AM-12PM
-: Tuesday	6-8 PM
-: Tuesday	7-9 PM
-: Wednesday	9-11 AM
-: Wednesday	2-4 PM
-: Wednesday	4-5 PM
-: Wednesday	7-8 PM
-: Thursday	10-11 AM
-: Thursday	5-7 PM
-: Thursday	10-11 PM
-: Thursday	10PM-12AM
-: Friday	9-10 AM
-: Friday	11AM-1PM
-: Friday	12-2 PM
-: Friday	12-2 PM
-: Friday	2-4 PM
-: Friday	4-6 PM
-: Friday	5-7 PM
-: Friday	6-7 PM
-: Friday	6-8 PM
-: Saturday	10AM-12 PM
-: Saturday	12-1 PM
-: Saturday	1-3 PM
-: Saturday	3-4 PM
-: Sunday	9-11 AM
-: Sunday	7-9 PM
-: Sunday	9-11 PM
-: Sunday	10-11 PM
+: XXX
 
 Instructor's Group Office Hours (Recorded)
 : Thursday 2-4pm Eastern [via Zoom](https://upenn.zoom.us/j/93855856768?pwd=RnpDUXNrMnRTWGgwUk9yV1hrQjNvQT09)
