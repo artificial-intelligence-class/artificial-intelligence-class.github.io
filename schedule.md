@@ -159,7 +159,13 @@ The quiz covers:
 {% capture lecture_date %}{{lecture.date | date: "%Y-%m-%d"}}{% endcapture %}
 
 {% if lecture_date == curr_date %}
-<tr><td>{{ lecture_date | date: '%a, %b %-d, %Y' }}</td><td><span markdown="1">{{lecture.title}} [[recording]]({{lecture.recording}}) [[slides]](slides/{{slides}})</span></td></tr>
+<tr><td>{{ lecture_date | date: '%a, %b %-d, %Y' }}</td><td><span markdown="1">{{lecture.title}} [[recording]]({{lecture.recording}}) 
+{% if lecture.slides %}
+[[slides]](slides/{{lecture.slides}})
+{% else %}
+[[slides]](slides/{{slides}})
+{% endif %}
+</span></td></tr>
 {% assign displyed_lecture_info = true %}
 {% endif %}
 {% endfor %}

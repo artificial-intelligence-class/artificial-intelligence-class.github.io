@@ -89,7 +89,7 @@
 
 -
   module_number: 3
-  start_date: 2022-09-08
+  start_date: 2022-09-13
   end_date: 2022-09-20
   title: Search Problems
   description: In artificial intelligence, a surprising number of tasks that we want to solve can be cast as search problems. In this module, we will introduce the formal definition of search problems, and examine some classic algorithms for solving search problems called shortest path algorithms. These are sometimes referred to as “uninformed” search algorithms or “blind” search algorithms, because they are run without any additional knowledge of where our goal lies. We’ll also look at some variants of these algorithms that have computational complexity guarantees.
