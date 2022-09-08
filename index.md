@@ -152,13 +152,13 @@ Masking policy
 
 
 Office hours (1-on-1 on [OHQ.io](https://ohq.io/courses/423/))_
-: XXX
+: Find the full schedule [here](https://docs.google.com/spreadsheets/d/1Kjt1WfPsac2MGCL1tiBuIloBiupUozGqDBGzEywbl8E/edit?usp=sharing).
 
 Instructor's Group Office Hours (Recorded)
 : Thursday 2-4pm Eastern [via Zoom](https://upenn.zoom.us/j/93855856768?pwd=RnpDUXNrMnRTWGgwUk9yV1hrQjNvQT09)
 
 Weekly Homework Recitation
-: Fridays, Time TBD
+: Fridays from 8pm-9pm Eastern via Zoom.
 
 
 
