@@ -135,7 +135,7 @@
 -
   module_number: 4
   start_date: 2022-09-15
-  end_date: 2022-09-27
+  end_date: 2022-09-20
   title: Informed Search
   description: We can often find a solution to a search problem more quickly if we have some knowledge about how close we are to a goal state. In this module we’ll look at the process of incorporating such knowledge into search algorithms, which, when used optimally, can help focus our search efforts so that we avoid exploring actions that move us further away from the goal. We’ll examine the most famous informed search algorithm, A* search, which is guaranteed to find an optimal solution first.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0bb33744-e996-401f-b2b8-ad92011ca17a
@@ -174,7 +174,7 @@
       optional: false
 -
   module_number: 5
-  start_date: 2022-09-27
+  start_date: 2022-09-20
   end_date: 2022-10-04
   title: Games and Adversarial Search
   description: Games present an interesting challenge for artificial intelligence because they involve reasoning about what actions your opponent is likely to take. In this module we’ll talk about how to represent games as adversarial search problems, using a search tree, which assumes that your opponent is a rational actor that is trying to use the best strategy. We will also investigate a number of helpful algorithms and concepts that apply in the context of games, such as minimax and expectimax.
