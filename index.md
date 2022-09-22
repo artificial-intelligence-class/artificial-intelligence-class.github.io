@@ -5,10 +5,6 @@ img: R2D2.png
 active_tab: main_page 
 ---
 
-<div class="alert alert-danger" markdown="1">
-**Waitlist update**: No additional permits are available, because the class is now full. The course will be offered again in Fall 2023.
-</div>
-
 
 <!--
 <div class="alert alert-danger" markdown="1">
@@ -41,6 +37,14 @@ If you're hoping to take the course but do not yet have a permit, you should com
 <div class="alert alert-success" markdown="1">
 After you've added yourself to the waitlist, you'll get assigned a category based on your degree and how many years you have left at Penn.  I have increased the enrollment to allow 400 students in the class, so hopefully there will be enough room for everyone who is interested!
 </div>
+
+-->
+
+<!--
+<div class="alert alert-danger" markdown="1">
+**Waitlist update**: No additional permits are available, because the class is now full. The course will be offered again in Fall 2023.
+</div>
+
 -->
 
 <!--
