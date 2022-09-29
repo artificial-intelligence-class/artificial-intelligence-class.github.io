@@ -175,7 +175,7 @@
 -
   module_number: 5
   start_date: 2022-09-20
-  end_date: 2022-10-04
+  end_date: 2022-09-27
   title: Games and Adversarial Search
   description: Games present an interesting challenge for artificial intelligence because they involve reasoning about what actions your opponent is likely to take. In this module we’ll talk about how to represent games as adversarial search problems, using a search tree, which assumes that your opponent is a rational actor that is trying to use the best strategy. We will also investigate a number of helpful algorithms and concepts that apply in the context of games, such as minimax and expectimax.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=eb63aeeb-fecb-48c1-83ac-ad92011c8832
@@ -232,8 +232,8 @@
       optional: true
 -
   module_number: 6
-  start_date: 2022-10-04
-  end_date: 2022-10-11
+  start_date: 2022-09-27
+  end_date: 2022-09-29
   title: Constraint Satisfaction Problems
   description: In this module, we’ll look at constraint satisfaction problems (CSPs), a kind of search problem that allows us to take advantage of the problem structure. In CSPs, we have a set of variables, each of which we need to assign a value to, subject to some constraints. Through examples like map coloring and sudoku puzzles, we’ll discuss how we represent CSPs as a graph, how we propagate constraints on a partially solved graph, and how we check for consistency in nodes, arcs and paths. This will also introduce us to new concepts including inference and backtracking search.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=99c09c2a-6793-4055-bff1-ad92011c61cc
@@ -272,8 +272,8 @@
       optional: false
 -
   module_number: 7
-  start_date: 2022-10-11
-  end_date: 2022-10-18
+  start_date: 2022-10-04
+  end_date: 2022-10-11
   title: Logical Agents
   description: In this module, we will introduce a new kind of agent&colon; Knowledge-based Agents that are able to create and update a representation of the world in a knowledge base, and use inference rules and logical reasoning to draw conclusions about how the world works. This necessitates a knowledge base, a set of sentences that are written in a knowledge representation language that contain some assertions about the world. In our course, we will talk about Propositional Logic as a knowledge representation language.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f2d32758-93e6-4daf-88d1-ad92011c619a
@@ -321,8 +321,8 @@
 
 -
   module_number: 8
-  start_date: 2022-10-18
-  end_date: 2022-10-25
+    start_date: 2022-10-11
+  end_date: 2022-10-18
   title: Markov Decision Process
   description: So far, we have examined deterministic problem settings, but in this module will now turn to stochastic or probabilistic task environments. We’ll start by introducing a new kind of formalization called Markov Decision Processes (MDPs) which are useful for fully observable task environments where we have to make a sequence of decisions, and where the outcome for actions we take are non-deterministic. Looking at MDPs will also look into new algorithms, such as Policy Iteration and Value Iteration, and the important concepts v and additive rewards.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6a509bea-bd69-42a5-b3c4-ad92011c6213
@@ -431,8 +431,8 @@
 
 -
   module_number: 10
-  start_date: 2022-11-01
-  end_date: 2022-11-08
+  start_date: 2022-10-18
+  end_date: 2022-10-25
   title: Probabilities and Language Models
   description: In this module, we’ll review the basics of probability, an extremely important concept to master in artificial intelligence. We’ll review the basics of probability theory, including the axioms of probability, what an event is, what a probabilistic model is, and much more. To show some practical applications of these concepts, we’ll take a look at something called probabilistic language models, which power things like autocomplete on your smartphone.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=65f83e72-f842-4efa-818e-ad92011c6b9d
