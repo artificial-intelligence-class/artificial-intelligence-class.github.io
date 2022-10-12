@@ -59,6 +59,12 @@ Please read each homework carefully for instructions regarding importing library
 </div>
 
 
+<div class="alert alert-success"  markdown="1">
+If you are a newcomer to Python or if you need a refresher, we recommend that you enroll in [Penn's free Introduction to Python Programming course on Coursera](https://www.coursera.org/learn/python-programming-intro). Another useful resource is this recitation on [Debugging and Profiling in Python](https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=99b8b4a1-c303-4823-8a1c-adb0016d4c22) by Arun Kirubarajan.
+</div>
+
+
+
 Homework 1: Python Skills [100 points]
 =============================================================
 
