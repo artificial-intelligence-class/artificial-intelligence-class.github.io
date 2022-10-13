@@ -319,7 +319,7 @@
       optional: false
 -
   module_number: 8
-  start_date: 2022-10-11
+  start_date: 2022-10-13
   end_date: 2022-10-18
   title: Markov Decision Process
   description: So far, we have examined deterministic problem settings, but in this module will now turn to stochastic or probabilistic task environments. We’ll start by introducing a new kind of formalization called Markov Decision Processes (MDPs) which are useful for fully observable task environments where we have to make a sequence of decisions, and where the outcome for actions we take are non-deterministic. Looking at MDPs will also look into new algorithms, such as Policy Iteration and Value Iteration, and the important concepts v and additive rewards.
@@ -428,8 +428,8 @@
       optional: false
 -
   module_number: 10
-  start_date: 2022-10-18
-  end_date: 2022-10-25
+  start_date: 2022-11-01
+  end_date: 2022-11-08
   title: Probabilities and Language Models
   description: In this module, we’ll review the basics of probability, an extremely important concept to master in artificial intelligence. We’ll review the basics of probability theory, including the axioms of probability, what an event is, what a probabilistic model is, and much more. To show some practical applications of these concepts, we’ll take a look at something called probabilistic language models, which power things like autocomplete on your smartphone.
   intro_video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=65f83e72-f842-4efa-818e-ad92011c6b9d
