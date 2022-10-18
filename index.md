@@ -149,7 +149,8 @@ Time and place
 : All lecture materials will be recorded and uploaded for students wishing to participate remotely.  We also have [pre-recorded lectures available for review](modules.html).
 : The first day of class is Tuesday, August 30, 2022.
 : The first day of office hours will be Tuesday, September 6, 2022.
-: The final day of class is Thursday, December 8, 2022.
+: The final day of lecture will be Thursday, December 8, 2022.
+: Midterm 2 will be held in-person on December 15, 2022.
 
 Masking policy
 : You must wear a mask during lectures and exams.
