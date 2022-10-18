@@ -132,7 +132,7 @@ Extra Credit Bounty Items:
 Course number
 : CIS 4210/5210 - Artificial Intelligence
 
-Prerequeisites
+Prerequisites
 : CIS 121 (for undergraduates)
 : CIT 594 and CIT 596 (for MCIT students)
 : A data structure and algorithms course, plus substantial programming experience (for everyone)
