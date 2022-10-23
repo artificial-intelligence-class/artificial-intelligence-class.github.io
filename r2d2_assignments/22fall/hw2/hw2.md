@@ -6,8 +6,8 @@ caption: import soul
 title: CIS 521 Robot Excercise 2 "Robot Navigation" (Extra Credit)
 attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2020 by Yue Yang, Hanbang Wang, Joe Cappadona, and Chris Callison-Burch.
 active_tab: homework
-release_date: 2021-10-19
-due_date: 2021-11-04 23:59:00EDT
+release_date: 2022-10-19
+due_date: 2022-11-04 23:59:00EDT
 materials:
     - 
         name: skeleton file
@@ -24,7 +24,7 @@ materials:
     -
         name: AprilTag
         url: AprilTag.pdf
-submission_link: https://www.gradescope.com/courses/160263
+submission_link: https://www.gradescope.com/courses/435113/assignments/2366536
 ---
 
 <!-- Check whether the assignment is ready to release -->
