@@ -484,17 +484,69 @@
 #      due_date: 2022-11-13 23:59:00EDT
   lessons:
     -
-      title: Review of Independence
-      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3c6e23c8-b6ac-45d3-b82a-ad9a00130657
-      length: 9 minutes 
+      title: Probablistic Reasoning and Bayes Nets
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aa502413-0862-456d-ac1a-aef6012c42cf
+      length: 3 minutes 
     -
-      title: Bayes Net Properties
-      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2b54119e-425c-4b63-b61e-ad9a0013067f
-      length: 15 minutes 
+      title: Introduction to Independence
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ca5b7860-8a5e-4398-9be6-aef6012c42c1
+      length: 10 minutes 
+    -
+      title: Conditional Independence
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9c04a8ac-4dff-4476-8aa5-aef6012c42c6
+      length: 7 minutes 
+    -
+      title: The Chain Rule
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9afaccc8-24d4-45bd-8f90-aef6012c42cc
+      length: 5 minutes 
+    -
+      title: Bayes Nets Examples 
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b19f8abd-7190-4d1f-bce5-aef6012c60bf
+      length: 5 minutes 
+    -
+      title: Graphical Model Notation and Examples
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1563ba95-9d67-4a62-9542-aef6012c6edb
+      length: 7 minutes 
+    -
+      title: Alarm Network Example
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=33e723a7-1ecf-4f8d-89e9-aef6012c82b1
+      length: 2 minutes 
+    -
+      title: Bayes' Nets Probabilities
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=50b6a20a-bb98-480d-9141-aef6012caa1a
+      length: 8 minutes 
+    -
+      title: Examples of Bayes' Nets Probabilities
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=50b6a20a-bb98-480d-9141-aef6012caa1a
+      length: 8 minutes 
+    -
+      title: Causality
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=590946c8-35dd-44df-ba8b-aef6012cbf60
+      length: 6 minutes 
+    -
+      title: Size of Bayes Nets Probability Tablees
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=42802ae4-0591-44d2-8335-aef6012ce3dc
+      length: 2 minutes 
+    -
+      title: Conditional Independence in Bayes Net
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b04877f6-fdea-4a67-8bef-aef6012ce6c9
+      length: 5 minutes 
+    -
+      title: Causal Chains
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d816070b-f1c2-4b75-bab8-aef6012cf70c
+      length: 5 minutes 
+    -
+      title: Common Cause
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e5f22c7f-981f-4304-b214-aef6012d0929
+      length: 5 minutes 
+    -
+      title: Common Effect
+      video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3f9079ce-7f89-4614-bed2-aef6012d0efd
+      length: 3 minutes 
     -
       title: Reachability and Paths
       video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7c77b6e8-c47c-4a98-a6b0-ad9a001306f3
-      length: 6 minutes 
+      length: 7 minutes 
     -
       title: The D-Separation Algorithm
       video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=16c81582-a403-48dd-801a-ad9a001306b4
@@ -502,7 +554,7 @@
     -
       title: Inference
       video: https://upenn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c69bb4e0-34d0-438d-9a78-ad9a00dccb17
-      length: 11 minutes 
+      length: 8 minutes 
   readings:
     - 
       title: Russell and Norvig, AIMA Chapter 13 "Probabilistic Reasoning" (13.1, 13.2, 13.3)
