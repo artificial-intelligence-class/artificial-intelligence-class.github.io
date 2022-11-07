@@ -5,13 +5,13 @@ img_link: https://www.pinterest.com/pin/341851427962125071/?nic=1
 caption: Darth Vader Copyright&#58; Pinterest
 title: CIS 521 Robot Exercise 3 "R2-D2 Battle" (Extra Credit)
 active_tab: homework
-release_date: 2021-11-8
-due_date: 2021-11-18 23:59:00EST
+release_date: 2022-11-06
+due_date: 2022-11-23 23:59:00EST
 materials:
     - 
         name: skeleton file
         url: r2d2_hw3.py
-submission_link: https://www.gradescope.com/courses/160263
+submission_link: https://www.gradescope.com/courses/435113/assignments/2417456
 ---
 
 <!-- Check whether the assignment is ready to release -->
