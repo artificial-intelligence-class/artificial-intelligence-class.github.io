@@ -20,6 +20,13 @@
   ai_pic: AI_yue_yang.png
   extra_title: Head TA
 -
+  name: Brendan Massey
+  pronouns: he/him
+  artist: Makoto Shinkai
+  ai_pic: AI_kermit.png
+  pic: kermit.png
+  extra_title: Head TA
+-
   name: Aakash Jajoo
   pronouns: he/him
   artist: 
@@ -77,12 +84,6 @@
   name: Bharath Chandan Reddy Teegala
   pronouns: he/him
   artist: Raja Ravi Varma
-  ai_pic: AI_kermit.png
-  pic: kermit.png
--
-  name: Brendan Massey
-  pronouns: he/him
-  artist: Makoto Shinkai
   ai_pic: AI_kermit.png
   pic: kermit.png
 -
