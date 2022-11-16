@@ -6,7 +6,7 @@ caption: Machine Learning
 title: CIS 521 Homework 9 "Perceptrons"
 active_tab: homework
 release_date: 2022-11-09
-due_date: 2022-11-23 23:59:00EDT
+due_date: 2022-12-07 23:59:00EDT
 materials:
     - 
         name: skeleton file
