@@ -5,7 +5,7 @@ img_link: https://me.me/i/never-take-off-your-mask-a0dd567eaa6841d2b636ce50836be
 caption: Never take off your mask Copyright&#58; me.me
 title: CIS 521 Robot Exercise 4 "R2-D2 Face & Mask Detection" (Extra Credit)
 active_tab: homework
-release_date: 2022-12-20
+release_date: 2022-11-21
 due_date: 2022-12-7 23:59:00EST
 materials:
     - 
@@ -28,7 +28,7 @@ materials:
         url: rpi_sensor.py
     
         
-submission_link: https://www.gradescope.com/courses/160263
+submission_link: https://www.gradescope.com/courses/435113/assignments/2454511
 ---
 
 <!-- Check whether the assignment is ready to release -->
