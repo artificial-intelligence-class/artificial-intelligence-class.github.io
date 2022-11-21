@@ -77,7 +77,7 @@ The COVID-19 spreads to the whole Galaxy, the planet where R2D2 lives included. 
 ## Instruction
 This assignment consists of 2 parts. In part 1, you will learn how to use [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis) to implement a face detector. 
 
-While for part 2, you will utilize the Convolutional Neural Network (CNN) to conduct a mask classification which is closely related to the pandemic we are experiencing.
+While for part 2, you will utilize the Convolutional Neural Network (CNN) to conduct a mask classification.
 
 A skeleton notebook [r2d2_hw4.ipynb](r2d2_hw4.ipynb) containing empty definitions for each question has been provided. Please do not change any of that. Since portions of this assignment will be graded automatically, none of the names or function signatures in this file should be modified. However, you are free to introduce additional variables or functions if needed. You could use the [Google Colab](https://colab.research.google.com/) to edit the notebook file and conduct the training using the free GPU from Google. 
 
