@@ -40,6 +40,14 @@ readings:
    year: 2022
    type: paper
    url: https://arxiv.org/abs/2110.08207
+
+-
+   title: Truth, Lies, and Automation How Language Models Could Change Disinformation
+   authors: Ben Buchanan, Andrew Lohn, Micah Musser, Katerina Sedova
+   venue: arXiv
+   year: 2021
+   type: paper
+   url: https://cset.georgetown.edu/publication/truth-lies-and-automation/
 ---
 
 <!-- Check whether the assignment is ready to release -->
@@ -79,6 +87,7 @@ You can download the materials for this assignment here:
 
 </div>
 {% endif %}
+
 
 
 
