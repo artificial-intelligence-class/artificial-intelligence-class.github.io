@@ -8,7 +8,7 @@ title: CIS 521 Robot Excercise 5 "Commanding Robots with Natural Language" (Extr
 attribution: This homework assignment was developed for UPenn's Artificial Intelligence class (CIS 521) in Fall 2019 John Zhang, Calvin Zhenghua Chen, and Chris Callison-Burch with help from Yrvine Thelusma and redesigned by Chenyu Liu, Jiaqi Liu and Yue Yang.
 release_date: 2022-12-04
 due_date: 2022-12-13 23:59:59EST
-submission_link: https://www.gradescope.com/courses/435113/assignments/247962
+submission_link: https://www.gradescope.com/courses/435113/assignments/2479627
 materials:
     - 
       name: notebook
