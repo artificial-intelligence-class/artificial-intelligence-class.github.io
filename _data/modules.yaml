@@ -716,3 +716,13 @@
       authors: Jurafsky and Martin
       url: https://web.stanford.edu/~jurafsky/slp3/6.pdf
       optional: false
+    - 
+      title: Ethical and social risks of harm from Language Models
+      authors: Laura Weidinger, John Mellor, Maribeth Rauh, Conor Griffin, Jonathan Uesato, Po-Sen Huang, Myra Cheng, Mia Glaese, Borja Balle, Atoosa Kasirzadeh, Zac Kenton, Sasha Brown, Will Hawkins, Tom Stepleton, Courtney Biles, Abeba Birhane, Julia Haas, Laura Rimell, Lisa Anne Hendricks, William Isaac, Sean Legassick, Geoffrey Irving, Iason Gabriel
+      url: https://arxiv.org/abs/2112.04359
+      optional: true
+    - 
+      title: Limits and Possibilities for “Ethical AI” in Open Source&colon; A Study of Deepfakes
+      authors: David Gray Widder, Dawn Nafus, Laura Dabbish, James Herbsleb
+      url: https://dl.acm.org/doi/pdf/10.1145/3531146.3533779
+      optional: true
