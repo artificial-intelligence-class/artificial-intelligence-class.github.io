@@ -62,6 +62,13 @@ The course is done!  Please fill out this [end of semester survey](https://docs.
 </div>
 
 
+
+<div class="alert alert-danger" markdown="1">
+
+This website is no longer being maintained.  We migrated all course materials for CIS 4210 / 5210 onto [canvas.upenn.edu](https://canvas.upenn.edu)
+
+</div>
+
 <!-- Display an alert about upcoming quizzes -->
 {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
 {% for module in site.data.modules %}
