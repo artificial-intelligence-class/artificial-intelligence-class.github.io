@@ -74,6 +74,24 @@ Warning: this assignment is out of date.  It may still need to be updated for th
 
 
 
+
+
+
+
+
+{{page.type}} {{page.number}}: {{page.title}}
+=============================================================
+
+In this homework assignment, you will explore how AI systems can enhance learning and deepen your understanding of course material. You'll work with AI tools to process, analyze, and create educational content while developing critical thinking skills about AI's role in education.
+
+## Objectives
+- Transform lecture content into structured educational materials
+- Engage critically with philosophical texts about AI
+- Design assessment materials
+- Envision the future of AI-enhanced educational tools
+
+
+
 {% if page.models %}
 <div class="alert alert-info">
 You can pick one or more of these models to use for this homework:
@@ -85,21 +103,6 @@ You can pick one or more of these models to use for this homework:
 </div>
 {% endif %}
 
-
-
-
-
-
-{{page.type}} {{page.number}}: {{page.title}}
-=============================================================
-
-In this homework assignment, you will explore how AI systems can enhance learning and understanding of course material. You'll work with AI tools to process, analyze, and create educational content while developing critical thinking skills about AI's role in education.
-
-## Objectives
-- Transform lecture content into structured educational materials
-- Engage critically with philosophical texts about AI
-- Design assessment materials
-- Envision the future of AI-enhanced educational tools
 
 ## Part 1: Creating Enhanced Lecture Notes
 Using an AI system, convert the transcripts from Lectures 1 and 2 into well-organized, textbook-style notes. Your notes should:
