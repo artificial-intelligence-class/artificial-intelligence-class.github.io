@@ -185,7 +185,7 @@ AI-Enhanced Proposal:
 1. Enhanced Lecture Notes (PDF)
    - Lecture 1 and 2 content
    - Glossary of terms
-   - Documentation of which AI system you used and how you prompted it to create your lecture notes
+   - Documentation of which AI system(s) you used and how you prompted it to create your lecture notes
 
 2. Philosophical Dialogue (PDF)
    - Complete dialogue transcript with AI
