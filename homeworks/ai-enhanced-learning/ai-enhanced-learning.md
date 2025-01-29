@@ -150,18 +150,18 @@ You can download the philosophic essays here:
 ## Part 3: Assessment Design
 Create assessment materials that target key learning objectives from the lectures:
 
-Multiple Choice Questions (5):
+Multiple Choice Questions (create 5):
 - Each question should include:
   - Clear question stem
   - One correct answer
   - 3-4 plausible distractors
   - Explanation of why the correct answer is right and why others are wrong
 
-Short Answer Questions (5):
+Short Answer Questions (create 5):
 - Questions answerable in 1-2 sentences
 - Sample answers demonstrating expected depth and specificity
 
-Essay Question (1):
+Essay Question (create 2):
 - Question requiring 1-2 paragraphs of analysis
 - Sample answer showing expected depth and reasoning
 - Detailed grading rubric with clear criteria
