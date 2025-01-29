@@ -2,7 +2,7 @@
 layout: default
 img: ai_methodology.png
 img_link: http://chatgpt.com
-caption: Test
+caption: Let's use AI!
 title: AI-Enhanced Learning 
 type: Homework
 number: 1
@@ -165,6 +165,8 @@ Essay Question (create 2):
 - Question requiring 1-2 paragraphs of analysis
 - Sample answer showing expected depth and reasoning
 - Detailed grading rubric with clear criteria
+
+If you would like some tips on writing good assessment materials, you can look up [Bloom's Taxonomy](https://en.wikipedia.org/wiki/Bloom's_taxonomy).
 
 ## Part 4: Smart Textbook Concept
 Develop a vision for an AI-enhanced "smart textbook" of the future.
