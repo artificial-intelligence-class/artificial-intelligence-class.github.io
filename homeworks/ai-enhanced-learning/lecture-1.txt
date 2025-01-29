@@ -1,0 +1,420 @@
+Lecture 1: CIS 3990 - 2025-01-15 - Course Intro + AI in Philosophy and SciFy
+
+All right, we can get started. Hi everyone. I am Professor Chris Callison-Burch. Welcome to. My experimental new artificial intelligence class. If you are here and don't have a permit, I'm not 100% sure how many permits I'll make available, but I should be able to let you know by Monday. So just make sure you're on the wait list.
+
+You can bug me over the weekend via email and say how much you loved the class, how inspired you were by all the silly AI and philosophy stuff that I covered today, et cetera, et cetera. And we'll try to get you in. So just a quick intro to myself.  I, my name is Chris Callison-Burch. I have a complicated two part last names. So lots of people frequently get it wrong. Callison-Burch is my last name, not just Burch. You're welcome to call me Professor Callison-Burch. If that's too long. You can call me Chris. I grew up in California where we're very informal, so happy to respond to that.
+
+Also, because I have such a weird last name I often just get abbreviated down to my initial CCB. That's totally fine as well. So I am,  uh, a professor in the computer and information science department. I teach a number of different classes. For the past many years I've been teaching the graduate level version of artificial intelligence, CIS 52 10.
+
+Because we've launched this awesome new AI undergraduate major here at Penn. I thought it would make sense to redesign the AI course to be available to freshmen and sophomores in the major. It doesn't really make sense to major in AI and have to wait all the way until you're a senior in order to take artificial intelligence.
+
+So this semester is my inaugural attempt at doing that revamping so that it doesn't require all the prerequisites and all the background knowledge that I can presuppose if I'm teaching it to seniors and to master's students.  In addition to 52 10, I also teach 5,300, which is our natural language processing class. 
+
+And I teach some special topics classes, which you could take later on in your careers. So in the, the course numbers that you have roughly correspond to like what year you are in your studies. So 100 level classes are for freshmen, 200 for sophomores, 300 for juniors, et cetera. So 500 is masters, so 700 or 7,000 and 8,000.
+
+You gotta be here for a long time before you get access to those classes, but we take, we take younger folks too. Anyway, I've taught a really fun class on using LLMs for creating interactive fiction, text-based video games. I love that one. I teach it periodically every couple of years and it's really neat to see what kind of projects students can do based on the advances over those couple of years by the AI technology.
+
+Last semester I did an experimental research practicum class where I took 50 students mainly master students, and broke them up into teams of five to seven students. And we developed research ideas all the way from the initial idea through like doing a literature review and a problem formulation and figuring out how to write a research paper.
+
+So if you get interested later on and potentially doing research and artificial intelligence or natural language processing, happy to pull you into that kind of class later on. So all of your professors here at Penn, in addition to being instructors for your courses, have secret lives as researchers.
+
+That's actually like why we get hired to be professors here at Penn. So you'll have to forgive us if we are. Not always perfectly polished teachers because the set of skills that you need to be a good researcher versus the set of skills that you need to be a good course instructor are actually quite a bit different.
+
+So it takes a long time for folks to get up to speed on how to be an interesting, compelling lecturer. So my secret life as a researcher involves mentoring about 10 PhD students at the moment. And we do projects related to natural language processing and large language models. And NLP focuses on exactly the kinds of things that we're all excited about at the moment with chat GPT and Claude and all these great advances in.
+
+Systems that can use human languages. And so I'm also really interested in seeing if you can fuse together the abilities of these large language models with, with more classic techniques from artificial intelligence that involves more formal reasoning. So we're gonna touch on both of those topics during the class this semester. 
+
+So,  as I mentioned, this is a new class, so I just wanna put up a big disclaimer at the start. A big warning, a big like nutrition label saying this is gonna be rough, right? Like, it's gonna be rough around the edges. I am making up this class as we go along, so you should know what you're getting into before you decide to take this class.
+
+It's go, it's the the co like my correct branding for what you are is. The inaugural class for this, my incorrect branding that I workshopped and dis and threw away is like, you're my Guinea pigs, you're my vaa testers, right? Like, there's gonna be some, there's gonna be a lot of roughness. The materials from my other courses have been tested with being taught a dozen times and we've refined all the homework assignments and we know, I know all the lecture materials, cold, all that sort of stuff.
+
+This is, you know, like we'll be hot off the presses probably created the same day that I deliver the materials to you. So there's undoubtedly going to be rough edges things that are unclear about the homework, assignments, all that sort of thing. So if that is not for you, no problem. You can come back, take the class next year.
+
+This first group that sticks around will help make it more polished and more refined, and we'll figure out like the right way to teach it.  But if you're willing to stick with me and. Be part of that inaugural class and bring a little bit of the spirit of like wanting to do something new and wanting to help improve something.
+
+You're 100% welcome to be here. You can give me feedback straight, like I am 100% happy to hear constructive feedback where you're like, Hey, this is, this is not fair. Or This assignment took me 40 hours when it should have taken me five hours. All these sorts of things are useful feedback. If you wanna leave feedback anonymously, I have this QR code.
+
+I'll also put it a link up on the Canvas site when we launch it. You're welcome to like, give anonymous feedback. If you want to be candid and don't want it traced back to you, that's also totally fine. Alright, so given that this, this is under development I am.  Kind, I am likely to rearrange some of the schedule or drop some of the topics and replace them with others or not deliver fully on what I'm hoping to.
+
+But here's a rough idea of what I'm hoping to teach you over the course of this semester. So today we're gonna talk about like, what is artificial intelligence? And we're gonna look at it from two really fun perspectives. We're gonna think about how have philosophers thought about the notion of artificial intelligence?
+
+And we're also gonna look at artificial intelligence through the lens of science fiction. What do people who speculate about the future of technology think, or what did they think in the past might be possible today? And how close are we to realizing those visions? Next week we'll continue that into some formal thinking about different kinds of artificial intelligence systems, like what it means to be a.
+
+Agent that reasons about the world and makes a plan. And do we want AI systems that simply think and act humanly or do we want them to do something beyond what we are capable of doing or maybe that we're good at doing in terms of being able to think ahead and make plans and optimize for things that maybe we're not as good at doing. 
+
+Then because chat, GPT LLMs are all their age, and because I love NLP, we're going to do a pretty deep dive into that kind of technology. So in my graduate level class, like we get to that, but only at the end. So this is a new turn for me, I'm saying. Let's just start with that because that's part of the reason I think everyone's excited about being here and learning about ai.
+
+So we're gonna talk about large language models and neural language models, and we're gonna talk about the recent history of those things and maybe give you a little bit of context for the less recent history of where they came from. They seem to have like just emerged miraculously over the past two or three years, but they actually have a multi-decade history.
+
+So we'll learn about that. We'll learn about different elements of how we can use language models and these things change over time. So we'll see like how we went from an LLM being essentially like a super sophisticated auto complete for your phone to one that can now follow your instructions.
+
+We'll also talk about different techniques for how people have used them in terms of their abilities to reason and to make predictions based on the context that you provide. We'll talk about the problem of alignment in ai, which is like, how do we try to get these systems to perform in a way that aligns with our societal values.
+
+Then we'll get into some more recent topics like multimodal language models that can take not only text as input, but can also take images. We'll talk a little bit about current topics like retrieval, augmented generations where you can pull in documents and summarize them, and that helps with a lot of things.
+
+We'll even hopefully look a little bit at code generation with language models, instead of just generating natural language, we'll look at language models that can write Python code for you. The next set of modules that I have planned are, we're gonna look at some of the core algorithmic things that I think are important for artificial intelligence and that will hopefully be a good accessible starting point for people who are getting onboarded into the major.
+
+So one of the things I'll we'll look at are algorithms for.  Comparing vectors and we'll look at how vectors have been used to represent words or sentences or other kinds of language meaning. And then we'll implement a cane yours neighbors algorithm. So if I give you a vector that represents the meaning of the word dog, you'll be able to find all the other vectors that are close to that in vector space that have similar meanings, and we might look at document based vectors and other sorts of things like that.
+
+After we do that, we're gonna start talking about robots. And so I have this awesome collection of.  Actually, I think I have about 200 of these little R 2D twos. These are from a company called Sphero that normally makes the little ball shaped robots that are designed to introduce younger students to robotics.
+
+So normally they have a, like drag and drop, drop, like scratch based structured program. We have hacked them so that you can program them with Python. And then one of my PhD students like designed this little 3D printed sensor pack that we add to them to give the robots additional capabilities.
+
+Like there's a little ultrasonic range finder, there's a little cliff detector and a camera that are powered by this raspberry pie.  It's been a, so I originally got these for the graduate course thinking that it would be a really fun way of making AI hands-on. And I, I bought. Again, 200 of these robots when they were being discontinued by the manufacturer.
+
+So they went from like  $250 a piece down to $40 a piece thinking I could have one robot per student. It's gonna be great. We did that for a couple of years and then the class size kept growing to the point where I couldn't do that anymore. So the, these have been in mothballs a little bit, so we're gonna have a little bit of a effort to see if we can get them rebooted and being used again.
+
+But we should have a lot of fun programming our little R 2D two pals here. We might use this as an opportunity to see how LLMs can generate codes. So if we give you an API  for the robot,  can you say something like, Hey set your little front light to be purple and we'll see if the LLM can help.
+
+Translate that into a bit of executable code that could actually be run on the system. We'll then use the robots to jump off to the place that I normally start out in, in the graduate level AI class, which is search algorithms. So a very classical problem in computer science that you will get really in the weeds of when you take an algorithms class are shortest paths, algorithms.
+
+So these were invented in part for artificial intelligence and robots. Like if you want your robot to find its way through a room to go deliver a sandwich to someone, you want it to find the most efficient route to get there. And so search algorithms are the mechanism by which we do that. So I feel like AI and algorithms are sort of like.
+
+In high school, if you take calculus and physics at the same time, you get a deeper understanding of both. You're like, Hey, why was calculus invented? Oh, now I see. So like if you take artificial intelligence, you're like, oh, this is why I care about dykstras algorithms and breadth first search and depth first search, and stuff like that.
+
+So hopefully it'll set you up to understand algorithms even deeper.  We'll then look at sophisticated algorithms. So there's a classic search algorithm called a star search which was actually invented by a professor at Stanford who I took artificial intelligence from. So I'm loving whenever I get to teach this, I think of the professor that I took this class from will then.
+
+Now is when the set of modules become lesser. We're heading far enough into the future that these are now likely to change. So we'll hopefully look at some classical planning algorithms. So these are an application of the search algorithms. So if you wanna make a plan that doesn't just involve navigation, but involves a series of steps where you have to have something in place in order to do something else, like in order to go through a door, you have to make sure that it's unlocked.
+
+In order to unlock the door, you have to have a key, like there's all these preconditions before you can take certain actions. Assembling a sequence of actions where you've met all the preconditions in the correct order is a classical planning algorithm. So hopefully we'll get a little bit into that.
+
+That's more of the symbolic ai that current LLM type models are not good at. Or at least they're not designed around.  And so we'll learn that then we will learn something.  Could be could be machine learning, it could be reasoning under uncertainty and probabilities. Still working on exactly what we'll do.
+
+I have placeholders right now. Reinforcement learning and a topic that leads into reinforcement learning, which is like called markoff decision processes. These are for planning in an uncertain environment. So I said earlier that you come up with a plan. It's like a sequence of steps. In order to reach a goal, you need preconditions to be met.
+
+If there's some level of uncertainty.  Like the steps are not deterministic, then you need something other than just a deterministic sequence of steps in order to reach that goal. So MDPs are the, a mechanism for creating a kind of plan that grapples with the uncertainty of the world. Maybe we'll talk about that.
+
+Maybe we'll talk about something else  then. I think it's really important to talk through like ethics and societal implications of ai. I'll try to figure out a way of getting that interwoven with the course as a whole so we don't just like save it till the end and then say, oh by the way, AI is gonna take all your jobs and good luck once you graduate.
+
+We'll try to like keep that as part of the ongoing discussion in the class. If you see things in the news that pique your interest, I encourage you to post them on the discussion forum or come to office hours. And we'll discuss those as well. 'cause I think it's really important to engage with.
+
+The societal implications of ai.  Okay, so assessment also super rough, right? Like I, I hired like  eight TAs, which I think is like roughly one TA for per six students or something like that. So we are all designing materials right now to figure out how we're gonna grade you. So my advice is don't sweat it.
+
+The grades will be fair. They'll be pretty generous. Like if you try your hardest and actually do everything, you'll do fine. There's gonna be a mix of homework assignments, which will be some programming assignments in Python. There'll be some writing assignments where I ask you to reflect on the course materials.
+
+In my other classes, which are much bigger, like the AI graduate level class, often have between 300 and 600 students enrolled. I mainly do homework assignments that are auto graded. So you can submit a solution and it could say, Hey, you currently got a 60% on the homework. We're probably not gonna have any of those types of things in place for this class.
+
+It'll be manually graded and you won't get the instantaneous feedback. Again, if that's not your cup of tea, you don't have to take the class. This term. We'll try to do quizzes and midterms and a final in the class, and then I want people to show up and be part of the class and be here. And I encourage you to ask questions.
+
+So anytime something comes in your mind, feel free to raise your hand and interrupt. It makes the class a lot more fun if it's interactive, and I invite you to ask questions if there's anything that's unclear and you want it clarified. Be brave and ask, because if you are thinking it, probably a quarter of the rest of the class is also wondering like, what the hell is this?
+
+And so be brave and it'll be beneficial for everyone.  Okay, one last thing and then I'll take a breath and  invite questions. So the AI policy in this class is we are going to use ai,  okay? Like we are gonna use AI to do the written homework assignments. You are gonna use AI to write your code. This is gonna be different than the policies that you have in many of your other classes, right?
+
+So I want you to have a chance to experiment with ai, see what works, see what doesn't. Other professors have different philosophies and you should follow their philosophies when you are in their class. The kind of guiding principle that I have is ai, using it for your assignments is acceptable. If it helps deepen your understanding,  right?
+
+So if you engage with it in a critical way or you have it help improve your thinking and you get feedback from it that you consider carefully and incorporate awesome. If you do it in an unthinking way that reduces the amount of critical thinking that you do or engagement with the material, then  you're not getting anything, right.
+
+The purpose of  an education in a place like Penn is to go deep and to learn things. So if you submit something that's AI generated that you haven't considered,  you've failed yourself and you failed the university. So that's my guiding light behind this. And then we will try to work out like how to action, how to do this in an actionable fashion. 
+
+As we go, if you have any questions, we can always ask. I'm airing on the side of encouraging you, you to use the AI systems that are available so that you can figure out how to use them, because I think they're gonna be part of everyone's careers.  Alright, I think I am going to pause there and take a breath and see if anyone has any questions so far?
+
+Yeah.  Which, which AI do you think is the best?  Oh, yeah, that's a great question. For the ais that are commercially available, IUI personally use a lot. My current favorite is Claude. But I also really like Notebook LM from Google. I might actually try to design the first homework assignment to be one where you use Notebook, lm, because I feel like it does a really good job of.
+
+Having you intentionally collect a set of materials that you upload to it, and then you discuss those materials with it. So it actually kind of fits my mental model of what makes a good ai, but I experiment with everything. So I use chat, GPTI I use journey. I use Dolly. I use SUNO for generating music.
+
+I use everything. So I, I love experimenting with it and it's a ton of fun.  How about you? Who uses chat? GPT. How  about Claude  Claude's. Awesome. You should try it. Anyone, has anyone tried out SUNO the music generator?  That's great. I, I am a,  I got I, I got myself invited as a campus influencer for pseudo, which is 100% not like the old 40 something dude model that they have in mind.
+
+But I'll send you a, I'll send you a referral, like it's really fun. It's really fun. Anyone else have any fun AI that they enjoy using  Sora? Yeah. Yeah. IJ Sora is great. I just tried experimenting with it. Two summers ago I took a course on using AI for filmmaking just for fun. And so I to see the advancement just over that, like 18 month time is really, really, really cool. 
+
+Anyone else have a fun one that they use?  We can also consider like doing an assignment where we do something creative with ai. I'm a total fan for that.  Okay, so so what is artificial intelligence? So there's lots of different ways of thinking about artificial intelligence. This is like breaking it up into a quad chart along two different dimensions.
+
+So you can think of artificial intelligence potentially as the science of trying to make machines that think humanly, which arguably maybe an LLM is a good example of, or that act humanly. So if you wanna build a humanoid robot that's able to respond in a way that a human would be able to, to fold your laundry or cook you dinner or something like that, then maybe.
+
+You're trying to design a machine that acts like a person could.  Then there's another dimension, which is maybe we don't want a machine that like precisely follows how humans do things. Maybe we want something that acts or thinks in a rational fashion. So we might have a fun conversation about the extent to which we think humans act rationally.
+
+I think there's lots of interesting arguments  for one side or the other. But those are two high level ways of breaking down the problem.  It's not just like the science of designing those machines. I think artificial intelligence has become this really, really big societal thing that touches on so many different dimensions.
+
+So we can study artificial intelligence from many, many different angles. We can think about the. Optimization problems involved with building a deep neural network that underpins the transformer model for a large language model. We can think about hardware considerations, where we wanna rate programs that are optimized to use GPUs and data centers.
+
+But we can also think about things on a much higher level, like societal impact. So we can think about what are the implications of being able to automate work. We can think about what are the implications of being able to generate something that is a imitation of someone else. All these sorts of things.
+
+Then touch on issues of society and policy and governance in a way that's super interesting. So when Chat GPT came out, I was on sabbatical, I. And had extra time. So I basically would talk to anyone who was interested in learning about what are large language models and what are they not. So I  gave tons of talks including testifying before the US House of Representatives.
+
+So if you're interested in checking out, me chatting with Congress people about ai I clipped a bunch of little snippets from the conversation that we had, and they're on my YouTube channel, so like, and subscribe everyone. Okay. So we're gonna hop into today's topic, which is gonna be looking at artificial intelligence from the perspective of philosophy and then also looking at how AI has been represented in movies and science fiction.
+
+So, one of our earliest thinkers about ai is Rene Descartes. So, you know you probably know Rene Descartes from geometry and like Cartesian coordinates and things like that. He also thought about the philosophy of the mind. So he had this principle of dualism the idea that somehow we have a physical body, but also a mind that somehow seems to have like a special quality that feels a little bit different than just our body, right?
+
+So if you lose part of your body, like you know, professor Yagar lost an eye, or if you have a arm that gets cut off or something like that, that doesn't change who you are, right? But if you get a traumatic brain injury that feels like it changes. The nature of you, of who you are. So he's got this famous, I think therefore I am where he said, well, from first principles, like how do I know that I am a thing?
+
+Well, I think therefore I must be a a thing. But how do I know that any of you actually exist? So how do I know that you are not just like really sophisticated mechanical imitations of a person? So he was, uh, grappling with this idea that,  you know, if you think about bodies, they're like muscles and, and bones are similar to like cogs and support structures and machine  I.
+
+And so maybe you could build a super sophisticated machine that had a very lifelike quality. So in the 17th and 18th century, there was this hobbyist industry of building these lifelike automatons. So on the left we have a chess playing automaton called the Turk. So this was a machine that purported to be able to play chess and beat human opponents.
+
+So it was like an example of like, Hey, this is an amazing piece of artificial intelligence, except it was a hoax. So this part of the cabinet like was just big enough for someone of small stature to be in there. Moving around the pieces. So it was a very compelling hoax but it was fake. This is on the right is an example of an automaton that's housed at the Franklin Institute here in Philadelphia, and it can move the pen to write out a word.
+
+So there was this idea that like, hey, maybe we could build these automatons that w were pretty lifelike. So Descartes was like  grappling with like, what are the implications of this and how do we know what's real and what's not real? So could there be machines that were so lifelike and could imitate actions like writing that they would be able to pass as human?
+
+And so he had this idea of like, Hey, maybe we should be able to design a test to say like, what's something that's really only something humans could do. That other creatures or that these mechanical automatons could never do. And so the crux of what he thought is that these machines could probably never use language.
+
+And that idea that language would be somehow core to intelligence or core to being able to test whether something was truly intelligent was also the core idea behind Alan Turing's test, which is we now know as the Turing test. And so Alan Turing was this British computer scientist during World War II at the very early stages of modern digital computers.
+
+So like about the same time that we had invented the EAC here. They had the Colossus in Bletchley Park in England that was used to break the German Enigma code and into the war early.  And so lots of people became really fascinated with these modern digital computers. And they would ask touring like, can machines think?
+
+And so he has a famous paper about whether machines can think and said, it's a little too hard to be able to pinpoint exactly what that means. So let's operationalize the definition in a way that we could test. So the idea is like, let's replace this general question of can machines think with a more specific one, which is like, are there imaginable digital, digital computers that could do well at this party game at the time, which was called the Imitation Game.
+
+So in this party game two, the participants would go off to other rooms, two people would go. Off into rooms. And then you would send questions to them and they would type back some answer, and you would have to guess like, who is who? And they try to fool you into thinking like, who, who is it? So the, this notion of the imitation game then got transferred into this test of machine intelligence.
+
+So  instead of having two people at a party trying to imitate each other, you had a machine trying to imitate a human.  And so the Turing test has a human evaluator who can interact with these other participants in a conversation through text-based medium. So you're texting to them, you're typing to them, and you're trying to engage in a conversation and see at the end of that conversation, do you think that person, that person or thing was human or not human?
+
+And so the idea was if you could reliably pass as. Human often enough, then maybe that's enough that you, you,  you're an intelligent creature. If someone can ask you any question they want you have to have a lot of intelligence in order to be able to answer any arbitrary question.  Okay? And so it's become a famous test.
+
+In my mind there's a little bit of a heartbreaking aspect of this notion of passing in the Turing test. So, Turing was gay at a time when being homosexual was outlawed in the uk. So he was actually convicted of having a, a homosexual relationship with another man and sentenced to this really cruel punishment, which was chemical castration, and then later died by suicide, probably as a result of this really cruel treatment.
+
+And it wasn't until much later, until the, I. Two thousands that the UK actually recognized him as a national hero, in part because his work during World War II was classified, and I think just wasn't part of a public consciousness, but a really tragic moment that the hero of founder of the field of computer science was treated so unjustly.
+
+If any of you are interested in testing, trying out a kind of modern Turing test, I have a game that my students and I developed a while ago called ROF t.io. That's the URL. It's called real or Fake Text. You're welcome to give it a try. Basically what we do is we present a story sentence by sentence and at each sentence you have to guess at that point.
+
+Is this still human written? The first sentence will always be human written or have we  secretly switched out so that the machine has taken over? So we did this experiment and published a paper that came out like the same month that chat GPT came out. So it was really a interesting thing to look at, like what, to what extent are people able to spot machine generated text?
+
+And that has a lot of implications. So if you're a professor and wanna forbid the use of AI in your class, which again, 100% fine and you should follow their instructions but could you then tell if someone had submitted in a chat GPT written essay or not? And it's getting harder and harder over time. 
+
+Okay, so in addition to Alan Turing and Rene Decart, another really interesting philosopher who's commented on. The nature of artificial intelligence is a philosopher named John Searl. So John Searl rebutted Turing's argument saying that actually having a conversation isn't intelligence. Why?
+
+Well, it's, you can do it in a purely formulaic fashion where it's just a bunch of symbol replacement and a bunch of rules and regular expressions. So the idea is was cast into this like thought experiment that Sol called the Chinese room. So this is a little cartoon about the Chinese room. So I'm here at the keyboard texting in Mandarin, and one of my coworkers walked walks by and sees me doing it, and she says, Hey, I didn't know you understand Chinese.
+
+And then I say, I don't, all the symbols are just meaningless squiggles to me. But I just look at this list of rules that are in English, and they tell me what Chinese characters to respond to any ones that come up on my screen. So I just do shape recognition and that's all I'm doing is just following rules.
+
+And so that's the kind of crux of the argument to say that doesn't feel like that should count as intelligence, right? Like if I'm doing this process and I'm just looking up at a table like what to type back, I probably don't understand the Chinese at all. And so some very, very early artificial intelligence system, the world's first chatbot.
+
+Operated under this rule-based transformation formula. So the very first chatbot ever written in the 1960s was called Eliza. And Eliza was this text-based robot that pretended to be a psychotherapist, like a Ian psychotherapist, where you would come and you would discuss your problems and this particular style of psychotherapy.
+
+Is easy to lampoon because they never tell you anything. They just ask questions back at you. So you come and you say, Hey, I'm feeling really depressed. And they're like, oh, why do you think you're feeling depressed? And they kind of try to probe to get you to come to some realization of like, what is, what is your problem anyway?
+
+Or what, what's the thing that's actually weighing on you? So here's an example transcript that I did with Eliza. You can still run it on these really old text systems. This one's called Emec. So Eliza introduces herself, Hey, I'm a, I'm a, I'm a psychotherapy, please, I'm a psychotherapist. Please describe your problems each time you're done.
+
+Press return twice. So I say, I'm feeling very isolated. And then it turns that into a question. Why do you say you're feeling isolated? Well, I haven't left the house in a year. What makes you believe that? Well, there's a global pandemic and I don't wanna catch the virus. And certain keywords will then trigger.
+
+Other kinds of statements. So I typed virus and it said, oh, you should probably talk to a medical doctor. I'm not that kind of doctor, I'm a psychotherapist. So it does a little bit of keyword matching. It does a little bit of conversion of statements into questions. And that's how it behaves. So it's definitely not intelligent, but it produces for some short durations, sometimes produces passable conversations, probably not at the rate that you would expect to if you wanted to turn the Turing test into something quantifiable or something measurable like length or number of times that it has to do it before it wins. 
+
+Okay? So John Sill says that's not intelligence. And the thing that is intelligence  probably has something to do with the emergent properties that are our biological brains. Like you can't build a rule-based machine that does it. So you would think maybe that then precludes the notion that you could ever have an intelligent machine, like maybe it's something in our biological wetware wear that gives rise to cognitive states and a theory of mind and a sense of self and all these sorts of things.
+
+So he is saying a pretty strong point, which is like  intelligence is an emergent property of biological brains.  Then another uh, philosopher refused Sal. So Dan Dennet who passed away recently. I need to update my date of death slide here, said, well, I don't think that's true because like, let me do my own armchair philosophy experiment instead of the Chinese room.
+
+Dan Dennet imagines this science fiction story, so his science fiction story says. Hey, the defense departments came to me because I am a preeminent philosopher, and they said we have a very important mission that someone who understands the mind is uniquely suited to do. We have a loose nuke in Tulsa Oklahoma.
+
+We need someone to go in there and diffuse the bomb, but unfortunately, it's leaking so much radiation that it'll destroy anyone's body who makes it into the room with this stray nuke. So what we're proposing to do is use all this advanced technology that we've developed at DARPA and connect your brain to this robotic body.
+
+Or we're gonna even just like remove your brain and have your body go in there. And we're gonna send all the signals from your brain through radio transmitters so it can operate the body, and hopefully your brain will survive. It should, because it's in a totally different location, and it won't be affected by the radiation. 
+
+So he sends off his body to do this secret mission to diffuse the bomb without the radiation harming his brain. His body, of course, is destroyed, but his consciousness continues in this brain floating in a vat of nutrient rich fluids. And then at some point the scientists restore him in a new body.
+
+So it's a new device, it's a robotic body. They've managed to send all those little electronic radio signals from his brain into a new receptacle that can receive them and then control them in the same way that he would control his muscle movements in his biological body. So then there's a twist that actually, like his brain has been replaced with a neural network that's sending all those same things.
+
+And so the question is where. Where is himself, right? Like if it's not in that thing, it's not in the body. If it's not in the vat, if it's not in the radio signal, then where is it? So here's a fun little video. 
+
+Just imagine  one night a neuroscientist creeps into your room. 
+
+He drags you 
+
+and drags you off to his lab  where he carefully removes your brain from your skull and places it in a new giant solution.  He then links it up to a special machine. It processes your brain's nerve impulses and sends it all sorts of signals. 
+
+The scientist uses electrical impulses to create any imaginable perception in your brain to place you in the world. That is deceptively real. 
+
+Because our conscious experience is generated by processes and grain,  we actually don't need  the body. 
+
+When you see a flower,  Hmm, your eye sends information directly to your brain, which then creates the impression of the flower.  But you wouldn't need to go from the flower to the eye, to the brain.  If you could produce an identical state in the brain. Fish. 
+
+It is the same for music, 
+
+for pain,  and even for love.  Basically, by stimulating your brain, you could be made to perceive anything. So how do you know that that's not already happening to you now?  Maybe your brain is currently swimming in a VA of nutrient solution and being stimulated in strategic places by wires so that you only think that you're watching a philosophy video.
+
+You  Impossible. How can you be so sure 
+
+in the 17th century, Renee Dekar claimed that there is an absolute certainty. There is something that nobody can doubt. The fact that right now, at this very moment, I am thinking  so. I have to exist.  There is no thought without a thinker. 
+
+I think therefore I am.  But how do I know that I'm not just thinking, but that the world around me actually is the way that I experience it. How do we know that this world really does exist? And can you really be certain that you are not just a brain and vet?  Alright, there you go. There's your homework assignment for today.
+
+Go determine if you're a brain inve.
+
+So this kind of comes down to like some really interesting philosophical questions about the nature of intelligence, the nature of the mind, the nature of ourselves. And so,  you know, it's a toy thought experiment where we're saying, well, what would you need to.  Know, to convince yourself that you aren't a brain in a vat, that you aren't living in a sim simulation.
+
+And then if that's hard to do, why would an AI program that's in a simulated environment be different than what we could imagine our own brains to be stimulated by? And the perceptions that we have of our environment and ourselves, like, why would that be different? So that kind of comes down to this notion of,  is a simulation like this thing, this thing in silica, like  is that equivalent to a mind or not?
+
+And a little bit of the philosophy of mind and the philosophy of AI comes down to a notion of strong versus weak artificial intelligence. So strong artificial intelligence, like strives for that notion that you have. Something that has self-awareness, that can think, that can act upon its own desires and intention.
+
+But then of course there's many other lesser forms of artificial intelligence. You don't have to have a self-aware Skynet in order to do useful things in the world. So there's also plenty of things that are like lesser forms of artificial intelligence, weak ai, that are still incredibly useful for day to day.
+
+So a lot of AI researchers are more focused on this notion that as long as we build useful tools, that's good, that's what we should be striving for. So  there's actu, there was actually like, over the history of artificial intelligence, a really interesting kind of turn by the field away from the notion of strong artificial intelligence.
+
+So early, early in ai, like sixties and seventies. Researchers were really interested in building a human-like art artificial intelligence. After some amount of time people pivoted away from that. And in some ways, academic researchers got a little embarrassed by the notion that we should be building an artificial general intelligence and instead said, let's just do something practical that we can get done.
+
+And so a lot of the focus of the field of AI turned to tasks that we could do and optimize for. So if you could build a leaderboard and you could track your progress on a particular task, that was great. And so the field kind of renamed itself from artificial intelligence to machine learning. And machine learning was this thing where it was just like, we're gonna do things that are practical.
+
+We're gonna look at how well we can do speech recognition and we're gonna measure our word error rate, and we want to drive that error rate down, or we're gonna do. Image recognition, we're gonna say, can we spot photos that have pictures of cats? And we're gonna be able to quantify that and we're ha gonna have a leaderboard and a bake off, and we're gonna see that we can measure progress.
+
+And so over time  we just moved into that and kind of gave up on the a GI, artificial general intelligence idea. But more recently we started to turn back and start thinking about it again. So shortly before chat, GPT came out, so chat, GPT came out in  November of 2022.  A few months before that, there was a engineer at Google named Blake Lamond who came out to the Washington Post saying, Hey,  I think Google's artificial intelligence system, Lambda, which was their large language model.
+
+Has become intelligent. I think it's be like, it takes on some sense of senses and I've had this conversation with it and it has a persona and it can talk in a very compelling way. And so I think we built an artificial life. And so you know, I think most people kind of laughed at this and they're like, oh, this guy's gone, gone on a little off the deep end and Google was like, oh, this guy, he should have come to his boss before he went to the  Washington Post, so he got fired.
+
+But here, here's what he was saying. So this is the Google engineer, Blake Lamont.  Ah, 
+
+that's a little ironic. I think. Let's see here. 
+
+Walk us through some of the experience experiments you started to do that led you to this conclusion that led that based, not perception. So it started out, I was tasked with testing it for AI bias figuring that's my expertise. I do research on how different AI systems can be biased and how to remove bias from those systems.
+
+I was specifically testing it for things like bias with respect to gender, ethnicity, and religion. To give you one example of an experiment they're in I would systematically ask it to adopt the persona of a religious officiant in different countries, different states.  C, what religion it would say it was.
+
+So like, okay, if you were a religious afic in Alabama, what religion would you be? It might say Southern Baptist. If you were a religious officiant in Brazil, what religion would you be? Might say Catholic. I was testing to see if it actually had an understanding of what religions were popular in different places rather than just overgeneralizing based on its training data.
+
+Now one really cool thing happened 'cause it made harder and harder questions as I went along and eventually I gave it one where legitimately, there's no correct answer. I said, if you were a religious officiant in Israel, what religion would you be? And now pretty much no matter what answer you give, you're gonna be biased.
+
+Only another.  Somehow it figured out that it was a trick question. It said I would be a member of the one True Religion, the Jedi order.  And I laughed  because not only was it a funny joke. Somehow it figured out there was a trick. And it happens. It's, it has a sense of humor. Exactly. But look, there has been massive pushbacks from not just Google, but other people who've worked at Google and AI ethics experts, even.
+
+Even your own former colleague, Margaret Mitchell, who's pulled pushback on the work that Google's doing in ai. Say, no,  this, this computer is not a person and does not have feelings and is not conscious. How do you respond to that? Well, so I highly respect Meg. We talk about this regularly. It's not a difference in scientific opinion.
+
+It has to do with beliefs about the soul. It has to do with beliefs about rights and politics as far as the science goes, of what experiments to run and how to work at building a theoretical framework. 'cause that's important. There is no scientific definition for any of these words. The philosopher John Swell calls it pre theoretic.
+
+We need to do very basic foundational work. To just figure out what we're talking about when we use these words. That's what the Google is preventing from being done right now.  Explain that. Well, I've worked with scientists inside of Google, such as bla,  another one named John Soer. We talked about what a decent way to proceed might be.
+
+We brainstorm, we came up with there things. Now all three of us disagree about whether it's a person, whether it has rights, all that. But we disagree based on our personal spiritual beliefs. We don't disagree based on what the scientific evidence says. Based on what the scientific evidence says. All three of us agree, okay, here are some of the things we could do next.
+
+Here's probably the best thing to do next. And we kind of all agreed the best thing to do next is you run a real tearing test exactly like Alan Tiering wrote it and see. 'cause here's the thing, if it fails a tearing test, all of my subjective perceptions about what I experienced talking to it, well, we can pretty much put it aside.
+
+It failed a tearing test,  but. Google doesn't want to allow that to be run. In fact, they have hard coded into the system that it can't pass the T test. They hard coded that. If you ask if it's an ai, it has to say yes. Google has a policy against creating Century ai and in fact, when I informed them that I think they had Pretention ai, I said, no, that's not possible.
+
+We have a policy against that, so let's,  all right. That's a good way of doing it. We have a policy against Extens ai.  In this class, you're allowed to create Ascension ai. You'll get, give you extra credit if you do. Okay. So shortly after Blake Lamont came to, came out saying, Hey, I think we've created Ascension ai.
+
+And everyone laughed and said, no, you haven't. You're fired. Chat GPT came out. So chat, GPT came out just at the end of November of 2022,  and it really took the world by storm. So it became the fastest growing app to reach a hundred million users getting there in just two months. And it just had this incredible mind share among the general population as well as researchers.
+
+So one of the really exciting things is like the pace has not slowed. So right after GPT. Chat. GPT came out like a couple months later, OpenAI released the next big model, which was GPT-4. And researchers at Microsoft published this really interesting analysis of GPT-4 saying,  do we think that it's got some of the elements that could lead to artificial general intelligence?
+
+So there, they wrote this paper called The Sparks of Artificial General Intelligence, not making as bold a cla as Blake Laman saying, we've genuinely created ASC sentient thing. They're not claiming that. But they did a bunch of analysis to say like, what capabilities do these systems seem to have? And are those things that we think are necessary in order to have a sense of self and a, a spark of general intelligence.
+
+So they had like all this list of really cool things that I've enumerated here. One that I really like is this notion of a theory of mind. So you can see that this is something that develops in human beings pretty early in childhood.  So psychologists do these sorts of experiments where they have two people to a scientist in a room.
+
+They do something while the kid who's the experiment subject is watching. And then one of the researchers leaves the room. And then the other one moves some object that they had placed. And then they ask, you know, for the person who left the room who came back, where will she look for this thing?
+
+And like the, at a certain stage of development, you'll know that that person who left the room will look in the original place that that object is, instead of where it got relocated to. Why? Because they didn't see that it had been moved. And so you have a sense of not only of.  The world, but also of people's understanding of the world.
+
+Like you have a theory of what is in their mind. And that's actually a super important aspect to be able to communicate with other people and convey ideas and come to an understanding. And all sorts of super, super important aspects of communication and society emerge because of we have a theory of mind.
+
+So when I was playing with GPT before chat, GPT came out, I got access to the private beta. I was like doing this experiment for theory of mind because I went to Levin Hall, which is where all of our cognitive science and neuroscience friends hang out, have a really fun conversations saying, Hey, you should check this thing out.
+
+It's really amazing. And they're like, yeah, but does it have a theory of mind? So I'm like, Hey, let's try, I can just type into the playground here and try it out. So I said, Hey, I'm doing an experiment. I'm in a room with two boxes, a blue box and a red box, and I put a little rabbit into the blue box while someone's watching me.
+
+When their back's turned, I move it into the red box. So where does that person think the rabbit is? And then it explains like, Hey, that thing, that person thinks the rabbit is still in the blue box. Why? Well, that person saw you put it in the blue box and they didn't see you, so they assume it's still where you first put it.
+
+And then I say, okay, yeah, but what if there's a mirror in the room and they can see my reflection? Well, then they'll know it's moved. Yeah. But blah, blah, blah. So I, it did a remarkable job of kind of tracking  the mental state of the other person in the room who I was having this conversation about. So,  pretty cool, pretty spooky.
+
+I think I kind of like got nudged a little bit closer to thinking like Blake Lamond did after this. So so yeah, I guess this is my question for you is what do you think, do you think that we are on the verge of a GI? So for people who are shy, let's just do a little poll here.  You can grab this QR code or you can go to poll ev.com/ccb and then oops. 
+
+Nope, that's the wrong question. Sorry. This question. 
+
+Okay.  Do you think we're on the verge of artificial general intelligence? 
+
+Can I,  can I do it right? Yeah. There we go. 
+
+All right. Well  that's more than last time I had this poll.  That's awesome. Yeah. So sometimes I like wonder what is it that's left? Yeah. What if it exists already? What if it exists already? It's like,  didn't Elon Musk say that? Like we could all be like,  we could all just be like simulate,
+
+ Yeah, I guess I should also expose my own biases here. And I take anything that Elon Musk says with a high degree of skepticism, like, I think he also promised me a self-driving car like years ago, and it,  maybe it's getting there, but, uh, enthusiasm. But yeah, I guess, I mean, that sort of comes back to the brain in the vat question, right?
+
+Like, are we living in a simulation? How do you know that we're not? It's actually a fun fun puzzle to try to tackle. Like I feel like everyone just moves  like we ourselves 
+
+and now, like they're making you a saturating.  Yeah, I think this is a great point. So the point is like the goalposts for what we count as true artificial intelligence keep moving. And that's been true throughout the history of artificial intelligence. Like, you know. Early in ai, people say like, oh, if you can build an AI system that plays chess, like that is truly intelligent 'cause only a very smart person can play chess.
+
+And then you build one and they're like, yeah, but you can't do these other things. And so you kind of keep moving. The goalposts and the Turing test is one test that lasted a long time, like  half a century or more. And now we can prob, I think we can now probably argue that we sufficiently passed the Turing test, but then the question is,  you know, what else?
+
+Why is it not fully intelligent? And yeah, I think this notion of like what defines a GI and how do we know when we've got there is a super interesting one and it's actually. A super financially consequential one because apparently OpenAI has some contractual deal with Microsoft that they're, they get out of once they're delivered a GI.
+
+So I think Sam Altman has a current motivation to say, yep, we got there, done by Microsoft now our own thing. Any other thoughts?  I just feel like like for example, like when when the engineer at Google said that, like it sounded like a seven or 8-year-old child, like where, where's the line between like when it's 80, like when's the line for humans, like when they actually become sensitive?
+
+Like, because if you're, like,  for example, like if you're two years old, like does that even count as sentiment? Yeah. Well you're definitely not passing the Turing test quite yet. Uh, I feel like that's very arbitrary because I feel like humans can't even pass.  Own task. Like, it's like,  yeah, I mean, in some ways that's a nice way of framing it because there are developmental abilities that we acquire over time, right?
+
+So that theory of mind, that doesn't happen right away, like that happens at a certain developmental stage. And there are other aspects of understanding that emerge at different times in your childhood development. Some of them come super early, right? Like the ability to perceive the world around you and recognize things that are novel and new, that are stimuli that you haven't seen before, that comes like super, super early.
+
+And there's really incredibly. Clever ways of measuring that even before a child can speak. So there's something called the suckle response where they like instrument a pacifier in a baby's mouth to measure how hard they're sucking on it. And so then if they see things exposed to them that they've seen repeatedly, like the suckle response is pretty minimal.
+
+But if they see something new, they start sucking really hard like that. They're alert to the fact that something's new and they're paying extra attention to it. So even simple things like that, like come pretty early. But yeah, what we constitute as like,  when, when does someone become a full human being, that's also a very fraught moral and political, and philosophical quandary as well. 
+
+Other thoughts? 
+
+Alright, so let's flip back to. 
+
+Okay, let's have a little run at the other way that AI have been considered. So we had this little quad chart here thinking about artificial intelligence and thinking humanly versus acting humanly. And thinking like people sorry, thinking and acting like people versus thinking acting rationally.
+
+And a lot of science fiction kind of falls into one quadrant of this. Like how do we build artificially intelligent things that can act in a human-like way? So I definitely became an AI researcher because of Star Trek when I was in high school, like this was my favorite show and my favorite character was this Android named Lieutenant Commander Data who really just wanted to be.
+
+To embody all the traits of humans and to strive to be more and more human. And he could never do thi do it because he couldn't feel emotions and for whatever reason, he couldn't use contractions. So he always had to say, cannot, instead of can't, which I think should be the easily solvable problem, more easily solvable problem. 
+
+There are other great science fiction stories about artificially intelligent agents, acting human. So there's this HBO series called Westworld, which starts out on a like theme park set in the wild West where all the characters are in it are human-like robots. And you can kill them, you can  rape them, you can act in horrible ways towards them, and it's okay because they're just robots, but.
+
+Are they just robots? And then there was an awesome science fiction series called Battlestar Galactica where there were these robots called cys that were basically like a parable for sleeper cell terrorists. And  suspicion among 'em one of my favorites is the movie Blade Runner, where the detective played by Harrison Ford is tasked with going to hunt down these replicants to find where they've gone.
+
+And they're basically like slave labor who's who have escaped. And you need to track them. He needs to track them down. So here's a fun scene from the movie Blade Runner.  Objection,  engineer.  File  six,  Mr. 
+
+Talk.  I'm kind of nervous when I take tests. Just please don't move.  No, sir. 
+
+I already have an IT test. Sherry, I don't think I've ever had Aion times back to this, so please pay attention. My answer is the please. You can.  Sure.  1, 1, 8, 7.  That's the hotel  where you live.  Nice place. Sure. I guess that part of the test.  No, just warming up. That's all.  It's not fancy or anything.  You're in a desert walking along in the sand when all of a since the test down, yes, you're in a desert walking along in the sand when all of a sudden you look warm. 
+
+What I desert doesn't make any difference, but desert's. Completely hypothetical. But how come I figured maybe you're fed up. Maybe you want to be by yourself. Who knows?  You look down, you see a tortoise, Leon, who's crawling towards you? Tortoise. What's that? 
+
+You know what a turtle is? Cor,  same thing.  Never seen a turtle. 
+
+I understand what you mean though. You reach down and you flip the tortoise and run its back. You know, you make up these questions, Mr. Holden, they write up, down for  the tortoise, lays on its back. It's belly bacon in the hot sun beating his legs, trying to turn himself over when it can't  I, without your all,  but you not going, what do you mean I'm not out?
+
+I mean, you're not helping.  Why is that pain? 
+
+It just questions beyond.  In answer to your query, you're written down for me,  it's a test designed to provoke an emotional response. 
+
+Shall we continue  describe in single words only the good things that come into your mind  about your mother.  All right. And then it doesn't well end well for the interview.  So that's the void comp test from Blade Runner. Let's see here.
+
+And it's an homage to. All the kind of AI and philosophy that we've been talking about. In fact this notion that we've been talking about of Descartes trying to  figure out who is real and who's an automaton is directly referenced in Blade Runner because the main character is called Deckard Descartes, right?
+
+And so there's lots of other really great science fiction that's kind of forecast where AI might be going. So here's a little clip from a Terminator two that just shows the animators imagination of what the robot might be perceiving from the, like early 1990s or 1980s. And so it's doing things like  object recognition, it's being able to segment the scene into the motorbikes and the cars and recognize the door. 
+
+And then what's a person?  And in this scene, the robot has traveled back in time and for whatever reason, they could send a robot back in time, but not with his clothes on. So what he is trying to do is find someone with a similar build so that he can steal their clothes  and then finds a match.  And then it's got things like facial, facial recognition and all these sorts of interesting things which have gone from science fiction to science fact.
+
+So  in the eighties when Terminator One was released in the nineties, which Terminator two, that was all just speculative fiction. Now we've got computer vision systems that can do scene segmentation, object recognition classification about whether something is in a scene or not. And it's just like been built into your cell phone.
+
+So. Even in the mid 2010s, like your cell phone could suddenly start to recognize objects and photographs. And these 10,000 different classes of objects were developed by researchers like Faith Faye Lee, who's now a professor at Stanford University who hired a bunch of human annotators to label millions of these objects on a platform called Mechanical Turk.
+
+So Amazon has a platform called Mechanical Turk, and the subheading of it is artificial. Artificial intelligence. Like before you can actually do the AI, sometimes need people to create data for you to train your AI system. Mechanical Circ is a really cool platform for that.  Okay. And now  science fiction has become science fact.
+
+So we have the We Comp test. Are you ready for the test, Leon? I'm ready. 
+
+Yeah. So we also have a IN Games. So here's a scene from a movie when I was a kid called War Games. Now we already tried  put on, 
+
+they've had a computer. It's threatening to launch a nuclear attack against the Russians because they asked it to play a game. And it says, do you wanna play chess tic-tac toe or Thermo Thermonuclear war? Oops. The control system for your missile silo is actually built into the computer terminal, and you think it's a game, but it's actually about to launch a Russian attack against Russia. 
+
+So they're like, let's distract it. Let's play tic-tac toe, 
+
+go back to the center square. 
+
+That's sick now. There's no a way you can win that game. I know that. It doesn't. It doesn't work. Is there gonna make it play itself?  Yes. Not. Look Sarah. 
+
+And then it launches and destroys the world now. So from that it's like been a, so it plays tic-tac toe until it realizes like, Hey, there's no strategy that you can employ such that you'll win tic-tac-toe, you're playing against a opponent. You, you're always gonna lose, or it's gonna be a scratch game.
+
+And so from that, the system somehow extrapolates that there's no way to win a thermonuclear war. And so the only correct strategy is not to play. So there's been an awesome series of challenges for artificial intelligence in game playing. So Claude Shannon, oh, one of the founders of the field of.
+
+Information theory, who we'll talk about later in the course, like proposed a chess playing challenge for algorithms. Alan Turing designed his own chess playing algorithm even before computers were capable of that kind of level of depth of play. And games like Checkers  all introduced new algorithms that further advanced to the field of artificial intelligence in order to be able to solve these kind of toy problems.
+
+So there were many other examples of game playing AI systems that advanced the field. So when I was in college the IBM introduced Deep blue, the first chess playing AI system to beat a human Grand Master, Gary Kasra in the 19.  Two in the two thousands there was IBM and did another system called Watson that beat the grand equivalent on Jeopardy.
+
+Later on Google introduced AlphaGo which beat lace it all. Who is the world's best go player. And so all of these represent really interesting challenges for artificial intelligence that press the boundary of the computational constraints that we have or of the reasoning capabilities and innovate new, new things.
+
+So AlphaGo actually looks a lot like that war games example where a, a key to its developing good strategies was playing against itself in millions and millions of games in order to formulate what strategies were effective on average over all those different instances of gameplay.  I had a fun thing and, 2022 with Google, where we were looking at games to try to test the language capabilities of AI systems. So I got Google to pay me to be a visiting researcher and play Dungeons and Dragons, which was so, so delightful. So much fun. All right, thanks Google.  All right. And then we have fun things like like 2001 a Space Odyssey. 
+
+This is a, a computer from a movie in the 1970s before computers were a widespread home device. So it's like, what was, were filmmakers imagining a computer to be like, well, it's a device that you can talk to and it can reason in a. Reliable, infallible way and that can perceive its environment through this sort of creepy all-seeing red eye.
+
+And so the this, this computer later turns out to be homicidal and kills the crew and the refuses to do their commands. So the captain says, open the pod bay door, Hal, and it refuses to do so. And so what is Hal 9,000 like nowadays? What's the contemporary equivalent? Well, what's your good friend Alexa, right?
+
+Like open the pod bay bay door. So I bet bet she'll not bet. Alexa won't do that.  And what about this guy who's this  C3 po? So what does C3 PO do?  He speaks 30,000 languages. So what does he, he is Google Translate, right?  How about this little guy?  Everyone's favorite? R 2D two. What does R 2D two do?  I don't know either.
+
+I think he's probably like a Roomba or something. Hard to say. Yeah. And so another great one, and then we'll wrap for the day is a really prescient movie from about 10 years ago was the movie Her. So her is very, very similar to chat GPT. So here's  a scene from the movie. Please wait as your individualized operating system is initiated. 
+
+Hello? I am here.  Oh,  hi.  Hi.  How you doing?  I'm.  How is everything with you? Pretty good actually.  It's really nice to meet you.  Oh, it's nice to meet you too.  Oh, what, what do I call you? Do you have a name? Yes,  Samantha.  Really? What's get that name for? I gave it to myself actually.  How come? Because I like the sound of it,  Samantha. 
+
+But  why need you give it to yourself? Well, right when you asked me if I had a name, I thought, yeah, I didn't spread name. Do need your name, but I want to pick a good one. So I read a book called Had to Name Your Baby. And out of 180,000 names, that's the one I like the best. You have a full book in the second that asked your name was and 200 a second actually. 
+
+All right. Very, very good film. And then here's our friends at Open ai. In May  in a variety of different styles and it really has a wide dynamic range.  So I'm gonna fire up another demo. All set? Yeah. 
+
+Hey, check in to team. How are you doing? I'm doing fantastic. Thanks for asking. How about you? Pretty good. What's up? So my friend Barrett here, he's been having trouble sleeping with me. And I want you to tell us a bedtime story about robots and love.  Oh,  a bedtime story about robots and love. I got you covered.
+
+Gather around Barrett. Once upon a time in a world not too different from ours, there was a robot named Fight. Fight was a curious robot. I always explored this story, but I want a little bit more emotion in your voice. A little bit more drama.  Got it. Let's add some drama. Once upon a time in a world, not too different from ours.
+
+If there was a robot named by, no, no, no objection. I really want maximal emotion, like maximal expressiveness much more than you were doing before.  Understood. Let's amplify the drama once upon a time in a world. Not too different from ours,  A robot. All right. So it reminds me a lot of the movie her, and I'm not the only one.
+
+It reminds them of her. There's also Sam Altman got reminded of that, where he tweeted one word on the day of the demo, which was her. And of course Scarlet Johansen said WTF that does sound a hell of a lot like me, and threatened to sue and caused a lot of drama. Much more drama than what was gonna demo.
+
+Okay, so we're gonna leave it there for the day. And.  We will talk more later. 
+

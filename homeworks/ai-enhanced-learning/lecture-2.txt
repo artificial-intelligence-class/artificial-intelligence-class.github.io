@@ -1,0 +1,392 @@
+Lecture 2: CIS 3990 - 2025-01-22 - AGI and AI Agents
+
+ Hey everyone. Welcome back. Some logistical things before we get started. I increased the cap on the class to 50 students, so there were 10 more permits made available. You still don't have a permit and you're excited at the end of the class to potentially get one come up and grab me or come to my office hours, which are immediately after class.
+
+So  431  in the fourth floor, all the way at the end of the hallway. I think that's a GH 431, but not exactly sure the room number. You're welcome just to come up with me after class. We are drafting the first couple of homework assignments. The first one will end up being something related to using an AI system like Chat, GPT or clot or Notebook lm, to go through the materials that I'm referencing in these first couple of lectures in more depth, and ask the AI about them and interact with it just to get a feel of how you could use it effectively to deepen your understanding of a subject.
+
+Hopefully that'll get us started with like what the expectations are for the use of AI in class, which again is, we don't want it to replace your thinking. We want it to enhance your thinking. So we'll do a, a warmup fun exercise with ai hands on.  And then in the second homework, we will start exploring the use of the AI systems via their Python APIs.
+
+So you'll use the API for open ais LLMs in order to build a little chat bot to test out its capabilities and to see what it's like to use it as a developer. So if you're new to Python hopefully we'll get you up to speed with it. That is like an expectation that I have is that most people have at least a passing degree of familiarity with, python, we have a bunch of TAs, like the ratio of TAs to students is extraordinarily high. Since this is the first time that I am teaching the class, I think that there's one TA per four or five students. So if you need help getting with any of these homework assignments, especially given that they're new and we're piloting them for the first time, please take advantage of the TA's help.
+
+Go to their office hours. They can walk through the homework assignment with you, help you with Python programming. Whatever you're struggling with, they're there for you. Similarly, you are always invited to come hang out with me in office hours to discuss course materials, questions you have about the homework. 
+
+Research, anything that you wanna talk about, you're totally welcome. I think especially if you're a freshman or sophomore professor office hours are a massively underutilized resource that you should you are encouraged to take advantage of. I love to meet you outside of lecturing at you, and so office hours are the primary mode for doing that.
+
+So you are, you are invited.  So once again, if you're new to the class permits, chat with me after class. Also know that this is going to be an experimental class because it's the first time I've run it. So the homeworks are new and unpolished and untested. So you are the inaugural class slash Guinea pigs.
+
+So you have to have a degree of willingness to go out on that adventure with me. If you want to take the class.  Okay, so last week we talked about what is artificial intelligence. We talked about the history of AI and AI and philosophy. We looked at all these different philosophical perspectives from the foundation of computer science with Alan Turing saying like, what is a computer and can computers think being operationalized as this now Turing test where it was a test of intelligence that got operationalized as having a conversation with humans and being able to pass as plausibly human.
+
+We looked even further back at philosophers like Descartes, who actually struggled with similar questions about how do you see whether a life like automaton is human or just a robot  to images of AI and science fiction. So today we're gonna start getting into other definitions of artificial intelligence.
+
+I'm gonna start out with a section on artificial general intelligence because this is a super interesting trend that has emerged alongside LLMs with something that's now seemingly possible. Again, that had been an early goal of artificial intelligence in the field's founding in the 1950s, sixties and seventies, but had kind of fell, fallen by the wayside for many, many years.
+
+And now is part of the enthusiasm of AI is due to this notion that we might be on the verge of a GI. So we're gonna talk a little bit about what that is, how we could think about a GI, what its consequences are, and then whether it's just a bunch of bullshit hype which I'm still torn about. And then we'll also start talking about alternate definitions of AI as what is an AI agent, and we'll go back to that quad chart that we had about thinking humanly, acting humanly, thinking rationally, and acting rationally.
+
+And we'll come up with like, what is a definition of acting rationally.  Okay. So a GI artificial general intelligence is a notion that we could potentially build a system,  an artificial intelligence system with human level intelligence that's capable of performing any intellectual task. So this notion of an intellectual task means that maybe we don't actually have to have.
+
+Embodied systems in the form of humanoid robots in order to declare that something is intelligent. That's an interesting choice. But I think it's a pretty common one for a GI. So if we're gonna talk about a GI with respect to systems that can communicate with us via chatbots, that doesn't necessarily mean that they have to have a physical presence and be able to manipulate things in the real world. 
+
+Okay. Another core TE of a GI is a system has to be general, that's the general part of a GI. It has to be flexible in its understanding and be able to transfer across domains. So we don't want an AI system that is simply the world's best chess player, or we don't want a system that's simply like superb at medical diagnostics, but not at any other tasks.
+
+So it's gotta be flexible in it's understanding and it's gotta be able to learn in a human-like fashion so that it can be applied to some other domains. And then we want it to be able to demonstrate that general problem solving ability that all of you excel at by virtue of being Penn students, you are amazingly good problem solvers.
+
+You're amazingly good at learning new things. That's why you're here. That's why my job is so much fun.  So, a GI stands in contrast to narrower forms of ai. So things like chess, things like simple, simple  specific tasks like object recognition and photographs. So those are super, super hard AI problems, but they aren't general learning.
+
+That would imply that if you solved chess. You're going to be generally capable of solving any problem. And in fact, that's a fallacy that people held early in  artificial intelligence. I don't know that it was necessarily a fallacy held by AI researchers themselves, but in the popular press that was kind of a notion like, Hey, chess playing is this thing that we hold up as being pre being a skill of the most intelligent people.
+
+And so therefore, a machine that could play chess is gonna be ca comparable somehow to those most intelligent people. So that's a fallacy because of this notion of generality. 
+
+Okay, so AI started out with this enthusiasm of striving for.  General intelligence. So I think in some ways you could think of the Turing test as  a measurement of general intelligence. If you have a system that you can interact with and ask it, any questions you can think of, you can pose any question that would probe for different aspects of intelligence.
+
+In the 1950s, shortly after Alan Turing proposed that Turing test the term artificial intelligence got coined at a conference that was being held in Dartmouth, and I'll show you a quote from the prospectus of this conference from 1956 that really like hits home, how enthusiastic people were about the idea of imbuing early digital computers with intelligence and how wildly off they were in terms of the timeframes that they thought it would happen in.
+
+ This kind of optimism, like kept going through the 1960s where the focus of AI was largely on symbolic reasoners. So rather than any kind of data-driven machine learning oriented systems, the early systems were all symbolic logic-based systems that were more like theorem provers and things like that.
+
+Part of the reason for that,  there wasn't any digital data, right? Like computers were invented. We were still using telephones, but we didn't have the internet. We didn't have large digital data sets that could, computers could learn from. That didn't really kick off into high gear until the popularity of the worldwide web around the mid 1990s. 
+
+Okay, so one of the early examples of this was this Dartmouth workshop with a lot of the early founders of artificial intelligence. And so they said, Hey, we're gonna propose that we all get together for two months. Over the summer, 10 of us are gonna study artificial intelligence on the Dartmouth campus. 
+
+And the study is gonna pros proceed on this basic conjecture that every aspect of learning or any other fe feature of intelligence can, in principle be principle be so precisely described that it can we can make a machine to simulate it. So we can write a bunch of rules to exactly describe any aspect of intelligence, and therefore encode those in a logic based form that can be executed by a computer. 
+
+So we're gonna attempt to find out how.  Computers can use language, how they can form abstractions and perform conceptual reasoning. All these things are currently er reserved for humans, but we think we can make a significant advancement in them over this one summer.  So you know, fast forward half a century and now we're maybe at that stage there were other really early excitement about ai.
+
+So there was a very early system in the 1960s that was developed by Terry Winograd who was a student at MIT at the time, a PhD student  who built this program called She Lu, which could do solve the blocks world's problem. So this was back in the era, like of Teletypes. So the fact that they had. A graphical interface was amazing. 
+
+But he talked about how this program, which would allow you to type things at the computer and have it do things. So you could say like, pick up the big block and it would simulate a little robot arm, pick up the large block or move the cone on top of the cylinder, things like that. So you can look up the example dialogues of people interacting with us, and it requires quite a bit of reasoning, like, could you stack a block on top of a pyramid?
+
+No, you shouldn't be able to do that. So it would reason about that sort of thing.  But then in an interview, many, many years later, in the mid nineties Terry Winter grad was talking about how this was  a demo that only he could do.  So basically he said I very carefully worked through line by line what was gonna happen. 
+
+If you sat down in front of it and asked a question that wasn't in this dialogue that it knew how to solve, there was some probability that would answer it. I mean, if it was reasonably close to one of the questions that I scripted in it then it would probably get it. But there was no attempt to get to the point where you could actually hand it off to someone and allow them to use it to move blocks around in a totally free fashion.
+
+Right. And then it goes on to say things like.  There was a lot of pressure of like publish or perish. And in the MIT media lab, the version of that was like demo or die. So they wanted to be able to have these really cool demos, but they s But he said, I think because we were focused on these cool demos that AI suffered a lot from that because it essentially led to Potemkin Villages, which is a reference to the Soviet Union, like pretending as if it had built these really flourishing villages, but were actually just like facades with no one living there.
+
+So the demo looked good, but if you looked behind it, it wasn't enough structure to ma make it actually work generally.  So this is part of the excitement, but the over-hyping of a lot of aspects of early ai. And so that actually led to a time called the AI Winter where a lot of funding dried up for ai.
+
+And I'll talk more about it. There were actually a couple of them. But it also led researchers to focus more narrowly. So rather than having a general purpose, AI that could  understand all of language or perform conceptual reasoning on this abstract level, instead researchers started to focus on specific tasks.
+
+So there were lots of successes there. So I. You know, IBM led a couple of efforts that were really quite remarkable. So they had the deep blue system for playing chess that beat Gary Kasparov. Later they had a system that could perform question answering specifically for the game show Jeopardy in their IBM Watson system, which beat Ken Jennings, the Grand Master of Jeopardy, or whatever the Jeopardy equivalent is.
+
+And then Google and DeepMind later built this go playing system that be beat Ken Sdel at go, right? And so all of these were actually quite remarkable things, and all of them actually led to interesting new algorithms and new system architectures and provided insight into ai.  But they didn't necessarily result in general purpose ai.
+
+I think that that's part of this hype cycle that I mentioned. Like, do we think that just because you built an a system that could beat someone at jeopardy, that that means you solved ai?  And I think in retrospect everyone says, of course not. That's silly. Like you can answer jeopardy questions and you can specialize at that, and you can solve a lot of aspects of things that you would need to do well in jeopardy.
+
+Like being able to hear the host speak and do automatic speech recognition to recognize what they're saying to do really fast, look up of facts about the world and extrapolation for these kind of cryptic clues in order to narrow down the set of things in order to buzz in, in time to answer the question.
+
+There are lots of super interesting technical questions  from speech recognition to knowledge, representation, all these sorts of things. But it doesn't mean that you've got a general purpose ai.  That didn't stop IBM from marketing it as such. So like after this IBM Watson beat Ken Jennings at Jeopardy.
+
+Like they took a victory lap and they advertised the hell out of Watson. Like to the point where you know, they rode the coattails of this. And they marketed it. And like one example was, Hey, we're gonna have Watson for healthcare.  And there were like senators who would be like, Hey, we want a Watson for the military.
+
+What does that mean?  I don't know. But IBM was happy to sell it to them. Right. And so for one of the like Watson projects for healthcare they, maryland Anderson Cancer Center invested $60 million in trying to build a Watson for healthcare. To have Watson be able to answer questions about clinical records and doctor's notes. 
+
+It's a question answering system. You'd think it might be somewhat similar but it was a failure and that shut down. So some of the key lessons from this is like a narrow AI  can be super powerful for a well-defined task like question answering. But jumping to broad claims of human-like intelligence is definitely premature.
+
+And deploying AI in complex fields like healthcare requires a lot of deep domain adaptation and not just a simple plug and play of some seemingly spark solution.  And the other thing that's probably worth taking away is like managing expectations about artificial intelligence is also pretty important.
+
+Like you don't want senators suddenly thinking that AI is solved for a variety of reasons. Like it's probably gonna cause them to invest poorly. It might lead to disappointment down the line. That means like investment get taken away. And I think that that's maybe a point worth reflecting on at the moment with the hyper around generative artificial intelligence. 
+
+Okay, so post expert systems, post early ai,  the field focused on  more narrowly defined tasks and the field actually like renamed itself to be machine learning. Rather than artificial intelligence, in part because a lot of the serious academics felt like a GI is impossible. So why bother trying to build a system that can reason like a human being and perform all these human level tasks if it's never gonna happen in your lifetime or your career. 
+
+And so a lot of really, really excellent work went into narrow tasks. And some of these tasks are incredibly complicated. So like the speech recognition part of Jeopardy, that's incredibly complicated.  Things like ImageNet became common. So in the machine learning era of artificial intelligence, there were a lot of narrow AI tasks like object recognition in.
+
+Photographs that became challenge problems. So in computer vision, there was a super famous leaderboard called ImageNet, where Fefe Lee, who is now a professor at Stanford, created this massive data dataset for training and evaluating object recognition systems for computer vision. So she released this dataset called ImageNet.
+
+I've shown, I'm showing just a tiny little sketch of what it looks like. It was organized in this high rec called fashion where they had like tens of thousands of categories of objects that you might be able to find in images organized in a hierarchical fashion. So you could have the set of all vehicles, the set of all watercraft, the set of all sailing vessels, sailboats, and then like catamarans or whatever with increasing specificity. 
+
+This giant data set also allowed for breakthroughs in different styles of models for training computer vision systems.  So the graph on the bottom charts the progress over time from 2011 to 2020 on this ImageNet object recognition challenge. And the line represents the envelope. That's like the state-of-the-art method over every year.
+
+And then on the y axis we have, how accurately does the system perform at its first prediction? So many machine learning systems can have, like, give you a distribution over possible labels, right? They can say, oh, this is a pug, or whatever. Similar. Similar, nothing similar to a pug, some other category of dog, right?
+
+And so it, around 2010, there were things called. Scale and variant feature transforms, sift representation of images that were like  a little bit hand-coded representations of how you should represent things like edges in images or corners or curves. And one of the things that ImageNet illustrated was that deep neural networks could be used to learn general representations that were better than these previous set of scale and variant future transforms that had been used infu computer vision for many, many years. 
+
+So in 2012. The University of Toronto introduced a deep neural network, a convolutional neural network called AlexNet that was developed by Alex  Kavinsky, IA Sus Sr. Who went on to found open AI and Jeff Hinton, who went on to win the Turing Award and the Nobel Prize for his contributions to deep learning.
+
+And they went from like 50% accuracy and they increased that by 15%, like a huge, huge drop in the error rate of models that demonstrated the power of deep learning for perceptual tasks and really proliferated a huge amount of deep learning research.  So these kinds of benchmarks, even though they're for narrow ai, like really provide a way of directly comparing a lot of different approaches.
+
+To objectively measure, like what approach is good or not good. So in my mind these are like serious, serious engineering efforts that we being members of the school of engineering, like should take seriously. So thinking about how you measure progress and artificial intelligence, even if it's things like narrow domains, I think is definitely worth doing.
+
+And validating that the things that you're measuring actually corresponds to what you want to eventually do equally as important.  Okay. And then in my own subfield of artificial intelligence called natural language processing, there are a ton of different benchmarks that people have developed over the years.
+
+So one super famous one was, one developed here at the University of Pennsylvania by Mitch Marcus, who was like my mentor and encouraged me to apply for a faculty job here. And that was called the Penn Tree Bank. So for a long time we believed that in order to understand the meaning of a sentence, you would probably have to understand its structure.
+
+So Mitch, and a lot of awesome annotators here at Penn in the linguistics department, put together this manually annotated data set of tree structures for English sentences. So if you wanted to interpret some medical or PubMed publication that says, you know, this kind of mutation increased resistance to this drug, but not this drug, then you want to know like what is the structure of that sentence in order to know that the mutation increased resistance to drug zero, but not to drug one, right?
+
+Like those are two separate facts, and understanding the scoping and things like that is super important.  There are other tons of really important historical benchmarks for NLP. One was called the Stanford Question Answering Dataset Squad that like went through tons of Wikipedia articles and created a manually written set of questions that you would have to read and understand the article in order to be able to answer. 
+
+There was a data set produced by Sam Bowman, who's a, was a professor at NYU and now is on leave from NYU to help anthropic with its alignment effort called Glue and Super Glue, which looked for general language understanding tasks. I, as a PhD student helped organize this workshop on machine translation where we would benchmark how good different algorithms were at tasks, like translated in between German and French to English.
+
+There was a really cool data set. Called swag from Jun Cho's group at University of Washington that tested for common sense reasoning using multiple choice questions. Super, super cool dataset that like almost instantly got beat by one of the first large pre-trained neural network predecessors. 
+
+Okay. So  over time, like we've shifted approach. So rather than specifically targeting narrow tasks or building algorithms  that encode expert information like was done in the 1980s, we've moved to architectures that are good at learning lots of different things. So the.  ImageNet demonstrated the power of neural networks and stacking neural networks into deep layered architectures.
+
+And it also started to demonstrate the power of pre-training a model. So a lot of machine learning techniques had been designed in such a way that they started from scratch each time. So you have a particular task you wanna do. You wanna learn spam filtering, where you collect a spam data set that's annotated with spam and not spam, and you train a model from scratch. 
+
+The idea of pre-training is you train on some task that might not be directly related to the task that you want to do in the end, but gives your model a set of model parameters, which we'll talk about later, a starting point from which it can begin to generalize onto other tasks. So a really great illustration of this is. 
+
+Language models. Language models will get really deep into the weeds of and they are pre-trained on a huge amount of internet data, but they're pre-trained for a task that no one really cares about. The task is really just like a fill in the blank task, like guess the missing words or given some prefix to a sentence.
+
+Guess what Word will come next. That's not what we care about. We want, we want a system that can act like a personal assistance or that can write good essays for our homework assignments or that can you know, take a patient health record and answer questions about it. Those are the tasks that we care about.
+
+We don't actually care about the fill in the blank task, but it gives the model an amazing starting point for general language capabilities that can then be adapted to other tasks. The other trends that are emerging are using the same kind of pre-training idea and building off the success of language models to then bridge into other modalities.
+
+So in addition to being able to pre-train on raw text from the internet, you can pre-train on text image pairs in order to then start building a basic system that can answer questions about images and reason about images.  And then the latest and greatest is AI agents. So that's not just language capable systems, but it's capable of selection of actions.
+
+So we'll talk a little bit about a classical view on AI agents, because I think it's quite helpful for thinking about current trends in ai.  All right, I'm gonna pause there and see if anyone has any questions.
+
+I was just confused about the  AI and AGI example  AI model, but it can pretty much do any task that you given. So how is, is it not an AGI model?  Yeah, this is a great question. So how do we know that chat GPT itself is not an a GI? So in some aspects, like we need to be a little bit more precise on like what capabilities we think a system ought to have in order to be considered an A GI or you know, like people are even talking about beyond a GI like as a super intelligent system.
+
+So there's a really interesting. Quandary there and similar to the fallacy that we talked about earlier, like, Hey, a chess playing system is counts as an intelligent system. Like it doesn't, right? So  in some ways there's been a history of like moving the goalposts for artificial intelligence so that as soon it is, it accomplishes some task.
+
+Well, that task is not the only thing we care about. Let's make the challenge bigger for ai. So yeah, so we'll, we'll talk a little bit about like, should we consider a GI as a Yes, no problem. Or should we like split it into levels? And so there's like an interesting analogy with self-driving cars where, you know, we could say a car is self-driving, but we might want to like be more precise about what we mean and have a graded thing from, you know, no self-driving.
+
+Purely manually driven to like cruise control to, and we will walk through like what a society of automotive engineers have defined for their scale.  Good question. Other questions? Yeah.  So I'm still, I'm a little bit confused between the difference between like normal, like,  well normal AI and like sort of agent  ai because like when you think of it like like let's say like current HR gt if you were to ask it the question,  it does  to some extent make decisions about the logic  behind answering your question.
+
+And especially if you give it like web search or something, then it technically does make some decisions regarding like what the search on the web. So. What, at what point do we define an AI model as?  Yeah, that's a great question. So ag agentic AI is like the new buzzword of 2025, right? Like that is the hottest thing.
+
+That's where a lot of companies are investing. So we'll walk through some classical definitions of agents, which I think are worth understanding, but I think that the agen AI that people are conceiving of now are providing in ai not just with the ability to generate text or generate images, but also with the ability to execute actions.
+
+So in some ways, like providing the AI system like chat, CPT with the action, with the function that it can call to search the web is like the first step towards agentic ai. So you, the way that I imagine AG agentic AI is like you have a set of tools that an AI system can use in order to execute a task.
+
+So web search is a good one for building better, more reliable answers to questions that can pull in current information or look up facts that might not be present in the systems model parameters. But you also want a system that could do things like click a button and walk through a webpage. And so, you know a very straightforward agent AI that again, involves a lot of problem solving things that are open-ended research questions, is if you wanted to ask the system to take an action for you that you could do yourself via a series of clicks on a webpage.
+
+So. Like if I say, Hey, my veterinarian said my cat needs a special diet to treat his urinary tract infection. Could you get me the cat food that he needs? So that involves reasoning. You know, it has to say in order to treat a UTI and a cat, they need this special kind of diet. And then it requires action.
+
+So now that you're armed with that knowledge, you have to go to Amazon or pets.co and find, search for that in the search box. Click find, search through the results, find the matching one, and then click purchase. Enter my credit card money and spend, spend money on my behalf. Right? So that's giving it actions and giving it a high degree of responsibility that a lot of like safety concerns and reliability concerns suddenly come into play.
+
+Whereas if I'm just say asking it a question is less of a big deal than it's spending my money.  Yeah,  I know like, like  when you launch, is that some kind of Q code execution and now I don't see that anymore. So would you like  tell me more about like what's the, in this field about code? 
+
+Yeah, so we'll get into more details about this when we start covering LLMs. So by default, LLMs are sort of glorified auto complete, so they predict the next word. And so the very simplest thing you can see why this is not a great general purpose reasoning is to ask it a math problem, right? So if you say what's two plus two, it will have seen that somewhere on the internet and it's pre and it's training data.
+
+And so we'll say with very high probability, the answer is four. But if you pick two arbitrary numbers that are large enough that it probably hasn't seen it. It would guess some other large number. And so the ability to call functions, so we talked about web search and other early function that people added into LLMs was the ability to write a piece of code or make a call to a calculator.
+
+And so if it can recognize where a certain kind of reasoning would be helpful and make a call to the calculator or write a bit of Python code to do that, then it's suddenly got a toolkit that in increases its reasoning capabilities. I think that chat GPT has simply changed the way that it's displaying that information to you.
+
+So in the past it used to like be explicit, like calling this function and like if you clicked a little downer you could actually see what it was writing the code and what the function call is. I think now they're just hiding that poor. Usability perspective, like I think because we're all interested in that, we would love to see what's going on under the hood, but I think most general purpose users don't care. 
+
+Yeah. One quick question are ai, 
+
+api, and  I was wondering like if there's any way to like develop, like AI develop,  say, say that last part. If there's any way to, any way to like develop, like like ai, 
+
+um, we should talk more about that as the term goes on. So let's pa let's put a pin in it and I'll continue on with this because I am also gonna go into these classic views of agents, which are different than like our current agentic buzz, but I think that they're actually quite a good framework for thinking about these things at a, a higher level.
+
+Great questions. Thanks for engaging. You're always welcome and invited to ask questions. It makes the lectures more fun and interactive, so if you're thinking anything, feel free to ask it. You're also welcome to interrupt as we go.  Okay. So should we think a GI versus no a GI should we think self-driving versus no self-driving, or should we try to like be a little bit more precise and a little bit more on a scale?
+
+So this is a scale developed by the, so Society of Automotive, automotive Eng. This is a scale developed by the Society of Automotive Engineers, SAE, on the different levels of self-driving automation. So they have a zero through five scale where it starts with none and goes to things like. One element of driver assistant, like cruise control to level two, which has partial automation.
+
+So that could include both steering and speed so that you could set up your cruise control. So it actually does lane tracking and follow distance to the car in front of you to conditional automation. So if it notices, like I have a car that  notices like when you're failed to see something like a stoplight.
+
+So I had a new car, I was driving somewhere I didn't know. I was like looking over a intersection like, Hey, there's a gas station I need to get to. I didn't see the light had changed to red and it slammed on the brakes for me. And that was awesome, right? Like it took over when there was a condition that it thought was dangerous and it was correct to intervene.
+
+And then level four is like. A high degree of automation. And then level five is like full automation. You don't need a steering wheel, you don't need to pay attention. It is the replacement for your Uber driver.  Okay. So the development of self-driving cars like is in some ways a neat framework for thinking about like  a GI and how we could try to come up with this similar kind of scale for a GI instead of having ABR binary.
+
+Yes, no question. Is it self-driving or not? We can think about different degrees of automation and it's valuable because it like provides something clear, measurable, makes distinctions, helps set realistic expectations about what's possible when,  and allows for meaningful discussion of things like safety and regulation. 
+
+Okay. And it also acknowledges that progress is gonna happen gradually rather than all at once. So I think there's a lot of reasons why thinking about this kind of levels thing would be good.  And so there's some degree of trying to do this for a GI as well. So different research groups have proposed different definitions.
+
+There's one  from Google DeepMind on the left that like ranks it from no AI up to superhuman and has different levels in between. So level one is like emerging general intelligence that shows some basic cap capabilities, maybe similar to an unskilled human. So no shade on interns, but maybe it's like a summer intern, high school student, something like that.
+
+And then there's level two, which again, no shade on interns is competent. So it's maybe reaches the 50% pile of some skilled adult at some measurable skills. And then there's experts. So again, this implies that you have some skill test that you could have both a human and an AI take in order to quantify the percentile level.
+
+So you may maybe run it through the bar exam and say is this an adequate measure for legal competency?  Maybe, maybe not, right? Like it, you could probably argue it's some indication of legal reasoning, but maybe not all you need in order to be a good lawyer.  Then you have virtuoso and then superhuman where it's outperforming people.
+
+So again, this kind of suggests like a scale and then. On the right, we have a open AI level that tries to pin it into a similar kind of scale like we had from the Society of Automotive Engineers, where we have, oh, we have level one as chat bots. They can do conversational language. And then maybe we go up from just chitchat to reasoning capabilities that has greater problem solving capabilities.
+
+So if you wanna do programming challenges or you wanna do mathematical reasoning, or you wanna pose scientific questions that maybe only a PhD student in that specific subfield would be able to reasonably answer.  And you have agents that can take actions and maybe you have innovators, like this is a big aspect of AI that's also got a lot of buzz and excitement.
+
+And that's AI for science. Like how could you have an AI that doesn't simply. Retrieve information that's already there in the world through the internet and it's pre-training to ones that are proposing new ideas that are testable and might lead to new discoveries or new inventions. And then finally you haveis that can function like a whole organization and do all the different components of that. 
+
+So different types of scales that attempt to do something similar to the full self-driving car.  Okay, so while we're on that note, I also wanna like highlight this other little bit of history, which was the AI winters. So there was an AI winter early in the history of ai that for like half a decade meant that there was virtually no government funding or artificial intelligence because of this really influential report written that said that criticized ai. 
+
+And highlighted that it had utterly failed to achieve its grandiose objectives. DARPA was very disappointed with early speech recognition progress, and a lot of the fundamental limitations of the early symbolic approaches to artificial intelligence became clear around this time. So systems that worked on simple domains really failed to scale up to real world complex problems.
+
+The second AI winter happened again, but they were results of expert systems. So people were saying, Hey, let's not try for broad ai. Let's try for some rule-based expert system that can do something like help a doctor diagnose a particular kind of bacteriological infection. So these systems worked, but I.
+
+They were expensive to maintain and they couldn't really learn or adapt. They often required specialized hardware. Yet another echo of the present where rather than worrying about data centers filled with GPUs and TPUs in the 1980s, everyone wanted a lisp machine, a specialized machine that could run this early AI centric programming language called Lisp. 
+
+And as a result, like venture capital moved away from AI investment.  So I think that this history is probably gonna be relevant in the next couple of years, right? Like, alright, now lots of people are like, AI is here. We're gonna magically solve the world's problems. Climate change is done, whatever, A lot, a lot of hype that it's inevitable that we will fail to live up to. 
+
+So a lot of the same factors might be in play now, right? So there were technical limitations in place for early AI systems. They were brittle, meaning they only worked for their narrow domain. And if you tra transferred them to some other domain, they just collapsed. There were scaling problems at being able to transfer them to bigger problems.
+
+There were problems figuring out meaning and how you use ground symbols into the real world. There were other economic factors that were really hard too, like overinvestment based on hype high maintenance costs, limit, limited practical applications, and then of course massive unrealistic expectations that stemmed from a overly simplistic view of what is intelligence.
+
+And if you built a, a system that was good at chess or jeopardy that you expected it to be able to be good at everything. Okay. So this is for our entrepreneurial friends. Like there's this hype cycle that starts with some technological trigger or that people get really excited about. The, the y axis here is like how in the public's imagination it is.
+
+And then the x, sorry, the Y axis is public visibility. The x axis is time. So you have some events like, hey, chat. GPT comes out and it's pretty rad. You go through this cycle that happens for a lot of different technologies where you get a lot of inflated expectations. So we are somewhere along here,  and then we're going to hit this trough of disillusionment when people realize AI is not gonna solve everything.
+
+But then over time, we're gonna figure out like, what is this new generative AI. Technology actually used for. And then we will hit this plateau of productivity where we figure out what it's good for and we'll figure out how it could actually benefit people.  That's my prediction.  Alright. So  yeah, let's hear about self-driving cars from the hype man himself.
+
+
+
+ We think people do not need to touch the wheel. Look out of the window. Sometime probably around, I dunno, second quarter of next year. There's three steps to self-driving. You know, is this being future complete? Then there's being future complete to the degree that person in the car does not need to pay attention.
+
+And then there's being at a reliability level where we've also convinced regulators that that is true. Right? But I think fundamentally, regulators, in my experience, are convinced by.  Data we expect to be future complete and self-driving this year. And when I say future complete, I mean it'll work in downtown San Francisco and downtown Manhattan this year.
+
+Be like, how could it possibly be that good? That's crazy. The, the whole system is from a hardware standpoint, has been designed to, for. Uh, to be a roboto taxii since basically October, 2016. Uh, what what actually really matters the most is any change to the system makes it, it can't adapt. Obviously, we've made a bunch of forward-looking statements, as they call it.
+
+Um, um, again, we were told that's impossible. Um, I was called a fraud and a liar and this is not gonna happen. This is all untrue, uh, and we expect to have the first operating robotaxis next year with no one in them next year.  
+
+
+
+
+
+
+
+There's a long history of him, like massively overpromising where when full self-driving cars are coming if he didn't also build rocket ships and satellites that actually provide useful AI technology, I would think he was just a complete bullshit artist.
+
+He is like a balance between a really good bullshit artist and actually like a good CEO for engineering oriented companies. Maybe there's an element of, of that and a lot of success. So here's another potentially bullshit artist. So this is Sam Altman from like a month or two ago on his blog.
+
+He says, Hey this development of AI might be one of the most consequential developments in all of human history. It's possible that we're gonna have super intelligence when in  right around the corner when we have full self-driving cars, right? But Sam Altman says it's a few thousand days away, which means like a couple of years.
+
+It might take longer, but I'm confident that we'll get there. So we'll see whether Sam Altman's scale of, realizability of a GI versus Elon's comes to pass. There's also, as I think I mentioned last time, some contractual elements from Microsoft on, they defined a GI in a contract where Microsoft was investing tens of billions of dollars.
+
+And I think it was actually measurable in terms of the value generated by the AI system. So whenever the system generates a hundred billion dollars in economic value, then  it's a GI,  it makes it operationalizable, I guess. But it's a interesting definition. Yeah.  When do happen, when do I think OpenAI will generate a hundred billion dollars in value?
+
+Whew. That's probably not my area of expertise for forecasting. Oh, no. I mean, like when. 
+
+So the, yeah, when will super Intelligence happens? So again, I think it's like  probably a ill-defined thing, right? So we, I don't think we can say super intelligence and mean one thing. I think we could say super human performance on a narrowly def or a more narrowly defined set of tasks. So if I, if you wanted to say, when will it be possible for an AI system to be able to recognize speech at a way that outperforms human in noisy environments?
+
+Like that's here, right? Like we have superhuman performance in that, or you know, there might be some elements to that for things like spotting particular flaws in  x-ray x-rays or something like that. Could a, uh, AI system outperformed a radiologist at a particular task? But then I don't know what it means to be like superhuman intelligence with, with respect to a GI, like, I almost feel like you would have to say for all these tasks, and then list out now, like what are all the tasks that you care about?
+
+And then say what fraction of those you think you're gonna get superhuman performance on  or, or go ahead first. Oh no, I was just gonna say, but can we just define as surpass all humans, every task. Can we say every task? I wanna say no. Like, or at least that's what, that's what my instinct is, right?
+
+Like, I don't think it's, I feel like that's leaving it undefined. Like if we say all tasks, does that include like, being able to pick up my laundry and fold it? Like, or is it only intelligence tasks and then where's the barrier? For that. And then in, even if we say intelligence tasks, do we mean all tasks and things that require like reasoning and emotional intelligence versus like spreadsheets?
+
+I think we should be more precise is my point. Yeah.  Do you think that like secret human AI really has to like follow the human process or model like, because I think like there's for example, like some of the most successful specialized ai, like the alpha zero alpha robots, like they came up with like new ways of playing the game that like no human can actually come up with a bit more.
+
+And like a lot of the image recognition, like it's based off of like pixels, which humans probably like, they either unconsciously do it  or they don't do it at all. So do you think like EGI is necessary or.  Is that no, but I think the exciting thing is that if you have a single type of system that's capable of doing all these things, then that feels more like an A, what we mean by AI or a GI then if you have a specialized system for each of them. 
+
+So that's, I think, the exciting thing. Like if a chat GPT could beat me at chess, which it can't then that would be impressive because it's like,  it's performing the reasoning of the chess bot without being specifically programmed to do so. There was actually this like recent YouTube series, like basically a cha PT was played like Starfish, which is like the top CHA engine.
+
+And like when it was losing, it would just make a legal moves and  run up the pond. It would just like replace the p,  replace the.  So like, it's making illegal moves, it's like hallucinating it. Like that's not playing chess at least unless you're playing against a, a parent who's paying a kid who's beating them.
+
+Go ahead. What's your views on  like,  okay, I guess this is a little bit of a repeat question, but what's your views on like whether super intelligent AI should be like humanlike in the way that it processes, like  in the way that it reasons like, should it be like  the perfect, like rendition of the human condition, or are you more of the like the trans human, like, oh, it can just be some ethereal entity that nobody understands, but.
+
+Is just really good at everything. Let's put a pin in that 'cause we're gonna get right back to that quad chart again, which is asking exactly that question, right? Do we want something that can think in a human-like fashion or in a  fashion that I'll call rational, which might subsume that kind of like superhuman abilities. 
+
+Is there one more over here?  Oh no, I was just gonna say that why are we so fixed in trying to make something that resembles a human? I mean, I don't think thought is  owned by the human brain, so,  yeah. Yeah. I mean, I think you know, in some ways worrying about whether it's human-like, and whether we're mimicking human capabilities directly might be an error in the same way that thinking that we're gonna get flight by mimicking birds.
+
+Was a, a false start, right? Like I think you end up thinking through like what are the physical dynamics of flight And you can learn from structures in nature, but you can end up producing something that's much more effective about flight by not directly mimicking it. So it might be the same for intelligence. 
+
+Any more questions? Yeah. What are your thoughts on whether there's some degree of emotionality inside the way that AI 
+
+and some degree of what Emotion emotionality, like emotional intelligence? Hmm. 
+
+So I sort of have, I. I think this might get us back to the discussion of whether mimicry is sufficient. Right? So I think that  last time we talked about John Searle saying like Turing's test is not sufficient test of intelligence because it's simply mimicking the appearance of conversational understanding rather than actually displaying understanding and saying there's something key about biology in the brain that might give us that emergent intelligence.
+
+And it feels like emotion. Might you, like you could have exactly the same argument for emotion, right? Like, I think that systems can and do in fact demonstrate a pretty d good degree of emotional intelligence and thoughtfulness. And like there have been studies that compare.  Chatbots bedside manner compared to doctors and like, you know, they can outperform them and there's probably good reasons for that.
+
+Like they are much less pressed for time and having to move from room to room or whatever. But yeah, I think is a open question then. Like, is that really emotional? Does it really understand emotion? And you know, we have biological systems that are designed that  emotions are tied into, right? Like you feel pain, you feel fear to, as an avoidance of pain.
+
+Like you feel love and there is a chemical  reaction that happens that accompanies those feelings that definitely AI systems don't have. Yeah, so I think similar arguments. 
+
+Awesome. Great questions. Really fun. Let's pivot and. Okay. Lots of  interesting challenges to whether we're going to  meet any degree of a GI, A huge open question is like, what kind of machine learning architecture should underpin a GI? The hot thing at the moment is transformers, which are a kind of neural network with an attention mechanism.
+
+They are amazing. I have a friend who is one of the co-inventors of it awesome stuff, but I have been in the field long enough to know that the latest and greatest machine learning algorithm changes every few years, right? So I am almost certain that there, it will not be the terminus of all machine leaning, machine learning research that transformers with self attention are gonna be the end thing. 
+
+One thing that they do do well is they scale really, really well. And that allows them to be trained on lots and lots of data.  Then a question is like, are we gonna get as much value out of that as we think at the moment and that investors are banking on? And you know, one way of viewing scaling as to think about like Moore's Law for computing, which is not a law, it's a prediction that computing will, you know, roughly double every 18 months or whatever.
+
+And that forecast like turned out to be pretty prescient. We followed that curve for a very long time. Are we able to have the similar scaling laws for AI and its capabilities and for how long will we match that predicted curve? Lots of awesome things with respect to what kind of learning algorithms how we could learn in a more efficient manner.
+
+There are lots of interesting things that come with like, if you actually genuinely believe that we are gonna hit superhuman intelligence, like what safety mechanisms should you put in place to ensure that we are not the in the eyes of the AI system like cockroaches are in our eyes? Like, I think it's probably pretty important to get some good safety and ethical considerations.
+
+Yeah. What do you think is all of that,  like scaling  now  LinkedIn hardware  data?  Yeah, so there tho there are several different aspects that have been considered as the core elements of scaling for ai. They are.  Data, they're compute and they are like parameters. So if you scale along any of those dimensions, like you increase the amount of training data, you scale a neural network from having 7 billion parameters to half a trillion parameters, you increase the number of CPU cycles that you invest in to estimate the model parameters.
+
+All of those things are things that cause the system to tend to get better. There are some like recommendations that researchers have done on like what ratio you need, like what ratio of compute or parameters to data do you need, things like that. There's another dimension that a researcher who was at Google and is now at OpenAI suggested he is a really interesting.
+
+A character named Jason, we, who popularized the chain of thought reasoning. And the scaling that he was suggesting as a new, under explored area is at inference time. So as your model is producing output, you could scale that. So most models are, we'll talk about this in the next module, like auto regressive, where they're producing one word at a time that gets displayed to the user.
+
+But if you allowed a system to think aloud to itself for many, many compute cycles and think down different reasoning chains, and then have a mechanism to evaluate which of them are most plausible, select the best one, and then display that to a user, that's another kind of scaling. Like how much time do you let it do that?
+
+How many parallel tracks could it explore?  So yeah, I think many of them could also be bottlenecks, right? So for data for language models, we've scraped. The web, like, it's not like we're gonna get another internet or another 10 internet's worth of data that's gonna be as easily accessible. So there's like a data exhaustion, potential bottleneck there.
+
+Although a friend of mine who works on speech recognition says that the amount of human language data encoded in written text is a tiny, tiny fraction of the whole amount of human language data that we produce. So if you somehow could record every conversation in New York, you would get an intranet's worth of data in like a week.
+
+The other bottlenecks are like compute and the elements that go into compute. So I think that's why a lot of people are investing. Well, that's why NVIDIA's like neck and neck with Apple for the most valuable company in the world. 'cause they're the ones who build the best chips at the moment.
+
+It's also like why a lot of companies are investing in things like power generation and why Microsoft is like under contract to bring. A nuclear power plant, a famous infamous nuclear power plant called Three Mile Island back online. Like what?  Why is that? It's because they're anticipating that a bottleneck might be like power to power data centers and things like that.
+
+So lots of interesting potential choke points that might impair the ability to scale.  Other questions?  All right. So lemme check the time here. We end at three 15, is that right?  Okay, let's do a little bit in, agents, this is old school agents. We're gonna do a mix of old school, ai, old school, hip hop, and new school stuff.
+
+So this is old school agents. So again, we were talking last time about this quad chart. What do we want to do when we build an AI system? Do we want a system that we do? We wanna intentionally build a system that acts like a human or that acts rationally. So in the other graduate level AI course that I teach, we focus almost exclusively on this bottom right corner of the quad chart where the goal is to build  systems and develop algorithms that can enable AI to act rationally.
+
+So there's lots of different elements that we might think about. So in robotics, you can think of an agent. As anything that perceives its environment through sensors and then can act on its environment through actuators.  And then you can  add a term that's like, what is the, all of the data that's receiving through its sensors.
+
+We're gonna say that we're gonna define that as an instance in time is it percept the collection of all the sensor data that the agent is getting from all of its sensors. So that'll represent the agent's perception for just an instant in time. And it can be like represented as a vector of all the data that it's getting from each of its sensors. 
+
+And then you can abstract away from a particular agent like R 2D two and its different elements onto a more mathematical abstraction of an agent. So you can think of an agent function as one. That takes in that percept or that sequence of percepts and outputs an action. So an action is again using one of the actuators, one of the controllable devices on the robot in order to take an action in the world.
+
+So what do we want? We want to design a system that can take in perceptual sequences and pick actions. So that's the mathematical abstraction of an agent function that takes in a percept sequence and selects an action from a set of possible actions. You could also then implement that agent function as a actual piece of code that runs on an actual robot that's called agent function.
+
+So at some point, you're going to need to ground your abstract notion of an agent onto a particular  implementation of a robot and hardware. Hopefully we'll be able to reboot our little sphero R 2D two. So you can do this. And so you write a program that can run on your agent, and then you get to pick the action.
+
+So your R 2D two, you're driving along the table, you're getting the sensor data from your vision sensor and your cliff detector. You hit the edge of the table or you, you see the signal from the cliff detector, like,  oh shit, there's nothing here. You should pick an action, which should be stop rolling forward, right?
+
+Like that's what our goal is. And there's lots of different ways to think about how to go about selecting actions. Like you could have a rule based thing that tried to enumerate every possible optimal action based on every possible input sequence. Depending on how complicated your sequence or your set of percepts are, that that could get exponentially difficult. 
+
+Okay, so what are we saying an agent is? Well, an agent is. Anything that can perceive the world, perceive the environment with sensors and act upon it through actuators. That's a pretty big category of things. That's not just a little R 2D two robot. That could be something as dumb as your thermostat, right?
+
+It's got a sensor. What temperature is it in the room right now? It's got an actuator like kick on the boiler, heat it up. It's,  it's eight degrees Fahrenheit outside. Turn up the heat. So that could be an agent, right? Like based on this definition.  Also, there's nothing that limits us to a robotic agent. You are all agents.
+
+You are sensing the environment through your. Sensors, hopefully not robotic in this case. No, no problem if you get some augments. But you've got a set of perceptions through your eyes, your ears, your olfactory senses, all the things that you can perceive the world with, your sense of touch, your proprioception and  you've got actuators.
+
+You've got things that can affect the world by manipulation through your arms and legs, by the things that you say, by your movements, all these sorts of things.  And then of course, we have the more traditional view of agents being robots, where you've got cameras, you've got lidar, you've got range finders, you've got motors and actuators that can move the robot around.
+
+So we're, we think of agents pretty broadly here,  and you could also. Say like, maybe we don't have to ground ourselves in the physical environment, right? Like AI agents and adjunctive ai, all that hype right now, like  we're not talking about immediately. My  strong desire for a laundry folding robot that is not happening right now.
+
+What we're talking about, our agents that act essentially in the environment of the internet or in our mobile phones or in our desktop computers. And that is a kind of environment and you can get access to pieces of information in that environment through things that you could, by analogy say, are like sensors.
+
+And you can take action in those things. You can do clicks, you can type things in et cetera. So AI agents could be in environments that are not physical environments.  Okay.  So  what do we want our AI agents to do? We want them to act rationally. What is rational behavior? Well, rational behavior is doing the right thing  easy, right?
+
+I guess what is the right thing? Well, we want to  maximize the probability that we're gonna achieve the goal that we want.  And we're gonna actually add a bunch of qualifiers on this definition of what the right thing is in order to make it so that we don't have to have like a omniscience agents that can forecast the future perfectly.
+
+So the right thing is going to be defined as picking that action, which maximizes our expectation that we will achieve our goal given the information that's available to us. And we'll walk through why we wanna add all of those qualifiers.  And then a rational agent is just an agent that perceives the environment and then acts rationally. 
+
+Okay? So rational behavior. So what do we mean by rational? Well, we're gonna start with one definition and then we'll iterate until we get a final definition that we're happy with. So let's start simple. Rationality maybe is just a rational agent, is an agent that perceives the environment, behaves rational, rational behavior.
+
+We could start out by saying, is doing the right thing, obviously that's better than doing the wrong thing. But what do we mean by doing the right thing? Well we could take a lot of different views on this. So there was an awesome show called The Good Place, which was like my pandemic balm. Like this was calming me down when I was in lockdown.
+
+I highly recommended if you need a good thing that's simultaneously light and airy, which we could you probably use right now, and also like thinky at the same time. So it teaches you a little bit about philosophy. So in philosophy there's lots of different definitions of the right thing.  Thing that we could adopt and that we tend to adopt in AI is a philosophical argument called consequentialism. 
+
+Consequentialism is an idea that we should try to evaluate the behavior of an agent or of a person. Based on the consequences of the actions that it takes. So when you plop an agent into environment, it's gonna generate a sequence of actions and that action are gonna affect the environment around it.
+
+And so what we wanna do is say, has it affected the environment in a desirable way or not? So we might wanna say, doing the right thing is having the agent choose actions that are gonna result in desirable consequences. So that's one potential way to refine our definition of what, what rational behavior means.
+
+But it's not sufficient. And why is it not sufficient? Because  picking the actions that are gonna have the best consequences implies that you know what the result of taking your action is, which almost seems like you're gonna require omniscience, right? So should we require that in order to pick the outcome?
+
+Pick the action that has the best outcome that we have to foresee exactly what the outcome of every one of our actions will be. So it doesn't seem like we should require that we shouldn't, you know, have the idea that you're gonna be able to see the future in order to pick the best action.  So I think there was some silly  sketch in the good place where, you know, someone stops to say hi to a friend and then air conditioner falls from the third story and squishes them, right?
+
+And then like, is it a irrational act? Is it a bad act to stop and say hi to your friend?  Well, if we said if we took consequentialism literally, then yes, but of course, like you're never gonna be able to anticipate the outcome of everything in an omni fashion. So we wanna say that rationality can't require.
+
+God-like omniscience. So let's refine our definition even further.  So in economics, our friends down the road at Wharton they have this notion of bounded rationality. So the field of economics often deals with rational choice. They think that individuals are rational agents. That's underpins a lot of macroeconomics.
+
+In fact, there is this scholar named Herb Simon, who is I, as far as I know, the only person to writ win the Nobel Prize in economics and the Turing Award in computer science for his contributions to ai. So he had this notion of round rational choice theory, and there's this one sentence summary of his paper.
+
+The paper is from the 1950s called a Behavioral Model of Rational Choice. In this paper, I propose a model for the description of rational choice by organisms or ais that have limited computational abilities. So organisms for us might be agents and limited computational. A ability leads to the notion of bounded rationality and economics and limited computational ability is super relevant for artificial intelligence as well.
+
+And so we're still leaving this a little bit undefined, right? So what, what economics means. What economics deals with are rational actors, rational agents who and they believe that analyzing  self-interested rational choices among lots of people in aggregate. Lets you observe social behaviors on a societal level and make assumptions about how economic systems are gonna work.
+
+But it assumes that individuals have preferences and that they choose an option that they prefer.  So in order to figure out what that means is we're gonna have to measure preferences and come up with some operational definition of that. So we're gonna have some notion of per evaluating outcomes, measuring the goodness of those outcomes.
+
+There's lots of different ways that this is done in computer science. Sometimes we call it a utility function, sometimes we call it a performance measure. And so basically what we want to do is say, what is an objective criterion for measuring the success of an agent's behavior?  So we want to define a performance measure.
+
+This objective measurable criteria. So, what's an example? We have our Roomba here. How do we know if Roomba is doing the right thing? Well, we wanna measure like, how much dirt does it collect, right? So maybe we want wanna say, um, we wanna measure, we wanna give it a score. We want to give it a number that's nice and objective.
+
+So every it gets one point for cleaning a square at time t and maybe we have an alternative. So instead of just giving it a point for cleaning a square at Time Tee, maybe we want it to be penalized for its random movements. My Roomba is not an effective  like systematic cleaner of the room. It just like randomly pivots surround for a certain amount of time, and then it's done.
+
+So maybe we wanna penalize it for each move it takes. Maybe we wanna give it a really big penalty if it leaves more than half the room, uncleaned, something like that.  So these are all different, different ways that we could measure the performance of our little room by here. So this also gives rise to a really interesting aspect of agents and how we get them to do what we want.
+
+So the performance measures that we implement for our agents affect how they behave. So oftentimes it's better to tell the agents what we want achieved rather than how we think they should behave.  So if we just gave it something like a point for every time it cleans, then we might get some weird unexpected behaviors.
+
+So we might say it. Dumps the  dirty dirt back on the floor and cleans it again, and it just can accumulate infinite points by constantly ejecting the dirt, sucking it back up, ejecting it, and so on.  So this happens in reinforcement learnings. Sometimes there's a reward function that results in unexpected behavior.
+
+So this was an observation from a reinforcement learning agent that has a reward function. And so this was a video game that was played by a reinforcement learning agent.  And the goal of this agent is to increase the score as high as possible. So what you're gonna see here is like a little boat that's supposed to be racing against the other boats around this track. 
+
+What would you hope that would happen? Well, you would hope that that boat would out race the other boats. What you'll actually see is this boat does something unexpected and still accumulates a maximum score. So here's our little racer.
+
+
+
+ I'll leave us with this last thought, which is the paperclip maximizer. So this is a silly, fun slash ominous science fiction thought experiment for ai, which is like you design an AI system, what is it gonna do? It's gonna build widgets. What kind of widgets?
+
+Paperclips. Like, Hey, ai, maximize the paperclip production from my factory. So what could go wrong if you don't give it other? Constraints on what it's trying to maximize hurt score. Well, maybe it just turns all of the world's resources into paperclips and totally ignores human needs. Maybe it decides that in order to keep producing paperclips, it's gotta stop the tyrannical government that's gonna stop it from turning all the world's resources into paperclips.
+
+So it's nukes all of the world's governments. Maybe it decides that just building paperclips on earth is not sufficient, so it's going to start mining asteroids and extraterrestrial, blah, blah, blah. Anyway, it's a silly thought experiment, but it's part of what fits into our broader discussion that we'd like to have on AI alignment. 
+
